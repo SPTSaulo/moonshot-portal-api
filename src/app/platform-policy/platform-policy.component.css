@@ -1,0 +1,10 @@
+* {
+  font-family: Lato,  Roboto,Helvetica Neue,apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol
+}
+
+.policy-text {
+  margin-left: 310px;
+  padding-top: 20px;
+  justify-content: center;
+  align-content: center;
+}

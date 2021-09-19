@@ -1,0 +1,7 @@
+<div class="apis">
+  <div class="api" *ngFor="let api of apis">
+    <h2>{{ api.name }}</h2>
+    <p>{{ api.description }}</p>
+    <a [routerLink]="['/swagger', api.name]" target="_blank">See {{ api.name | lowercase }} documentation</a>
+  </div>
+</div>

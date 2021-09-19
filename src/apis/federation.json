@@ -1,0 +1,1022 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "Federation API",
+    "description": "Moonshot Federation API",
+    "contact": {
+      "email": "saulosantanab@gmail.com"
+    },
+    "license": {
+      "name": "Apache 2.0",
+      "url": "http://www.apache.org/licenses/LICENSE-2.0.html"
+    },
+    "version": "1.0.1"
+  },
+  "servers": [
+    {
+      "url": "https://dev.moonshot.ceo/api/federation"
+    }
+  ],
+  "tags": [
+    {
+      "name": "UserAdministrators",
+      "description": "Endpoints available to users with user management permission"
+    },
+    {
+      "name": "NoPerms",
+      "description": "Operations available to all users"
+    }
+  ],
+  "paths": {
+    "/version": {
+      "get": {
+        "tags": [
+          "NoPerms"
+        ],
+        "summary": "API version",
+        "description": "Return the lastest version of the API\n",
+        "operationId": "apiVersion",
+        "responses": {
+          "200": {
+            "description": "API Version",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "string",
+                  "example": "1.0.25.r6-RC1"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Cannot verify the certificate"
+          }
+        }
+      }
+    },
+    "/login": {
+      "post": {
+        "tags": [
+          "NoPerms"
+        ],
+        "summary": "Login endpoint",
+        "description": "Introduce your credentials to authorize yourself\n",
+        "operationId": "login",
+        "requestBody": {
+          "description": "Credentials",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Login"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Authentication successfully"
+          },
+          "500": {
+            "description": "Invalid login params, invalid username, invalid password or user not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LoginError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/logout": {
+      "get": {
+        "tags": [
+          "NoPerms"
+        ],
+        "summary": "Logout endpoint",
+        "description": "Remove cookies from user session\n",
+        "operationId": "logout",
+        "responses": {
+          "200": {
+            "description": "Logout sucessfully",
+            "content": {}
+          }
+        },
+        "security": [
+          {
+            "idToken": []
+          },
+          {
+            "userId": []
+          },
+          {
+            "userEmail": []
+          },
+          {
+            "userRoles": []
+          },
+          {
+            "userPermissions": []
+          }
+        ]
+      }
+    },
+    "/token": {
+      "post": {
+        "tags": [
+          "NoPerms"
+        ],
+        "summary": "Get authentication token",
+        "description": "Add authentication token to session cookies\n",
+        "operationId": "token",
+        "parameters": [
+          {
+            "name": "tokenId",
+            "in": "query",
+            "description": "Token authentication id",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Add authentication token to cookies successfully"
+          },
+          "500": {
+            "description": "Cannot find the user associated to tokenId parameter",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/TokenError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/communities": {
+      "get": {
+        "tags": [
+          "NoPerms"
+        ],
+        "summary": "Get ecosystem communities",
+        "description": "Get all comunities where user is logged\n",
+        "operationId": "comunities",
+        "responses": {
+          "200": {
+            "description": "Get comunities successfully",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Community"
+                  }
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "You must login before call this endpoint",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SecurityAccessUnauthorizedError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/modules": {
+      "get": {
+        "tags": [
+          "NoPerms"
+        ],
+        "summary": "Get Moonshot modules",
+        "description": "Get Moonshot modules available to the user\n",
+        "operationId": "modules",
+        "responses": {
+          "200": {
+            "description": "Get modules successfully",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Module"
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Cannot find the user associated to user email cookie",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/UserNotFoundError"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "userEmail": []
+          }
+        ]
+      }
+    },
+    "/user/{id}": {
+      "get": {
+        "tags": [
+          "UserAdministrators"
+        ],
+        "summary": "Get user by id",
+        "description": "Find a user in the database by its identifier and get all the data associated\n",
+        "operationId": "userById",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "User id",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Get user data successfully",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/User"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "You must login before call this endpoint",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SecurityAccessUnauthorizedError"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "User does not have the necessary permissions",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SecurityAccessForbiddenError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/users": {
+      "get": {
+        "tags": [
+          "UserAdministrators"
+        ],
+        "summary": "Get all users",
+        "description": "Find all users in the database and get all the data associated\n",
+        "operationId": "users",
+        "responses": {
+          "200": {
+            "description": "Get users data successfully",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/User"
+                  }
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "You must login before call this endpoint",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SecurityAccessUnauthorizedError"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "User does not have the necessary permissions",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SecurityAccessForbiddenError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/users/by-roles": {
+      "get": {
+        "tags": [
+          "UserAdministrators"
+        ],
+        "summary": "Get users by roles",
+        "description": "Find a user in the database by roles and get all the data associated\n",
+        "operationId": "usersByRoles",
+        "parameters": [
+          {
+            "name": "roles",
+            "in": "query",
+            "description": "User roles",
+            "required": true,
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Get users data successfully",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/User"
+                  }
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "You must login before call this endpoint",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SecurityAccessUnauthorizedError"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "User does not have the necessary permissions",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SecurityAccessForbiddenError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/users/perms": {
+      "get": {
+        "tags": [
+          "UserAdministrators"
+        ],
+        "summary": "Get user permissions",
+        "description": "Find a user in the database by id and get the permissions associated\n",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "query",
+            "description": "User id",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Get user permissions successfully",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Permission"
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "User not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/UserNotFoundError"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "You must login before call this endpoint",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SecurityAccessUnauthorizedError"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "User does not have the necessary permissions",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SecurityAccessForbiddenError"
+                }
+              }
+            }
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "UserAdministrators"
+        ],
+        "summary": "Update user permissions",
+        "description": "Update user permission in database\n",
+        "requestBody": {
+          "description": "Object that have user id and new user permissions",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UserPermsUpdateEvent"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "400": {
+            "description": "Empty body",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/UserPermsUpdateEventEmpty"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "You must login before call this endpoint",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SecurityAccessUnauthorizedError"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "User does not have the necessary permissions",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SecurityAccessForbiddenError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/user/verify": {
+      "put": {
+        "tags": [
+          "NoPerms"
+        ],
+        "summary": "Verify user",
+        "description": "Verify a user and allow him access to the platform\n",
+        "requestBody": {
+          "description": "Object that have user email and user access token",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UserVerifyEvent"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "400": {
+            "description": "Empty body",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/UserVerifyEventEmpty"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/password/request": {
+      "post": {
+        "tags": [
+          "NoPerms"
+        ],
+        "summary": "Request to change a user password",
+        "description": "Generate a request and a token in database to change a password\n",
+        "requestBody": {
+          "description": "Object that have user email",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PasswordRequestEvent"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "400": {
+            "description": "Body is not correctly defined or cannot find user associated to email",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/UserNotFoundError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/password/recover": {
+      "post": {
+        "tags": [
+          "NoPerms"
+        ],
+        "summary": "Update user password",
+        "description": "Find user and update the password in database \n",
+        "requestBody": {
+          "description": "Object that have token and password twice",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PasswordRecoverEvent"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "400": {
+            "description": "Empty body, token expired or token was used before",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PasswordRecoverNotFoundError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/password/change": {
+      "put": {
+        "tags": [
+          "NoPerms"
+        ],
+        "summary": "Update user password",
+        "description": "Find user and update the password in database \n",
+        "requestBody": {
+          "description": "Object that have password and new password twice",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PasswordChange"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "400": {
+            "description": "Empty body, password is empty, repeat password is empty, password length is less than 6, password and repeat password does not match or is not a valid password",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PasswordChangeEmptyError"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "You must login before call this endpoint",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SecurityAccessUnauthorizedError"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "userEmail": []
+          }
+        ]
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "Login": {
+        "required": [
+          "password",
+          "username"
+        ],
+        "type": "object",
+        "properties": {
+          "username": {
+            "type": "string",
+            "format": "email",
+            "example": "pedrojimenez@gmail.com"
+          },
+          "password": {
+            "type": "string",
+            "example": "hola123"
+          }
+        }
+      },
+      "LoginError": {
+        "required": [
+          "code",
+          "message"
+        ],
+        "type": "object",
+        "properties": {
+          "message": {
+            "type": "string",
+            "example": "Auth0 login error."
+          },
+          "code": {
+            "type": "string",
+            "example": "SECURITY_ACCESS_AUTH0_LOGIN_ERROR"
+          }
+        }
+      },
+      "TokenError": {
+        "required": [
+          "code",
+          "message"
+        ],
+        "type": "object",
+        "properties": {
+          "message": {
+            "type": "string",
+            "example": "Cannot invoke \\\"String.split(String)\\\" because \\\"token\\\" is null"
+          },
+          "code": {
+            "type": "string",
+            "example": "INTERNAL_UNKNOWN_ERROR"
+          }
+        }
+      },
+      "Community": {
+        "type": "object",
+        "properties": {
+          "module": {
+            "type": "string",
+            "example": null
+          },
+          "name": {
+            "type": "string",
+            "example": null
+          }
+        }
+      },
+      "Module": {
+        "type": "string",
+        "enum": [
+          "COMMUNITY",
+          "CONNECT",
+          "DISCOVERY",
+          "CHALLENGES"
+        ]
+      },
+      "User": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "format": "mongo-id",
+            "example": "60acae8e2f799d228a4d4a85"
+          },
+          "email": {
+            "type": "string",
+            "format": "email",
+            "example": "pedrojimenez@gmail.com"
+          },
+          "memberId": {
+            "type": "string",
+            "format": "mongo-id",
+            "example": "60acae8e2f799d228a4d4a85"
+          },
+          "roles": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Role"
+            }
+          },
+          "permissions": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Permission"
+            }
+          }
+        }
+      },
+      "UserNotFoundError": {
+        "required": [
+          "code",
+          "message"
+        ],
+        "type": "object",
+        "properties": {
+          "message": {
+            "type": "string",
+            "example": "User not found."
+          },
+          "code": {
+            "type": "string",
+            "example": "USER_NOT_FOUND"
+          }
+        }
+      },
+      "Role": {
+        "type": "string",
+        "example": "DEV:ECOSYSTEM_MANAGER"
+      },
+      "Permission": {
+        "type": "string",
+        "example": "DEV:ONLINE_EVENT_CREATE"
+      },
+      "UserPermsUpdateEvent": {
+        "required": [
+          "id",
+          "perms"
+        ],
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "format": "mongo-id",
+            "example": "60acae8e2f799d228a4d4a85"
+          },
+          "perms": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Permission"
+            }
+          }
+        }
+      },
+      "UserPermsUpdateEventEmpty": {
+        "required": [
+          "code",
+          "message"
+        ],
+        "type": "object",
+        "properties": {
+          "message": {
+            "type": "string",
+            "example": "The user perms update event object is empty."
+          },
+          "code": {
+            "type": "string",
+            "example": "USER_PERMS_UPDATE_EVENT_EMPTY"
+          }
+        }
+      },
+      "PasswordRequestEvent": {
+        "required": [
+          "email"
+        ],
+        "type": "object",
+        "properties": {
+          "email": {
+            "type": "string",
+            "format": "email",
+            "example": "pedrojimenez@gmail.com"
+          }
+        }
+      },
+      "PasswordRecoverEvent": {
+        "required": [
+          "password",
+          "repeatPassword",
+          "token"
+        ],
+        "type": "object",
+        "properties": {
+          "token": {
+            "type": "string",
+            "format": "uuid",
+            "example": "123e4567-e89b-12d3-a456-426614174000"
+          },
+          "password": {
+            "type": "string",
+            "example": "hola123"
+          },
+          "repeatPassword": {
+            "type": "string",
+            "example": "hola123"
+          }
+        }
+      },
+      "PasswordRecoverNotFoundError": {
+        "required": [
+          "code",
+          "message"
+        ],
+        "type": "object",
+        "properties": {
+          "message": {
+            "type": "string",
+            "example": "Recover password not found."
+          },
+          "code": {
+            "type": "string",
+            "example": "PASSWORD_RECOVER_NOT_FOUND_CODE"
+          }
+        }
+      },
+      "PasswordChange": {
+        "required": [
+          "newPassword",
+          "newPasswordRepeat",
+          "password"
+        ],
+        "type": "object",
+        "properties": {
+          "password": {
+            "type": "string",
+            "example": "hola123"
+          },
+          "newPassword": {
+            "type": "string",
+            "example": "nueva123"
+          },
+          "newPasswordRepeat": {
+            "type": "string",
+            "example": "hola123"
+          }
+        }
+      },
+      "PasswordChangeEmptyError": {
+        "required": [
+          "code",
+          "message"
+        ],
+        "type": "object",
+        "properties": {
+          "message": {
+            "type": "string",
+            "example": "Change password not found."
+          },
+          "code": {
+            "type": "string",
+            "example": "PASSWORD_CHANGE_NOT_FOUND_CODE"
+          }
+        }
+      },
+      "UserVerifyEvent": {
+        "required": [
+          "token",
+          "email"
+        ],
+        "type": "object",
+        "properties": {
+          "token": {
+            "type": "string",
+            "example": "eyJhbGciOiJSUzI1NiIsIn"
+          },
+          "email": {
+            "type": "string",
+            "example": "pedrojimenez@gmail.com"
+          }
+        }
+      },
+      "UserVerifyEventEmpty": {
+        "required": [
+          "code",
+          "message"
+        ],
+        "type": "object",
+        "properties": {
+          "message": {
+            "type": "string",
+            "example": "The user verify event is empty"
+          },
+          "code": {
+            "type": "string",
+            "example": "USER_VERIFY_EVENT_EMPTY_CODE"
+          }
+        }
+      },
+      "SecurityAccessUnauthorizedError": {
+        "required": [
+          "code",
+          "message"
+        ],
+        "type": "object",
+        "properties": {
+          "message": {
+            "type": "string",
+            "example": "Unauthorized."
+          },
+          "code": {
+            "type": "string",
+            "example": "SECURITY_ACCESS_UNAUTHORIZED"
+          }
+        }
+      },
+      "SecurityAccessForbiddenError": {
+        "required": [
+          "code",
+          "message"
+        ],
+        "type": "object",
+        "properties": {
+          "message": {
+            "type": "string",
+            "example": "Forbidden."
+          },
+          "code": {
+            "type": "string",
+            "example": "SECURITY_ACCESS_FORBIDDEN"
+          }
+        }
+      }
+    },
+    "securitySchemes": {
+      "idToken": {
+        "type": "apiKey",
+        "name": "COOKIE_ID_TOKEN",
+        "in": "header"
+      },
+      "userId": {
+        "type": "apiKey",
+        "name": "COOKIE_USER_ID",
+        "in": "header"
+      },
+      "userEmail": {
+        "type": "apiKey",
+        "name": "COOKIE_USER_EMAIL",
+        "in": "header"
+      },
+      "userRoles": {
+        "type": "apiKey",
+        "name": "COOKIE_USER_ROLES",
+        "in": "header"
+      },
+      "userPermissions": {
+        "type": "apiKey",
+        "name": "COOKIE_USER_PERMISSIONS",
+        "in": "header"
+      }
+    }
+  }
+}
