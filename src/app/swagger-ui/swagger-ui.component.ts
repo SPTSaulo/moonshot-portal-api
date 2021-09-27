@@ -21,9 +21,7 @@ export class SwaggerUiComponent implements OnInit {
 
   ngOnInit(): void {
     this._route.params.subscribe(params => this.apiName = params['apiName'])
-    console.log(this.apiName)
     this.api = this._apiService.getSwaggerObject(this.apiName)
-    console.log(this.api)
     const ui = SwaggerUIBundle({
       dom_id: '#swagger-ui',
       layout: 'BaseLayout',

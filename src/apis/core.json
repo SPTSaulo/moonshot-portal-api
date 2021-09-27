@@ -74,7 +74,7 @@
           {
             "name": "filename",
             "in": "query",
-            "description": "File which you want to sign",
+            "description": "Filename which you want save in AWS",
             "schema": {
               "type": "string"
             }
@@ -95,7 +95,7 @@
               "application/json": {
                 "schema": {
                   "type": "string",
-                  "example": "https://presignedurldemo.s3.eu-west-2.amazonaws.com/image.png?X-Amz-Algorithm=AWS479a25351&X-Amz-SignedHeaders=host"
+                  "example": "https://presignedurldemo.s3.eu-west-2.amazonaws.com/image.png?X-Am91ignedHeaders=host"
                 }
               }
             }
@@ -176,7 +176,7 @@
           "NoPerms"
         ],
         "summary": "Get industry taxonomy by id",
-        "description": "Find a industry taxonomy in the database by its identifier\n",
+        "description": "Find an industry taxonomy in the database by its identifier\n",
         "operationId": "industryById",
         "parameters": [
           {
@@ -683,7 +683,6 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "type": "object",
                   "$ref": "#/components/schemas/Notification"
                 }
               }
@@ -1172,25 +1171,29 @@
           "deepTechs": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/DeepTech"
+              "type": "string",
+              "example": "SMART_DATA_DISCOVERY, CLOUD_COMPUTING"
             }
           },
           "businessModels": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/Taxonomy"
+              "type": "string",
+              "example": "CONSUMER_PRODUCTS, ECOMMERCE"
             }
           },
           "industries": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/Taxonomy"
+              "type": "string",
+              "example": "ELECTRICAL_EQUIPMENT, MACHINERY_AND_EQUIPMENT"
             }
           },
           "socialInnovations": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/Taxonomy"
+              "type": "string",
+              "example": "PEACE_AND_JUSTICE_STRONG_INSTITUTIONS, REDUCED_INEQUALITIES, CLIMATE_ACTION, GENDER_EQUALITY, NO_POVERTY"
             }
           },
           "manager": {
@@ -1361,25 +1364,29 @@
           "deepTechs": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/DeepTech"
+              "type": "string",
+              "example": "SMART_DATA_DISCOVERY, CLOUD_COMPUTING"
             }
           },
           "businessModels": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/Taxonomy"
+              "type": "string",
+              "example": "CONSUMER_PRODUCTS, ECOMMERCE"
             }
           },
           "industries": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/Taxonomy"
+              "type": "string",
+              "example": "ELECTRICAL_EQUIPMENT, MACHINERY_AND_EQUIPMENT"
             }
           },
           "socialInnovations": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/Taxonomy"
+              "type": "string",
+              "example": "PEACE_AND_JUSTICE_STRONG_INSTITUTIONS, REDUCED_INEQUALITIES, CLIMATE_ACTION, GENDER_EQUALITY, NO_POVERTY"
             }
           }
         }
@@ -1494,11 +1501,14 @@
           "email": {
             "type": "string",
             "format": "email",
-            "example": "pruebaemail@gmmail.com"
+            "example": "pruebaemail@gmail.com"
           },
           "about": {
             "type": "string",
             "example": "Developer"
+          },
+          "image": {
+            "$ref": "#/components/schemas/Image"
           },
           "socialNetworks": {
             "type": "array",
@@ -1982,26 +1992,6 @@
       "idToken": {
         "type": "apiKey",
         "name": "COOKIE_ID_TOKEN",
-        "in": "header"
-      },
-      "userId": {
-        "type": "apiKey",
-        "name": "COOKIE_USER_ID",
-        "in": "header"
-      },
-      "userEmail": {
-        "type": "apiKey",
-        "name": "COOKIE_USER_EMAIL",
-        "in": "header"
-      },
-      "userRoles": {
-        "type": "apiKey",
-        "name": "COOKIE_USER_ROLES",
-        "in": "header"
-      },
-      "userPermissions": {
-        "type": "apiKey",
-        "name": "COOKIE_USER_PERMISSIONS",
         "in": "header"
       }
     }
