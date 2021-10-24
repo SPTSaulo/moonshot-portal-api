@@ -12,7 +12,7 @@ declare const SwaggerUIBundle: any;
 export class SwaggerUiComponent implements OnInit {
 
   private api: Object = {}
-  private apiName: string
+  private module: string
 
   constructor(
     private _apiService: ApiService,
@@ -20,19 +20,24 @@ export class SwaggerUiComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    this._route.params.subscribe(params => this.apiName = params['apiName'])
-    this.api = this._apiService.getSwaggerObject(this.apiName)
+    this._route.params.subscribe(params => this.module = params['module'])
+    this.api = this._apiService.getSwaggerObject(this.module)
     const ui = SwaggerUIBundle({
       dom_id: '#swagger-ui',
       layout: 'BaseLayout',
+      deepLinking: true,
       presets: [
         SwaggerUIBundle.presets.apis,
         SwaggerUIBundle.SwaggerUIStandalonePreset
+      ],
+      plugins: [
+        SwaggerUIBundle.plugins.DownloadUrl
       ],
       spec: this.api,
       docExpansion: 'none',
       operationsSorter: 'alpha'
     });
+    window['ui'] = ui
   }
 
 }

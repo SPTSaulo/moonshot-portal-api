@@ -1,0 +1,26 @@
+<div class="endpoint-wrapper">
+  <div class="endpoint" *ngIf="template">
+    <div class="endpoint-header">
+      <h3 class="endpoint-title">{{ template.name }}</h3>
+      <h3 class="endpoint-method">{{ endpoint.method | uppercase }}</h3>
+      <select class="endpoint-language" [(ngModel)]="selectedLanguage" (change)="changeTemplate()">
+        <option *ngFor="let language of languages" [value]="language">{{ language }}</option>
+      </select>
+    </div>
+    <div class="endpoint-body">
+      <div class="endpoint-code">
+        <h4 class="endpoint-body-title">Code</h4>
+        <pre>
+            <span>{{ template.code }}</span>
+        </pre>
+      </div>
+      <div class="endpoint-response">
+        <h4 class="endpoint-body-title">Response</h4>
+        <pre *ngIf="template.response">
+          <code>{{ template.response }}</code>
+        </pre>
+        <span *ngIf="!template.response">No response</span>
+      </div>
+    </div>
+  </div>
+</div>

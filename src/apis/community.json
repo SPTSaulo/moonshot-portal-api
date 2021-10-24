@@ -3914,7 +3914,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Member"
+                  "$ref": "#/components/schemas/UpdateMember"
                 }
               }
             }
@@ -3973,7 +3973,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/Member"
+                    "$ref": "#/components/schemas/UpdateMember"
                   }
                 }
               }
@@ -4022,7 +4022,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Member"
+                  "$ref": "#/components/schemas/UpdateMember"
                 }
               }
             }
@@ -4840,7 +4840,73 @@
   },
   "components": {
     "schemas": {
-      "Member": {
+      "CreateMember": {
+        "required": [
+          "state",
+          "name",
+          "lastname",
+          "address",
+          "email",
+          "about",
+          "image",
+          "socialNetworks",
+          "experiences",
+          "educations"
+        ],
+        "properties": {
+          "state": {
+            "type": "string",
+            "enum": [
+              "ACCEPTED",
+              "PENDING",
+              "REJECTED"
+            ]
+          },
+          "name": {
+            "type": "string",
+            "example": "Carlos"
+          },
+          "lastname": {
+            "type": "string",
+            "example": "Guarin"
+          },
+          "address": {
+            "$ref": "#/components/schemas/Address"
+          },
+          "email": {
+            "type": "string",
+            "format": "email",
+            "example": "pruebaemail@gmail.com"
+          },
+          "about": {
+            "type": "string",
+            "example": "Developer"
+          },
+          "image": {
+            "$ref": "#/components/schemas/Image"
+          },
+          "socialNetworks": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "example": "https://www.instagram.com/user1, https://www.twitter.com/user1, https://www.linkedln.com/user1"
+            }
+          },
+          "experiences": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Experience"
+            }
+          },
+          "educations": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Education"
+            }
+          }
+        }
+      },
+      "UpdateMember": {
         "required": [
           "id",
           "state",
@@ -5249,7 +5315,7 @@
             "example": "60acae8e2f799d228a4d4a85"
           },
           "ownerMember": {
-            "$ref": "#/components/schemas/Member"
+            "$ref": "#/components/schemas/UpdateMember"
           },
           "title": {
             "type": "string",
@@ -5274,7 +5340,7 @@
           "participants": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/Member"
+              "$ref": "#/components/schemas/UpdateMember"
             }
           }
         }
@@ -5294,7 +5360,7 @@
             "example": "60acae8e2f799d228a4d4a85"
           },
           "ownerMember": {
-            "$ref": "#/components/schemas/Member"
+            "$ref": "#/components/schemas/UpdateMember"
           },
           "participants": {
             "type": "array",
@@ -5369,7 +5435,7 @@
             "example": "60acae8e2f799d228a4d4a85"
           },
           "ownerMember": {
-            "$ref": "#/components/schemas/Member"
+            "$ref": "#/components/schemas/UpdateMember"
           },
           "title": {
             "type": "string",
@@ -5394,7 +5460,7 @@
           "participants": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/Member"
+              "$ref": "#/components/schemas/UpdateMember"
             }
           }
         }
@@ -5459,7 +5525,7 @@
             "example": "60acae8e2f799d228a4d4a85"
           },
           "ownerMember": {
-            "$ref": "#/components/schemas/Member"
+            "$ref": "#/components/schemas/UpdateMember"
           },
           "participants": {
             "type": "array",
@@ -5512,7 +5578,7 @@
             "example": "60acae8e2f799d228a4d4a85"
           },
           "ownerMember": {
-            "$ref": "#/components/schemas/Member"
+            "$ref": "#/components/schemas/UpdateMember"
           },
           "participants": {
             "type": "array",
@@ -5559,7 +5625,7 @@
             "example": "60acae8e2f799d228a4d4a85"
           },
           "ownerMember": {
-            "$ref": "#/components/schemas/Member"
+            "$ref": "#/components/schemas/UpdateMember"
           },
           "content": {
             "type": "string",
@@ -5581,7 +5647,7 @@
           "comments": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/Comment"
+              "$ref": "#/components/schemas/CreateComment"
             }
           },
           "likes": {
@@ -5621,26 +5687,20 @@
           }
         }
       },
-      "Comment": {
+      "CreateComment": {
         "required": [
-          "id",
           "content",
           "authorMember",
           "likes",
           "createdAt"
         ],
         "properties": {
-          "id": {
-            "type": "string",
-            "format": "mongo-id",
-            "example": "60acae8e2f799d228a4d4a85"
-          },
           "content": {
             "type": "string",
             "example": "First comment"
           },
           "authorMember": {
-            "$ref": "#/components/schemas/Member"
+            "$ref": "#/components/schemas/UpdateMember"
           },
           "likes": {
             "type": "array",
@@ -5708,7 +5768,7 @@
             ]
           },
           "ownerMember": {
-            "$ref": "#/components/schemas/Member"
+            "$ref": "#/components/schemas/UpdateMember"
           },
           "name": {
             "type": "string",
@@ -6152,12 +6212,12 @@
             ]
           },
           "projectManager": {
-            "$ref": "#/components/schemas/Member"
+            "$ref": "#/components/schemas/UpdateMember"
           },
           "teamMembers": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/Member"
+              "$ref": "#/components/schemas/UpdateMember"
             }
           },
           "socialNetworks": {
@@ -6215,8 +6275,6 @@
       },
       "OnlineEventCreateEvent": {
         "required": [
-          "id",
-          "memberId",
           "title",
           "timestamp",
           "description",
@@ -6224,16 +6282,6 @@
           "url"
         ],
         "properties": {
-          "id": {
-            "type": "string",
-            "format": "mongo-id",
-            "example": "60acae8e2f799d228a4d4a85"
-          },
-          "memberId": {
-            "type": "string",
-            "format": "mongo-id",
-            "example": "60acae8e2f799d228a4d4a85"
-          },
           "title": {
             "type": "string",
             "example": "Event to improve our programming skills"
@@ -6319,7 +6367,7 @@
           "participants": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/Member"
+              "$ref": "#/components/schemas/UpdateMember"
             }
           }
         }
@@ -6338,15 +6386,13 @@
           "participants": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/Member"
+              "$ref": "#/components/schemas/UpdateMember"
             }
           }
         }
       },
       "MemberEducationCreateEvent": {
         "required": [
-          "id",
-          "memberId",
           "school",
           "degree",
           "fieldOfStudy",
@@ -6357,16 +6403,6 @@
           "description"
         ],
         "properties": {
-          "id": {
-            "type": "string",
-            "format": "mongo-id",
-            "example": "60acae8e2f799d228a4d4a85"
-          },
-          "memberId": {
-            "type": "string",
-            "format": "mongo-id",
-            "example": "60acae8e2f799d228a4d4a85"
-          },
           "school": {
             "type": "string",
             "example": "Hardvard University"
@@ -6405,7 +6441,6 @@
       "MemberEducationUpdateEvent": {
         "required": [
           "id",
-          "memberId",
           "school",
           "degree",
           "fieldOfStudy",
@@ -6417,11 +6452,6 @@
         ],
         "properties": {
           "id": {
-            "type": "string",
-            "format": "mongo-id",
-            "example": "60acae8e2f799d228a4d4a85"
-          },
-          "memberId": {
             "type": "string",
             "format": "mongo-id",
             "example": "60acae8e2f799d228a4d4a85"
@@ -6463,8 +6493,6 @@
       },
       "MemberExperienceCreateEvent": {
         "required": [
-          "id",
-          "memberId",
           "title",
           "type",
           "company",
@@ -6474,16 +6502,6 @@
           "description"
         ],
         "properties": {
-          "id": {
-            "type": "string",
-            "format": "mongo-id",
-            "example": "60acae8e2f799d228a4d4a85"
-          },
-          "memberId": {
-            "type": "string",
-            "format": "mongo-id",
-            "example": "60acae8e2f799d228a4d4a85"
-          },
           "title": {
             "type": "string",
             "example": "Back-end developer en Moonshot Innovation"
@@ -6530,7 +6548,6 @@
       "MemberExperienceUpdateEvent": {
         "required": [
           "id",
-          "memberId",
           "title",
           "type",
           "company",
@@ -6541,11 +6558,6 @@
         ],
         "properties": {
           "id": {
-            "type": "string",
-            "format": "mongo-id",
-            "example": "60acae8e2f799d228a4d4a85"
-          },
-          "memberId": {
             "type": "string",
             "format": "mongo-id",
             "example": "60acae8e2f799d228a4d4a85"
@@ -6607,7 +6619,7 @@
           "participants": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/Member"
+              "$ref": "#/components/schemas/UpdateMember"
             }
           }
         }
@@ -6626,15 +6638,13 @@
           "participants": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/Member"
+              "$ref": "#/components/schemas/UpdateMember"
             }
           }
         }
       },
       "FaceToFaceEventCreateEvent": {
         "required": [
-          "id",
-          "memberId",
           "title",
           "timestamp",
           "description",
@@ -6642,16 +6652,6 @@
           "direction"
         ],
         "properties": {
-          "id": {
-            "type": "string",
-            "format": "mongo-id",
-            "example": "60acae8e2f799d228a4d4a85"
-          },
-          "memberId": {
-            "type": "string",
-            "format": "mongo-id",
-            "example": "60acae8e2f799d228a4d4a85"
-          },
           "title": {
             "type": "string",
             "example": "Event to improve our programming skills"
@@ -6713,24 +6713,12 @@
       },
       "PublicChannelCreateEvent": {
         "required": [
-          "id",
-          "ownerMemberId",
           "participants",
           "actions",
           "title",
           "description"
         ],
         "properties": {
-          "id": {
-            "type": "string",
-            "format": "mongo-id",
-            "example": "60acae8e2f799d228a4d4a85"
-          },
-          "ownerMemberId": {
-            "type": "string",
-            "format": "mongo-id",
-            "example": "60acae8e2f799d228a4d4a85"
-          },
           "participants": {
             "type": "array",
             "items": {
@@ -6758,7 +6746,6 @@
           "id",
           "ownerMemberId",
           "participants",
-          "createdAt",
           "actions",
           "title",
           "description"
@@ -6779,11 +6766,6 @@
             "items": {
               "$ref": "#/components/schemas/ParticipantAnyEvent"
             }
-          },
-          "createdAt": {
-            "type": "string",
-            "format": "ZonedDateTime",
-            "example": 1624520984602
           },
           "actions": {
             "type": "array",
@@ -6839,8 +6821,6 @@
       },
       "WallPostCreateEvent": {
         "required": [
-          "id",
-          "ownerMemberId",
           "content",
           "attachments",
           "comments",
@@ -6848,16 +6828,6 @@
           "createdAt"
         ],
         "properties": {
-          "id": {
-            "type": "string",
-            "format": "mongo-id",
-            "example": "60acae8e2f799d228a4d4a85"
-          },
-          "ownerMemberId": {
-            "type": "string",
-            "format": "mongo-id",
-            "example": "60acae8e2f799d228a4d4a85"
-          },
           "content": {
             "type": "string",
             "example": "First wall post in this ecoystem"
@@ -6871,7 +6841,7 @@
           "comments": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/Comment"
+              "$ref": "#/components/schemas/CreateComment"
             }
           },
           "likes": {
@@ -6915,16 +6885,10 @@
       },
       "WallPostLikeEvent": {
         "required": [
-          "id",
-          "memberId"
+          "id"
         ],
         "properties": {
           "id": {
-            "type": "string",
-            "format": "mongo-id",
-            "example": "60acae8e2f799d228a4d4a85"
-          },
-          "memberId": {
             "type": "string",
             "format": "mongo-id",
             "example": "60acae8e2f799d228a4d4a85"
@@ -6933,16 +6897,10 @@
       },
       "WallPostUnlikeEvent": {
         "required": [
-          "id",
-          "memberId"
+          "id"
         ],
         "properties": {
           "id": {
-            "type": "string",
-            "format": "mongo-id",
-            "example": "60acae8e2f799d228a4d4a85"
-          },
-          "memberId": {
             "type": "string",
             "format": "mongo-id",
             "example": "60acae8e2f799d228a4d4a85"
@@ -6961,7 +6919,7 @@
             "example": "60acae8e2f799d228a4d4a85"
           },
           "comment": {
-            "$ref": "#/components/schemas/Comment"
+            "$ref": "#/components/schemas/CreateComment"
           }
         }
       },
@@ -7015,7 +6973,6 @@
       },
       "ActorCreateEvent": {
         "required": [
-          "id",
           "type",
           "state",
           "ownerMember",
@@ -7036,15 +6993,9 @@
           "socialNetworks",
           "media",
           "password",
-          "repeatPassword",
-          "verificationToken"
+          "repeatPassword"
         ],
         "properties": {
-          "id": {
-            "type": "string",
-            "format": "mongo-id",
-            "example": "60acae8e2f799d228a4d4a85"
-          },
           "type": {
             "type": "string",
             "enum": [
@@ -7072,7 +7023,7 @@
             ]
           },
           "ownerMember": {
-            "$ref": "#/components/schemas/Member"
+            "$ref": "#/components/schemas/CreateMember"
           },
           "name": {
             "type": "string",
@@ -7147,11 +7098,6 @@
           "repeatPassword": {
             "type": "string",
             "example": "hola123"
-          },
-          "verificationToken": {
-            "type": "string",
-            "format": "uuid",
-            "example": "123e4567-e89b-12d3-a456-426614174000"
           }
         }
       },
@@ -7352,7 +7298,6 @@
       },
       "ProjectCreateEvent": {
         "required": [
-          "id",
           "actorId",
           "name",
           "description",
@@ -7368,11 +7313,6 @@
           "socialInnovation"
         ],
         "properties": {
-          "id": {
-            "type": "string",
-            "format": "mongo-id",
-            "example": "60acae8e2f799d228a4d4a85"
-          },
           "actorId": {
             "type": "string",
             "format": "mongo-id",
@@ -7592,15 +7532,9 @@
       },
       "SettingCreateEvent": {
         "required": [
-          "id",
           "banner"
         ],
         "properties": {
-          "id": {
-            "type": "string",
-            "format": "mongo-id",
-            "example": "60acae8e2f799d228a4d4a85"
-          },
           "banner": {
             "$ref": "#/components/schemas/Image"
           }
@@ -8066,33 +8000,15 @@
       },
       "DirectChatCreateEvent": {
         "required": [
-          "id",
-          "ownerMemberId",
           "participants",
-          "createdAt",
           "actions"
         ],
         "properties": {
-          "id": {
-            "type": "string",
-            "format": "mongo-id",
-            "example": "60acae8e2f799d228a4d4a85"
-          },
-          "ownerMemberId": {
-            "type": "string",
-            "format": "mongo-id",
-            "example": "60acae8e2f799d228a4d4a85"
-          },
           "participants": {
             "type": "array",
             "items": {
               "$ref": "#/components/schemas/ParticipantAnyEvent"
             }
-          },
-          "createdAt": {
-            "type": "string",
-            "format": "ZonedDateTime",
-            "example": 1624520984602
           },
           "actions": {
             "type": "array",
@@ -8124,36 +8040,18 @@
       },
       "FollowUpRoomCreateEvent": {
         "required": [
-          "id",
-          "ownerMemberId",
           "participants",
-          "createdAt",
           "actions",
           "title",
           "description",
           "state"
         ],
         "properties": {
-          "id": {
-            "type": "string",
-            "format": "mongo-id",
-            "example": "60acae8e2f799d228a4d4a85"
-          },
-          "ownerMemberId": {
-            "type": "string",
-            "format": "mongo-id",
-            "example": "60acae8e2f799d228a4d4a85"
-          },
           "participants": {
             "type": "array",
             "items": {
               "$ref": "#/components/schemas/ParticipantAnyEvent"
             }
-          },
-          "createdAt": {
-            "type": "string",
-            "format": "ZonedDateTime",
-            "example": 1624520984602
           },
           "actions": {
             "type": "array",
@@ -8288,26 +8186,12 @@
       },
       "MessageAddEvent": {
         "required": [
-          "id",
           "roomId",
-          "authorMemberId",
           "content",
-          "documents",
-          "links",
-          "createdAt"
+          "documents"
         ],
         "properties": {
-          "id": {
-            "type": "string",
-            "format": "mongo-id",
-            "example": "60acae8e2f799d228a4d4a85"
-          },
           "roomId": {
-            "type": "string",
-            "format": "mongo-id",
-            "example": "60acae8e2f799d228a4d4a85"
-          },
-          "authorMemberId": {
             "type": "string",
             "format": "mongo-id",
             "example": "60acae8e2f799d228a4d4a85"
@@ -8321,33 +8205,16 @@
             "items": {
               "$ref": "#/components/schemas/MessageDocumentAddEvent"
             }
-          },
-          "links": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/Link"
-            }
-          },
-          "createdAt": {
-            "type": "string",
-            "format": "ZonedDateTime",
-            "example": 1624520984602
           }
         }
       },
       "MessageDocumentAddEvent": {
         "required": [
-          "id",
           "link",
           "category",
           "filename"
         ],
         "properties": {
-          "id": {
-            "type": "string",
-            "format": "mongo-id",
-            "example": "60acae8e2f799d228a4d4a85"
-          },
           "link": {
             "type": "string",
             "example": "https://docs.google.com/viewerng/vi54473784a6a2.xlsx"

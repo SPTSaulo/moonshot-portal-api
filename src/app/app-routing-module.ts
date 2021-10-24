@@ -3,7 +3,8 @@ import { Routes, RouterModule } from '@angular/router';
 import { SwaggerUiComponent } from './swagger-ui/swagger-ui.component';
 import { OverviewComponent } from './overview/overview.component';
 import { PlatformPolicyComponent } from './platform-policy/platform-policy.component';
-import {DocumentationComponent} from './documentation/documentation.component';
+import { DocumentationComponent } from './documentation/documentation.component';
+import { CodeExamplesComponent } from './code-examples/code-examples.component';
 
 const routes: Routes = [
   {
@@ -24,8 +25,16 @@ const routes: Routes = [
     component: DocumentationComponent
   },
   {
-    path: 'swagger/:apiName',
+    path: 'swagger/:module',
     component: SwaggerUiComponent
+  },
+  {
+    path: 'code-examples',
+    component: CodeExamplesComponent
+  },
+  {
+    path: 'code-examples/:module',
+    component: CodeExamplesComponent
   }
 ];
 

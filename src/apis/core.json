@@ -6,10 +6,6 @@
     "contact": {
       "email": "saulosantanab@gmail.com"
     },
-    "license": {
-      "name": "Apache 2.0",
-      "url": "http://www.apache.org/licenses/LICENSE-2.0.html"
-    },
     "version": "1.0.0"
   },
   "servers": [
@@ -23,23 +19,47 @@
   ],
   "tags": [
     {
-      "name": "EcosystemUpdate",
-      "description": "Endpoints available to users with ecosystem update permission"
+      "name": "Version",
+      "description": "Endpoint that return Core last version"
     },
     {
-      "name": "ActorInvite",
-      "description": "Endpoints available to users with actor invite permission"
+      "name": "Signed Url",
+      "description": "Enpoint that sign a url"
     },
     {
-      "name": "NoPerms",
-      "description": "Operations available to all users"
+      "name": "Open Graph",
+      "description": "Endpoint that return OG Tags"
+    },
+    {
+      "name": "Industry",
+      "description": "Endpoints about industry taxonomy"
+    },
+    {
+      "name": "Business Model",
+      "description": "Endpoints about business model taxonomy"
+    },
+    {
+      "name": "Social Innovation",
+      "description": "Endpoints about social innovation taxonomy"
+    },
+    {
+      "name": "Deep Tech",
+      "description": "Endpoints about deep tech taxonomy"
+    },
+    {
+      "name": "Ecosystem",
+      "description": "Endpoints about ecosystem entity"
+    },
+    {
+      "name": "Notifications",
+      "description": "Endpoints about notifications entity"
     }
   ],
   "paths": {
     "/version": {
       "get": {
         "tags": [
-          "NoPerms"
+          "Version"
         ],
         "summary": "API version",
         "description": "Return the lastest version of the API\n",
@@ -65,7 +85,7 @@
     "/signed-url": {
       "get": {
         "tags": [
-          "NoPerms"
+          "Signed Url"
         ],
         "summary": "Sign a url",
         "description": "Generate a URL that provides limited permission and time to make a request.\n",
@@ -75,6 +95,7 @@
             "name": "filename",
             "in": "query",
             "description": "Filename which you want save in AWS",
+            "required": true,
             "schema": {
               "type": "string"
             }
@@ -83,6 +104,7 @@
             "name": "contentType",
             "in": "query",
             "description": "Content type of the file",
+            "required": true,
             "schema": {
               "type": "string"
             }
@@ -95,7 +117,7 @@
               "application/json": {
                 "schema": {
                   "type": "string",
-                  "example": "https://presignedurldemo.s3.eu-west-2.amazonaws.com/image.png?X-Am91ignedHeaders=host"
+                  "example": "https://presignedurldemo.s3.eu-west-2.amazonaws.com/image.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=%2F20180210%2Feu-west-2%2Fs3%2Faws4_request&X-Amz-Date=20180210T171315Z&X-Amz-Expires=1800&X-Amz-Signature=12b74b0788aa036bc7c3d03b3f20c61f1f91cc9ad8873e3314255dc479a25351&X-Amz-SignedHeaders=host"
                 }
               }
             }
@@ -116,7 +138,7 @@
     "/openGraph": {
       "get": {
         "tags": [
-          "NoPerms"
+          "Open Graph"
         ],
         "summary": "Get OG tags",
         "description": "Get all OG tags from a url\n",
@@ -126,6 +148,7 @@
             "name": "url",
             "in": "query",
             "description": "Url from you want to get OG tags",
+            "required": true,
             "schema": {
               "type": "string"
             }
@@ -173,7 +196,7 @@
     "/industry/{id}": {
       "get": {
         "tags": [
-          "NoPerms"
+          "Industry"
         ],
         "summary": "Get industry taxonomy by id",
         "description": "Find an industry taxonomy in the database by its identifier\n",
@@ -206,7 +229,7 @@
     "/industries": {
       "get": {
         "tags": [
-          "NoPerms"
+          "Industry"
         ],
         "summary": "Get all industry taxonomies",
         "description": "Find all industry taxonomies in the database\n",
@@ -231,7 +254,7 @@
     "/business-model/{id}": {
       "get": {
         "tags": [
-          "NoPerms"
+          "Business Model"
         ],
         "summary": "Get business model taxonomy by id",
         "description": "Find a business model taxonomy in the database by its identifier\n",
@@ -264,7 +287,7 @@
     "/business-models": {
       "get": {
         "tags": [
-          "NoPerms"
+          "Business Model"
         ],
         "summary": "Get all business model taxonomies",
         "description": "Find all business model taxonomies in the database\n",
@@ -289,7 +312,7 @@
     "/social-innovation/{id}": {
       "get": {
         "tags": [
-          "NoPerms"
+          "Social Innovation"
         ],
         "summary": "Get social innovation taxonomy by id",
         "description": "Find a social innovation taxonomy in the database by its identifier\n",
@@ -322,7 +345,7 @@
     "/social-innovations": {
       "get": {
         "tags": [
-          "NoPerms"
+          "Social Innovation"
         ],
         "summary": "Get all social innovation taxonomies",
         "description": "Find all social innovation taxonomies in the database\n",
@@ -347,7 +370,7 @@
     "/deep-tech/{id}": {
       "get": {
         "tags": [
-          "NoPerms"
+          "Deep Tech"
         ],
         "summary": "Get deep tech taxonomy by id",
         "description": "Find a deep tech taxonomy in the database by its identifier\n",
@@ -380,7 +403,7 @@
     "/deep-techs": {
       "get": {
         "tags": [
-          "NoPerms"
+          "Deep Tech"
         ],
         "summary": "Get all deep techs taxonomies",
         "description": "Find all deep techs taxonomies in the database\n",
@@ -405,7 +428,7 @@
     "/ecosystem/initialized": {
       "get": {
         "tags": [
-          "NoPerms"
+          "Ecosystem"
         ],
         "summary": "Check if the ecosystem has been created",
         "description": "Check the database if there is an ecosystem to not allow creating another\n",
@@ -428,7 +451,7 @@
     "/ecosystem": {
       "get": {
         "tags": [
-          "NoPerms"
+          "Ecosystem"
         ],
         "summary": "Get current ecosystem",
         "description": "Find current ecosystem in database and get all the data associated\n",
@@ -463,7 +486,7 @@
       },
       "post": {
         "tags": [
-          "NoPerms"
+          "Ecosystem"
         ],
         "summary": "Create new ecosystem",
         "description": "Create a new ecosystem if another has not already been created\n",
@@ -496,7 +519,7 @@
       },
       "put": {
         "tags": [
-          "EcosystemUpdate"
+          "Ecosystem"
         ],
         "summary": "Update an ecosystem",
         "description": "Find and update an ecosystem in database\n",
@@ -549,6 +572,11 @@
         "security": [
           {
             "idToken": []
+          },
+          {
+            "permissions": [
+              "ecosystem_update"
+            ]
           }
         ]
       }
@@ -556,7 +584,7 @@
     "/ecosystem/invite": {
       "post": {
         "tags": [
-          "ActorInvite"
+          "Ecosystem"
         ],
         "summary": "Invite someone to your ecosystem",
         "description": "Send an email to one or more people to join your ecosystem\n",
@@ -609,6 +637,11 @@
         "security": [
           {
             "idToken": []
+          },
+          {
+            "permissions": [
+              "actor_invite"
+            ]
           }
         ]
       }
@@ -616,7 +649,7 @@
     "/notifications": {
       "get": {
         "tags": [
-          "NoPerms"
+          "Notifications"
         ],
         "summary": "Get all notifications",
         "description": "Find all notifications in the database\n",
@@ -655,13 +688,23 @@
               }
             }
           }
-        }
+        },
+        "security": [
+          {
+            "idToken": []
+          },
+          {
+            "permissions": [
+              "ecosystem_update"
+            ]
+          }
+        ]
       }
     },
     "/notification/{id}": {
       "get": {
         "tags": [
-          "NoPerms"
+          "Notifications"
         ],
         "summary": "Get notification by id",
         "description": "Find a notification in the database by its identifier\n",
@@ -687,6 +730,61 @@
                 }
               }
             }
+          },
+          "401": {
+            "description": "You must login before call this endpoint",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SecurityAccessUnauthorizedError"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "User does not have the necessary permissions",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SecurityAccessForbiddenError"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "idToken": []
+          },
+          {
+            "permissions": [
+              "ecosystem_update"
+            ]
+          }
+        ]
+      }
+    },
+    "/notification": {
+      "post": {
+        "tags": [
+          "Notifications"
+        ],
+        "summary": "Create a notification",
+        "description": "Create and insert a notification in database\n",
+        "operationId": "notification",
+        "requestBody": {
+          "description": "Object that contains all parameters to create a notification",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Notification"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
           },
           "401": {
             "description": "You must login before call this endpoint",
@@ -1015,7 +1113,6 @@
       },
       "EcosystemCreateEvent": {
         "required": [
-          "id",
           "type",
           "name",
           "address",
@@ -1043,11 +1140,6 @@
         ],
         "type": "object",
         "properties": {
-          "id": {
-            "type": "string",
-            "format": "mongo-id",
-            "example": "61445159784bca6ef764c6df"
-          },
           "type": {
             "type": "string",
             "enum": [
@@ -1197,7 +1289,7 @@
             }
           },
           "manager": {
-            "$ref": "#/components/schemas/Member"
+            "$ref": "#/components/schemas/CreateMember"
           },
           "password": {
             "type": "string",
@@ -1459,9 +1551,8 @@
           }
         }
       },
-      "Member": {
+      "CreateMember": {
         "required": [
-          "id",
           "state",
           "name",
           "lastname",
@@ -1474,11 +1565,6 @@
           "educations"
         ],
         "properties": {
-          "id": {
-            "type": "string",
-            "format": "mongo-id",
-            "example": "61445159784bca6ef764c6df"
-          },
           "state": {
             "type": "string",
             "enum": [
@@ -1993,6 +2079,20 @@
         "type": "apiKey",
         "name": "COOKIE_ID_TOKEN",
         "in": "header"
+      },
+      "permissions": {
+        "type": "oauth2",
+        "description": "This define all permisions required in Core API",
+        "flows": {
+          "authorizationCode": {
+            "scopes": {
+              "ecosystem_update": "Permission required to modify ecosystem",
+              "actor_invite": "Permission required to add new actors to ecosystem"
+            },
+            "authorizationUrl": "https://dev.moonshot.ceo/api/federation/login",
+            "tokenUrl": "https://dev.moonshot.ceo/api/federation/token"
+          }
+        }
       }
     }
   }

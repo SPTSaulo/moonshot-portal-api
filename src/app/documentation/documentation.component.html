@@ -1,7 +1,8 @@
 <div class="apis">
+  <h1>API PORTAL</h1>
   <div class="api" *ngFor="let api of apis">
-    <h2>{{ api.name }}</h2>
+    <h2>{{ api.name | titlecase }}</h2>
     <p>{{ api.description }}</p>
-    <a [routerLink]="['/swagger', api.name]" target="_blank">See {{ api.name | lowercase }} documentation</a>
+    <a [routerLink]="['/swagger', api.name]" target="_blank">Documentation</a>
   </div>
 </div>

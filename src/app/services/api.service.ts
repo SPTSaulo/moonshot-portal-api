@@ -1,10 +1,13 @@
-import {ApisConstants} from '../../apis/ApisConstants';
+import { ApisConstants } from '../../apis/ApisConstants';
+import {Endpoint, Method} from '../model/Endpoint';
+import { Api } from '../model/Api';
 
 export class ApiService {
-  apis = [
+  apis: Api[] = [
     {
-      name: 'Federation',
-      description: 'Esta es la api de Federation' +
+      name: 'federation',
+      endpoints: [],
+      description: 'Esta es la api de Federation. ' +
         'Esta api recoge todos los enpoints relacionados con los usuarios de Moonshot Innovation' +
         'En esta api encontrará los siguientes endpoints:' +
         '- Todos los endpoints relacionados con la sesión del usuario' +
@@ -14,8 +17,86 @@ export class ApiService {
       swagger: ApisConstants.federation
     },
     {
-      name: 'Core',
-      description: 'Esta es la api de Core' +
+      name: 'core',
+      endpoints: [
+        {
+          name: 'version',
+          method: Method.GET
+        },
+        {
+          name: 'signed-url',
+          method: Method.GET
+        },
+        {
+          name: 'openGraph',
+          method: Method.GET
+        },
+        {
+          name: 'industry/:id',
+          method: Method.GET
+        },
+        {
+          name: 'industries',
+          method: Method.GET
+        },
+        {
+          name: 'business-model/:id',
+          method: Method.GET
+        },
+        {
+          name: 'business-models',
+          method: Method.GET
+        },
+        {
+          name: 'social-innovation/:id',
+          method: Method.GET
+        },
+        {
+          name: 'social-innovations',
+          method: Method.GET
+        },
+        {
+          name: 'deep-tech/:id',
+          method: Method.GET
+        },
+        {
+          name: 'deep-techs',
+          method: Method.GET
+        },
+        {
+          name: 'ecosystem/initialized',
+          method: Method.GET
+        },
+        {
+          name: 'ecosystem',
+          method: Method.GET
+        },
+        {
+          name: 'ecosystem',
+          method: Method.POST
+        },
+        {
+          name: 'ecosystem',
+          method: Method.PUT
+        },
+        {
+          name: 'ecosystem/invite',
+          method: Method.POST
+        },
+        {
+          name: 'notifications',
+          method: Method.GET
+        },
+        {
+          name: 'notification/:id',
+          method: Method.GET
+        },
+        {
+          name: 'notification',
+          method: Method.POST
+        }
+      ],
+      description: 'Esta es la api de Core. ' +
         'Esta api recoge todos los enpoints relacionados con las funcionalidades principales de la plataforma' +
         'En esta api encontrará los siguientes endpoints:' +
         '- Todos los endpoints de obtención de taxonomias' +
@@ -24,7 +105,8 @@ export class ApiService {
       swagger: ApisConstants.core
     },
     {
-      name: 'Community',
+      name: 'community',
+      endpoints: [],
       description: 'Esta es la api de Community. ' +
         'Esta api recoge todos los endpoints relacionados con el modulo de Comunidades.' +
         'En esta api encontrará los siguientes endpoints:' +
@@ -45,5 +127,9 @@ export class ApiService {
 
   public getSwaggerObject(apiName: string): Object {
     return this.apis.find(api => api.name === apiName).swagger
+  }
+
+  public getEndpoints(apiName: string): Endpoint[] {
+    return this.apis.find(api => api.name === apiName).endpoints
   }
 }

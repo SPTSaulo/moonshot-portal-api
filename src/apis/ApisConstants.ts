@@ -1,4 +1,5 @@
 export class ApisConstants {
+
   public static federation: Object = {
     "openapi": "3.0.1",
     "info": {
@@ -1021,6 +1022,7 @@ export class ApisConstants {
       }
     }
   }
+
   public static core: Object = {
     "openapi": "3.0.1",
     "info": {
@@ -1028,10 +1030,6 @@ export class ApisConstants {
       "description": "Moonshot Core API",
       "contact": {
         "email": "saulosantanab@gmail.com"
-      },
-      "license": {
-        "name": "Apache 2.0",
-        "url": "http://www.apache.org/licenses/LICENSE-2.0.html"
       },
       "version": "1.0.0"
     },
@@ -1046,23 +1044,47 @@ export class ApisConstants {
     ],
     "tags": [
       {
-        "name": "EcosystemUpdate",
-        "description": "Endpoints available to users with ecosystem update permission"
+        "name": "Version",
+        "description": "Endpoint that return Core last version"
       },
       {
-        "name": "ActorInvite",
-        "description": "Endpoints available to users with actor invite permission"
+        "name": "Signed Url",
+        "description": "Enpoint that sign a url"
       },
       {
-        "name": "NoPerms",
-        "description": "Operations available to all users"
+        "name": "Open Graph",
+        "description": "Endpoint that return OG Tags"
+      },
+      {
+        "name": "Industry",
+        "description": "Endpoints about industry taxonomy"
+      },
+      {
+        "name": "Business Model",
+        "description": "Endpoints about business model taxonomy"
+      },
+      {
+        "name": "Social Innovation",
+        "description": "Endpoints about social innovation taxonomy"
+      },
+      {
+        "name": "Deep Tech",
+        "description": "Endpoints about deep tech taxonomy"
+      },
+      {
+        "name": "Ecosystem",
+        "description": "Endpoints about ecosystem entity"
+      },
+      {
+        "name": "Notifications",
+        "description": "Endpoints about notifications entity"
       }
     ],
     "paths": {
       "/version": {
         "get": {
           "tags": [
-            "NoPerms"
+            "Version"
           ],
           "summary": "API version",
           "description": "Return the lastest version of the API\n",
@@ -1088,7 +1110,7 @@ export class ApisConstants {
       "/signed-url": {
         "get": {
           "tags": [
-            "NoPerms"
+            "Signed Url"
           ],
           "summary": "Sign a url",
           "description": "Generate a URL that provides limited permission and time to make a request.\n",
@@ -1098,6 +1120,7 @@ export class ApisConstants {
               "name": "filename",
               "in": "query",
               "description": "Filename which you want save in AWS",
+              "required": true,
               "schema": {
                 "type": "string"
               }
@@ -1106,6 +1129,7 @@ export class ApisConstants {
               "name": "contentType",
               "in": "query",
               "description": "Content type of the file",
+              "required": true,
               "schema": {
                 "type": "string"
               }
@@ -1118,7 +1142,7 @@ export class ApisConstants {
                 "application/json": {
                   "schema": {
                     "type": "string",
-                    "example": "https://presignedurldemo.s3.eu-west-2.amazonaws.com/image.png?X-AAmz-Cr5Z&Xe=120c61fHeaders=host"
+                    "example": "https://presignedurldemo.s3.eu-west-2.amazonaws.com/image.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=%2F20180210%2Feu-west-2%2Fs3%2Faws4_request&X-Amz-Date=20180210T171315Z&X-Amz-Expires=1800&X-Amz-Signature=12b74b0788aa036bc7c3d03b3f20c61f1f91cc9ad8873e3314255dc479a25351&X-Amz-SignedHeaders=host"
                   }
                 }
               }
@@ -1139,7 +1163,7 @@ export class ApisConstants {
       "/openGraph": {
         "get": {
           "tags": [
-            "NoPerms"
+            "Open Graph"
           ],
           "summary": "Get OG tags",
           "description": "Get all OG tags from a url\n",
@@ -1149,6 +1173,7 @@ export class ApisConstants {
               "name": "url",
               "in": "query",
               "description": "Url from you want to get OG tags",
+              "required": true,
               "schema": {
                 "type": "string"
               }
@@ -1196,7 +1221,7 @@ export class ApisConstants {
       "/industry/{id}": {
         "get": {
           "tags": [
-            "NoPerms"
+            "Industry"
           ],
           "summary": "Get industry taxonomy by id",
           "description": "Find an industry taxonomy in the database by its identifier\n",
@@ -1229,7 +1254,7 @@ export class ApisConstants {
       "/industries": {
         "get": {
           "tags": [
-            "NoPerms"
+            "Industry"
           ],
           "summary": "Get all industry taxonomies",
           "description": "Find all industry taxonomies in the database\n",
@@ -1254,7 +1279,7 @@ export class ApisConstants {
       "/business-model/{id}": {
         "get": {
           "tags": [
-            "NoPerms"
+            "Business Model"
           ],
           "summary": "Get business model taxonomy by id",
           "description": "Find a business model taxonomy in the database by its identifier\n",
@@ -1287,7 +1312,7 @@ export class ApisConstants {
       "/business-models": {
         "get": {
           "tags": [
-            "NoPerms"
+            "Business Model"
           ],
           "summary": "Get all business model taxonomies",
           "description": "Find all business model taxonomies in the database\n",
@@ -1312,7 +1337,7 @@ export class ApisConstants {
       "/social-innovation/{id}": {
         "get": {
           "tags": [
-            "NoPerms"
+            "Social Innovation"
           ],
           "summary": "Get social innovation taxonomy by id",
           "description": "Find a social innovation taxonomy in the database by its identifier\n",
@@ -1345,7 +1370,7 @@ export class ApisConstants {
       "/social-innovations": {
         "get": {
           "tags": [
-            "NoPerms"
+            "Social Innovation"
           ],
           "summary": "Get all social innovation taxonomies",
           "description": "Find all social innovation taxonomies in the database\n",
@@ -1370,7 +1395,7 @@ export class ApisConstants {
       "/deep-tech/{id}": {
         "get": {
           "tags": [
-            "NoPerms"
+            "Deep Tech"
           ],
           "summary": "Get deep tech taxonomy by id",
           "description": "Find a deep tech taxonomy in the database by its identifier\n",
@@ -1403,7 +1428,7 @@ export class ApisConstants {
       "/deep-techs": {
         "get": {
           "tags": [
-            "NoPerms"
+            "Deep Tech"
           ],
           "summary": "Get all deep techs taxonomies",
           "description": "Find all deep techs taxonomies in the database\n",
@@ -1428,7 +1453,7 @@ export class ApisConstants {
       "/ecosystem/initialized": {
         "get": {
           "tags": [
-            "NoPerms"
+            "Ecosystem"
           ],
           "summary": "Check if the ecosystem has been created",
           "description": "Check the database if there is an ecosystem to not allow creating another\n",
@@ -1451,7 +1476,7 @@ export class ApisConstants {
       "/ecosystem": {
         "get": {
           "tags": [
-            "NoPerms"
+            "Ecosystem"
           ],
           "summary": "Get current ecosystem",
           "description": "Find current ecosystem in database and get all the data associated\n",
@@ -1486,7 +1511,7 @@ export class ApisConstants {
         },
         "post": {
           "tags": [
-            "NoPerms"
+            "Ecosystem"
           ],
           "summary": "Create new ecosystem",
           "description": "Create a new ecosystem if another has not already been created\n",
@@ -1519,7 +1544,7 @@ export class ApisConstants {
         },
         "put": {
           "tags": [
-            "EcosystemUpdate"
+            "Ecosystem"
           ],
           "summary": "Update an ecosystem",
           "description": "Find and update an ecosystem in database\n",
@@ -1572,6 +1597,11 @@ export class ApisConstants {
           "security": [
             {
               "idToken": []
+            },
+            {
+              "permissions": [
+                "ecosystem_update"
+              ]
             }
           ]
         }
@@ -1579,7 +1609,7 @@ export class ApisConstants {
       "/ecosystem/invite": {
         "post": {
           "tags": [
-            "ActorInvite"
+            "Ecosystem"
           ],
           "summary": "Invite someone to your ecosystem",
           "description": "Send an email to one or more people to join your ecosystem\n",
@@ -1632,6 +1662,11 @@ export class ApisConstants {
           "security": [
             {
               "idToken": []
+            },
+            {
+              "permissions": [
+                "actor_invite"
+              ]
             }
           ]
         }
@@ -1639,7 +1674,7 @@ export class ApisConstants {
       "/notifications": {
         "get": {
           "tags": [
-            "NoPerms"
+            "Notifications"
           ],
           "summary": "Get all notifications",
           "description": "Find all notifications in the database\n",
@@ -1678,13 +1713,23 @@ export class ApisConstants {
                 }
               }
             }
-          }
+          },
+          "security": [
+            {
+              "idToken": []
+            },
+            {
+              "permissions": [
+                "ecosystem_update"
+              ]
+            }
+          ]
         }
       },
       "/notification/{id}": {
         "get": {
           "tags": [
-            "NoPerms"
+            "Notifications"
           ],
           "summary": "Get notification by id",
           "description": "Find a notification in the database by its identifier\n",
@@ -1710,6 +1755,61 @@ export class ApisConstants {
                   }
                 }
               }
+            },
+            "401": {
+              "description": "You must login before call this endpoint",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/SecurityAccessUnauthorizedError"
+                  }
+                }
+              }
+            },
+            "403": {
+              "description": "User does not have the necessary permissions",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/SecurityAccessForbiddenError"
+                  }
+                }
+              }
+            }
+          },
+          "security": [
+            {
+              "idToken": []
+            },
+            {
+              "permissions": [
+                "ecosystem_update"
+              ]
+            }
+          ]
+        }
+      },
+      "/notification": {
+        "post": {
+          "tags": [
+            "Notifications"
+          ],
+          "summary": "Create a notification",
+          "description": "Create and insert a notification in database\n",
+          "operationId": "notification",
+          "requestBody": {
+            "description": "Object that contains all parameters to create a notification",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Notification"
+                }
+              }
+            }
+          },
+          "responses": {
+            "200": {
+              "description": "OK"
             },
             "401": {
               "description": "You must login before call this endpoint",
@@ -2038,7 +2138,6 @@ export class ApisConstants {
         },
         "EcosystemCreateEvent": {
           "required": [
-            "id",
             "type",
             "name",
             "address",
@@ -2066,11 +2165,6 @@ export class ApisConstants {
           ],
           "type": "object",
           "properties": {
-            "id": {
-              "type": "string",
-              "format": "mongo-id",
-              "example": "61445159784bca6ef764c6df"
-            },
             "type": {
               "type": "string",
               "enum": [
@@ -2220,7 +2314,7 @@ export class ApisConstants {
               }
             },
             "manager": {
-              "$ref": "#/components/schemas/Member"
+              "$ref": "#/components/schemas/CreateMember"
             },
             "password": {
               "type": "string",
@@ -2482,9 +2576,8 @@ export class ApisConstants {
             }
           }
         },
-        "Member": {
+        "CreateMember": {
           "required": [
-            "id",
             "state",
             "name",
             "lastname",
@@ -2497,11 +2590,6 @@ export class ApisConstants {
             "educations"
           ],
           "properties": {
-            "id": {
-              "type": "string",
-              "format": "mongo-id",
-              "example": "61445159784bca6ef764c6df"
-            },
             "state": {
               "type": "string",
               "enum": [
@@ -3016,10 +3104,25 @@ export class ApisConstants {
           "type": "apiKey",
           "name": "COOKIE_ID_TOKEN",
           "in": "header"
+        },
+        "permissions": {
+          "type": "oauth2",
+          "description": "This define all permisions required in Core API",
+          "flows": {
+            "authorizationCode": {
+              "scopes": {
+                "ecosystem_update": "Permission required to modify ecosystem",
+                "actor_invite": "Permission required to add new actors to ecosystem"
+              },
+              "authorizationUrl": "https://dev.moonshot.ceo/api/federation/login",
+              "tokenUrl": "https://dev.moonshot.ceo/api/federation/token"
+            }
+          }
         }
       }
     }
   }
+
   public static community: Object = {
     "openapi": "3.0.1",
     "info": {
@@ -6936,7 +7039,7 @@ export class ApisConstants {
               "content": {
                 "application/json": {
                   "schema": {
-                    "$ref": "#/components/schemas/Member"
+                    "$ref": "#/components/schemas/UpdateMember"
                   }
                 }
               }
@@ -6995,7 +7098,7 @@ export class ApisConstants {
                   "schema": {
                     "type": "array",
                     "items": {
-                      "$ref": "#/components/schemas/Member"
+                      "$ref": "#/components/schemas/UpdateMember"
                     }
                   }
                 }
@@ -7044,7 +7147,7 @@ export class ApisConstants {
               "content": {
                 "application/json": {
                   "schema": {
-                    "$ref": "#/components/schemas/Member"
+                    "$ref": "#/components/schemas/UpdateMember"
                   }
                 }
               }
@@ -7862,7 +7965,73 @@ export class ApisConstants {
     },
     "components": {
       "schemas": {
-        "Member": {
+        "CreateMember": {
+          "required": [
+            "state",
+            "name",
+            "lastname",
+            "address",
+            "email",
+            "about",
+            "image",
+            "socialNetworks",
+            "experiences",
+            "educations"
+          ],
+          "properties": {
+            "state": {
+              "type": "string",
+              "enum": [
+                "ACCEPTED",
+                "PENDING",
+                "REJECTED"
+              ]
+            },
+            "name": {
+              "type": "string",
+              "example": "Carlos"
+            },
+            "lastname": {
+              "type": "string",
+              "example": "Guarin"
+            },
+            "address": {
+              "$ref": "#/components/schemas/Address"
+            },
+            "email": {
+              "type": "string",
+              "format": "email",
+              "example": "pruebaemail@gmail.com"
+            },
+            "about": {
+              "type": "string",
+              "example": "Developer"
+            },
+            "image": {
+              "$ref": "#/components/schemas/Image"
+            },
+            "socialNetworks": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "example": "https://www.instagram.com/user1, https://www.twitter.com/user1, https://www.linkedln.com/user1"
+              }
+            },
+            "experiences": {
+              "type": "array",
+              "items": {
+                "$ref": "#/components/schemas/Experience"
+              }
+            },
+            "educations": {
+              "type": "array",
+              "items": {
+                "$ref": "#/components/schemas/Education"
+              }
+            }
+          }
+        },
+        "UpdateMember": {
           "required": [
             "id",
             "state",
@@ -8271,7 +8440,7 @@ export class ApisConstants {
               "example": "60acae8e2f799d228a4d4a85"
             },
             "ownerMember": {
-              "$ref": "#/components/schemas/Member"
+              "$ref": "#/components/schemas/UpdateMember"
             },
             "title": {
               "type": "string",
@@ -8296,7 +8465,7 @@ export class ApisConstants {
             "participants": {
               "type": "array",
               "items": {
-                "$ref": "#/components/schemas/Member"
+                "$ref": "#/components/schemas/UpdateMember"
               }
             }
           }
@@ -8316,7 +8485,7 @@ export class ApisConstants {
               "example": "60acae8e2f799d228a4d4a85"
             },
             "ownerMember": {
-              "$ref": "#/components/schemas/Member"
+              "$ref": "#/components/schemas/UpdateMember"
             },
             "participants": {
               "type": "array",
@@ -8391,7 +8560,7 @@ export class ApisConstants {
               "example": "60acae8e2f799d228a4d4a85"
             },
             "ownerMember": {
-              "$ref": "#/components/schemas/Member"
+              "$ref": "#/components/schemas/UpdateMember"
             },
             "title": {
               "type": "string",
@@ -8416,7 +8585,7 @@ export class ApisConstants {
             "participants": {
               "type": "array",
               "items": {
-                "$ref": "#/components/schemas/Member"
+                "$ref": "#/components/schemas/UpdateMember"
               }
             }
           }
@@ -8481,7 +8650,7 @@ export class ApisConstants {
               "example": "60acae8e2f799d228a4d4a85"
             },
             "ownerMember": {
-              "$ref": "#/components/schemas/Member"
+              "$ref": "#/components/schemas/UpdateMember"
             },
             "participants": {
               "type": "array",
@@ -8534,7 +8703,7 @@ export class ApisConstants {
               "example": "60acae8e2f799d228a4d4a85"
             },
             "ownerMember": {
-              "$ref": "#/components/schemas/Member"
+              "$ref": "#/components/schemas/UpdateMember"
             },
             "participants": {
               "type": "array",
@@ -8581,7 +8750,7 @@ export class ApisConstants {
               "example": "60acae8e2f799d228a4d4a85"
             },
             "ownerMember": {
-              "$ref": "#/components/schemas/Member"
+              "$ref": "#/components/schemas/UpdateMember"
             },
             "content": {
               "type": "string",
@@ -8603,7 +8772,7 @@ export class ApisConstants {
             "comments": {
               "type": "array",
               "items": {
-                "$ref": "#/components/schemas/Comment"
+                "$ref": "#/components/schemas/CreateComment"
               }
             },
             "likes": {
@@ -8643,26 +8812,20 @@ export class ApisConstants {
             }
           }
         },
-        "Comment": {
+        "CreateComment": {
           "required": [
-            "id",
             "content",
             "authorMember",
             "likes",
             "createdAt"
           ],
           "properties": {
-            "id": {
-              "type": "string",
-              "format": "mongo-id",
-              "example": "60acae8e2f799d228a4d4a85"
-            },
             "content": {
               "type": "string",
               "example": "First comment"
             },
             "authorMember": {
-              "$ref": "#/components/schemas/Member"
+              "$ref": "#/components/schemas/UpdateMember"
             },
             "likes": {
               "type": "array",
@@ -8730,7 +8893,7 @@ export class ApisConstants {
               ]
             },
             "ownerMember": {
-              "$ref": "#/components/schemas/Member"
+              "$ref": "#/components/schemas/UpdateMember"
             },
             "name": {
               "type": "string",
@@ -9174,12 +9337,12 @@ export class ApisConstants {
               ]
             },
             "projectManager": {
-              "$ref": "#/components/schemas/Member"
+              "$ref": "#/components/schemas/UpdateMember"
             },
             "teamMembers": {
               "type": "array",
               "items": {
-                "$ref": "#/components/schemas/Member"
+                "$ref": "#/components/schemas/UpdateMember"
               }
             },
             "socialNetworks": {
@@ -9237,8 +9400,6 @@ export class ApisConstants {
         },
         "OnlineEventCreateEvent": {
           "required": [
-            "id",
-            "memberId",
             "title",
             "timestamp",
             "description",
@@ -9246,16 +9407,6 @@ export class ApisConstants {
             "url"
           ],
           "properties": {
-            "id": {
-              "type": "string",
-              "format": "mongo-id",
-              "example": "60acae8e2f799d228a4d4a85"
-            },
-            "memberId": {
-              "type": "string",
-              "format": "mongo-id",
-              "example": "60acae8e2f799d228a4d4a85"
-            },
             "title": {
               "type": "string",
               "example": "Event to improve our programming skills"
@@ -9341,7 +9492,7 @@ export class ApisConstants {
             "participants": {
               "type": "array",
               "items": {
-                "$ref": "#/components/schemas/Member"
+                "$ref": "#/components/schemas/UpdateMember"
               }
             }
           }
@@ -9360,15 +9511,13 @@ export class ApisConstants {
             "participants": {
               "type": "array",
               "items": {
-                "$ref": "#/components/schemas/Member"
+                "$ref": "#/components/schemas/UpdateMember"
               }
             }
           }
         },
         "MemberEducationCreateEvent": {
           "required": [
-            "id",
-            "memberId",
             "school",
             "degree",
             "fieldOfStudy",
@@ -9379,16 +9528,6 @@ export class ApisConstants {
             "description"
           ],
           "properties": {
-            "id": {
-              "type": "string",
-              "format": "mongo-id",
-              "example": "60acae8e2f799d228a4d4a85"
-            },
-            "memberId": {
-              "type": "string",
-              "format": "mongo-id",
-              "example": "60acae8e2f799d228a4d4a85"
-            },
             "school": {
               "type": "string",
               "example": "Hardvard University"
@@ -9427,7 +9566,6 @@ export class ApisConstants {
         "MemberEducationUpdateEvent": {
           "required": [
             "id",
-            "memberId",
             "school",
             "degree",
             "fieldOfStudy",
@@ -9439,11 +9577,6 @@ export class ApisConstants {
           ],
           "properties": {
             "id": {
-              "type": "string",
-              "format": "mongo-id",
-              "example": "60acae8e2f799d228a4d4a85"
-            },
-            "memberId": {
               "type": "string",
               "format": "mongo-id",
               "example": "60acae8e2f799d228a4d4a85"
@@ -9485,8 +9618,6 @@ export class ApisConstants {
         },
         "MemberExperienceCreateEvent": {
           "required": [
-            "id",
-            "memberId",
             "title",
             "type",
             "company",
@@ -9496,16 +9627,6 @@ export class ApisConstants {
             "description"
           ],
           "properties": {
-            "id": {
-              "type": "string",
-              "format": "mongo-id",
-              "example": "60acae8e2f799d228a4d4a85"
-            },
-            "memberId": {
-              "type": "string",
-              "format": "mongo-id",
-              "example": "60acae8e2f799d228a4d4a85"
-            },
             "title": {
               "type": "string",
               "example": "Back-end developer en Moonshot Innovation"
@@ -9552,7 +9673,6 @@ export class ApisConstants {
         "MemberExperienceUpdateEvent": {
           "required": [
             "id",
-            "memberId",
             "title",
             "type",
             "company",
@@ -9563,11 +9683,6 @@ export class ApisConstants {
           ],
           "properties": {
             "id": {
-              "type": "string",
-              "format": "mongo-id",
-              "example": "60acae8e2f799d228a4d4a85"
-            },
-            "memberId": {
               "type": "string",
               "format": "mongo-id",
               "example": "60acae8e2f799d228a4d4a85"
@@ -9629,7 +9744,7 @@ export class ApisConstants {
             "participants": {
               "type": "array",
               "items": {
-                "$ref": "#/components/schemas/Member"
+                "$ref": "#/components/schemas/UpdateMember"
               }
             }
           }
@@ -9648,15 +9763,13 @@ export class ApisConstants {
             "participants": {
               "type": "array",
               "items": {
-                "$ref": "#/components/schemas/Member"
+                "$ref": "#/components/schemas/UpdateMember"
               }
             }
           }
         },
         "FaceToFaceEventCreateEvent": {
           "required": [
-            "id",
-            "memberId",
             "title",
             "timestamp",
             "description",
@@ -9664,16 +9777,6 @@ export class ApisConstants {
             "direction"
           ],
           "properties": {
-            "id": {
-              "type": "string",
-              "format": "mongo-id",
-              "example": "60acae8e2f799d228a4d4a85"
-            },
-            "memberId": {
-              "type": "string",
-              "format": "mongo-id",
-              "example": "60acae8e2f799d228a4d4a85"
-            },
             "title": {
               "type": "string",
               "example": "Event to improve our programming skills"
@@ -9735,24 +9838,12 @@ export class ApisConstants {
         },
         "PublicChannelCreateEvent": {
           "required": [
-            "id",
-            "ownerMemberId",
             "participants",
             "actions",
             "title",
             "description"
           ],
           "properties": {
-            "id": {
-              "type": "string",
-              "format": "mongo-id",
-              "example": "60acae8e2f799d228a4d4a85"
-            },
-            "ownerMemberId": {
-              "type": "string",
-              "format": "mongo-id",
-              "example": "60acae8e2f799d228a4d4a85"
-            },
             "participants": {
               "type": "array",
               "items": {
@@ -9780,7 +9871,6 @@ export class ApisConstants {
             "id",
             "ownerMemberId",
             "participants",
-            "createdAt",
             "actions",
             "title",
             "description"
@@ -9801,11 +9891,6 @@ export class ApisConstants {
               "items": {
                 "$ref": "#/components/schemas/ParticipantAnyEvent"
               }
-            },
-            "createdAt": {
-              "type": "string",
-              "format": "ZonedDateTime",
-              "example": 1624520984602
             },
             "actions": {
               "type": "array",
@@ -9861,8 +9946,6 @@ export class ApisConstants {
         },
         "WallPostCreateEvent": {
           "required": [
-            "id",
-            "ownerMemberId",
             "content",
             "attachments",
             "comments",
@@ -9870,16 +9953,6 @@ export class ApisConstants {
             "createdAt"
           ],
           "properties": {
-            "id": {
-              "type": "string",
-              "format": "mongo-id",
-              "example": "60acae8e2f799d228a4d4a85"
-            },
-            "ownerMemberId": {
-              "type": "string",
-              "format": "mongo-id",
-              "example": "60acae8e2f799d228a4d4a85"
-            },
             "content": {
               "type": "string",
               "example": "First wall post in this ecoystem"
@@ -9893,7 +9966,7 @@ export class ApisConstants {
             "comments": {
               "type": "array",
               "items": {
-                "$ref": "#/components/schemas/Comment"
+                "$ref": "#/components/schemas/CreateComment"
               }
             },
             "likes": {
@@ -9937,16 +10010,10 @@ export class ApisConstants {
         },
         "WallPostLikeEvent": {
           "required": [
-            "id",
-            "memberId"
+            "id"
           ],
           "properties": {
             "id": {
-              "type": "string",
-              "format": "mongo-id",
-              "example": "60acae8e2f799d228a4d4a85"
-            },
-            "memberId": {
               "type": "string",
               "format": "mongo-id",
               "example": "60acae8e2f799d228a4d4a85"
@@ -9955,16 +10022,10 @@ export class ApisConstants {
         },
         "WallPostUnlikeEvent": {
           "required": [
-            "id",
-            "memberId"
+            "id"
           ],
           "properties": {
             "id": {
-              "type": "string",
-              "format": "mongo-id",
-              "example": "60acae8e2f799d228a4d4a85"
-            },
-            "memberId": {
               "type": "string",
               "format": "mongo-id",
               "example": "60acae8e2f799d228a4d4a85"
@@ -9983,7 +10044,7 @@ export class ApisConstants {
               "example": "60acae8e2f799d228a4d4a85"
             },
             "comment": {
-              "$ref": "#/components/schemas/Comment"
+              "$ref": "#/components/schemas/CreateComment"
             }
           }
         },
@@ -10037,7 +10098,6 @@ export class ApisConstants {
         },
         "ActorCreateEvent": {
           "required": [
-            "id",
             "type",
             "state",
             "ownerMember",
@@ -10058,15 +10118,9 @@ export class ApisConstants {
             "socialNetworks",
             "media",
             "password",
-            "repeatPassword",
-            "verificationToken"
+            "repeatPassword"
           ],
           "properties": {
-            "id": {
-              "type": "string",
-              "format": "mongo-id",
-              "example": "60acae8e2f799d228a4d4a85"
-            },
             "type": {
               "type": "string",
               "enum": [
@@ -10094,7 +10148,7 @@ export class ApisConstants {
               ]
             },
             "ownerMember": {
-              "$ref": "#/components/schemas/Member"
+              "$ref": "#/components/schemas/CreateMember"
             },
             "name": {
               "type": "string",
@@ -10169,11 +10223,6 @@ export class ApisConstants {
             "repeatPassword": {
               "type": "string",
               "example": "hola123"
-            },
-            "verificationToken": {
-              "type": "string",
-              "format": "uuid",
-              "example": "123e4567-e89b-12d3-a456-426614174000"
             }
           }
         },
@@ -10374,7 +10423,6 @@ export class ApisConstants {
         },
         "ProjectCreateEvent": {
           "required": [
-            "id",
             "actorId",
             "name",
             "description",
@@ -10390,11 +10438,6 @@ export class ApisConstants {
             "socialInnovation"
           ],
           "properties": {
-            "id": {
-              "type": "string",
-              "format": "mongo-id",
-              "example": "60acae8e2f799d228a4d4a85"
-            },
             "actorId": {
               "type": "string",
               "format": "mongo-id",
@@ -10614,15 +10657,9 @@ export class ApisConstants {
         },
         "SettingCreateEvent": {
           "required": [
-            "id",
             "banner"
           ],
           "properties": {
-            "id": {
-              "type": "string",
-              "format": "mongo-id",
-              "example": "60acae8e2f799d228a4d4a85"
-            },
             "banner": {
               "$ref": "#/components/schemas/Image"
             }
@@ -11088,33 +11125,15 @@ export class ApisConstants {
         },
         "DirectChatCreateEvent": {
           "required": [
-            "id",
-            "ownerMemberId",
             "participants",
-            "createdAt",
             "actions"
           ],
           "properties": {
-            "id": {
-              "type": "string",
-              "format": "mongo-id",
-              "example": "60acae8e2f799d228a4d4a85"
-            },
-            "ownerMemberId": {
-              "type": "string",
-              "format": "mongo-id",
-              "example": "60acae8e2f799d228a4d4a85"
-            },
             "participants": {
               "type": "array",
               "items": {
                 "$ref": "#/components/schemas/ParticipantAnyEvent"
               }
-            },
-            "createdAt": {
-              "type": "string",
-              "format": "ZonedDateTime",
-              "example": 1624520984602
             },
             "actions": {
               "type": "array",
@@ -11146,36 +11165,18 @@ export class ApisConstants {
         },
         "FollowUpRoomCreateEvent": {
           "required": [
-            "id",
-            "ownerMemberId",
             "participants",
-            "createdAt",
             "actions",
             "title",
             "description",
             "state"
           ],
           "properties": {
-            "id": {
-              "type": "string",
-              "format": "mongo-id",
-              "example": "60acae8e2f799d228a4d4a85"
-            },
-            "ownerMemberId": {
-              "type": "string",
-              "format": "mongo-id",
-              "example": "60acae8e2f799d228a4d4a85"
-            },
             "participants": {
               "type": "array",
               "items": {
                 "$ref": "#/components/schemas/ParticipantAnyEvent"
               }
-            },
-            "createdAt": {
-              "type": "string",
-              "format": "ZonedDateTime",
-              "example": 1624520984602
             },
             "actions": {
               "type": "array",
@@ -11310,26 +11311,12 @@ export class ApisConstants {
         },
         "MessageAddEvent": {
           "required": [
-            "id",
             "roomId",
-            "authorMemberId",
             "content",
-            "documents",
-            "links",
-            "createdAt"
+            "documents"
           ],
           "properties": {
-            "id": {
-              "type": "string",
-              "format": "mongo-id",
-              "example": "60acae8e2f799d228a4d4a85"
-            },
             "roomId": {
-              "type": "string",
-              "format": "mongo-id",
-              "example": "60acae8e2f799d228a4d4a85"
-            },
-            "authorMemberId": {
               "type": "string",
               "format": "mongo-id",
               "example": "60acae8e2f799d228a4d4a85"
@@ -11343,33 +11330,16 @@ export class ApisConstants {
               "items": {
                 "$ref": "#/components/schemas/MessageDocumentAddEvent"
               }
-            },
-            "links": {
-              "type": "array",
-              "items": {
-                "$ref": "#/components/schemas/Link"
-              }
-            },
-            "createdAt": {
-              "type": "string",
-              "format": "ZonedDateTime",
-              "example": 1624520984602
             }
           }
         },
         "MessageDocumentAddEvent": {
           "required": [
-            "id",
             "link",
             "category",
             "filename"
           ],
           "properties": {
-            "id": {
-              "type": "string",
-              "format": "mongo-id",
-              "example": "60acae8e2f799d228a4d4a85"
-            },
             "link": {
               "type": "string",
               "example": "https://docs.google.com/viewerng/vi54473784a6a2.xlsx"

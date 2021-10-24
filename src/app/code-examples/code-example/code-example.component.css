@@ -1,0 +1,67 @@
+.endpoint-wrapper {
+  margin-bottom: 30px;
+}
+
+.endpoint {
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+  width: 70%;
+}
+
+.endpoint-header {
+  display: flex;
+  position: relative;
+  background-color: #f1f2f3;
+  overflow: hidden;
+  width: 100%;
+}
+
+.endpoint-title {
+  color: #707070;
+  margin-left: 10px;
+  opacity: 1;
+  width: 35%;
+}
+
+.endpoint-method {
+  text-align: left;
+  width: 30%;
+  color: #919191;
+}
+
+.endpoint-language {
+  display: flex;
+  align-self: flex-end;
+}
+
+.endpoint-body {
+  padding: 10px;
+  background-color: #fdfcfc;
+}
+
+.endpoint-code {
+  margin-bottom: 20px;
+}
+
+.endpoint-body-title {
+  color: #ec722e;
+}
+
+select {
+  position: absolute;
+  top: 23px;
+  right: 31px;
+  border: none;
+  width: 100px;
+  background-color: #f1f2f3;
+  color: #707070;
+}
+
+option {
+  background-color: #f1f2f3;
+  color: #707070;
+}
+
+select:focus-visible {
+  outline: none;
+}
+

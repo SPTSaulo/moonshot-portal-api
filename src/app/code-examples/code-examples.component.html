@@ -1,0 +1,12 @@
+<div class="code-example-text">
+  <h1>API PORTAL</h1>
+  <div class="enpoints-wrapper">
+    <app-code-example
+      *ngFor="let endpoint of endpoints"
+      [endpoint]="endpoint"
+      [module]="module"
+      [languages]="languages">
+    </app-code-example>
+  </div>
+</div>
+
