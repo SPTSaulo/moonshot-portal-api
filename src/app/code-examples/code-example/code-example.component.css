@@ -44,6 +44,15 @@
 
 .endpoint-body-title {
   color: #ec722e;
+  display: inline-block;
+}
+
+.endpoint-hide-button {
+  background: none;
+  border: none;
+  text-decoration: underline;
+  cursor: pointer;
+  color: #707070;
 }
 
 select {

@@ -16,10 +16,15 @@
       </div>
       <div class="endpoint-response">
         <h4 class="endpoint-body-title">Response</h4>
-        <pre *ngIf="template.response">
+        <button class="endpoint-hide-button"
+                *ngIf="template.response"
+                (click)="hideResponse = !hideResponse">
+          {{ !hideResponse ? '(hide)' : '(show)' }}
+        </button>
+        <pre *ngIf="template.response && !hideResponse">
           <code>{{ template.response }}</code>
         </pre>
-        <span *ngIf="!template.response">No response</span>
+        <span *ngIf="!template.response"><br>No response</span>
       </div>
     </div>
   </div>

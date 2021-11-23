@@ -10,10 +10,6 @@
   },
   "servers": [
     {
-      "description": "SwaggerHub API Auto Mocking",
-      "url": "https://virtserver.swaggerhub.com/MoonshotInnovation/Core/1.0.0"
-    },
-    {
       "url": "https://dev.moonshot.ceo/api/core"
     }
   ],
@@ -32,27 +28,27 @@
     },
     {
       "name": "Industry",
-      "description": "Endpoints about industry taxonomy"
+      "description": "Endpoints about Industry taxonomy"
     },
     {
       "name": "Business Model",
-      "description": "Endpoints about business model taxonomy"
+      "description": "Endpoints about BusinessModel taxonomy"
     },
     {
       "name": "Social Innovation",
-      "description": "Endpoints about social innovation taxonomy"
+      "description": "Endpoints about SocialInnovation taxonomy"
     },
     {
       "name": "Deep Tech",
-      "description": "Endpoints about deep tech taxonomy"
+      "description": "Endpoints about DeepTech taxonomy"
     },
     {
       "name": "Ecosystem",
-      "description": "Endpoints about ecosystem entity"
+      "description": "Endpoints about Ecosystem entity"
     },
     {
       "name": "Notifications",
-      "description": "Endpoints about notifications entity"
+      "description": "Endpoints about Notification entity"
     }
   ],
   "paths": {
@@ -79,6 +75,10 @@
           "500": {
             "description": "Cannot verify the certificate"
           }
+        },
+        "externalDocs": {
+          "description": "Code Example",
+          "url": "http://localhost:4200/code-examples/core#version_get"
         }
       }
     },
@@ -132,6 +132,10 @@
               }
             }
           }
+        },
+        "externalDocs": {
+          "description": "Code Example",
+          "url": "http://localhost:4200/code-examples/core#signed-url_get"
         }
       }
     },
@@ -190,7 +194,11 @@
           {
             "idToken": []
           }
-        ]
+        ],
+        "externalDocs": {
+          "description": "Code Example",
+          "url": "http://localhost:4200/code-examples/core#openGraph_get"
+        }
       }
     },
     "/industry/{id}": {
@@ -223,6 +231,10 @@
               }
             }
           }
+        },
+        "externalDocs": {
+          "description": "Code Example",
+          "url": "http://localhost:4200/code-examples/core#industry/:id_get"
         }
       }
     },
@@ -248,6 +260,10 @@
               }
             }
           }
+        },
+        "externalDocs": {
+          "description": "Code Example",
+          "url": "http://localhost:4200/code-examples/core#industries_get"
         }
       }
     },
@@ -281,6 +297,10 @@
               }
             }
           }
+        },
+        "externalDocs": {
+          "description": "Code Example",
+          "url": "http://localhost:4200/code-examples/core#business-model/:id_get"
         }
       }
     },
@@ -306,6 +326,10 @@
               }
             }
           }
+        },
+        "externalDocs": {
+          "description": "Code Example",
+          "url": "http://localhost:4200/code-examples/core#business-models_get"
         }
       }
     },
@@ -339,6 +363,10 @@
               }
             }
           }
+        },
+        "externalDocs": {
+          "description": "Code Example",
+          "url": "http://localhost:4200/code-examples/core#social-innovation/:id:get"
         }
       }
     },
@@ -364,6 +392,10 @@
               }
             }
           }
+        },
+        "externalDocs": {
+          "description": "Code Example",
+          "url": "http://localhost:4200/code-examples/core#social-innovations_get"
         }
       }
     },
@@ -397,6 +429,10 @@
               }
             }
           }
+        },
+        "externalDocs": {
+          "description": "Code Example",
+          "url": "http://localhost:4200/code-examples/core#deep-tech/:id_get"
         }
       }
     },
@@ -422,6 +458,10 @@
               }
             }
           }
+        },
+        "externalDocs": {
+          "description": "Code Example",
+          "url": "http://localhost:4200/code-examples/core#deep-techs_get"
         }
       }
     },
@@ -445,6 +485,10 @@
               }
             }
           }
+        },
+        "externalDocs": {
+          "description": "Code Example",
+          "url": "http://localhost:4200/code-examples/core#ecosystem/initialized_get"
         }
       }
     },
@@ -482,7 +526,11 @@
           {
             "idToken": []
           }
-        ]
+        ],
+        "externalDocs": {
+          "description": "Code Example",
+          "url": "http://localhost:4200/code-examples/core#ecosystem_get"
+        }
       },
       "post": {
         "tags": [
@@ -515,6 +563,10 @@
               }
             }
           }
+        },
+        "externalDocs": {
+          "description": "Code Example",
+          "url": "http://localhost:4200/code-examples/core#ecosystem_post"
         }
       },
       "put": {
@@ -578,7 +630,11 @@
               "ecosystem_update"
             ]
           }
-        ]
+        ],
+        "externalDocs": {
+          "description": "Code Example",
+          "url": "http://localhost:4200/code-examples/core#ecosystem_put"
+        }
       }
     },
     "/ecosystem/invite": {
@@ -643,7 +699,11 @@
               "actor_invite"
             ]
           }
-        ]
+        ],
+        "externalDocs": {
+          "description": "Code Example",
+          "url": "http://localhost:4200/code-examples/core#ecosystem/invite_post"
+        }
       }
     },
     "/notifications": {
@@ -698,7 +758,11 @@
               "ecosystem_update"
             ]
           }
-        ]
+        ],
+        "externalDocs": {
+          "description": "Code Example",
+          "url": "http://localhost:4200/code-examples/core#notifications_get"
+        }
       }
     },
     "/notification/{id}": {
@@ -761,7 +825,11 @@
               "ecosystem_update"
             ]
           }
-        ]
+        ],
+        "externalDocs": {
+          "description": "Code Example",
+          "url": "http://localhost:4200/code-examples/core#notification/:id_get"
+        }
       }
     },
     "/notification": {
@@ -806,6 +874,10 @@
               }
             }
           }
+        },
+        "externalDocs": {
+          "description": "Code Example",
+          "url": "http://localhost:4200/code-examples/core#notification_post"
         }
       }
     }
@@ -1866,7 +1938,13 @@
           "type",
           "push",
           "email",
-          "createdAt"
+          "createdAt",
+          "owner",
+          "recipients",
+          "followUpRoomId",
+          "directChatRoomId",
+          "wallPostName",
+          "followUpRoomName"
         ],
         "properties": {
           "id": {
@@ -1915,6 +1993,54 @@
             "type": "string",
             "format": "A date-time with a time-zone in the ISO-8601",
             "example": "2021-09-18T00:00:00.000Z"
+          },
+          "owner": {
+            "$ref": "#/components/schemas/NotificationMember"
+          },
+          "recipients": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/NotificationMember"
+            }
+          },
+          "followUpRoomId": {
+            "type": "string",
+            "format": "mongo-id",
+            "example": "61445159784bca6ef764c6df"
+          },
+          "directChatRoomId": {
+            "type": "string",
+            "format": "mongo-id",
+            "example": "61445159784bca6ef764c6df"
+          },
+          "wallPostName": {
+            "type": "string",
+            "example": "Wall post 1"
+          },
+          "followUpRoomName": {
+            "type": "string",
+            "example": "Follow up room 1"
+          }
+        }
+      },
+      "NotificationMember": {
+        "required": [
+          "id",
+          "image",
+          "name"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "format": "mongo-id",
+            "example": "61445159784bca6ef764c6df"
+          },
+          "image": {
+            "$ref": "#/components/schemas/Image"
+          },
+          "name": {
+            "type": "string",
+            "example": "user1"
           }
         }
       },

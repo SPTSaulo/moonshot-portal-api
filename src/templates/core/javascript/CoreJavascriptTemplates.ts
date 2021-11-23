@@ -1120,7 +1120,7 @@ export class CoreJavascriptTemplates {
       "}\n" +
       "\n" +
       "fetch(url, {\n" +
-      "  method: 'PUT',\n" +
+      "  method: 'POST',\n" +
       "  body: JSON.stringify(body)\n" +
       "})\n" +
       "  .then(response => response.json())" +
@@ -1222,7 +1222,8 @@ export class CoreJavascriptTemplates {
       "}\n" +
       "\n" +
       "fetch(url, {\n" +
-      "  method: 'POST'\n" +
+      "  method: 'POST',\n" +
+      "  body: JSON.stringify(body)\n" +
       "})\n" +
       "  .then(response => response.json())\n" +
       "  .then(data => console.log(JSON.stringify(data)));",
@@ -1231,21 +1232,290 @@ export class CoreJavascriptTemplates {
 
   public static notifications_get: Template = {
     name: "notifications",
-    code: "\nTODO",
-    response: "\nTODO"
+    code: "\nconst url = 'https://dev.moonshot.ceo/api/core/notifications';\n" +
+      "\n" +
+      "fetch(url)\n" +
+      "  .then(response => response.json())\n" +
+      "  .then(data => console.log(JSON.stringify(data)));",
+    response: "\n[\n" +
+      "  {\n" +
+      "    \"id\": \"61445159784bca6ef764c6df\",\n" +
+      "    \"channels\": [\n" +
+      "      \"EMAIL\"\n" +
+      "    ],\n" +
+      "    \"type\": \"ECOSYSTEM_ACCESS_REQUEST\",\n" +
+      "    \"email\": {\n" +
+      "      \"from\": {\n" +
+      "        \"email\": \"example1@gmail.com\",\n" +
+      "        \"name\": \"example1\"\n" +
+      "      },\n" +
+      "      \"to\": [\n" +
+      "        \"example1@gmail.com, example2@gmail.com\"\n" +
+      "      ],\n" +
+      "      \"cc\": [\n" +
+      "        \"example1@gmail.com, example2@gmail.com\"\n" +
+      "      ],\n" +
+      "      \"bcc\": [\n" +
+      "        \"example1@gmail.com, example2@gmail.com\"\n" +
+      "      ],\n" +
+      "      \"subject\": \"Ecosystem invitation\",\n" +
+      "      \"templateId\": \"MAIL_TEMPLATE_ECOSYSTEM_ACCESS_REQUEST\",\n" +
+      "      \"attachments\": [\n" +
+      "        {\n" +
+      "          \"name\": \"archivo1.pdf\",\n" +
+      "          \"file\": {}\n" +
+      "        }\n" +
+      "      ],\n" +
+      "      \"inlines\": [\n" +
+      "        {\n" +
+      "          \"cid\": \"foo4atfoo1atbar.net\",\n" +
+      "          \"file\": {}\n" +
+      "        }\n" +
+      "      ],\n" +
+      "      \"params\": {\n" +
+      "        \"additionalProp1\": {\n" +
+      "          \"reason\": \"No reason\",\n" +
+      "          \"image\": \"https://api.moonshot.ceo/api/media/5b8c41dbefc45400015a6f9a/userAvatar.jpeg\"\n" +
+      "        },\n" +
+      "        \"additionalProp2\": {\n" +
+      "          \"reason\": \"No reason\",\n" +
+      "          \"image\": \"https://api.moonshot.ceo/api/media/5b8c41dbefc45400015a6f9a/userAvatar.jpeg\"\n" +
+      "        },\n" +
+      "        \"additionalProp3\": {\n" +
+      "          \"reason\": \"No reason\",\n" +
+      "          \"image\": \"https://api.moonshot.ceo/api/media/5b8c41dbefc45400015a6f9a/userAvatar.jpeg\"\n" +
+      "        }\n" +
+      "      }\n" +
+      "    },\n" +
+      "    \"createdAt\": {},\n" +
+      "    \"owner\": {\n" +
+      "      \"id\": \"61445159784bca6ef764c6df\",\n" +
+      "      \"image\": {\n" +
+      "        \"original\": \"https://moonshot-innovation.s3.eu-central-1.amazonaws.com/60aca5fa0565c3210a322662/image/f306ce3b-4db9-4529-9bde-fdb133bbef1f.png\",\n" +
+      "        \"thumbnail\": \"https://moonshot-innovation.s3.eu-central-1.amazonaws.com/60aca5fa0565c3210a322662/image/f306ce3b-4db9-4529-9bde-fdb133bbef1f.png\",\n" +
+      "        \"crop\": {\n" +
+      "          \"x\": 100,\n" +
+      "          \"y\": 20,\n" +
+      "          \"width\": 1750,\n" +
+      "          \"height\": 500\n" +
+      "        }\n" +
+      "      },\n" +
+      "      \"name\": \"user1\"\n" +
+      "    },\n" +
+      "    \"recipients\": [\n" +
+      "      {\n" +
+      "        \"id\": \"61445159784bca6ef764c6df\",\n" +
+      "        \"image\": {\n" +
+      "          \"original\": \"https://moonshot-innovation.s3.eu-central-1.amazonaws.com/60aca5fa0565c3210a322662/image/f306ce3b-4db9-4529-9bde-fdb133bbef1f.png\",\n" +
+      "          \"thumbnail\": \"https://moonshot-innovation.s3.eu-central-1.amazonaws.com/60aca5fa0565c3210a322662/image/f306ce3b-4db9-4529-9bde-fdb133bbef1f.png\",\n" +
+      "          \"crop\": {\n" +
+      "            \"x\": 100,\n" +
+      "            \"y\": 20,\n" +
+      "            \"width\": 1750,\n" +
+      "            \"height\": 500\n" +
+      "          }\n" +
+      "        },\n" +
+      "        \"name\": \"user1\"\n" +
+      "      }\n" +
+      "    ],\n" +
+      "    \"followUpRoomId\": \"61445159784bca6ef764c6df\",\n" +
+      "    \"directChatRoomId\": \"61445159784bca6ef764c6df\",\n" +
+      "    \"wallPostName\": \"Wall post 1\",\n" +
+      "    \"followUpRoomName\": \"Follow up room 1\"\n" +
+      "  }\n" +
+      "]"
   }
 
   public static notifications_id_get: Template = {
     name: "notification/:id",
-    code: "\nTODO",
-    response: "\nTODO"
+    code: "\nconst url = 'https://dev.moonshot.ceo/api/core/notification/1';\n" +
+      "\n" +
+      "fetch(url)\n" +
+      "  .then(response => response.json())\n" +
+      "  .then(data => console.log(JSON.stringify(data)));",
+    response: "\n{\n" +
+      "  \"id\": \"61445159784bca6ef764c6df\",\n" +
+      "  \"channels\": [\n" +
+      "    \"EMAIL\"\n" +
+      "  ],\n" +
+      "  \"type\": \"ECOSYSTEM_ACCESS_REQUEST\",\n" +
+      "  \"email\": {\n" +
+      "    \"from\": {\n" +
+      "      \"email\": \"example1@gmail.com\",\n" +
+      "      \"name\": \"example1\"\n" +
+      "    },\n" +
+      "    \"to\": [\n" +
+      "      \"example1@gmail.com, example2@gmail.com\"\n" +
+      "    ],\n" +
+      "    \"cc\": [\n" +
+      "      \"example1@gmail.com, example2@gmail.com\"\n" +
+      "    ],\n" +
+      "    \"bcc\": [\n" +
+      "      \"example1@gmail.com, example2@gmail.com\"\n" +
+      "    ],\n" +
+      "    \"subject\": \"Ecosystem invitation\",\n" +
+      "    \"templateId\": \"MAIL_TEMPLATE_ECOSYSTEM_ACCESS_REQUEST\",\n" +
+      "    \"attachments\": [\n" +
+      "      {\n" +
+      "        \"name\": \"archivo1.pdf\",\n" +
+      "        \"file\": {}\n" +
+      "      }\n" +
+      "    ],\n" +
+      "    \"inlines\": [\n" +
+      "      {\n" +
+      "        \"cid\": \"foo4atfoo1atbar.net\",\n" +
+      "        \"file\": {}\n" +
+      "      }\n" +
+      "    ],\n" +
+      "    \"params\": {\n" +
+      "      \"additionalProp1\": {\n" +
+      "        \"reason\": \"No reason\",\n" +
+      "        \"image\": \"https://api.moonshot.ceo/api/media/5b8c41dbefc45400015a6f9a/userAvatar.jpeg\"\n" +
+      "      },\n" +
+      "      \"additionalProp2\": {\n" +
+      "        \"reason\": \"No reason\",\n" +
+      "        \"image\": \"https://api.moonshot.ceo/api/media/5b8c41dbefc45400015a6f9a/userAvatar.jpeg\"\n" +
+      "      },\n" +
+      "      \"additionalProp3\": {\n" +
+      "        \"reason\": \"No reason\",\n" +
+      "        \"image\": \"https://api.moonshot.ceo/api/media/5b8c41dbefc45400015a6f9a/userAvatar.jpeg\"\n" +
+      "      }\n" +
+      "    }\n" +
+      "  },\n" +
+      "  \"createdAt\": {},\n" +
+      "  \"owner\": {\n" +
+      "    \"id\": \"61445159784bca6ef764c6df\",\n" +
+      "    \"image\": {\n" +
+      "      \"original\": \"https://moonshot-innovation.s3.eu-central-1.amazonaws.com/60aca5fa0565c3210a322662/image/f306ce3b-4db9-4529-9bde-fdb133bbef1f.png\",\n" +
+      "      \"thumbnail\": \"https://moonshot-innovation.s3.eu-central-1.amazonaws.com/60aca5fa0565c3210a322662/image/f306ce3b-4db9-4529-9bde-fdb133bbef1f.png\",\n" +
+      "      \"crop\": {\n" +
+      "        \"x\": 100,\n" +
+      "        \"y\": 20,\n" +
+      "        \"width\": 1750,\n" +
+      "        \"height\": 500\n" +
+      "      }\n" +
+      "    },\n" +
+      "    \"name\": \"user1\"\n" +
+      "  },\n" +
+      "  \"recipients\": [\n" +
+      "    {\n" +
+      "      \"id\": \"61445159784bca6ef764c6df\",\n" +
+      "      \"image\": {\n" +
+      "        \"original\": \"https://moonshot-innovation.s3.eu-central-1.amazonaws.com/60aca5fa0565c3210a322662/image/f306ce3b-4db9-4529-9bde-fdb133bbef1f.png\",\n" +
+      "        \"thumbnail\": \"https://moonshot-innovation.s3.eu-central-1.amazonaws.com/60aca5fa0565c3210a322662/image/f306ce3b-4db9-4529-9bde-fdb133bbef1f.png\",\n" +
+      "        \"crop\": {\n" +
+      "          \"x\": 100,\n" +
+      "          \"y\": 20,\n" +
+      "          \"width\": 1750,\n" +
+      "          \"height\": 500\n" +
+      "        }\n" +
+      "      },\n" +
+      "      \"name\": \"user1\"\n" +
+      "    }\n" +
+      "  ],\n" +
+      "  \"followUpRoomId\": \"61445159784bca6ef764c6df\",\n" +
+      "  \"directChatRoomId\": \"61445159784bca6ef764c6df\",\n" +
+      "  \"wallPostName\": \"Wall post 1\",\n" +
+      "  \"followUpRoomName\": \"Follow up room 1\"\n" +
+      "}"
   }
 
   public static notification_post: Template = {
     name: "notification",
-    code: "\nTODO",
-    response: "\nTODO"
+    code: "\nconst url = 'https://dev.moonshot.ceo/api/core/notification';\n" +
+      "\n" +
+      "const body = {\n" +
+      "  \"id\": \"61445159784bca6ef764c6df\",\n" +
+      "  \"channels\": [\n" +
+      "    \"EMAIL\"\n" +
+      "  ],\n" +
+      "  \"type\": \"ECOSYSTEM_ACCESS_REQUEST\",\n" +
+      "  \"email\": {\n" +
+      "    \"from\": {\n" +
+      "      \"email\": \"example1@gmail.com\",\n" +
+      "      \"name\": \"example1\"\n" +
+      "    },\n" +
+      "    \"to\": [\n" +
+      "      \"example1@gmail.com, example2@gmail.com\"\n" +
+      "    ],\n" +
+      "    \"cc\": [\n" +
+      "      \"example1@gmail.com, example2@gmail.com\"\n" +
+      "    ],\n" +
+      "    \"bcc\": [\n" +
+      "      \"example1@gmail.com, example2@gmail.com\"\n" +
+      "    ],\n" +
+      "    \"subject\": \"Ecosystem invitation\",\n" +
+      "    \"templateId\": \"MAIL_TEMPLATE_ECOSYSTEM_ACCESS_REQUEST\",\n" +
+      "    \"attachments\": [\n" +
+      "      {\n" +
+      "        \"name\": \"archivo1.pdf\",\n" +
+      "        \"file\": {}\n" +
+      "      }\n" +
+      "    ],\n" +
+      "    \"inlines\": [\n" +
+      "      {\n" +
+      "        \"cid\": \"foo4atfoo1atbar.net\",\n" +
+      "        \"file\": {}\n" +
+      "      }\n" +
+      "    ],\n" +
+      "    \"params\": {\n" +
+      "      \"additionalProp1\": {\n" +
+      "        \"reason\": \"No reason\",\n" +
+      "        \"image\": \"https://api.moonshot.ceo/api/media/5b8c41dbefc45400015a6f9a/userAvatar.jpeg\"\n" +
+      "      },\n" +
+      "      \"additionalProp2\": {\n" +
+      "        \"reason\": \"No reason\",\n" +
+      "        \"image\": \"https://api.moonshot.ceo/api/media/5b8c41dbefc45400015a6f9a/userAvatar.jpeg\"\n" +
+      "      },\n" +
+      "      \"additionalProp3\": {\n" +
+      "        \"reason\": \"No reason\",\n" +
+      "        \"image\": \"https://api.moonshot.ceo/api/media/5b8c41dbefc45400015a6f9a/userAvatar.jpeg\"\n" +
+      "      }\n" +
+      "    }\n" +
+      "  },\n" +
+      "  \"createdAt\": {},\n" +
+      "  \"owner\": {\n" +
+      "    \"id\": \"61445159784bca6ef764c6df\",\n" +
+      "    \"image\": {\n" +
+      "      \"original\": \"https://moonshot-innovation.s3.eu-central-1.amazonaws.com/60aca5fa0565c3210a322662/image/f306ce3b-4db9-4529-9bde-fdb133bbef1f.png\",\n" +
+      "      \"thumbnail\": \"https://moonshot-innovation.s3.eu-central-1.amazonaws.com/60aca5fa0565c3210a322662/image/f306ce3b-4db9-4529-9bde-fdb133bbef1f.png\",\n" +
+      "      \"crop\": {\n" +
+      "        \"x\": 100,\n" +
+      "        \"y\": 20,\n" +
+      "        \"width\": 1750,\n" +
+      "        \"height\": 500\n" +
+      "      }\n" +
+      "    },\n" +
+      "    \"name\": \"user1\"\n" +
+      "  },\n" +
+      "  \"recipients\": [\n" +
+      "    {\n" +
+      "      \"id\": \"61445159784bca6ef764c6df\",\n" +
+      "      \"image\": {\n" +
+      "        \"original\": \"https://moonshot-innovation.s3.eu-central-1.amazonaws.com/60aca5fa0565c3210a322662/image/f306ce3b-4db9-4529-9bde-fdb133bbef1f.png\",\n" +
+      "        \"thumbnail\": \"https://moonshot-innovation.s3.eu-central-1.amazonaws.com/60aca5fa0565c3210a322662/image/f306ce3b-4db9-4529-9bde-fdb133bbef1f.png\",\n" +
+      "        \"crop\": {\n" +
+      "          \"x\": 100,\n" +
+      "          \"y\": 20,\n" +
+      "          \"width\": 1750,\n" +
+      "          \"height\": 500\n" +
+      "        }\n" +
+      "      },\n" +
+      "      \"name\": \"user1\"\n" +
+      "    }\n" +
+      "  ],\n" +
+      "  \"followUpRoomId\": \"1\",\n" +
+      "  \"directChatRoomId\": \"\",\n" +
+      "  \"wallPostName\": \"\",\n" +
+      "  \"followUpRoomName\": \"Follow up room 1\"\n" +
+      "}\n" +
+      "\n" +
+      "fetch(url, {\n" +
+      "  method: 'POST',\n" +
+      "  body: JSON.stringify(body)\n" +
+      "})\n" +
+      "  .then(response => response.json())\n" +
+      "  .then(data => console.log(JSON.stringify(data)));",
+    response: null
   }
-
-
 }

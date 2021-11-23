@@ -3,6 +3,7 @@
   <div class="enpoints-wrapper">
     <app-code-example
       *ngFor="let endpoint of endpoints"
+      [id]="endpoint.name + '_' + endpoint.method"
       [endpoint]="endpoint"
       [module]="module"
       [languages]="languages">

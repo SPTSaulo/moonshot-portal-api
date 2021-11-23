@@ -21,19 +21,43 @@ export class ApisConstants {
     ],
     "tags": [
       {
-        "name": "UserAdministrators",
-        "description": "Endpoints available to users with user management permission"
+        "name": "Version",
+        "description": "Endpoint that return Core last version"
       },
       {
-        "name": "NoPerms",
-        "description": "Operations available to all users"
+        "name": "Login",
+        "description": "Endpoint that allow user login in the application"
+      },
+      {
+        "name": "Token",
+        "description": "Endpoint that return user token"
+      },
+      {
+        "name": "Logout",
+        "description": "Endpoint that allow user exit from de application"
+      },
+      {
+        "name": "Community",
+        "description": "Enpoint that return all communities in your ecosystem"
+      },
+      {
+        "name": "Module",
+        "description": "Enpoint that return all modules in your ecosystem"
+      },
+      {
+        "name": "User",
+        "description": "Endpoints about User entity"
+      },
+      {
+        "name": "Password",
+        "description": "Endpoints about Password entity"
       }
     ],
     "paths": {
       "/version": {
         "get": {
           "tags": [
-            "NoPerms"
+            "Version"
           ],
           "summary": "API version",
           "description": "Return the lastest version of the API\n",
@@ -53,13 +77,17 @@ export class ApisConstants {
             "500": {
               "description": "Cannot verify the certificate"
             }
+          },
+          "externalDocs": {
+            "description": "Code Example",
+            "url": "http://localhost:4200/code-examples/federation#version_get"
           }
         }
       },
       "/login": {
         "post": {
           "tags": [
-            "NoPerms"
+            "Login"
           ],
           "summary": "Login endpoint",
           "description": "Introduce your credentials to authorize yourself\n",
@@ -88,13 +116,17 @@ export class ApisConstants {
                 }
               }
             }
+          },
+          "externalDocs": {
+            "description": "Code Example",
+            "url": "http://localhost:4200/code-examples/federation#login_post"
           }
         }
       },
       "/logout": {
         "get": {
           "tags": [
-            "NoPerms"
+            "Logout"
           ],
           "summary": "Logout endpoint",
           "description": "Remove cookies from user session\n",
@@ -121,13 +153,17 @@ export class ApisConstants {
             {
               "userPermissions": []
             }
-          ]
+          ],
+          "externalDocs": {
+            "description": "Code Example",
+            "url": "http://localhost:4200/code-examples/federation#logout_get"
+          }
         }
       },
       "/token": {
         "post": {
           "tags": [
-            "NoPerms"
+            "Token"
           ],
           "summary": "Get authentication token",
           "description": "Add authentication token to session cookies\n",
@@ -136,6 +172,7 @@ export class ApisConstants {
             {
               "name": "tokenId",
               "in": "query",
+              "required": true,
               "description": "Token authentication id",
               "schema": {
                 "type": "string"
@@ -156,13 +193,17 @@ export class ApisConstants {
                 }
               }
             }
+          },
+          "externalDocs": {
+            "description": "Code Example",
+            "url": "http://localhost:4200/code-examples/federation#token_post"
           }
         }
       },
       "/communities": {
         "get": {
           "tags": [
-            "NoPerms"
+            "Community"
           ],
           "summary": "Get ecosystem communities",
           "description": "Get all comunities where user is logged\n",
@@ -191,13 +232,22 @@ export class ApisConstants {
                 }
               }
             }
+          },
+          "security": [
+            {
+              "userId": []
+            }
+          ],
+          "externalDocs": {
+            "description": "Code Example",
+            "url": "http://localhost:4200/code-examples/federation#communities_get"
           }
         }
       },
       "/modules": {
         "get": {
           "tags": [
-            "NoPerms"
+            "Module"
           ],
           "summary": "Get Moonshot modules",
           "description": "Get Moonshot modules available to the user\n",
@@ -231,13 +281,17 @@ export class ApisConstants {
             {
               "userEmail": []
             }
-          ]
+          ],
+          "externalDocs": {
+            "description": "Code Example",
+            "url": "http://localhost:4200/code-examples/federation#modules_get"
+          }
         }
       },
       "/user/{id}": {
         "get": {
           "tags": [
-            "UserAdministrators"
+            "User"
           ],
           "summary": "Get user by id",
           "description": "Find a user in the database by its identifier and get all the data associated\n",
@@ -284,13 +338,94 @@ export class ApisConstants {
                 }
               }
             }
+          },
+          "security": [
+            {
+              "userId": []
+            },
+            {
+              "permissions": [
+                "ecosystem_management"
+              ]
+            }
+          ],
+          "externalDocs": {
+            "description": "Code Example",
+            "url": "http://localhost:4200/code-examples/federation#user/:id_get"
+          }
+        }
+      },
+      "/user/by/email": {
+        "get": {
+          "tags": [
+            "User"
+          ],
+          "summary": "Get user by email",
+          "description": "Find a user in the database by email\n",
+          "operationId": "userByEmail",
+          "parameters": [
+            {
+              "name": "email",
+              "in": "query",
+              "description": "User email",
+              "required": true,
+              "style": "form",
+              "explode": false,
+              "schema": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "Get users data successfully",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/User"
+                  }
+                }
+              }
+            },
+            "401": {
+              "description": "You must login before call this endpoint",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/SecurityAccessUnauthorizedError"
+                  }
+                }
+              }
+            },
+            "403": {
+              "description": "User does not have the necessary permissions",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/SecurityAccessForbiddenError"
+                  }
+                }
+              }
+            }
+          },
+          "security": [
+            {
+              "userId": []
+            }
+          ],
+          "externalDocs": {
+            "description": "Code Example",
+            "url": "http://localhost:4200/code-examples/federation#users/by/email_get"
           }
         }
       },
       "/users": {
         "get": {
           "tags": [
-            "UserAdministrators"
+            "User"
           ],
           "summary": "Get all users",
           "description": "Find all users in the database and get all the data associated\n",
@@ -329,13 +464,27 @@ export class ApisConstants {
                 }
               }
             }
+          },
+          "security": [
+            {
+              "userId": []
+            },
+            {
+              "permissions": [
+                "permission_management"
+              ]
+            }
+          ],
+          "externalDocs": {
+            "description": "Code Example",
+            "url": "http://localhost:4200/code-examples/federation#users_get"
           }
         }
       },
-      "/users/by-roles": {
+      "/users/by/roles": {
         "get": {
           "tags": [
-            "UserAdministrators"
+            "User"
           ],
           "summary": "Get users by roles",
           "description": "Find a user in the database by roles and get all the data associated\n",
@@ -390,13 +539,27 @@ export class ApisConstants {
                 }
               }
             }
+          },
+          "security": [
+            {
+              "userId": []
+            },
+            {
+              "permissions": [
+                "ecosystem_management"
+              ]
+            }
+          ],
+          "externalDocs": {
+            "description": "Code Example",
+            "url": "http://localhost:4200/code-examples/federation#users/by/roles_get"
           }
         }
       },
       "/users/perms": {
         "get": {
           "tags": [
-            "UserAdministrators"
+            "User"
           ],
           "summary": "Get user permissions",
           "description": "Find a user in the database by id and get the permissions associated\n",
@@ -455,11 +618,25 @@ export class ApisConstants {
                 }
               }
             }
+          },
+          "security": [
+            {
+              "userId": []
+            },
+            {
+              "permissions": [
+                "permission_management"
+              ]
+            }
+          ],
+          "externalDocs": {
+            "description": "Code Example",
+            "url": "http://localhost:4200/code-examples/federation#users/perms_get"
           }
         },
         "put": {
           "tags": [
-            "UserAdministrators"
+            "User"
           ],
           "summary": "Update user permissions",
           "description": "Update user permission in database\n",
@@ -507,13 +684,27 @@ export class ApisConstants {
                 }
               }
             }
+          },
+          "security": [
+            {
+              "userId": []
+            },
+            {
+              "permissions": [
+                "permission_management"
+              ]
+            }
+          ],
+          "externalDocs": {
+            "description": "Code Example",
+            "url": "http://localhost:4200/code-examples/federation#users/perms_put"
           }
         }
       },
       "/user/verify": {
         "put": {
           "tags": [
-            "NoPerms"
+            "User"
           ],
           "summary": "Verify user",
           "description": "Verify a user and allow him access to the platform\n",
@@ -541,13 +732,17 @@ export class ApisConstants {
                 }
               }
             }
+          },
+          "externalDocs": {
+            "description": "Code Example",
+            "url": "http://localhost:4200/code-examples/federation#user/verify_put"
           }
         }
       },
       "/password/request": {
         "post": {
           "tags": [
-            "NoPerms"
+            "Password"
           ],
           "summary": "Request to change a user password",
           "description": "Generate a request and a token in database to change a password\n",
@@ -575,13 +770,17 @@ export class ApisConstants {
                 }
               }
             }
+          },
+          "externalDocs": {
+            "description": "Code Example",
+            "url": "http://localhost:4200/code-examples/federation#password/request_post"
           }
         }
       },
       "/password/recover": {
         "post": {
           "tags": [
-            "NoPerms"
+            "Password"
           ],
           "summary": "Update user password",
           "description": "Find user and update the password in database \n",
@@ -609,13 +808,17 @@ export class ApisConstants {
                 }
               }
             }
+          },
+          "externalDocs": {
+            "description": "Code Example",
+            "url": "http://localhost:4200/code-examples/federation#password/recover_post"
           }
         }
       },
       "/password/change": {
         "put": {
           "tags": [
-            "NoPerms"
+            "Password"
           ],
           "summary": "Update user password",
           "description": "Find user and update the password in database \n",
@@ -658,7 +861,11 @@ export class ApisConstants {
             {
               "userEmail": []
             }
-          ]
+          ],
+          "externalDocs": {
+            "description": "Code Example",
+            "url": "http://localhost:4200/code-examples/federation#password/change_put"
+          }
         }
       }
     },
@@ -1018,6 +1225,20 @@ export class ApisConstants {
           "type": "apiKey",
           "name": "COOKIE_USER_PERMISSIONS",
           "in": "header"
+        },
+        "permissions": {
+          "type": "oauth2",
+          "description": "This define all permisions required in Core API",
+          "flows": {
+            "authorizationCode": {
+              "scopes": {
+                "permission_management": "Permission required to add or remove user permissions",
+                "ecosystem_management": "Permission required to make any operation in the ecosystem"
+              },
+              "authorizationUrl": "https://dev.moonshot.ceo/api/federation/login",
+              "tokenUrl": "https://dev.moonshot.ceo/api/federation/token"
+            }
+          }
         }
       }
     }
@@ -1034,10 +1255,6 @@ export class ApisConstants {
       "version": "1.0.0"
     },
     "servers": [
-      {
-        "description": "SwaggerHub API Auto Mocking",
-        "url": "https://virtserver.swaggerhub.com/MoonshotInnovation/Core/1.0.0"
-      },
       {
         "url": "https://dev.moonshot.ceo/api/core"
       }
@@ -1057,27 +1274,27 @@ export class ApisConstants {
       },
       {
         "name": "Industry",
-        "description": "Endpoints about industry taxonomy"
+        "description": "Endpoints about Industry taxonomy"
       },
       {
         "name": "Business Model",
-        "description": "Endpoints about business model taxonomy"
+        "description": "Endpoints about BusinessModel taxonomy"
       },
       {
         "name": "Social Innovation",
-        "description": "Endpoints about social innovation taxonomy"
+        "description": "Endpoints about SocialInnovation taxonomy"
       },
       {
         "name": "Deep Tech",
-        "description": "Endpoints about deep tech taxonomy"
+        "description": "Endpoints about DeepTech taxonomy"
       },
       {
         "name": "Ecosystem",
-        "description": "Endpoints about ecosystem entity"
+        "description": "Endpoints about Ecosystem entity"
       },
       {
         "name": "Notifications",
-        "description": "Endpoints about notifications entity"
+        "description": "Endpoints about Notification entity"
       }
     ],
     "paths": {
@@ -1104,6 +1321,10 @@ export class ApisConstants {
             "500": {
               "description": "Cannot verify the certificate"
             }
+          },
+          "externalDocs": {
+            "description": "Code Example",
+            "url": "http://localhost:4200/code-examples/core#version_get"
           }
         }
       },
@@ -1142,7 +1363,7 @@ export class ApisConstants {
                 "application/json": {
                   "schema": {
                     "type": "string",
-                    "example": "https://presignedurldemo.s3.eu-west-2.amazonaws.com/image.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=%2F20180210%2Feu-west-2%2Fs3%2Faws4_request&X-Amz-Date=20180210T171315Z&X-Amz-Expires=1800&X-Amz-Signature=12b74b0788aa036bc7c3d03b3f20c61f1f91cc9ad8873e3314255dc479a25351&X-Amz-SignedHeaders=host"
+                    "example": "https://presignedurldemo.s3.eu-west-2.amazonaws.com/image.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=%%2Feu-west-2%2Fs3%2Faws4_request&X-Amz-Date=20180210T171315Z&X-Amz-Expires=1800&X-Amz-Signature=12b74b0788aa036bc7c3d03b3f20c61f1f91cc9ad8873e3314255dc479a25351&X-Amz-SignedHeaders=host"
                   }
                 }
               }
@@ -1157,6 +1378,10 @@ export class ApisConstants {
                 }
               }
             }
+          },
+          "externalDocs": {
+            "description": "Code Example",
+            "url": "http://localhost:4200/code-examples/core#signed-url_get"
           }
         }
       },
@@ -1215,7 +1440,11 @@ export class ApisConstants {
             {
               "idToken": []
             }
-          ]
+          ],
+          "externalDocs": {
+            "description": "Code Example",
+            "url": "http://localhost:4200/code-examples/core#openGraph_get"
+          }
         }
       },
       "/industry/{id}": {
@@ -1248,6 +1477,10 @@ export class ApisConstants {
                 }
               }
             }
+          },
+          "externalDocs": {
+            "description": "Code Example",
+            "url": "http://localhost:4200/code-examples/core#industry/:id_get"
           }
         }
       },
@@ -1273,6 +1506,10 @@ export class ApisConstants {
                 }
               }
             }
+          },
+          "externalDocs": {
+            "description": "Code Example",
+            "url": "http://localhost:4200/code-examples/core#industries_get"
           }
         }
       },
@@ -1306,6 +1543,10 @@ export class ApisConstants {
                 }
               }
             }
+          },
+          "externalDocs": {
+            "description": "Code Example",
+            "url": "http://localhost:4200/code-examples/core#business-model/:id_get"
           }
         }
       },
@@ -1331,6 +1572,10 @@ export class ApisConstants {
                 }
               }
             }
+          },
+          "externalDocs": {
+            "description": "Code Example",
+            "url": "http://localhost:4200/code-examples/core#business-models_get"
           }
         }
       },
@@ -1364,6 +1609,10 @@ export class ApisConstants {
                 }
               }
             }
+          },
+          "externalDocs": {
+            "description": "Code Example",
+            "url": "http://localhost:4200/code-examples/core#social-innovation/:id_get"
           }
         }
       },
@@ -1389,6 +1638,10 @@ export class ApisConstants {
                 }
               }
             }
+          },
+          "externalDocs": {
+            "description": "Code Example",
+            "url": "http://localhost:4200/code-examples/core#social-innovations_get"
           }
         }
       },
@@ -1422,6 +1675,10 @@ export class ApisConstants {
                 }
               }
             }
+          },
+          "externalDocs": {
+            "description": "Code Example",
+            "url": "http://localhost:4200/code-examples/core#deep-tech/:id_get"
           }
         }
       },
@@ -1447,6 +1704,10 @@ export class ApisConstants {
                 }
               }
             }
+          },
+          "externalDocs": {
+            "description": "Code Example",
+            "url": "http://localhost:4200/code-examples/core#deep-techs_get"
           }
         }
       },
@@ -1470,6 +1731,10 @@ export class ApisConstants {
                 }
               }
             }
+          },
+          "externalDocs": {
+            "description": "Code Example",
+            "url": "http://localhost:4200/code-examples/core#ecosystem/initialized_get"
           }
         }
       },
@@ -1507,7 +1772,11 @@ export class ApisConstants {
             {
               "idToken": []
             }
-          ]
+          ],
+          "externalDocs": {
+            "description": "Code Example",
+            "url": "http://localhost:4200/code-examples/core#ecosystem_get"
+          }
         },
         "post": {
           "tags": [
@@ -1540,6 +1809,10 @@ export class ApisConstants {
                 }
               }
             }
+          },
+          "externalDocs": {
+            "description": "Code Example",
+            "url": "http://localhost:4200/code-examples/core#ecosystem_post"
           }
         },
         "put": {
@@ -1603,7 +1876,11 @@ export class ApisConstants {
                 "ecosystem_update"
               ]
             }
-          ]
+          ],
+          "externalDocs": {
+            "description": "Code Example",
+            "url": "http://localhost:4200/code-examples/core#ecosystem_put"
+          }
         }
       },
       "/ecosystem/invite": {
@@ -1668,7 +1945,11 @@ export class ApisConstants {
                 "actor_invite"
               ]
             }
-          ]
+          ],
+          "externalDocs": {
+            "description": "Code Example",
+            "url": "http://localhost:4200/code-examples/core#ecosystem/invite_post"
+          }
         }
       },
       "/notifications": {
@@ -1723,7 +2004,11 @@ export class ApisConstants {
                 "ecosystem_update"
               ]
             }
-          ]
+          ],
+          "externalDocs": {
+            "description": "Code Example",
+            "url": "http://localhost:4200/code-examples/core#notifications_get"
+          }
         }
       },
       "/notification/{id}": {
@@ -1786,7 +2071,11 @@ export class ApisConstants {
                 "ecosystem_update"
               ]
             }
-          ]
+          ],
+          "externalDocs": {
+            "description": "Code Example",
+            "url": "http://localhost:4200/code-examples/core#notification/:id_get"
+          }
         }
       },
       "/notification": {
@@ -1831,6 +2120,10 @@ export class ApisConstants {
                 }
               }
             }
+          },
+          "externalDocs": {
+            "description": "Code Example",
+            "url": "http://localhost:4200/code-examples/core#notification_post"
           }
         }
       }
@@ -2891,7 +3184,13 @@ export class ApisConstants {
             "type",
             "push",
             "email",
-            "createdAt"
+            "createdAt",
+            "owner",
+            "recipients",
+            "followUpRoomId",
+            "directChatRoomId",
+            "wallPostName",
+            "followUpRoomName"
           ],
           "properties": {
             "id": {
@@ -2940,6 +3239,54 @@ export class ApisConstants {
               "type": "string",
               "format": "A date-time with a time-zone in the ISO-8601",
               "example": "2021-09-18T00:00:00.000Z"
+            },
+            "owner": {
+              "$ref": "#/components/schemas/NotificationMember"
+            },
+            "recipients": {
+              "type": "array",
+              "items": {
+                "$ref": "#/components/schemas/NotificationMember"
+              }
+            },
+            "followUpRoomId": {
+              "type": "string",
+              "format": "mongo-id",
+              "example": "61445159784bca6ef764c6df"
+            },
+            "directChatRoomId": {
+              "type": "string",
+              "format": "mongo-id",
+              "example": "61445159784bca6ef764c6df"
+            },
+            "wallPostName": {
+              "type": "string",
+              "example": "Wall post 1"
+            },
+            "followUpRoomName": {
+              "type": "string",
+              "example": "Follow up room 1"
+            }
+          }
+        },
+        "NotificationMember": {
+          "required": [
+            "id",
+            "image",
+            "name"
+          ],
+          "properties": {
+            "id": {
+              "type": "string",
+              "format": "mongo-id",
+              "example": "61445159784bca6ef764c6df"
+            },
+            "image": {
+              "$ref": "#/components/schemas/Image"
+            },
+            "name": {
+              "type": "string",
+              "example": "user1"
             }
           }
         },
@@ -3144,79 +3491,59 @@ export class ApisConstants {
     ],
     "tags": [
       {
-        "name": "NoPerms",
-        "description": "Operations available to all users"
+        "name": "Version",
+        "description": "Endpoint that return Community last version"
       },
       {
-        "name": "OnlineEventCreate",
-        "description": "Endpoints available to users with online event create permission"
+        "name": "OnlineEvent",
+        "description": "Endpoints about OnlineEvent entity"
       },
       {
-        "name": "OnlineEventAnyUpdate",
-        "description": "Endpoints available to users with online event any update permission"
+        "name": "FaceToFace",
+        "description": "Endpoints about FaceToFace entity"
       },
       {
-        "name": "OnlineEventAnyDelete",
-        "description": "Endpoints available to users with online event any delete permission"
+        "name": "Room",
+        "description": "Endpoints about Room entity"
       },
       {
-        "name": "FaceToFaceEventCreate",
-        "description": "Endpoints available to users with face to face event create permission"
+        "name": "DirectChat",
+        "description": "Endpoints about DirectChat entity"
       },
       {
-        "name": "FaceToFaceEventAnyUpdate",
-        "description": "Endpoints available to users with face to face event any update permission"
+        "name": "FollowUpRoom",
+        "description": "Endpoints about FollowUpRoom entity"
       },
       {
-        "name": "FaceToFaceEventAnyDelete",
-        "description": "Endpoints available to users with face to face event any delete permission"
+        "name": "PublicChannel",
+        "description": "Endpoints about PublicChannel entity"
       },
       {
-        "name": "DirectChatAnyList",
-        "description": "Endpoints available to users with direct chat any list permission"
+        "name": "WallPost",
+        "description": "Endpoints about WallPost entity"
       },
       {
-        "name": "FollowUpRoomAnyList",
-        "description": "Endpoints available to users with follow up room any list permission"
+        "name": "Actor",
+        "description": "Endpoints about Actor entity"
       },
       {
-        "name": "PublicChannelAnyUpdate",
-        "description": "Endpoints available to users with public channel any update permission"
+        "name": "Member",
+        "description": "Endpoints about member entity"
       },
       {
-        "name": "PublicChannelAnyDelete",
-        "description": "Endpoints available to users with public channel any delete permission"
+        "name": "Project",
+        "description": "Endpoints about Project entity"
       },
       {
-        "name": "PublicChannelCreate",
-        "description": "Endpoints available to users with public channel create permission"
-      },
-      {
-        "name": "WallPostCreate",
-        "description": "Endpoints available to users with wall post create permission"
-      },
-      {
-        "name": "WallPostAnyUpdate",
-        "description": "Endpoints available to users with wall post any update permission"
-      },
-      {
-        "name": "WallPostAnyDelete",
-        "description": "Endpoints available to users with wall post any delete permission"
-      },
-      {
-        "name": "ActorManagement",
-        "description": "Endpoints available to users with actor management permission"
-      },
-      {
-        "name": "SettingsUpdate",
-        "description": "Endpoints available to users with settings update permission"
+        "name": "Setting",
+        "description": "Endpoints about Setting entity"
       }
     ],
     "paths": {
       "/version": {
         "get": {
           "tags": [
-            "NoPerms"
+            "Version"
           ],
           "summary": "API version",
           "description": "Return the lastest version of the API\n",
@@ -3236,13 +3563,17 @@ export class ApisConstants {
             "500": {
               "description": "Cannot verify the certificate"
             }
+          },
+          "externalDocs": {
+            "description": "Code Example",
+            "url": "http://localhost:4200/code-examples/community#version_get"
           }
         }
       },
       "/online-events": {
         "get": {
           "tags": [
-            "NoPerms"
+            "OnlineEvent"
           ],
           "summary": "Get all online events",
           "description": "Find all online events in the database\n",
@@ -3273,13 +3604,17 @@ export class ApisConstants {
             {
               "idToken": []
             }
-          ]
+          ],
+          "externalDocs": {
+            "description": "Code Example",
+            "url": "http://localhost:4200/code-examples/community#online-events_get"
+          }
         }
       },
       "/online-event/{id}": {
         "get": {
           "tags": [
-            "NoPerms"
+            "OnlineEvent"
           ],
           "summary": "Get an online event by id",
           "description": "Find an online event in the database by its identifier\n",
@@ -3321,13 +3656,17 @@ export class ApisConstants {
             {
               "idToken": []
             }
-          ]
+          ],
+          "externalDocs": {
+            "description": "Code Example",
+            "url": "http://localhost:4200/code-examples/community#online-event/:id_get"
+          }
         }
       },
       "/online-event": {
         "post": {
           "tags": [
-            "OnlineEventCreate"
+            "OnlineEvent"
           ],
           "summary": "Create an online event",
           "description": "Create and insert an online event in database\n",
@@ -3380,12 +3719,21 @@ export class ApisConstants {
           "security": [
             {
               "idToken": []
+            },
+            {
+              "permissions": [
+                "online_event_create"
+              ]
             }
-          ]
+          ],
+          "externalDocs": {
+            "description": "Code Example",
+            "url": "http://localhost:4200/code-examples/community#online-event_post"
+          }
         },
         "put": {
           "tags": [
-            "NoPerms"
+            "OnlineEvent"
           ],
           "summary": "Update an online event",
           "description": "Find and update an online event in the database\n",
@@ -3429,11 +3777,15 @@ export class ApisConstants {
             {
               "idToken": []
             }
-          ]
+          ],
+          "externalDocs": {
+            "description": "Code Example",
+            "url": "http://localhost:4200/code-examples/community#online-event_put"
+          }
         },
         "delete": {
           "tags": [
-            "NoPerms"
+            "OnlineEvent"
           ],
           "summary": "Remove an online event",
           "description": "Remove an online event from database\n",
@@ -3467,13 +3819,17 @@ export class ApisConstants {
             {
               "idToken": []
             }
-          ]
+          ],
+          "externalDocs": {
+            "description": "Code Example",
+            "url": "http://localhost:4200/code-examples/community#online-event_delete"
+          }
         }
       },
       "/online-event/admin": {
         "put": {
           "tags": [
-            "OnlineEventAnyUpdate"
+            "OnlineEvent"
           ],
           "summary": "Update any online event",
           "description": "Find and update an online event in database\n",
@@ -3526,12 +3882,21 @@ export class ApisConstants {
           "security": [
             {
               "idToken": []
+            },
+            {
+              "permissions": [
+                "online_event_any_update"
+              ]
             }
-          ]
+          ],
+          "externalDocs": {
+            "description": "Code Example",
+            "url": "http://localhost:4200/code-examples/community#online-event/admin_put"
+          }
         },
         "delete": {
           "tags": [
-            "OnlineEventAnyDelete"
+            "OnlineEvent"
           ],
           "summary": "Delete any online event",
           "description": "Delete an online event from database\n",
@@ -3574,14 +3939,23 @@ export class ApisConstants {
           "security": [
             {
               "idToken": []
+            },
+            {
+              "permissions": [
+                "online_event_any_delete"
+              ]
             }
-          ]
+          ],
+          "externalDocs": {
+            "description": "Code Example",
+            "url": "http://localhost:4200/code-examples/community#online-event/admin_delete"
+          }
         }
       },
       "/online-event/subscription": {
         "put": {
           "tags": [
-            "NoPerms"
+            "OnlineEvent"
           ],
           "summary": "Subscribe to an online event",
           "description": "Subscribe to an online event to become a participant\n",
@@ -3625,13 +3999,17 @@ export class ApisConstants {
             {
               "idToken": []
             }
-          ]
+          ],
+          "externalDocs": {
+            "description": "Code Example",
+            "url": "http://localhost:4200/code-examples/community#online-event/subscription_put"
+          }
         }
       },
       "/online-event/unsubscription": {
         "put": {
           "tags": [
-            "NoPerms"
+            "OnlineEvent"
           ],
           "summary": "Unsubcribe from an online event",
           "description": "Unsubscribe from an online event to stop being a participant\n",
@@ -3675,13 +4053,17 @@ export class ApisConstants {
             {
               "idToken": []
             }
-          ]
+          ],
+          "externalDocs": {
+            "description": "Code Example",
+            "url": "http://localhost:4200/code-examples/community#online-event/unsubscription_put"
+          }
         }
       },
       "/face-to-face-events": {
         "get": {
           "tags": [
-            "NoPerms"
+            "FaceToFace"
           ],
           "summary": "Get all face to face events",
           "description": "Find all face to face in the database\n",
@@ -3715,13 +4097,17 @@ export class ApisConstants {
             {
               "idToken": []
             }
-          ]
+          ],
+          "externalDocs": {
+            "description": "Code Example",
+            "url": "http://localhost:4200/code-examples/community#face-to-face-events_get"
+          }
         }
       },
       "/face-to-face-event/{id}": {
         "get": {
           "tags": [
-            "NoPerms"
+            "FaceToFace"
           ],
           "summary": "Get a face to face event by id",
           "description": "Find a face to face event in the database by its identifier\n",
@@ -3763,13 +4149,17 @@ export class ApisConstants {
             {
               "idToken": []
             }
-          ]
+          ],
+          "externalDocs": {
+            "description": "Code Example",
+            "url": "http://localhost:4200/code-examples/community#face-to-face-event/:id_get"
+          }
         }
       },
       "/face-to-face-event": {
         "post": {
           "tags": [
-            "FaceToFaceEventCreate"
+            "FaceToFace"
           ],
           "summary": "Create a face to face event",
           "description": "Create and insert a face to face event in database\n",
@@ -3822,12 +4212,21 @@ export class ApisConstants {
           "security": [
             {
               "idToken": []
+            },
+            {
+              "permissions": [
+                "face_to_face_event_create"
+              ]
             }
-          ]
+          ],
+          "externalDocs": {
+            "description": "Code Example",
+            "url": "http://localhost:4200/code-examples/community#face-to-face-event_post"
+          }
         },
         "put": {
           "tags": [
-            "NoPerms"
+            "FaceToFace"
           ],
           "summary": "Update a face to face event",
           "description": "Find and update a face to face event in the database\n",
@@ -3871,11 +4270,15 @@ export class ApisConstants {
             {
               "idToken": []
             }
-          ]
+          ],
+          "externalDocs": {
+            "description": "Code Example",
+            "url": "http://localhost:4200/code-examples/community#face-to-face-event_put"
+          }
         },
         "delete": {
           "tags": [
-            "NoPerms"
+            "FaceToFace"
           ],
           "summary": "Remove a face to face event",
           "description": "Remove a face to face event from database\n",
@@ -3909,13 +4312,17 @@ export class ApisConstants {
             {
               "idToken": []
             }
-          ]
+          ],
+          "externalDocs": {
+            "description": "Code Example",
+            "url": "http://localhost:4200/code-examples/community#face-to-face-event_delete"
+          }
         }
       },
       "/face-to-face/admin": {
         "put": {
           "tags": [
-            "FaceToFaceEventAnyUpdate"
+            "FaceToFace"
           ],
           "summary": "Update any face to face event",
           "description": "Find and update an face to face event in database\n",
@@ -3968,12 +4375,21 @@ export class ApisConstants {
           "security": [
             {
               "idToken": []
+            },
+            {
+              "permissions": [
+                "face_to_face_event_any_update"
+              ]
             }
-          ]
+          ],
+          "externalDocs": {
+            "description": "Code Example",
+            "url": "http://localhost:4200/code-examples/community#face-to-face-event/admin_put"
+          }
         },
         "delete": {
           "tags": [
-            "FaceToFaceEventAnyDelete"
+            "FaceToFace"
           ],
           "summary": "Delete any face to face event",
           "description": "Delete a face to face event from database\n",
@@ -4016,14 +4432,23 @@ export class ApisConstants {
           "security": [
             {
               "idToken": []
+            },
+            {
+              "permissions": [
+                "face_to_face_event_any_delete"
+              ]
             }
-          ]
+          ],
+          "externalDocs": {
+            "description": "Code Example",
+            "url": "http://localhost:4200/code-examples/community#face-to-face-event/admin_delete"
+          }
         }
       },
       "/face-to-face-event/subscription": {
         "put": {
           "tags": [
-            "NoPerms"
+            "FaceToFace"
           ],
           "summary": "Subscribe to a face to face event",
           "description": "Subscribe to a face to face event to become a participant\n",
@@ -4067,13 +4492,17 @@ export class ApisConstants {
             {
               "idToken": []
             }
-          ]
+          ],
+          "externalDocs": {
+            "description": "Code Example",
+            "url": "http://localhost:4200/code-examples/community#face-to-face-event/subscription_put"
+          }
         }
       },
       "/face-to-face-event/unsubscription": {
         "put": {
           "tags": [
-            "NoPerms"
+            "FaceToFace"
           ],
           "summary": "Unsubcribe from a face to face event",
           "description": "Unsubscribe from a face to face event to stop being a participant\n",
@@ -4117,13 +4546,17 @@ export class ApisConstants {
             {
               "idToken": []
             }
-          ]
+          ],
+          "externalDocs": {
+            "description": "Code Example",
+            "url": "http://localhost:4200/code-examples/community#face-to-face-event/unsubscription_put"
+          }
         }
       },
       "/room-documents/{room_id}": {
         "get": {
           "tags": [
-            "NoPerms"
+            "Room"
           ],
           "summary": "Get all documents from the room",
           "description": "Find the room in database and return all the documents\n",
@@ -4168,13 +4601,17 @@ export class ApisConstants {
             {
               "idToken": []
             }
-          ]
+          ],
+          "externalDocs": {
+            "description": "Code Example",
+            "url": "http://localhost:4200/code-examples/community#room-documents/:room_id_get"
+          }
         }
       },
       "/room-links/{room_id}": {
         "get": {
           "tags": [
-            "NoPerms"
+            "Room"
           ],
           "summary": "Get all links from the room",
           "description": "Find the room in databse and return all the links\n",
@@ -4218,13 +4655,17 @@ export class ApisConstants {
             {
               "idToken": []
             }
-          ]
+          ],
+          "externalDocs": {
+            "description": "Code Example",
+            "url": "http://localhost:4200/code-examples/community#room-links/:room_id_get"
+          }
         }
       },
       "/direct-chats": {
         "get": {
           "tags": [
-            "NoPerms"
+            "DirectChat"
           ],
           "summary": "Get all direct chats where member is participant",
           "description": "Find all direct chats in the database where member is participant\n",
@@ -4261,13 +4702,17 @@ export class ApisConstants {
             {
               "memberId": []
             }
-          ]
+          ],
+          "externalDocs": {
+            "description": "Code Example",
+            "url": "http://localhost:4200/code-examples/community#direct-chats_get"
+          }
         }
       },
       "/direct-chats/all": {
         "get": {
           "tags": [
-            "DirectChatAnyList"
+            "DirectChat"
           ],
           "summary": "Get all direct chats",
           "description": "Find all direct chats in database\n",
@@ -4310,14 +4755,23 @@ export class ApisConstants {
           "security": [
             {
               "idToken": []
+            },
+            {
+              "permissions": [
+                "direct_chat_any_list"
+              ]
             }
-          ]
+          ],
+          "externalDocs": {
+            "description": "Code Example",
+            "url": "http://localhost:4200/code-examples/community#direct-chats/all_get"
+          }
         }
       },
       "/direct-chat/{id}": {
         "get": {
           "tags": [
-            "NoPerms"
+            "DirectChat"
           ],
           "summary": "Get a direct chat by id",
           "description": "Find a direct chat in the database by its identifier\n",
@@ -4359,13 +4813,17 @@ export class ApisConstants {
             {
               "idToken": []
             }
-          ]
+          ],
+          "externalDocs": {
+            "description": "Code Example",
+            "url": "http://localhost:4200/code-examples/community#direct-chat/:id_get"
+          }
         }
       },
       "/direct-chat": {
         "post": {
           "tags": [
-            "NoPerms"
+            "DirectChat"
           ],
           "summary": "Create a direct chat",
           "description": "Create and insert a direct chat in database\n",
@@ -4399,11 +4857,15 @@ export class ApisConstants {
             {
               "idToken": []
             }
-          ]
+          ],
+          "externalDocs": {
+            "description": "Code Example",
+            "url": "http://localhost:4200/code-examples/community#direct-chat_post"
+          }
         },
         "delete": {
           "tags": [
-            "NoPerms"
+            "DirectChat"
           ],
           "summary": "Remove a direct chat",
           "description": "Remove a direct chat from database\n",
@@ -4437,13 +4899,17 @@ export class ApisConstants {
             {
               "idToken": []
             }
-          ]
+          ],
+          "externalDocs": {
+            "description": "Code Example",
+            "url": "http://localhost:4200/code-examples/community#direct-chat_delete"
+          }
         }
       },
       "/direct-chat/message": {
         "post": {
           "tags": [
-            "NoPerms"
+            "DirectChat"
           ],
           "summary": "Send a message to the direct chat",
           "description": "Find and update a direct chat in database with the new message\n",
@@ -4487,11 +4953,15 @@ export class ApisConstants {
             {
               "idToken": []
             }
-          ]
+          ],
+          "externalDocs": {
+            "description": "Code Example",
+            "url": "http://localhost:4200/code-examples/community#direct-chat/message_post"
+          }
         },
         "delete": {
           "tags": [
-            "NoPerms"
+            "DirectChat"
           ],
           "summary": "Remove a direct chat message",
           "description": "Remove a direct chat message from database\n",
@@ -4525,13 +4995,17 @@ export class ApisConstants {
             {
               "idToken": []
             }
-          ]
+          ],
+          "externalDocs": {
+            "description": "Code Example",
+            "url": "http://localhost:4200/code-examples/community#direct-chat/message_delete"
+          }
         }
       },
       "/direct-chat/messages/{room_id}": {
         "get": {
           "tags": [
-            "NoPerms"
+            "DirectChat"
           ],
           "summary": "Get all messages from the direct chat",
           "description": "Find all message from the direct chat online event in the database\n",
@@ -4573,13 +5047,17 @@ export class ApisConstants {
             {
               "idToken": []
             }
-          ]
+          ],
+          "externalDocs": {
+            "description": "Code Example",
+            "url": "http://localhost:4200/code-examples/community#direct-chat/messages/:room_id_get"
+          }
         }
       },
       "/follow-up-rooms": {
         "get": {
           "tags": [
-            "NoPerms"
+            "FollowUpRoom"
           ],
           "summary": "Get all follow up rooms where member is participant",
           "description": "Find all follow up room in the database where member is participant\n",
@@ -4616,13 +5094,17 @@ export class ApisConstants {
             {
               "memberId": []
             }
-          ]
+          ],
+          "externalDocs": {
+            "description": "Code Example",
+            "url": "http://localhost:4200/code-examples/community#follow-up-rooms_get"
+          }
         }
       },
       "/follow-up-rooms/all": {
         "get": {
           "tags": [
-            "FollowUpRoomAnyList"
+            "FollowUpRoom"
           ],
           "summary": "Get all follow up rooms",
           "description": "Find all follow up rooms in database\n",
@@ -4665,14 +5147,23 @@ export class ApisConstants {
           "security": [
             {
               "idToken": []
+            },
+            {
+              "permissions": [
+                "follow_up_room_any_list"
+              ]
             }
-          ]
+          ],
+          "externalDocs": {
+            "description": "Code Example",
+            "url": "http://localhost:4200/code-examples/community#follow-up-rooms/all_get"
+          }
         }
       },
       "/follow-up-room/{id}": {
         "get": {
           "tags": [
-            "NoPerms"
+            "FollowUpRoom"
           ],
           "summary": "Get a follow up room by id",
           "description": "Find a follow up room in the database by its identifier\n",
@@ -4714,13 +5205,17 @@ export class ApisConstants {
             {
               "idToken": []
             }
-          ]
+          ],
+          "externalDocs": {
+            "description": "Code Example",
+            "url": "http://localhost:4200/code-examples/community#follow-up-room/:id_get"
+          }
         }
       },
       "/follow-up-room": {
         "post": {
           "tags": [
-            "NoPerms"
+            "FollowUpRoom"
           ],
           "summary": "Create a follow up room",
           "description": "Create and insert a follow up room in database\n",
@@ -4764,11 +5259,15 @@ export class ApisConstants {
             {
               "idToken": []
             }
-          ]
+          ],
+          "externalDocs": {
+            "description": "Code Example",
+            "url": "http://localhost:4200/code-examples/community#follow-up-room_post"
+          }
         },
         "put": {
           "tags": [
-            "NoPerms"
+            "FollowUpRoom"
           ],
           "summary": "Update a follow up room",
           "description": "Find and update a follow up room in the database\n",
@@ -4812,11 +5311,15 @@ export class ApisConstants {
             {
               "idToken": []
             }
-          ]
+          ],
+          "externalDocs": {
+            "description": "Code Example",
+            "url": "http://localhost:4200/code-examples/community#follow-up-room_put"
+          }
         },
         "delete": {
           "tags": [
-            "NoPerms"
+            "FollowUpRoom"
           ],
           "summary": "Remove a follow up room",
           "description": "Remove a follow up room from database\n",
@@ -4850,13 +5353,17 @@ export class ApisConstants {
             {
               "idToken": []
             }
-          ]
+          ],
+          "externalDocs": {
+            "description": "Code Example",
+            "url": "http://localhost:4200/code-examples/community#follow-up-room_delete"
+          }
         }
       },
       "/follow-up-room/add-member": {
         "put": {
           "tags": [
-            "NoPerms"
+            "FollowUpRoom"
           ],
           "summary": "Add a participant in the follow up room",
           "description": "Find and update the partcipants of the follow up room\n",
@@ -4900,13 +5407,17 @@ export class ApisConstants {
             {
               "idToken": []
             }
-          ]
+          ],
+          "externalDocs": {
+            "description": "Code Example",
+            "url": "http://localhost:4200/code-examples/community#follow-up-room/add-member_put"
+          }
         }
       },
       "/follow-up-room/leave-member": {
         "put": {
           "tags": [
-            "NoPerms"
+            "FollowUpRoom"
           ],
           "summary": "Remove a participant from the follow up room",
           "description": "Find and update the partcipants of the follow up room\n",
@@ -4950,13 +5461,17 @@ export class ApisConstants {
             {
               "idToken": []
             }
-          ]
+          ],
+          "externalDocs": {
+            "description": "Code Example",
+            "url": "http://localhost:4200/code-examples/community#follow-up-room/leave-member_put"
+          }
         }
       },
       "/follow-up-room/open": {
         "put": {
           "tags": [
-            "NoPerms"
+            "FollowUpRoom"
           ],
           "summary": "Open a follow up room",
           "description": "Find and update the follow up room state to OPEN\n",
@@ -5000,13 +5515,17 @@ export class ApisConstants {
             {
               "idToken": []
             }
-          ]
+          ],
+          "externalDocs": {
+            "description": "Code Example",
+            "url": "http://localhost:4200/code-examples/community#follow-up-room/open_put"
+          }
         }
       },
       "/follow-up-room/close": {
         "put": {
           "tags": [
-            "NoPerms"
+            "FollowUpRoom"
           ],
           "summary": "Close a follow up room",
           "description": "Find and update the follow up room state to CLOSE\n",
@@ -5050,13 +5569,17 @@ export class ApisConstants {
             {
               "idToken": []
             }
-          ]
+          ],
+          "externalDocs": {
+            "description": "Code Example",
+            "url": "http://localhost:4200/code-examples/community#follow-up-room/close_put"
+          }
         }
       },
       "/follow-up-room/message": {
         "post": {
           "tags": [
-            "NoPerms"
+            "FollowUpRoom"
           ],
           "summary": "Send a message to the follow up room",
           "description": "Find and update a follow up room in database with the new message\n",
@@ -5100,11 +5623,15 @@ export class ApisConstants {
             {
               "idToken": []
             }
-          ]
+          ],
+          "externalDocs": {
+            "description": "Code Example",
+            "url": "http://localhost:4200/code-examples/community#follow-up-room/message_post"
+          }
         },
         "delete": {
           "tags": [
-            "NoPerms"
+            "FollowUpRoom"
           ],
           "summary": "Remove a follow up room message",
           "description": "Remove a follow up room message from database\n",
@@ -5138,13 +5665,17 @@ export class ApisConstants {
             {
               "idToken": []
             }
-          ]
+          ],
+          "externalDocs": {
+            "description": "Code Example",
+            "url": "http://localhost:4200/code-examples/community#follow-up-room/message_delete"
+          }
         }
       },
       "/follow-up-room/message/admin": {
         "delete": {
           "tags": [
-            "NoPerms"
+            "FollowUpRoom"
           ],
           "summary": "Delete any follow up room message",
           "description": "Delete a follow up room message from database\n",
@@ -5172,29 +5703,23 @@ export class ApisConstants {
                   }
                 }
               }
-            },
-            "403": {
-              "description": "User does not have the necessary permissions",
-              "content": {
-                "application/json": {
-                  "schema": {
-                    "$ref": "#/components/schemas/SecurityAccessForbiddenError"
-                  }
-                }
-              }
             }
           },
           "security": [
             {
               "idToken": []
             }
-          ]
+          ],
+          "externalDocs": {
+            "description": "Code Example",
+            "url": "http://localhost:4200/code-examples/community#follow-up-room/message/admin_delete"
+          }
         }
       },
       "/follow-up-room/messages/{room_id}": {
         "get": {
           "tags": [
-            "NoPerms"
+            "FollowUpRoom"
           ],
           "summary": "Get all messages from the follow up room",
           "description": "Find the room in database and return all the messages\n",
@@ -5239,13 +5764,17 @@ export class ApisConstants {
             {
               "idToken": []
             }
-          ]
+          ],
+          "externalDocs": {
+            "description": "Code Example",
+            "url": "http://localhost:4200/code-examples/community#follow-up-room/messages/:room_id_get"
+          }
         }
       },
       "/public-channels": {
         "get": {
           "tags": [
-            "NoPerms"
+            "PublicChannel"
           ],
           "summary": "Get all public channels",
           "description": "Find all public channels in the database\n",
@@ -5279,13 +5808,17 @@ export class ApisConstants {
             {
               "idToken": []
             }
-          ]
+          ],
+          "externalDocs": {
+            "description": "Code Example",
+            "url": "http://localhost:4200/code-examples/community#public-channels_get"
+          }
         }
       },
       "/public-channel/{id}": {
         "get": {
           "tags": [
-            "NoPerms"
+            "PublicChannel"
           ],
           "summary": "Get a public channel by id",
           "description": "Find a public channel in the database by its identifier\n",
@@ -5327,13 +5860,17 @@ export class ApisConstants {
             {
               "idToken": []
             }
-          ]
+          ],
+          "externalDocs": {
+            "description": "Code Example",
+            "url": "http://localhost:4200/code-examples/community#public-channel/:id_get"
+          }
         }
       },
       "/public-channel": {
         "post": {
           "tags": [
-            "PublicChannelCreate"
+            "PublicChannel"
           ],
           "summary": "Create a public channel",
           "description": "Create and insert a public channel in database\n",
@@ -5370,17 +5907,36 @@ export class ApisConstants {
                   }
                 }
               }
+            },
+            "403": {
+              "description": "User does not have the necessary permissions",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/SecurityAccessForbiddenError"
+                  }
+                }
+              }
             }
           },
           "security": [
             {
               "idToken": []
+            },
+            {
+              "permissions": [
+                "public_channel_create"
+              ]
             }
-          ]
+          ],
+          "externalDocs": {
+            "description": "Code Example",
+            "url": "http://localhost:4200/code-examples/community#public-channel_post"
+          }
         },
         "put": {
           "tags": [
-            "NoPerms"
+            "PublicChannel"
           ],
           "summary": "Update a public channel",
           "description": "Find and update a public channel in the database\n",
@@ -5423,11 +5979,15 @@ export class ApisConstants {
             {
               "idToken": []
             }
-          ]
+          ],
+          "externalDocs": {
+            "description": "Code Example",
+            "url": "http://localhost:4200/code-examples/community#public-channel_put"
+          }
         },
         "delete": {
           "tags": [
-            "NoPerms"
+            "PublicChannel"
           ],
           "summary": "Remove a public channel",
           "description": "Remove a public channel from database\n",
@@ -5461,13 +6021,17 @@ export class ApisConstants {
             {
               "idToken": []
             }
-          ]
+          ],
+          "externalDocs": {
+            "description": "Code Example",
+            "url": "http://localhost:4200/code-examples/community#public-channel_delete"
+          }
         }
       },
       "/public-channel/admin": {
         "put": {
           "tags": [
-            "PublicChannelAnyUpdate"
+            "PublicChannel"
           ],
           "summary": "Update any public channel",
           "description": "Find and update a public channel in database\n",
@@ -5519,12 +6083,21 @@ export class ApisConstants {
           "security": [
             {
               "idToken": []
+            },
+            {
+              "permissions": [
+                "public_channel_any_update"
+              ]
             }
-          ]
+          ],
+          "externalDocs": {
+            "description": "Code Example",
+            "url": "http://localhost:4200/code-examples/community#public-channel/admin_put"
+          }
         },
         "delete": {
           "tags": [
-            "PublicChannelAnyDelete"
+            "PublicChannel"
           ],
           "summary": "Remove any public channel",
           "description": "Remove a public channel from database\n",
@@ -5567,14 +6140,23 @@ export class ApisConstants {
           "security": [
             {
               "idToken": []
+            },
+            {
+              "permissions": [
+                "public_channel_any_delete"
+              ]
             }
-          ]
+          ],
+          "externalDocs": {
+            "description": "Code Example",
+            "url": "http://localhost:4200/code-examples/community#public-channel/admin_delete"
+          }
         }
       },
       "/public-channel/subscribe": {
         "put": {
           "tags": [
-            "NoPerms"
+            "PublicChannel"
           ],
           "summary": "Subscribe to a public channel",
           "description": "Subscribe to a public channel to become a participant\n",
@@ -5618,13 +6200,17 @@ export class ApisConstants {
             {
               "idToken": []
             }
-          ]
+          ],
+          "externalDocs": {
+            "description": "Code Example",
+            "url": "http://localhost:4200/code-examples/community#public-channel/subscribe_put"
+          }
         }
       },
       "/public-channel/unsubscribe": {
         "put": {
           "tags": [
-            "NoPerms"
+            "PublicChannel"
           ],
           "summary": "Unsubcribe to a public channel",
           "description": "Unsubscribe from a public channel to stop being a participant\n",
@@ -5668,13 +6254,17 @@ export class ApisConstants {
             {
               "idToken": []
             }
-          ]
+          ],
+          "externalDocs": {
+            "description": "Code Example",
+            "url": "http://localhost:4200/code-examples/community#public-channel/unsubscribe_put"
+          }
         }
       },
       "/public-channel/message": {
         "post": {
           "tags": [
-            "NoPerms"
+            "PublicChannel"
           ],
           "summary": "Send a message to the public channel",
           "description": "Find and update a public channel in database with the new message\n",
@@ -5718,11 +6308,15 @@ export class ApisConstants {
             {
               "idToken": []
             }
-          ]
+          ],
+          "externalDocs": {
+            "description": "Code Example",
+            "url": "http://localhost:4200/code-examples/community#public-channel/message_post"
+          }
         },
         "delete": {
           "tags": [
-            "NoPerms"
+            "PublicChannel"
           ],
           "summary": "Remove a public channel message",
           "description": "Remove a public channel message from database\n",
@@ -5756,13 +6350,17 @@ export class ApisConstants {
             {
               "idToken": []
             }
-          ]
+          ],
+          "externalDocs": {
+            "description": "Code Example",
+            "url": "http://localhost:4200/code-examples/community#public-channel/message_delete"
+          }
         }
       },
       "/public-channel/message/admin": {
         "delete": {
           "tags": [
-            "NoPerms"
+            "PublicChannel"
           ],
           "summary": "Delete any public channel message",
           "description": "Delete a public channel message from database\n",
@@ -5790,29 +6388,23 @@ export class ApisConstants {
                   }
                 }
               }
-            },
-            "403": {
-              "description": "User does not have the necessary permissions",
-              "content": {
-                "application/json": {
-                  "schema": {
-                    "$ref": "#/components/schemas/SecurityAccessForbiddenError"
-                  }
-                }
-              }
             }
           },
           "security": [
             {
               "idToken": []
             }
-          ]
+          ],
+          "externalDocs": {
+            "description": "Code Example",
+            "url": "http://localhost:4200/code-examples/community#public-channel/message/admin_delete"
+          }
         }
       },
       "/public-channel/messages/{room_id}": {
         "get": {
           "tags": [
-            "NoPerms"
+            "PublicChannel"
           ],
           "summary": "Get all messages from the public channel",
           "description": "Find the public channel in database and return all the messages\n",
@@ -5857,13 +6449,17 @@ export class ApisConstants {
             {
               "idToken": []
             }
-          ]
+          ],
+          "externalDocs": {
+            "description": "Code Example",
+            "url": "http://localhost:4200/code-examples/community#public-channel/messages/:room_id_get"
+          }
         }
       },
       "/wall-post": {
         "post": {
           "tags": [
-            "WallPostCreate"
+            "WallPost"
           ],
           "summary": "Create a wall post",
           "description": "Create and insert a wall post in database\n",
@@ -5900,17 +6496,36 @@ export class ApisConstants {
                   }
                 }
               }
+            },
+            "403": {
+              "description": "User does not have the necessary permissions",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/SecurityAccessForbiddenError"
+                  }
+                }
+              }
             }
           },
           "security": [
             {
               "idToken": []
+            },
+            {
+              "permissions": [
+                "wall_post_create"
+              ]
             }
-          ]
+          ],
+          "externalDocs": {
+            "description": "Code Example",
+            "url": "http://localhost:4200/code-examples/community#wall-post_post"
+          }
         },
         "put": {
           "tags": [
-            "NoPerms"
+            "WallPost"
           ],
           "summary": "Update a wall post",
           "description": "Find and update a wall post in the database\n",
@@ -5953,11 +6568,15 @@ export class ApisConstants {
             {
               "idToken": []
             }
-          ]
+          ],
+          "externalDocs": {
+            "description": "Code Example",
+            "url": "http://localhost:4200/code-examples/community#wall-post_put"
+          }
         },
         "delete": {
           "tags": [
-            "NoPerms"
+            "WallPost"
           ],
           "summary": "Remove a wall post",
           "description": "Remove a wall post from database\n",
@@ -5991,13 +6610,17 @@ export class ApisConstants {
             {
               "idToken": []
             }
-          ]
+          ],
+          "externalDocs": {
+            "description": "Code Example",
+            "url": "http://localhost:4200/code-examples/community#wall-post_delete"
+          }
         }
       },
       "/wall-post/admin": {
         "put": {
           "tags": [
-            "WallPostAnyUpdate"
+            "WallPost"
           ],
           "summary": "Update any wall post",
           "description": "Find and update any wall post\n",
@@ -6034,17 +6657,36 @@ export class ApisConstants {
                   }
                 }
               }
+            },
+            "403": {
+              "description": "User does not have the necessary permissions",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/SecurityAccessForbiddenError"
+                  }
+                }
+              }
             }
           },
           "security": [
             {
               "idToken": []
+            },
+            {
+              "permissions": [
+                "wall_post_any_update"
+              ]
             }
-          ]
+          ],
+          "externalDocs": {
+            "description": "Code Example",
+            "url": "http://localhost:4200/code-examples/community#wall-post/admin_put"
+          }
         },
         "delete": {
           "tags": [
-            "WallPostAnyDelete"
+            "WallPost"
           ],
           "summary": "Remove any wall post",
           "description": "Remove any wall post from database\n",
@@ -6072,19 +6714,38 @@ export class ApisConstants {
                   }
                 }
               }
+            },
+            "403": {
+              "description": "User does not have the necessary permissions",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/SecurityAccessForbiddenError"
+                  }
+                }
+              }
             }
           },
           "security": [
             {
               "idToken": []
+            },
+            {
+              "permissions": [
+                "wall_post_any_delete"
+              ]
             }
-          ]
+          ],
+          "externalDocs": {
+            "description": "Code Example",
+            "url": "http://localhost:4200/code-examples/community#wall-post/admin_delete"
+          }
         }
       },
       "/wall-post/like": {
         "put": {
           "tags": [
-            "NoPerms"
+            "WallPost"
           ],
           "summary": "Give like to a wall post",
           "description": "Find and update a wall post with the new like\n",
@@ -6127,13 +6788,17 @@ export class ApisConstants {
             {
               "idToken": []
             }
-          ]
+          ],
+          "externalDocs": {
+            "description": "Code Example",
+            "url": "http://localhost:4200/code-examples/community#wall-post/like_put"
+          }
         }
       },
       "/wall-post/unlike": {
         "put": {
           "tags": [
-            "NoPerms"
+            "WallPost"
           ],
           "summary": "Delete like from a wall post",
           "description": "Find and update a wall post without the new like\n",
@@ -6176,13 +6841,17 @@ export class ApisConstants {
             {
               "idToken": []
             }
-          ]
+          ],
+          "externalDocs": {
+            "description": "Code Example",
+            "url": "http://localhost:4200/code-examples/community#wall-post/unlike_put"
+          }
         }
       },
       "/wall-post/comment": {
         "post": {
           "tags": [
-            "NoPerms"
+            "WallPost"
           ],
           "summary": "Comment a wall post",
           "description": "Find and update a wall post with the new comment\n",
@@ -6225,13 +6894,17 @@ export class ApisConstants {
             {
               "idToken": []
             }
-          ]
+          ],
+          "externalDocs": {
+            "description": "Code Example",
+            "url": "http://localhost:4200/code-examples/community#wall-post/comment_post"
+          }
         }
       },
       "/wall-post/comment/like": {
         "put": {
           "tags": [
-            "NoPerms"
+            "WallPost"
           ],
           "summary": "Give like to a wall post comment",
           "description": "Find and update a wall post with the new comment like\n",
@@ -6274,13 +6947,17 @@ export class ApisConstants {
             {
               "idToken": []
             }
-          ]
+          ],
+          "externalDocs": {
+            "description": "Code Example",
+            "url": "http://localhost:4200/code-examples/community#wall-post/comment/like_put"
+          }
         }
       },
       "/wall-post/comment/unlike": {
         "put": {
           "tags": [
-            "NoPerms"
+            "WallPost"
           ],
           "summary": "Remove like from a wall post comment",
           "description": "Find and update a wall post without the comment like\n",
@@ -6323,13 +7000,17 @@ export class ApisConstants {
             {
               "idToken": []
             }
-          ]
+          ],
+          "externalDocs": {
+            "description": "Code Example",
+            "url": "http://localhost:4200/code-examples/community#wall-post/comment/unlike_put"
+          }
         }
       },
       "/wall-post/{id}": {
         "get": {
           "tags": [
-            "NoPerms"
+            "WallPost"
           ],
           "summary": "Get a wall post by id",
           "description": "Find a wall post in the database by its identifier\n",
@@ -6371,13 +7052,17 @@ export class ApisConstants {
             {
               "idToken": []
             }
-          ]
+          ],
+          "externalDocs": {
+            "description": "Code Example",
+            "url": "http://localhost:4200/code-examples/community#wall-post/:id_get"
+          }
         }
       },
       "/wall-posts": {
         "get": {
           "tags": [
-            "NoPerms"
+            "WallPost"
           ],
           "summary": "Get all wall posts",
           "description": "Find all wall posts in the database\n",
@@ -6441,13 +7126,17 @@ export class ApisConstants {
             {
               "idToken": []
             }
-          ]
+          ],
+          "externalDocs": {
+            "description": "Code Example",
+            "url": "http://localhost:4200/code-examples/community#wall-posts_get"
+          }
         }
       },
       "/actors": {
         "get": {
           "tags": [
-            "NoPerms"
+            "Actor"
           ],
           "summary": "Get all actors",
           "description": "Find all actors in the database\n",
@@ -6478,13 +7167,17 @@ export class ApisConstants {
             {
               "idToken": []
             }
-          ]
+          ],
+          "externalDocs": {
+            "description": "Code Example",
+            "url": "http://localhost:4200/code-examples/community#actors_get"
+          }
         }
       },
       "/actors/by-name-and-state": {
         "get": {
           "tags": [
-            "ActorManagement"
+            "Actor"
           ],
           "summary": "Get actors by name and state",
           "description": "Find actors in the database by name and state\n",
@@ -6547,14 +7240,23 @@ export class ApisConstants {
           "security": [
             {
               "idToken": []
+            },
+            {
+              "permissions": [
+                "actor_management"
+              ]
             }
-          ]
+          ],
+          "externalDocs": {
+            "description": "Code Example",
+            "url": "http://localhost:4200/code-examples/community#actors/by-name-and-state_get"
+          }
         }
       },
       "/actors/by-type": {
         "get": {
           "tags": [
-            "NoPerms"
+            "Actor"
           ],
           "summary": "Get actors by type",
           "description": "Find actors in the database by type\n",
@@ -6598,13 +7300,17 @@ export class ApisConstants {
             {
               "idToken": []
             }
-          ]
+          ],
+          "externalDocs": {
+            "description": "Code Example",
+            "url": "http://localhost:4200/code-examples/community#actors/by-type_get"
+          }
         }
       },
       "/actors/by-state": {
         "get": {
           "tags": [
-            "NoPerms"
+            "Actor"
           ],
           "summary": "Get actors by state",
           "description": "Find actors in the database by state\n",
@@ -6649,13 +7355,17 @@ export class ApisConstants {
             {
               "idToken": []
             }
-          ]
+          ],
+          "externalDocs": {
+            "description": "Code Example",
+            "url": "http://localhost:4200/code-examples/community#actors/by-state_get"
+          }
         }
       },
       "/actors/by-member": {
         "get": {
           "tags": [
-            "NoPerms"
+            "Actor"
           ],
           "summary": "Get actors by member",
           "description": "Find actors in the database by member\n",
@@ -6713,13 +7423,17 @@ export class ApisConstants {
             {
               "idToken": []
             }
-          ]
+          ],
+          "externalDocs": {
+            "description": "Code Example",
+            "url": "http://localhost:4200/code-examples/community#actors/by-member_get"
+          }
         }
       },
       "/actor/{id}": {
         "get": {
           "tags": [
-            "NoPerms"
+            "Actor"
           ],
           "summary": "Get an actor",
           "description": "Find an actor in the database by its identifier\n",
@@ -6764,13 +7478,17 @@ export class ApisConstants {
             {
               "idToken": []
             }
-          ]
+          ],
+          "externalDocs": {
+            "description": "Code Example",
+            "url": "http://localhost:4200/code-examples/community#actor/:id_get"
+          }
         }
       },
       "/actor": {
         "post": {
           "tags": [
-            "NoPerms"
+            "Actor"
           ],
           "summary": "Create an actor",
           "description": "Create and insert an actor in database\n",
@@ -6819,11 +7537,15 @@ export class ApisConstants {
             {
               "idToken": []
             }
-          ]
+          ],
+          "externalDocs": {
+            "description": "Code Example",
+            "url": "http://localhost:4200/code-examples/community#actor_post"
+          }
         },
         "put": {
           "tags": [
-            "NoPerms"
+            "Actor"
           ],
           "summary": "Update an actor",
           "description": "Find and update an actor in the database\n",
@@ -6866,11 +7588,15 @@ export class ApisConstants {
             {
               "idToken": []
             }
-          ]
+          ],
+          "externalDocs": {
+            "description": "Code Example",
+            "url": "http://localhost:4200/code-examples/community#actor_put"
+          }
         },
         "delete": {
           "tags": [
-            "NoPerms"
+            "Actor"
           ],
           "summary": "Remove an actor",
           "description": "Remove an actor from database\n",
@@ -6904,13 +7630,17 @@ export class ApisConstants {
             {
               "idToken": []
             }
-          ]
+          ],
+          "externalDocs": {
+            "description": "Code Example",
+            "url": "http://localhost:4200/code-examples/community#actor_delete"
+          }
         }
       },
       "/actor/accept": {
         "put": {
           "tags": [
-            "ActorManagement"
+            "Actor"
           ],
           "summary": "Change actor status to accept",
           "description": "Find and update the actor with the new status\n",
@@ -6962,14 +7692,23 @@ export class ApisConstants {
           "security": [
             {
               "idToken": []
+            },
+            {
+              "permissions": [
+                "actor_management"
+              ]
             }
-          ]
+          ],
+          "externalDocs": {
+            "description": "Code Example",
+            "url": "http://localhost:4200/code-examples/community#actor/accept_put"
+          }
         }
       },
       "/actor/reject": {
         "put": {
           "tags": [
-            "ActorManagement"
+            "Actor"
           ],
           "summary": "Change actor status to reject",
           "description": "Find and update the actor with the new status\n",
@@ -7021,14 +7760,23 @@ export class ApisConstants {
           "security": [
             {
               "idToken": []
+            },
+            {
+              "permissions": [
+                "actor_management"
+              ]
             }
-          ]
+          ],
+          "externalDocs": {
+            "description": "Code Example",
+            "url": "http://localhost:4200/code-examples/community#actor/reject_put"
+          }
         }
       },
       "/logged-in-member": {
         "get": {
           "tags": [
-            "NoPerms"
+            "Member"
           ],
           "summary": "Get the member with the session open",
           "description": "Find the member with the session open in database and insert the cookie member id in session cookies\n",
@@ -7069,13 +7817,17 @@ export class ApisConstants {
             {
               "idToken": []
             }
-          ]
+          ],
+          "externalDocs": {
+            "description": "Code Example",
+            "url": "http://localhost:4200/code-examples/community#logged-in-member_get"
+          }
         }
       },
       "/members": {
         "get": {
           "tags": [
-            "NoPerms"
+            "Member"
           ],
           "summary": "Get members by ids",
           "description": "Find the members in database by their identifiers\n",
@@ -7119,13 +7871,17 @@ export class ApisConstants {
             {
               "idToken": []
             }
-          ]
+          ],
+          "externalDocs": {
+            "description": "Code Example",
+            "url": "http://localhost:4200/code-examples/community#members_get"
+          }
         }
       },
       "/member/{id}": {
         "get": {
           "tags": [
-            "NoPerms"
+            "Member"
           ],
           "summary": "Get a member by id",
           "description": "Find a member in the database by its identifier\n",
@@ -7167,13 +7923,17 @@ export class ApisConstants {
             {
               "idToken": []
             }
-          ]
+          ],
+          "externalDocs": {
+            "description": "Code Example",
+            "url": "http://localhost:4200/code-examples/community#member/:id_get"
+          }
         }
       },
       "/member/{id}/marker": {
         "get": {
           "tags": [
-            "NoPerms"
+            "Member"
           ],
           "summary": "Get a member marker by id",
           "description": "Find a member marker in the database by its identifier\n",
@@ -7231,13 +7991,17 @@ export class ApisConstants {
             {
               "userEmail": []
             }
-          ]
+          ],
+          "externalDocs": {
+            "description": "Code Example",
+            "url": "http://localhost:4200/code-examples/community#member/:id/marker_get"
+          }
         }
       },
       "/member": {
         "put": {
           "tags": [
-            "NoPerms"
+            "Member"
           ],
           "summary": "Update a member",
           "description": "Find and update a member in the database\n",
@@ -7280,11 +8044,15 @@ export class ApisConstants {
             {
               "idToken": []
             }
-          ]
+          ],
+          "externalDocs": {
+            "description": "Code Example",
+            "url": "http://localhost:4200/code-examples/community#member_put"
+          }
         },
         "delete": {
           "tags": [
-            "NoPerms"
+            "Member"
           ],
           "summary": "Remove a member",
           "description": "Remove a member from database\n",
@@ -7318,13 +8086,17 @@ export class ApisConstants {
             {
               "idToken": []
             }
-          ]
+          ],
+          "externalDocs": {
+            "description": "Code Example",
+            "url": "http://localhost:4200/code-examples/community#member_delete"
+          }
         }
       },
       "/education": {
         "post": {
           "tags": [
-            "NoPerms"
+            "Member"
           ],
           "summary": "Create an education",
           "description": "Find and update a member with the new education\n",
@@ -7367,11 +8139,15 @@ export class ApisConstants {
             {
               "idToken": []
             }
-          ]
+          ],
+          "externalDocs": {
+            "description": "Code Example",
+            "url": "http://localhost:4200/code-examples/community#education_post"
+          }
         },
         "put": {
           "tags": [
-            "NoPerms"
+            "Member"
           ],
           "summary": "Update an education",
           "description": "Find and update a member with the updated education\n",
@@ -7414,11 +8190,15 @@ export class ApisConstants {
             {
               "idToken": []
             }
-          ]
+          ],
+          "externalDocs": {
+            "description": "Code Example",
+            "url": "http://localhost:4200/code-examples/community#education_put"
+          }
         },
         "delete": {
           "tags": [
-            "NoPerms"
+            "Member"
           ],
           "summary": "Remove an education",
           "description": "Find and update a member without the education\n",
@@ -7452,13 +8232,17 @@ export class ApisConstants {
             {
               "idToken": []
             }
-          ]
+          ],
+          "externalDocs": {
+            "description": "Code Example",
+            "url": "http://localhost:4200/code-examples/community#education_delete"
+          }
         }
       },
       "/experience": {
         "post": {
           "tags": [
-            "NoPerms"
+            "Member"
           ],
           "summary": "Create an experience",
           "description": "Find and update a member with the new experience\n",
@@ -7501,11 +8285,15 @@ export class ApisConstants {
             {
               "idToken": []
             }
-          ]
+          ],
+          "externalDocs": {
+            "description": "Code Example",
+            "url": "http://localhost:4200/code-examples/community#experience_post"
+          }
         },
         "put": {
           "tags": [
-            "NoPerms"
+            "Member"
           ],
           "summary": "Update an experience",
           "description": "Find and update a member with the updated experience\n",
@@ -7548,11 +8336,15 @@ export class ApisConstants {
             {
               "idToken": []
             }
-          ]
+          ],
+          "externalDocs": {
+            "description": "Code Example",
+            "url": "http://localhost:4200/code-examples/community#experience_put"
+          }
         },
         "delete": {
           "tags": [
-            "NoPerms"
+            "Member"
           ],
           "summary": "Remove an experience",
           "description": "Find and update a member without the experience\n",
@@ -7586,13 +8378,17 @@ export class ApisConstants {
             {
               "idToken": []
             }
-          ]
+          ],
+          "externalDocs": {
+            "description": "Code Example",
+            "url": "http://localhost:4200/code-examples/community#experience_delete"
+          }
         }
       },
       "/projects": {
         "get": {
           "tags": [
-            "NoPerms"
+            "Project"
           ],
           "summary": "Get projects by actor id",
           "description": "Find projects in the database by actor id\n",
@@ -7637,13 +8433,17 @@ export class ApisConstants {
             {
               "idToken": []
             }
-          ]
+          ],
+          "externalDocs": {
+            "description": "Code Example",
+            "url": "http://localhost:4200/code-examples/community#projects_get"
+          }
         }
       },
       "/project/{id}": {
         "get": {
           "tags": [
-            "NoPerms"
+            "Project"
           ],
           "summary": "Get project by id",
           "description": "Find a project in the database by id\n",
@@ -7684,13 +8484,17 @@ export class ApisConstants {
             {
               "idToken": []
             }
-          ]
+          ],
+          "externalDocs": {
+            "description": "Code Example",
+            "url": "http://localhost:4200/code-examples/community#project/:id_get"
+          }
         }
       },
       "/project": {
         "post": {
           "tags": [
-            "NoPerms"
+            "Project"
           ],
           "summary": "Create a project",
           "description": "Create and insert a project in database\n",
@@ -7733,11 +8537,15 @@ export class ApisConstants {
             {
               "idToken": []
             }
-          ]
+          ],
+          "externalDocs": {
+            "description": "Code Example",
+            "url": "http://localhost:4200/code-examples/community#project_post"
+          }
         },
         "put": {
           "tags": [
-            "NoPerms"
+            "Project"
           ],
           "summary": "Update a project",
           "description": "Find and update a project in database\n",
@@ -7780,11 +8588,15 @@ export class ApisConstants {
             {
               "idToken": []
             }
-          ]
+          ],
+          "externalDocs": {
+            "description": "Code Example",
+            "url": "http://localhost:4200/code-examples/community#project_put"
+          }
         },
         "delete": {
           "tags": [
-            "NoPerms"
+            "Project"
           ],
           "summary": "Remove a project",
           "description": "Remove a project in database\n",
@@ -7818,13 +8630,17 @@ export class ApisConstants {
             {
               "idToken": []
             }
-          ]
+          ],
+          "externalDocs": {
+            "description": "Code Example",
+            "url": "http://localhost:4200/code-examples/community#project_delete"
+          }
         }
       },
       "/setting": {
         "post": {
           "tags": [
-            "SettingsUpdate"
+            "Setting"
           ],
           "summary": "Create a setting",
           "description": "Create and insert a setting in the database\n",
@@ -7861,17 +8677,36 @@ export class ApisConstants {
                   }
                 }
               }
+            },
+            "403": {
+              "description": "User does not have the necessary permissions",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/SecurityAccessForbiddenError"
+                  }
+                }
+              }
             }
           },
           "security": [
             {
               "idToken": []
+            },
+            {
+              "permissions": [
+                "settings_update"
+              ]
             }
-          ]
+          ],
+          "externalDocs": {
+            "description": "Code Example",
+            "url": "http://localhost:4200/code-examples/community#setting_post"
+          }
         },
         "put": {
           "tags": [
-            "SettingsUpdate"
+            "Setting"
           ],
           "summary": "Update a setting",
           "description": "Find and update a setting in the database\n",
@@ -7908,17 +8743,36 @@ export class ApisConstants {
                   }
                 }
               }
+            },
+            "403": {
+              "description": "User does not have the necessary permissions",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/SecurityAccessForbiddenError"
+                  }
+                }
+              }
             }
           },
           "security": [
             {
               "idToken": []
+            },
+            {
+              "permissions": [
+                "settings_update"
+              ]
             }
-          ]
+          ],
+          "externalDocs": {
+            "description": "Code Example",
+            "url": "http://localhost:4200/code-examples/community#setting_put"
+          }
         },
         "get": {
           "tags": [
-            "NoPerms"
+            "Setting"
           ],
           "summary": "Get current ecosystem setting",
           "description": "Find current ecosystem setting in the database\n",
@@ -7959,7 +8813,11 @@ export class ApisConstants {
             {
               "idToken": []
             }
-          ]
+          ],
+          "externalDocs": {
+            "description": "Code Example",
+            "url": "http://localhost:4200/code-examples/community#setting_get"
+          }
         }
       }
     },
@@ -11410,6 +12268,34 @@ export class ApisConstants {
           "type": "apiKey",
           "name": "COOKIE_USER_EMAIL",
           "in": "header"
+        },
+        "permissions": {
+          "type": "oauth2",
+          "description": "This define all permisions required in Core API",
+          "flows": {
+            "authorizationCode": {
+              "scopes": {
+                "online_event_create": "Permission required to create an online event",
+                "online_event_any_update": "Permission required to update any online event",
+                "online_event_any_delete": "Permission required to remove any online event",
+                "face_to_face_event_create": "Permission required to create a face to face event",
+                "face_to_face_event_any_update": "Permission required to update any face to face event",
+                "face_to_face_event_any_delete": "Permission required to remove any face to face event",
+                "direct_chat_any_list": "Permission required to see all direct chats",
+                "follow_up_room_any_list": "Permission required to see all direct chats",
+                "public_channel_create": "Permission required to create a public channel",
+                "public_channel_any_update": "Permission required to update any public channel",
+                "public_channel_any_delete": "Permission required to remove any public channel",
+                "wall_post_create": "Permission required to create a wall post",
+                "wall_post_any_update": "Permission required to update any wall post",
+                "wall_post_any_delete": "Permission required to remove any wall post",
+                "actor_management": "Permission required to accept or deny actors",
+                "settings_update": "Permission required to modify ecosystem settings"
+              },
+              "authorizationUrl": "https://dev.moonshot.ceo/api/federation/login",
+              "tokenUrl": "https://dev.moonshot.ceo/api/federation/token"
+            }
+          }
         }
       }
     }

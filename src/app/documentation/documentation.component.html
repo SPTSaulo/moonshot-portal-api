@@ -2,7 +2,7 @@
   <h1>API PORTAL</h1>
   <div class="api" *ngFor="let api of apis">
     <h2>{{ api.name | titlecase }}</h2>
-    <p>{{ api.description }}</p>
+    <pre>{{ api.description }}</pre>
     <a [routerLink]="['/swagger', api.name]" target="_blank">Documentation</a>
   </div>
 </div>
