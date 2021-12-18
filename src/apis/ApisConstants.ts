@@ -51,6 +51,10 @@ export class ApisConstants {
       {
         "name": "Password",
         "description": "Endpoints about Password entity"
+      },
+      {
+        "name": "Verification",
+        "description": "Endpoints about Verification entity"
       }
     ],
     "paths": {
@@ -106,7 +110,7 @@ export class ApisConstants {
             "200": {
               "description": "Authentication successfully"
             },
-            "500": {
+            "400": {
               "description": "Invalid login params, invalid username, invalid password or user not found",
               "content": {
                 "application/json": {
@@ -135,6 +139,16 @@ export class ApisConstants {
             "200": {
               "description": "Logout sucessfully",
               "content": {}
+            },
+            "401": {
+              "description": "You must login before call this endpoint",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/SecurityAccessUnauthorizedError"
+                  }
+                }
+              }
             }
           },
           "security": [
@@ -170,12 +184,14 @@ export class ApisConstants {
           "operationId": "token",
           "parameters": [
             {
-              "name": "tokenId",
+              "name": "idToken",
               "in": "query",
               "required": true,
               "description": "Token authentication id",
               "schema": {
-                "type": "string"
+                "type": "string",
+                "format": "bearer token",
+                "example": "eyJhbGciOiJSUzI1NiIsIn"
               }
             }
           ],
@@ -275,6 +291,16 @@ export class ApisConstants {
                   }
                 }
               }
+            },
+            "401": {
+              "description": "You must login before call this endpoint",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/SecurityAccessUnauthorizedError"
+                  }
+                }
+              }
             }
           },
           "security": [
@@ -303,7 +329,9 @@ export class ApisConstants {
               "description": "User id",
               "required": true,
               "schema": {
-                "type": "string"
+                "type": "string",
+                "format": "mongo-id",
+                "example": "61445159784bca6ef764c6df"
               }
             }
           ],
@@ -344,8 +372,8 @@ export class ApisConstants {
               "userId": []
             },
             {
-              "permissions": [
-                "ecosystem_management"
+              "permissionManagement": [
+                "PERMISSION_MANAGEMENT"
               ]
             }
           ],
@@ -369,12 +397,12 @@ export class ApisConstants {
               "in": "query",
               "description": "User email",
               "required": true,
-              "style": "form",
-              "explode": false,
               "schema": {
                 "type": "array",
                 "items": {
-                  "type": "string"
+                  "type": "string",
+                  "format": "email",
+                  "example": "example1@gmail.com"
                 }
               }
             }
@@ -399,16 +427,6 @@ export class ApisConstants {
                   }
                 }
               }
-            },
-            "403": {
-              "description": "User does not have the necessary permissions",
-              "content": {
-                "application/json": {
-                  "schema": {
-                    "$ref": "#/components/schemas/SecurityAccessForbiddenError"
-                  }
-                }
-              }
             }
           },
           "security": [
@@ -418,7 +436,7 @@ export class ApisConstants {
           ],
           "externalDocs": {
             "description": "Code Example",
-            "url": "http://localhost:4200/code-examples/federation#users/by/email_get"
+            "url": "http://localhost:4200/code-examples/federation#user/by/email_get"
           }
         }
       },
@@ -470,8 +488,8 @@ export class ApisConstants {
               "userId": []
             },
             {
-              "permissions": [
-                "permission_management"
+              "permissionManagement": [
+                "PERMISSION_MANAGEMENT"
               ]
             }
           ],
@@ -500,7 +518,7 @@ export class ApisConstants {
               "schema": {
                 "type": "array",
                 "items": {
-                  "type": "string"
+                  "$ref": "#/components/schemas/Role"
                 }
               }
             }
@@ -545,14 +563,72 @@ export class ApisConstants {
               "userId": []
             },
             {
-              "permissions": [
-                "ecosystem_management"
+              "permissionManagement": [
+                "PERMISSION_MANAGEMENT"
               ]
             }
           ],
           "externalDocs": {
             "description": "Code Example",
             "url": "http://localhost:4200/code-examples/federation#users/by/roles_get"
+          }
+        }
+      },
+      "/users/by/perms": {
+        "get": {
+          "tags": [
+            "User"
+          ],
+          "summary": "Get user by permissions",
+          "description": "Find a user in the database by permissions and get all the data associated\n",
+          "parameters": [
+            {
+              "name": "perms",
+              "in": "query",
+              "description": "User permissions",
+              "required": true,
+              "schema": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "example": "DEV:ONLINE_EVENT_CREATE"
+                }
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "Get users data successfully",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "type": "array",
+                    "items": {
+                      "$ref": "#/components/schemas/User"
+                    }
+                  }
+                }
+              }
+            },
+            "401": {
+              "description": "You must login before call this endpoint",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/SecurityAccessUnauthorizedError"
+                  }
+                }
+              }
+            }
+          },
+          "security": [
+            {
+              "userId": []
+            }
+          ],
+          "externalDocs": {
+            "description": "Code Example",
+            "url": "http://localhost:4200/code-examples/federation#users/by/perms_get"
           }
         }
       },
@@ -570,7 +646,9 @@ export class ApisConstants {
               "description": "User id",
               "required": true,
               "schema": {
-                "type": "string"
+                "type": "string",
+                "format": "mongo-id",
+                "example": "61445159784bca6ef764c6df"
               }
             }
           ],
@@ -624,8 +702,8 @@ export class ApisConstants {
               "userId": []
             },
             {
-              "permissions": [
-                "permission_management"
+              "permissionManagement": [
+                "PERMISSION_MANAGEMENT"
               ]
             }
           ],
@@ -641,7 +719,7 @@ export class ApisConstants {
           "summary": "Update user permissions",
           "description": "Update user permission in database\n",
           "requestBody": {
-            "description": "Object that have user id and new user permissions",
+            "description": "Object that contains all parameters to update the user permissions",
             "content": {
               "application/json": {
                 "schema": {
@@ -690,8 +768,8 @@ export class ApisConstants {
               "userId": []
             },
             {
-              "permissions": [
-                "permission_management"
+              "permissionManagement": [
+                "PERMISSION_MANAGEMENT"
               ]
             }
           ],
@@ -709,7 +787,7 @@ export class ApisConstants {
           "summary": "Verify user",
           "description": "Verify a user and allow him access to the platform\n",
           "requestBody": {
-            "description": "Object that have user email and user access token",
+            "description": "Object that contains all parameters to verify an user",
             "content": {
               "application/json": {
                 "schema": {
@@ -739,6 +817,94 @@ export class ApisConstants {
           }
         }
       },
+      "/user/verify/re-send": {
+        "put": {
+          "tags": [
+            "User"
+          ],
+          "summary": "Resend email verification",
+          "description": "Resend email verification and save a EmailVerification entity in the database\n",
+          "requestBody": {
+            "description": "Object that contains all parameters to resend a verification email",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResendVerificationEmailEvent"
+                }
+              }
+            }
+          },
+          "responses": {
+            "200": {
+              "description": "OK"
+            },
+            "400": {
+              "description": "Body is empty",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/ResendVerificationEmailEmptyBodyError"
+                  }
+                }
+              }
+            }
+          },
+          "externalDocs": {
+            "description": "Code Example",
+            "url": "http://localhost:4200/code-examples/federation#user/verify/re-send_put"
+          }
+        }
+      },
+      "/password/last-modification": {
+        "get": {
+          "tags": [
+            "Password"
+          ],
+          "summary": "Get last password modification",
+          "description": "Find last password modification in Auth0 by user email\n",
+          "parameters": [
+            {
+              "name": "email",
+              "in": "query",
+              "description": "User email",
+              "required": true,
+              "schema": {
+                "type": "string",
+                "format": "email",
+                "example": "example1@gmail.com"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "Get last password modification successfully",
+              "content": {
+                "text": {
+                  "schema": {
+                    "type": "string",
+                    "format": "date",
+                    "example": "2021-02-19"
+                  }
+                }
+              }
+            },
+            "400": {
+              "description": "Cannot find the user",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/UserNotFoundError"
+                  }
+                }
+              }
+            }
+          },
+          "externalDocs": {
+            "description": "Code Example",
+            "url": "http://localhost:4200/code-examples/federation#password/last-modification_get"
+          }
+        }
+      },
       "/password/request": {
         "post": {
           "tags": [
@@ -747,7 +913,7 @@ export class ApisConstants {
           "summary": "Request to change a user password",
           "description": "Generate a request and a token in database to change a password\n",
           "requestBody": {
-            "description": "Object that have user email",
+            "description": "Object that contains all parameters to send an email to recover the user password",
             "content": {
               "application/json": {
                 "schema": {
@@ -785,7 +951,7 @@ export class ApisConstants {
           "summary": "Update user password",
           "description": "Find user and update the password in database \n",
           "requestBody": {
-            "description": "Object that have token and password twice",
+            "description": "Object that contains all parameters to recover the user password",
             "content": {
               "application/json": {
                 "schema": {
@@ -823,7 +989,7 @@ export class ApisConstants {
           "summary": "Update user password",
           "description": "Find user and update the password in database \n",
           "requestBody": {
-            "description": "Object that have password and new password twice",
+            "description": "Object that contains all parameters to change the user password",
             "content": {
               "application/json": {
                 "schema": {
@@ -859,12 +1025,51 @@ export class ApisConstants {
           },
           "security": [
             {
+              "userId": []
+            },
+            {
               "userEmail": []
             }
           ],
           "externalDocs": {
             "description": "Code Example",
             "url": "http://localhost:4200/code-examples/federation#password/change_put"
+          }
+        }
+      },
+      "/verifications": {
+        "get": {
+          "tags": [
+            "Verification"
+          ],
+          "summary": "Get all verifications",
+          "description": "Find all verifications in the database and get all the data asociated\n",
+          "operationId": "verification",
+          "responses": {
+            "200": {
+              "description": "Get verifications successfully",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/Verification"
+                  }
+                }
+              }
+            },
+            "401": {
+              "description": "You must login before call this endpoint",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/SecurityAccessUnauthorizedError"
+                  }
+                }
+              }
+            }
+          },
+          "externalDocs": {
+            "description": "Code Example",
+            "url": "http://localhost:4200/code-examples/federation#verifications_get"
           }
         }
       }
@@ -876,12 +1081,11 @@ export class ApisConstants {
             "password",
             "username"
           ],
-          "type": "object",
           "properties": {
             "username": {
               "type": "string",
               "format": "email",
-              "example": "pedrojimenez@gmail.com"
+              "example": "example1@gmail.com"
             },
             "password": {
               "type": "string",
@@ -890,11 +1094,6 @@ export class ApisConstants {
           }
         },
         "LoginError": {
-          "required": [
-            "code",
-            "message"
-          ],
-          "type": "object",
           "properties": {
             "message": {
               "type": "string",
@@ -907,11 +1106,6 @@ export class ApisConstants {
           }
         },
         "TokenError": {
-          "required": [
-            "code",
-            "message"
-          ],
-          "type": "object",
           "properties": {
             "message": {
               "type": "string",
@@ -924,15 +1118,14 @@ export class ApisConstants {
           }
         },
         "Community": {
-          "type": "object",
           "properties": {
             "module": {
               "type": "string",
-              "example": null
+              "example": "Community"
             },
             "name": {
               "type": "string",
-              "example": null
+              "example": "community"
             }
           }
         },
@@ -946,7 +1139,6 @@ export class ApisConstants {
           ]
         },
         "User": {
-          "type": "object",
           "properties": {
             "id": {
               "type": "string",
@@ -978,11 +1170,6 @@ export class ApisConstants {
           }
         },
         "UserNotFoundError": {
-          "required": [
-            "code",
-            "message"
-          ],
-          "type": "object",
           "properties": {
             "message": {
               "type": "string",
@@ -1007,7 +1194,6 @@ export class ApisConstants {
             "id",
             "perms"
           ],
-          "type": "object",
           "properties": {
             "id": {
               "type": "string",
@@ -1023,11 +1209,6 @@ export class ApisConstants {
           }
         },
         "UserPermsUpdateEventEmpty": {
-          "required": [
-            "code",
-            "message"
-          ],
-          "type": "object",
           "properties": {
             "message": {
               "type": "string",
@@ -1043,7 +1224,6 @@ export class ApisConstants {
           "required": [
             "email"
           ],
-          "type": "object",
           "properties": {
             "email": {
               "type": "string",
@@ -1058,7 +1238,6 @@ export class ApisConstants {
             "repeatPassword",
             "token"
           ],
-          "type": "object",
           "properties": {
             "token": {
               "type": "string",
@@ -1076,11 +1255,6 @@ export class ApisConstants {
           }
         },
         "PasswordRecoverNotFoundError": {
-          "required": [
-            "code",
-            "message"
-          ],
-          "type": "object",
           "properties": {
             "message": {
               "type": "string",
@@ -1098,7 +1272,6 @@ export class ApisConstants {
             "newPasswordRepeat",
             "password"
           ],
-          "type": "object",
           "properties": {
             "password": {
               "type": "string",
@@ -1115,11 +1288,6 @@ export class ApisConstants {
           }
         },
         "PasswordChangeEmptyError": {
-          "required": [
-            "code",
-            "message"
-          ],
-          "type": "object",
           "properties": {
             "message": {
               "type": "string",
@@ -1131,29 +1299,48 @@ export class ApisConstants {
             }
           }
         },
+        "Verification": {
+          "properties": {
+            "id": {
+              "type": "string",
+              "format": "mongo-id",
+              "example": "60acae8e2f799d228a4d4a85"
+            },
+            "email": {
+              "type": "string",
+              "format": "email",
+              "example": "example1@gmail.com"
+            },
+            "token": {
+              "type": "string",
+              "format": "bearer token",
+              "example": "eyJhbGciOiJSUzI1NiIsIn"
+            },
+            "used": {
+              "type": "boolean",
+              "example": false
+            }
+          }
+        },
         "UserVerifyEvent": {
           "required": [
             "token",
             "email"
           ],
-          "type": "object",
           "properties": {
             "token": {
               "type": "string",
+              "format": "bearer token",
               "example": "eyJhbGciOiJSUzI1NiIsIn"
             },
             "email": {
               "type": "string",
-              "example": "pedrojimenez@gmail.com"
+              "format": "email",
+              "example": "example1@gmail.com"
             }
           }
         },
         "UserVerifyEventEmpty": {
-          "required": [
-            "code",
-            "message"
-          ],
-          "type": "object",
           "properties": {
             "message": {
               "type": "string",
@@ -1165,12 +1352,31 @@ export class ApisConstants {
             }
           }
         },
-        "SecurityAccessUnauthorizedError": {
+        "ResendVerificationEmailEvent": {
           "required": [
-            "code",
-            "message"
+            "email"
           ],
-          "type": "object",
+          "properties": {
+            "email": {
+              "type": "string",
+              "format": "email",
+              "example": "example1@gmail.com"
+            }
+          }
+        },
+        "ResendVerificationEmailEmptyBodyError": {
+          "properties": {
+            "message": {
+              "type": "string",
+              "example": "The resend verification email event is empty"
+            },
+            "code": {
+              "type": "string",
+              "example": "RESEND_VERIFICATION_EMAIL_EVENT_EMPTY"
+            }
+          }
+        },
+        "SecurityAccessUnauthorizedError": {
           "properties": {
             "message": {
               "type": "string",
@@ -1183,11 +1389,6 @@ export class ApisConstants {
           }
         },
         "SecurityAccessForbiddenError": {
-          "required": [
-            "code",
-            "message"
-          ],
-          "type": "object",
           "properties": {
             "message": {
               "type": "string",
@@ -1226,14 +1427,13 @@ export class ApisConstants {
           "name": "COOKIE_USER_PERMISSIONS",
           "in": "header"
         },
-        "permissions": {
+        "permissionManagement": {
           "type": "oauth2",
           "description": "This define all permisions required in Core API",
           "flows": {
             "authorizationCode": {
               "scopes": {
-                "permission_management": "Permission required to add or remove user permissions",
-                "ecosystem_management": "Permission required to make any operation in the ecosystem"
+                "PERMISSION_MANAGEMENT": "Permission required to add or remove user permissions"
               },
               "authorizationUrl": "https://dev.moonshot.ceo/api/federation/login",
               "tokenUrl": "https://dev.moonshot.ceo/api/federation/token"
@@ -1273,6 +1473,10 @@ export class ApisConstants {
         "description": "Endpoint that return OG Tags"
       },
       {
+        "name": "Navbar",
+        "description": "Endpoint that return navbar information"
+      },
+      {
         "name": "Industry",
         "description": "Endpoints about Industry taxonomy"
       },
@@ -1293,8 +1497,16 @@ export class ApisConstants {
         "description": "Endpoints about Ecosystem entity"
       },
       {
-        "name": "Notifications",
+        "name": "Notification",
         "description": "Endpoints about Notification entity"
+      },
+      {
+        "name": "Invitation",
+        "description": "Endpoints about Invitation entity"
+      },
+      {
+        "name": "Setting",
+        "description": "Endpoints about Setting entity"
       }
     ],
     "paths": {
@@ -1334,16 +1546,17 @@ export class ApisConstants {
             "Signed Url"
           ],
           "summary": "Sign a url",
-          "description": "Generate a URL that provides limited permission and time to make a request.\n",
+          "description": "Generate a URL that provides permission to access a file\n",
           "operationId": "signUrl",
           "parameters": [
             {
               "name": "filename",
               "in": "query",
-              "description": "Filename which you want save in AWS",
+              "description": "Filename which you want save in Amazon Web Services",
               "required": true,
               "schema": {
-                "type": "string"
+                "type": "string",
+                "example": "examplefile.pdf"
               }
             },
             {
@@ -1352,7 +1565,8 @@ export class ApisConstants {
               "description": "Content type of the file",
               "required": true,
               "schema": {
-                "type": "string"
+                "type": "string",
+                "example": "png"
               }
             }
           ],
@@ -1363,7 +1577,7 @@ export class ApisConstants {
                 "application/json": {
                   "schema": {
                     "type": "string",
-                    "example": "https://presignedurldemo.s3.eu-west-2.amazonaws.com/image.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=%%2Feu-west-2%2Fs3%2Faws4_request&X-Amz-Date=20180210T171315Z&X-Amz-Expires=1800&X-Amz-Signature=12b74b0788aa036bc7c3d03b3f20c61f1f91cc9ad8873e3314255dc479a25351&X-Amz-SignedHeaders=host"
+                    "example": "https://presignedurldemo.s3.eu-west-2.amazonaws.com/image.png?X-Amz-Algorithm-SHA256&X-Amz-Credential=%2F20180210%2Feu-west-2%2Fs3%2Faws4_request&X-Amz-Date=20180210T171315Z&X-Amz-Expires=1800&X-Amz-Signature=12b74b0788aa036bc7c3d03b3f20c61f1f91cc9ad8873e3314255dc479a25351&X-Amz-SignedHeaders=host"
                   }
                 }
               }
@@ -1400,7 +1614,8 @@ export class ApisConstants {
               "description": "Url from you want to get OG tags",
               "required": true,
               "schema": {
-                "type": "string"
+                "type": "string",
+                "example": "https://youtu.be/ca_pOK4jc7M"
               }
             }
           ],
@@ -1447,6 +1662,50 @@ export class ApisConstants {
           }
         }
       },
+      "/navbar": {
+        "get": {
+          "tags": [
+            "Navbar"
+          ],
+          "summary": "Get navbar information",
+          "description": "Find navbar information in database for a especific user\n",
+          "operationId": "navbar",
+          "responses": {
+            "200": {
+              "description": "Get navbar information successfully",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/Navbar"
+                  }
+                }
+              }
+            },
+            "401": {
+              "description": "You must login before call this endpoint",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/SecurityAccessUnauthorizedError"
+                  }
+                }
+              }
+            }
+          },
+          "security": [
+            {
+              "idToken": []
+            },
+            {
+              "userEmail": []
+            }
+          ],
+          "externalDocs": {
+            "description": "Code Example",
+            "url": "http://localhost:4200/code-examples/core#navbar_get"
+          }
+        }
+      },
       "/industry/{id}": {
         "get": {
           "tags": [
@@ -1462,7 +1721,9 @@ export class ApisConstants {
               "description": "industry id",
               "required": true,
               "schema": {
-                "type": "string"
+                "type": "string",
+                "format": "mongo-id",
+                "example": "61445159784bca6ef764c6df"
               }
             }
           ],
@@ -1528,7 +1789,9 @@ export class ApisConstants {
               "description": "business model id",
               "required": true,
               "schema": {
-                "type": "string"
+                "type": "string",
+                "format": "mongo-id",
+                "example": "61445159784bca6ef764c6df"
               }
             }
           ],
@@ -1594,7 +1857,9 @@ export class ApisConstants {
               "description": "social innovation id",
               "required": true,
               "schema": {
-                "type": "string"
+                "type": "string",
+                "format": "mongo-id",
+                "example": "61445159784bca6ef764c6df"
               }
             }
           ],
@@ -1660,7 +1925,9 @@ export class ApisConstants {
               "description": "deep tech id",
               "required": true,
               "schema": {
-                "type": "string"
+                "type": "string",
+                "format": "mongo-id",
+                "example": "61445159784bca6ef764c6df"
               }
             }
           ],
@@ -1768,11 +2035,6 @@ export class ApisConstants {
               }
             }
           },
-          "security": [
-            {
-              "idToken": []
-            }
-          ],
           "externalDocs": {
             "description": "Code Example",
             "url": "http://localhost:4200/code-examples/core#ecosystem_get"
@@ -1872,8 +2134,8 @@ export class ApisConstants {
               "idToken": []
             },
             {
-              "permissions": [
-                "ecosystem_update"
+              "ecosystemUpdate": [
+                "ECOSYSTEM_UPDATE"
               ]
             }
           ],
@@ -1883,20 +2145,163 @@ export class ApisConstants {
           }
         }
       },
-      "/ecosystem/invite": {
+      "/invitations": {
+        "get": {
+          "tags": [
+            "Invitation"
+          ],
+          "summary": "Get paginated invitations",
+          "description": "Find paginated invitations in the database\n",
+          "operationId": "invitations",
+          "parameters": [
+            {
+              "name": "lastId",
+              "in": "query",
+              "description": "Last invitation id",
+              "required": true,
+              "schema": {
+                "type": "string",
+                "format": "mongo-id",
+                "example": "60acae8e2f799d228a4d4a85"
+              }
+            },
+            {
+              "name": "limit",
+              "in": "query",
+              "description": "Number of invitations",
+              "required": true,
+              "schema": {
+                "type": "string",
+                "example": 10
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "Get invitations successfully",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "type": "array",
+                    "items": {
+                      "$ref": "#/components/schemas/Invitation"
+                    }
+                  }
+                }
+              }
+            },
+            "401": {
+              "description": "You must login before call this endpoint",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/SecurityAccessUnauthorizedError"
+                  }
+                }
+              }
+            },
+            "403": {
+              "description": "User does not have the necessary permissions",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/SecurityAccessForbiddenError"
+                  }
+                }
+              }
+            }
+          },
+          "security": [
+            {
+              "actorInvite": [
+                "ACTOR_INVITE"
+              ]
+            }
+          ],
+          "externalDocs": {
+            "description": "Code Example",
+            "url": "http://localhost:4200/code-examples/core#invitations_get"
+          }
+        }
+      },
+      "/invitation": {
+        "get": {
+          "tags": [
+            "Invitation"
+          ],
+          "summary": "Get an invitation by email",
+          "description": "Find an invitation in the database filtered by email\n",
+          "operationId": "inviationByEmail",
+          "parameters": [
+            {
+              "name": "email",
+              "in": "query",
+              "description": "User email",
+              "required": true,
+              "schema": {
+                "type": "string",
+                "format": "email",
+                "example": "example1@gmail.com"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "Get invitation successfully",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/Invitation"
+                  }
+                }
+              }
+            },
+            "401": {
+              "description": "You must login before call this endpoint",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/SecurityAccessUnauthorizedError"
+                  }
+                }
+              }
+            },
+            "403": {
+              "description": "User does not have the necessary permissions",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/SecurityAccessForbiddenError"
+                  }
+                }
+              }
+            }
+          },
+          "security": [
+            {
+              "actorInvite": [
+                "ACTOR_INVITE"
+              ]
+            }
+          ],
+          "externalDocs": {
+            "description": "Code Example",
+            "url": "http://localhost:4200/code-examples/core#invitation_get"
+          }
+        },
         "post": {
           "tags": [
-            "Ecosystem"
+            "Invitation"
           ],
-          "summary": "Invite someone to your ecosystem",
-          "description": "Send an email to one or more people to join your ecosystem\n",
-          "operationId": "ecosystemInvitation",
+          "summary": "Create an invitation",
+          "description": "Create and insert an invitation in database\n",
+          "operationId": "invitation",
           "requestBody": {
-            "description": "Object that contain a list of email and a reason",
+            "description": "Object that contains all parameters to create an invitation",
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/EcosystemInviteEvent"
+                  "$ref": "#/components/schemas/InvitationCreateEvent"
                 }
               }
             }
@@ -1906,7 +2311,7 @@ export class ApisConstants {
               "description": "OK"
             },
             "400": {
-              "description": "Body or emails are null",
+              "description": "Body is empty or email is empty",
               "content": {
                 "application/json": {
                   "schema": {
@@ -1941,35 +2346,43 @@ export class ApisConstants {
               "idToken": []
             },
             {
-              "permissions": [
-                "actor_invite"
+              "actorInvite": [
+                "ACTOR_INVITE"
               ]
             }
           ],
           "externalDocs": {
             "description": "Code Example",
-            "url": "http://localhost:4200/code-examples/core#ecosystem/invite_post"
+            "url": "http://localhost:4200/code-examples/core#invitation_post"
           }
-        }
-      },
-      "/notifications": {
-        "get": {
+        },
+        "put": {
           "tags": [
-            "Notifications"
+            "Invitation"
           ],
-          "summary": "Get all notifications",
-          "description": "Find all notifications in the database\n",
-          "operationId": "notifications",
+          "summary": "Update an invitation",
+          "description": "Find and update an invitation in database\n",
+          "operationId": "invitationUpdate",
+          "requestBody": {
+            "description": "Object that contains all parameters to update an invitation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/InvitationUpdateEvent"
+                }
+              }
+            }
+          },
           "responses": {
             "200": {
-              "description": "Get all notifications successfully",
+              "description": "OK"
+            },
+            "400": {
+              "description": "Body is empty",
               "content": {
                 "application/json": {
                   "schema": {
-                    "type": "array",
-                    "items": {
-                      "$ref": "#/components/schemas/Notification"
-                    }
+                    "$ref": "#/components/schemas/EcosystemInviteEmailEmptyError"
                   }
                 }
               }
@@ -2000,9 +2413,115 @@ export class ApisConstants {
               "idToken": []
             },
             {
-              "permissions": [
-                "ecosystem_update"
+              "actorInvite": [
+                "ACTOR_INVITE"
               ]
+            }
+          ],
+          "externalDocs": {
+            "description": "Code Example",
+            "url": "http://localhost:4200/code-examples/core#invitation_put"
+          }
+        }
+      },
+      "/invitation/{id}": {
+        "delete": {
+          "tags": [
+            "Invitation"
+          ],
+          "summary": "Delete an invitation",
+          "description": "Find and remove an invitation in the database\n",
+          "operationId": "invitationDelete",
+          "parameters": [
+            {
+              "name": "id",
+              "in": "path",
+              "description": "Invitation id",
+              "required": true,
+              "schema": {
+                "type": "string",
+                "format": "mongo-id",
+                "example": "61445159784bca6ef764c6df"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "OK"
+            },
+            "401": {
+              "description": "You must login before call this endpoint",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/SecurityAccessUnauthorizedError"
+                  }
+                }
+              }
+            },
+            "403": {
+              "description": "User does not have the necessary permissions",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/SecurityAccessForbiddenError"
+                  }
+                }
+              }
+            }
+          },
+          "security": [
+            {
+              "idToken": []
+            },
+            {
+              "actorInvite": [
+                "ACTOR_INVITE"
+              ]
+            }
+          ],
+          "externalDocs": {
+            "description": "Code Example",
+            "url": "http://localhost:4200/code-examples/core#invitation/:id_delete"
+          }
+        }
+      },
+      "/notifications": {
+        "get": {
+          "tags": [
+            "Notification"
+          ],
+          "summary": "Get all notifications",
+          "description": "Find all notifications in the database\n",
+          "operationId": "notifications",
+          "responses": {
+            "200": {
+              "description": "Get all notifications successfully",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "type": "array",
+                    "items": {
+                      "$ref": "#/components/schemas/Notification"
+                    }
+                  }
+                }
+              }
+            },
+            "401": {
+              "description": "You must login before call this endpoint",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/SecurityAccessUnauthorizedError"
+                  }
+                }
+              }
+            }
+          },
+          "security": [
+            {
+              "idToken": []
             }
           ],
           "externalDocs": {
@@ -2014,7 +2533,7 @@ export class ApisConstants {
       "/notification/{id}": {
         "get": {
           "tags": [
-            "Notifications"
+            "Notification"
           ],
           "summary": "Get notification by id",
           "description": "Find a notification in the database by its identifier\n",
@@ -2050,13 +2569,51 @@ export class ApisConstants {
                   }
                 }
               }
+            }
+          },
+          "security": [
+            {
+              "idToken": []
             },
-            "403": {
-              "description": "User does not have the necessary permissions",
+            {
+              "permissionManagement": [
+                "PERMISSION_MANAGEMENT"
+              ]
+            }
+          ],
+          "externalDocs": {
+            "description": "Code Example",
+            "url": "http://localhost:4200/code-examples/core#notification/:id_get"
+          }
+        },
+        "delete": {
+          "tags": [
+            "Notification"
+          ],
+          "summary": "Remove a notification by id",
+          "description": "Remove a notification from the database by its identifier\n",
+          "operationId": "notificationDelete",
+          "parameters": [
+            {
+              "name": "id",
+              "in": "path",
+              "description": "notification id",
+              "required": true,
+              "schema": {
+                "type": "string"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "OK"
+            },
+            "401": {
+              "description": "You must login before call this endpoint",
               "content": {
                 "application/json": {
                   "schema": {
-                    "$ref": "#/components/schemas/SecurityAccessForbiddenError"
+                    "$ref": "#/components/schemas/SecurityAccessUnauthorizedError"
                   }
                 }
               }
@@ -2065,23 +2622,18 @@ export class ApisConstants {
           "security": [
             {
               "idToken": []
-            },
-            {
-              "permissions": [
-                "ecosystem_update"
-              ]
             }
           ],
           "externalDocs": {
             "description": "Code Example",
-            "url": "http://localhost:4200/code-examples/core#notification/:id_get"
+            "url": "http://localhost:4200/code-examples/core#notification/:id_delete"
           }
         }
       },
       "/notification": {
         "post": {
           "tags": [
-            "Notifications"
+            "Notification"
           ],
           "summary": "Create a notification",
           "description": "Create and insert a notification in database\n",
@@ -2091,7 +2643,7 @@ export class ApisConstants {
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Notification"
+                  "$ref": "#/components/schemas/NotificationCreateEvent"
                 }
               }
             }
@@ -2099,6 +2651,194 @@ export class ApisConstants {
           "responses": {
             "200": {
               "description": "OK"
+            },
+            "401": {
+              "description": "You must login before call this endpoint",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/SecurityAccessUnauthorizedError"
+                  }
+                }
+              }
+            }
+          },
+          "security": [
+            {
+              "idToken": []
+            }
+          ],
+          "externalDocs": {
+            "description": "Code Example",
+            "url": "http://localhost:4200/code-examples/core#notification_post"
+          }
+        },
+        "put": {
+          "tags": [
+            "Notification"
+          ],
+          "summary": "Update a notification",
+          "description": "Find and update a notification in the database\n",
+          "operationId": "notificationUpdate",
+          "requestBody": {
+            "description": "Object that contains all parameters to update a notification",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/NotificationUpdateEvent"
+                }
+              }
+            }
+          },
+          "responses": {
+            "200": {
+              "description": "OK"
+            },
+            "400": {
+              "description": "Body is empty",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/NotificationEmptyBodyError"
+                  }
+                }
+              }
+            },
+            "401": {
+              "description": "You must login before call this endpoint",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/SecurityAccessUnauthorizedError"
+                  }
+                }
+              }
+            }
+          },
+          "security": [
+            {
+              "idToken": []
+            }
+          ],
+          "externalDocs": {
+            "description": "Code Example",
+            "url": "http://localhost:4200/code-examples/core#notification_put"
+          }
+        }
+      },
+      "/notifications/pending": {
+        "get": {
+          "tags": [
+            "Notification"
+          ],
+          "summary": "Get all notifications by member id",
+          "description": "Find all notifications by member id in the database\n",
+          "operationId": "notificationByMemberId",
+          "responses": {
+            "200": {
+              "description": "Get all notifications successfully",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "type": "array",
+                    "items": {
+                      "$ref": "#/components/schemas/Notification"
+                    }
+                  }
+                }
+              }
+            },
+            "401": {
+              "description": "You must login before call this endpoint",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/SecurityAccessUnauthorizedError"
+                  }
+                }
+              }
+            }
+          },
+          "security": [
+            {
+              "idToken": []
+            }
+          ],
+          "externalDocs": {
+            "description": "Code Example",
+            "url": "http://localhost:4200/code-examples/core#notifications/pending_get"
+          }
+        }
+      },
+      "/setting": {
+        "get": {
+          "tags": [
+            "Setting"
+          ],
+          "summary": "Get current ecosystem setting",
+          "description": "Find current ecosystem setting in database and all the data associated\n",
+          "operationId": "setting",
+          "responses": {
+            "200": {
+              "description": "Get ecosystem setting successfully",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/Setting"
+                  }
+                }
+              }
+            },
+            "400": {
+              "description": "Ecosystem setting is not configured already.",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/SettingNotConfiguredError"
+                  }
+                }
+              }
+            }
+          },
+          "security": [
+            {
+              "idToken": []
+            }
+          ],
+          "externalDocs": {
+            "description": "Code Example",
+            "url": "http://localhost:4200/code-examples/core#setting_get"
+          }
+        },
+        "post": {
+          "tags": [
+            "Setting"
+          ],
+          "summary": "Create an ecosystem setting",
+          "description": "Create and insert an ecosystem setting in database\n",
+          "requestBody": {
+            "description": "Object that contains all parameters to create a setting",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SettingCreateEvent"
+                }
+              }
+            }
+          },
+          "responses": {
+            "200": {
+              "description": "OK"
+            },
+            "400": {
+              "description": "Body is empty",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/SettingEmptyBodyError"
+                  }
+                }
+              }
             },
             "401": {
               "description": "You must login before call this endpoint",
@@ -2121,9 +2861,85 @@ export class ApisConstants {
               }
             }
           },
+          "security": [
+            {
+              "idToken": []
+            },
+            {
+              "ecosystemUpdate": [
+                "ECOSYSTEM_UPDATE"
+              ]
+            }
+          ],
           "externalDocs": {
             "description": "Code Example",
-            "url": "http://localhost:4200/code-examples/core#notification_post"
+            "url": "http://localhost:4200/code-examples/core#setting_post"
+          }
+        },
+        "put": {
+          "tags": [
+            "Setting"
+          ],
+          "summary": "Update an ecosystem setting",
+          "description": "Find and update an ecosystem setting in database\n",
+          "requestBody": {
+            "description": "Object that contains all parameters to update a setting",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SettingUpdateEvent"
+                }
+              }
+            }
+          },
+          "responses": {
+            "200": {
+              "description": "OK"
+            },
+            "400": {
+              "description": "Body is empty",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/SettingEmptyBodyError"
+                  }
+                }
+              }
+            },
+            "401": {
+              "description": "You must login before call this endpoint",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/SecurityAccessUnauthorizedError"
+                  }
+                }
+              }
+            },
+            "403": {
+              "description": "User does not have the necessary permissions",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/SecurityAccessForbiddenError"
+                  }
+                }
+              }
+            }
+          },
+          "security": [
+            {
+              "idToken": []
+            },
+            {
+              "ecosystemUpdate": [
+                "ECOSYSTEM_UPDATE"
+              ]
+            }
+          ],
+          "externalDocs": {
+            "description": "Code Example",
+            "url": "http://localhost:4200/code-examples/core#setting_put"
           }
         }
       }
@@ -2131,10 +2947,6 @@ export class ApisConstants {
     "components": {
       "schemas": {
         "Taxonomy": {
-          "required": [
-            "id",
-            "type"
-          ],
           "properties": {
             "id": {
               "type": "string",
@@ -2148,11 +2960,6 @@ export class ApisConstants {
           }
         },
         "DeepTech": {
-          "required": [
-            "id",
-            "type",
-            "cells"
-          ],
           "properties": {
             "id": {
               "type": "string",
@@ -2172,10 +2979,6 @@ export class ApisConstants {
           }
         },
         "DeepTechCell": {
-          "required": [
-            "type",
-            "kets"
-          ],
           "properties": {
             "type": {
               "type": "string",
@@ -2191,12 +2994,6 @@ export class ApisConstants {
           }
         },
         "OpenGraph": {
-          "required": [
-            "title",
-            "description",
-            "imageURL",
-            "url"
-          ],
           "type": "object",
           "properties": {
             "title": {
@@ -2218,10 +3015,6 @@ export class ApisConstants {
           }
         },
         "OpenGraphTagsNotFoundError": {
-          "required": [
-            "code",
-            "message"
-          ],
           "type": "object",
           "properties": {
             "message": {
@@ -2235,10 +3028,6 @@ export class ApisConstants {
           }
         },
         "InvalidSignedUrlError": {
-          "required": [
-            "code",
-            "message"
-          ],
           "type": "object",
           "properties": {
             "message": {
@@ -2251,31 +3040,23 @@ export class ApisConstants {
             }
           }
         },
+        "Navbar": {
+          "type": "object",
+          "properties": {
+            "numNotifications": {
+              "type": "number",
+              "example": 10
+            },
+            "modules": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "example": "community"
+              }
+            }
+          }
+        },
         "Ecosystem": {
-          "required": [
-            "id",
-            "type",
-            "name",
-            "address",
-            "latitude",
-            "longitude",
-            "city",
-            "country",
-            "phone",
-            "web",
-            "description",
-            "objectives",
-            "logo",
-            "acceptedActors",
-            "services",
-            "customServices",
-            "media",
-            "socialNetworks",
-            "deepTechs",
-            "businessModels",
-            "industries",
-            "socialInnovations"
-          ],
           "type": "object",
           "properties": {
             "id": {
@@ -2431,27 +3212,10 @@ export class ApisConstants {
         },
         "EcosystemCreateEvent": {
           "required": [
-            "type",
             "name",
-            "address",
-            "latitude",
-            "longitude",
-            "city",
             "country",
-            "phone",
-            "web",
             "description",
-            "objectives",
             "logo",
-            "acceptedActors",
-            "services",
-            "customServices",
-            "media",
-            "socialNetworks",
-            "deepTechs",
-            "businessModels",
-            "industries",
-            "socialInnovations",
             "manager",
             "password",
             "repeatPassword"
@@ -2622,27 +3386,10 @@ export class ApisConstants {
         "EcosystemUpdateEvent": {
           "required": [
             "id",
-            "type",
             "name",
-            "address",
-            "latitude",
-            "longitude",
-            "city",
             "country",
-            "phone",
-            "web",
             "description",
-            "objectives",
-            "logo",
-            "acceptedActors",
-            "services",
-            "customServices",
-            "media",
-            "socialNetworks",
-            "deepTechs",
-            "businessModels",
-            "industries",
-            "socialInnovations"
+            "logo"
           ],
           "type": "object",
           "properties": {
@@ -2801,11 +3548,55 @@ export class ApisConstants {
             }
           }
         },
+        "InvitationCreateEvent": {
+          "required": [
+            "email"
+          ],
+          "properties": {
+            "email": {
+              "type": "string",
+              "example": "example1@gmail.com"
+            },
+            "reason": {
+              "type": "string",
+              "example": "Access denied"
+            },
+            "notification": {
+              "type": "boolean",
+              "example": true
+            },
+            "createdAt": {
+              "type": "number",
+              "format": "timestamp",
+              "example": 1639590502463
+            },
+            "lastEmail": {
+              "type": "number",
+              "format": "timestamp",
+              "example": 1639590502463
+            }
+          }
+        },
+        "InvitationUpdateEvent": {
+          "required": [
+            "id"
+          ],
+          "properties": {
+            "id": {
+              "type": "string",
+              "format": "mongo-id",
+              "example": "61445159784bca6ef764c6df"
+            },
+            "lastEmail": {
+              "type": "number",
+              "format": "timestamp",
+              "example": 1639590502463
+            }
+          }
+        },
         "Image": {
           "required": [
-            "original",
-            "thumbnail",
-            "crop"
+            "original"
           ],
           "type": "object",
           "properties": {
@@ -2822,33 +3613,7 @@ export class ApisConstants {
             }
           }
         },
-        "EcosystemInviteEvent": {
-          "required": [
-            "emails",
-            "reason"
-          ],
-          "properties": {
-            "emails": {
-              "type": "array",
-              "items": {
-                "type": "string",
-                "format": "email",
-                "example": "example1@gmail.com, example2@gmail.com, example3@gmail.com"
-              }
-            },
-            "reason": {
-              "type": "string",
-              "example": "You have been invited to my ecosystem to share information"
-            }
-          }
-        },
         "Crop": {
-          "required": [
-            "x",
-            "y",
-            "width",
-            "height"
-          ],
           "type": "object",
           "properties": {
             "x": {
@@ -2870,18 +3635,6 @@ export class ApisConstants {
           }
         },
         "CreateMember": {
-          "required": [
-            "state",
-            "name",
-            "lastname",
-            "address",
-            "email",
-            "about",
-            "image",
-            "socialNetworks",
-            "experiences",
-            "educations"
-          ],
           "properties": {
             "state": {
               "type": "string",
@@ -2936,17 +3689,6 @@ export class ApisConstants {
           }
         },
         "Education": {
-          "required": [
-            "id",
-            "school",
-            "degree",
-            "fieldOfStudy",
-            "startDate",
-            "endDate",
-            "grade",
-            "activitiesAndSocieties",
-            "description"
-          ],
           "properties": {
             "id": {
               "type": "string",
@@ -2990,16 +3732,6 @@ export class ApisConstants {
           }
         },
         "Experience": {
-          "required": [
-            "id",
-            "title",
-            "type",
-            "company",
-            "location",
-            "startDate",
-            "endDate",
-            "description"
-          ],
           "properties": {
             "id": {
               "type": "string",
@@ -3034,12 +3766,6 @@ export class ApisConstants {
           }
         },
         "Address": {
-          "required": [
-            "lat",
-            "lng",
-            "formatted",
-            "components"
-          ],
           "properties": {
             "lat": {
               "type": "number",
@@ -3062,11 +3788,6 @@ export class ApisConstants {
           }
         },
         "AddressComponent": {
-          "required": [
-            "name",
-            "shortname",
-            "type"
-          ],
           "properties": {
             "name": {
               "type": "string",
@@ -3127,10 +3848,6 @@ export class ApisConstants {
           }
         },
         "EcosystemAlreadyExistError": {
-          "required": [
-            "code",
-            "message"
-          ],
           "type": "object",
           "properties": {
             "message": {
@@ -3144,10 +3861,6 @@ export class ApisConstants {
           }
         },
         "EcosystemNotFoundError": {
-          "required": [
-            "code",
-            "message"
-          ],
           "type": "object",
           "properties": {
             "message": {
@@ -3161,10 +3874,6 @@ export class ApisConstants {
           }
         },
         "EcosystemInviteEmailEmptyError": {
-          "required": [
-            "code",
-            "message"
-          ],
           "type": "object",
           "properties": {
             "message": {
@@ -3177,21 +3886,42 @@ export class ApisConstants {
             }
           }
         },
+        "Invitation": {
+          "properties": {
+            "id": {
+              "type": "string",
+              "format": "mongo-id",
+              "example": "61445159784bca6ef764c6df"
+            },
+            "email": {
+              "type": "string",
+              "example": "example1@gmail.com"
+            },
+            "reason": {
+              "type": "string",
+              "example": "Access denied"
+            },
+            "notification": {
+              "type": "boolean",
+              "example": true
+            },
+            "createdAt": {
+              "type": "number",
+              "format": "timestamp",
+              "example": 1639590502463
+            },
+            "senderName": {
+              "type": "string",
+              "example": "User1"
+            },
+            "lastEmail": {
+              "type": "number",
+              "format": "timestamp",
+              "example": 1639590502463
+            }
+          }
+        },
         "Notification": {
-          "required": [
-            "id",
-            "channels",
-            "type",
-            "push",
-            "email",
-            "createdAt",
-            "owner",
-            "recipients",
-            "followUpRoomId",
-            "directChatRoomId",
-            "wallPostName",
-            "followUpRoomName"
-          ],
           "properties": {
             "id": {
               "type": "string",
@@ -3236,9 +3966,9 @@ export class ApisConstants {
               "$ref": "#/components/schemas/Email"
             },
             "createdAt": {
-              "type": "string",
-              "format": "A date-time with a time-zone in the ISO-8601",
-              "example": "2021-09-18T00:00:00.000Z"
+              "type": "number",
+              "format": "timestamp",
+              "example": 1639590502463
             },
             "owner": {
               "$ref": "#/components/schemas/NotificationMember"
@@ -3269,12 +3999,127 @@ export class ApisConstants {
             }
           }
         },
-        "NotificationMember": {
+        "NotificationCreateEvent": {
+          "properties": {
+            "channels": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "enum": [
+                  "EMAIL",
+                  "PUSH"
+                ]
+              }
+            },
+            "type": {
+              "type": "string",
+              "enum": [
+                "ECOSYSTEM_ACCESS_REQUEST",
+                "ECOSYSTEM_WELCOME",
+                "ECOSYSTEM_INVITATION",
+                "ACTOR_REJECTED",
+                "EMAIL_VERIFICATION",
+                "WALL_POST_LIKE",
+                "WALL_POST_COMMENT",
+                "EVENT_CREATE",
+                "EVENT_ABOUT_TO_START",
+                "FOLLOW_UP_ROOM_INVITED",
+                "FOLLOW_UP_ROOM_NEWS",
+                "FOLLOW_UP_ROOM_MISSED_CALL",
+                "DIRECT_CHAT_NEW_MESSAGE",
+                "DIRECT_CHAT_MISSED_CALL",
+                "PUBLIC_CHANNEL_NEWS",
+                "DISCOVERY_NEW_TIPS",
+                "DISCOVERY_SEARCHES",
+                "CONNECT_VIEWS",
+                "RECOVER_PASSWORD"
+              ]
+            },
+            "email": {
+              "$ref": "#/components/schemas/Email"
+            },
+            "readed": {
+              "type": "boolean",
+              "example": true
+            },
+            "createdAt": {
+              "type": "number",
+              "format": "timestamp",
+              "example": 1639590502463
+            },
+            "owner": {
+              "$ref": "#/components/schemas/NotificationMember"
+            },
+            "recipients": {
+              "type": "array",
+              "items": {
+                "$ref": "#/components/schemas/NotificationMember"
+              }
+            },
+            "followUpRoomId": {
+              "type": "string",
+              "format": "mongo-id",
+              "example": "61445159784bca6ef764c6df"
+            },
+            "directChatRoomId": {
+              "type": "string",
+              "format": "mongo-id",
+              "example": "61445159784bca6ef764c6df"
+            },
+            "wallPostName": {
+              "type": "string",
+              "example": "Wall post 1"
+            },
+            "followUpRoomName": {
+              "type": "string",
+              "example": "Follow up room 1"
+            }
+          }
+        },
+        "NotificationUpdateEvent": {
           "required": [
-            "id",
-            "image",
-            "name"
+            "id"
           ],
+          "properties": {
+            "id": {
+              "type": "string",
+              "format": "mongo-id",
+              "example": "61445159784bca6ef764c6df"
+            },
+            "type": {
+              "type": "string",
+              "enum": [
+                "ECOSYSTEM_ACCESS_REQUEST",
+                "ECOSYSTEM_WELCOME",
+                "ECOSYSTEM_INVITATION",
+                "ACTOR_REJECTED",
+                "EMAIL_VERIFICATION",
+                "WALL_POST_LIKE",
+                "WALL_POST_COMMENT",
+                "EVENT_CREATE",
+                "EVENT_UPDATED",
+                "EVENT_ABOUT_TO_START",
+                "FOLLOW_UP_ROOM_INVITED",
+                "FOLLOW_UP_ROOM_NEWS",
+                "FOLLOW_UP_ROOM_MISSED_CALL",
+                "FOLLOW_UP_ROOM_NEW_MESSAGE",
+                "DIRECT_CHAT_NEW_MESSAGE",
+                "DIRECT_CHAT_MISSED_CALL",
+                "PUBLIC_CHANNEL_NEWS",
+                "PUBLIC_CHANNEL_NEW_MESSAGE",
+                "DISCOVERY_NEW_TIPS",
+                "DISCOVERY_SEARCHES",
+                "CONNECT_VIEWS",
+                "RECOVER_PASSWORD"
+              ]
+            },
+            "readed": {
+              "type": "boolean",
+              "example": true
+            }
+          }
+        },
+        "NotificationMember": {
           "properties": {
             "id": {
               "type": "string",
@@ -3291,17 +4136,6 @@ export class ApisConstants {
           }
         },
         "Email": {
-          "required": [
-            "from",
-            "to",
-            "cc",
-            "bcc",
-            "subject",
-            "templateId",
-            "attachments",
-            "inlines",
-            "params"
-          ],
           "properties": {
             "from": {
               "$ref": "#/components/schemas/EmailFrom"
@@ -3363,10 +4197,6 @@ export class ApisConstants {
           }
         },
         "EmailFrom": {
-          "required": [
-            "email",
-            "name"
-          ],
           "properties": {
             "email": {
               "type": "string",
@@ -3380,10 +4210,6 @@ export class ApisConstants {
           }
         },
         "EmailAttachment": {
-          "required": [
-            "name",
-            "file"
-          ],
           "properties": {
             "name": {
               "type": "string",
@@ -3396,10 +4222,6 @@ export class ApisConstants {
           }
         },
         "EmailInline": {
-          "required": [
-            "cid",
-            "file"
-          ],
           "properties": {
             "cid": {
               "type": "string",
@@ -3411,11 +4233,80 @@ export class ApisConstants {
             }
           }
         },
-        "SecurityAccessUnauthorizedError": {
+        "Setting": {
+          "properties": {
+            "id": {
+              "type": "string",
+              "format": "mongo-id",
+              "example": "61445159784bca6ef764c6df"
+            },
+            "banner": {
+              "$ref": "#/components/schemas/Image"
+            }
+          }
+        },
+        "SettingCreateEvent": {
+          "properties": {
+            "banner": {
+              "$ref": "#/components/schemas/Image"
+            }
+          }
+        },
+        "SettingUpdateEvent": {
           "required": [
-            "code",
-            "message"
+            "id"
           ],
+          "properties": {
+            "id": {
+              "type": "string",
+              "format": "mongo-id",
+              "example": "61445159784bca6ef764c6df"
+            },
+            "banner": {
+              "$ref": "#/components/schemas/Image"
+            }
+          }
+        },
+        "SettingNotConfiguredError": {
+          "type": "object",
+          "properties": {
+            "message": {
+              "type": "string",
+              "example": "Setting is not configured already."
+            },
+            "code": {
+              "type": "string",
+              "example": "SETTING_NOT_CONFIGURED"
+            }
+          }
+        },
+        "NotificationEmptyBodyError": {
+          "type": "object",
+          "properties": {
+            "message": {
+              "type": "string",
+              "example": "The notification object is empty."
+            },
+            "code": {
+              "type": "string",
+              "example": "NOTIFICATION_EMPTY"
+            }
+          }
+        },
+        "SettingEmptyBodyError": {
+          "type": "object",
+          "properties": {
+            "message": {
+              "type": "string",
+              "example": "The setting object is empty."
+            },
+            "code": {
+              "type": "string",
+              "example": "SETTING_EMPTY"
+            }
+          }
+        },
+        "SecurityAccessUnauthorizedError": {
           "type": "object",
           "properties": {
             "message": {
@@ -3429,10 +4320,6 @@ export class ApisConstants {
           }
         },
         "SecurityAccessForbiddenError": {
-          "required": [
-            "code",
-            "message"
-          ],
           "type": "object",
           "properties": {
             "message": {
@@ -3452,14 +4339,44 @@ export class ApisConstants {
           "name": "COOKIE_ID_TOKEN",
           "in": "header"
         },
-        "permissions": {
+        "userEmail": {
+          "type": "apiKey",
+          "name": "COOKIE_USER_EMAIL",
+          "in": "header"
+        },
+        "permissionManagement": {
           "type": "oauth2",
           "description": "This define all permisions required in Core API",
           "flows": {
             "authorizationCode": {
               "scopes": {
-                "ecosystem_update": "Permission required to modify ecosystem",
-                "actor_invite": "Permission required to add new actors to ecosystem"
+                "PERMISSION_MANAGEMENT": "Permission required to manage user permissions"
+              },
+              "authorizationUrl": "https://dev.moonshot.ceo/api/federation/login",
+              "tokenUrl": "https://dev.moonshot.ceo/api/federation/token"
+            }
+          }
+        },
+        "ecosystemUpdate": {
+          "type": "oauth2",
+          "description": "This define all permisions required in Core API",
+          "flows": {
+            "authorizationCode": {
+              "scopes": {
+                "ECOSYSTEM_UPDATE": "Permission required to modify ecosystem"
+              },
+              "authorizationUrl": "https://dev.moonshot.ceo/api/federation/login",
+              "tokenUrl": "https://dev.moonshot.ceo/api/federation/token"
+            }
+          }
+        },
+        "actorInvite": {
+          "type": "oauth2",
+          "description": "This define all permisions required in Core API",
+          "flows": {
+            "authorizationCode": {
+              "scopes": {
+                "ACTOR_INVITE": "Permission required to add new actors to ecosystem"
               },
               "authorizationUrl": "https://dev.moonshot.ceo/api/federation/login",
               "tokenUrl": "https://dev.moonshot.ceo/api/federation/token"
@@ -3626,7 +4543,9 @@ export class ApisConstants {
               "description": "online event id",
               "required": true,
               "schema": {
-                "type": "string"
+                "type": "string",
+                "format": "mongo-id",
+                "example": "61445159784bca6ef764c6df"
               }
             }
           ],
@@ -3660,6 +4579,61 @@ export class ApisConstants {
           "externalDocs": {
             "description": "Code Example",
             "url": "http://localhost:4200/code-examples/community#online-event/:id_get"
+          }
+        },
+        "delete": {
+          "tags": [
+            "OnlineEvent"
+          ],
+          "summary": "Remove an online event",
+          "description": "Remove an online event from database\n",
+          "operationId": "onlineEventDelete",
+          "parameters": [
+            {
+              "name": "id",
+              "in": "path",
+              "description": "online event id",
+              "required": true,
+              "schema": {
+                "type": "string",
+                "format": "mongo-id",
+                "example": "61445159784bca6ef764c6df"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "OK"
+            },
+            "400": {
+              "description": "The user is not the online event owner",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/OnlineEventForbiddenError"
+                  }
+                }
+              }
+            },
+            "401": {
+              "description": "You must login before call this endpoint",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/SecurityAccessUnauthorizedError"
+                  }
+                }
+              }
+            }
+          },
+          "security": [
+            {
+              "idToken": []
+            }
+          ],
+          "externalDocs": {
+            "description": "Code Example",
+            "url": "http://localhost:4200/code-examples/community#online-event_delete"
           }
         }
       },
@@ -3721,9 +4695,7 @@ export class ApisConstants {
               "idToken": []
             },
             {
-              "permissions": [
-                "online_event_create"
-              ]
+              "onlineEventCreate": []
             }
           ],
           "externalDocs": {
@@ -3781,48 +4753,6 @@ export class ApisConstants {
           "externalDocs": {
             "description": "Code Example",
             "url": "http://localhost:4200/code-examples/community#online-event_put"
-          }
-        },
-        "delete": {
-          "tags": [
-            "OnlineEvent"
-          ],
-          "summary": "Remove an online event",
-          "description": "Remove an online event from database\n",
-          "operationId": "onlineEventDelete",
-          "responses": {
-            "200": {
-              "description": "OK"
-            },
-            "400": {
-              "description": "Body is empty or online event id is empty",
-              "content": {
-                "application/json": {
-                  "schema": {
-                    "$ref": "#/components/schemas/OnlineEventEmptyBodyError"
-                  }
-                }
-              }
-            },
-            "401": {
-              "description": "You must login before call this endpoint",
-              "content": {
-                "application/json": {
-                  "schema": {
-                    "$ref": "#/components/schemas/SecurityAccessUnauthorizedError"
-                  }
-                }
-              }
-            }
-          },
-          "security": [
-            {
-              "idToken": []
-            }
-          ],
-          "externalDocs": {
-            "description": "Code Example",
-            "url": "http://localhost:4200/code-examples/community#online-event_delete"
           }
         }
       },
@@ -3884,16 +4814,16 @@ export class ApisConstants {
               "idToken": []
             },
             {
-              "permissions": [
-                "online_event_any_update"
-              ]
+              "onlineEventAnyUpdate": []
             }
           ],
           "externalDocs": {
             "description": "Code Example",
             "url": "http://localhost:4200/code-examples/community#online-event/admin_put"
           }
-        },
+        }
+      },
+      "/online-event/{id}/admin": {
         "delete": {
           "tags": [
             "OnlineEvent"
@@ -3901,19 +4831,22 @@ export class ApisConstants {
           "summary": "Delete any online event",
           "description": "Delete an online event from database\n",
           "operationId": "onlineEventDeleteAdmin",
+          "parameters": [
+            {
+              "name": "id",
+              "in": "path",
+              "description": "online event id",
+              "required": true,
+              "schema": {
+                "type": "string",
+                "format": "mongo-id",
+                "example": "61445159784bca6ef764c6df"
+              }
+            }
+          ],
           "responses": {
             "200": {
               "description": "OK"
-            },
-            "400": {
-              "description": "Body is empty or online event id is empty",
-              "content": {
-                "application/json": {
-                  "schema": {
-                    "$ref": "#/components/schemas/OnlineEventEmptyBodyError"
-                  }
-                }
-              }
             },
             "401": {
               "description": "You must login before call this endpoint",
@@ -3941,9 +4874,7 @@ export class ApisConstants {
               "idToken": []
             },
             {
-              "permissions": [
-                "online_event_any_delete"
-              ]
+              "onlineEventAnyDelete": []
             }
           ],
           "externalDocs": {
@@ -4119,7 +5050,9 @@ export class ApisConstants {
               "description": "face to face event id",
               "required": true,
               "schema": {
-                "type": "string"
+                "type": "string",
+                "format": "mongo-id",
+                "example": "61445159784bca6ef764c6df"
               }
             }
           ],
@@ -4153,6 +5086,61 @@ export class ApisConstants {
           "externalDocs": {
             "description": "Code Example",
             "url": "http://localhost:4200/code-examples/community#face-to-face-event/:id_get"
+          }
+        },
+        "delete": {
+          "tags": [
+            "FaceToFace"
+          ],
+          "summary": "Remove a face to face event",
+          "description": "Remove a face to face event from database\n",
+          "operationId": "faceToFaceEventDelete",
+          "parameters": [
+            {
+              "name": "id",
+              "in": "path",
+              "description": "face to face event id",
+              "required": true,
+              "schema": {
+                "type": "string",
+                "format": "mongo-id",
+                "example": "61445159784bca6ef764c6df"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "OK"
+            },
+            "400": {
+              "description": "The user is not the face to face event owner",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/FaceToFaceEventForbiddenError"
+                  }
+                }
+              }
+            },
+            "401": {
+              "description": "You must login before call this endpoint",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/SecurityAccessUnauthorizedError"
+                  }
+                }
+              }
+            }
+          },
+          "security": [
+            {
+              "idToken": []
+            }
+          ],
+          "externalDocs": {
+            "description": "Code Example",
+            "url": "http://localhost:4200/code-examples/community#face-to-face-event_delete"
           }
         }
       },
@@ -4214,9 +5202,7 @@ export class ApisConstants {
               "idToken": []
             },
             {
-              "permissions": [
-                "face_to_face_event_create"
-              ]
+              "faceToFaceEventCreate": []
             }
           ],
           "externalDocs": {
@@ -4274,48 +5260,6 @@ export class ApisConstants {
           "externalDocs": {
             "description": "Code Example",
             "url": "http://localhost:4200/code-examples/community#face-to-face-event_put"
-          }
-        },
-        "delete": {
-          "tags": [
-            "FaceToFace"
-          ],
-          "summary": "Remove a face to face event",
-          "description": "Remove a face to face event from database\n",
-          "operationId": "faceToFaceEventDelete",
-          "responses": {
-            "200": {
-              "description": "OK"
-            },
-            "400": {
-              "description": "Body is empty or face to face event id is empty",
-              "content": {
-                "application/json": {
-                  "schema": {
-                    "$ref": "#/components/schemas/FaceToFaceEventEmptyBodyError"
-                  }
-                }
-              }
-            },
-            "401": {
-              "description": "You must login before call this endpoint",
-              "content": {
-                "application/json": {
-                  "schema": {
-                    "$ref": "#/components/schemas/SecurityAccessUnauthorizedError"
-                  }
-                }
-              }
-            }
-          },
-          "security": [
-            {
-              "idToken": []
-            }
-          ],
-          "externalDocs": {
-            "description": "Code Example",
-            "url": "http://localhost:4200/code-examples/community#face-to-face-event_delete"
           }
         }
       },
@@ -4377,16 +5321,16 @@ export class ApisConstants {
               "idToken": []
             },
             {
-              "permissions": [
-                "face_to_face_event_any_update"
-              ]
+              "faceToFaceEventAnyUpdate": []
             }
           ],
           "externalDocs": {
             "description": "Code Example",
             "url": "http://localhost:4200/code-examples/community#face-to-face-event/admin_put"
           }
-        },
+        }
+      },
+      "/face-to-face-event/{id}/admin": {
         "delete": {
           "tags": [
             "FaceToFace"
@@ -4394,19 +5338,22 @@ export class ApisConstants {
           "summary": "Delete any face to face event",
           "description": "Delete a face to face event from database\n",
           "operationId": "faceToFaceEventDeleteAdmin",
+          "parameters": [
+            {
+              "name": "id",
+              "in": "path",
+              "description": "face to face event id",
+              "required": true,
+              "schema": {
+                "type": "string",
+                "format": "mongo-id",
+                "example": "61445159784bca6ef764c6df"
+              }
+            }
+          ],
           "responses": {
             "200": {
               "description": "OK"
-            },
-            "400": {
-              "description": "Body is empty or face to face event id is empty",
-              "content": {
-                "application/json": {
-                  "schema": {
-                    "$ref": "#/components/schemas/FaceToFaceEventEmptyBodyError"
-                  }
-                }
-              }
             },
             "401": {
               "description": "You must login before call this endpoint",
@@ -4434,9 +5381,7 @@ export class ApisConstants {
               "idToken": []
             },
             {
-              "permissions": [
-                "face_to_face_event_any_delete"
-              ]
+              "faceToFaceEventAnyDelete": []
             }
           ],
           "externalDocs": {
@@ -4568,7 +5513,9 @@ export class ApisConstants {
               "description": "room id",
               "required": true,
               "schema": {
-                "type": "string"
+                "type": "string",
+                "format": "mongo-id",
+                "example": "61445159784bca6ef764c6df"
               }
             }
           ],
@@ -4622,7 +5569,9 @@ export class ApisConstants {
               "description": "room id",
               "required": true,
               "schema": {
-                "type": "string"
+                "type": "string",
+                "format": "mongo-id",
+                "example": "61445159784bca6ef764c6df"
               }
             }
           ],
@@ -4757,9 +5706,7 @@ export class ApisConstants {
               "idToken": []
             },
             {
-              "permissions": [
-                "direct_chat_any_list"
-              ]
+              "directChatAnyList": []
             }
           ],
           "externalDocs": {
@@ -4783,7 +5730,9 @@ export class ApisConstants {
               "description": "direct chat id",
               "required": true,
               "schema": {
-                "type": "string"
+                "type": "string",
+                "format": "mongo-id",
+                "example": "61445159784bca6ef764c6df"
               }
             }
           ],
@@ -4818,6 +5767,61 @@ export class ApisConstants {
             "description": "Code Example",
             "url": "http://localhost:4200/code-examples/community#direct-chat/:id_get"
           }
+        },
+        "delete": {
+          "tags": [
+            "DirectChat"
+          ],
+          "summary": "Remove a direct chat",
+          "description": "Remove a direct chat from database\n",
+          "operationId": "directChatDelete",
+          "parameters": [
+            {
+              "name": "id",
+              "in": "path",
+              "description": "direct chat id",
+              "required": true,
+              "schema": {
+                "type": "string",
+                "format": "mongo-id",
+                "example": "61445159784bca6ef764c6df"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "OK"
+            },
+            "400": {
+              "description": "Direct chat was not found or user is not a participant",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/DirectChatInvalidIdError"
+                  }
+                }
+              }
+            },
+            "401": {
+              "description": "You must login before call this endpoint",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/SecurityAccessUnauthorizedError"
+                  }
+                }
+              }
+            }
+          },
+          "security": [
+            {
+              "idToken": []
+            }
+          ],
+          "externalDocs": {
+            "description": "Code Example",
+            "url": "http://localhost:4200/code-examples/community#direct-chat_delete"
+          }
         }
       },
       "/direct-chat": {
@@ -4842,40 +5846,8 @@ export class ApisConstants {
             "200": {
               "description": "OK"
             },
-            "401": {
-              "description": "You must login before call this endpoint",
-              "content": {
-                "application/json": {
-                  "schema": {
-                    "$ref": "#/components/schemas/SecurityAccessUnauthorizedError"
-                  }
-                }
-              }
-            }
-          },
-          "security": [
-            {
-              "idToken": []
-            }
-          ],
-          "externalDocs": {
-            "description": "Code Example",
-            "url": "http://localhost:4200/code-examples/community#direct-chat_post"
-          }
-        },
-        "delete": {
-          "tags": [
-            "DirectChat"
-          ],
-          "summary": "Remove a direct chat",
-          "description": "Remove a direct chat from database\n",
-          "operationId": "directChatDelete",
-          "responses": {
-            "200": {
-              "description": "OK"
-            },
             "400": {
-              "description": "Body is empty, direct chat is empty, cannot find direct chat or user is not a participant",
+              "description": "Body is empty or direct chat already exist",
               "content": {
                 "application/json": {
                   "schema": {
@@ -4902,7 +5874,7 @@ export class ApisConstants {
           ],
           "externalDocs": {
             "description": "Code Example",
-            "url": "http://localhost:4200/code-examples/community#direct-chat_delete"
+            "url": "http://localhost:4200/code-examples/community#direct-chat_post"
           }
         }
       },
@@ -4958,7 +5930,9 @@ export class ApisConstants {
             "description": "Code Example",
             "url": "http://localhost:4200/code-examples/community#direct-chat/message_post"
           }
-        },
+        }
+      },
+      "/direct-chat/message/{id}": {
         "delete": {
           "tags": [
             "DirectChat"
@@ -4966,16 +5940,29 @@ export class ApisConstants {
           "summary": "Remove a direct chat message",
           "description": "Remove a direct chat message from database\n",
           "operationId": "directChatDeleteMessage",
+          "parameters": [
+            {
+              "name": "id",
+              "in": "path",
+              "description": "direct chat message id",
+              "required": true,
+              "schema": {
+                "type": "string",
+                "format": "mongo-id",
+                "example": "61445159784bca6ef764c6df"
+              }
+            }
+          ],
           "responses": {
             "200": {
               "description": "OK"
             },
             "400": {
-              "description": "Body is empty, direct chat message id is empty or user is not the direct chat owner",
+              "description": "The user is not the message owner",
               "content": {
                 "application/json": {
                   "schema": {
-                    "$ref": "#/components/schemas/DeleteMessageEmptyBodyError"
+                    "$ref": "#/components/schemas/AddMessageForbiddenError"
                   }
                 }
               }
@@ -5017,7 +6004,9 @@ export class ApisConstants {
               "description": "direct chat id",
               "required": true,
               "schema": {
-                "type": "string"
+                "type": "string",
+                "format": "mongo-id",
+                "example": "61445159784bca6ef764c6df"
               }
             }
           ],
@@ -5149,9 +6138,7 @@ export class ApisConstants {
               "idToken": []
             },
             {
-              "permissions": [
-                "follow_up_room_any_list"
-              ]
+              "followUpRoomAnyList": []
             }
           ],
           "externalDocs": {
@@ -5175,7 +6162,9 @@ export class ApisConstants {
               "description": "follow up room id",
               "required": true,
               "schema": {
-                "type": "string"
+                "type": "string",
+                "format": "mongo-id",
+                "example": "61445159784bca6ef764c6df"
               }
             }
           ],
@@ -5209,6 +6198,51 @@ export class ApisConstants {
           "externalDocs": {
             "description": "Code Example",
             "url": "http://localhost:4200/code-examples/community#follow-up-room/:id_get"
+          }
+        },
+        "delete": {
+          "tags": [
+            "FollowUpRoom"
+          ],
+          "summary": "Remove a follow up room",
+          "description": "Remove a follow up room from database\n",
+          "operationId": "followUpRoomDelete",
+          "parameters": [
+            {
+              "name": "id",
+              "in": "path",
+              "description": "follow up room id",
+              "required": true,
+              "schema": {
+                "type": "string",
+                "format": "mongo-id",
+                "example": "61445159784bca6ef764c6df"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "OK"
+            },
+            "401": {
+              "description": "You must login before call this endpoint",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/SecurityAccessUnauthorizedError"
+                  }
+                }
+              }
+            }
+          },
+          "security": [
+            {
+              "idToken": []
+            }
+          ],
+          "externalDocs": {
+            "description": "Code Example",
+            "url": "http://localhost:4200/code-examples/community#follow-up-room_delete"
           }
         }
       },
@@ -5315,48 +6349,6 @@ export class ApisConstants {
           "externalDocs": {
             "description": "Code Example",
             "url": "http://localhost:4200/code-examples/community#follow-up-room_put"
-          }
-        },
-        "delete": {
-          "tags": [
-            "FollowUpRoom"
-          ],
-          "summary": "Remove a follow up room",
-          "description": "Remove a follow up room from database\n",
-          "operationId": "followUpRoomDelete",
-          "responses": {
-            "200": {
-              "description": "OK"
-            },
-            "400": {
-              "description": "Body is empty, follow up room id is empty ir user is not the follow up room owner",
-              "content": {
-                "application/json": {
-                  "schema": {
-                    "$ref": "#/components/schemas/FollowUpRoomEmptyBodyError"
-                  }
-                }
-              }
-            },
-            "401": {
-              "description": "You must login before call this endpoint",
-              "content": {
-                "application/json": {
-                  "schema": {
-                    "$ref": "#/components/schemas/SecurityAccessUnauthorizedError"
-                  }
-                }
-              }
-            }
-          },
-          "security": [
-            {
-              "idToken": []
-            }
-          ],
-          "externalDocs": {
-            "description": "Code Example",
-            "url": "http://localhost:4200/code-examples/community#follow-up-room_delete"
           }
         }
       },
@@ -5628,7 +6620,9 @@ export class ApisConstants {
             "description": "Code Example",
             "url": "http://localhost:4200/code-examples/community#follow-up-room/message_post"
           }
-        },
+        }
+      },
+      "/follow-up-room/message/{id}": {
         "delete": {
           "tags": [
             "FollowUpRoom"
@@ -5636,16 +6630,29 @@ export class ApisConstants {
           "summary": "Remove a follow up room message",
           "description": "Remove a follow up room message from database\n",
           "operationId": "followUpRoomDeleteMessage",
+          "parameters": [
+            {
+              "name": "id",
+              "in": "path",
+              "description": "online event id",
+              "required": true,
+              "schema": {
+                "type": "string",
+                "format": "mongo-id",
+                "example": "61445159784bca6ef764c6df"
+              }
+            }
+          ],
           "responses": {
             "200": {
               "description": "OK"
             },
             "400": {
-              "description": "Body is empty, follow up room message id is empty or user is not a follow up room participant",
+              "description": "The user is not the message owner",
               "content": {
                 "application/json": {
                   "schema": {
-                    "$ref": "#/components/schemas/DeleteMessageEmptyBodyError"
+                    "$ref": "#/components/schemas/AddMessageForbiddenError"
                   }
                 }
               }
@@ -5672,7 +6679,7 @@ export class ApisConstants {
           }
         }
       },
-      "/follow-up-room/message/admin": {
+      "/follow-up-room/message/{id}/admin": {
         "delete": {
           "tags": [
             "FollowUpRoom"
@@ -5680,19 +6687,22 @@ export class ApisConstants {
           "summary": "Delete any follow up room message",
           "description": "Delete a follow up room message from database\n",
           "operationId": "followUpRoomDeleteMessageAdmin",
+          "parameters": [
+            {
+              "name": "id",
+              "in": "path",
+              "description": "online event id",
+              "required": true,
+              "schema": {
+                "type": "string",
+                "format": "mongo-id",
+                "example": "61445159784bca6ef764c6df"
+              }
+            }
+          ],
           "responses": {
             "200": {
               "description": "OK"
-            },
-            "400": {
-              "description": "Body is empty, follow up room message id is empty or user is not the follow up room owner",
-              "content": {
-                "application/json": {
-                  "schema": {
-                    "$ref": "#/components/schemas/DeleteMessageEmptyBodyError"
-                  }
-                }
-              }
             },
             "401": {
               "description": "You must login before call this endpoint",
@@ -5731,7 +6741,9 @@ export class ApisConstants {
               "description": "room id",
               "required": true,
               "schema": {
-                "type": "string"
+                "type": "string",
+                "format": "mongo-id",
+                "example": "61445159784bca6ef764c6df"
               }
             }
           ],
@@ -5830,7 +6842,9 @@ export class ApisConstants {
               "description": "public channel room id",
               "required": true,
               "schema": {
-                "type": "string"
+                "type": "string",
+                "format": "mongo-id",
+                "example": "61445159784bca6ef764c6df"
               }
             }
           ],
@@ -5864,6 +6878,61 @@ export class ApisConstants {
           "externalDocs": {
             "description": "Code Example",
             "url": "http://localhost:4200/code-examples/community#public-channel/:id_get"
+          }
+        },
+        "delete": {
+          "tags": [
+            "PublicChannel"
+          ],
+          "summary": "Remove a public channel",
+          "description": "Remove a public channel from database\n",
+          "operationId": "publicChannelDelete",
+          "parameters": [
+            {
+              "name": "id",
+              "in": "path",
+              "description": "online event id",
+              "required": true,
+              "schema": {
+                "type": "string",
+                "format": "mongo-id",
+                "example": "61445159784bca6ef764c6df"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "OK"
+            },
+            "400": {
+              "description": "The user is not the public channer owner",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/PublicChannelForbiddenError"
+                  }
+                }
+              }
+            },
+            "401": {
+              "description": "You must login before call this endpoint",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/SecurityAccessUnauthorizedError"
+                  }
+                }
+              }
+            }
+          },
+          "security": [
+            {
+              "idToken": []
+            }
+          ],
+          "externalDocs": {
+            "description": "Code Example",
+            "url": "http://localhost:4200/code-examples/community#public-channel_delete"
           }
         }
       },
@@ -5924,9 +6993,7 @@ export class ApisConstants {
               "idToken": []
             },
             {
-              "permissions": [
-                "public_channel_create"
-              ]
+              "publicChannelCreate": []
             }
           ],
           "externalDocs": {
@@ -5983,48 +7050,6 @@ export class ApisConstants {
           "externalDocs": {
             "description": "Code Example",
             "url": "http://localhost:4200/code-examples/community#public-channel_put"
-          }
-        },
-        "delete": {
-          "tags": [
-            "PublicChannel"
-          ],
-          "summary": "Remove a public channel",
-          "description": "Remove a public channel from database\n",
-          "operationId": "publicChannelDelete",
-          "responses": {
-            "200": {
-              "description": "OK"
-            },
-            "400": {
-              "description": "Body is empty, title is empty, description is empty, public channel id is empty or user is not public channel owner",
-              "content": {
-                "application/json": {
-                  "schema": {
-                    "$ref": "#/components/schemas/PublicChannelEmptyBodyError"
-                  }
-                }
-              }
-            },
-            "401": {
-              "description": "You must login before call this endpoint",
-              "content": {
-                "application/json": {
-                  "schema": {
-                    "$ref": "#/components/schemas/SecurityAccessUnauthorizedError"
-                  }
-                }
-              }
-            }
-          },
-          "security": [
-            {
-              "idToken": []
-            }
-          ],
-          "externalDocs": {
-            "description": "Code Example",
-            "url": "http://localhost:4200/code-examples/community#public-channel_delete"
           }
         }
       },
@@ -6085,33 +7110,105 @@ export class ApisConstants {
               "idToken": []
             },
             {
-              "permissions": [
-                "public_channel_any_update"
-              ]
+              "publicChannelAnyUpdate": []
             }
           ],
           "externalDocs": {
             "description": "Code Example",
             "url": "http://localhost:4200/code-examples/community#public-channel/admin_put"
           }
-        },
+        }
+      },
+      "/public-channel/{id}/admin": {
         "delete": {
           "tags": [
             "PublicChannel"
           ],
           "summary": "Remove any public channel",
           "description": "Remove a public channel from database\n",
+          "parameters": [
+            {
+              "name": "id",
+              "in": "path",
+              "description": "public channel id",
+              "required": true,
+              "schema": {
+                "type": "string",
+                "format": "mongo-id",
+                "example": "61445159784bca6ef764c6df"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "OK"
+            },
+            "401": {
+              "description": "You must login before call this endpoint",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/SecurityAccessUnauthorizedError"
+                  }
+                }
+              }
+            },
+            "403": {
+              "description": "User does not have the necessary permissions",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/SecurityAccessForbiddenError"
+                  }
+                }
+              }
+            }
+          },
+          "security": [
+            {
+              "idToken": []
+            },
+            {
+              "publicChannelAnyDelete": []
+            }
+          ],
+          "externalDocs": {
+            "description": "Code Example",
+            "url": "http://localhost:4200/code-examples/community#public-channel/admin_delete"
+          }
+        }
+      },
+      "/public-channel/message/{id}/admin": {
+        "delete": {
+          "tags": [
+            "PublicChannel"
+          ],
+          "summary": "Remove any public channel message",
+          "description": "Remove a public channel message from database\n",
           "operationId": "publicChannelDeleteAdmin",
+          "parameters": [
+            {
+              "name": "id",
+              "in": "path",
+              "description": "public channel id",
+              "required": true,
+              "schema": {
+                "type": "string",
+                "format": "mongo-id",
+                "example": "61445159784bca6ef764c6df"
+              }
+            }
+          ],
           "responses": {
             "200": {
               "description": "OK"
             },
             "400": {
-              "description": "Body is empty, title is empty, description is empty, public channel id is empty or user is not public channel owner",
+              "description": "The user is not the owner of the public channel",
               "content": {
                 "application/json": {
                   "schema": {
-                    "$ref": "#/components/schemas/PublicChannelEmptyBodyError"
+                    "$ref": "#/components/schemas/PublicChannelForbiddenError"
                   }
                 }
               }
@@ -6140,11 +7237,6 @@ export class ApisConstants {
           "security": [
             {
               "idToken": []
-            },
-            {
-              "permissions": [
-                "public_channel_any_delete"
-              ]
             }
           ],
           "externalDocs": {
@@ -6230,7 +7322,7 @@ export class ApisConstants {
               "description": "OK"
             },
             "400": {
-              "description": "Body is empty",
+              "description": "Body is empty or new owner member id is empty",
               "content": {
                 "application/json": {
                   "schema": {
@@ -6313,7 +7405,9 @@ export class ApisConstants {
             "description": "Code Example",
             "url": "http://localhost:4200/code-examples/community#public-channel/message_post"
           }
-        },
+        }
+      },
+      "/public-channel/message/{id}": {
         "delete": {
           "tags": [
             "PublicChannel"
@@ -6321,19 +7415,22 @@ export class ApisConstants {
           "summary": "Remove a public channel message",
           "description": "Remove a public channel message from database\n",
           "operationId": "publicChannelDeleteMessage",
+          "parameters": [
+            {
+              "name": "id",
+              "in": "path",
+              "description": "public channel id",
+              "required": true,
+              "schema": {
+                "type": "string",
+                "format": "mongo-id",
+                "example": "61445159784bca6ef764c6df"
+              }
+            }
+          ],
           "responses": {
             "200": {
               "description": "OK"
-            },
-            "400": {
-              "description": "Body is empty, public channel message id is empty or user is not the public channel message owner",
-              "content": {
-                "application/json": {
-                  "schema": {
-                    "$ref": "#/components/schemas/DeleteMessageEmptyBodyError"
-                  }
-                }
-              }
             },
             "401": {
               "description": "You must login before call this endpoint",
@@ -6357,50 +7454,6 @@ export class ApisConstants {
           }
         }
       },
-      "/public-channel/message/admin": {
-        "delete": {
-          "tags": [
-            "PublicChannel"
-          ],
-          "summary": "Delete any public channel message",
-          "description": "Delete a public channel message from database\n",
-          "operationId": "publicChannelDeleteMessageAdmin",
-          "responses": {
-            "200": {
-              "description": "OK"
-            },
-            "400": {
-              "description": "Body is empty, public channel message id is empty or user is not the public channel owner",
-              "content": {
-                "application/json": {
-                  "schema": {
-                    "$ref": "#/components/schemas/DeleteMessageEmptyBodyError"
-                  }
-                }
-              }
-            },
-            "401": {
-              "description": "You must login before call this endpoint",
-              "content": {
-                "application/json": {
-                  "schema": {
-                    "$ref": "#/components/schemas/SecurityAccessUnauthorizedError"
-                  }
-                }
-              }
-            }
-          },
-          "security": [
-            {
-              "idToken": []
-            }
-          ],
-          "externalDocs": {
-            "description": "Code Example",
-            "url": "http://localhost:4200/code-examples/community#public-channel/message/admin_delete"
-          }
-        }
-      },
       "/public-channel/messages/{room_id}": {
         "get": {
           "tags": [
@@ -6416,7 +7469,9 @@ export class ApisConstants {
               "description": "room id",
               "required": true,
               "schema": {
-                "type": "string"
+                "type": "string",
+                "format": "mongo-id",
+                "example": "61445159784bca6ef764c6df"
               }
             }
           ],
@@ -6513,9 +7568,7 @@ export class ApisConstants {
               "idToken": []
             },
             {
-              "permissions": [
-                "wall_post_create"
-              ]
+              "wallPostCreate": []
             }
           ],
           "externalDocs": {
@@ -6572,48 +7625,6 @@ export class ApisConstants {
           "externalDocs": {
             "description": "Code Example",
             "url": "http://localhost:4200/code-examples/community#wall-post_put"
-          }
-        },
-        "delete": {
-          "tags": [
-            "WallPost"
-          ],
-          "summary": "Remove a wall post",
-          "description": "Remove a wall post from database\n",
-          "operationId": "wallPostDelete",
-          "responses": {
-            "200": {
-              "description": "OK"
-            },
-            "400": {
-              "description": "Body is empty, wall post id is empty or user is not the wall post owner",
-              "content": {
-                "application/json": {
-                  "schema": {
-                    "$ref": "#/components/schemas/WallPostEmptyBodyError"
-                  }
-                }
-              }
-            },
-            "401": {
-              "description": "You must login before call this endpoint",
-              "content": {
-                "application/json": {
-                  "schema": {
-                    "$ref": "#/components/schemas/SecurityAccessUnauthorizedError"
-                  }
-                }
-              }
-            }
-          },
-          "security": [
-            {
-              "idToken": []
-            }
-          ],
-          "externalDocs": {
-            "description": "Code Example",
-            "url": "http://localhost:4200/code-examples/community#wall-post_delete"
           }
         }
       },
@@ -6674,16 +7685,16 @@ export class ApisConstants {
               "idToken": []
             },
             {
-              "permissions": [
-                "wall_post_any_update"
-              ]
+              "wallPostAnyUpdate": []
             }
           ],
           "externalDocs": {
             "description": "Code Example",
             "url": "http://localhost:4200/code-examples/community#wall-post/admin_put"
           }
-        },
+        }
+      },
+      "/wall-post/{id}/admin": {
         "delete": {
           "tags": [
             "WallPost"
@@ -6691,19 +7702,22 @@ export class ApisConstants {
           "summary": "Remove any wall post",
           "description": "Remove any wall post from database\n",
           "operationId": "wallPostDeleteAdmin",
+          "parameters": [
+            {
+              "name": "id",
+              "in": "path",
+              "description": "public channel id",
+              "required": true,
+              "schema": {
+                "type": "string",
+                "format": "mongo-id",
+                "example": "61445159784bca6ef764c6df"
+              }
+            }
+          ],
           "responses": {
             "200": {
               "description": "OK"
-            },
-            "400": {
-              "description": "Body is empty or wall post id is empty",
-              "content": {
-                "application/json": {
-                  "schema": {
-                    "$ref": "#/components/schemas/WallPostEmptyBodyError"
-                  }
-                }
-              }
             },
             "401": {
               "description": "You must login before call this endpoint",
@@ -6731,9 +7745,7 @@ export class ApisConstants {
               "idToken": []
             },
             {
-              "permissions": [
-                "wall_post_any_delete"
-              ]
+              "wallPostAnyDelete": []
             }
           ],
           "externalDocs": {
@@ -7022,7 +8034,9 @@ export class ApisConstants {
               "description": "wall post id",
               "required": true,
               "schema": {
-                "type": "string"
+                "type": "string",
+                "format": "mongo-id",
+                "example": "61445159784bca6ef764c6df"
               }
             }
           ],
@@ -7056,6 +8070,61 @@ export class ApisConstants {
           "externalDocs": {
             "description": "Code Example",
             "url": "http://localhost:4200/code-examples/community#wall-post/:id_get"
+          }
+        },
+        "delete": {
+          "tags": [
+            "WallPost"
+          ],
+          "summary": "Remove a wall post",
+          "description": "Remove a wall post from database\n",
+          "operationId": "wallPostDelete",
+          "parameters": [
+            {
+              "name": "id",
+              "in": "path",
+              "description": "wall post id",
+              "required": true,
+              "schema": {
+                "type": "string",
+                "format": "mongo-id",
+                "example": "61445159784bca6ef764c6df"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "OK"
+            },
+            "400": {
+              "description": "The user is not the wall post owner",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/WallPostForbiddenError"
+                  }
+                }
+              }
+            },
+            "401": {
+              "description": "You must login before call this endpoint",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/SecurityAccessUnauthorizedError"
+                  }
+                }
+              }
+            }
+          },
+          "security": [
+            {
+              "idToken": []
+            }
+          ],
+          "externalDocs": {
+            "description": "Code Example",
+            "url": "http://localhost:4200/code-examples/community#wall-post_delete"
           }
         }
       },
@@ -7242,9 +8311,7 @@ export class ApisConstants {
               "idToken": []
             },
             {
-              "permissions": [
-                "actor_management"
-              ]
+              "actorManagement": []
             }
           ],
           "externalDocs": {
@@ -7445,7 +8512,9 @@ export class ApisConstants {
               "description": "actor id",
               "required": true,
               "schema": {
-                "type": "string"
+                "type": "string",
+                "format": "mongo-id",
+                "example": "61445159784bca6ef764c6df"
               }
             }
           ],
@@ -7482,6 +8551,61 @@ export class ApisConstants {
           "externalDocs": {
             "description": "Code Example",
             "url": "http://localhost:4200/code-examples/community#actor/:id_get"
+          }
+        },
+        "delete": {
+          "tags": [
+            "Actor"
+          ],
+          "summary": "Remove an actor",
+          "description": "Remove an actor from database\n",
+          "operationId": "actorDelete",
+          "parameters": [
+            {
+              "name": "id",
+              "in": "path",
+              "description": "actor id",
+              "required": true,
+              "schema": {
+                "type": "string",
+                "format": "mongo-id",
+                "example": "61445159784bca6ef764c6df"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "OK"
+            },
+            "400": {
+              "description": "Body is empty or actor id is empty",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/ActorEmptyBodyError"
+                  }
+                }
+              }
+            },
+            "401": {
+              "description": "You must login before call this endpoint",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/SecurityAccessUnauthorizedError"
+                  }
+                }
+              }
+            }
+          },
+          "security": [
+            {
+              "idToken": []
+            }
+          ],
+          "externalDocs": {
+            "description": "Code Example",
+            "url": "http://localhost:4200/code-examples/community#actor_delete"
           }
         }
       },
@@ -7593,48 +8717,6 @@ export class ApisConstants {
             "description": "Code Example",
             "url": "http://localhost:4200/code-examples/community#actor_put"
           }
-        },
-        "delete": {
-          "tags": [
-            "Actor"
-          ],
-          "summary": "Remove an actor",
-          "description": "Remove an actor from database\n",
-          "operationId": "actorDelete",
-          "responses": {
-            "200": {
-              "description": "OK"
-            },
-            "400": {
-              "description": "Body is empty or actor id is empty",
-              "content": {
-                "application/json": {
-                  "schema": {
-                    "$ref": "#/components/schemas/ActorEmptyBodyError"
-                  }
-                }
-              }
-            },
-            "401": {
-              "description": "You must login before call this endpoint",
-              "content": {
-                "application/json": {
-                  "schema": {
-                    "$ref": "#/components/schemas/SecurityAccessUnauthorizedError"
-                  }
-                }
-              }
-            }
-          },
-          "security": [
-            {
-              "idToken": []
-            }
-          ],
-          "externalDocs": {
-            "description": "Code Example",
-            "url": "http://localhost:4200/code-examples/community#actor_delete"
-          }
         }
       },
       "/actor/accept": {
@@ -7694,9 +8776,7 @@ export class ApisConstants {
               "idToken": []
             },
             {
-              "permissions": [
-                "actor_management"
-              ]
+              "actorManagement": []
             }
           ],
           "externalDocs": {
@@ -7762,9 +8842,7 @@ export class ApisConstants {
               "idToken": []
             },
             {
-              "permissions": [
-                "actor_management"
-              ]
+              "actorManagement": []
             }
           ],
           "externalDocs": {
@@ -7773,14 +8851,76 @@ export class ApisConstants {
           }
         }
       },
-      "/logged-in-member": {
-        "get": {
+      "/actors/import/csv": {
+        "post": {
+          "tags": [
+            "Actor"
+          ],
+          "summary": "Import actors from CSV file",
+          "description": "Read a CSV file and insert all the actors in the database\n",
+          "operationId": "actorsCsv",
+          "requestBody": {
+            "content": {
+              "multipart/form-data": {
+                "schema": {
+                  "$ref": "#/components/schemas/CsvFormat"
+                }
+              }
+            }
+          },
+          "responses": {
+            "200": {
+              "description": "OK"
+            },
+            "400": {
+              "description": "Body is empty or actor is empty",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/ActorEmptyBodyError"
+                  }
+                }
+              }
+            },
+            "401": {
+              "description": "You must login before call this endpoint",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/SecurityAccessUnauthorizedError"
+                  }
+                }
+              }
+            }
+          },
+          "security": [
+            {
+              "idToken": []
+            }
+          ],
+          "externalDocs": {
+            "description": "Code Example",
+            "url": "http://localhost:4200/code-examples/community#actors/import/csv_post"
+          }
+        }
+      },
+      "/fcmToken": {
+        "put": {
           "tags": [
             "Member"
           ],
-          "summary": "Get the member with the session open",
-          "description": "Find the member with the session open in database and insert the cookie member id in session cookies\n",
-          "operationId": "loggedInMember",
+          "summary": "Assign a fcm token",
+          "description": "update a member by assigning it a fcm token\n",
+          "operationId": "fcmToken",
+          "requestBody": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/MemberSetFcmTokenEvent"
+                }
+              }
+            }
+          },
           "responses": {
             "200": {
               "description": "Add session cookie and return member successfully",
@@ -7788,6 +8928,57 @@ export class ApisConstants {
                 "application/json": {
                   "schema": {
                     "$ref": "#/components/schemas/UpdateMember"
+                  }
+                }
+              }
+            },
+            "400": {
+              "description": "Body is empty",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/MemberEmptyBodyError"
+                  }
+                }
+              }
+            },
+            "401": {
+              "description": "You must login before call this endpoint",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/SecurityAccessUnauthorizedError"
+                  }
+                }
+              }
+            }
+          },
+          "security": [
+            {
+              "idToken": []
+            }
+          ],
+          "externalDocs": {
+            "description": "Code Example",
+            "url": "http://localhost:4200/code-examples/community#fcmToken_put"
+          }
+        }
+      },
+      "/member/logged-in": {
+        "get": {
+          "tags": [
+            "Member"
+          ],
+          "summary": "Get the member with the session open",
+          "description": "Find the member with the session open in database and insert the cookie member id\n",
+          "operationId": "loggedInMember",
+          "responses": {
+            "200": {
+              "description": "Add session cookie and return member successfully",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/LoggedMember"
                   }
                 }
               }
@@ -7820,7 +9011,7 @@ export class ApisConstants {
           ],
           "externalDocs": {
             "description": "Code Example",
-            "url": "http://localhost:4200/code-examples/community#logged-in-member_get"
+            "url": "http://localhost:4200/code-examples/community#member/logged-in_get"
           }
         }
       },
@@ -7893,7 +9084,9 @@ export class ApisConstants {
               "description": "member id",
               "required": true,
               "schema": {
-                "type": "string"
+                "type": "string",
+                "format": "mongo-id",
+                "example": "61445159784bca6ef764c6df"
               }
             }
           ],
@@ -7928,6 +9121,51 @@ export class ApisConstants {
             "description": "Code Example",
             "url": "http://localhost:4200/code-examples/community#member/:id_get"
           }
+        },
+        "delete": {
+          "tags": [
+            "Member"
+          ],
+          "summary": "Remove a member",
+          "description": "Remove a member from database\n",
+          "operationId": "memberDelete",
+          "parameters": [
+            {
+              "name": "id",
+              "in": "path",
+              "description": "member id",
+              "required": true,
+              "schema": {
+                "type": "string",
+                "format": "mongo-id",
+                "example": "61445159784bca6ef764c6df"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "OK"
+            },
+            "401": {
+              "description": "You must login before call this endpoint",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/SecurityAccessUnauthorizedError"
+                  }
+                }
+              }
+            }
+          },
+          "security": [
+            {
+              "idToken": []
+            }
+          ],
+          "externalDocs": {
+            "description": "Code Example",
+            "url": "http://localhost:4200/code-examples/community#member_delete"
+          }
         }
       },
       "/member/{id}/marker": {
@@ -7945,7 +9183,9 @@ export class ApisConstants {
               "description": "member id",
               "required": true,
               "schema": {
-                "type": "string"
+                "type": "string",
+                "format": "mongo-id",
+                "example": "61445159784bca6ef764c6df"
               }
             },
             {
@@ -7953,7 +9193,8 @@ export class ApisConstants {
               "in": "query",
               "description": "marker color",
               "schema": {
-                "type": "string"
+                "type": "string",
+                "example": "red"
               }
             }
           ],
@@ -8048,48 +9289,6 @@ export class ApisConstants {
           "externalDocs": {
             "description": "Code Example",
             "url": "http://localhost:4200/code-examples/community#member_put"
-          }
-        },
-        "delete": {
-          "tags": [
-            "Member"
-          ],
-          "summary": "Remove a member",
-          "description": "Remove a member from database\n",
-          "operationId": "memberDelete",
-          "responses": {
-            "200": {
-              "description": "OK"
-            },
-            "400": {
-              "description": "Body is empty or member id is empty",
-              "content": {
-                "application/json": {
-                  "schema": {
-                    "$ref": "#/components/schemas/MemberEmptyBodyError"
-                  }
-                }
-              }
-            },
-            "401": {
-              "description": "You must login before call this endpoint",
-              "content": {
-                "application/json": {
-                  "schema": {
-                    "$ref": "#/components/schemas/SecurityAccessUnauthorizedError"
-                  }
-                }
-              }
-            }
-          },
-          "security": [
-            {
-              "idToken": []
-            }
-          ],
-          "externalDocs": {
-            "description": "Code Example",
-            "url": "http://localhost:4200/code-examples/community#member_delete"
           }
         }
       },
@@ -8195,7 +9394,9 @@ export class ApisConstants {
             "description": "Code Example",
             "url": "http://localhost:4200/code-examples/community#education_put"
           }
-        },
+        }
+      },
+      "/education/{id}": {
         "delete": {
           "tags": [
             "Member"
@@ -8203,19 +9404,22 @@ export class ApisConstants {
           "summary": "Remove an education",
           "description": "Find and update a member without the education\n",
           "operationId": "memberEducationDelete",
+          "parameters": [
+            {
+              "name": "id",
+              "in": "path",
+              "description": "education id",
+              "required": true,
+              "schema": {
+                "type": "string",
+                "format": "mongo-id",
+                "example": "61445159784bca6ef764c6df"
+              }
+            }
+          ],
           "responses": {
             "200": {
               "description": "OK"
-            },
-            "400": {
-              "description": "Body is empty, education id is empty, a required param is empty or education not exist",
-              "content": {
-                "application/json": {
-                  "schema": {
-                    "$ref": "#/components/schemas/MemberEducationEmptyBodyError"
-                  }
-                }
-              }
             },
             "401": {
               "description": "You must login before call this endpoint",
@@ -8341,7 +9545,9 @@ export class ApisConstants {
             "description": "Code Example",
             "url": "http://localhost:4200/code-examples/community#experience_put"
           }
-        },
+        }
+      },
+      "/experience/{id}": {
         "delete": {
           "tags": [
             "Member"
@@ -8349,6 +9555,19 @@ export class ApisConstants {
           "summary": "Remove an experience",
           "description": "Find and update a member without the experience\n",
           "operationId": "memberExperienceDelete",
+          "parameters": [
+            {
+              "name": "id",
+              "in": "path",
+              "description": "experience id",
+              "required": true,
+              "schema": {
+                "type": "string",
+                "format": "mongo-id",
+                "example": "61445159784bca6ef764c6df"
+              }
+            }
+          ],
           "responses": {
             "200": {
               "description": "OK"
@@ -8454,7 +9673,9 @@ export class ApisConstants {
               "description": "project id",
               "required": true,
               "schema": {
-                "type": "string"
+                "type": "string",
+                "format": "mongo-id",
+                "example": "61445159784bca6ef764c6df"
               }
             }
           ],
@@ -8636,206 +9857,11 @@ export class ApisConstants {
             "url": "http://localhost:4200/code-examples/community#project_delete"
           }
         }
-      },
-      "/setting": {
-        "post": {
-          "tags": [
-            "Setting"
-          ],
-          "summary": "Create a setting",
-          "description": "Create and insert a setting in the database\n",
-          "operationId": "settingCreate",
-          "requestBody": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/SettingCreateEvent"
-                }
-              }
-            }
-          },
-          "responses": {
-            "200": {
-              "description": "OK"
-            },
-            "400": {
-              "description": "Body is empty or ecosystem setting already exist",
-              "content": {
-                "application/json": {
-                  "schema": {
-                    "$ref": "#/components/schemas/SettingEmptyBodyError"
-                  }
-                }
-              }
-            },
-            "401": {
-              "description": "You must login before call this endpoint",
-              "content": {
-                "application/json": {
-                  "schema": {
-                    "$ref": "#/components/schemas/SecurityAccessUnauthorizedError"
-                  }
-                }
-              }
-            },
-            "403": {
-              "description": "User does not have the necessary permissions",
-              "content": {
-                "application/json": {
-                  "schema": {
-                    "$ref": "#/components/schemas/SecurityAccessForbiddenError"
-                  }
-                }
-              }
-            }
-          },
-          "security": [
-            {
-              "idToken": []
-            },
-            {
-              "permissions": [
-                "settings_update"
-              ]
-            }
-          ],
-          "externalDocs": {
-            "description": "Code Example",
-            "url": "http://localhost:4200/code-examples/community#setting_post"
-          }
-        },
-        "put": {
-          "tags": [
-            "Setting"
-          ],
-          "summary": "Update a setting",
-          "description": "Find and update a setting in the database\n",
-          "operationId": "settingUpdate",
-          "requestBody": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/SettingUpdateEvent"
-                }
-              }
-            }
-          },
-          "responses": {
-            "200": {
-              "description": "OK"
-            },
-            "400": {
-              "description": "Body is empty or setting id is empty",
-              "content": {
-                "application/json": {
-                  "schema": {
-                    "$ref": "#/components/schemas/SettingEmptyBodyError"
-                  }
-                }
-              }
-            },
-            "401": {
-              "description": "You must login before call this endpoint",
-              "content": {
-                "application/json": {
-                  "schema": {
-                    "$ref": "#/components/schemas/SecurityAccessUnauthorizedError"
-                  }
-                }
-              }
-            },
-            "403": {
-              "description": "User does not have the necessary permissions",
-              "content": {
-                "application/json": {
-                  "schema": {
-                    "$ref": "#/components/schemas/SecurityAccessForbiddenError"
-                  }
-                }
-              }
-            }
-          },
-          "security": [
-            {
-              "idToken": []
-            },
-            {
-              "permissions": [
-                "settings_update"
-              ]
-            }
-          ],
-          "externalDocs": {
-            "description": "Code Example",
-            "url": "http://localhost:4200/code-examples/community#setting_put"
-          }
-        },
-        "get": {
-          "tags": [
-            "Setting"
-          ],
-          "summary": "Get current ecosystem setting",
-          "description": "Find current ecosystem setting in the database\n",
-          "operationId": "setting",
-          "responses": {
-            "200": {
-              "description": "Get the current setting successfully",
-              "content": {
-                "application/json": {
-                  "schema": {
-                    "$ref": "#/components/schemas/Setting"
-                  }
-                }
-              }
-            },
-            "400": {
-              "description": "Setting is not configured",
-              "content": {
-                "application/json": {
-                  "schema": {
-                    "$ref": "#/components/schemas/SettingNotConfiguredError"
-                  }
-                }
-              }
-            },
-            "401": {
-              "description": "You must login before call this endpoint",
-              "content": {
-                "application/json": {
-                  "schema": {
-                    "$ref": "#/components/schemas/SecurityAccessUnauthorizedError"
-                  }
-                }
-              }
-            }
-          },
-          "security": [
-            {
-              "idToken": []
-            }
-          ],
-          "externalDocs": {
-            "description": "Code Example",
-            "url": "http://localhost:4200/code-examples/community#setting_get"
-          }
-        }
       }
     },
     "components": {
       "schemas": {
         "CreateMember": {
-          "required": [
-            "state",
-            "name",
-            "lastname",
-            "address",
-            "email",
-            "about",
-            "image",
-            "socialNetworks",
-            "experiences",
-            "educations"
-          ],
           "properties": {
             "state": {
               "type": "string",
@@ -8890,19 +9916,6 @@ export class ApisConstants {
           }
         },
         "UpdateMember": {
-          "required": [
-            "id",
-            "state",
-            "name",
-            "lastname",
-            "address",
-            "email",
-            "about",
-            "image",
-            "socialNetworks",
-            "experiences",
-            "educations"
-          ],
           "properties": {
             "id": {
               "type": "string",
@@ -8961,6 +9974,68 @@ export class ApisConstants {
             }
           }
         },
+        "LoggedMember": {
+          "properties": {
+            "id": {
+              "type": "string",
+              "format": "mongo-id",
+              "example": "61445159784bca6ef764c6df"
+            },
+            "state": {
+              "type": "string",
+              "enum": [
+                "ACCEPTED",
+                "PENDING",
+                "REJECTED"
+              ]
+            },
+            "name": {
+              "type": "string",
+              "example": "Carlos"
+            },
+            "lastname": {
+              "type": "string",
+              "example": "Guarin"
+            },
+            "address": {
+              "$ref": "#/components/schemas/Address"
+            },
+            "email": {
+              "type": "string",
+              "format": "email",
+              "example": "pruebaemail@gmail.com"
+            },
+            "about": {
+              "type": "string",
+              "example": "Developer"
+            },
+            "image": {
+              "$ref": "#/components/schemas/Image"
+            },
+            "socialNetworks": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "example": "https://www.instagram.com/user1, https://www.twitter.com/user1, https://www.linkedln.com/user1"
+              }
+            },
+            "experiences": {
+              "type": "array",
+              "items": {
+                "$ref": "#/components/schemas/Experience"
+              }
+            },
+            "educations": {
+              "type": "array",
+              "items": {
+                "$ref": "#/components/schemas/Education"
+              }
+            },
+            "user": {
+              "$ref": "#/components/schemas/User"
+            }
+          }
+        },
         "Image": {
           "required": [
             "original",
@@ -8983,12 +10058,6 @@ export class ApisConstants {
           }
         },
         "Crop": {
-          "required": [
-            "x",
-            "y",
-            "width",
-            "height"
-          ],
           "type": "object",
           "properties": {
             "x": {
@@ -9010,17 +10079,6 @@ export class ApisConstants {
           }
         },
         "Education": {
-          "required": [
-            "id",
-            "school",
-            "degree",
-            "fieldOfStudy",
-            "startDate",
-            "endDate",
-            "grade",
-            "activitiesAndSocieties",
-            "description"
-          ],
           "properties": {
             "id": {
               "type": "string",
@@ -9064,16 +10122,6 @@ export class ApisConstants {
           }
         },
         "Experience": {
-          "required": [
-            "id",
-            "title",
-            "type",
-            "company",
-            "location",
-            "startDate",
-            "endDate",
-            "description"
-          ],
           "properties": {
             "id": {
               "type": "string",
@@ -9108,12 +10156,6 @@ export class ApisConstants {
           }
         },
         "Address": {
-          "required": [
-            "lat",
-            "lng",
-            "formatted",
-            "components"
-          ],
           "properties": {
             "lat": {
               "type": "number",
@@ -9136,11 +10178,6 @@ export class ApisConstants {
           }
         },
         "AddressComponent": {
-          "required": [
-            "name",
-            "shortname",
-            "type"
-          ],
           "properties": {
             "name": {
               "type": "string",
@@ -9201,15 +10238,6 @@ export class ApisConstants {
           }
         },
         "Document": {
-          "required": [
-            "id",
-            "link",
-            "category",
-            "roomId",
-            "memberId",
-            "filename",
-            "createdAt"
-          ],
           "properties": {
             "id": {
               "type": "string",
@@ -9252,12 +10280,6 @@ export class ApisConstants {
           }
         },
         "Link": {
-          "required": [
-            "id",
-            "url",
-            "roomId",
-            "createdAt"
-          ],
           "properties": {
             "id": {
               "type": "string",
@@ -9281,16 +10303,6 @@ export class ApisConstants {
           }
         },
         "OnlineEvent": {
-          "required": [
-            "id",
-            "ownerMember",
-            "title",
-            "timestamp",
-            "description",
-            "imageUrl",
-            "url",
-            "participants"
-          ],
           "properties": {
             "id": {
               "type": "string",
@@ -9329,13 +10341,6 @@ export class ApisConstants {
           }
         },
         "DirectChat": {
-          "required": [
-            "id",
-            "ownerMember",
-            "participants",
-            "createdAt",
-            "actions"
-          ],
           "properties": {
             "id": {
               "type": "string",
@@ -9361,14 +10366,14 @@ export class ApisConstants {
               "items": {
                 "$ref": "#/components/schemas/RoomAction"
               }
+            },
+            "meetStarted": {
+              "type": "boolean",
+              "example": true
             }
           }
         },
         "RoomAction": {
-          "required": [
-            "name",
-            "url"
-          ],
           "properties": {
             "name": {
               "type": "string",
@@ -9381,10 +10386,6 @@ export class ApisConstants {
           }
         },
         "Participant": {
-          "required": [
-            "memberId",
-            "state"
-          ],
           "properties": {
             "memberId": {
               "type": "string",
@@ -9401,16 +10402,6 @@ export class ApisConstants {
           }
         },
         "FaceToFaceEvent": {
-          "required": [
-            "id",
-            "ownerMember",
-            "title",
-            "timestamp",
-            "description",
-            "imageUrl",
-            "direction",
-            "participants"
-          ],
           "properties": {
             "id": {
               "type": "string",
@@ -9449,14 +10440,6 @@ export class ApisConstants {
           }
         },
         "Message": {
-          "required": [
-            "id",
-            "roomId",
-            "authorMemberId",
-            "content",
-            "documents",
-            "createdAt"
-          ],
           "properties": {
             "id": {
               "type": "string",
@@ -9491,16 +10474,6 @@ export class ApisConstants {
           }
         },
         "FollowUpRoom": {
-          "required": [
-            "id",
-            "ownerMember",
-            "participants",
-            "createdAt",
-            "actions",
-            "title",
-            "description",
-            "state"
-          ],
           "properties": {
             "id": {
               "type": "string",
@@ -9545,15 +10518,6 @@ export class ApisConstants {
           }
         },
         "PublicChannel": {
-          "required": [
-            "id",
-            "ownerMember",
-            "participants",
-            "createdAt",
-            "actions",
-            "title",
-            "description"
-          ],
           "properties": {
             "id": {
               "type": "string",
@@ -9591,16 +10555,6 @@ export class ApisConstants {
           }
         },
         "WallPost": {
-          "required": [
-            "id",
-            "ownerMember",
-            "content",
-            "hashtags",
-            "attachments",
-            "comments",
-            "likes",
-            "createdAt"
-          ],
           "properties": {
             "id": {
               "type": "string",
@@ -9649,10 +10603,6 @@ export class ApisConstants {
           }
         },
         "WallPostAttachment": {
-          "required": [
-            "link",
-            "documentCategory"
-          ],
           "properties": {
             "link": {
               "type": "string",
@@ -9671,12 +10621,6 @@ export class ApisConstants {
           }
         },
         "CreateComment": {
-          "required": [
-            "content",
-            "authorMember",
-            "likes",
-            "createdAt"
-          ],
           "properties": {
             "content": {
               "type": "string",
@@ -9696,28 +10640,6 @@ export class ApisConstants {
           }
         },
         "Actor": {
-          "required": [
-            "id",
-            "type",
-            "state",
-            "ownerMember",
-            "name",
-            "city",
-            "country",
-            "address",
-            "latitude",
-            "longitude",
-            "description",
-            "phone",
-            "web",
-            "image",
-            "myFacet",
-            "questFacet",
-            "investment",
-            "financial",
-            "socialNetworks",
-            "media"
-          ],
           "properties": {
             "id": {
               "type": "string",
@@ -9822,12 +10744,6 @@ export class ApisConstants {
           }
         },
         "Facet": {
-          "required": [
-            "industries",
-            "businessModels",
-            "socialInnovations",
-            "deepTechs"
-          ],
           "properties": {
             "industries": {
               "type": "array",
@@ -9860,14 +10776,6 @@ export class ApisConstants {
           }
         },
         "Investment": {
-          "required": [
-            "stage",
-            "stagesInvestments",
-            "numberPastExist",
-            "trlStage",
-            "numberCurrentInvestments",
-            "countriesInteres"
-          ],
           "properties": {
             "stage": {
               "type": "string",
@@ -9919,18 +10827,6 @@ export class ApisConstants {
           }
         },
         "Financial": {
-          "required": [
-            "stage",
-            "seekedCapital",
-            "trlStage",
-            "raisedCapital",
-            "totalFunding",
-            "premoneyValuation",
-            "fundingStage",
-            "lastFunding",
-            "numbersEmployees",
-            "currency"
-          ],
           "properties": {
             "stage": {
               "type": "string",
@@ -10007,84 +10903,7 @@ export class ApisConstants {
             }
           }
         },
-        "LoggedMember": {
-          "required": [
-            "id",
-            "state",
-            "name",
-            "lastname",
-            "address",
-            "email",
-            "about",
-            "image",
-            "socialNetworks",
-            "experiences",
-            "educations",
-            "loggedUser"
-          ],
-          "properties": {
-            "id": {
-              "type": "string",
-              "format": "mongo-id",
-              "example": "61445159784bca6ef764c6df"
-            },
-            "state": {
-              "type": "string",
-              "enum": [
-                "ACCEPTED",
-                "PENDING",
-                "REJECTED"
-              ]
-            },
-            "name": {
-              "type": "string",
-              "example": "Carlos"
-            },
-            "lastname": {
-              "type": "string",
-              "example": "Guarin"
-            },
-            "address": {
-              "$ref": "#/components/schemas/Address"
-            },
-            "email": {
-              "type": "string",
-              "format": "email",
-              "example": "pruebaemail@gmail.com"
-            },
-            "about": {
-              "type": "string",
-              "example": "Developer"
-            },
-            "image": {
-              "$ref": "#/components/schemas/Image"
-            },
-            "socialNetworks": {
-              "type": "array",
-              "items": {
-                "type": "string",
-                "example": "https://www.instagram.com/user1, https://www.twitter.com/user1, https://www.linkedln.com/user1"
-              }
-            },
-            "experiences": {
-              "type": "array",
-              "items": {
-                "$ref": "#/components/schemas/Experience"
-              }
-            },
-            "educations": {
-              "type": "array",
-              "items": {
-                "$ref": "#/components/schemas/Education"
-              }
-            },
-            "loggedUser": {
-              "$ref": "#/components/schemas/User"
-            }
-          }
-        },
         "User": {
-          "type": "object",
           "properties": {
             "id": {
               "type": "string",
@@ -10124,23 +10943,6 @@ export class ApisConstants {
           "example": "DEV:ONLINE_EVENT_CREATE"
         },
         "Project": {
-          "required": [
-            "id",
-            "actorId",
-            "name",
-            "description",
-            "trlStage",
-            "media",
-            "protectionMethod",
-            "projectMethod",
-            "projectManager",
-            "teamMembers",
-            "socialNetworks",
-            "deepTechs",
-            "businessModels",
-            "industries",
-            "socialInnovation"
-          ],
           "properties": {
             "id": {
               "type": "string",
@@ -10240,19 +11042,40 @@ export class ApisConstants {
             }
           }
         },
-        "Setting": {
+        "MemberSetFcmTokenEvent": {
           "required": [
-            "id",
-            "banner"
+            "memberId",
+            "fcmTokens"
           ],
           "properties": {
-            "id": {
+            "memberId": {
               "type": "string",
               "format": "mongo-id",
               "example": "60acae8e2f799d228a4d4a85"
             },
-            "banner": {
-              "$ref": "#/components/schemas/Image"
+            "fcmTokens": {
+              "type": "array",
+              "items": {
+                "$ref": "#/components/schemas/FcmToken"
+              }
+            }
+          }
+        },
+        "FcmToken": {
+          "properties": {
+            "tokenId": {
+              "type": "string",
+              "format": "Firebase token",
+              "example": "enMcvL2-3YDmhocf25g5Nk:APA91bEljU6wo1S7Bj"
+            },
+            "device": {
+              "type": "string",
+              "example": "laptop/computer"
+            },
+            "timestamp": {
+              "type": "number",
+              "format": "timestamp",
+              "example": 1639687246
             }
           }
         },
@@ -10260,9 +11083,7 @@ export class ApisConstants {
           "required": [
             "title",
             "timestamp",
-            "description",
-            "imageUrl",
-            "url"
+            "description"
           ],
           "properties": {
             "title": {
@@ -10292,9 +11113,7 @@ export class ApisConstants {
             "id",
             "title",
             "timestamp",
-            "description",
-            "imageUrl",
-            "url"
+            "description"
           ],
           "properties": {
             "id": {
@@ -10324,22 +11143,9 @@ export class ApisConstants {
             }
           }
         },
-        "OnlineEventDeleteEvent": {
-          "required": [
-            "id"
-          ],
-          "properties": {
-            "id": {
-              "type": "string",
-              "format": "mongo-id",
-              "example": "60acae8e2f799d228a4d4a85"
-            }
-          }
-        },
         "OnlineEventSubscriptionEvent": {
           "required": [
-            "id",
-            "participants"
+            "id"
           ],
           "properties": {
             "id": {
@@ -10357,8 +11163,7 @@ export class ApisConstants {
         },
         "OnlineEventUnsubscriptionEvent": {
           "required": [
-            "id",
-            "participants"
+            "id"
           ],
           "properties": {
             "id": {
@@ -10378,11 +11183,8 @@ export class ApisConstants {
           "required": [
             "school",
             "degree",
-            "fieldOfStudy",
-            "location",
+            "address",
             "startDate",
-            "endDate",
-            "grade",
             "description"
           ],
           "properties": {
@@ -10398,18 +11200,18 @@ export class ApisConstants {
               "type": "string",
               "example": "Software Engineering"
             },
-            "location": {
+            "address": {
               "$ref": "#/components/schemas/Address"
             },
             "startDate": {
-              "type": "string",
-              "format": "LocalDate",
-              "example": "2021-03-01T00:00:00.000Z"
+              "type": "number",
+              "format": "number of days since 01-01-1970",
+              "example": 167999
             },
             "endDate": {
-              "type": "string",
-              "format": "LocalDate",
-              "example": "2021-03-01T00:00:00.000Z"
+              "type": "number",
+              "format": "number of days since 01-01-1970",
+              "example": 167999
             },
             "grade": {
               "type": "number",
@@ -10426,11 +11228,8 @@ export class ApisConstants {
             "id",
             "school",
             "degree",
-            "fieldOfStudy",
-            "location",
+            "address",
             "startDate",
-            "endDate",
-            "grade",
             "description"
           ],
           "properties": {
@@ -10456,13 +11255,13 @@ export class ApisConstants {
             },
             "startDate": {
               "type": "string",
-              "format": "LocalDate",
-              "example": "2021-03-01T00:00:00.000Z"
+              "format": "number of days since 01-01-1970",
+              "example": 167999
             },
             "endDate": {
               "type": "string",
-              "format": "LocalDate",
-              "example": "2021-03-01T00:00:00.000Z"
+              "format": "number of days since 01-01-1970",
+              "example": 167999
             },
             "grade": {
               "type": "number",
@@ -10477,11 +11276,9 @@ export class ApisConstants {
         "MemberExperienceCreateEvent": {
           "required": [
             "title",
-            "type",
             "company",
-            "location",
+            "address",
             "startDate",
-            "endDate",
             "description"
           ],
           "properties": {
@@ -10489,38 +11286,22 @@ export class ApisConstants {
               "type": "string",
               "example": "Back-end developer en Moonshot Innovation"
             },
-            "type": {
-              "type": "string",
-              "enum": [
-                "FULL_TIME",
-                "PART_TIME",
-                "SELF_EMPLOYED",
-                "FREELANCE",
-                "CONTRACT",
-                "INTERNSHIP",
-                "APPRENTICESHIP",
-                "INTERIM",
-                "OFFICIAL",
-                "WORK_AND_SERVICE_CONTRACT",
-                "DUAL_VOCATIONAL_TRAINING"
-              ]
-            },
             "company": {
               "type": "string",
               "example": "Moonshot Innovation"
             },
-            "location": {
+            "address": {
               "$ref": "#/components/schemas/Address"
             },
             "startDate": {
               "type": "string",
-              "format": "LocalDate",
-              "example": "2021-03-01T00:00:00.000Z"
+              "format": "number of days since 01-01-1970",
+              "example": 167999
             },
             "endDate": {
               "type": "string",
-              "format": "LocalDate",
-              "example": "2021-03-01T00:00:00.000Z"
+              "format": "number of days since 01-01-1970",
+              "example": 167999
             },
             "description": {
               "type": "string",
@@ -10532,11 +11313,9 @@ export class ApisConstants {
           "required": [
             "id",
             "title",
-            "type",
             "company",
-            "location",
+            "adress",
             "startDate",
-            "endDate",
             "description"
           ],
           "properties": {
@@ -10549,27 +11328,11 @@ export class ApisConstants {
               "type": "string",
               "example": "Back-end developer en Moonshot Innovation"
             },
-            "type": {
-              "type": "string",
-              "enum": [
-                "FULL_TIME",
-                "PART_TIME",
-                "SELF_EMPLOYED",
-                "FREELANCE",
-                "CONTRACT",
-                "INTERNSHIP",
-                "APPRENTICESHIP",
-                "INTERIM",
-                "OFFICIAL",
-                "WORK_AND_SERVICE_CONTRACT",
-                "DUAL_VOCATIONAL_TRAINING"
-              ]
-            },
             "company": {
               "type": "string",
               "example": "Moonshot Innovation"
             },
-            "location": {
+            "address": {
               "$ref": "#/components/schemas/Address"
             },
             "startDate": {
@@ -10590,8 +11353,7 @@ export class ApisConstants {
         },
         "FaceToFaceEventSubscriptionEvent": {
           "required": [
-            "id",
-            "participants"
+            "id"
           ],
           "properties": {
             "id": {
@@ -10609,8 +11371,7 @@ export class ApisConstants {
         },
         "FaceToFaceEventUnsubscriptionEvent": {
           "required": [
-            "id",
-            "participants"
+            "id"
           ],
           "properties": {
             "id": {
@@ -10629,10 +11390,7 @@ export class ApisConstants {
         "FaceToFaceEventCreateEvent": {
           "required": [
             "title",
-            "timestamp",
-            "description",
-            "imageUrl",
-            "direction"
+            "description"
           ],
           "properties": {
             "title": {
@@ -10661,10 +11419,7 @@ export class ApisConstants {
           "required": [
             "id",
             "title",
-            "timestamp",
-            "description",
-            "imageUrl",
-            "direction"
+            "description"
           ],
           "properties": {
             "id": {
@@ -10696,8 +11451,6 @@ export class ApisConstants {
         },
         "PublicChannelCreateEvent": {
           "required": [
-            "participants",
-            "actions",
             "title",
             "description"
           ],
@@ -10721,15 +11474,16 @@ export class ApisConstants {
             "description": {
               "type": "string",
               "example": "We want to test the operation of the room"
+            },
+            "meetStarted": {
+              "type": "boolean",
+              "example": false
             }
           }
         },
         "PublicChannelUpdateEvent": {
           "required": [
             "id",
-            "ownerMemberId",
-            "participants",
-            "actions",
             "title",
             "description"
           ],
@@ -10763,6 +11517,10 @@ export class ApisConstants {
             "description": {
               "type": "string",
               "example": "We want to test the operation of the room"
+            },
+            "meetStarted": {
+              "type": "boolean",
+              "example": true
             }
           }
         },
@@ -10804,11 +11562,7 @@ export class ApisConstants {
         },
         "WallPostCreateEvent": {
           "required": [
-            "content",
-            "attachments",
-            "comments",
-            "likes",
-            "createdAt"
+            "content"
           ],
           "properties": {
             "content": {
@@ -10845,8 +11599,7 @@ export class ApisConstants {
         "WallPostUpdateEvent": {
           "required": [
             "id",
-            "content",
-            "attachments"
+            "content"
           ],
           "properties": {
             "id": {
@@ -10891,34 +11644,15 @@ export class ApisConstants {
           }
         },
         "WallPostCommentAddEvent": {
-          "required": [
-            "id",
-            "comment"
-          ],
           "properties": {
-            "id": {
-              "type": "string",
-              "format": "mongo-id",
-              "example": "60acae8e2f799d228a4d4a85"
-            },
             "comment": {
               "$ref": "#/components/schemas/CreateComment"
             }
           }
         },
         "WallPostCommentLikeEvent": {
-          "required": [
-            "id",
-            "memberId",
-            "commentId"
-          ],
           "properties": {
             "id": {
-              "type": "string",
-              "format": "mongo-id",
-              "example": "60acae8e2f799d228a4d4a85"
-            },
-            "memberId": {
               "type": "string",
               "format": "mongo-id",
               "example": "60acae8e2f799d228a4d4a85"
@@ -10956,27 +11690,15 @@ export class ApisConstants {
         },
         "ActorCreateEvent": {
           "required": [
-            "type",
-            "state",
             "ownerMember",
             "name",
-            "city",
+            "image",
             "country",
+            "description",
             "address",
             "latitude",
             "longitude",
-            "description",
-            "phone",
-            "web",
-            "image",
-            "myFacet",
-            "questFacet",
-            "investment",
-            "financial",
-            "socialNetworks",
-            "media",
-            "password",
-            "repeatPassword"
+            "email"
           ],
           "properties": {
             "type": {
@@ -11073,38 +11795,21 @@ export class ApisConstants {
                 "type": "string",
                 "example": "www.vimeo.com/actor1"
               }
-            },
-            "password": {
-              "type": "string",
-              "example": "hola123"
-            },
-            "repeatPassword": {
-              "type": "string",
-              "example": "hola123"
             }
           }
         },
         "ActorUpdateEvent": {
           "required": [
             "id",
-            "type",
-            "state",
+            "ownerMember",
             "name",
-            "city",
+            "image",
             "country",
+            "description",
             "address",
             "latitude",
             "longitude",
-            "description",
-            "phone",
-            "web",
-            "image",
-            "myFacet",
-            "questFacet",
-            "investment",
-            "financial",
-            "socialNetworks",
-            "media"
+            "email"
           ],
           "properties": {
             "id": {
@@ -11235,11 +11940,9 @@ export class ApisConstants {
             "id",
             "name",
             "lastname",
-            "address",
             "email",
             "about",
-            "image",
-            "socialNetworks"
+            "image"
           ],
           "properties": {
             "id": {
@@ -11513,29 +12216,977 @@ export class ApisConstants {
             }
           }
         },
-        "SettingCreateEvent": {
+        "CsvFormat": {
           "required": [
-            "banner"
+            "member_name",
+            "member_lastname",
+            "member_address",
+            "member_latitude",
+            "member_longitude",
+            "member_email",
+            "member_about",
+            "member_image_content_type",
+            "member_image_url",
+            "actor_type",
+            "actor_name",
+            "actor_country",
+            "actor_address",
+            "actor_latitude",
+            "actor_longitude",
+            "actor_description",
+            "actor_image_content_type",
+            "actor_image_url"
           ],
           "properties": {
-            "banner": {
-              "$ref": "#/components/schemas/Image"
-            }
-          }
-        },
-        "SettingUpdateEvent": {
-          "required": [
-            "id",
-            "banner"
-          ],
-          "properties": {
-            "id": {
+            "member_name": {
               "type": "string",
-              "format": "mongo-id",
-              "example": "60acae8e2f799d228a4d4a85"
+              "example": "Jose"
             },
-            "banner": {
-              "$ref": "#/components/schemas/Image"
+            "member_lastname": {
+              "type": "string",
+              "example": "Fernandez"
+            },
+            "member_address": {
+              "type": "string",
+              "example": "c/Paseo de campo, 3"
+            },
+            "member_latitude": {
+              "type": "number",
+              "example": 10.6
+            },
+            "member_longitude": {
+              "type": "number",
+              "example": 19.1
+            },
+            "member_email": {
+              "type": "string",
+              "format": "email",
+              "example": "example1@gmail.com"
+            },
+            "member_about": {
+              "type": "string",
+              "example": "Moonshot developer"
+            },
+            "member_image_content_type": {
+              "type": "string",
+              "example": "image/png"
+            },
+            "member_image_url": {
+              "type": "string",
+              "example": "https://dev.moonshot.ceo/image1.png"
+            },
+            "actor_type": {
+              "type": "string",
+              "enum": [
+                "STARTUP",
+                "COMPANY",
+                "EXPERT",
+                "PERSON_INVESTOR",
+                "ORGANIZATION_INVESTOR",
+                "MENTOR",
+                "PUBLIC_ENTITY",
+                "RESEARCH_GROUP",
+                "TALENT",
+                "UNIVERSITY",
+                "NGO",
+                "HUB",
+                "CLUSTER"
+              ]
+            },
+            "actor_name": {
+              "type": "string",
+              "example": "Casual Enterprise S.L"
+            },
+            "actor_city": {
+              "type": "string",
+              "example": "Madrid"
+            },
+            "actor_country": {
+              "type": "string",
+              "example": "Spain"
+            },
+            "actor_address": {
+              "type": "string",
+              "example": "c/Pase de campo, 3"
+            },
+            "actor_latitude": {
+              "type": "number",
+              "example": 10.6
+            },
+            "actor_longitude": {
+              "type": "number",
+              "example": 19.1
+            },
+            "actor_description": {
+              "type": "string",
+              "example": "Moonshot innovation enterprise"
+            },
+            "actor_phone": {
+              "type": "string",
+              "example": 34666666666
+            },
+            "actor_web": {
+              "type": "string",
+              "example": "https://dev.moonshot.ceo"
+            },
+            "actor_image_content_type": {
+              "type": "string",
+              "example": "image/png"
+            },
+            "actor_image_url": {
+              "type": "string",
+              "example": "https://dev.moonshot.ceo/image1.png"
+            },
+            "my_facet_industries": {
+              "type": "string",
+              "enum": [
+                "AGRICULTURE_FORESTRY_AND_FISHING",
+                "ARTS_AND_ENTERTAINMENT",
+                "BIOTECHNOLOGY",
+                "CHEMICALS",
+                "COMPUTER_AND_ELECTRONICS",
+                "CONSTRUCTION",
+                "DEFENSE_AND_SECURITY",
+                "DISTRIBUTION_AND_LOGISTICS",
+                "EDUCATION",
+                "ELECTRICAL_EQUIPMENT",
+                "ELECTRICITY_AND_GAS",
+                "FINTECH_FINANCIAL_AND_INSURANCE",
+                "FOOD_AND_BEVERAGES",
+                "HEALTH_CARE",
+                "HEAVY_EQUIPMENT",
+                "HOTEL",
+                "INFORMATION_TECHNOLOGY",
+                "INTERNET_OF_THINGS",
+                "LEGAL_ACCOUNTING_ARCHITECTURE_AND_PROFESSIONAL_SERVICES",
+                "MACHINERY_AND_EQUIPMENT"
+              ]
+            },
+            "my_facet_business_models": {
+              "type": "string",
+              "enum": [
+                "TECHNOLOGY",
+                "ECOMMERCE",
+                "WEARABLES",
+                "AGENCY",
+                "MARKETING",
+                "SERVICES",
+                "SAAS",
+                "CONSUMER_PRODUCTS",
+                "OTHER"
+              ]
+            },
+            "my_facet_social_innovations": {
+              "type": "string",
+              "enum": [
+                "NO_POVERTY",
+                "ZERO_HUNGER",
+                "GOOD_HEALTH_AND_WELLBEING",
+                "QUALITY_EDUCATION",
+                "GENDER_EQUALITY",
+                "CLEAN_WATER_AND_SANITATION",
+                "AFFORDABLE_AND_CLEAN_ENERGY",
+                "DECENT_WORK_AND_ECONOMIC_GROWTH",
+                "INDUSTRY_INNOVATION_AND_INFRASTRUCTURE",
+                "REDUCED_INEQUALITIES",
+                "SUSTAINABLE_CITIES_AND_COMMUNITIES",
+                "RESPONSABLE_CONSUMPTION_AND_PRODUCTION",
+                "CLIMATE_ACTION",
+                "LIFE_BELOW_WATER",
+                "LIFE_ON_LAND",
+                "PEACE_AND_JUSTICE_STRONG_INSTITUTIONS",
+                "PARTNERSHIP_FOR_THE_GOALS"
+              ]
+            },
+            "my_facet_deep_techs": {
+              "type": "string",
+              "enum": [
+                "BIOACTIVE_MATERIALS",
+                "BIOCOMPATIBLE_ALLOYS_AND_POLYMERS",
+                "BIOMIMETICS",
+                "BIOSENSING_MATERIALS",
+                "DRUG_RELEASING_POLYMERS",
+                "ADVANCED_METALS_AND_ALLOYS",
+                "ELECTROACTIVE_POLYMERS",
+                "FERROELECTRIC_MATERIALS",
+                "FIRE_RESISTANT_MATERIALS",
+                "FUNCTIONALCOATINGS_SURFACE_TREATMENTS",
+                "MAGNETOSTRICTIVE_MATERIALS",
+                "METAMATERIALS",
+                "PIEZOELECTRIC_MATERIALS",
+                "SHAPE_MEMORY_POLYMERS_AND_ALLOYS",
+                "SUPERCONDUCTIVE_MATERIALS",
+                "QUANTUM_DOTS",
+                "MOLECULARY_IMPRINTED_POLYMERS",
+                "CARBON_NANOTUBES",
+                "DATA_STORAGE",
+                "ELECTROCHEMICAL_COMPONENTS",
+                "GRAPHENE",
+                "NANOCELLULOSE",
+                "NANOCOMPOSITES",
+                "NANOPOROUS_MATERIALS",
+                "NANOWIRES",
+                "COMMERCIAL_UAVS",
+                "CONDUCTIVE_POLYMERS",
+                "DRONES",
+                "MEMS",
+                "MOLECULAR_TRANSISTORS",
+                "ELECTRONIC_NANOTUBES",
+                "SMART_DUST",
+                "SMART_ROBOTS",
+                "SMART_SENSORS_AND_MONITORING",
+                "THIN_FILM_SOLAR_CELLS_OPV",
+                "SOTS/SOFA",
+                "TELEMATIC_AND_V2X",
+                "PREDICTIVE_MAINTENANCE",
+                "MANUFACTURING_EXECUTION_SYSTEM_(MES)",
+                "SAFETY",
+                "AUTONOMOUS_CAR",
+                "AUTONOMOUS_DRIVING",
+                "POWERTRAIN",
+                "IOT_AND_IIOT_PLATFORMS",
+                "KERFLESS_WAFER_TECHNOLOGY",
+                "ADVANCED_AND_ENGINEERING_POLYMERS_TECHNICAL_THERMOPLASTIC",
+                "ADVANCED_CERAMICS",
+                "ADVANCED_COMPOSITES",
+                "ADVANCED_METALLIC_FOAMS",
+                "HIGH_PERFORMANCE_CONCRETE",
+                "PLATFORM_CONSOLIDATION",
+                "VAT_PHOTOPOLYMERISATION",
+                "MATERIAL_JETTING",
+                "BINDER_JETTING",
+                "MATERIAL_EXTRUSION",
+                "POWDER_BED_FUSION",
+                "SHEET_LAMINATION",
+                "DIRECTED_ENERGY_DEPOSITION",
+                "ENERGY_EFFICIENCY_IN_BUILDINGS",
+                "GREEN_MATERIALS",
+                "INDOOR_AIR_QUALITY",
+                "RESOURCE_EFFICIENCY_IN_BUILDING",
+                "IRRIGATION",
+                "VALUE_ADDED_RESOURCES_FROM_WATER",
+                "WATER_FILTRATION",
+                "WATER_HARVESTING",
+                "WATER_INFRASTRUCTURE_AND_DISTRIBUTION",
+                "WATER_RESOURCE_IDENTIFICATION",
+                "PLASTIC_WASTE_TECHNOLOGIES",
+                "BIOREACTOR_LANDFILL",
+                "MECHANICAL_BIOLOGICAL_TREATMENT_OF_MUNICIPAL_SOLID_WASTE",
+                "PLASMA_GASIFICATION",
+                "WASTE_RECYCLING",
+                "WASTE_CONVERSION_TECHNOLOGIES",
+                "DESALINATION",
+                "INDUSTRIAL_AND_PRODUCED_WATER_PROCESSES",
+                "POINT_OF_USE_WATER_TREATMENT",
+                "WASTE_WATER_TREATMENT",
+                "WATER_DESINFECTION",
+                "ELECTROLYSIS",
+                "AGRICULTURAL_TECHNOLOGIES",
+                "ANIMAL_HEALTH",
+                "CROP_PROTECTION",
+                "CULTIVATION_AND_POST_HARVEST",
+                "FISHERIES_AND_AQUATIC_ECOSYSTEMS_TECHNOLOGIES",
+                "FOOD_TECHNOLOGIES",
+                "GREENHOUSE",
+                "NEW_GENERATION_FERTILIZERS",
+                "SEEDS_AND_PROPAGATION",
+                "CARBON_CAPTURE_AND_STORAGE_CARBON_CAPTURE_USE_AND_STORAGE",
+                "CATALYTIC_CONVERTER",
+                "EMISSIONS_BIOLOGICAL_TREATMENT",
+                "EMISSION_MONITORING",
+                "SCRUBBING_SYSTEMS",
+                "AIR_PURIFICATION_TECHNOLOGIES",
+                "BIOMASS",
+                "CONCENTRATED_SOLAR_POWER",
+                "GEOTHERMAL",
+                "HYDROGEN_FUEL_CELL",
+                "MARINE_RENEWABLES",
+                "OCEAN_AND_HYDROGEN",
+                "SOLAR_ENERGY",
+                "WIND",
+                "KINETIC",
+                "THERMAL_ENERGY",
+                "WASTE_HEAT_RECOVERY",
+                "EFFICIENT_HEATING_AND_COOLING",
+                "HOME_AND_FACILITIES_ENERGY_MANAGEMENT",
+                "INDUSTRIAL_ENERGY_MANAGEMENT",
+                "LIGHTING",
+                "SMART_APPLIANCES",
+                "SSL",
+                "LIGHT_EMITTING_DIODE",
+                "ORGANIC_LIGHT_EMITTING_DIODE",
+                "FUEL_CELLS",
+                "LITHIUM_ION",
+                "METAL_AIR",
+                "REDOX_FLOW_BATTERIES",
+                "SUPERCAPACITORS",
+                "BATTERY_MANAGEMENT_SYSTEM",
+                "ON_BOARD_FAST_CHARGING",
+                "POWERTRAIN",
+                "NANOWIRE_BATTERIES",
+                "TENG_TRIBOELECTRIC_NANOGENERATOR",
+                "GRAPHENE_BATTERIES",
+                "FOAM_BATTERIES",
+                "SODIUM_ION_BATTERIES",
+                "LIQUID_FLOW_BATTERIES",
+                "CARBON_ION_BATTERY",
+                "ZINC_AIR_BATTERIES",
+                "STRETCHABLE_BATTERIES",
+                "SMART_CLOTHING_BATTERY",
+                "SOUND_POWERED_CHARGING",
+                "URINE_POWERED_BATTERIES",
+                "ALUMINIUM_AIR_BATTERY",
+                "FLASH_BATTERIES",
+                "ITES",
+                "GEOMECHANICAL_PUMPED_STORAGE",
+                "KINETIC_ENERGY_STORAGE",
+                "VANADIUM_FLOW_BATTERY",
+                "CHARGING_INFRASTRUCTURE",
+                "MANAGEMENT",
+                "MANAGEMENT_MEASURING_AND_CONTROL",
+                "MICROGRIDS",
+                "SMART_METERS",
+                "OVER_THE_AIR_CHARGING",
+                "BIO_HEATING",
+                "BIODIESEL_ADVANCED",
+                "CO_GENERATION",
+                "MICROBIOME",
+                "BRAIN_COMPUTER_INTERFACE",
+                "COGNITIVE_EXPERT_ADVISORS",
+                "DEEP_LEARNING",
+                "EDGE_INTELLIGENCE",
+                "ENTERPRISE_TAXONOMY_AND_ONTOLOGY_MANAGEMENT",
+                "GENERAL_PURPOSE_MACHINE_INTELLIGENCE",
+                "HUMAN_COMPUTER_INTERACTION",
+                "MACHINE_LEARNING",
+                "NATURAL_LANGUAGE_QUESTION_ANSWERING",
+                "NEURAL_NETWORKS_AND_SEMANTIC_SEARCH_ENGINES",
+                "QUANTUM_COMPUTING",
+                "SENTIMENTAL_ANALYSIS",
+                "CONVOLUTIONAL_NEURAL_NETWORK",
+                "COMPUTER_VISION",
+                "BYOD_AND_BORDERLESS_APPS",
+                "CLOUD_COMPUTING",
+                "CONTEXT_BROKERING",
+                "DATA_ANALYTICS",
+                "DATA_BROKER_PAAS",
+                "MICRO_DATA_CENTERS",
+                "PERSONAL_ANALYTICS",
+                "SMART_DATA_DISCOVERY",
+                "SOFTWARE_DEFINED_ANYTHING",
+                "ASSET_MANAGEMENT",
+                "AUGMENTED_WRITING",
+                "PUBLIC_BLOCKCHAIN",
+                "PRIVATE_BLOCKCHAIN",
+                "CONSORTIUM_BLOCKCHAIN",
+                "ANTIFRAUD_AND_IDENTITY_MANAGEMENT",
+                "AUTOMATED_SECURITY",
+                "BEHAVIORAL_ANALYTICS_AND_ANOMALY_DETECTION",
+                "CREDENTIAL_MANAGEMENT",
+                "CYBER_RISK_MANAGEMENT",
+                "DECEPTION_SECURITY",
+                "DEVICE_AUTHENTICATION",
+                "IDENTITY_AS_A_SERVICE",
+                "PREDICTIVE_INTELLIGENCE",
+                "QUANTUM_ENCRYPTION",
+                "THREAT_INTELLIGENCE",
+                "FOTA",
+                "MOBILITY",
+                "AFFECTIVE_COMPUTING",
+                "AUGMENTED_REALITY",
+                "CONVERSATIONAL_USER_INTERFACES",
+                "GAMIFICATION",
+                "GESTURE_CONTROL_DEVICES",
+                "HUMAN_AUGMENTATION",
+                "VIRTUAL_PERSONAL_ASSISTANTS",
+                "VIRTUAL_REALITY",
+                "VOLUMETRIC_DISPLAYS",
+                "E_LEARNING",
+                "DIGITAL_TWIN",
+                "VEHICLE_STYLING",
+                "V2V",
+                "V2X",
+                "IOT",
+                "GERONTECHNOLOGY",
+                "FALL_DETECTION",
+                "SMART_HOME",
+                "LIVING_COMMUNITIES",
+                "END_OF_LIFE_PLANNING",
+                "MOBILITY_AIDS",
+                "TELEHEALTH",
+                "ELDER_PLATFORMS",
+                "5G_NETWORKS",
+                "GEOLOCATION",
+                "GEOLOCATION_INDOOR_AND_OUTDOOR_POSITIONING_AND_DIGITAL_MAPPING",
+                "SMART_ANTENNAS",
+                "TABLETS_AND_SMARTPHONES_APPS",
+                "WIRELESS_SENSOR_NETWORKS",
+                "HMI_AND_INFOTAINMENT",
+                "IOT_POINT_SOLUTIONS",
+                "IOT_PLATFORMS",
+                "BLUETOOTH_5_0",
+                "WIRELESS_TECHNOLOGIES",
+                "NEAR_FIELD_TECHNOLOGY",
+                "LIFI",
+                "802_11AXSDX",
+                "GLASSES",
+                "JEWELRY",
+                "SMART_BANDS",
+                "SMART_CLOTHES",
+                "SMART_HEADGEAR",
+                "WATCHES",
+                "NEW_THERAPIES_FOR_CHRONIC_DISEASES",
+                "PERSONALIZED_MEDICINE",
+                "PLATFORMS_FOR_HEALTH",
+                "REGENERATIVE_MEDICINE",
+                "TELEHEALTH",
+                "COGNITIVE_CARE",
+                "SENSORY_AIDS",
+                "FEMTECH",
+                "MENTAL_HEALTH",
+                "CNS",
+                "INFECTIOUS_DISEASE",
+                "BIO_ROBOTICS",
+                "BIOMEDICAL_IMAGING",
+                "BIONICS",
+                "DENTAL_TECHNOLOGIES",
+                "VITAL_SIGNS_TRACKING",
+                "PERSONAL_EMERGENCY_RESPONSE",
+                "MEDICATION_MANAGEMENT",
+                "DIAGNOSTIC",
+                "ORTHOPEDIC_IMPLANT",
+                "BIOPHARMACEUTICALS_AND_VACCINE_ENGINEERING",
+                "DRUG_DEVELOPMENT",
+                "PHARMA_NANOTECHNOLOGY",
+                "PHARMACEUTICAL_TOXICITY",
+                "BIOMEDICAL_COMPUTING_AND_BIOINFORMATICS",
+                "GENE_AND_CELL_THERAPY",
+                "MICROBIOLOGY_TECHNOLOGIES",
+                "NANOBIOENGINEER",
+                "NANOBIOMATERIALS",
+                "OMICS_TECHNOLOGIES",
+                "SYNTHETIC_BIOLOGY",
+                "BODY_ENGINEERING",
+                "ARTIFICIAL_INTELLIGENCE_BASED_THERAPY_DESIGN",
+                "DNA_CAGES",
+                "EMBEDDED",
+                "EMBEDDED_IMPLANTED_AND_DIGESTIBLE_SENSORS",
+                "FLUID_BIOPSY",
+                "IMAGE_GUIDED_TECHNOLOGIES",
+                "IN_SILICO_TRIALS",
+                "MEASURING_LAB_MARKERS_AT_HOME",
+                "MONITORING_AND_PROVIDING_CARE",
+                "MONOCLONAL_ANTIBODIES",
+                "MULTI_FUNCTIONAL_RADIOLOGY",
+                "PAIN_MANAGEMENT",
+                "PRECISION_SURGERY",
+                "PREVENTION_AND_DIAGNOSIS",
+                "REAL_TIME_CANCER_DIAGNOSTICS",
+                "SMALL_MOLECULES"
+              ]
+            },
+            "quest_facet_industries": {
+              "type": "string",
+              "enum": [
+                "AGRICULTURE_FORESTRY_AND_FISHING",
+                "ARTS_AND_ENTERTAINMENT",
+                "BIOTECHNOLOGY",
+                "CHEMICALS",
+                "COMPUTER_AND_ELECTRONICS",
+                "CONSTRUCTION",
+                "DEFENSE_AND_SECURITY",
+                "DISTRIBUTION_AND_LOGISTICS",
+                "EDUCATION",
+                "ELECTRICAL_EQUIPMENT",
+                "ELECTRICITY_AND_GAS",
+                "FINTECH_FINANCIAL_AND_INSURANCE",
+                "FOOD_AND_BEVERAGES",
+                "HEALTH_CARE",
+                "HEAVY_EQUIPMENT",
+                "HOTEL",
+                "INFORMATION_TECHNOLOGY",
+                "INTERNET_OF_THINGS",
+                "LEGAL_ACCOUNTING_ARCHITECTURE_AND_PROFESSIONAL_SERVICES",
+                "MACHINERY_AND_EQUIPMENT"
+              ]
+            },
+            "quest_facet_business_models": {
+              "type": "string",
+              "enum": [
+                "TECHNOLOGY",
+                "ECOMMERCE",
+                "WEARABLES",
+                "AGENCY",
+                "MARKETING",
+                "SERVICES",
+                "SAAS",
+                "CONSUMER_PRODUCTS",
+                "OTHER"
+              ]
+            },
+            "quest_facet_social_innovations": {
+              "type": "string",
+              "enum": [
+                "NO_POVERTY",
+                "ZERO_HUNGER",
+                "GOOD_HEALTH_AND_WELLBEING",
+                "QUALITY_EDUCATION",
+                "GENDER_EQUALITY",
+                "CLEAN_WATER_AND_SANITATION",
+                "AFFORDABLE_AND_CLEAN_ENERGY",
+                "DECENT_WORK_AND_ECONOMIC_GROWTH",
+                "INDUSTRY_INNOVATION_AND_INFRASTRUCTURE",
+                "REDUCED_INEQUALITIES",
+                "SUSTAINABLE_CITIES_AND_COMMUNITIES",
+                "RESPONSABLE_CONSUMPTION_AND_PRODUCTION",
+                "CLIMATE_ACTION",
+                "LIFE_BELOW_WATER",
+                "LIFE_ON_LAND",
+                "PEACE_AND_JUSTICE_STRONG_INSTITUTIONS",
+                "PARTNERSHIP_FOR_THE_GOALS"
+              ]
+            },
+            "quest_facet_deep_techs": {
+              "type": "string",
+              "enum": [
+                "BIOACTIVE_MATERIALS",
+                "BIOCOMPATIBLE_ALLOYS_AND_POLYMERS",
+                "BIOMIMETICS",
+                "BIOSENSING_MATERIALS",
+                "DRUG_RELEASING_POLYMERS",
+                "ADVANCED_METALS_AND_ALLOYS",
+                "ELECTROACTIVE_POLYMERS",
+                "FERROELECTRIC_MATERIALS",
+                "FIRE_RESISTANT_MATERIALS",
+                "FUNCTIONALCOATINGS_SURFACE_TREATMENTS",
+                "MAGNETOSTRICTIVE_MATERIALS",
+                "METAMATERIALS",
+                "PIEZOELECTRIC_MATERIALS",
+                "SHAPE_MEMORY_POLYMERS_AND_ALLOYS",
+                "SUPERCONDUCTIVE_MATERIALS",
+                "QUANTUM_DOTS",
+                "MOLECULARY_IMPRINTED_POLYMERS",
+                "CARBON_NANOTUBES",
+                "DATA_STORAGE",
+                "ELECTROCHEMICAL_COMPONENTS",
+                "GRAPHENE",
+                "NANOCELLULOSE",
+                "NANOCOMPOSITES",
+                "NANOPOROUS_MATERIALS",
+                "NANOWIRES",
+                "COMMERCIAL_UAVS",
+                "CONDUCTIVE_POLYMERS",
+                "DRONES",
+                "MEMS",
+                "MOLECULAR_TRANSISTORS",
+                "ELECTRONIC_NANOTUBES",
+                "SMART_DUST",
+                "SMART_ROBOTS",
+                "SMART_SENSORS_AND_MONITORING",
+                "THIN_FILM_SOLAR_CELLS_OPV",
+                "SOTS/SOFA",
+                "TELEMATIC_AND_V2X",
+                "PREDICTIVE_MAINTENANCE",
+                "MANUFACTURING_EXECUTION_SYSTEM_(MES)",
+                "SAFETY",
+                "AUTONOMOUS_CAR",
+                "AUTONOMOUS_DRIVING",
+                "POWERTRAIN",
+                "IOT_AND_IIOT_PLATFORMS",
+                "KERFLESS_WAFER_TECHNOLOGY",
+                "ADVANCED_AND_ENGINEERING_POLYMERS_TECHNICAL_THERMOPLASTIC",
+                "ADVANCED_CERAMICS",
+                "ADVANCED_COMPOSITES",
+                "ADVANCED_METALLIC_FOAMS",
+                "HIGH_PERFORMANCE_CONCRETE",
+                "PLATFORM_CONSOLIDATION",
+                "VAT_PHOTOPOLYMERISATION",
+                "MATERIAL_JETTING",
+                "BINDER_JETTING",
+                "MATERIAL_EXTRUSION",
+                "POWDER_BED_FUSION",
+                "SHEET_LAMINATION",
+                "DIRECTED_ENERGY_DEPOSITION",
+                "ENERGY_EFFICIENCY_IN_BUILDINGS",
+                "GREEN_MATERIALS",
+                "INDOOR_AIR_QUALITY",
+                "RESOURCE_EFFICIENCY_IN_BUILDING",
+                "IRRIGATION",
+                "VALUE_ADDED_RESOURCES_FROM_WATER",
+                "WATER_FILTRATION",
+                "WATER_HARVESTING",
+                "WATER_INFRASTRUCTURE_AND_DISTRIBUTION",
+                "WATER_RESOURCE_IDENTIFICATION",
+                "PLASTIC_WASTE_TECHNOLOGIES",
+                "BIOREACTOR_LANDFILL",
+                "MECHANICAL_BIOLOGICAL_TREATMENT_OF_MUNICIPAL_SOLID_WASTE",
+                "PLASMA_GASIFICATION",
+                "WASTE_RECYCLING",
+                "WASTE_CONVERSION_TECHNOLOGIES",
+                "DESALINATION",
+                "INDUSTRIAL_AND_PRODUCED_WATER_PROCESSES",
+                "POINT_OF_USE_WATER_TREATMENT",
+                "WASTE_WATER_TREATMENT",
+                "WATER_DESINFECTION",
+                "ELECTROLYSIS",
+                "AGRICULTURAL_TECHNOLOGIES",
+                "ANIMAL_HEALTH",
+                "CROP_PROTECTION",
+                "CULTIVATION_AND_POST_HARVEST",
+                "FISHERIES_AND_AQUATIC_ECOSYSTEMS_TECHNOLOGIES",
+                "FOOD_TECHNOLOGIES",
+                "GREENHOUSE",
+                "NEW_GENERATION_FERTILIZERS",
+                "SEEDS_AND_PROPAGATION",
+                "CARBON_CAPTURE_AND_STORAGE_CARBON_CAPTURE_USE_AND_STORAGE",
+                "CATALYTIC_CONVERTER",
+                "EMISSIONS_BIOLOGICAL_TREATMENT",
+                "EMISSION_MONITORING",
+                "SCRUBBING_SYSTEMS",
+                "AIR_PURIFICATION_TECHNOLOGIES",
+                "BIOMASS",
+                "CONCENTRATED_SOLAR_POWER",
+                "GEOTHERMAL",
+                "HYDROGEN_FUEL_CELL",
+                "MARINE_RENEWABLES",
+                "OCEAN_AND_HYDROGEN",
+                "SOLAR_ENERGY",
+                "WIND",
+                "KINETIC",
+                "THERMAL_ENERGY",
+                "WASTE_HEAT_RECOVERY",
+                "EFFICIENT_HEATING_AND_COOLING",
+                "HOME_AND_FACILITIES_ENERGY_MANAGEMENT",
+                "INDUSTRIAL_ENERGY_MANAGEMENT",
+                "LIGHTING",
+                "SMART_APPLIANCES",
+                "SSL",
+                "LIGHT_EMITTING_DIODE",
+                "ORGANIC_LIGHT_EMITTING_DIODE",
+                "FUEL_CELLS",
+                "LITHIUM_ION",
+                "METAL_AIR",
+                "REDOX_FLOW_BATTERIES",
+                "SUPERCAPACITORS",
+                "BATTERY_MANAGEMENT_SYSTEM",
+                "ON_BOARD_FAST_CHARGING",
+                "POWERTRAIN",
+                "NANOWIRE_BATTERIES",
+                "TENG_TRIBOELECTRIC_NANOGENERATOR",
+                "GRAPHENE_BATTERIES",
+                "FOAM_BATTERIES",
+                "SODIUM_ION_BATTERIES",
+                "LIQUID_FLOW_BATTERIES",
+                "CARBON_ION_BATTERY",
+                "ZINC_AIR_BATTERIES",
+                "STRETCHABLE_BATTERIES",
+                "SMART_CLOTHING_BATTERY",
+                "SOUND_POWERED_CHARGING",
+                "URINE_POWERED_BATTERIES",
+                "ALUMINIUM_AIR_BATTERY",
+                "FLASH_BATTERIES",
+                "ITES",
+                "GEOMECHANICAL_PUMPED_STORAGE",
+                "KINETIC_ENERGY_STORAGE",
+                "VANADIUM_FLOW_BATTERY",
+                "CHARGING_INFRASTRUCTURE",
+                "MANAGEMENT",
+                "MANAGEMENT_MEASURING_AND_CONTROL",
+                "MICROGRIDS",
+                "SMART_METERS",
+                "OVER_THE_AIR_CHARGING",
+                "BIO_HEATING",
+                "BIODIESEL_ADVANCED",
+                "CO_GENERATION",
+                "MICROBIOME",
+                "BRAIN_COMPUTER_INTERFACE",
+                "COGNITIVE_EXPERT_ADVISORS",
+                "DEEP_LEARNING",
+                "EDGE_INTELLIGENCE",
+                "ENTERPRISE_TAXONOMY_AND_ONTOLOGY_MANAGEMENT",
+                "GENERAL_PURPOSE_MACHINE_INTELLIGENCE",
+                "HUMAN_COMPUTER_INTERACTION",
+                "MACHINE_LEARNING",
+                "NATURAL_LANGUAGE_QUESTION_ANSWERING",
+                "NEURAL_NETWORKS_AND_SEMANTIC_SEARCH_ENGINES",
+                "QUANTUM_COMPUTING",
+                "SENTIMENTAL_ANALYSIS",
+                "CONVOLUTIONAL_NEURAL_NETWORK",
+                "COMPUTER_VISION",
+                "BYOD_AND_BORDERLESS_APPS",
+                "CLOUD_COMPUTING",
+                "CONTEXT_BROKERING",
+                "DATA_ANALYTICS",
+                "DATA_BROKER_PAAS",
+                "MICRO_DATA_CENTERS",
+                "PERSONAL_ANALYTICS",
+                "SMART_DATA_DISCOVERY",
+                "SOFTWARE_DEFINED_ANYTHING",
+                "ASSET_MANAGEMENT",
+                "AUGMENTED_WRITING",
+                "PUBLIC_BLOCKCHAIN",
+                "PRIVATE_BLOCKCHAIN",
+                "CONSORTIUM_BLOCKCHAIN",
+                "ANTIFRAUD_AND_IDENTITY_MANAGEMENT",
+                "AUTOMATED_SECURITY",
+                "BEHAVIORAL_ANALYTICS_AND_ANOMALY_DETECTION",
+                "CREDENTIAL_MANAGEMENT",
+                "CYBER_RISK_MANAGEMENT",
+                "DECEPTION_SECURITY",
+                "DEVICE_AUTHENTICATION",
+                "IDENTITY_AS_A_SERVICE",
+                "PREDICTIVE_INTELLIGENCE",
+                "QUANTUM_ENCRYPTION",
+                "THREAT_INTELLIGENCE",
+                "FOTA",
+                "MOBILITY",
+                "AFFECTIVE_COMPUTING",
+                "AUGMENTED_REALITY",
+                "CONVERSATIONAL_USER_INTERFACES",
+                "GAMIFICATION",
+                "GESTURE_CONTROL_DEVICES",
+                "HUMAN_AUGMENTATION",
+                "VIRTUAL_PERSONAL_ASSISTANTS",
+                "VIRTUAL_REALITY",
+                "VOLUMETRIC_DISPLAYS",
+                "E_LEARNING",
+                "DIGITAL_TWIN",
+                "VEHICLE_STYLING",
+                "V2V",
+                "V2X",
+                "IOT",
+                "GERONTECHNOLOGY",
+                "FALL_DETECTION",
+                "SMART_HOME",
+                "LIVING_COMMUNITIES",
+                "END_OF_LIFE_PLANNING",
+                "MOBILITY_AIDS",
+                "TELEHEALTH",
+                "ELDER_PLATFORMS",
+                "5G_NETWORKS",
+                "GEOLOCATION",
+                "GEOLOCATION_INDOOR_AND_OUTDOOR_POSITIONING_AND_DIGITAL_MAPPING",
+                "SMART_ANTENNAS",
+                "TABLETS_AND_SMARTPHONES_APPS",
+                "WIRELESS_SENSOR_NETWORKS",
+                "HMI_AND_INFOTAINMENT",
+                "IOT_POINT_SOLUTIONS",
+                "IOT_PLATFORMS",
+                "BLUETOOTH_5_0",
+                "WIRELESS_TECHNOLOGIES",
+                "NEAR_FIELD_TECHNOLOGY",
+                "LIFI",
+                "802_11AXSDX",
+                "GLASSES",
+                "JEWELRY",
+                "SMART_BANDS",
+                "SMART_CLOTHES",
+                "SMART_HEADGEAR",
+                "WATCHES",
+                "NEW_THERAPIES_FOR_CHRONIC_DISEASES",
+                "PERSONALIZED_MEDICINE",
+                "PLATFORMS_FOR_HEALTH",
+                "REGENERATIVE_MEDICINE",
+                "TELEHEALTH",
+                "COGNITIVE_CARE",
+                "SENSORY_AIDS",
+                "FEMTECH",
+                "MENTAL_HEALTH",
+                "CNS",
+                "INFECTIOUS_DISEASE",
+                "BIO_ROBOTICS",
+                "BIOMEDICAL_IMAGING",
+                "BIONICS",
+                "DENTAL_TECHNOLOGIES",
+                "VITAL_SIGNS_TRACKING",
+                "PERSONAL_EMERGENCY_RESPONSE",
+                "MEDICATION_MANAGEMENT",
+                "DIAGNOSTIC",
+                "ORTHOPEDIC_IMPLANT",
+                "BIOPHARMACEUTICALS_AND_VACCINE_ENGINEERING",
+                "DRUG_DEVELOPMENT",
+                "PHARMA_NANOTECHNOLOGY",
+                "PHARMACEUTICAL_TOXICITY",
+                "BIOMEDICAL_COMPUTING_AND_BIOINFORMATICS",
+                "GENE_AND_CELL_THERAPY",
+                "MICROBIOLOGY_TECHNOLOGIES",
+                "NANOBIOENGINEER",
+                "NANOBIOMATERIALS",
+                "OMICS_TECHNOLOGIES",
+                "SYNTHETIC_BIOLOGY",
+                "BODY_ENGINEERING",
+                "ARTIFICIAL_INTELLIGENCE_BASED_THERAPY_DESIGN",
+                "DNA_CAGES",
+                "EMBEDDED",
+                "EMBEDDED_IMPLANTED_AND_DIGESTIBLE_SENSORS",
+                "FLUID_BIOPSY",
+                "IMAGE_GUIDED_TECHNOLOGIES",
+                "IN_SILICO_TRIALS",
+                "MEASURING_LAB_MARKERS_AT_HOME",
+                "MONITORING_AND_PROVIDING_CARE",
+                "MONOCLONAL_ANTIBODIES",
+                "MULTI_FUNCTIONAL_RADIOLOGY",
+                "PAIN_MANAGEMENT",
+                "PRECISION_SURGERY",
+                "PREVENTION_AND_DIAGNOSIS",
+                "REAL_TIME_CANCER_DIAGNOSTICS",
+                "SMALL_MOLECULES"
+              ]
+            },
+            "investment_stage": {
+              "type": "string",
+              "enum": [
+                "GOT_DECK",
+                "BUSINESS_PLAN",
+                "FIRST_PROTOTYPE",
+                "INITIAL_INTEREST",
+                "GOT_BETA",
+                "VIRALITY_SCALABILITY",
+                "FIXED_BETA",
+                "STARTED_INVOICE",
+                "RUNNING_BUSINESS"
+              ]
+            },
+            "investment_stage_investments": {
+              "type": "string",
+              "example": "Series C"
+            },
+            "investment_number_past_exist": {
+              "type": "number",
+              "example": 1
+            },
+            "investment_trl_stage": {
+              "type": "string",
+              "enum": [
+                "BASIC_PRINCIPLES_OBSERVED",
+                "TECHNOLOGY_CONCEPT_FORMULATED",
+                "EXPERIMENTAL_PROOF_OF_CONCEPT",
+                "TECHNOLOGY_VALIDATED_IN_LAB",
+                "TECHNOLOGY_VALIDATED_IN_RELEVANT_ENVIRONMENT",
+                "TECHNOLOGY_DEMONSTRATED_IN_RELEVANT_ENVIRONMENT",
+                "SYSTEM_PROTOTYPE_DEMONSTRATION_IN_OPERATIONAL_ENVIRONMENT",
+                "SYSTEM_COMPLETE_AND_QUALIFIED",
+                "ACTUAL_SYSTEM_PROVEN_IN_OPERATIONAL_ENVIRONMENT"
+              ]
+            },
+            "investment_number_current_investments": {
+              "type": "number",
+              "example": 29
+            },
+            "investment_countries_interes": {
+              "type": "string",
+              "format": "ISO 3166-1 separated by comma",
+              "example": "ES,DE,FR"
+            },
+            "financial_stage": {
+              "type": "string",
+              "enum": [
+                "GOT_DECK",
+                "BUSINESS_PLAN",
+                "FIRST_PROTOTYPE",
+                "INITIAL_INTEREST",
+                "GOT_BETA",
+                "VIRALITY_SCALABILITY",
+                "FIXED_BETA",
+                "STARTED_INVOICE",
+                "RUNNING_BUSINESS"
+              ]
+            },
+            "financial_seeked_capital": {
+              "type": "number",
+              "example": 10000
+            },
+            "financial_trl_stage": {
+              "type": "string",
+              "enum": [
+                "BASIC_PRINCIPLES_OBSERVED",
+                "TECHNOLOGY_CONCEPT_FORMULATED",
+                "EXPERIMENTAL_PROOF_OF_CONCEPT",
+                "TECHNOLOGY_VALIDATED_IN_LAB",
+                "TECHNOLOGY_VALIDATED_IN_RELEVANT_ENVIRONMENT",
+                "TECHNOLOGY_DEMONSTRATED_IN_RELEVANT_ENVIRONMENT",
+                "SYSTEM_PROTOTYPE_DEMONSTRATION_IN_OPERATIONAL_ENVIRONMENT",
+                "SYSTEM_COMPLETE_AND_QUALIFIED",
+                "ACTUAL_SYSTEM_PROVEN_IN_OPERATIONAL_ENVIRONMENT"
+              ]
+            },
+            "financial_raised_capital": {
+              "type": "number",
+              "example": 20000
+            },
+            "financial_total_funding": {
+              "type": "number",
+              "example": 40000
+            },
+            "financial_premoney_valuation": {
+              "type": "number",
+              "example": 100000
+            },
+            "financial_funding_stage": {
+              "type": "string",
+              "enum": [
+                "PRE_SEED",
+                "SEED",
+                "GROWTH_CAPITAL",
+                "SERIES_A",
+                "SERIES_B",
+                "SERIES_C",
+                "SERIES_D_E_F",
+                "GRANT"
+              ]
+            },
+            "financial_last_funding": {
+              "type": "string",
+              "format": "Date with the following format YYYY-MM-DD",
+              "example": "2021-10-15T00:00:00.000Z"
+            },
+            "financial_numbers_employees": {
+              "type": "number",
+              "example": 9
+            },
+            "financial_currency": {
+              "type": "string",
+              "enum": [
+                "USD",
+                "EUR"
+              ]
+            },
+            "size": {
+              "type": "string",
+              "enum": [
+                "SMALL",
+                "MEDIUM",
+                "LARGE"
+              ]
+            },
+            "university_type": {
+              "type": "string",
+              "enum": [
+                "PRIVATE",
+                "PUBLIC"
+              ]
+            },
+            "person_investor_type": {
+              "type": "string",
+              "enum": [
+                "BUSINESS_ANGEL",
+                "FAMILY_AND_FRIEND",
+                "OTHER"
+              ]
+            },
+            "organization_investor_type": {
+              "type": "string",
+              "enum": [
+                "VENTURE_CAPITAL",
+                "CORPORATE_VENTURE_CAPITAL",
+                "ANGEL_GROUP",
+                "FAMILY_OFFICE",
+                "ACCELERATOR_PROGRAM",
+                "INVESTMENT_BANK",
+                "GRANT_PUBLIC_FINANCING",
+                "PENSION_FUNDS",
+                "OTHER"
+              ]
             }
           }
         },
@@ -11556,6 +13207,23 @@ export class ApisConstants {
             }
           }
         },
+        "OnlineEventForbiddenError": {
+          "required": [
+            "code",
+            "message"
+          ],
+          "type": "object",
+          "properties": {
+            "message": {
+              "type": "string",
+              "example": "The online event you are trying to access is not created by you."
+            },
+            "code": {
+              "type": "string",
+              "example": "ONLINE_EVENT_FORBIDDEN"
+            }
+          }
+        },
         "FaceToFaceEventEmptyBodyError": {
           "required": [
             "code",
@@ -11570,6 +13238,23 @@ export class ApisConstants {
             "code": {
               "type": "string",
               "example": "FACE_TO_FACE_EVENT_EMPTY"
+            }
+          }
+        },
+        "FaceToFaceEventForbiddenError": {
+          "required": [
+            "code",
+            "message"
+          ],
+          "type": "object",
+          "properties": {
+            "message": {
+              "type": "string",
+              "example": "The face to face event you are trying to access is not created by you."
+            },
+            "code": {
+              "type": "string",
+              "example": "FACE_TO_FACE_EVENT_FORBIDDEN"
             }
           }
         },
@@ -11590,6 +13275,23 @@ export class ApisConstants {
             }
           }
         },
+        "DirectChatInvalidIdError": {
+          "required": [
+            "code",
+            "message"
+          ],
+          "type": "object",
+          "properties": {
+            "message": {
+              "type": "string",
+              "example": "Invalid direct chat ID."
+            },
+            "code": {
+              "type": "string",
+              "example": "DIRECT_CHAT_INVALID_ID"
+            }
+          }
+        },
         "FollowUpRoomEmptyBodyError": {
           "required": [
             "code",
@@ -11604,23 +13306,6 @@ export class ApisConstants {
             "code": {
               "type": "string",
               "example": "FOLLOW_UP_ROOM_EMPTY"
-            }
-          }
-        },
-        "DeleteMessageEmptyBodyError": {
-          "required": [
-            "code",
-            "message"
-          ],
-          "type": "object",
-          "properties": {
-            "message": {
-              "type": "string",
-              "example": "The message object is empty."
-            },
-            "code": {
-              "type": "string",
-              "example": "DELETE_MESSAGE_EMPTY"
             }
           }
         },
@@ -11743,6 +13428,23 @@ export class ApisConstants {
             }
           }
         },
+        "AddMessageForbiddenError": {
+          "required": [
+            "code",
+            "message"
+          ],
+          "type": "object",
+          "properties": {
+            "message": {
+              "type": "string",
+              "example": "The message you are trying to delete is not owned by you."
+            },
+            "code": {
+              "type": "string",
+              "example": "DELETE_MESSAGE_NOT_ALLOWED"
+            }
+          }
+        },
         "AddMessageEmptyBodyError": {
           "required": [
             "code",
@@ -11761,6 +13463,23 @@ export class ApisConstants {
           }
         },
         "WallPostEmptyBodyError": {
+          "required": [
+            "code",
+            "message"
+          ],
+          "type": "object",
+          "properties": {
+            "message": {
+              "type": "string",
+              "example": "Wall post is empty."
+            },
+            "code": {
+              "type": "string",
+              "example": "WALL_POST_EMPTY"
+            }
+          }
+        },
+        "WallPostForbiddenError": {
           "required": [
             "code",
             "message"
@@ -11862,40 +13581,6 @@ export class ApisConstants {
             }
           }
         },
-        "SettingEmptyBodyError": {
-          "required": [
-            "code",
-            "message"
-          ],
-          "type": "object",
-          "properties": {
-            "message": {
-              "type": "string",
-              "example": "The setting object is empty."
-            },
-            "code": {
-              "type": "string",
-              "example": "SETTING_EMPTY"
-            }
-          }
-        },
-        "SettingNotConfiguredError": {
-          "required": [
-            "code",
-            "message"
-          ],
-          "type": "object",
-          "properties": {
-            "message": {
-              "type": "string",
-              "example": "Setting is not configured already."
-            },
-            "code": {
-              "type": "string",
-              "example": "SETTING_NOT_CONFIGURED"
-            }
-          }
-        },
         "WallPostInvalidIdError": {
           "required": [
             "code",
@@ -11964,6 +13649,23 @@ export class ApisConstants {
             }
           }
         },
+        "PublicChannelForbiddenError": {
+          "required": [
+            "code",
+            "message"
+          ],
+          "type": "object",
+          "properties": {
+            "message": {
+              "type": "string",
+              "example": "The public channel you are trying to access is not created by you."
+            },
+            "code": {
+              "type": "string",
+              "example": "PUBLIC_CHANNEL_FORBIDDEN"
+            }
+          }
+        },
         "PublicChannelEventEmptyUnsuscriptionError": {
           "required": [
             "code",
@@ -11998,6 +13700,10 @@ export class ApisConstants {
               "items": {
                 "$ref": "#/components/schemas/RoomAction"
               }
+            },
+            "meetStarted": {
+              "type": "boolean",
+              "example": true
             }
           }
         },
@@ -12023,11 +13729,8 @@ export class ApisConstants {
         },
         "FollowUpRoomCreateEvent": {
           "required": [
-            "participants",
-            "actions",
             "title",
-            "description",
-            "state"
+            "description"
           ],
           "properties": {
             "participants": {
@@ -12056,14 +13759,16 @@ export class ApisConstants {
                 "OPEN",
                 "CLOSED"
               ]
+            },
+            "meetStarted": {
+              "type": "boolean",
+              "example": false
             }
           }
         },
         "FollowUpRoomUpdateEvent": {
           "required": [
             "id",
-            "participants",
-            "actions",
             "title",
             "description"
           ],
@@ -12092,13 +13797,16 @@ export class ApisConstants {
             "description": {
               "type": "string",
               "example": "We want to test the operation of the room"
+            },
+            "meetStarted": {
+              "type": "boolean",
+              "example": true
             }
           }
         },
         "FollowUpRoomAddMemberEvent": {
           "required": [
-            "id",
-            "memberIds"
+            "id"
           ],
           "properties": {
             "id": {
@@ -12119,7 +13827,6 @@ export class ApisConstants {
         "FollowUpRoomRemoveMemberEvent": {
           "required": [
             "id",
-            "leaveMemberIds",
             "newOwnerMemberId"
           ],
           "properties": {
@@ -12170,8 +13877,7 @@ export class ApisConstants {
         "MessageAddEvent": {
           "required": [
             "roomId",
-            "content",
-            "documents"
+            "content"
           ],
           "properties": {
             "roomId": {
@@ -12182,6 +13888,18 @@ export class ApisConstants {
             "content": {
               "type": "string",
               "example": "Hello world"
+            },
+            "type": {
+              "type": "string",
+              "enum": [
+                "MEMBER_MESSAGE",
+                "MEET_START",
+                "MEET_END"
+              ]
+            },
+            "module": {
+              "type": "string",
+              "example": "community"
             },
             "documents": {
               "type": "array",
@@ -12269,28 +13987,195 @@ export class ApisConstants {
           "name": "COOKIE_USER_EMAIL",
           "in": "header"
         },
-        "permissions": {
+        "onlineEventCreate": {
           "type": "oauth2",
           "description": "This define all permisions required in Core API",
           "flows": {
             "authorizationCode": {
               "scopes": {
-                "online_event_create": "Permission required to create an online event",
-                "online_event_any_update": "Permission required to update any online event",
-                "online_event_any_delete": "Permission required to remove any online event",
-                "face_to_face_event_create": "Permission required to create a face to face event",
-                "face_to_face_event_any_update": "Permission required to update any face to face event",
-                "face_to_face_event_any_delete": "Permission required to remove any face to face event",
-                "direct_chat_any_list": "Permission required to see all direct chats",
-                "follow_up_room_any_list": "Permission required to see all direct chats",
-                "public_channel_create": "Permission required to create a public channel",
-                "public_channel_any_update": "Permission required to update any public channel",
-                "public_channel_any_delete": "Permission required to remove any public channel",
-                "wall_post_create": "Permission required to create a wall post",
-                "wall_post_any_update": "Permission required to update any wall post",
-                "wall_post_any_delete": "Permission required to remove any wall post",
-                "actor_management": "Permission required to accept or deny actors",
-                "settings_update": "Permission required to modify ecosystem settings"
+                "ONLINE_EVENT_CREATE": "Permission required to create an online event"
+              },
+              "authorizationUrl": "https://dev.moonshot.ceo/api/federation/login",
+              "tokenUrl": "https://dev.moonshot.ceo/api/federation/token"
+            }
+          }
+        },
+        "onlineEventAnyUpdate": {
+          "type": "oauth2",
+          "description": "This define all permisions required in Core API",
+          "flows": {
+            "authorizationCode": {
+              "scopes": {
+                "ONLINE_EVENT_ANY_UPDATE": "Permission required to update any online event"
+              },
+              "authorizationUrl": "https://dev.moonshot.ceo/api/federation/login",
+              "tokenUrl": "https://dev.moonshot.ceo/api/federation/token"
+            }
+          }
+        },
+        "onlineEventAnyDelete": {
+          "type": "oauth2",
+          "description": "This define all permisions required in Core API",
+          "flows": {
+            "authorizationCode": {
+              "scopes": {
+                "ONLINE_EVENT_ANY_DELETE": "Permission required to remove any online event"
+              },
+              "authorizationUrl": "https://dev.moonshot.ceo/api/federation/login",
+              "tokenUrl": "https://dev.moonshot.ceo/api/federation/token"
+            }
+          }
+        },
+        "faceToFaceEventCreate": {
+          "type": "oauth2",
+          "description": "This define all permisions required in Core API",
+          "flows": {
+            "authorizationCode": {
+              "scopes": {
+                "FACE_TO_FACE_EVENT_CREATE": "Permission required to create a face to face event"
+              },
+              "authorizationUrl": "https://dev.moonshot.ceo/api/federation/login",
+              "tokenUrl": "https://dev.moonshot.ceo/api/federation/token"
+            }
+          }
+        },
+        "faceToFaceEventAnyUpdate": {
+          "type": "oauth2",
+          "description": "This define all permisions required in Core API",
+          "flows": {
+            "authorizationCode": {
+              "scopes": {
+                "FACE_TO_FACE_EVENT_ANY_UPDATE": "Permission required to update any face to face event"
+              },
+              "authorizationUrl": "https://dev.moonshot.ceo/api/federation/login",
+              "tokenUrl": "https://dev.moonshot.ceo/api/federation/token"
+            }
+          }
+        },
+        "faceToFaceEventAnyDelete": {
+          "type": "oauth2",
+          "description": "This define all permisions required in Core API",
+          "flows": {
+            "authorizationCode": {
+              "scopes": {
+                "FACE_TO_FACE_EVENT_ANY_DELETE": "Permission required to remove any face to face event"
+              },
+              "authorizationUrl": "https://dev.moonshot.ceo/api/federation/login",
+              "tokenUrl": "https://dev.moonshot.ceo/api/federation/token"
+            }
+          }
+        },
+        "directChatAnyList": {
+          "type": "oauth2",
+          "description": "This define all permisions required in Core API",
+          "flows": {
+            "authorizationCode": {
+              "scopes": {
+                "DIRECT_CHAT_ANY_LIST": "Permission required to see all direct chats"
+              },
+              "authorizationUrl": "https://dev.moonshot.ceo/api/federation/login",
+              "tokenUrl": "https://dev.moonshot.ceo/api/federation/token"
+            }
+          }
+        },
+        "followUpRoomAnyList": {
+          "type": "oauth2",
+          "description": "This define all permisions required in Core API",
+          "flows": {
+            "authorizationCode": {
+              "scopes": {
+                "FOLLOW_UP_ROOM_ANY_LIST": "Permission required to see all direct chats"
+              },
+              "authorizationUrl": "https://dev.moonshot.ceo/api/federation/login",
+              "tokenUrl": "https://dev.moonshot.ceo/api/federation/token"
+            }
+          }
+        },
+        "publicChannelCreate": {
+          "type": "oauth2",
+          "description": "This define all permisions required in Core API",
+          "flows": {
+            "authorizationCode": {
+              "scopes": {
+                "PUBLIC_CHANNEL_CREATE": "Permission required to create a public channel"
+              },
+              "authorizationUrl": "https://dev.moonshot.ceo/api/federation/login",
+              "tokenUrl": "https://dev.moonshot.ceo/api/federation/token"
+            }
+          }
+        },
+        "publicChannelAnyUpdate": {
+          "type": "oauth2",
+          "description": "This define all permisions required in Core API",
+          "flows": {
+            "authorizationCode": {
+              "scopes": {
+                "PUBLIC_CHANNEL_ANY_UPDATE": "Permission required to update any public channel"
+              },
+              "authorizationUrl": "https://dev.moonshot.ceo/api/federation/login",
+              "tokenUrl": "https://dev.moonshot.ceo/api/federation/token"
+            }
+          }
+        },
+        "publicChannelAnyDelete": {
+          "type": "oauth2",
+          "description": "This define all permisions required in Core API",
+          "flows": {
+            "authorizationCode": {
+              "scopes": {
+                "PUBLIC_CHANNEL_ANY_DELETE": "Permission required to remove any public channel"
+              },
+              "authorizationUrl": "https://dev.moonshot.ceo/api/federation/login",
+              "tokenUrl": "https://dev.moonshot.ceo/api/federation/token"
+            }
+          }
+        },
+        "wallPostCreate": {
+          "type": "oauth2",
+          "description": "This define all permisions required in Core API",
+          "flows": {
+            "authorizationCode": {
+              "scopes": {
+                "WALL_POST_CREATE": "Permission required to create a wall post"
+              },
+              "authorizationUrl": "https://dev.moonshot.ceo/api/federation/login",
+              "tokenUrl": "https://dev.moonshot.ceo/api/federation/token"
+            }
+          }
+        },
+        "wallPostAnyUpdate": {
+          "type": "oauth2",
+          "description": "This define all permisions required in Core API",
+          "flows": {
+            "authorizationCode": {
+              "scopes": {
+                "WALL_POST_ANY_UPDATE": "Permission required to update any wall post"
+              },
+              "authorizationUrl": "https://dev.moonshot.ceo/api/federation/login",
+              "tokenUrl": "https://dev.moonshot.ceo/api/federation/token"
+            }
+          }
+        },
+        "wallPostAnyDelete": {
+          "type": "oauth2",
+          "description": "This define all permisions required in Core API",
+          "flows": {
+            "authorizationCode": {
+              "scopes": {
+                "WALL_POST_ANY_DELETE": "Permission required to remove any wall post"
+              },
+              "authorizationUrl": "https://dev.moonshot.ceo/api/federation/login",
+              "tokenUrl": "https://dev.moonshot.ceo/api/federation/token"
+            }
+          }
+        },
+        "actorManagement": {
+          "type": "oauth2",
+          "description": "This define all permisions required in Core API",
+          "flows": {
+            "authorizationCode": {
+              "scopes": {
+                "ACTOR_MANAGEMENT": "Permission required to accept or deny actors"
               },
               "authorizationUrl": "https://dev.moonshot.ceo/api/federation/login",
               "tokenUrl": "https://dev.moonshot.ceo/api/federation/token"

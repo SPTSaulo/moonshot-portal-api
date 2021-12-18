@@ -25,7 +25,7 @@ export class CoreJavascriptTemplates {
       "\n" +
       "fetch(url, {\n" +
       "  headers: {\n" +
-      "    'Content-Type': 'application/x-www-form-urlencoded;'\n" +
+      "    'Content-Type': 'application/x-www-form-urlencoded'\n" +
       "  },\n" +
       "  credentials: 'include'\n" +
       "})\n" +
@@ -39,10 +39,26 @@ export class CoreJavascriptTemplates {
       "}"
   }
 
+  public static navbar_get: Template = {
+    name: "navbar",
+    code: "\nconst url = 'https://dev.moonshot.ceo/api/core/navbar';\n" +
+      "\n" +
+      "fetch(url)\n" +
+      "  .then(response => response.json())\n" +
+      "  .then(data => console.log(JSON.stringify(data)));",
+    response: "\n{\n" +
+      "   \"numNotifications\":0,\n" +
+      "   \"modules\":[\n" +
+      "      \"COMMUNITY\",\n" +
+      "      \"CONNECT\",\n" +
+      "      \"CHALLENGES\"\n" +
+      "   ]\n" +
+      "}"
+  }
+
   public static industry_id_get: Template = {
     name: "industry/:id",
-    code: "\nconst id = '6166d927899c7c3640ee96a0';\n" +
-      "const url = 'https://dev.moonshot.ceo/api/core/industry/' + id;\n" +
+    code: "\nconst url = 'https://dev.moonshot.ceo/api/core/industry/1';\n" +
       "\n" +
       "fetch(url)\n" +
       "  .then(response => response.json())\n" +
@@ -210,8 +226,7 @@ export class CoreJavascriptTemplates {
 
   public static businessModel_id_get: Template = {
     name: "business-model/:id",
-    code: "\nconst id = '6166d926899c7c3640ee9692'\n" +
-      "const url = 'https://dev.moonshot.ceo/api/core/business-model/' + id\n" +
+    code: "\nconst url = 'https://dev.moonshot.ceo/api/core/business-model/1'\n" +
       "\n" +
       "fetch(url)\n" +
       "  .then(response => response.json())\n" +
@@ -1031,7 +1046,6 @@ export class CoreJavascriptTemplates {
     name: "ecosystem",
     code: "\nconst url = 'https://dev.moonshot.ceo/api/core/ecosystem'\n" +
       "const body = {\n" +
-      "  \"id\":\"60acae8f2f799d228a4d4a87\",\n" +
       "  \"type\":\"CORPORATE\",\n" +
       "  \"name\":\"DEV  Moonshot\",\n" +
       "  \"address\":\"Calle Poniente, 33\",\n" +
@@ -1210,20 +1224,89 @@ export class CoreJavascriptTemplates {
     response: null
   }
 
-  public static ecosystemInvite_post: Template = {
-    name: "ecosystem/invite",
-    code: "\nconst url = 'https://dev.moonshot.ceo/api/core/ecosystem/invite'\n" +
+  public static invitations_get: Template = {
+    name: "invitations",
+    code: "\nconst url = 'https://dev.moonshot.ceo/api/core/invitations?lastId=61b1cd9b4441d07b3246472c&limit=0';\n" +
+      "\n" +
+      "fetch(url)\n" +
+      "  .then(response => response.json())\n" +
+      "  .then(data => console.log(JSON.stringify(data)));",
+    response: "\n[\n" +
+      "   {\n" +
+      "      \"id\":\"61b1cd9b4441d07b3246472c\",\n" +
+      "      \"email\":\"borja-1@hotmail.es\",\n" +
+      "      \"reason\":\"En nombre del ecosistema DEV  Moonshot, me complace invitarlo a participar en nuestro Ecosistema de Innovación, un entorno digital para compartir ideas y proyectos disruptivos, así como para colaborar en desafíos y talleres. Espero que se una a nuestro ecosistema, con otros socios exclusivos, para observar de cerca nuestros objetivos disruptivos comunes.\",\n" +
+      "      \"notification\":true,\n" +
+      "      \"createdAt\":1639042457835,\n" +
+      "      \"senderName\":\"Jeremy Trujillo Sánchez\",\n" +
+      "      \"lastEmail\":1639042457835\n" +
+      "   }\n" +
+      "]",
+  }
+
+  public static invitation_get: Template = {
+    name: "invitation",
+    code: "\nconst url = 'https://dev.moonshot.ceo/api/core/invitation?email=borja-1@hotmail.es';\n" +
+      "\n" +
+      "fetch(url)\n" +
+      "  .then(response => response.json())\n" +
+      "  .then(data => console.log(JSON.stringify(data)));",
+    response: "\n{\n" +
+      "      \"id\":\"61b1cd9b4441d07b3246472c\",\n" +
+      "      \"email\":\"borja-1@hotmail.es\",\n" +
+      "      \"reason\":\"En nombre del ecosistema DEV  Moonshot, me complace invitarlo a participar en nuestro Ecosistema de Innovación, un entorno digital para compartir ideas y proyectos disruptivos, así como para colaborar en desafíos y talleres. Espero que se una a nuestro ecosistema, con otros socios exclusivos, para observar de cerca nuestros objetivos disruptivos comunes.\",\n" +
+      "      \"notification\":true,\n" +
+      "      \"createdAt\":1639042457835,\n" +
+      "      \"senderName\":\"Jeremy Trujillo Sánchez\",\n" +
+      "      \"lastEmail\":1639042457835\n" +
+      "   }"
+  }
+
+  public static invitation_post: Template = {
+    name: "invitation",
+    code: "\nconst url = 'https://dev.moonshot.ceo/api/core/invitation';\n" +
+      "\n" +
       "const body = {\n" +
-      "  \"emails\": [\n" +
-      "    \"email1@gmail.com\",\n" +
-      "    \"email2@hotmail.com\"\n" +
-      "  ],\n" +
-      "  \"reason\": \"Reason example\"\n" +
-      "}\n" +
+      "  \"email\":\"borja-1@hotmail.es\",\n" +
+      "  \"reason\":\"En nombre del ecosistema DEV  Moonshot, me complace invitarlo a participar en nuestro Ecosistema de Innovación, un entorno digital para compartir ideas y proyectos disruptivos, así como para colaborar en desafíos y talleres. Espero que se una a nuestro ecosistema, con otros socios exclusivos, para observar de cerca nuestros objetivos disruptivos comunes.\",\n" +
+      "  \"notification\":true,\n" +
+      "  \"createdAt\":1639042457835,\n" +
+      "  \"lastEmail\":1639042457835\n" +
+      " }\n" +
       "\n" +
       "fetch(url, {\n" +
       "  method: 'POST',\n" +
       "  body: JSON.stringify(body)\n" +
+      "})\n" +
+      "  .then(response => response.json())\n" +
+      "  .then(data => console.log(JSON.stringify(data)));",
+    response: null
+  }
+
+  public static invitation_put: Template = {
+    name: "invitation",
+    code: "\nconst url = 'https://dev.moonshot.ceo/api/core/invitation';\n" +
+      "\n" +
+      "const body = {\n" +
+      "  \"id\":\"61b1cd9b4441d07b3246472c\",\n" +
+      "  \"lastEmail\":1639042457835\n" +
+      " }\n" +
+      "\n" +
+      "fetch(url, {\n" +
+      "  method: 'PUT',\n" +
+      "  body: JSON.stringify(body)\n" +
+      "})\n" +
+      "  .then(response => response.json())\n" +
+      "  .then(data => console.log(JSON.stringify(data)));",
+    response: null
+  }
+
+  public static invitation_id_delete: Template = {
+    name: "invitation/:id",
+    code: "\nconst url = 'https://dev.moonshot.ceo/api/core/invitation/61b1cd9b4441d07b3246472c';\n" +
+      "\n" +
+      "fetch(url, {\n" +
+      "  method: 'DELETE'\n" +
       "})\n" +
       "  .then(response => response.json())\n" +
       "  .then(data => console.log(JSON.stringify(data)));",
@@ -1334,7 +1417,7 @@ export class CoreJavascriptTemplates {
       "  .then(response => response.json())\n" +
       "  .then(data => console.log(JSON.stringify(data)));",
     response: "\n{\n" +
-      "  \"id\": \"61445159784bca6ef764c6df\",\n" +
+      "  \"id\": \"1\",\n" +
       "  \"channels\": [\n" +
       "    \"EMAIL\"\n" +
       "  ],\n" +
@@ -1420,12 +1503,73 @@ export class CoreJavascriptTemplates {
       "}"
   }
 
+  public static notifications_pending_get: Template = {
+    name: "notifications/pending",
+    code: "\nconst url = 'https://dev.moonshot.ceo/api/core/notifications/pending';\n" +
+      "\n" +
+      "fetch(url)\n" +
+      "  .then(response => response.json())\n" +
+      "  .then(data => console.log(JSON.stringify(data)));",
+    response: "\n[\n" +
+      "   {\n" +
+      "      \"id\":\"61b1c98a4441d07b32464725\",\n" +
+      "      \"channels\":[\n" +
+      "         \"EMAIL\"\n" +
+      "      ],\n" +
+      "      \"type\":\"ECOSYSTEM_ACCESS_REQUEST\",\n" +
+      "      \"push\":null,\n" +
+      "      \"email\":{\n" +
+      "         \"from\":{\n" +
+      "            \"email\":null,\n" +
+      "            \"name\":\"Jeremy\"\n" +
+      "         },\n" +
+      "         \"to\":\"dsuriol@moonshot.ceo\",\n" +
+      "         \"cc\":null,\n" +
+      "         \"bcc\":null,\n" +
+      "         \"subject\":\"A user want to join to the ecosystem\",\n" +
+      "         \"templateId\":\"ecosystem_access_request\",\n" +
+      "         \"params\":{\n" +
+      "            \"owner\":\"jeremy.trujillo.jt15@gmail.com\",\n" +
+      "            \"image\":\"https://api.moonshot.ceo/api/media/5b8c41dbefc45400015a6f9a/userAvatar.jpeg\",\n" +
+      "            \"link\":\"https://dev.moonshot.ceo/management\"\n" +
+      "         }\n" +
+      "      },\n" +
+      "      \"readed\":false,\n" +
+      "      \"createdAt\":1639041418766,\n" +
+      "      \"owner\":{\n" +
+      "         \"id\":\"61b1c98af2a25d3ca476aa54\",\n" +
+      "         \"image\":{\n" +
+      "            \"original\":\"https://moonshot-innovation.s3.eu-central-1.amazonaws.com/null/image/959b2baa-6195-4f47-8a0d-8762d5e5d827.jpg\",\n" +
+      "            \"thumbnail\":\"https://moonshot-innovation.s3.eu-central-1.amazonaws.com/null/image/b2540583-081e-4dbf-901a-44820130086e.jpg\",\n" +
+      "            \"crop\":{\n" +
+      "               \"x\":0,\n" +
+      "               \"y\":0,\n" +
+      "               \"width\":1278,\n" +
+      "               \"height\":1278\n" +
+      "            }\n" +
+      "         },\n" +
+      "         \"name\":\"Jeremy\"\n" +
+      "      },\n" +
+      "      \"recipients\":[\n" +
+      "         {\n" +
+      "            \"id\":\"60acae8e2f799d228a4d4a85\",\n" +
+      "            \"image\":null,\n" +
+      "            \"name\":null\n" +
+      "         }\n" +
+      "      ],\n" +
+      "      \"followUpRoomId\":null,\n" +
+      "      \"directChatRoomId\":null,\n" +
+      "      \"wallPostName\":null,\n" +
+      "      \"followUpRoomName\":null\n" +
+      "   }\n" +
+      "]"
+  }
+
   public static notification_post: Template = {
     name: "notification",
     code: "\nconst url = 'https://dev.moonshot.ceo/api/core/notification';\n" +
       "\n" +
       "const body = {\n" +
-      "  \"id\": \"61445159784bca6ef764c6df\",\n" +
       "  \"channels\": [\n" +
       "    \"EMAIL\"\n" +
       "  ],\n" +
@@ -1517,5 +1661,111 @@ export class CoreJavascriptTemplates {
       "  .then(response => response.json())\n" +
       "  .then(data => console.log(JSON.stringify(data)));",
     response: null
+  }
+
+  public static notification_put : Template = {
+    name: "notification",
+    code: "\nconst url = 'https://dev.moonshot.ceo/api/core/notification';\n" +
+      "\n" +
+      "const body = {\n" +
+      "  id: \"1\",\n" +
+      "  type: \"ECOSYSTEM_ACCESS_REQUEST\",\n" +
+      "  readed: \"true\"\n" +
+      "}\n" +
+      "\n" +
+      "fetch(url, {\n" +
+      "  method: 'PUT',\n" +
+      "  body: JSON.stringify(body)\n" +
+      "})\n" +
+      "  .then(response => response.json())\n" +
+      "  .then(data => console.log(JSON.stringify(data)));",
+    response: null
+  }
+
+  public static notification_id_delete : Template = {
+    name: "notification/:id",
+    code: "\nconst url = 'https://dev.moonshot.ceo/api/core/notification/1';\n" +
+      "\n" +
+      "fetch(url, {\n" +
+      "  method: 'DELETE'\n" +
+      "})\n" +
+      "  .then(response => response.json())\n" +
+      "  .then(data => console.log(JSON.stringify(data)));",
+    response: null
+  }
+
+  public static setting_post: Template = {
+    name: "setting",
+    code: "\nconst url = 'https://dev.moonshot.ceo/api/core/setting';\n" +
+      "\n" +
+      "const body = {\n" +
+      "  banner:{\n" +
+      "    \"original\":\"https://moonshot-innovation.s3.eu-central-1.amazonaws.com/60d6031b0d5a16054411a570/image/a920a411-31f2-4d13-8ebb-81c347607705.jpeg\",\n" +
+      "    \"thumbnail\":\"https://moonshot-innovation.s3.eu-central-1.amazonaws.com/60d6031b0d5a16054411a570/image/44159982-303f-44ee-b903-94ca6147bbb9.jpeg\",\n" +
+      "    \"crop\":{\n" +
+      "       \"x\":129,\n" +
+      "       \"y\":34,\n" +
+      "       \"width\":921,\n" +
+      "       \"height\":921\n" +
+      "    }\n" +
+      "  }\n" +
+      "}\n" +
+      "\n" +
+      "fetch(url, {\n" +
+      "  method: 'POST',\n" +
+      "  body: JSON.stringify(body)\n" +
+      "})\n" +
+      "  .then(response => response.json())\n" +
+      "  .then(data => console.log(JSON.stringify(data)));",
+    response: null
+  }
+
+  public static setting_put: Template = {
+    name: "setting",
+    code: "\nconst url = 'https://dev.moonshot.ceo/api/core/setting';\n" +
+      "\n" +
+      "const body = {\n" +
+      "  id: \"1\",\n" +
+      "  banner:{\n" +
+      "    \"original\":\"https://moonshot-innovation.s3.eu-central-1.amazonaws.com/60d6031b0d5a16054411a570/image/a920a411-31f2-4d13-8ebb-81c347607705.jpeg\",\n" +
+      "    \"thumbnail\":\"https://moonshot-innovation.s3.eu-central-1.amazonaws.com/60d6031b0d5a16054411a570/image/44159982-303f-44ee-b903-94ca6147bbb9.jpeg\",\n" +
+      "    \"crop\":{\n" +
+      "       \"x\":129,\n" +
+      "       \"y\":34,\n" +
+      "       \"width\":921,\n" +
+      "       \"height\":921\n" +
+      "    }\n" +
+      "  }\n" +
+      "}\n" +
+      "\n" +
+      "fetch(url, {\n" +
+      "  method: 'PUT',\n" +
+      "  body: JSON.stringify(body)\n" +
+      "})\n" +
+      "  .then(response => response.json())\n" +
+      "  .then(data => console.log(JSON.stringify(data)));",
+    response: null
+  }
+
+  public static setting_get: Template = {
+    name: "setting",
+    code: "\nconst url = 'https://dev.moonshot.ceo/api/core/setting';\n" +
+      "\n" +
+      "fetch(url)\n" +
+      "  .then(response => response.json())\n" +
+      "  .then(data => console.log(JSON.stringify(data)));",
+    response: "\n{\n" +
+      "   \"id\":1,\n" +
+      "   \"banner\":{\n" +
+      "      \"original\":\"https://moonshot-innovation.s3.eu-central-1.amazonaws.com/60d6031b0d5a16054411a570/image/44159982-303f-44ee-b903-94ca6147bbb9.jpeg\",\n" +
+      "      \"thumbnail\":\"https://moonshot-innovation.s3.eu-central-1.amazonaws.com/60d6031b0d5a16054411a570/image/44159982-303f-44ee-b903-94ca6147bbb9.jpeg\",\n" +
+      "      \"crop\":{\n" +
+      "         \"x\":129,\n" +
+      "         \"y\":34,\n" +
+      "         \"width\":921,\n" +
+      "         \"height\":921\n" +
+      "      }\n" +
+      "   }\n" +
+      "}"
   }
 }

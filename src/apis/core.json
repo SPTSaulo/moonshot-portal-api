@@ -27,6 +27,10 @@
       "description": "Endpoint that return OG Tags"
     },
     {
+      "name": "Navbar",
+      "description": "Endpoint that return navbar information"
+    },
+    {
       "name": "Industry",
       "description": "Endpoints about Industry taxonomy"
     },
@@ -47,8 +51,16 @@
       "description": "Endpoints about Ecosystem entity"
     },
     {
-      "name": "Notifications",
+      "name": "Notification",
       "description": "Endpoints about Notification entity"
+    },
+    {
+      "name": "Invitation",
+      "description": "Endpoints about Invitation entity"
+    },
+    {
+      "name": "Setting",
+      "description": "Endpoints about Setting entity"
     }
   ],
   "paths": {
@@ -88,16 +100,17 @@
           "Signed Url"
         ],
         "summary": "Sign a url",
-        "description": "Generate a URL that provides limited permission and time to make a request.\n",
+        "description": "Generate a URL that provides permission to access a file\n",
         "operationId": "signUrl",
         "parameters": [
           {
             "name": "filename",
             "in": "query",
-            "description": "Filename which you want save in AWS",
+            "description": "Filename which you want save in Amazon Web Services",
             "required": true,
             "schema": {
-              "type": "string"
+              "type": "string",
+              "example": "examplefile.pdf"
             }
           },
           {
@@ -106,7 +119,8 @@
             "description": "Content type of the file",
             "required": true,
             "schema": {
-              "type": "string"
+              "type": "string",
+              "example": "png"
             }
           }
         ],
@@ -154,7 +168,8 @@
             "description": "Url from you want to get OG tags",
             "required": true,
             "schema": {
-              "type": "string"
+              "type": "string",
+              "example": "https://youtu.be/ca_pOK4jc7M"
             }
           }
         ],
@@ -201,6 +216,50 @@
         }
       }
     },
+    "/navbar": {
+      "get": {
+        "tags": [
+          "Navbar"
+        ],
+        "summary": "Get navbar information",
+        "description": "Find navbar information in database for a especific user\n",
+        "operationId": "navbar",
+        "responses": {
+          "200": {
+            "description": "Get navbar information successfully",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Navbar"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "You must login before call this endpoint",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SecurityAccessUnauthorizedError"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "idToken": []
+          },
+          {
+            "userEmail": []
+          }
+        ],
+        "externalDocs": {
+          "description": "Code Example",
+          "url": "http://localhost:4200/code-examples/core#navbar_get"
+        }
+      }
+    },
     "/industry/{id}": {
       "get": {
         "tags": [
@@ -216,7 +275,9 @@
             "description": "industry id",
             "required": true,
             "schema": {
-              "type": "string"
+              "type": "string",
+              "format": "mongo-id",
+              "example": "61445159784bca6ef764c6df"
             }
           }
         ],
@@ -282,7 +343,9 @@
             "description": "business model id",
             "required": true,
             "schema": {
-              "type": "string"
+              "type": "string",
+              "format": "mongo-id",
+              "example": "61445159784bca6ef764c6df"
             }
           }
         ],
@@ -348,7 +411,9 @@
             "description": "social innovation id",
             "required": true,
             "schema": {
-              "type": "string"
+              "type": "string",
+              "format": "mongo-id",
+              "example": "61445159784bca6ef764c6df"
             }
           }
         ],
@@ -366,7 +431,7 @@
         },
         "externalDocs": {
           "description": "Code Example",
-          "url": "http://localhost:4200/code-examples/core#social-innovation/:id:get"
+          "url": "http://localhost:4200/code-examples/core#social-innovation/:id_get"
         }
       }
     },
@@ -414,7 +479,9 @@
             "description": "deep tech id",
             "required": true,
             "schema": {
-              "type": "string"
+              "type": "string",
+              "format": "mongo-id",
+              "example": "61445159784bca6ef764c6df"
             }
           }
         ],
@@ -522,11 +589,6 @@
             }
           }
         },
-        "security": [
-          {
-            "idToken": []
-          }
-        ],
         "externalDocs": {
           "description": "Code Example",
           "url": "http://localhost:4200/code-examples/core#ecosystem_get"
@@ -626,8 +688,8 @@
             "idToken": []
           },
           {
-            "permissions": [
-              "ecosystem_update"
+            "ecosystemUpdate": [
+              "ECOSYSTEM_UPDATE"
             ]
           }
         ],
@@ -637,20 +699,163 @@
         }
       }
     },
-    "/ecosystem/invite": {
+    "/invitations": {
+      "get": {
+        "tags": [
+          "Invitation"
+        ],
+        "summary": "Get paginated invitations",
+        "description": "Find paginated invitations in the database\n",
+        "operationId": "invitations",
+        "parameters": [
+          {
+            "name": "lastId",
+            "in": "query",
+            "description": "Last invitation id",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "mongo-id",
+              "example": "60acae8e2f799d228a4d4a85"
+            }
+          },
+          {
+            "name": "limit",
+            "in": "query",
+            "description": "Number of invitations",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "example": 10
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Get invitations successfully",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Invitation"
+                  }
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "You must login before call this endpoint",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SecurityAccessUnauthorizedError"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "User does not have the necessary permissions",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SecurityAccessForbiddenError"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "actorInvite": [
+              "ACTOR_INVITE"
+            ]
+          }
+        ],
+        "externalDocs": {
+          "description": "Code Example",
+          "url": "http://localhost:4200/code-examples/core#invitations_get"
+        }
+      }
+    },
+    "/invitation": {
+      "get": {
+        "tags": [
+          "Invitation"
+        ],
+        "summary": "Get an invitation by email",
+        "description": "Find an invitation in the database filtered by email\n",
+        "operationId": "inviationByEmail",
+        "parameters": [
+          {
+            "name": "email",
+            "in": "query",
+            "description": "User email",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "email",
+              "example": "example1@gmail.com"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Get invitation successfully",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Invitation"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "You must login before call this endpoint",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SecurityAccessUnauthorizedError"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "User does not have the necessary permissions",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SecurityAccessForbiddenError"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "actorInvite": [
+              "ACTOR_INVITE"
+            ]
+          }
+        ],
+        "externalDocs": {
+          "description": "Code Example",
+          "url": "http://localhost:4200/code-examples/core#invitation_get"
+        }
+      },
       "post": {
         "tags": [
-          "Ecosystem"
+          "Invitation"
         ],
-        "summary": "Invite someone to your ecosystem",
-        "description": "Send an email to one or more people to join your ecosystem\n",
-        "operationId": "ecosystemInvitation",
+        "summary": "Create an invitation",
+        "description": "Create and insert an invitation in database\n",
+        "operationId": "invitation",
         "requestBody": {
-          "description": "Object that contain a list of email and a reason",
+          "description": "Object that contains all parameters to create an invitation",
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/EcosystemInviteEvent"
+                "$ref": "#/components/schemas/InvitationCreateEvent"
               }
             }
           }
@@ -660,7 +865,7 @@
             "description": "OK"
           },
           "400": {
-            "description": "Body or emails are null",
+            "description": "Body is empty or email is empty",
             "content": {
               "application/json": {
                 "schema": {
@@ -695,35 +900,43 @@
             "idToken": []
           },
           {
-            "permissions": [
-              "actor_invite"
+            "actorInvite": [
+              "ACTOR_INVITE"
             ]
           }
         ],
         "externalDocs": {
           "description": "Code Example",
-          "url": "http://localhost:4200/code-examples/core#ecosystem/invite_post"
+          "url": "http://localhost:4200/code-examples/core#invitation_post"
         }
-      }
-    },
-    "/notifications": {
-      "get": {
+      },
+      "put": {
         "tags": [
-          "Notifications"
+          "Invitation"
         ],
-        "summary": "Get all notifications",
-        "description": "Find all notifications in the database\n",
-        "operationId": "notifications",
+        "summary": "Update an invitation",
+        "description": "Find and update an invitation in database\n",
+        "operationId": "invitationUpdate",
+        "requestBody": {
+          "description": "Object that contains all parameters to update an invitation",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/InvitationUpdateEvent"
+              }
+            }
+          }
+        },
         "responses": {
           "200": {
-            "description": "Get all notifications successfully",
+            "description": "OK"
+          },
+          "400": {
+            "description": "Body is empty",
             "content": {
               "application/json": {
                 "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/Notification"
-                  }
+                  "$ref": "#/components/schemas/EcosystemInviteEmailEmptyError"
                 }
               }
             }
@@ -754,9 +967,115 @@
             "idToken": []
           },
           {
-            "permissions": [
-              "ecosystem_update"
+            "actorInvite": [
+              "ACTOR_INVITE"
             ]
+          }
+        ],
+        "externalDocs": {
+          "description": "Code Example",
+          "url": "http://localhost:4200/code-examples/core#invitation_put"
+        }
+      }
+    },
+    "/invitation/{id}": {
+      "delete": {
+        "tags": [
+          "Invitation"
+        ],
+        "summary": "Delete an invitation",
+        "description": "Find and remove an invitation in the database\n",
+        "operationId": "invitationDelete",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "Invitation id",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "mongo-id",
+              "example": "61445159784bca6ef764c6df"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "401": {
+            "description": "You must login before call this endpoint",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SecurityAccessUnauthorizedError"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "User does not have the necessary permissions",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SecurityAccessForbiddenError"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "idToken": []
+          },
+          {
+            "actorInvite": [
+              "ACTOR_INVITE"
+            ]
+          }
+        ],
+        "externalDocs": {
+          "description": "Code Example",
+          "url": "http://localhost:4200/code-examples/core#invitation/:id_delete"
+        }
+      }
+    },
+    "/notifications": {
+      "get": {
+        "tags": [
+          "Notification"
+        ],
+        "summary": "Get all notifications",
+        "description": "Find all notifications in the database\n",
+        "operationId": "notifications",
+        "responses": {
+          "200": {
+            "description": "Get all notifications successfully",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Notification"
+                  }
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "You must login before call this endpoint",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SecurityAccessUnauthorizedError"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "idToken": []
           }
         ],
         "externalDocs": {
@@ -768,7 +1087,7 @@
     "/notification/{id}": {
       "get": {
         "tags": [
-          "Notifications"
+          "Notification"
         ],
         "summary": "Get notification by id",
         "description": "Find a notification in the database by its identifier\n",
@@ -804,13 +1123,51 @@
                 }
               }
             }
+          }
+        },
+        "security": [
+          {
+            "idToken": []
           },
-          "403": {
-            "description": "User does not have the necessary permissions",
+          {
+            "permissionManagement": [
+              "PERMISSION_MANAGEMENT"
+            ]
+          }
+        ],
+        "externalDocs": {
+          "description": "Code Example",
+          "url": "http://localhost:4200/code-examples/core#notification/:id_get"
+        }
+      },
+      "delete": {
+        "tags": [
+          "Notification"
+        ],
+        "summary": "Remove a notification by id",
+        "description": "Remove a notification from the database by its identifier\n",
+        "operationId": "notificationDelete",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "notification id",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "401": {
+            "description": "You must login before call this endpoint",
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/SecurityAccessForbiddenError"
+                  "$ref": "#/components/schemas/SecurityAccessUnauthorizedError"
                 }
               }
             }
@@ -819,23 +1176,18 @@
         "security": [
           {
             "idToken": []
-          },
-          {
-            "permissions": [
-              "ecosystem_update"
-            ]
           }
         ],
         "externalDocs": {
           "description": "Code Example",
-          "url": "http://localhost:4200/code-examples/core#notification/:id_get"
+          "url": "http://localhost:4200/code-examples/core#notification/:id_delete"
         }
       }
     },
     "/notification": {
       "post": {
         "tags": [
-          "Notifications"
+          "Notification"
         ],
         "summary": "Create a notification",
         "description": "Create and insert a notification in database\n",
@@ -845,7 +1197,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/Notification"
+                "$ref": "#/components/schemas/NotificationCreateEvent"
               }
             }
           }
@@ -853,6 +1205,194 @@
         "responses": {
           "200": {
             "description": "OK"
+          },
+          "401": {
+            "description": "You must login before call this endpoint",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SecurityAccessUnauthorizedError"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "idToken": []
+          }
+        ],
+        "externalDocs": {
+          "description": "Code Example",
+          "url": "http://localhost:4200/code-examples/core#notification_post"
+        }
+      },
+      "put": {
+        "tags": [
+          "Notification"
+        ],
+        "summary": "Update a notification",
+        "description": "Find and update a notification in the database\n",
+        "operationId": "notificationUpdate",
+        "requestBody": {
+          "description": "Object that contains all parameters to update a notification",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/NotificationUpdateEvent"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "400": {
+            "description": "Body is empty",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/NotificationEmptyBodyError"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "You must login before call this endpoint",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SecurityAccessUnauthorizedError"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "idToken": []
+          }
+        ],
+        "externalDocs": {
+          "description": "Code Example",
+          "url": "http://localhost:4200/code-examples/core#notification_put"
+        }
+      }
+    },
+    "/notifications/pending": {
+      "get": {
+        "tags": [
+          "Notification"
+        ],
+        "summary": "Get all notifications by member id",
+        "description": "Find all notifications by member id in the database\n",
+        "operationId": "notificationByMemberId",
+        "responses": {
+          "200": {
+            "description": "Get all notifications successfully",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Notification"
+                  }
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "You must login before call this endpoint",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SecurityAccessUnauthorizedError"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "idToken": []
+          }
+        ],
+        "externalDocs": {
+          "description": "Code Example",
+          "url": "http://localhost:4200/code-examples/core#notifications/pending_get"
+        }
+      }
+    },
+    "/setting": {
+      "get": {
+        "tags": [
+          "Setting"
+        ],
+        "summary": "Get current ecosystem setting",
+        "description": "Find current ecosystem setting in database and all the data associated\n",
+        "operationId": "setting",
+        "responses": {
+          "200": {
+            "description": "Get ecosystem setting successfully",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Setting"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Ecosystem setting is not configured already.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SettingNotConfiguredError"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "idToken": []
+          }
+        ],
+        "externalDocs": {
+          "description": "Code Example",
+          "url": "http://localhost:4200/code-examples/core#setting_get"
+        }
+      },
+      "post": {
+        "tags": [
+          "Setting"
+        ],
+        "summary": "Create an ecosystem setting",
+        "description": "Create and insert an ecosystem setting in database\n",
+        "requestBody": {
+          "description": "Object that contains all parameters to create a setting",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SettingCreateEvent"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "400": {
+            "description": "Body is empty",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SettingEmptyBodyError"
+                }
+              }
+            }
           },
           "401": {
             "description": "You must login before call this endpoint",
@@ -875,9 +1415,85 @@
             }
           }
         },
+        "security": [
+          {
+            "idToken": []
+          },
+          {
+            "ecosystemUpdate": [
+              "ECOSYSTEM_UPDATE"
+            ]
+          }
+        ],
         "externalDocs": {
           "description": "Code Example",
-          "url": "http://localhost:4200/code-examples/core#notification_post"
+          "url": "http://localhost:4200/code-examples/core#setting_post"
+        }
+      },
+      "put": {
+        "tags": [
+          "Setting"
+        ],
+        "summary": "Update an ecosystem setting",
+        "description": "Find and update an ecosystem setting in database\n",
+        "requestBody": {
+          "description": "Object that contains all parameters to update a setting",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SettingUpdateEvent"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "400": {
+            "description": "Body is empty",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SettingEmptyBodyError"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "You must login before call this endpoint",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SecurityAccessUnauthorizedError"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "User does not have the necessary permissions",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SecurityAccessForbiddenError"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "idToken": []
+          },
+          {
+            "ecosystemUpdate": [
+              "ECOSYSTEM_UPDATE"
+            ]
+          }
+        ],
+        "externalDocs": {
+          "description": "Code Example",
+          "url": "http://localhost:4200/code-examples/core#setting_put"
         }
       }
     }
@@ -885,10 +1501,6 @@
   "components": {
     "schemas": {
       "Taxonomy": {
-        "required": [
-          "id",
-          "type"
-        ],
         "properties": {
           "id": {
             "type": "string",
@@ -902,11 +1514,6 @@
         }
       },
       "DeepTech": {
-        "required": [
-          "id",
-          "type",
-          "cells"
-        ],
         "properties": {
           "id": {
             "type": "string",
@@ -926,10 +1533,6 @@
         }
       },
       "DeepTechCell": {
-        "required": [
-          "type",
-          "kets"
-        ],
         "properties": {
           "type": {
             "type": "string",
@@ -945,12 +1548,6 @@
         }
       },
       "OpenGraph": {
-        "required": [
-          "title",
-          "description",
-          "imageURL",
-          "url"
-        ],
         "type": "object",
         "properties": {
           "title": {
@@ -972,10 +1569,6 @@
         }
       },
       "OpenGraphTagsNotFoundError": {
-        "required": [
-          "code",
-          "message"
-        ],
         "type": "object",
         "properties": {
           "message": {
@@ -989,10 +1582,6 @@
         }
       },
       "InvalidSignedUrlError": {
-        "required": [
-          "code",
-          "message"
-        ],
         "type": "object",
         "properties": {
           "message": {
@@ -1005,31 +1594,23 @@
           }
         }
       },
+      "Navbar": {
+        "type": "object",
+        "properties": {
+          "numNotifications": {
+            "type": "number",
+            "example": 10
+          },
+          "modules": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "example": "community"
+            }
+          }
+        }
+      },
       "Ecosystem": {
-        "required": [
-          "id",
-          "type",
-          "name",
-          "address",
-          "latitude",
-          "longitude",
-          "city",
-          "country",
-          "phone",
-          "web",
-          "description",
-          "objectives",
-          "logo",
-          "acceptedActors",
-          "services",
-          "customServices",
-          "media",
-          "socialNetworks",
-          "deepTechs",
-          "businessModels",
-          "industries",
-          "socialInnovations"
-        ],
         "type": "object",
         "properties": {
           "id": {
@@ -1185,27 +1766,10 @@
       },
       "EcosystemCreateEvent": {
         "required": [
-          "type",
           "name",
-          "address",
-          "latitude",
-          "longitude",
-          "city",
           "country",
-          "phone",
-          "web",
           "description",
-          "objectives",
           "logo",
-          "acceptedActors",
-          "services",
-          "customServices",
-          "media",
-          "socialNetworks",
-          "deepTechs",
-          "businessModels",
-          "industries",
-          "socialInnovations",
           "manager",
           "password",
           "repeatPassword"
@@ -1376,27 +1940,10 @@
       "EcosystemUpdateEvent": {
         "required": [
           "id",
-          "type",
           "name",
-          "address",
-          "latitude",
-          "longitude",
-          "city",
           "country",
-          "phone",
-          "web",
           "description",
-          "objectives",
-          "logo",
-          "acceptedActors",
-          "services",
-          "customServices",
-          "media",
-          "socialNetworks",
-          "deepTechs",
-          "businessModels",
-          "industries",
-          "socialInnovations"
+          "logo"
         ],
         "type": "object",
         "properties": {
@@ -1555,11 +2102,55 @@
           }
         }
       },
+      "InvitationCreateEvent": {
+        "required": [
+          "email"
+        ],
+        "properties": {
+          "email": {
+            "type": "string",
+            "example": "example1@gmail.com"
+          },
+          "reason": {
+            "type": "string",
+            "example": "Access denied"
+          },
+          "notification": {
+            "type": "boolean",
+            "example": true
+          },
+          "createdAt": {
+            "type": "number",
+            "format": "timestamp",
+            "example": 1639590502463
+          },
+          "lastEmail": {
+            "type": "number",
+            "format": "timestamp",
+            "example": 1639590502463
+          }
+        }
+      },
+      "InvitationUpdateEvent": {
+        "required": [
+          "id"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "format": "mongo-id",
+            "example": "61445159784bca6ef764c6df"
+          },
+          "lastEmail": {
+            "type": "number",
+            "format": "timestamp",
+            "example": 1639590502463
+          }
+        }
+      },
       "Image": {
         "required": [
-          "original",
-          "thumbnail",
-          "crop"
+          "original"
         ],
         "type": "object",
         "properties": {
@@ -1576,33 +2167,7 @@
           }
         }
       },
-      "EcosystemInviteEvent": {
-        "required": [
-          "emails",
-          "reason"
-        ],
-        "properties": {
-          "emails": {
-            "type": "array",
-            "items": {
-              "type": "string",
-              "format": "email",
-              "example": "example1@gmail.com, example2@gmail.com, example3@gmail.com"
-            }
-          },
-          "reason": {
-            "type": "string",
-            "example": "You have been invited to my ecosystem to share information"
-          }
-        }
-      },
       "Crop": {
-        "required": [
-          "x",
-          "y",
-          "width",
-          "height"
-        ],
         "type": "object",
         "properties": {
           "x": {
@@ -1624,18 +2189,6 @@
         }
       },
       "CreateMember": {
-        "required": [
-          "state",
-          "name",
-          "lastname",
-          "address",
-          "email",
-          "about",
-          "image",
-          "socialNetworks",
-          "experiences",
-          "educations"
-        ],
         "properties": {
           "state": {
             "type": "string",
@@ -1690,17 +2243,6 @@
         }
       },
       "Education": {
-        "required": [
-          "id",
-          "school",
-          "degree",
-          "fieldOfStudy",
-          "startDate",
-          "endDate",
-          "grade",
-          "activitiesAndSocieties",
-          "description"
-        ],
         "properties": {
           "id": {
             "type": "string",
@@ -1744,16 +2286,6 @@
         }
       },
       "Experience": {
-        "required": [
-          "id",
-          "title",
-          "type",
-          "company",
-          "location",
-          "startDate",
-          "endDate",
-          "description"
-        ],
         "properties": {
           "id": {
             "type": "string",
@@ -1788,12 +2320,6 @@
         }
       },
       "Address": {
-        "required": [
-          "lat",
-          "lng",
-          "formatted",
-          "components"
-        ],
         "properties": {
           "lat": {
             "type": "number",
@@ -1816,11 +2342,6 @@
         }
       },
       "AddressComponent": {
-        "required": [
-          "name",
-          "shortname",
-          "type"
-        ],
         "properties": {
           "name": {
             "type": "string",
@@ -1881,10 +2402,6 @@
         }
       },
       "EcosystemAlreadyExistError": {
-        "required": [
-          "code",
-          "message"
-        ],
         "type": "object",
         "properties": {
           "message": {
@@ -1898,10 +2415,6 @@
         }
       },
       "EcosystemNotFoundError": {
-        "required": [
-          "code",
-          "message"
-        ],
         "type": "object",
         "properties": {
           "message": {
@@ -1915,10 +2428,6 @@
         }
       },
       "EcosystemInviteEmailEmptyError": {
-        "required": [
-          "code",
-          "message"
-        ],
         "type": "object",
         "properties": {
           "message": {
@@ -1931,21 +2440,42 @@
           }
         }
       },
+      "Invitation": {
+        "properties": {
+          "id": {
+            "type": "string",
+            "format": "mongo-id",
+            "example": "61445159784bca6ef764c6df"
+          },
+          "email": {
+            "type": "string",
+            "example": "example1@gmail.com"
+          },
+          "reason": {
+            "type": "string",
+            "example": "Access denied"
+          },
+          "notification": {
+            "type": "boolean",
+            "example": true
+          },
+          "createdAt": {
+            "type": "number",
+            "format": "timestamp",
+            "example": 1639590502463
+          },
+          "senderName": {
+            "type": "string",
+            "example": "User1"
+          },
+          "lastEmail": {
+            "type": "number",
+            "format": "timestamp",
+            "example": 1639590502463
+          }
+        }
+      },
       "Notification": {
-        "required": [
-          "id",
-          "channels",
-          "type",
-          "push",
-          "email",
-          "createdAt",
-          "owner",
-          "recipients",
-          "followUpRoomId",
-          "directChatRoomId",
-          "wallPostName",
-          "followUpRoomName"
-        ],
         "properties": {
           "id": {
             "type": "string",
@@ -1990,9 +2520,9 @@
             "$ref": "#/components/schemas/Email"
           },
           "createdAt": {
-            "type": "string",
-            "format": "A date-time with a time-zone in the ISO-8601",
-            "example": "2021-09-18T00:00:00.000Z"
+            "type": "number",
+            "format": "timestamp",
+            "example": 1639590502463
           },
           "owner": {
             "$ref": "#/components/schemas/NotificationMember"
@@ -2023,12 +2553,127 @@
           }
         }
       },
-      "NotificationMember": {
+      "NotificationCreateEvent": {
+        "properties": {
+          "channels": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "enum": [
+                "EMAIL",
+                "PUSH"
+              ]
+            }
+          },
+          "type": {
+            "type": "string",
+            "enum": [
+              "ECOSYSTEM_ACCESS_REQUEST",
+              "ECOSYSTEM_WELCOME",
+              "ECOSYSTEM_INVITATION",
+              "ACTOR_REJECTED",
+              "EMAIL_VERIFICATION",
+              "WALL_POST_LIKE",
+              "WALL_POST_COMMENT",
+              "EVENT_CREATE",
+              "EVENT_ABOUT_TO_START",
+              "FOLLOW_UP_ROOM_INVITED",
+              "FOLLOW_UP_ROOM_NEWS",
+              "FOLLOW_UP_ROOM_MISSED_CALL",
+              "DIRECT_CHAT_NEW_MESSAGE",
+              "DIRECT_CHAT_MISSED_CALL",
+              "PUBLIC_CHANNEL_NEWS",
+              "DISCOVERY_NEW_TIPS",
+              "DISCOVERY_SEARCHES",
+              "CONNECT_VIEWS",
+              "RECOVER_PASSWORD"
+            ]
+          },
+          "email": {
+            "$ref": "#/components/schemas/Email"
+          },
+          "readed": {
+            "type": "boolean",
+            "example": true
+          },
+          "createdAt": {
+            "type": "number",
+            "format": "timestamp",
+            "example": 1639590502463
+          },
+          "owner": {
+            "$ref": "#/components/schemas/NotificationMember"
+          },
+          "recipients": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/NotificationMember"
+            }
+          },
+          "followUpRoomId": {
+            "type": "string",
+            "format": "mongo-id",
+            "example": "61445159784bca6ef764c6df"
+          },
+          "directChatRoomId": {
+            "type": "string",
+            "format": "mongo-id",
+            "example": "61445159784bca6ef764c6df"
+          },
+          "wallPostName": {
+            "type": "string",
+            "example": "Wall post 1"
+          },
+          "followUpRoomName": {
+            "type": "string",
+            "example": "Follow up room 1"
+          }
+        }
+      },
+      "NotificationUpdateEvent": {
         "required": [
-          "id",
-          "image",
-          "name"
+          "id"
         ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "format": "mongo-id",
+            "example": "61445159784bca6ef764c6df"
+          },
+          "type": {
+            "type": "string",
+            "enum": [
+              "ECOSYSTEM_ACCESS_REQUEST",
+              "ECOSYSTEM_WELCOME",
+              "ECOSYSTEM_INVITATION",
+              "ACTOR_REJECTED",
+              "EMAIL_VERIFICATION",
+              "WALL_POST_LIKE",
+              "WALL_POST_COMMENT",
+              "EVENT_CREATE",
+              "EVENT_UPDATED",
+              "EVENT_ABOUT_TO_START",
+              "FOLLOW_UP_ROOM_INVITED",
+              "FOLLOW_UP_ROOM_NEWS",
+              "FOLLOW_UP_ROOM_MISSED_CALL",
+              "FOLLOW_UP_ROOM_NEW_MESSAGE",
+              "DIRECT_CHAT_NEW_MESSAGE",
+              "DIRECT_CHAT_MISSED_CALL",
+              "PUBLIC_CHANNEL_NEWS",
+              "PUBLIC_CHANNEL_NEW_MESSAGE",
+              "DISCOVERY_NEW_TIPS",
+              "DISCOVERY_SEARCHES",
+              "CONNECT_VIEWS",
+              "RECOVER_PASSWORD"
+            ]
+          },
+          "readed": {
+            "type": "boolean",
+            "example": true
+          }
+        }
+      },
+      "NotificationMember": {
         "properties": {
           "id": {
             "type": "string",
@@ -2045,17 +2690,6 @@
         }
       },
       "Email": {
-        "required": [
-          "from",
-          "to",
-          "cc",
-          "bcc",
-          "subject",
-          "templateId",
-          "attachments",
-          "inlines",
-          "params"
-        ],
         "properties": {
           "from": {
             "$ref": "#/components/schemas/EmailFrom"
@@ -2117,10 +2751,6 @@
         }
       },
       "EmailFrom": {
-        "required": [
-          "email",
-          "name"
-        ],
         "properties": {
           "email": {
             "type": "string",
@@ -2134,10 +2764,6 @@
         }
       },
       "EmailAttachment": {
-        "required": [
-          "name",
-          "file"
-        ],
         "properties": {
           "name": {
             "type": "string",
@@ -2150,10 +2776,6 @@
         }
       },
       "EmailInline": {
-        "required": [
-          "cid",
-          "file"
-        ],
         "properties": {
           "cid": {
             "type": "string",
@@ -2165,11 +2787,80 @@
           }
         }
       },
-      "SecurityAccessUnauthorizedError": {
+      "Setting": {
+        "properties": {
+          "id": {
+            "type": "string",
+            "format": "mongo-id",
+            "example": "61445159784bca6ef764c6df"
+          },
+          "banner": {
+            "$ref": "#/components/schemas/Image"
+          }
+        }
+      },
+      "SettingCreateEvent": {
+        "properties": {
+          "banner": {
+            "$ref": "#/components/schemas/Image"
+          }
+        }
+      },
+      "SettingUpdateEvent": {
         "required": [
-          "code",
-          "message"
+          "id"
         ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "format": "mongo-id",
+            "example": "61445159784bca6ef764c6df"
+          },
+          "banner": {
+            "$ref": "#/components/schemas/Image"
+          }
+        }
+      },
+      "SettingNotConfiguredError": {
+        "type": "object",
+        "properties": {
+          "message": {
+            "type": "string",
+            "example": "Setting is not configured already."
+          },
+          "code": {
+            "type": "string",
+            "example": "SETTING_NOT_CONFIGURED"
+          }
+        }
+      },
+      "NotificationEmptyBodyError": {
+        "type": "object",
+        "properties": {
+          "message": {
+            "type": "string",
+            "example": "The notification object is empty."
+          },
+          "code": {
+            "type": "string",
+            "example": "NOTIFICATION_EMPTY"
+          }
+        }
+      },
+      "SettingEmptyBodyError": {
+        "type": "object",
+        "properties": {
+          "message": {
+            "type": "string",
+            "example": "The setting object is empty."
+          },
+          "code": {
+            "type": "string",
+            "example": "SETTING_EMPTY"
+          }
+        }
+      },
+      "SecurityAccessUnauthorizedError": {
         "type": "object",
         "properties": {
           "message": {
@@ -2183,10 +2874,6 @@
         }
       },
       "SecurityAccessForbiddenError": {
-        "required": [
-          "code",
-          "message"
-        ],
         "type": "object",
         "properties": {
           "message": {
@@ -2206,14 +2893,44 @@
         "name": "COOKIE_ID_TOKEN",
         "in": "header"
       },
-      "permissions": {
+      "userEmail": {
+        "type": "apiKey",
+        "name": "COOKIE_USER_EMAIL",
+        "in": "header"
+      },
+      "permissionManagement": {
         "type": "oauth2",
         "description": "This define all permisions required in Core API",
         "flows": {
           "authorizationCode": {
             "scopes": {
-              "ecosystem_update": "Permission required to modify ecosystem",
-              "actor_invite": "Permission required to add new actors to ecosystem"
+              "PERMISSION_MANAGEMENT": "Permission required to manage user permissions"
+            },
+            "authorizationUrl": "https://dev.moonshot.ceo/api/federation/login",
+            "tokenUrl": "https://dev.moonshot.ceo/api/federation/token"
+          }
+        }
+      },
+      "ecosystemUpdate": {
+        "type": "oauth2",
+        "description": "This define all permisions required in Core API",
+        "flows": {
+          "authorizationCode": {
+            "scopes": {
+              "ECOSYSTEM_UPDATE": "Permission required to modify ecosystem"
+            },
+            "authorizationUrl": "https://dev.moonshot.ceo/api/federation/login",
+            "tokenUrl": "https://dev.moonshot.ceo/api/federation/token"
+          }
+        }
+      },
+      "actorInvite": {
+        "type": "oauth2",
+        "description": "This define all permisions required in Core API",
+        "flows": {
+          "authorizationCode": {
+            "scopes": {
+              "ACTOR_INVITE": "Permission required to add new actors to ecosystem"
             },
             "authorizationUrl": "https://dev.moonshot.ceo/api/federation/login",
             "tokenUrl": "https://dev.moonshot.ceo/api/federation/token"

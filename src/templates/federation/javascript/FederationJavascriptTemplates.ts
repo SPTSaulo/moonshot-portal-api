@@ -411,6 +411,33 @@ export class FederationJavascriptTemplates {
     response: null
   }
 
+  public static user_verify_resend_put: Template = {
+    name: "user/verify/re-send",
+    code: "\nconst url = 'https://dev.moonshot.ceo/api/federation/user/verify/re-send'\n" +
+      "\n" +
+      "const body = {\n" +
+      "  \"email\": \"example1@gmail.com\"\n" +
+      "}\n" +
+      "\n" +
+      "fetch(url, {\n" +
+      "  method: 'PUT',\n" +
+      "  body: JSON.stringify(body)\n" +
+      "})\n" +
+      "  .then(response => response.json())\n" +
+      "  .then(data => console.log(JSON.stringify(data)));",
+    response: null
+  }
+
+  public static password_last_modification_get: Template = {
+    name: "password/last-modification",
+    code: "\nconst url = 'https://dev.moonshot.ceo/api/federation/password/last-modification?email=example1@gmail.com'\n" +
+      "\n" +
+      "fetch(url)\n" +
+      "  .then(response => response.json())\n" +
+      "  .then(data => console.log(JSON.stringify(data)));",
+    response: "\n2021-02-19",
+  }
+
   public static password_request_post: Template = {
     name: "password/request",
     code: "\nconst url = 'https://dev.moonshot.ceo/api/federation/password/request'\n" +
@@ -463,5 +490,70 @@ export class FederationJavascriptTemplates {
       "  .then(response => response.json())\n" +
       "  .then(data => console.log(JSON.stringify(data)));",
     response: null
+  }
+
+  public static verifications_get: Template = {
+    name: "verifications",
+    code: "\nconst url = 'https://dev.moonshot.ceo/api/federation/verifications'\n" +
+      "\n" +
+      "fetch(url)\n" +
+      "  .then(response => response.json())\n" +
+      "  .then(data => console.log(JSON.stringify(data)));",
+    response: "\n[\n" +
+      "   {\n" +
+      "      \"id\":\"61b1ba463f3beb45b54a357e\",\n" +
+      "      \"email\":\"iaramburu@moonshot.ceo\",\n" +
+      "      \"token\":null,\n" +
+      "      \"used\":false\n" +
+      "   },\n" +
+      "   {\n" +
+      "      \"id\":\"61b1ba463f3beb45b54a357f\",\n" +
+      "      \"email\":\"dsuriol@gmail.com\",\n" +
+      "      \"token\":null,\n" +
+      "      \"used\":false\n" +
+      "   },\n" +
+      "   {\n" +
+      "      \"id\":\"61b1ba473f3beb45b54a3580\",\n" +
+      "      \"email\":\"trujillosanchezjeremy@gmail.com\",\n" +
+      "      \"token\":\"4f8e9131-7072-4bc9-926e-49ff90fba723\",\n" +
+      "      \"used\":false\n" +
+      "   },\n" +
+      "   {\n" +
+      "      \"id\":\"61b1ba473f3beb45b54a3581\",\n" +
+      "      \"email\":\"saulobach1@gmail.com\",\n" +
+      "      \"token\":null,\n" +
+      "      \"used\":false\n" +
+      "   },\n" +
+      "   {\n" +
+      "      \"id\":\"61b1ba483f3beb45b54a3582\",\n" +
+      "      \"email\":\"borja.gallifrey@gmail.com\",\n" +
+      "      \"token\":null,\n" +
+      "      \"used\":false\n" +
+      "   },\n" +
+      "   {\n" +
+      "      \"id\":\"61b1ba483f3beb45b54a3583\",\n" +
+      "      \"email\":\"lreina@moonshot.ceo\",\n" +
+      "      \"token\":null,\n" +
+      "      \"used\":false\n" +
+      "   },\n" +
+      "   {\n" +
+      "      \"id\":\"61b1ba483f3beb45b54a3584\",\n" +
+      "      \"email\":\"amct24@hotmail.com\",\n" +
+      "      \"token\":null,\n" +
+      "      \"used\":false\n" +
+      "   },\n" +
+      "   {\n" +
+      "      \"id\":\"61b1ba493f3beb45b54a3585\",\n" +
+      "      \"email\":\"calsot@calsot.com\",\n" +
+      "      \"token\":null,\n" +
+      "      \"used\":false\n" +
+      "   },\n" +
+      "   {\n" +
+      "      \"id\":\"61b1ba4a3f3beb45b54a3586\",\n" +
+      "      \"email\":\"jeremy.trujillo.jt15@gmail.com\",\n" +
+      "      \"token\":\"72657257-2d9d-4db5-aaa1-02f2b9cf21d5\",\n" +
+      "      \"used\":false\n" +
+      "   }\n" +
+      "]"
   }
 }

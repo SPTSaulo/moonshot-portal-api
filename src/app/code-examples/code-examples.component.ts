@@ -23,7 +23,7 @@ export class CodeExamplesComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    this.languages = [Language.JS, Language.JAVA]
+    this.languages = [Language.JS, Language.JAVA, Language.PYTHON]
     this._route.params.subscribe(params => {
       this.module = <Module>params['module']
       this.endpoints = this._apiService.getEndpoints(this.module)

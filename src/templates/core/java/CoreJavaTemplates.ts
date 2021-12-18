@@ -20,6 +20,12 @@ export class CoreJavaTemplates {
     response: "\nTODO"
   }
 
+  public static navbar_get: Template = {
+    name: "navbar",
+    code: "\nTODO",
+    response: "\nTODO"
+  }
+
   public static industry_id_get: Template = {
     name: "industry/:id",
     code: "\nTODO",
@@ -92,8 +98,32 @@ export class CoreJavaTemplates {
     response: "\nTODO"
   }
 
-  public static ecosystemInvite_post: Template = {
-    name: "ecosystem/invite",
+  public static invitations_get: Template = {
+    name: "invitations",
+    code: "\nTODO",
+    response: "\nTODo",
+  }
+
+  public static invitation_get: Template = {
+    name: "invitation",
+    code: "\nTODO",
+    response: "\nTODO"
+  }
+
+  public static invitation_post: Template = {
+    name: "invitation",
+    code: "\nTODO",
+    response: "\nTODO"
+  }
+
+  public static invitation_put: Template = {
+    name: "invitation",
+    code: "\nTODO",
+    response: "\nTODO"
+  }
+
+  public static invitation_id_delete: Template = {
+    name: "invitation/:id",
     code: "\nTODO",
     response: "\nTODO"
   }
@@ -110,10 +140,46 @@ export class CoreJavaTemplates {
     response: "\nTODO"
   }
 
+  public static notifications_pending_get: Template = {
+    name: "notifications/pending",
+    code: "\nTODO",
+    response: "\nTODO"
+  }
+
   public static notification_post: Template = {
     name: "notification",
     code: "\nTODO",
     response: "\nTODO"
+  }
+
+  public static notification_put: Template = {
+    name: "notification",
+    code: "\nTODO",
+    response: "\nTODO"
+  }
+
+  public static notification_id_delete: Template = {
+    name: "notification/:id",
+    code: "\nTODO",
+    response: "\nTODO"
+  }
+
+  public static setting_post: Template = {
+    name: "setting",
+    code: "TODO",
+    response: null
+  }
+
+  public static setting_put: Template = {
+    name: "setting",
+    code: "TODO",
+    response: null
+  }
+
+  public static setting_get: Template = {
+    name: "setting",
+    code: "TODO",
+    response: "TODO"
   }
 
 

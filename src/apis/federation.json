@@ -49,6 +49,10 @@
     {
       "name": "Password",
       "description": "Endpoints about Password entity"
+    },
+    {
+      "name": "Verification",
+      "description": "Endpoints about Verification entity"
     }
   ],
   "paths": {
@@ -104,7 +108,7 @@
           "200": {
             "description": "Authentication successfully"
           },
-          "500": {
+          "400": {
             "description": "Invalid login params, invalid username, invalid password or user not found",
             "content": {
               "application/json": {
@@ -133,6 +137,16 @@
           "200": {
             "description": "Logout sucessfully",
             "content": {}
+          },
+          "401": {
+            "description": "You must login before call this endpoint",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SecurityAccessUnauthorizedError"
+                }
+              }
+            }
           }
         },
         "security": [
@@ -168,12 +182,14 @@
         "operationId": "token",
         "parameters": [
           {
-            "name": "tokenId",
+            "name": "idToken",
             "in": "query",
             "required": true,
             "description": "Token authentication id",
             "schema": {
-              "type": "string"
+              "type": "string",
+              "format": "bearer token",
+              "example": "eyJhbGciOiJSUzI1NiIsIn"
             }
           }
         ],
@@ -273,6 +289,16 @@
                 }
               }
             }
+          },
+          "401": {
+            "description": "You must login before call this endpoint",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SecurityAccessUnauthorizedError"
+                }
+              }
+            }
           }
         },
         "security": [
@@ -301,7 +327,9 @@
             "description": "User id",
             "required": true,
             "schema": {
-              "type": "string"
+              "type": "string",
+              "format": "mongo-id",
+              "example": "61445159784bca6ef764c6df"
             }
           }
         ],
@@ -342,8 +370,8 @@
             "userId": []
           },
           {
-            "permissions": [
-              "ecosystem_management"
+            "permissionManagement": [
+              "PERMISSION_MANAGEMENT"
             ]
           }
         ],
@@ -367,12 +395,12 @@
             "in": "query",
             "description": "User email",
             "required": true,
-            "style": "form",
-            "explode": false,
             "schema": {
               "type": "array",
               "items": {
-                "type": "string"
+                "type": "string",
+                "format": "email",
+                "example": "example1@gmail.com"
               }
             }
           }
@@ -397,16 +425,6 @@
                 }
               }
             }
-          },
-          "403": {
-            "description": "User does not have the necessary permissions",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/SecurityAccessForbiddenError"
-                }
-              }
-            }
           }
         },
         "security": [
@@ -416,7 +434,7 @@
         ],
         "externalDocs": {
           "description": "Code Example",
-          "url": "http://localhost:4200/code-examples/federation#users/by/email_get"
+          "url": "http://localhost:4200/code-examples/federation#user/by/email_get"
         }
       }
     },
@@ -468,8 +486,8 @@
             "userId": []
           },
           {
-            "permissions": [
-              "permission_management"
+            "permissionManagement": [
+              "PERMISSION_MANAGEMENT"
             ]
           }
         ],
@@ -498,7 +516,7 @@
             "schema": {
               "type": "array",
               "items": {
-                "type": "string"
+                "$ref": "#/components/schemas/Role"
               }
             }
           }
@@ -543,14 +561,72 @@
             "userId": []
           },
           {
-            "permissions": [
-              "ecosystem_management"
+            "permissionManagement": [
+              "PERMISSION_MANAGEMENT"
             ]
           }
         ],
         "externalDocs": {
           "description": "Code Example",
           "url": "http://localhost:4200/code-examples/federation#users/by/roles_get"
+        }
+      }
+    },
+    "/users/by/perms": {
+      "get": {
+        "tags": [
+          "User"
+        ],
+        "summary": "Get user by permissions",
+        "description": "Find a user in the database by permissions and get all the data associated\n",
+        "parameters": [
+          {
+            "name": "perms",
+            "in": "query",
+            "description": "User permissions",
+            "required": true,
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "example": "DEV:ONLINE_EVENT_CREATE"
+              }
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Get users data successfully",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/User"
+                  }
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "You must login before call this endpoint",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SecurityAccessUnauthorizedError"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "userId": []
+          }
+        ],
+        "externalDocs": {
+          "description": "Code Example",
+          "url": "http://localhost:4200/code-examples/federation#users/by/perms_get"
         }
       }
     },
@@ -568,7 +644,9 @@
             "description": "User id",
             "required": true,
             "schema": {
-              "type": "string"
+              "type": "string",
+              "format": "mongo-id",
+              "example": "61445159784bca6ef764c6df"
             }
           }
         ],
@@ -622,8 +700,8 @@
             "userId": []
           },
           {
-            "permissions": [
-              "permission_management"
+            "permissionManagement": [
+              "PERMISSION_MANAGEMENT"
             ]
           }
         ],
@@ -639,7 +717,7 @@
         "summary": "Update user permissions",
         "description": "Update user permission in database\n",
         "requestBody": {
-          "description": "Object that have user id and new user permissions",
+          "description": "Object that contains all parameters to update the user permissions",
           "content": {
             "application/json": {
               "schema": {
@@ -688,8 +766,8 @@
             "userId": []
           },
           {
-            "permissions": [
-              "permission_management"
+            "permissionManagement": [
+              "PERMISSION_MANAGEMENT"
             ]
           }
         ],
@@ -707,7 +785,7 @@
         "summary": "Verify user",
         "description": "Verify a user and allow him access to the platform\n",
         "requestBody": {
-          "description": "Object that have user email and user access token",
+          "description": "Object that contains all parameters to verify an user",
           "content": {
             "application/json": {
               "schema": {
@@ -737,6 +815,94 @@
         }
       }
     },
+    "/user/verify/re-send": {
+      "put": {
+        "tags": [
+          "User"
+        ],
+        "summary": "Resend email verification",
+        "description": "Resend email verification and save a EmailVerification entity in the database\n",
+        "requestBody": {
+          "description": "Object that contains all parameters to resend a verification email",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ResendVerificationEmailEvent"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "400": {
+            "description": "Body is empty",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResendVerificationEmailEmptyBodyError"
+                }
+              }
+            }
+          }
+        },
+        "externalDocs": {
+          "description": "Code Example",
+          "url": "http://localhost:4200/code-examples/federation#user/verify/re-send_put"
+        }
+      }
+    },
+    "/password/last-modification": {
+      "get": {
+        "tags": [
+          "Password"
+        ],
+        "summary": "Get last password modification",
+        "description": "Find last password modification in Auth0 by user email\n",
+        "parameters": [
+          {
+            "name": "email",
+            "in": "query",
+            "description": "User email",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "email",
+              "example": "example1@gmail.com"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Get last password modification successfully",
+            "content": {
+              "text": {
+                "schema": {
+                  "type": "string",
+                  "format": "date",
+                  "example": "2021-02-19"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Cannot find the user",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/UserNotFoundError"
+                }
+              }
+            }
+          }
+        },
+        "externalDocs": {
+          "description": "Code Example",
+          "url": "http://localhost:4200/code-examples/federation#password/last-modification_get"
+        }
+      }
+    },
     "/password/request": {
       "post": {
         "tags": [
@@ -745,7 +911,7 @@
         "summary": "Request to change a user password",
         "description": "Generate a request and a token in database to change a password\n",
         "requestBody": {
-          "description": "Object that have user email",
+          "description": "Object that contains all parameters to send an email to recover the user password",
           "content": {
             "application/json": {
               "schema": {
@@ -783,7 +949,7 @@
         "summary": "Update user password",
         "description": "Find user and update the password in database \n",
         "requestBody": {
-          "description": "Object that have token and password twice",
+          "description": "Object that contains all parameters to recover the user password",
           "content": {
             "application/json": {
               "schema": {
@@ -821,7 +987,7 @@
         "summary": "Update user password",
         "description": "Find user and update the password in database \n",
         "requestBody": {
-          "description": "Object that have password and new password twice",
+          "description": "Object that contains all parameters to change the user password",
           "content": {
             "application/json": {
               "schema": {
@@ -857,12 +1023,51 @@
         },
         "security": [
           {
+            "userId": []
+          },
+          {
             "userEmail": []
           }
         ],
         "externalDocs": {
           "description": "Code Example",
           "url": "http://localhost:4200/code-examples/federation#password/change_put"
+        }
+      }
+    },
+    "/verifications": {
+      "get": {
+        "tags": [
+          "Verification"
+        ],
+        "summary": "Get all verifications",
+        "description": "Find all verifications in the database and get all the data asociated\n",
+        "operationId": "verification",
+        "responses": {
+          "200": {
+            "description": "Get verifications successfully",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Verification"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "You must login before call this endpoint",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SecurityAccessUnauthorizedError"
+                }
+              }
+            }
+          }
+        },
+        "externalDocs": {
+          "description": "Code Example",
+          "url": "http://localhost:4200/code-examples/federation#verifications_get"
         }
       }
     }
@@ -874,12 +1079,11 @@
           "password",
           "username"
         ],
-        "type": "object",
         "properties": {
           "username": {
             "type": "string",
             "format": "email",
-            "example": "pedrojimenez@gmail.com"
+            "example": "example1@gmail.com"
           },
           "password": {
             "type": "string",
@@ -888,11 +1092,6 @@
         }
       },
       "LoginError": {
-        "required": [
-          "code",
-          "message"
-        ],
-        "type": "object",
         "properties": {
           "message": {
             "type": "string",
@@ -905,11 +1104,6 @@
         }
       },
       "TokenError": {
-        "required": [
-          "code",
-          "message"
-        ],
-        "type": "object",
         "properties": {
           "message": {
             "type": "string",
@@ -922,15 +1116,14 @@
         }
       },
       "Community": {
-        "type": "object",
         "properties": {
           "module": {
             "type": "string",
-            "example": null
+            "example": "Community"
           },
           "name": {
             "type": "string",
-            "example": null
+            "example": "community"
           }
         }
       },
@@ -944,7 +1137,6 @@
         ]
       },
       "User": {
-        "type": "object",
         "properties": {
           "id": {
             "type": "string",
@@ -976,11 +1168,6 @@
         }
       },
       "UserNotFoundError": {
-        "required": [
-          "code",
-          "message"
-        ],
-        "type": "object",
         "properties": {
           "message": {
             "type": "string",
@@ -1005,7 +1192,6 @@
           "id",
           "perms"
         ],
-        "type": "object",
         "properties": {
           "id": {
             "type": "string",
@@ -1021,11 +1207,6 @@
         }
       },
       "UserPermsUpdateEventEmpty": {
-        "required": [
-          "code",
-          "message"
-        ],
-        "type": "object",
         "properties": {
           "message": {
             "type": "string",
@@ -1041,7 +1222,6 @@
         "required": [
           "email"
         ],
-        "type": "object",
         "properties": {
           "email": {
             "type": "string",
@@ -1056,7 +1236,6 @@
           "repeatPassword",
           "token"
         ],
-        "type": "object",
         "properties": {
           "token": {
             "type": "string",
@@ -1074,11 +1253,6 @@
         }
       },
       "PasswordRecoverNotFoundError": {
-        "required": [
-          "code",
-          "message"
-        ],
-        "type": "object",
         "properties": {
           "message": {
             "type": "string",
@@ -1096,7 +1270,6 @@
           "newPasswordRepeat",
           "password"
         ],
-        "type": "object",
         "properties": {
           "password": {
             "type": "string",
@@ -1113,11 +1286,6 @@
         }
       },
       "PasswordChangeEmptyError": {
-        "required": [
-          "code",
-          "message"
-        ],
-        "type": "object",
         "properties": {
           "message": {
             "type": "string",
@@ -1129,29 +1297,48 @@
           }
         }
       },
+      "Verification": {
+        "properties": {
+          "id": {
+            "type": "string",
+            "format": "mongo-id",
+            "example": "60acae8e2f799d228a4d4a85"
+          },
+          "email": {
+            "type": "string",
+            "format": "email",
+            "example": "example1@gmail.com"
+          },
+          "token": {
+            "type": "string",
+            "format": "bearer token",
+            "example": "eyJhbGciOiJSUzI1NiIsIn"
+          },
+          "used": {
+            "type": "boolean",
+            "example": false
+          }
+        }
+      },
       "UserVerifyEvent": {
         "required": [
           "token",
           "email"
         ],
-        "type": "object",
         "properties": {
           "token": {
             "type": "string",
+            "format": "bearer token",
             "example": "eyJhbGciOiJSUzI1NiIsIn"
           },
           "email": {
             "type": "string",
-            "example": "pedrojimenez@gmail.com"
+            "format": "email",
+            "example": "example1@gmail.com"
           }
         }
       },
       "UserVerifyEventEmpty": {
-        "required": [
-          "code",
-          "message"
-        ],
-        "type": "object",
         "properties": {
           "message": {
             "type": "string",
@@ -1163,12 +1350,31 @@
           }
         }
       },
-      "SecurityAccessUnauthorizedError": {
+      "ResendVerificationEmailEvent": {
         "required": [
-          "code",
-          "message"
+          "email"
         ],
-        "type": "object",
+        "properties": {
+          "email": {
+            "type": "string",
+            "format": "email",
+            "example": "example1@gmail.com"
+          }
+        }
+      },
+      "ResendVerificationEmailEmptyBodyError": {
+        "properties": {
+          "message": {
+            "type": "string",
+            "example": "The resend verification email event is empty"
+          },
+          "code": {
+            "type": "string",
+            "example": "RESEND_VERIFICATION_EMAIL_EVENT_EMPTY"
+          }
+        }
+      },
+      "SecurityAccessUnauthorizedError": {
         "properties": {
           "message": {
             "type": "string",
@@ -1181,11 +1387,6 @@
         }
       },
       "SecurityAccessForbiddenError": {
-        "required": [
-          "code",
-          "message"
-        ],
-        "type": "object",
         "properties": {
           "message": {
             "type": "string",
@@ -1224,14 +1425,13 @@
         "name": "COOKIE_USER_PERMISSIONS",
         "in": "header"
       },
-      "permissions": {
+      "permissionManagement": {
         "type": "oauth2",
         "description": "This define all permisions required in Core API",
         "flows": {
           "authorizationCode": {
             "scopes": {
-              "permission_management": "Permission required to add or remove user permissions",
-              "ecosystem_management": "Permission required to make any operation in the ecosystem"
+              "PERMISSION_MANAGEMENT": "Permission required to add or remove user permissions"
             },
             "authorizationUrl": "https://dev.moonshot.ceo/api/federation/login",
             "tokenUrl": "https://dev.moonshot.ceo/api/federation/token"

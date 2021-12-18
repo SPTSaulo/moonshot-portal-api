@@ -1,6 +1,6 @@
-import { ApisConstants } from '../../apis/ApisConstants';
+import {ApisConstants} from '../../apis/ApisConstants';
 import {Endpoint, Method} from '../model/Endpoint';
-import { Api } from '../model/Api';
+import {Api} from '../model/Api';
 
 export class ApiService {
   apis: Api[] = [
@@ -64,6 +64,14 @@ export class ApiService {
           method: Method.PUT
         },
         {
+          name: 'user/verify/re-send',
+          method: Method.PUT
+        },
+        {
+          name: 'password/last-modification',
+          method: Method.GET
+        },
+        {
           name: 'password/request',
           method: Method.POST
         },
@@ -74,6 +82,10 @@ export class ApiService {
         {
           name: 'password/change',
           method: Method.PUT
+        },
+        {
+          name: 'verifications',
+          method: Method.GET
         }
       ],
       description: 'Esta es la api de Federation. ' +
@@ -98,6 +110,10 @@ export class ApiService {
         },
         {
           name: 'openGraph',
+          method: Method.GET
+        },
+        {
+          name: 'navbar',
           method: Method.GET
         },
         {
@@ -149,8 +165,24 @@ export class ApiService {
           method: Method.PUT
         },
         {
-          name: 'ecosystem/invite',
+          name: 'invitations',
+          method: Method.GET
+        },
+        {
+          name: 'invitation',
+          method: Method.GET
+        },
+        {
+          name: 'invitation',
           method: Method.POST
+        },
+        {
+          name: 'invitation',
+          method: Method.PUT
+        },
+        {
+          name: 'invitation/:id',
+          method: Method.DELETE
         },
         {
           name: 'notifications',
@@ -161,8 +193,32 @@ export class ApiService {
           method: Method.GET
         },
         {
+          name: 'notifications/pending',
+          method: Method.GET
+        },
+        {
           name: 'notification',
           method: Method.POST
+        },
+        {
+          name: 'notification',
+          method: Method.PUT
+        },
+        {
+          name: 'notification/:id',
+          method: Method.DELETE
+        },
+        {
+          name: 'setting',
+          method: Method.GET
+        },
+        {
+          name: 'setting',
+          method: Method.POST
+        },
+        {
+          name: 'setting',
+          method: Method.PUT
         }
       ],
       description: 'Esta es la api de Core. ' +
@@ -197,7 +253,7 @@ export class ApiService {
           method: Method.PUT
         },
         {
-          name: 'online-event',
+          name: 'online-event/:id',
           method: Method.DELETE
         },
         {
@@ -213,7 +269,7 @@ export class ApiService {
           method: Method.PUT
         },
         {
-          name: 'online-event/admin',
+          name: 'online-event/:id/admin',
           method: Method.DELETE
         },
         {
@@ -233,7 +289,7 @@ export class ApiService {
           method: Method.PUT
         },
         {
-          name: 'face-to-face-event',
+          name: 'face-to-face-event/:id',
           method: Method.DELETE
         },
         {
@@ -249,7 +305,7 @@ export class ApiService {
           method: Method.PUT
         },
         {
-          name: 'face-to-face-event/admin',
+          name: 'face-to-face-event/:id/admin',
           method: Method.DELETE
         },
         {
@@ -277,7 +333,7 @@ export class ApiService {
           method: Method.POST
         },
         {
-          name: 'direct-chat',
+          name: 'direct-chat/:id',
           method: Method.DELETE
         },
         {
@@ -289,7 +345,7 @@ export class ApiService {
           method: Method.GET
         },
         {
-          name: 'direct-chat/message',
+          name: 'direct-chat/message/:id',
           method: Method.DELETE
         },
         {
@@ -329,7 +385,7 @@ export class ApiService {
           method: Method.PUT
         },
         {
-          name: 'follow-up-room',
+          name: 'follow-up-room/:id',
           method: Method.DELETE
         },
         {
@@ -337,11 +393,11 @@ export class ApiService {
           method: Method.POST
         },
         {
-          name: 'follow-up-room/message',
+          name: 'follow-up-room/message/:id',
           method: Method.DELETE
         },
         {
-          name: 'follow-up-room/message/admin',
+          name: 'follow-up-room/message/:id/admin',
           method: Method.DELETE
         },
         {
@@ -365,7 +421,7 @@ export class ApiService {
           method: Method.PUT
         },
         {
-          name: 'public-channel',
+          name: 'public-channel/:id',
           method: Method.DELETE
         },
         {
@@ -373,7 +429,7 @@ export class ApiService {
           method: Method.PUT
         },
         {
-          name: 'public-channel/admin',
+          name: 'public-channel/:id/admin',
           method: Method.DELETE
         },
         {
@@ -389,11 +445,11 @@ export class ApiService {
           method: Method.POST
         },
         {
-          name: 'public-channel/message',
+          name: 'public-channel/message/:id',
           method: Method.DELETE
         },
         {
-          name: 'public-channel/message/admin',
+          name: 'public-channel/message/:id/admin',
           method: Method.DELETE
         },
         {
@@ -409,7 +465,7 @@ export class ApiService {
           method: Method.PUT
         },
         {
-          name: 'wall-post',
+          name: 'wall-post/:id',
           method: Method.DELETE
         },
         {
@@ -417,7 +473,7 @@ export class ApiService {
           method: Method.PUT
         },
         {
-          name: 'wall-post/admin',
+          name: 'wall-post/:id/admin',
           method: Method.DELETE
         },
         {
@@ -453,6 +509,10 @@ export class ApiService {
           method: Method.GET
         },
         {
+          name: 'actors/import/csv',
+          method: Method.POST
+        },
+        {
           name: 'actors/by-name-and-state',
           method: Method.GET
         },
@@ -478,10 +538,6 @@ export class ApiService {
         },
         {
           name: 'actor',
-          method: Method.POST
-        },
-        {
-          name: 'actor',
           method: Method.PUT
         },
         {
@@ -493,11 +549,15 @@ export class ApiService {
           method: Method.PUT
         },
         {
-          name: 'actor',
+          name: 'actor/:id',
           method: Method.DELETE
         },
         {
-          name: 'logged-in-member',
+          name: 'fcmToken',
+          method: Method.PUT
+        },
+        {
+          name: 'member/logged-in',
           method: Method.GET
         },
         {
@@ -517,7 +577,7 @@ export class ApiService {
           method: Method.PUT
         },
         {
-          name: 'member',
+          name: 'member/:id',
           method: Method.DELETE
         },
         {
@@ -529,7 +589,7 @@ export class ApiService {
           method: Method.PUT
         },
         {
-          name: 'education',
+          name: 'education/:id',
           method: Method.DELETE
         },
         {
@@ -541,7 +601,7 @@ export class ApiService {
           method: Method.PUT
         },
         {
-          name: 'experience',
+          name: 'experience/:id',
           method: Method.DELETE
         },
         {
@@ -561,20 +621,8 @@ export class ApiService {
           method: Method.PUT
         },
         {
-          name: 'project',
+          name: 'project/:id',
           method: Method.DELETE
-        },
-        {
-          name: 'setting',
-          method: Method.POST
-        },
-        {
-          name: 'setting',
-          method: Method.PUT
-        },
-        {
-          name: 'setting',
-          method: Method.GET
         }
       ],
       description: 'Esta es la api de Community. ' +

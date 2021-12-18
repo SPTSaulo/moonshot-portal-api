@@ -38,7 +38,7 @@ export class FederationJavaTemplates {
     response: "TODO"
   }
 
-  public static users_id_get: Template = {
+  public static user_id_get: Template = {
     name: "users/:id",
     code: "TODO",
     response: "TODO"
@@ -86,6 +86,18 @@ export class FederationJavaTemplates {
     response: "TODO"
   }
 
+  public static user_verify_resend_put: Template = {
+    name: "user/verify/re-send",
+    code: "\nTODO",
+    response: "\nTODO"
+  }
+
+  public static password_last_modification_get: Template = {
+    name: "password/last-modification",
+    code: "\nTODO",
+    response: "\nTODO",
+  }
+
   public static password_request_post: Template = {
     name: "password/request",
     code: "TODO",
@@ -102,5 +114,11 @@ export class FederationJavaTemplates {
     name: "password/change",
     code: "TODO",
     response: "TODO"
+  }
+
+  public static verifications_get: Template = {
+    name: "verifications",
+    code: "\nTODO",
+    response: "\nTODO"
   }
 }

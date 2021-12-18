@@ -36,8 +36,8 @@ export class CommunityJavaTemplates {
     response: "TODO"
   }
 
-  public static online_event_delete: Template = {
-    name: "online-event",
+  public static online_event_id_delete: Template = {
+    name: "online-event/:id",
     code: "TODO",
     response: "TODO"
   }
@@ -60,8 +60,8 @@ export class CommunityJavaTemplates {
     response: "TODO"
   }
 
-  public static online_event_admin_delete: Template = {
-    name: "online-event/admin",
+  public static online_event_id_admin_delete: Template = {
+    name: "online-event/:id/admin",
     code: "TODO",
     response: "TODO"
   }
@@ -90,8 +90,8 @@ export class CommunityJavaTemplates {
     response: "TODO"
   }
 
-  public static face_to_face_event_delete: Template = {
-    name: "face-to-face-event",
+  public static face_to_face_event_id_delete: Template = {
+    name: "face-to-face-event/:id",
     code: "TODO",
     response: "TODO"
   }
@@ -114,8 +114,8 @@ export class CommunityJavaTemplates {
     response: "TODO"
   }
 
-  public static face_to_face_event_admin_delete: Template = {
-    name: "face-to-face-event/admin",
+  public static face_to_face_event_id_admin_delete: Template = {
+    name: "face-to-face-event/:id/admin",
     code: "TODO",
     response: "TODO"
   }
@@ -156,8 +156,8 @@ export class CommunityJavaTemplates {
     response: "TODO"
   }
 
-  public static direct_chat_delete: Template = {
-    name: "direct-chat",
+  public static direct_chat_id_delete: Template = {
+    name: "direct-chat/:id",
     code: "TODO",
     response: "TODO"
   }
@@ -174,8 +174,8 @@ export class CommunityJavaTemplates {
     response: "TODO"
   }
 
-  public static direct_chat_message_delete: Template = {
-    name: "direct-chat/message",
+  public static direct_chat_message_id_delete: Template = {
+    name: "direct-chat/message/:id",
     code: "TODO",
     response: "TODO"
   }
@@ -234,8 +234,8 @@ export class CommunityJavaTemplates {
     response: "TODO"
   }
 
-  public static follow_up_room_delete: Template = {
-    name: "follow-up-room",
+  public static follow_up_room_id_delete: Template = {
+    name: "follow-up-room/:id",
     code: "TODO",
     response: "TODO"
   }
@@ -246,14 +246,14 @@ export class CommunityJavaTemplates {
     response: "TODO"
   }
 
-  public static follow_up_room_message_delete: Template = {
-    name: "follow-up-room/message",
+  public static follow_up_room_message_id_delete: Template = {
+    name: "follow-up-room/message/:id",
     code: "TODO",
     response: "TODO"
   }
 
-  public static follow_up_room_message_admin_delete: Template = {
-    name: "follow-up-room/message/admin",
+  public static follow_up_room_message_id_admin_delete: Template = {
+    name: "follow-up-room/message/:id/admin",
     code: "TODO",
     response: "TODO"
   }
@@ -288,14 +288,14 @@ export class CommunityJavaTemplates {
     response: "TODO"
   }
 
-  public static public_channel_delete: Template = {
-    name: "public-channel",
+  public static public_channel_id_delete: Template = {
+    name: "public-channel/:id",
     code: "TODO",
     response: "TODO"
   }
 
-  public static public_channel_admin_delete: Template = {
-    name: "public-channel/admin",
+  public static public_channel_id_admin_delete: Template = {
+    name: "public-channel/:id/admin",
     code: "TODO",
     response: "TODO"
   }
@@ -318,14 +318,14 @@ export class CommunityJavaTemplates {
     response: "TODO"
   }
 
-  public static public_channel_message_delete: Template = {
-    name: "public-channel/message",
+  public static public_channel_message_id_delete: Template = {
+    name: "public-channel/message/:id",
     code: "TODO",
     response: "TODO"
   }
 
-  public static public_channel_message_admin_delete: Template = {
-    name: "public-channel/message/admin",
+  public static public_channel_message_id_admin_delete: Template = {
+    name: "public-channel/message/:id/admin",
     code: "TODO",
     response: "TODO"
   }
@@ -348,8 +348,8 @@ export class CommunityJavaTemplates {
     response: "TODO"
   }
 
-  public static wall_post_delete: Template = {
-    name: "wall-post",
+  public static wall_post_id_delete: Template = {
+    name: "wall-post/:id",
     code: "TODO",
     response: "TODO"
   }
@@ -360,8 +360,8 @@ export class CommunityJavaTemplates {
     response: "TODO"
   }
 
-  public static wall_post_admin_delete: Template = {
-    name: "wall-post/admin",
+  public static wall_post_id_admin_delete: Template = {
+    name: "wall-post/:id/admin",
     code: "TODO",
     response: "TODO"
   }
@@ -409,6 +409,12 @@ export class CommunityJavaTemplates {
 
   public static actors_get: Template = {
     name: "actors",
+    code: "TODO",
+    response: "TODO"
+  }
+
+  public static actors_import_csv_post: Template = {
+    name: "actors/import/csv",
     code: "TODO",
     response: "TODO"
   }
@@ -467,14 +473,20 @@ export class CommunityJavaTemplates {
     response: "TODO"
   }
 
-  public static actor_delete: Template = {
-    name: "actor",
+  public static actor_id_delete: Template = {
+    name: "actor/:id",
     code: "TODO",
     response: "TODO"
   }
 
-  public static logged_in_member_get: Template = {
-    name: "logged-in-member",
+  public static fcm_token_put: Template = {
+    name: "fcmToken",
+    code: "\nTODO",
+    response: "\nTODO"
+  }
+
+  public static member_logged_in_get: Template = {
+    name: "member/logged-in",
     code: "TODO",
     response: "TODO"
   }
@@ -503,8 +515,8 @@ export class CommunityJavaTemplates {
     response: "TODO"
   }
 
-  public static member_delete: Template = {
-    name: "member",
+  public static member_id_delete: Template = {
+    name: "member/:id",
     code: "TODO",
     response: "TODO"
   }
@@ -521,8 +533,8 @@ export class CommunityJavaTemplates {
     response: "TODO"
   }
 
-  public static education_delete: Template = {
-    name: "education",
+  public static education_id_delete: Template = {
+    name: "education/:id",
     code: "TODO",
     response: "TODO"
   }
@@ -539,8 +551,8 @@ export class CommunityJavaTemplates {
     response: "TODO"
   }
 
-  public static experience_delete: Template = {
-    name: "experience",
+  public static experience_id_delete: Template = {
+    name: "experience/:id",
     code: "TODO",
     response: "TODO"
   }
@@ -570,26 +582,9 @@ export class CommunityJavaTemplates {
   }
 
   public static project_delete: Template = {
-    name: "project",
+    name: "project/:id",
     code: "TODO",
     response: "TODO"
   }
 
-  public static setting_post: Template = {
-    name: "setting",
-    code: "TODO",
-    response: "TODO"
-  }
-
-  public static setting_put: Template = {
-    name: "setting",
-    code: "TODO",
-    response: "TODO"
-  }
-
-  public static setting_get: Template = {
-    name: "setting",
-    code: "TODO",
-    response: "TODO"
-  }
 }
