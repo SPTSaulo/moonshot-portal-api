@@ -8621,10 +8621,7 @@ export class ApisConstants {
             "content": {
               "application/json": {
                 "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/ActorCreateEvent"
-                  }
+                  "$ref": "#/components/schemas/ActorCreateEvent"
                 }
               }
             }
@@ -9666,6 +9663,7 @@ export class ApisConstants {
           ],
           "summary": "Get project by id",
           "description": "Find a project in the database by id\n",
+          "operationId": "project",
           "parameters": [
             {
               "name": "id",
@@ -9709,6 +9707,51 @@ export class ApisConstants {
           "externalDocs": {
             "description": "Code Example",
             "url": "http://localhost:4200/code-examples/community#project/:id_get"
+          }
+        },
+        "delete": {
+          "tags": [
+            "Project"
+          ],
+          "summary": "Remove a project",
+          "description": "Remove a project in database\n",
+          "operationId": "projectDelete",
+          "parameters": [
+            {
+              "name": "id",
+              "in": "path",
+              "description": "project id",
+              "required": true,
+              "schema": {
+                "type": "string",
+                "format": "mongo-id",
+                "example": "61445159784bca6ef764c6df"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "OK"
+            },
+            "401": {
+              "description": "You must login before call this endpoint",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/SecurityAccessUnauthorizedError"
+                  }
+                }
+              }
+            }
+          },
+          "security": [
+            {
+              "idToken": []
+            }
+          ],
+          "externalDocs": {
+            "description": "Code Example",
+            "url": "http://localhost:4200/code-examples/community#project_delete"
           }
         }
       },
@@ -9813,48 +9856,6 @@ export class ApisConstants {
           "externalDocs": {
             "description": "Code Example",
             "url": "http://localhost:4200/code-examples/community#project_put"
-          }
-        },
-        "delete": {
-          "tags": [
-            "Project"
-          ],
-          "summary": "Remove a project",
-          "description": "Remove a project in database\n",
-          "operationId": "projectDelet",
-          "responses": {
-            "200": {
-              "description": "OK"
-            },
-            "400": {
-              "description": "Body is empty or project id is empty",
-              "content": {
-                "application/json": {
-                  "schema": {
-                    "$ref": "#/components/schemas/ProjectEmptyBodyError"
-                  }
-                }
-              }
-            },
-            "401": {
-              "description": "You must login before call this endpoint",
-              "content": {
-                "application/json": {
-                  "schema": {
-                    "$ref": "#/components/schemas/SecurityAccessUnauthorizedError"
-                  }
-                }
-              }
-            }
-          },
-          "security": [
-            {
-              "idToken": []
-            }
-          ],
-          "externalDocs": {
-            "description": "Code Example",
-            "url": "http://localhost:4200/code-examples/community#project_delete"
           }
         }
       }
@@ -11672,11 +11673,6 @@ export class ApisConstants {
           ],
           "properties": {
             "id": {
-              "type": "string",
-              "format": "mongo-id",
-              "example": "60acae8e2f799d228a4d4a85"
-            },
-            "memberId": {
               "type": "string",
               "format": "mongo-id",
               "example": "60acae8e2f799d228a4d4a85"

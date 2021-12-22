@@ -1,16 +1,16 @@
 import {Template} from '../model/Template';
-import {CoreJavascriptTemplates} from '../../templates/core/javascript/CoreJavascriptTemplates';
+import {CoreJavascriptTemplates} from '../../templates/endpoints/core/javascript/CoreJavascriptTemplates';
 import {Endpoint} from '../model/Endpoint';
 import {Language} from '../model/Language';
 import {Module} from '../model/Module';
-import {CoreJavaTemplates} from '../../templates/core/java/CoreJavaTemplates';
-import {FederationJavascriptTemplates} from '../../templates/federation/javascript/FederationJavascriptTemplates';
-import {FederationJavaTemplates} from '../../templates/federation/java/FederationJavaTemplates';
-import {CommunityJavascriptTemplates} from '../../templates/community/javascript/CommunityJavascriptTemplates';
-import {CommunityJavaTemplates} from '../../templates/community/java/CommunityJavaTemplates';
-import {CorePythonTemplates} from '../../templates/core/python/CorePythonTemplates';
-import {FederationPythonTemplates} from '../../templates/federation/python/FederationPythonTemplates';
-import {CommunityPythonTemplates} from '../../templates/community/python/CommunityPythonTemplates';
+import {CoreJavaTemplates} from '../../templates/endpoints/core/java/CoreJavaTemplates';
+import {FederationJavascriptTemplates} from '../../templates/endpoints/federation/javascript/FederationJavascriptTemplates';
+import {FederationJavaTemplates} from '../../templates/endpoints/federation/java/FederationJavaTemplates';
+import {CommunityJavascriptTemplates} from '../../templates/endpoints/community/javascript/CommunityJavascriptTemplates';
+import {CommunityJavaTemplates} from '../../templates/endpoints/community/java/CommunityJavaTemplates';
+import {CorePythonTemplates} from '../../templates/endpoints/core/python/CorePythonTemplates';
+import {FederationPythonTemplates} from '../../templates/endpoints/federation/python/FederationPythonTemplates';
+import {CommunityPythonTemplates} from '../../templates/endpoints/community/python/CommunityPythonTemplates';
 
 export class TemplateReaderService {
 

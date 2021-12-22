@@ -1,33 +1,31 @@
-import { Template } from '../../../app/model/Template';
+import { Template } from '../../../../app/model/Template';
 
-export class CommunityPythonTemplates {
+export class CommunityJavascriptTemplates {
 
   public static version_get: Template = {
     name: "version",
-    code: "\nimport requests as reqs\n" +
+    code: "\nconst url = 'https://dev.moonshot.ceo/api/community/version';\n" +
       "\n" +
-      "URL = \"https://dev.moonshot.ceo/api/community/version\"\n" +
-      "\n" +
-      "response = reqs.get(URL)\n" +
-      "print(response.text)",
+      "fetch(url)\n" +
+      "  .then(response => response.json())\n" +
+      "  .then(data => console.log(JSON.stringify(data)));",
     response: "\n\"2.0.2.r15-SNAPSHOT\""
   }
 
   public static online_events_get: Template = {
     name: "online-events",
-    code: "\nimport requests as reqs\n" +
+    code: "\nconst url = 'https://dev.moonshot.ceo/api/community/online-events';\n" +
       "\n" +
-      "URL = \"https://dev.moonshot.ceo/api/community/online-events\"\n" +
-      "\n" +
-      "response = reqs.get(URL)\n" +
-      "print(response.text)",
+      "fetch(url)\n" +
+      "  .then(response => response.json())\n" +
+      "  .then(data => console.log(JSON.stringify(data)));",
     response: "\n[\n" +
       "   {\n" +
       "      \"id\":\"4\",\n" +
       "      \"title\":\"Evento para conocernos\",\n" +
       "      \"timestamp\":1414281600,\n" +
       "      \"description\":\"Evento para mejorar el ambiente laboral y las relaciones con el resto de personas del ecosistema\",\n" +
-      "      \"imageUrl\":None,\n" +
+      "      \"imageUrl\":null,\n" +
       "      \"ownerMember\":{\n" +
       "         \"id\":\"3\",\n" +
       "         \"state\":\"ACCEPTED\",\n" +
@@ -40,7 +38,7 @@ export class CommunityPythonTemplates {
       "         },\n" +
       "         \"email\":\"trujillosanchezjeremy@gmail.com\",\n" +
       "         \"about\":\"Alumno en prácticas en Moonshot y estudiante de la Universidad de Las Palmas de Gran Canaria\",\n" +
-      "         \"image\":None,\n" +
+      "         \"image\":null,\n" +
       "         \"fcmTokens\":[\n" +
       "            {\n" +
       "               \"tokenId\":\"fcmToken3\",\n" +
@@ -64,7 +62,7 @@ export class CommunityPythonTemplates {
       "                  \"formatted\":\"Madrid, Puerta del Sol\"\n" +
       "               },\n" +
       "               \"startDate\":15319,\n" +
-      "               \"endDate\":None,\n" +
+      "               \"endDate\":null,\n" +
       "               \"description\":\"Prácticas extracurriculares a traves de la FULP (Universidad de las Palmas de Gran Canaria)\"\n" +
       "            }\n" +
       "         ],\n" +
@@ -75,7 +73,7 @@ export class CommunityPythonTemplates {
       "               \"degree\":\"Ingeniería informática\",\n" +
       "               \"fieldOfStudy\":\"Ingeniería de software\",\n" +
       "               \"startDate\":15319,\n" +
-      "               \"endDate\":None,\n" +
+      "               \"endDate\":null,\n" +
       "               \"grade\":7,\n" +
       "               \"address\":{\n" +
       "                  \"lat\":48.5,\n" +
@@ -100,7 +98,7 @@ export class CommunityPythonTemplates {
       "            },\n" +
       "            \"email\":\"iaramburu@moonshot.ceo\",\n" +
       "            \"about\":\"Experto en Ingeniería del Software.\",\n" +
-      "            \"image\":None,\n" +
+      "            \"image\":null,\n" +
       "            \"fcmTokens\":[\n" +
       "               {\n" +
       "                  \"tokenId\":\"fcmToken1\",\n" +
@@ -173,7 +171,7 @@ export class CommunityPythonTemplates {
       "            },\n" +
       "            \"email\":\"dsuriol@moonshot.ceo\",\n" +
       "            \"about\":\"CEO de Moonshot\",\n" +
-      "            \"image\":None,\n" +
+      "            \"image\":null,\n" +
       "            \"fcmTokens\":[\n" +
       "               {\n" +
       "                  \"tokenId\":\"fcmToken1\",\n" +
@@ -237,18 +235,17 @@ export class CommunityPythonTemplates {
 
   public static online_events_id_get: Template = {
     name: "online-event/:id",
-    code: "\nimport requests as reqs\n" +
+    code: "\nconst url = 'https://dev.moonshot.ceo/api/community/online-event/4';\n" +
       "\n" +
-      "URL = \"https://dev.moonshot.ceo/api/community/online-event/4\"\n" +
-      "\n" +
-      "response = reqs.get(URL)\n" +
-      "print(response.text)",
+      "fetch(url)\n" +
+      "  .then(response => response.json())\n" +
+      "  .then(data => console.log(JSON.stringify(data)));",
     response: "\n{\n" +
       "        \"id\": \"4\",\n" +
       "        \"title\": \"Evento para conocernos\",\n" +
       "        \"timestamp\": 1414281600,\n" +
       "        \"description\": \"Evento para mejorar el ambiente laboral y las relaciones con el resto de personas del ecosistema\",\n" +
-      "        \"imageUrl\": None,\n" +
+      "        \"imageUrl\": null,\n" +
       "        \"ownerMember\": {\n" +
       "            \"id\": \"3\",\n" +
       "            \"state\": \"ACCEPTED\",\n" +
@@ -261,7 +258,7 @@ export class CommunityPythonTemplates {
       "            },\n" +
       "            \"email\": \"trujillosanchezjeremy@gmail.com\",\n" +
       "            \"about\": \"Alumno en prácticas en Moonshot y estudiante de la Universidad de Las Palmas de Gran Canaria\",\n" +
-      "            \"image\": None,\n" +
+      "            \"image\": null,\n" +
       "            \"fcmTokens\": [\n" +
       "                {\n" +
       "                    \"tokenId\": \"fcmToken3\",\n" +
@@ -285,7 +282,7 @@ export class CommunityPythonTemplates {
       "                        \"formatted\": \"Madrid, Puerta del Sol\"\n" +
       "                    },\n" +
       "                    \"startDate\": 15319,\n" +
-      "                    \"endDate\": None,\n" +
+      "                    \"endDate\": null,\n" +
       "                    \"description\": \"Prácticas extracurriculares a traves de la FULP (Universidad de las Palmas de Gran Canaria)\"\n" +
       "                }\n" +
       "            ],\n" +
@@ -296,7 +293,7 @@ export class CommunityPythonTemplates {
       "                    \"degree\": \"Ingeniería informática\",\n" +
       "                    \"fieldOfStudy\": \"Ingeniería de software\",\n" +
       "                    \"startDate\": 15319,\n" +
-      "                    \"endDate\": None,\n" +
+      "                    \"endDate\": null,\n" +
       "                    \"grade\": 7,\n" +
       "                    \"address\": {\n" +
       "                        \"lat\": 48.5,\n" +
@@ -321,7 +318,7 @@ export class CommunityPythonTemplates {
       "                },\n" +
       "                \"email\": \"iaramburu@moonshot.ceo\",\n" +
       "                \"about\": \"Experto en Ingeniería del Software.\",\n" +
-      "                \"image\": None,\n" +
+      "                \"image\": null,\n" +
       "                \"fcmTokens\": [\n" +
       "                    {\n" +
       "                        \"tokenId\": \"fcmToken1\",\n" +
@@ -394,7 +391,7 @@ export class CommunityPythonTemplates {
       "                },\n" +
       "                \"email\": \"dsuriol@moonshot.ceo\",\n" +
       "                \"about\": \"CEO de Moonshot\",\n" +
-      "                \"image\": None,\n" +
+      "                \"image\": null,\n" +
       "                \"fcmTokens\": [\n" +
       "                    {\n" +
       "                        \"tokenId\": \"fcmToken1\",\n" +
@@ -457,84 +454,90 @@ export class CommunityPythonTemplates {
 
   public static online_event_post: Template = {
     name: "online-event",
-    code: "\nimport requests as reqs\n" +
+    code: "\nconst url = 'https://dev.moonshot.ceo/api/community/online-event';\n" +
       "\n" +
-      "URL = \"https://dev.moonshot.ceo/api/community/online-event\"\n" +
-      "\n" +
-      "BODY = {\n" +
-      "  \"id\": \"4\",\n" +
-      "  \"title\": \"Evento para conocernos\",\n" +
-      "  \"timestamp\": 1414281600,\n" +
-      "  \"description\": \"Evento para mejorar el ambiente laboral y las relaciones con el resto de personas del ecosistema\",\n" +
-      "  \"imageUrl\": \"https://moonshot.ceo/image1.jpg\",\n" +
-      "  \"memberId\": \"3\",\n" +
-      "  \"url\": \"https://moonshot.ceo/conocernos\",\n" +
+      "const body = {\n" +
+      "  id: \"4\",\n" +
+      "  title: \"Evento para conocernos\",\n" +
+      "  timestamp: 1414281600,\n" +
+      "  description: \"Evento para mejorar el ambiente laboral y las relaciones con el resto de personas del ecosistema\",\n" +
+      "  imageUrl: \"https://moonshot.ceo/image1.jpg\",\n" +
+      "  memberId: \"3\",\n" +
+      "  url: \"https://moonshot.ceo/conocernos\",\n" +
       "}\n" +
       "\n" +
-      "response = reqs.post(URL, data=BODY)\n" +
-      "print(response.text)",
+      "fetch(url, {\n" +
+      "  method: 'POST',\n" +
+      "  body: JSON.stringify(body)\n" +
+      "})\n" +
+      "  .then(response => response.json())\n" +
+      "  .then(data => console.log(JSON.stringify(data)));",
     response: null
   }
 
   public static online_event_put: Template = {
     name: "online-event",
-    code: "\nimport requests as reqs\n" +
+    code: "\nconst url = 'https://dev.moonshot.ceo/api/community/online-event';\n" +
       "\n" +
-      "URL = \"https://dev.moonshot.ceo/api/community/online-event\"\n" +
-      "\n" +
-      "BODY = {\n" +
-      "  \"id\": \"4\",\n" +
-      "  \"title\": \"Evento para conocernos\",\n" +
-      "  \"timestamp\": 1414281600,\n" +
-      "  \"description\": \"Evento para mejorar el ambiente laboral y las relaciones con el resto de personas del ecosistema\",\n" +
-      "  \"imageUrl\": \"https://moonshot.ceo/image1.jpg\",\n" +
-      "  \"modifierId\": \"3\",\n" +
-      "  \"url\": \"https://moonshot.ceo/conocernos\",\n" +
+      "const body = {\n" +
+      "  id: \"4\",\n" +
+      "  title: \"Evento para conocernos\",\n" +
+      "  timestamp: 1414281600,\n" +
+      "  description: \"Evento para mejorar el ambiente laboral y las relaciones con el resto de personas del ecosistema\",\n" +
+      "  imageUrl: \"https://moonshot.ceo/image1.jpg\",\n" +
+      "  modifierId: \"3\",\n" +
+      "  url: \"https://moonshot.ceo/conocernos\",\n" +
       "}\n" +
       "\n" +
-      "response = reqs.put(URL, data=BODY)\n" +
-      "print(response.text)",
+      "fetch(url, {\n" +
+      "  method: 'PUT',\n" +
+      "  body: JSON.stringify(body)\n" +
+      "})\n" +
+      "  .then(response => response.json())\n" +
+      "  .then(data => console.log(JSON.stringify(data)));",
     response: null
   }
 
   public static online_event_id_delete: Template = {
     name: "online-event/:id",
-    code: "\nimport requests as reqs\n" +
+    code: "\nconst url = 'https://dev.moonshot.ceo/api/community/online-event/4';\n" +
       "\n" +
-      "URL = \"https://dev.moonshot.ceo/api/community/online-event/4\"\n\n" +
-      "response = reqs.delete(URL)\n" +
-      "print(response.text)",
+      "fetch(url, {\n" +
+      "  method: 'DELETE'\n" +
+      "})\n" +
+      "  .then(response => response.json())\n" +
+      "  .then(data => console.log(JSON.stringify(data)));",
     response: null
   }
 
   public static online_event_admin_put: Template = {
     name: "online-event/admin",
-    code: "\nimport requests as reqs\n" +
+    code: "\nconst url = 'https://dev.moonshot.ceo/api/community/online-event/admin';\n" +
       "\n" +
-      "URL = \"https://dev.moonshot.ceo/api/community/online-event/admin\"\n" +
-      "\n" +
-      "BODY = {\n" +
-      "  \"id\": \"4\",\n" +
-      "  \"title\": \"Evento para conocernos\",\n" +
-      "  \"timestamp\": 1414281600,\n" +
-      "  \"description\": \"Evento para mejorar el ambiente laboral y las relaciones con el resto de personas del ecosistema\",\n" +
-      "  \"imageUrl\": \"https://moonshot.ceo/image1.jpg\",\n" +
-      "  \"modifierId\": \"3\",\n" +
-      "  \"url\": \"https://moonshot.ceo/conocernos\",\n" +
+      "const body = {\n" +
+      "  id: \"4\",\n" +
+      "  title: \"Evento para conocernos\",\n" +
+      "  timestamp: 1414281600,\n" +
+      "  description: \"Evento para mejorar el ambiente laboral y las relaciones con el resto de personas del ecosistema\",\n" +
+      "  imageUrl: \"https://moonshot.ceo/image1.jpg\",\n" +
+      "  modifierId: \"3\",\n" +
+      "  url: \"https://moonshot.ceo/conocernos\",\n" +
       "}\n" +
       "\n" +
-      "response = reqs.put(URL, data=BODY)\n" +
-      "print(response.text)",
+      "fetch(url, {\n" +
+      "  method: 'PUT',\n" +
+      "  body: JSON.stringify(body)\n" +
+      "})\n" +
+      "  .then(response => response.json())\n" +
+      "  .then(data => console.log(JSON.stringify(data)));",
     response: null
   }
 
   public static online_event_subscription_put: Template = {
     name: "online-event/subscription",
-    code: "\nimport requests as reqs\n" +
+    code: "\nconst url = 'https://dev.moonshot.ceo/api/community/online-event/subscription';\n" +
       "\n" +
-      "URL = \"https://dev.moonshot.ceo/api/community/online-event/subscription\"\n" +
-      "\n" +
-      "BODY = {\n" +
+      "const body = {\n" +
       "   \"id\":\"1\",\n" +
       "   \"participants\":[\n" +
       "      {\n" +
@@ -559,24 +562,26 @@ export class CommunityPythonTemplates {
       "         \"socialNetworks\":[\n" +
       "            \"https://www.linkedin.com/in/jeremy-trujillo-sanchez/\"\n" +
       "         ],\n" +
-      "         \"experiences\":None,\n" +
-      "         \"educations\":None\n" +
+      "         \"experiences\":null,\n" +
+      "         \"educations\":null\n" +
       "      }\n" +
       "   ]\n" +
       "}\n" +
       "\n" +
-      "response = reqs.put(URL, data=BODY)\n" +
-      "print(response.text)",
+      "fetch(url, {\n" +
+      "  method: 'PUT',\n" +
+      "  body: JSON.stringify(body)\n" +
+      "})\n" +
+      "  .then(response => response.json())\n" +
+      "  .then(data => console.log(JSON.stringify(data)));",
     response: null
   }
 
   public static online_event_unsubscription_put: Template = {
     name: "online-event/unsubscription",
-    code: "\nimport requests as reqs\n" +
+    code: "\nconst url = 'https://dev.moonshot.ceo/api/community/online-event/unsubscription';\n" +
       "\n" +
-      "URL = \"https://dev.moonshot.ceo/api/community/online-event/unsubscription\"\n" +
-      "\n" +
-      "BODY = {\n" +
+      "const body = {\n" +
       "   \"id\":\"1\",\n" +
       "   \"participants\":[\n" +
       "      {\n" +
@@ -601,43 +606,47 @@ export class CommunityPythonTemplates {
       "         \"socialNetworks\":[\n" +
       "            \"https://www.linkedin.com/in/jeremy-trujillo-sanchez/\"\n" +
       "         ],\n" +
-      "         \"experiences\":None,\n" +
-      "         \"educations\":None\n" +
+      "         \"experiences\":null,\n" +
+      "         \"educations\":null\n" +
       "      }\n" +
       "   ]\n" +
       "}\n" +
       "\n" +
-      "response = reqs.put(URL, data=BODY)\n" +
-      "print(response.text)",
+      "fetch(url, {\n" +
+      "  method: 'PUT',\n" +
+      "  body: JSON.stringify(body)\n" +
+      "})\n" +
+      "  .then(response => response.json())\n" +
+      "  .then(data => console.log(JSON.stringify(data)));",
     response: null
   }
 
   public static online_event_id_admin_delete: Template = {
     name: "online-event/:id/admin",
-    code: "\nimport requests as reqs\n" +
+    code: "\nconst url = 'https://dev.moonshot.ceo/api/community/online-event/4/admin';\n" +
       "\n" +
-      "URL = \"https://dev.moonshot.ceo/api/community/online-event/4/admin\"\n" +
-      "\n" +
-      "response = reqs.delete(URL)\n" +
-      "print(response.text)",
+      "fetch(url, {\n" +
+      "  method: 'DELETE',\n" +
+      "})\n" +
+      "  .then(response => response.json())\n" +
+      "  .then(data => console.log(JSON.stringify(data)));",
     response: null
   }
 
   public static face_to_face_events_get: Template = {
     name: "face-to-face-events",
-    code: "\nimport requests as reqs\n" +
+    code: "\nconst url = 'https://dev.moonshot.ceo/api/community/face-to-face-events';\n" +
       "\n" +
-      "URL = \"https://dev.moonshot.ceo/api/community/face-to-face-events\"\n" +
-      "\n" +
-      "response = reqs.get(URL)\n" +
-      "print(response.text)",
+      "fetch(url)\n" +
+      "  .then(response => response.json())\n" +
+      "  .then(data => console.log(JSON.stringify(data)));",
     response: "\n[\n" +
       "   {\n" +
       "      \"id\":\"1\",\n" +
       "      \"title\":\"Reunion horarios Enero\",\n" +
       "      \"timestamp\":1546387200,\n" +
       "      \"description\":\"Reunion para definir los horarios de la empresa en el mes de Enero\",\n" +
-      "      \"imageUrl\":None,\n" +
+      "      \"imageUrl\":null,\n" +
       "      \"ownerMember\":{\n" +
       "         \"id\":\"4\",\n" +
       "         \"state\":\"ACCEPTED\",\n" +
@@ -650,7 +659,7 @@ export class CommunityPythonTemplates {
       "         },\n" +
       "         \"email\":\"saulobach1@gmail.com\",\n" +
       "         \"about\":\"Alumno en prácticas en Moonshot y estudiante de la Universidad de Las Palmas de Gran Canaria\",\n" +
-      "         \"image\":None,\n" +
+      "         \"image\":null,\n" +
       "         \"fcmTokens\":[\n" +
       "            {\n" +
       "               \"tokenId\":\"fcmToken4\",\n" +
@@ -675,7 +684,7 @@ export class CommunityPythonTemplates {
       "                  \"formatted\":\"Madrid, Puerta del Sol\"\n" +
       "               },\n" +
       "               \"startDate\":15319,\n" +
-      "               \"endDate\":None,\n" +
+      "               \"endDate\":null,\n" +
       "               \"description\":\"Prácticas extracurriculares a traves de la FULP (Universidad de las Palmas de Gran Canaria)\"\n" +
       "            }\n" +
       "         ],\n" +
@@ -686,7 +695,7 @@ export class CommunityPythonTemplates {
       "               \"degree\":\"Ingeniería informática\",\n" +
       "               \"fieldOfStudy\":\"Ingeniería de software\",\n" +
       "               \"startDate\":15319,\n" +
-      "               \"endDate\":None,\n" +
+      "               \"endDate\":null,\n" +
       "               \"grade\":7,\n" +
       "               \"address\":{\n" +
       "                  \"lat\":48.5,\n" +
@@ -711,7 +720,7 @@ export class CommunityPythonTemplates {
       "            },\n" +
       "            \"email\":\"trujillosanchezjeremy@gmail.com\",\n" +
       "            \"about\":\"Alumno en prácticas en Moonshot y estudiante de la Universidad de Las Palmas de Gran Canaria\",\n" +
-      "            \"image\":None,\n" +
+      "            \"image\":null,\n" +
       "            \"fcmTokens\":[\n" +
       "               {\n" +
       "                  \"tokenId\":\"fcmToken3\",\n" +
@@ -735,7 +744,7 @@ export class CommunityPythonTemplates {
       "                     \"formatted\":\"Madrid, Puerta del Sol\"\n" +
       "                  },\n" +
       "                  \"startDate\":15319,\n" +
-      "                  \"endDate\":None,\n" +
+      "                  \"endDate\":null,\n" +
       "                  \"description\":\"Prácticas extracurriculares a traves de la FULP (Universidad de las Palmas de Gran Canaria)\"\n" +
       "               }\n" +
       "            ],\n" +
@@ -746,7 +755,7 @@ export class CommunityPythonTemplates {
       "                  \"degree\":\"Ingeniería informática\",\n" +
       "                  \"fieldOfStudy\":\"Ingeniería de software\",\n" +
       "                  \"startDate\":15319,\n" +
-      "                  \"endDate\":None,\n" +
+      "                  \"endDate\":null,\n" +
       "                  \"grade\":7,\n" +
       "                  \"address\":{\n" +
       "                     \"lat\":48.5,\n" +
@@ -764,7 +773,7 @@ export class CommunityPythonTemplates {
       "      \"title\":\"Reunion despliegue back-end\",\n" +
       "      \"timestamp\":1542844800,\n" +
       "      \"description\":\"Reunion para desplegar la nueva version de nuestro producto\",\n" +
-      "      \"imageUrl\":None,\n" +
+      "      \"imageUrl\":null,\n" +
       "      \"ownerMember\":{\n" +
       "         \"id\":\"1\",\n" +
       "         \"state\":\"ACCEPTED\",\n" +
@@ -777,7 +786,7 @@ export class CommunityPythonTemplates {
       "         },\n" +
       "         \"email\":\"iaramburu@moonshot.ceo\",\n" +
       "         \"about\":\"Experto en Ingeniería del Software.\",\n" +
-      "         \"image\":None,\n" +
+      "         \"image\":null,\n" +
       "         \"fcmTokens\":[\n" +
       "            {\n" +
       "               \"tokenId\":\"fcmToken1\",\n" +
@@ -852,7 +861,7 @@ export class CommunityPythonTemplates {
       "            },\n" +
       "            \"email\":\"trujillosanchezjeremy@gmail.com\",\n" +
       "            \"about\":\"Alumno en prácticas en Moonshot y estudiante de la Universidad de Las Palmas de Gran Canaria\",\n" +
-      "            \"image\":None,\n" +
+      "            \"image\":null,\n" +
       "            \"fcmTokens\":[\n" +
       "               {\n" +
       "                  \"tokenId\":\"fcmToken3\",\n" +
@@ -876,7 +885,7 @@ export class CommunityPythonTemplates {
       "                     \"formatted\":\"Madrid, Puerta del Sol\"\n" +
       "                  },\n" +
       "                  \"startDate\":15319,\n" +
-      "                  \"endDate\":None,\n" +
+      "                  \"endDate\":null,\n" +
       "                  \"description\":\"Prácticas extracurriculares a traves de la FULP (Universidad de las Palmas de Gran Canaria)\"\n" +
       "               }\n" +
       "            ],\n" +
@@ -887,7 +896,7 @@ export class CommunityPythonTemplates {
       "                  \"degree\":\"Ingeniería informática\",\n" +
       "                  \"fieldOfStudy\":\"Ingeniería de software\",\n" +
       "                  \"startDate\":15319,\n" +
-      "                  \"endDate\":None,\n" +
+      "                  \"endDate\":null,\n" +
       "                  \"grade\":7,\n" +
       "                  \"address\":{\n" +
       "                     \"lat\":48.5,\n" +
@@ -910,7 +919,7 @@ export class CommunityPythonTemplates {
       "            },\n" +
       "            \"email\":\"saulobach1@gmail.com\",\n" +
       "            \"about\":\"Alumno en prácticas en Moonshot y estudiante de la Universidad de Las Palmas de Gran Canaria\",\n" +
-      "            \"image\":None,\n" +
+      "            \"image\":null,\n" +
       "            \"fcmTokens\":[\n" +
       "               {\n" +
       "                  \"tokenId\":\"fcmToken4\",\n" +
@@ -935,7 +944,7 @@ export class CommunityPythonTemplates {
       "                     \"formatted\":\"Madrid, Puerta del Sol\"\n" +
       "                  },\n" +
       "                  \"startDate\":15319,\n" +
-      "                  \"endDate\":None,\n" +
+      "                  \"endDate\":null,\n" +
       "                  \"description\":\"Prácticas extracurriculares a traves de la FULP (Universidad de las Palmas de Gran Canaria)\"\n" +
       "               }\n" +
       "            ],\n" +
@@ -946,7 +955,7 @@ export class CommunityPythonTemplates {
       "                  \"degree\":\"Ingeniería informática\",\n" +
       "                  \"fieldOfStudy\":\"Ingeniería de software\",\n" +
       "                  \"startDate\":15319,\n" +
-      "                  \"endDate\":None,\n" +
+      "                  \"endDate\":null,\n" +
       "                  \"grade\":7,\n" +
       "                  \"address\":{\n" +
       "                     \"lat\":48.5,\n" +
@@ -964,18 +973,17 @@ export class CommunityPythonTemplates {
 
   public static face_to_face_event_id_get: Template = {
     name: "face-to-face-event/:id",
-    code: "\nimport requests as reqs\n" +
+    code: "\nconst url = 'https://dev.moonshot.ceo/api/community/face-to-face-event/1';\n" +
       "\n" +
-      "URL = \"https://dev.moonshot.ceo/api/community/face-to-face-event/1\"\n" +
-      "\n" +
-      "response = reqs.get(URL)\n" +
-      "print(response.text)",
+      "fetch(url)\n" +
+      "  .then(response => response.json())\n" +
+      "  .then(data => console.log(JSON.stringify(data)));",
     response: "\n{\n" +
       "        \"id\": \"1\",\n" +
       "        \"title\": \"Reunion horarios Enero\",\n" +
       "        \"timestamp\": 1546387200,\n" +
       "        \"description\": \"Reunion para definir los horarios de la empresa en el mes de Enero\",\n" +
-      "        \"imageUrl\": None,\n" +
+      "        \"imageUrl\": null,\n" +
       "        \"ownerMember\": {\n" +
       "            \"id\": \"4\",\n" +
       "            \"state\": \"ACCEPTED\",\n" +
@@ -988,7 +996,7 @@ export class CommunityPythonTemplates {
       "            },\n" +
       "            \"email\": \"saulobach1@gmail.com\",\n" +
       "            \"about\": \"Alumno en prácticas en Moonshot y estudiante de la Universidad de Las Palmas de Gran Canaria\",\n" +
-      "            \"image\": None,\n" +
+      "            \"image\": null,\n" +
       "            \"fcmTokens\": [\n" +
       "                {\n" +
       "                    \"tokenId\": \"fcmToken4\",\n" +
@@ -1013,7 +1021,7 @@ export class CommunityPythonTemplates {
       "                        \"formatted\": \"Madrid, Puerta del Sol\"\n" +
       "                    },\n" +
       "                    \"startDate\": 15319,\n" +
-      "                    \"endDate\": None,\n" +
+      "                    \"endDate\": null,\n" +
       "                    \"description\": \"Prácticas extracurriculares a traves de la FULP (Universidad de las Palmas de Gran Canaria)\"\n" +
       "                }\n" +
       "            ],\n" +
@@ -1024,7 +1032,7 @@ export class CommunityPythonTemplates {
       "                    \"degree\": \"Ingeniería informática\",\n" +
       "                    \"fieldOfStudy\": \"Ingeniería de software\",\n" +
       "                    \"startDate\": 15319,\n" +
-      "                    \"endDate\": None,\n" +
+      "                    \"endDate\": null,\n" +
       "                    \"grade\": 7,\n" +
       "                    \"address\": {\n" +
       "                        \"lat\": 48.5,\n" +
@@ -1049,7 +1057,7 @@ export class CommunityPythonTemplates {
       "                },\n" +
       "                \"email\": \"trujillosanchezjeremy@gmail.com\",\n" +
       "                \"about\": \"Alumno en prácticas en Moonshot y estudiante de la Universidad de Las Palmas de Gran Canaria\",\n" +
-      "                \"image\": None,\n" +
+      "                \"image\": null,\n" +
       "                \"fcmTokens\": [\n" +
       "                    {\n" +
       "                        \"tokenId\": \"fcmToken3\",\n" +
@@ -1073,7 +1081,7 @@ export class CommunityPythonTemplates {
       "                            \"formatted\": \"Madrid, Puerta del Sol\"\n" +
       "                        },\n" +
       "                        \"startDate\": 15319,\n" +
-      "                        \"endDate\": None,\n" +
+      "                        \"endDate\": null,\n" +
       "                        \"description\": \"Prácticas extracurriculares a traves de la FULP (Universidad de las Palmas de Gran Canaria)\"\n" +
       "                    }\n" +
       "                ],\n" +
@@ -1084,7 +1092,7 @@ export class CommunityPythonTemplates {
       "                        \"degree\": \"Ingeniería informática\",\n" +
       "                        \"fieldOfStudy\": \"Ingeniería de software\",\n" +
       "                        \"startDate\": 15319,\n" +
-      "                        \"endDate\": None,\n" +
+      "                        \"endDate\": null,\n" +
       "                        \"grade\": 7,\n" +
       "                        \"address\": {\n" +
       "                            \"lat\": 48.5,\n" +
@@ -1101,85 +1109,90 @@ export class CommunityPythonTemplates {
 
   public static face_to_face_event_post: Template = {
     name: "face-to-face-event",
-    code: "\nimport requests as reqs\n" +
+    code: "\nconst url = 'https://dev.moonshot.ceo/api/community/face-to-face-event';\n" +
       "\n" +
-      "URL = \"https://dev.moonshot.ceo/api/community/face-to-face-event\"\n" +
-      "\n" +
-      "BODY =  {\n" +
+      "const body = {\n" +
       " \"id\":\"1\",\n" +
       " \"title\":\"Reunion horarios Enero\",\n" +
       " \"timestamp\":1546387200,\n" +
       " \"description\":\"Reunion para definir los horarios de la empresa en el mes de Enero\",\n" +
-      " \"imageUrl\":None,\n" +
+      " \"imageUrl\":null,\n" +
       " \"memberId\":\"4\",\n" +
       " \"direction\":\"Aclarar la reparticion de horarios\"\n" +
       "}\n" +
       "\n" +
-      "response = reqs.post(URL, data=BODY)\n" +
-      "print(response.text)",
+      "fetch(url, {\n" +
+      "  method: 'POST',\n" +
+      "  body: JSON.stringify(body)\n" +
+      "})\n" +
+      "  .then(response => response.json())\n" +
+      "  .then(data => console.log(JSON.stringify(data)));",
     response: null
   }
 
   public static face_to_face_event_put: Template = {
     name: "face-to-face-event",
-    code: "\nimport requests as reqs\n" +
+    code: "\nconst url = 'https://dev.moonshot.ceo/api/community/face-to-face-event';\n" +
       "\n" +
-      "URL = \"https://dev.moonshot.ceo/api/community/face-to-face-event\"\n" +
-      "\n" +
-      "BODY =  {\n" +
+      "const body = {\n" +
       " \"id\":\"1\",\n" +
       " \"title\":\"Reunion horarios Enero\",\n" +
       " \"timestamp\":1546387200,\n" +
       " \"description\":\"Reunion para definir los horarios de la empresa en el mes de Enero\",\n" +
-      " \"imageUrl\":None,\n" +
+      " \"imageUrl\":null,\n" +
       " \"modifierId\":\"4\",\n" +
       " \"direction\":\"Aclarar la reparticion de horarios\"\n" +
       "}\n" +
       "\n" +
-      "response = reqs.put(URL, data=BODY)\n" +
-      "print(response.text)",
+      "fetch(url, {\n" +
+      "  method: 'PUT',\n" +
+      "  body: JSON.stringify(body)\n" +
+      "})\n" +
+      "  .then(response => response.json())\n" +
+      "  .then(data => console.log(JSON.stringify(data)));",
     response: null
   }
 
   public static face_to_face_event_id_delete: Template = {
     name: "face-to-face-event/:id",
-    code: "\nimport requests as reqs\n" +
+    code: "\nconst url = 'https://dev.moonshot.ceo/api/community/face-to-face-event/1';\n" +
       "\n" +
-      "URL = \"https://dev.moonshot.ceo/api/community/face-to-face-event/1\"\n" +
-      "\n" +
-      "response = reqs.delete(URL)\n" +
-      "print(response.text)",
+      "fetch(url, {\n" +
+      "  method: 'DELETE',\n" +
+      "})\n" +
+      "  .then(response => response.json())\n" +
+      "  .then(data => console.log(JSON.stringify(data)));",
     response: null
   }
 
   public static face_to_face_event_admin_put: Template = {
     name: "face-to-face-event/admin",
-    code: "\nimport requests as reqs\n" +
+    code: "\nconst url = 'https://dev.moonshot.ceo/api/community/face-to-face-event/admin';\n" +
       "\n" +
-      "URL = \"https://dev.moonshot.ceo/api/community/face-to-face-event/admin\"\n" +
-      "\n" +
-      "BODY =  {\n" +
+      "const body = {\n" +
       " \"id\":\"1\",\n" +
       " \"title\":\"Reunion horarios Enero\",\n" +
       " \"timestamp\":1546387200,\n" +
       " \"description\":\"Reunion para definir los horarios de la empresa en el mes de Enero\",\n" +
-      " \"imageUrl\":None,\n" +
+      " \"imageUrl\":null,\n" +
       " \"modifierId\":\"4\",\n" +
       " \"direction\":\"Aclarar la reparticion de horarios\"\n" +
       "}\n" +
       "\n" +
-      "response = reqs.put(URL, data=BODY)\n" +
-      "print(response.text)",
+      "fetch(url, {\n" +
+      "  method: 'PUT',\n" +
+      "  body: JSON.stringify(body)\n" +
+      "})\n" +
+      "  .then(response => response.json())\n" +
+      "  .then(data => console.log(JSON.stringify(data)));",
     response: null
   }
 
   public static face_to_face_event_subscription_put: Template = {
     name: "face-to-face-event/subscription",
-    code: "\nimport requests as reqs\n" +
+    code: "\nconst url = 'https://dev.moonshot.ceo/api/community/face-to-face-event/subscription';\n" +
       "\n" +
-      "URL = \"https://dev.moonshot.ceo/api/community/face-to-face-event/subscription\"\n" +
-      "\n" +
-      "BODY =  {\n" +
+      "const body = {\n" +
       "   \"id\":\"1\",\n" +
       "   \"participants\":[\n" +
       "      {\n" +
@@ -1204,24 +1217,26 @@ export class CommunityPythonTemplates {
       "         \"socialNetworks\":[\n" +
       "            \"https://www.linkedin.com/in/jeremy-trujillo-sanchez/\"\n" +
       "         ],\n" +
-      "         \"experiences\":None,\n" +
-      "         \"educations\":None\n" +
+      "         \"experiences\":null,\n" +
+      "         \"educations\":null\n" +
       "      }\n" +
       "   ]\n" +
       "}\n" +
       "\n" +
-      "response = reqs.put(URL, data=BODY)\n" +
-      "print(response.text)",
+      "fetch(url, {\n" +
+      "  method: 'PUT',\n" +
+      "  body: JSON.stringify(body)\n" +
+      "})\n" +
+      "  .then(response => response.json())\n" +
+      "  .then(data => console.log(JSON.stringify(data)));",
     response: null
   }
 
   public static face_to_face_event_unsubscription_put: Template = {
     name: "face-to-face-event/unsubscription",
-    code: "\nimport requests as reqs\n" +
+    code: "\nconst url = 'https://dev.moonshot.ceo/api/community/face-to-face-event/unsubscription';\n" +
       "\n" +
-      "URL = \"https://dev.moonshot.ceo/api/community/face-to-face-event/unsubscription\"\n" +
-      "\n" +
-      "BODY =  {\n" +
+      "const body = {\n" +
       "   \"id\":\"1\",\n" +
       "   \"participants\":[\n" +
       "      {\n" +
@@ -1246,36 +1261,40 @@ export class CommunityPythonTemplates {
       "         \"socialNetworks\":[\n" +
       "            \"https://www.linkedin.com/in/jeremy-trujillo-sanchez/\"\n" +
       "         ],\n" +
-      "         \"experiences\":None,\n" +
-      "         \"educations\":None\n" +
+      "         \"experiences\":null,\n" +
+      "         \"educations\":null\n" +
       "      }\n" +
       "   ]\n" +
       "}\n" +
       "\n" +
-      "response = reqs.put(URL, data=BODY)\n" +
-      "print(response.text)",
+      "fetch(url, {\n" +
+      "  method: 'PUT',\n" +
+      "  body: JSON.stringify(body)\n" +
+      "})\n" +
+      "  .then(response => response.json())\n" +
+      "  .then(data => console.log(JSON.stringify(data)));",
     response: null
   }
 
   public static face_to_face_event_id_admin_delete: Template = {
     name: "face-to-face-event/:id/admin",
-    code: "\nimport requests as reqs\n" +
+    code: "\nconst url = 'https://dev.moonshot.ceo/api/community/face-to-face-event/4/admin';\n" +
       "\n" +
-      "URL = \"https://dev.moonshot.ceo/api/community/face-to-face-event/4/admin\"\n" +
-      "\n" +
-      "response = reqs.delete(URL)\n" +
-      "print(response.text)",
+      "fetch(url, {\n" +
+      "  method: 'DELETE'\n" +
+      "})\n" +
+      "  .then(response => response.json())\n" +
+      "  .then(data => console.log(JSON.stringify(data)));",
     response: null
   }
 
   public static room_documents_room_id_get: Template = {
     name: "room-documents/:room_id",
-    code: "\nimport requests as reqs\n" +
+    code: "\nconst url = 'https://dev.moonshot.ceo/api/community/room-documents/1';\n" +
       "\n" +
-      "URL = \"https://dev.moonshot.ceo/api/community/room-documents/1\"\n" +
-      "\n" +
-      "response = reqs.get(URL)\n" +
-      "print(response.text)",
+      "fetch(url)\n" +
+      "  .then(response => response.json())\n" +
+      "  .then(data => console.log(JSON.stringify(data)));",
     response: "\n[\n" +
       "   {\n" +
       "      \"id\":\"1\",\n" +
@@ -1309,12 +1328,11 @@ export class CommunityPythonTemplates {
 
   public static room_links_room_id_get: Template = {
     name: "room-links/:room_id",
-    code: "\nimport requests as reqs\n" +
+    code: "\nconst url = 'https://dev.moonshot.ceo/api/community/room-links/1';\n" +
       "\n" +
-      "URL = \"https://dev.moonshot.ceo/api/community/room-links/1\"\n" +
-      "\n" +
-      "response = reqs.get(URL)\n" +
-      "print(response.text)",
+      "fetch(url)\n" +
+      "  .then(response => response.json())\n" +
+      "  .then(data => console.log(JSON.stringify(data)));",
     response: "\n[\n" +
       "   {\n" +
       "      \"id\":\"1\",\n" +
@@ -1333,12 +1351,11 @@ export class CommunityPythonTemplates {
 
   public static direct_chats_get: Template = {
     name: "direct-chats",
-    code: "\nimport requests as reqs\n" +
+    code: "\nconst url = 'https://dev.moonshot.ceo/api/community/direct-chats';\n" +
       "\n" +
-      "URL = \"https://dev.moonshot.ceo/api/community/direct-chats\"\n" +
-      "\n" +
-      "response = reqs.get(URL)\n" +
-      "print(response.text)",
+      "fetch(url)\n" +
+      "  .then(response => response.json())\n" +
+      "  .then(data => console.log(JSON.stringify(data)));",
     response: "\n[\n" +
       "   {\n" +
       "      \"id\":\"3\",\n" +
@@ -1354,7 +1371,7 @@ export class CommunityPythonTemplates {
       "         },\n" +
       "         \"email\":\"jorge@gmail.es\",\n" +
       "         \"about\":\"Responsable en la tienda principal de la capital de Venezuela\",\n" +
-      "         \"image\":None,\n" +
+      "         \"image\":null,\n" +
       "         \"fcmTokens\":[\n" +
       "            {\n" +
       "               \"tokenId\":\"fcmToken1\",\n" +
@@ -1401,7 +1418,7 @@ export class CommunityPythonTemplates {
       "                  \"lng\":-69.7,\n" +
       "                  \"formatted\":\"Caracas 1041, Distrito Capital, Venezuela\"\n" +
       "               },\n" +
-      "               \"description\":None\n" +
+      "               \"description\":null\n" +
       "            },\n" +
       "            {\n" +
       "               \"id\":\"14\",\n" +
@@ -1446,7 +1463,7 @@ export class CommunityPythonTemplates {
       "         },\n" +
       "         \"email\":\"trujillosanchezjeremy@gmail.com\",\n" +
       "         \"about\":\"Alumno en prácticas en Moonshot y estudiante de la Universidad de Las Palmas de Gran Canaria\",\n" +
-      "         \"image\":None,\n" +
+      "         \"image\":null,\n" +
       "         \"fcmTokens\":[\n" +
       "            {\n" +
       "               \"tokenId\":\"fcmToken3\",\n" +
@@ -1470,7 +1487,7 @@ export class CommunityPythonTemplates {
       "                  \"formatted\":\"Madrid, Puerta del Sol\"\n" +
       "               },\n" +
       "               \"startDate\":15319,\n" +
-      "               \"endDate\":None,\n" +
+      "               \"endDate\":null,\n" +
       "               \"description\":\"Prácticas extracurriculares a traves de la FULP (Universidad de las Palmas de Gran Canaria)\"\n" +
       "            }\n" +
       "         ],\n" +
@@ -1481,7 +1498,7 @@ export class CommunityPythonTemplates {
       "               \"degree\":\"Ingeniería informática\",\n" +
       "               \"fieldOfStudy\":\"Ingeniería de software\",\n" +
       "               \"startDate\":15319,\n" +
-      "               \"endDate\":None,\n" +
+      "               \"endDate\":null,\n" +
       "               \"grade\":7,\n" +
       "               \"address\":{\n" +
       "                  \"lat\":48.5,\n" +
@@ -1509,12 +1526,11 @@ export class CommunityPythonTemplates {
 
   public static direct_chats_all_get: Template = {
     name: "direct-chats/all",
-    code: "\nimport requests as reqs\n" +
+    code: "\nconst url = 'https://dev.moonshot.ceo/api/community/direct-chats/all';\n" +
       "\n" +
-      "URL = \"https://dev.moonshot.ceo/api/community/direct-chats/all\"\n" +
-      "\n" +
-      "response = reqs.get(URL)\n" +
-      "print(response.text)",
+      "fetch(url)\n" +
+      "  .then(response => response.json())\n" +
+      "  .then(data => console.log(JSON.stringify(data)));",
     response: "\n[\n" +
       "   {\n" +
       "      \"id\":\"3\",\n" +
@@ -1530,7 +1546,7 @@ export class CommunityPythonTemplates {
       "         },\n" +
       "         \"email\":\"jorge@gmail.es\",\n" +
       "         \"about\":\"Responsable en la tienda principal de la capital de Venezuela\",\n" +
-      "         \"image\":None,\n" +
+      "         \"image\":null,\n" +
       "         \"fcmTokens\":[\n" +
       "            {\n" +
       "               \"tokenId\":\"fcmToken1\",\n" +
@@ -1577,7 +1593,7 @@ export class CommunityPythonTemplates {
       "                  \"lng\":-69.7,\n" +
       "                  \"formatted\":\"Caracas 1041, Distrito Capital, Venezuela\"\n" +
       "               },\n" +
-      "               \"description\":None\n" +
+      "               \"description\":null\n" +
       "            },\n" +
       "            {\n" +
       "               \"id\":\"14\",\n" +
@@ -1622,7 +1638,7 @@ export class CommunityPythonTemplates {
       "         },\n" +
       "         \"email\":\"trujillosanchezjeremy@gmail.com\",\n" +
       "         \"about\":\"Alumno en prácticas en Moonshot y estudiante de la Universidad de Las Palmas de Gran Canaria\",\n" +
-      "         \"image\":None,\n" +
+      "         \"image\":null,\n" +
       "         \"fcmTokens\":[\n" +
       "            {\n" +
       "               \"tokenId\":\"fcmToken3\",\n" +
@@ -1646,7 +1662,7 @@ export class CommunityPythonTemplates {
       "                  \"formatted\":\"Madrid, Puerta del Sol\"\n" +
       "               },\n" +
       "               \"startDate\":15319,\n" +
-      "               \"endDate\":None,\n" +
+      "               \"endDate\":null,\n" +
       "               \"description\":\"Prácticas extracurriculares a traves de la FULP (Universidad de las Palmas de Gran Canaria)\"\n" +
       "            }\n" +
       "         ],\n" +
@@ -1657,7 +1673,7 @@ export class CommunityPythonTemplates {
       "               \"degree\":\"Ingeniería informática\",\n" +
       "               \"fieldOfStudy\":\"Ingeniería de software\",\n" +
       "               \"startDate\":15319,\n" +
-      "               \"endDate\":None,\n" +
+      "               \"endDate\":null,\n" +
       "               \"grade\":7,\n" +
       "               \"address\":{\n" +
       "                  \"lat\":48.5,\n" +
@@ -1685,12 +1701,11 @@ export class CommunityPythonTemplates {
 
   public static direct_chat_id_get: Template = {
     name: "direct-chat/:id",
-    code: "\nimport requests as reqs\n" +
+    code: "\nconst url = 'https://dev.moonshot.ceo/api/community/direct-chat/1';\n" +
       "\n" +
-      "URL = \"https://dev.moonshot.ceo/api/community/direct-chat/1\"\n" +
-      "\n" +
-      "response = reqs.get(URL)\n" +
-      "print(response.text)",
+      "fetch(url)\n" +
+      "  .then(response => response.json())\n" +
+      "  .then(data => console.log(JSON.stringify(data)));",
     response: "\n{\n" +
       "        \"id\": \"1\",\n" +
       "        \"ownerMember\": {\n" +
@@ -1705,7 +1720,7 @@ export class CommunityPythonTemplates {
       "            },\n" +
       "            \"email\": \"iaramburu@moonshot.ceo\",\n" +
       "            \"about\": \"Experto en Ingeniería del Software.\",\n" +
-      "            \"image\": None,\n" +
+      "            \"image\": null,\n" +
       "            \"fcmTokens\": [\n" +
       "                {\n" +
       "                    \"tokenId\": \"fcmToken1\",\n" +
@@ -1792,11 +1807,9 @@ export class CommunityPythonTemplates {
 
   public static direct_chat_post: Template = {
     name: "direct-chat",
-    code: "\nimport requests as reqs\n" +
+    code: "\nconst url = 'https://dev.moonshot.ceo/api/community/direct-chat';\n" +
       "\n" +
-      "URL = \"https://dev.moonshot.ceo/api/community/direct-chat\"\n" +
-      "\n" +
-      "BODY =  {\n" +
+      "const body = {\n" +
       "  \"id\": \"1\",\n" +
       "  \"ownerMemberId\": \"1\",\n" +
       "  \"participants\": [\n" +
@@ -1822,29 +1835,32 @@ export class CommunityPythonTemplates {
       "  ]\n" +
       "}\n" +
       "\n" +
-      "response = reqs.post(URL, data=BODY)\n" +
-      "print(response.text)",
+      "fetch(url, {\n" +
+      "  method: 'POST',\n" +
+      "  body: JSON.stringify(body)\n" +
+      "})\n" +
+      "  .then(response => response.json())\n" +
+      "  .then(data => console.log(JSON.stringify(data)));",
     response: null
   }
 
   public static direct_chat_id_delete: Template = {
     name: "direct-chat/:id",
-    code: "\nimport requests as reqs\n" +
+    code: "\nconst url = 'https://dev.moonshot.ceo/api/community/direct-chat/4';\n" +
       "\n" +
-      "URL = \"https://dev.moonshot.ceo/api/community/direct-chat/1\"\n" +
-      "\n" +
-      "response = reqs.delete(URL)\n" +
-      "print(response.text)",
+      "fetch(url, {\n" +
+      "  method: 'DELETE',\n" +
+      "})\n" +
+      "  .then(response => response.json())\n" +
+      "  .then(data => console.log(JSON.stringify(data)));",
     response: null
   }
 
   public static direct_chat_message_post: Template = {
     name: "direct-chat/message",
-    code: "\nimport requests as reqs\n" +
+    code: "\nconst url = 'https://dev.moonshot.ceo/api/community/direct-chat/message';\n" +
       "\n" +
-      "URL = \"https://dev.moonshot.ceo/api/community/direct-chat/message\"\n" +
-      "\n" +
-      "BODY =  {\n" +
+      "const body = {\n" +
       "   \"id\":\"2\",\n" +
       "   \"roomId\":\"1\",\n" +
       "   \"authorMemberId\":\"2\",\n" +
@@ -1877,20 +1893,22 @@ export class CommunityPythonTemplates {
       "   \"createdAt\":1621415730000\n" +
       "}\n" +
       "\n" +
-      "\n" +
-      "response = reqs.post(URL, data=BODY)\n" +
-      "print(response.text)",
+      "fetch(url, {\n" +
+      "  method: 'POST',\n" +
+      "  body: JSON.stringify(body)\n" +
+      "})\n" +
+      "  .then(response => response.json())\n" +
+      "  .then(data => console.log(JSON.stringify(data)));",
     response: null
   }
 
   public static direct_chat_messages_room_id_get: Template = {
     name: "direct-chat/message/:room_id",
-    code: "\nimport requests as reqs\n" +
+    code: "\nconst url = 'https://dev.moonshot.ceo/api/community/direct-chat/messages/1';\n" +
       "\n" +
-      "URL = \"https://dev.moonshot.ceo/api/community/direct-chat/messages/1\"\n" +
-      "\n" +
-      "response = reqs.get(URL)\n" +
-      "print(response.text)",
+      "fetch(url)\n" +
+      "  .then(response => response.json())\n" +
+      "  .then(data => console.log(JSON.stringify(data)));",
     response: "\n[\n" +
       "   {\n" +
       "      \"id\":\"1\",\n" +
@@ -1933,23 +1951,23 @@ export class CommunityPythonTemplates {
 
   public static direct_chat_message_id_delete: Template = {
     name: "direct-chat/message/:id",
-    code: "\nimport requests as reqs\n" +
+    code: "\nconst url = 'https://dev.moonshot.ceo/api/community/direct-chat/message/1';\n" +
       "\n" +
-      "URL = \"https://dev.moonshot.ceo/api/community/direct-chat/message/1\"\n" +
-      "\n" +
-      "response = reqs.delete(URL)\n" +
-      "print(response.text)",
+      "fetch(url, {\n" +
+      "  method: 'DELETE',\n" +
+      "})\n" +
+      "  .then(response => response.json())\n" +
+      "  .then(data => console.log(JSON.stringify(data)));",
     response: null
   }
 
   public static follow_up_rooms_get: Template = {
     name: "follow-up-rooms",
-    code: "\nimport requests as reqs\n" +
+    code: "\nconst url = 'https://dev.moonshot.ceo/api/community/follow-up-rooms';\n" +
       "\n" +
-      "URL = \"https://dev.moonshot.ceo/api/community/follow-up-rooms\"\n" +
-      "\n" +
-      "response = reqs.get(URL)\n" +
-      "print(response.text)",
+      "fetch(url)\n" +
+      "  .then(response => response.json())\n" +
+      "  .then(data => console.log(JSON.stringify(data)));",
     response: "\n[\n" +
       "   {\n" +
       "      \"id\":\"1\",\n" +
@@ -1965,7 +1983,7 @@ export class CommunityPythonTemplates {
       "         },\n" +
       "         \"email\":\"vceballos@moonshot.ceo\",\n" +
       "         \"about\":\"Freelance\",\n" +
-      "         \"image\":None,\n" +
+      "         \"image\":null,\n" +
       "         \"fcmTokens\":[\n" +
       "            {\n" +
       "               \"tokenId\":\"fcmToken1\",\n" +
@@ -1983,7 +2001,7 @@ export class CommunityPythonTemplates {
       "            \"www.angellist.com/Victor\",\n" +
       "            \"www.google.com/Victor\"\n" +
       "         ],\n" +
-      "         \"experiences\":None,\n" +
+      "         \"experiences\":null,\n" +
       "         \"educations\":[\n" +
       "            {\n" +
       "               \"id\":\"4\",\n" +
@@ -2045,7 +2063,7 @@ export class CommunityPythonTemplates {
       "         },\n" +
       "         \"email\":\"trujillosanchezjeremy@gmail.com\",\n" +
       "         \"about\":\"Alumno en prácticas en Moonshot y estudiante de la Universidad de Las Palmas de Gran Canaria\",\n" +
-      "         \"image\":None,\n" +
+      "         \"image\":null,\n" +
       "         \"fcmTokens\":[\n" +
       "            {\n" +
       "               \"tokenId\":\"fcmToken3\",\n" +
@@ -2069,7 +2087,7 @@ export class CommunityPythonTemplates {
       "                  \"formatted\":\"Madrid, Puerta del Sol\"\n" +
       "               },\n" +
       "               \"startDate\":15319,\n" +
-      "               \"endDate\":None,\n" +
+      "               \"endDate\":null,\n" +
       "               \"description\":\"Prácticas extracurriculares a traves de la FULP (Universidad de las Palmas de Gran Canaria)\"\n" +
       "            }\n" +
       "         ],\n" +
@@ -2080,7 +2098,7 @@ export class CommunityPythonTemplates {
       "               \"degree\":\"Ingeniería informática\",\n" +
       "               \"fieldOfStudy\":\"Ingeniería de software\",\n" +
       "               \"startDate\":15319,\n" +
-      "               \"endDate\":None,\n" +
+      "               \"endDate\":null,\n" +
       "               \"grade\":7,\n" +
       "               \"address\":{\n" +
       "                  \"lat\":48.5,\n" +
@@ -2119,12 +2137,11 @@ export class CommunityPythonTemplates {
 
   public static follow_up_rooms_all_get: Template = {
     name: "follow-up-rooms/all",
-    code: "\nimport requests as reqs\n" +
+    code: "\nconst url = 'https://dev.moonshot.ceo/api/community/follow-up-rooms/all';\n" +
       "\n" +
-      "URL = \"https://dev.moonshot.ceo/api/community/follow-up-rooms/all\"\n" +
-      "\n" +
-      "response = reqs.get(URL)\n" +
-      "print(response.text)",
+      "fetch(url)\n" +
+      "  .then(response => response.json())\n" +
+      "  .then(data => console.log(JSON.stringify(data)));",
     response: "\n[\n" +
       "   {\n" +
       "      \"id\":\"1\",\n" +
@@ -2140,7 +2157,7 @@ export class CommunityPythonTemplates {
       "         },\n" +
       "         \"email\":\"vceballos@moonshot.ceo\",\n" +
       "         \"about\":\"Freelance\",\n" +
-      "         \"image\":None,\n" +
+      "         \"image\":null,\n" +
       "         \"fcmTokens\":[\n" +
       "            {\n" +
       "               \"tokenId\":\"fcmToken1\",\n" +
@@ -2158,7 +2175,7 @@ export class CommunityPythonTemplates {
       "            \"www.angellist.com/Victor\",\n" +
       "            \"www.google.com/Victor\"\n" +
       "         ],\n" +
-      "         \"experiences\":None,\n" +
+      "         \"experiences\":null,\n" +
       "         \"educations\":[\n" +
       "            {\n" +
       "               \"id\":\"4\",\n" +
@@ -2220,7 +2237,7 @@ export class CommunityPythonTemplates {
       "         },\n" +
       "         \"email\":\"trujillosanchezjeremy@gmail.com\",\n" +
       "         \"about\":\"Alumno en prácticas en Moonshot y estudiante de la Universidad de Las Palmas de Gran Canaria\",\n" +
-      "         \"image\":None,\n" +
+      "         \"image\":null,\n" +
       "         \"fcmTokens\":[\n" +
       "            {\n" +
       "               \"tokenId\":\"fcmToken3\",\n" +
@@ -2244,7 +2261,7 @@ export class CommunityPythonTemplates {
       "                  \"formatted\":\"Madrid, Puerta del Sol\"\n" +
       "               },\n" +
       "               \"startDate\":15319,\n" +
-      "               \"endDate\":None,\n" +
+      "               \"endDate\":null,\n" +
       "               \"description\":\"Prácticas extracurriculares a traves de la FULP (Universidad de las Palmas de Gran Canaria)\"\n" +
       "            }\n" +
       "         ],\n" +
@@ -2255,7 +2272,7 @@ export class CommunityPythonTemplates {
       "               \"degree\":\"Ingeniería informática\",\n" +
       "               \"fieldOfStudy\":\"Ingeniería de software\",\n" +
       "               \"startDate\":15319,\n" +
-      "               \"endDate\":None,\n" +
+      "               \"endDate\":null,\n" +
       "               \"grade\":7,\n" +
       "               \"address\":{\n" +
       "                  \"lat\":48.5,\n" +
@@ -2294,12 +2311,11 @@ export class CommunityPythonTemplates {
 
   public static follow_up_room_id_get: Template = {
     name: "follow-up-rooms/:id",
-    code: "\nimport requests as reqs\n" +
+    code: "\nconst url = 'https://dev.moonshot.ceo/api/community/follow-up-room/1';\n" +
       "\n" +
-      "URL = \"https://dev.moonshot.ceo/api/community/follow-up-rooms/1\"\n" +
-      "\n" +
-      "response = reqs.get(URL)\n" +
-      "print(response.text)",
+      "fetch(url)\n" +
+      "  .then(response => response.json())\n" +
+      "  .then(data => console.log(JSON.stringify(data)));",
     response: "\n{\n" +
       "      \"id\":\"1\",\n" +
       "      \"ownerMember\":{\n" +
@@ -2314,7 +2330,7 @@ export class CommunityPythonTemplates {
       "         },\n" +
       "         \"email\":\"vceballos@moonshot.ceo\",\n" +
       "         \"about\":\"Freelance\",\n" +
-      "         \"image\":None,\n" +
+      "         \"image\":null,\n" +
       "         \"fcmTokens\":[\n" +
       "            {\n" +
       "               \"tokenId\":\"fcmToken1\",\n" +
@@ -2332,7 +2348,7 @@ export class CommunityPythonTemplates {
       "            \"www.angellist.com/Victor\",\n" +
       "            \"www.google.com/Victor\"\n" +
       "         ],\n" +
-      "         \"experiences\":None,\n" +
+      "         \"experiences\":null,\n" +
       "         \"educations\":[\n" +
       "            {\n" +
       "               \"id\":\"4\",\n" +
@@ -2384,11 +2400,9 @@ export class CommunityPythonTemplates {
 
   public static follow_up_room_post: Template = {
     name: "follow-up-room",
-    code: "\nimport requests as reqs\n" +
+    code: "\nconst url = 'https://dev.moonshot.ceo/api/community/follow-up-room';\n" +
       "\n" +
-      "URL = \"https://dev.moonshot.ceo/api/community/follow-up-room\"\n" +
-      "\n" +
-      "BODY = {\n" +
+      "const body = {\n" +
       "  \"id\": \"1\",\n" +
       "  \"ownerMemberId\": \"5\",\n" +
       "  \"title\": \"Reunion general\",\n" +
@@ -2421,18 +2435,20 @@ export class CommunityPythonTemplates {
       "  ]\n" +
       "}\n" +
       "\n" +
-      "response = reqs.post(URL, data=BODY)\n" +
-      "print(response.text)",
+      "fetch(url, {\n" +
+      "  method: 'POST',\n" +
+      "  body: JSON.stringify(body)\n" +
+      "})\n" +
+      "  .then(response => response.json())\n" +
+      "  .then(data => console.log(JSON.stringify(data)));",
     response: null
   }
 
   public static follow_up_room_put: Template = {
     name: "follow-up-room",
-    code: "\nimport requests as reqs\n" +
+    code: "\nconst url = 'https://dev.moonshot.ceo/api/community/follow-up-room';\n" +
       "\n" +
-      "URL = \"https://dev.moonshot.ceo/api/community/follow-up-room\"\n" +
-      "\n" +
-      "BODY = {\n" +
+      "const body = {\n" +
       "  \"id\": \"1\",\n" +
       "  \"title\": \"Reunion general\",\n" +
       "  \"description\": \"Reunion para hablar de los objetivos a futuro\",\n" +
@@ -2462,36 +2478,40 @@ export class CommunityPythonTemplates {
       "  ]\n" +
       "}\n" +
       "\n" +
-      "response = reqs.put(URL, data=BODY)\n" +
-      "print(response.text)",
+      "fetch(url, {\n" +
+      "  method: 'PUT',\n" +
+      "  body: JSON.stringify(body)\n" +
+      "})\n" +
+      "  .then(response => response.json())\n" +
+      "  .then(data => console.log(JSON.stringify(data)));",
     response: null
   }
 
   public static follow_up_room_add_member_put: Template = {
-    name: "follow-up-room/add-member",
-    code: "\nimport requests as reqs\n" +
+    name: "follow-up-rooms/add-member",
+    code: "\nconst url = 'https://dev.moonshot.ceo/api/community/follow-up-room/add-member';\n" +
       "\n" +
-      "URL = \"https://dev.moonshot.ceo/api/community/follow-up-room/add-member\"\n" +
-      "\n" +
-      "BODY = {\n" +
+      "const body = {\n" +
       "  \"id\": \"1\",\n" +
       "  \"memberIds\": [\n" +
       "    \"1\", \"2\", \"3\"\n" +
       "  ]\n" +
       "}\n" +
       "\n" +
-      "response = reqs.put(URL, data=BODY)\n" +
-      "print(response.text)",
+      "fetch(url, {\n" +
+      "  method: 'PUT',\n" +
+      "  body: JSON.stringify(body)\n" +
+      "})\n" +
+      "  .then(response => response.json())\n" +
+      "  .then(data => console.log(JSON.stringify(data)));",
     response: null
   }
 
   public static follow_up_room_leave_member_put: Template = {
     name: "follow-up-rooms/leave-member",
-    code: "\nimport requests as reqs\n" +
+    code: "\nconst url = 'https://dev.moonshot.ceo/api/community/follow-up-room/leave-member';\n" +
       "\n" +
-      "URL = \"https://dev.moonshot.ceo/api/community/follow-up-room/leave-member\"\n" +
-      "\n" +
-      "BODY = {\n" +
+      "const body = {\n" +
       "   \"id\":\"1\",\n" +
       "   \"leaveMemberId\":[\n" +
       "      \"1\",\n" +
@@ -2500,59 +2520,66 @@ export class CommunityPythonTemplates {
       "   \"newOwnerMemberId\":\"4\"\n" +
       "}\n" +
       "\n" +
-      "response = reqs.put(URL, data=BODY)\n" +
-      "print(response.text)",
+      "fetch(url, {\n" +
+      "  method: 'PUT',\n" +
+      "  body: JSON.stringify(body)\n" +
+      "})\n" +
+      "  .then(response => response.json())\n" +
+      "  .then(data => console.log(JSON.stringify(data)));",
     response: null
   }
 
   public static follow_up_room_open_put: Template = {
     name: "follow-up-room/open",
-    code: "\nimport requests as reqs\n" +
+    code: "\nconst url = 'https://dev.moonshot.ceo/api/community/follow-up-room/open';\n" +
       "\n" +
-      "URL = \"https://dev.moonshot.ceo/api/community/follow-up-room/open\"\n" +
-      "\n" +
-      "BODY = {\n" +
+      "const body = {\n" +
       "   \"id\":\"1\"\n" +
       "}\n" +
       "\n" +
-      "response = reqs.put(URL, data=BODY)\n" +
-      "print(response.text)",
+      "fetch(url, {\n" +
+      "  method: 'PUT',\n" +
+      "  body: JSON.stringify(body)\n" +
+      "})\n" +
+      "  .then(response => response.json())\n" +
+      "  .then(data => console.log(JSON.stringify(data)));",
     response: null
   }
 
   public static follow_up_room_close_put: Template = {
     name: "follow-up-room/close",
-    code: "\nimport requests as reqs\n" +
+    code: "\nconst url = 'https://dev.moonshot.ceo/api/community/follow-up-room/close';\n" +
       "\n" +
-      "URL = \"https://dev.moonshot.ceo/api/community/follow-up-room/open\"\n" +
-      "\n" +
-      "BODY = {\n" +
+      "const body = {\n" +
       "   \"id\":\"1\"\n" +
       "}\n" +
       "\n" +
-      "response = reqs.put(URL, data=BODY)\n" +
-      "print(response.text)",
+      "fetch(url, {\n" +
+      "  method: 'PUT',\n" +
+      "  body: JSON.stringify(body)\n" +
+      "})\n" +
+      "  .then(response => response.json())\n" +
+      "  .then(data => console.log(JSON.stringify(data)));",
     response: null
   }
 
   public static follow_up_room_id_delete: Template = {
     name: "follow-up-room/:id",
-    code: "\nimport requests as reqs\n" +
+    code: "\nconst url = 'https://dev.moonshot.ceo/api/community/follow-up-room/1';\n" +
       "\n" +
-      "URL = \"https://dev.moonshot.ceo/api/community/follow-up-room/1\"\n" +
-      "\n" +
-      "response = reqs.delete(URL)\n" +
-      "print(response.text)",
+      "fetch(url, {\n" +
+      "  method: 'DELETE'\n" +
+      "})\n" +
+      "  .then(response => response.json())\n" +
+      "  .then(data => console.log(JSON.stringify(data)));",
     response: null
   }
 
   public static follow_up_room_message_post: Template = {
     name: "follow-up-room/message",
-    code: "\nimport requests as reqs\n" +
+    code: "\nconst url = 'https://dev.moonshot.ceo/api/community/follow-up-room/message';\n" +
       "\n" +
-      "URL = \"https://dev.moonshot.ceo/api/community/follow-up-room/message\"\n" +
-      "\n" +
-      "BODY = {\n" +
+      "const body = {\n" +
       "   \"id\":\"2\",\n" +
       "   \"roomId\":\"1\",\n" +
       "   \"authorMemberId\":\"2\",\n" +
@@ -2585,41 +2612,46 @@ export class CommunityPythonTemplates {
       "   \"createdAt\":1621415730000\n" +
       "}\n" +
       "\n" +
-      "response = reqs.post(URL, data=BODY)\n" +
-      "print(response.text)",
+      "fetch(url, {\n" +
+      "  method: 'POST',\n" +
+      "  body: JSON.stringify(body)\n" +
+      "})\n" +
+      "  .then(response => response.json())\n" +
+      "  .then(data => console.log(JSON.stringify(data)));",
     response: null
   }
 
   public static follow_up_room_message_id_delete: Template = {
     name: "follow-up-room/message/:id",
-    code: "\nimport requests as reqs\n" +
+    code: "\nconst url = 'https://dev.moonshot.ceo/api/community/follow-up-room/message/1';\n" +
       "\n" +
-      "URL = \"https://dev.moonshot.ceo/api/community/follow-up-room/message/1\"\n" +
-      "\n" +
-      "response = reqs.delete(URL)\n" +
-      "print(response.text)",
+      "fetch(url, {\n" +
+      "  method: 'DELETE'\n" +
+      "})\n" +
+      "  .then(response => response.json())\n" +
+      "  .then(data => console.log(JSON.stringify(data)));",
     response: null
   }
 
   public static follow_up_room_message_id_admin_delete: Template = {
     name: "follow-up-room/message/:id/admin",
-    code: "\nimport requests as reqs\n" +
+    code: "\nconst url = 'https://dev.moonshot.ceo/api/community/follow-up-room/message/1/admin';\n" +
       "\n" +
-      "URL = \"https://dev.moonshot.ceo/api/community/follow-up-room/message/1/admin\"\n" +
-      "\n" +
-      "response = reqs.delete(URL)\n" +
-      "print(response.text)",
+      "fetch(url, {\n" +
+      "  method: 'DELETE'\n" +
+      "})\n" +
+      "  .then(response => response.json())\n" +
+      "  .then(data => console.log(JSON.stringify(data)));",
     response: null
   }
 
   public static follow_up_room_messages_room_id_get: Template = {
     name: "follow-up-room/messages/:room_id",
-    code: "\nimport requests as reqs\n" +
+    code: "\nconst url = 'https://dev.moonshot.ceo/api/community/follow-up-room/messages/1';\n" +
       "\n" +
-      "URL = \"https://dev.moonshot.ceo/api/community/follow-up-room/messages/1\"\n" +
-      "\n" +
-      "response = reqs.get(URL)\n" +
-      "print(response.text)",
+      "fetch(url)\n" +
+      "  .then(response => response.json())\n" +
+      "  .then(data => console.log(JSON.stringify(data)));",
     response: "\n[\n" +
       "   {\n" +
       "      \"id\":\"1\",\n" +
@@ -2663,13 +2695,12 @@ export class CommunityPythonTemplates {
   }
 
   public static public_channels_get: Template = {
-    name: "public-channel",
-    code: "\nimport requests as reqs\n" +
+    name: "public-channels",
+    code: "\nconst url = 'https://dev.moonshot.ceo/api/community/public-channels';\n" +
       "\n" +
-      "URL = \"https://dev.moonshot.ceo/api/community/public-channels\"\n" +
-      "\n" +
-      "response = reqs.get(URL)\n" +
-      "print(response.text)",
+      "fetch(url)\n" +
+      "  .then(response => response.json())\n" +
+      "  .then(data => console.log(JSON.stringify(data)));",
     response: "\n[\n" +
       "   {\n" +
       "      \"id\":\"1\",\n" +
@@ -2687,7 +2718,7 @@ export class CommunityPythonTemplates {
       "         \"country\":\"Japon\",\n" +
       "         \"email\":\"marcos@outlook.es\",\n" +
       "         \"about\":\"Farmaceutico trabajador para la compañia Novartis, actual desarrolladora de la vacuna Pfizer\",\n" +
-      "         \"image\":None,\n" +
+      "         \"image\":null,\n" +
       "         \"fcmTokens\":[\n" +
       "            {\n" +
       "               \"tokenId\":\"fcmToken1\",\n" +
@@ -2794,7 +2825,7 @@ export class CommunityPythonTemplates {
       "         },\n" +
       "         \"email\":\"raul@outlook.es\",\n" +
       "         \"about\":\"Responsable de la distribucion de la vacuna Pfizer en España\",\n" +
-      "         \"image\":None,\n" +
+      "         \"image\":null,\n" +
       "         \"fcmTokens\":[\n" +
       "            {\n" +
       "               \"tokenId\":\"fcmToken1\",\n" +
@@ -2837,7 +2868,7 @@ export class CommunityPythonTemplates {
       "               \"description\":\"Responsable de la tienda principal de Samsung en Madrid\"\n" +
       "            }\n" +
       "         ],\n" +
-      "         \"educations\":None\n" +
+      "         \"educations\":null\n" +
       "      },\n" +
       "      \"title\":\"Canal para trabajar de manera tranquila\",\n" +
       "      \"description\":\"Aqui todos los participantes estaran muteados y sirve para sentirse acompañado en el trabajo online\",\n" +
@@ -2862,12 +2893,11 @@ export class CommunityPythonTemplates {
 
   public static public_channel_id_get: Template = {
     name: "public-channel/:id",
-    code: "\nimport requests as reqs\n" +
+    code: "\nconst url = 'https://dev.moonshot.ceo/api/community/public-channel/1';\n" +
       "\n" +
-      "URL = \"https://dev.moonshot.ceo/api/community/public-channel/1\"\n" +
-      "\n" +
-      "response = reqs.get(URL)\n" +
-      "print(response.text)",
+      "fetch(url)\n" +
+      "  .then(response => response.json())\n" +
+      "  .then(data => console.log(JSON.stringify(data)));",
     response: "\n{\n" +
       "   \"id\":\"1\",\n" +
       "   \"ownerMember\":{\n" +
@@ -2884,7 +2914,7 @@ export class CommunityPythonTemplates {
       "      \"country\":\"Japon\",\n" +
       "      \"email\":\"marcos@outlook.es\",\n" +
       "      \"about\":\"Farmaceutico trabajador para la compañia Novartis, actual desarrolladora de la vacuna Pfizer\",\n" +
-      "      \"image\":None,\n" +
+      "      \"image\":null,\n" +
       "      \"fcmTokens\":[\n" +
       "         {\n" +
       "            \"tokenId\":\"fcmToken1\",\n" +
@@ -2981,11 +3011,9 @@ export class CommunityPythonTemplates {
 
   public static public_channel_post: Template = {
     name: "public-channel",
-    code: "\nimport requests as reqs\n" +
+    code: "\nconst url = 'https://dev.moonshot.ceo/api/community/public-channel';\n" +
       "\n" +
-      "URL = \"https://dev.moonshot.ceo/api/community/public-channel\"\n" +
-      "\n" +
-      "BODY = {\n" +
+      "const body = {\n" +
       "   \"id\":\"1\",\n" +
       "   \"ownerMemberId\":\"8\",\n" +
       "   \"title\":\"Canal compartir conocimientos\",\n" +
@@ -3017,18 +3045,20 @@ export class CommunityPythonTemplates {
       "   ]\n" +
       "}\n" +
       "\n" +
-      "response = reqs.post(URL, data=BODY)\n" +
-      "print(response.text)",
+      "fetch(url, {\n" +
+      "  method: 'POST',\n" +
+      "  body: JSON.stringify(body)\n" +
+      "})\n" +
+      "  .then(response => response.json())\n" +
+      "  .then(data => console.log(JSON.stringify(data)));",
     response: null
   }
 
   public static public_channel_put: Template = {
     name: "public-channel",
-    code: "\nimport requests as reqs\n" +
+    code: "\nconst url = 'https://dev.moonshot.ceo/api/community/public-channel';\n" +
       "\n" +
-      "URL = \"https://dev.moonshot.ceo/api/community/public-channel\"\n" +
-      "\n" +
-      "BODY = {\n" +
+      "const body = {\n" +
       "   \"id\":\"1\",\n" +
       "   \"ownerMemberId\":\"8\",\n" +
       "   \"title\":\"Canal compartir conocimientos\",\n" +
@@ -3059,29 +3089,32 @@ export class CommunityPythonTemplates {
       "   ]\n" +
       "}\n" +
       "\n" +
-      "response = reqs.put(URL, data=BODY)\n" +
-      "print(response.text)",
+      "fetch(url, {\n" +
+      "  method: 'PUT',\n" +
+      "  body: JSON.stringify(body)\n" +
+      "})\n" +
+      "  .then(response => response.json())\n" +
+      "  .then(data => console.log(JSON.stringify(data)));",
     response: null
   }
 
   public static public_channel_id_delete: Template = {
     name: "public-channel/:id",
-    code: "\nimport requests as reqs\n" +
+    code: "\nconst url = 'https://dev.moonshot.ceo/api/community/public-channel/1';\n" +
       "\n" +
-      "URL = \"https://dev.moonshot.ceo/api/community/public-channel/1\"\n" +
-      "\n" +
-      "response = reqs.delete(URL)\n" +
-      "print(response.text)",
+      "fetch(url, {\n" +
+      "  method: 'DELETE'\n" +
+      "})\n" +
+      "  .then(response => response.json())\n" +
+      "  .then(data => console.log(JSON.stringify(data)));",
     response: null
   }
 
   public static public_channel_admin_put: Template = {
     name: "public-channel/admin",
-    code: "\nimport requests as reqs\n" +
+    code: "\nconst url = 'https://dev.moonshot.ceo/api/community/public-channel/admin';\n" +
       "\n" +
-      "URL = \"https://dev.moonshot.ceo/api/community/public-channel/admin\"\n" +
-      "\n" +
-      "BODY = {\n" +
+      "const body = {\n" +
       "   \"id\":\"1\",\n" +
       "   \"ownerMemberId\":\"8\",\n" +
       "   \"title\":\"Canal compartir conocimientos\",\n" +
@@ -3112,61 +3145,66 @@ export class CommunityPythonTemplates {
       "   ]\n" +
       "}\n" +
       "\n" +
-      "response = reqs.put(URL, data=BODY)\n" +
-      "print(response.text)",
+      "fetch(url, {\n" +
+      "  method: 'PUT',\n" +
+      "  body: JSON.stringify(body)\n" +
+      "})\n" +
+      "  .then(response => response.json())\n" +
+      "  .then(data => console.log(JSON.stringify(data)));",
     response: null
   }
 
   public static public_channel_id_admin_delete: Template = {
     name: "public-channel/:id/admin",
-    code: "\nimport requests as reqs\n" +
+    code: "\nconst url = 'https://dev.moonshot.ceo/api/community/public-channel/1/admin';\n" +
       "\n" +
-      "URL = \"https://dev.moonshot.ceo/api/community/public-channel/1/admin\"\n" +
-      "\n" +
-      "response = reqs.delete(URL)\n" +
-      "print(response.text)",
+      "fetch(url, {\n" +
+      "  method: 'DELETE'\n" +
+      "})\n" +
+      "  .then(response => response.json())\n" +
+      "  .then(data => console.log(JSON.stringify(data)));",
     response: null
   }
 
   public static public_channel_subscribe_put: Template = {
     name: "public-channel/subscribe",
-    code: "\nimport requests as reqs\n" +
+    code: "\nconst url = 'https://dev.moonshot.ceo/api/community/public-channel/subscribe';\n" +
       "\n" +
-      "URL = \"https://dev.moonshot.ceo/api/community/public-channel/subscribe\"\n" +
-      "\n" +
-      "BODY = {\n" +
+      "const body = {\n" +
       "  \"id\":\"1\",\n" +
-      "  \"memberId\":\"2\"\n" +
-      "}\n" +
+      "  \"memberId\":\"2\"\n}\n" +
       "\n" +
-      "response = reqs.put(URL, data=BODY)\n" +
-      "print(response.text)",
+      "fetch(url, {\n" +
+      "  method: 'PUT',\n" +
+      "  body: JSON.stringify(body)\n" +
+      "})\n" +
+      "  .then(response => response.json())\n" +
+      "  .then(data => console.log(JSON.stringify(data)));",
     response: null
   }
 
   public static public_channel_unsubscribe_put: Template = {
     name: "public-channel/unsubscribe",
-    code: "\nimport requests as reqs\n" +
+    code: "\nconst url = 'https://dev.moonshot.ceo/api/community/public-channel/unsubscribe';\n" +
       "\n" +
-      "URL = \"https://dev.moonshot.ceo/api/community/public-channel/unsubscribe\"\n" +
-      "\n" +
-      "BODY = {\n" +
+      "const body = {\n" +
       "  \"id\":\"1\",\n" +
-      "  \"memberId\":\"2\"\n" +
-      "}\n" +
+      "  \"memberId\":\"2\"\n}\n" +
       "\n" +
-      "response = reqs.put(URL, data=BODY)\n" +
-      "print(response.text)",
+      "fetch(url, {\n" +
+      "  method: 'PUT',\n" +
+      "  body: JSON.stringify(body)\n" +
+      "})\n" +
+      "  .then(response => response.json())\n" +
+      "  .then(data => console.log(JSON.stringify(data)));",
     response: null
   }
 
   public static public_channel_message_post: Template = {
     name: "public-channel/message",
-    code: "\nimport requests as reqs\n" +
+    code: "\nconst url = 'https://dev.moonshot.ceo/api/community/public-channel/message';\n" +
       "\n" +
-      "URL = \"https://dev.moonshot.ceo/api/community/public-channel/message\"\n" +
-      "\n" +
-      "BODY = {\n" +
+      "const body = {\n" +
       "   \"id\":\"2\",\n" +
       "   \"roomId\":\"1\",\n" +
       "   \"authorMemberId\":\"2\",\n" +
@@ -3199,41 +3237,46 @@ export class CommunityPythonTemplates {
       "   \"createdAt\":1621415730000\n" +
       "}\n" +
       "\n" +
-      "response = reqs.post(URL, data=BODY)\n" +
-      "print(response.text)",
+      "fetch(url, {\n" +
+      "  method: 'POST',\n" +
+      "  body: JSON.stringify(body)\n" +
+      "})\n" +
+      "  .then(response => response.json())\n" +
+      "  .then(data => console.log(JSON.stringify(data)));",
     response: null
   }
 
   public static public_channel_message_id_delete: Template = {
     name: "public-channel/message/:id",
-    code: "\nimport requests as reqs\n" +
+    code: "\nconst url = 'https://dev.moonshot.ceo/api/community/public-channel/message/1';\n" +
       "\n" +
-      "URL = \"https://dev.moonshot.ceo/api/community/public-channel/message/2\"\n" +
-      "\n" +
-      "response = reqs.delete(URL)\n" +
-      "print(response.text)",
+      "fetch(url, {\n" +
+      "  method: 'DELETE'\n" +
+      "})\n" +
+      "  .then(response => response.json())\n" +
+      "  .then(data => console.log(JSON.stringify(data)));",
     response: null
   }
 
   public static public_channel_message_id_admin_delete: Template = {
     name: "public-channel/message/:id/admin",
-    code: "\nimport requests as reqs\n" +
+    code: "\nconst url = 'https://dev.moonshot.ceo/api/community/public-channel/message/1/admin';\n" +
       "\n" +
-      "URL = \"https://dev.moonshot.ceo/api/community/public-channel/message/1/admin\"\n" +
-      "\n" +
-      "response = reqs.delete(URL)\n" +
-      "print(response.text)",
+      "fetch(url, {\n" +
+      "  method: 'DELETE'\n" +
+      "})\n" +
+      "  .then(response => response.json())\n" +
+      "  .then(data => console.log(JSON.stringify(data)));",
     response: null
   }
 
   public static public_channel_messages_room_id_get: Template = {
-    name: "public-channel/message/:roomId",
-    code: "\nimport requests as reqs\n" +
+    name: "public-channel/messages/:room_id",
+    code: "\nconst url = 'https://dev.moonshot.ceo/api/community/public-channel/messages/3';\n" +
       "\n" +
-      "URL = \"https://dev.moonshot.ceo/api/community/public-channel/messages/3\"\n" +
-      "\n" +
-      "response = reqs.get(URL)\n" +
-      "print(response.text)",
+      "fetch(url)\n" +
+      "  .then(response => response.json())\n" +
+      "  .then(data => console.log(JSON.stringify(data)));",
     response: "\n[\n" +
       "  {\n" +
       "    \"id\": \"5\",\n" +
@@ -3303,11 +3346,9 @@ export class CommunityPythonTemplates {
 
   public static wall_post_post: Template = {
     name: "wall-post",
-    code: "\nimport requests as reqs\n" +
+    code: "\nconst url = 'https://dev.moonshot.ceo/api/community/wall-post';\n" +
       "\n" +
-      "URL = \"https://dev.moonshot.ceo/api/community/wall-post\"\n" +
-      "\n" +
-      "BODY = {\n" +
+      "const body = {\n" +
       " \"id\":\"1\",\n" +
       " \"content\":\"Publicación de la subida de impuestos en Canarias\",\n" +
       " \"attachments\":[\n" +
@@ -3332,7 +3373,7 @@ export class CommunityPythonTemplates {
       "      },\n" +
       "      \"email\":\"jorge@gmail.es\",\n" +
       "      \"about\":\"Responsable en la tienda principal de la capital de Venezuela\",\n" +
-      "      \"image\":None,\n" +
+      "      \"image\":null,\n" +
       "      \"fcmTokens\":[\n" +
       "       {\n" +
       "        \"tokenId\":\"fcmToken1\",\n" +
@@ -3379,7 +3420,7 @@ export class CommunityPythonTemplates {
       "             \"lng\":-69.7,\n" +
       "             \"formatted\":\"Caracas 1041, Distrito Capital, Venezuela\"\n" +
       "          },\n" +
-      "          \"description\":None\n" +
+      "          \"description\":null\n" +
       "       },\n" +
       "       {\n" +
       "        \"id\":\"14\",\n" +
@@ -3415,18 +3456,20 @@ export class CommunityPythonTemplates {
       " \"createdAt\":1620172800000\n" +
       "}\n" +
       "\n" +
-      "response = reqs.post(URL, data=BODY)\n" +
-      "print(response.text)",
+      "fetch(url, {\n" +
+      "  method: 'POST',\n" +
+      "  body: JSON.stringify(body)\n" +
+      "})\n" +
+      "  .then(response => response.json())\n" +
+      "  .then(data => console.log(JSON.stringify(data)));",
     response: null
   }
 
   public static wall_post_put: Template = {
     name: "wall-post",
-    code: "\nimport requests as reqs\n" +
+    code: "\nconst url = 'https://dev.moonshot.ceo/api/community/wall-post';\n" +
       "\n" +
-      "URL = \"https://dev.moonshot.ceo/api/community/wall-post\"\n" +
-      "\n" +
-      "BODY = {\n" +
+      "const body = {\n" +
       "   \"id\":\"1\",\n" +
       "   \"content\":\"https://www.elsur.cl/impresa/2021/04/03/full/cuerpo-principal/10/\",\n" +
       "   \"attachments\":[\n" +
@@ -3437,29 +3480,32 @@ export class CommunityPythonTemplates {
       "   ]\n" +
       "}\n" +
       "\n" +
-      "response = reqs.put(URL, data=BODY)\n" +
-      "print(response.text)",
+      "fetch(url, {\n" +
+      "  method: 'PUT',\n" +
+      "  body: JSON.stringify(body)\n" +
+      "})\n" +
+      "  .then(response => response.json())\n" +
+      "  .then(data => console.log(JSON.stringify(data)));",
     response: null
   }
 
   public static wall_post_id_delete: Template = {
     name: "wall-post/:id",
-    code: "\nimport requests as reqs\n" +
+    code: "\nconst url = 'https://dev.moonshot.ceo/api/community/wall-post/1';\n" +
       "\n" +
-      "URL = \"https://dev.moonshot.ceo/api/community/wall-post/1\"\n" +
-      "\n" +
-      "response = reqs.delete(URL)\n" +
-      "print(response.text)",
+      "fetch(url, {\n" +
+      "  method: 'DELETE'\n" +
+      "})\n" +
+      "  .then(response => response.json())\n" +
+      "  .then(data => console.log(JSON.stringify(data)));",
     response: null
   }
 
   public static wall_post_admin_put: Template = {
     name: "wall-post/admin",
-    code: "\nimport requests as reqs\n" +
+    code: "\nconst url = 'https://dev.moonshot.ceo/api/community/wall-post/admin';\n" +
       "\n" +
-      "URL = \"https://dev.moonshot.ceo/api/community/wall-post/admin\"\n" +
-      "\n" +
-      "BODY = {\n" +
+      "const body = {\n" +
       "   \"id\":\"1\",\n" +
       "   \"content\":\"https://www.elsur.cl/impresa/2021/04/03/full/cuerpo-principal/10/\",\n" +
       "   \"attachments\":[\n" +
@@ -3470,60 +3516,67 @@ export class CommunityPythonTemplates {
       "   ]\n" +
       "}\n" +
       "\n" +
-      "response = reqs.put(URL, data=BODY)\n" +
-      "print(response.text)",
+      "fetch(url, {\n" +
+      "  method: 'PUT',\n" +
+      "  body: JSON.stringify(body)\n" +
+      "})\n" +
+      "  .then(response => response.json())\n" +
+      "  .then(data => console.log(JSON.stringify(data)));",
     response: null
   }
 
   public static wall_post_id_admin_delete: Template = {
     name: "wall-post/:id/admin",
-    code: "\nimport requests as reqs\n" +
+    code: "\nconst url = 'https://dev.moonshot.ceo/api/community/wall-post/1/admin';\n" +
       "\n" +
-      "URL = \"https://dev.moonshot.ceo/api/community/wall-post/1/admin\"\n" +
-      "\n" +
-      "response = reqs.delete(URL)\n" +
-      "print(response.text)",
+      "fetch(url, {\n" +
+      "  method: 'DELETE'\n" +
+      "})\n" +
+      "  .then(response => response.json())\n" +
+      "  .then(data => console.log(JSON.stringify(data)));",
     response: null
   }
 
   public static wall_post_like_put: Template = {
     name: "wall-post/like",
-    code: "\nimport requests as reqs\n" +
+    code: "\nconst url = 'https://dev.moonshot.ceo/api/community/wall-post/like';\n" +
       "\n" +
-      "URL = \"https://dev.moonshot.ceo/api/community/wall-post/like\"\n" +
-      "\n" +
-      "BODY = {\n" +
+      "const body = {\n" +
       "   \"id\":\"1\",\n" +
       "   \"memberId\":\"5\"\n" +
       "}\n" +
       "\n" +
-      "response = reqs.put(URL, data=BODY)\n" +
-      "print(response.text)",
+      "fetch(url, {\n" +
+      "  method: 'PUT',\n" +
+      "  body: JSON.stringify(body)\n" +
+      "})\n" +
+      "  .then(response => response.json())\n" +
+      "  .then(data => console.log(JSON.stringify(data)));",
     response: null
   }
   public static wall_post_unlike_put: Template = {
     name: "wall-post/unlike",
-    code: "\nimport requests as reqs\n" +
+    code: "\nconst url = 'https://dev.moonshot.ceo/api/community/wall-post/unlike';\n" +
       "\n" +
-      "URL = \"https://dev.moonshot.ceo/api/community/wall-post/unlike\"\n" +
-      "\n" +
-      "BODY = {\n" +
+      "const body = {\n" +
       "   \"id\":\"1\",\n" +
       "   \"memberId\":\"5\"\n" +
       "}\n" +
       "\n" +
-      "response = reqs.put(URL, data=BODY)\n" +
-      "print(response.text)",
+      "fetch(url, {\n" +
+      "  method: 'PUT',\n" +
+      "  body: JSON.stringify(body)\n" +
+      "})\n" +
+      "  .then(response => response.json())\n" +
+      "  .then(data => console.log(JSON.stringify(data)));",
     response: null
   }
 
   public static wall_post_comment_post: Template = {
     name: "wall-post/comment",
-    code: "\nimport requests as reqs\n" +
+    code: "\nconst url = 'https://dev.moonshot.ceo/api/community/wall-post/comment';\n" +
       "\n" +
-      "URL = \"https://dev.moonshot.ceo/api/community/wall-post/comment\"\n" +
-      "\n" +
-      "BODY = {\n" +
+      "const body = {\n" +
       "   \"id\":\"1\",\n" +
       "   \"comment\":{\n" +
       "      \"id\":\"4\",\n" +
@@ -3551,61 +3604,68 @@ export class CommunityPythonTemplates {
       "            \"https://twitter.com/inigo_aramburu\",\n" +
       "            \"https://www.linkedin.com/in/iaramburu/\"\n" +
       "         ],\n" +
-      "         \"experiences\":None,\n" +
-      "         \"educations\":None\n" +
+      "         \"experiences\":null,\n" +
+      "         \"educations\":null\n" +
       "      },\n" +
-      "      \"likes\":None,\n" +
+      "      \"likes\":null,\n" +
       "      \"createdAt\":1629895108193\n" +
       "   }\n" +
       "}\n" +
       "\n" +
-      "response = reqs.post(URL, data=BODY)\n" +
-      "print(response.text)",
+      "fetch(url, {\n" +
+      "  method: 'POST',\n" +
+      "  body: JSON.stringify(body)\n" +
+      "})\n" +
+      "  .then(response => response.json())\n" +
+      "  .then(data => console.log(JSON.stringify(data)));",
     response: null
   }
 
   public static wall_post_comment_like_put: Template = {
     name: "wall-post/comment/like",
-    code: "\nimport requests as reqs\n" +
+    code: "\nconst url = 'https://dev.moonshot.ceo/api/community/wall-post/comment/like';\n" +
       "\n" +
-      "URL = \"https://dev.moonshot.ceo/api/community/wall-post/comment/like\"\n" +
-      "\n" +
-      "BODY = {\n" +
+      "const body = {\n" +
       " \"id\":\"1\",\n" +
       " \"memberId\":\"5\",\n" +
       " \"commentId\":\"9\"\n" +
       "}\n" +
       "\n" +
-      "response = reqs.put(URL, data=BODY)\n" +
-      "print(response.text)",
+      "fetch(url, {\n" +
+      "  method: 'PUT',\n" +
+      "  body: JSON.stringify(body)\n" +
+      "})\n" +
+      "  .then(response => response.json())\n" +
+      "  .then(data => console.log(JSON.stringify(data)));",
     response: null
   }
 
   public static wall_post_comment_unlike_put: Template = {
     name: "wall-post/comment/unlike",
-    code: "\nimport requests as reqs\n" +
+    code: "\nconst url = 'https://dev.moonshot.ceo/api/community/wall-post/comment/unlike';\n" +
       "\n" +
-      "URL = \"https://dev.moonshot.ceo/api/community/wall-post/comment/unlike\"\n" +
-      "\n" +
-      "BODY = {\n" +
+      "const body = {\n" +
       " \"id\":\"1\",\n" +
       " \"memberId\":\"5\",\n" +
       " \"commentId\":\"9\"\n" +
       "}\n" +
       "\n" +
-      "response = reqs.put(URL, data=BODY)\n" +
-      "print(response.text)",
+      "fetch(url, {\n" +
+      "  method: 'PUT',\n" +
+      "  body: JSON.stringify(body)\n" +
+      "})\n" +
+      "  .then(response => response.json())\n" +
+      "  .then(data => console.log(JSON.stringify(data)));",
     response: null
   }
 
   public static wall_post_id_get: Template = {
     name: "wall-post/:id",
-    code: "\nimport requests as reqs\n" +
+    code: "\nconst url = 'https://dev.moonshot.ceo/api/community/wall-post/1';\n" +
       "\n" +
-      "URL = \"https://dev.moonshot.ceo/api/community/wall-post/1\"\n" +
-      "\n" +
-      "response = reqs.get(URL)\n" +
-      "print(response.text)",
+      "fetch(url)\n" +
+      "  .then(response => response.json())\n" +
+      "  .then(data => console.log(JSON.stringify(data)));",
     response: "\n{\n" +
       "        \"id\": \"1\",\n" +
       "        \"content\": \"Publicación de la subida de impuestos en Canarias\",\n" +
@@ -3635,7 +3695,7 @@ export class CommunityPythonTemplates {
       "                    },\n" +
       "                    \"email\": \"jorge@gmail.es\",\n" +
       "                    \"about\": \"Responsable en la tienda principal de la capital de Venezuela\",\n" +
-      "                    \"image\": None,\n" +
+      "                    \"image\": null,\n" +
       "                    \"fcmTokens\": [\n" +
       "                        {\n" +
       "                            \"tokenId\": \"fcmToken1\",\n" +
@@ -3682,7 +3742,7 @@ export class CommunityPythonTemplates {
       "                                \"lng\": -69.7,\n" +
       "                                \"formatted\": \"Caracas 1041, Distrito Capital, Venezuela\"\n" +
       "                            },\n" +
-      "                            \"description\": None\n" +
+      "                            \"description\": null\n" +
       "                        },\n" +
       "                        {\n" +
       "                            \"id\": \"14\",\n" +
@@ -3728,7 +3788,7 @@ export class CommunityPythonTemplates {
       "            \"country\": \"España\",\n" +
       "            \"email\": \"nestor@gmail.com\",\n" +
       "            \"about\": \"Informatico responsable del equipo de ciberseguridad\",\n" +
-      "            \"image\": None,\n" +
+      "            \"image\": null,\n" +
       "            \"fcmTokens\": [\n" +
       "                {\n" +
       "                    \"tokenId\": \"fcmToken3\",\n" +
@@ -3780,12 +3840,11 @@ export class CommunityPythonTemplates {
 
   public static wall_posts_get: Template = {
     name: "wall-posts",
-    code: "\nimport requests as reqs\n" +
+    code: "\nconst url = 'https://dev.moonshot.ceo/api/community/wall-posts';\n" +
       "\n" +
-      "URL = \"https://dev.moonshot.ceo/api/community/wall-posts\"\n" +
-      "\n" +
-      "response = reqs.get(URL)\n" +
-      "print(response.text)",
+      "fetch(url)\n" +
+      "  .then(response => response.json())\n" +
+      "  .then(data => console.log(JSON.stringify(data)));",
     response: "\n[\n" +
       "   {\n" +
       "      \"id\":\"1\",\n" +
@@ -3816,7 +3875,7 @@ export class CommunityPythonTemplates {
       "               },\n" +
       "               \"email\":\"jorge@gmail.es\",\n" +
       "               \"about\":\"Responsable en la tienda principal de la capital de Venezuela\",\n" +
-      "               \"image\":None,\n" +
+      "               \"image\":null,\n" +
       "               \"fcmTokens\":[\n" +
       "                  {\n" +
       "                     \"tokenId\":\"fcmToken1\",\n" +
@@ -3863,7 +3922,7 @@ export class CommunityPythonTemplates {
       "                        \"lng\":-69.7,\n" +
       "                        \"formatted\":\"Caracas 1041, Distrito Capital, Venezuela\"\n" +
       "                     },\n" +
-      "                     \"description\":None\n" +
+      "                     \"description\":null\n" +
       "                  },\n" +
       "                  {\n" +
       "                     \"id\":\"14\",\n" +
@@ -3909,7 +3968,7 @@ export class CommunityPythonTemplates {
       "         \"country\":\"España\",\n" +
       "         \"email\":\"nestor@gmail.com\",\n" +
       "         \"about\":\"Informatico responsable del equipo de ciberseguridad\",\n" +
-      "         \"image\":None,\n" +
+      "         \"image\":null,\n" +
       "         \"fcmTokens\":[\n" +
       "            {\n" +
       "               \"tokenId\":\"fcmToken3\",\n" +
@@ -3987,7 +4046,7 @@ export class CommunityPythonTemplates {
       "               \"country\":\"Japon\",\n" +
       "               \"email\":\"marcos@outlook.es\",\n" +
       "               \"about\":\"Farmaceutico trabajador para la compañia Novartis, actual desarrolladora de la vacuna Pfizer\",\n" +
-      "               \"image\":None,\n" +
+      "               \"image\":null,\n" +
       "               \"fcmTokens\":[\n" +
       "                  {\n" +
       "                     \"tokenId\":\"fcmToken1\",\n" +
@@ -4073,7 +4132,7 @@ export class CommunityPythonTemplates {
       "               },\n" +
       "               \"email\":\"cristina@hotmail.es\",\n" +
       "               \"about\":\"Embajadora de Unicef en España\",\n" +
-      "               \"image\":None,\n" +
+      "               \"image\":null,\n" +
       "               \"fcmTokens\":[\n" +
       "                  {\n" +
       "                     \"tokenId\":\"fcmToken2\",\n" +
@@ -4154,7 +4213,7 @@ export class CommunityPythonTemplates {
       "         \"country\":\"España\",\n" +
       "         \"email\":\"roberto@outlook.es\",\n" +
       "         \"about\":\"Informatico trabajador del equipo de ciberseguridad\",\n" +
-      "         \"image\":None,\n" +
+      "         \"image\":null,\n" +
       "         \"fcmTokens\":[\n" +
       "            {\n" +
       "               \"tokenId\":\"fcmToken2\",\n" +
@@ -4222,12 +4281,11 @@ export class CommunityPythonTemplates {
 
   public static actors_get: Template = {
     name: "actors",
-    code: "\nimport requests as reqs\n" +
+    code: "\nconst url = 'https://dev.moonshot.ceo/api/community/actors';\n" +
       "\n" +
-      "URL = \"https://dev.moonshot.ceo/api/community/actors\"\n" +
-      "\n" +
-      "response = reqs.get(URL)\n" +
-      "print(response.text)",
+      "fetch(url)\n" +
+      "  .then(response => response.json())\n" +
+      "  .then(data => console.log(JSON.stringify(data)));",
     response: "\n[\n" +
       "   {\n" +
       "      \"id\":\"1\",\n" +
@@ -4252,7 +4310,7 @@ export class CommunityPythonTemplates {
       "               \"timestamp\":1622975724952\n" +
       "            }\n" +
       "         ],\n" +
-      "         \"image\":None,\n" +
+      "         \"image\":null,\n" +
       "         \"socialNetworks\":[\n" +
       "            \"www.twitter.com/Iñigo\",\n" +
       "            \"www.facebook.com/Iñigo\"\n" +
@@ -4376,7 +4434,7 @@ export class CommunityPythonTemplates {
       "               \"timestamp\":1630918457848\n" +
       "            }\n" +
       "         ],\n" +
-      "         \"image\":None,\n" +
+      "         \"image\":null,\n" +
       "         \"socialNetworks\":[\n" +
       "            \"www.twitter.com/JoseJuan\",\n" +
       "            \"www.facebook.com/JoseJuan\"\n" +
@@ -4483,23 +4541,39 @@ export class CommunityPythonTemplates {
 
   public static actors_import_csv_post: Template = {
     name: "actors/import/csv",
-    code: "\nimport requests as reqs\n" +
+    code: "\nconst body = {\n" +
+      "  \"memberId\": \"60acae8e2f799d228a4d4a85\",\n" +
+      "  \"fcmTokens\": [\n" +
+      "    {\n" +
+      "      \"tokenId\": \"enMcvL2-3YDmhocf25g5Nk:APA91bEljU6wo1S7Bj\",\n" +
+      "      \"device\": \"laptop/computer\",\n" +
+      "      \"timestamp\": 1639687246\n" +
+      "    }\n" +
+      "  ]\n" +
+      "}\n" +
       "\n" +
-      "URL = \"https://dev.moonshot.ceo/api/community/actors/import/csv\"\n" +
+      "const formData = new FormData();\n" +
       "\n" +
-      "response = reqs.put(URL, files={'name': open('test.csv', 'r')})\n" +
-      "print(response.text)",
+      "for(const name in body) {\n" +
+      "  formData.append(name, body[name]);\n" +
+      "}\n" +
+      "\n" +
+      "fetch(url, {\n" +
+      "  method: 'POST',\n" +
+      "  body: formData\n" +
+      "})\n" +
+      "  .then(response => response.json())\n" +
+      "  .then(data => console.log(JSON.stringify(data)));",
     response: null
   }
 
   public static actors_by_name_and_state_get: Template = {
     name: "actors/by-name-and-state",
-    code: "\nimport requests as reqs\n" +
+    code: "\nconst url = 'https://dev.moonshot.ceo/api/community/actors/by-name-and-state?name=Iñigo&&state=ACTIVE';\n" +
       "\n" +
-      "URL = \"https://dev.moonshot.ceo/api/community/actors/by-name-and-state?name=Iñigo&&state=ACTIVE\"\n" +
-      "\n" +
-      "response = reqs.get(URL)\n" +
-      "print(response.text)",
+      "fetch(url)\n" +
+      "  .then(response => response.json())\n" +
+      "  .then(data => console.log(JSON.stringify(data)));",
     response: "\n[\n" +
       "    {\n" +
       "        \"id\": \"60accfec97acf93f5f69e05f\",\n" +
@@ -4516,39 +4590,39 @@ export class CommunityPythonTemplates {
       "                \"formatted\": \"Wroclaw, 1, 20014 San Sebastián, Gipuzkoa, Spain\",\n" +
       "                \"components\": [\n" +
       "                    {\n" +
-      "                        \"name\": None,\n" +
-      "                        \"shortName\": None,\n" +
-      "                        \"type\": None\n" +
+      "                        \"name\": null,\n" +
+      "                        \"shortName\": null,\n" +
+      "                        \"type\": null\n" +
       "                    },\n" +
       "                    {\n" +
-      "                        \"name\": None,\n" +
-      "                        \"shortName\": None,\n" +
-      "                        \"type\": None\n" +
+      "                        \"name\": null,\n" +
+      "                        \"shortName\": null,\n" +
+      "                        \"type\": null\n" +
       "                    },\n" +
       "                    {\n" +
-      "                        \"name\": None,\n" +
-      "                        \"shortName\": None,\n" +
-      "                        \"type\": None\n" +
+      "                        \"name\": null,\n" +
+      "                        \"shortName\": null,\n" +
+      "                        \"type\": null\n" +
       "                    },\n" +
       "                    {\n" +
-      "                        \"name\": None,\n" +
-      "                        \"shortName\": None,\n" +
-      "                        \"type\": None\n" +
+      "                        \"name\": null,\n" +
+      "                        \"shortName\": null,\n" +
+      "                        \"type\": null\n" +
       "                    },\n" +
       "                    {\n" +
-      "                        \"name\": None,\n" +
-      "                        \"shortName\": None,\n" +
-      "                        \"type\": None\n" +
+      "                        \"name\": null,\n" +
+      "                        \"shortName\": null,\n" +
+      "                        \"type\": null\n" +
       "                    },\n" +
       "                    {\n" +
-      "                        \"name\": None,\n" +
-      "                        \"shortName\": None,\n" +
-      "                        \"type\": None\n" +
+      "                        \"name\": null,\n" +
+      "                        \"shortName\": null,\n" +
+      "                        \"type\": null\n" +
       "                    },\n" +
       "                    {\n" +
-      "                        \"name\": None,\n" +
-      "                        \"shortName\": None,\n" +
-      "                        \"type\": None\n" +
+      "                        \"name\": null,\n" +
+      "                        \"shortName\": null,\n" +
+      "                        \"type\": null\n" +
       "                    }\n" +
       "                ]\n" +
       "            },\n" +
@@ -4564,59 +4638,59 @@ export class CommunityPythonTemplates {
       "                    \"height\": 210\n" +
       "                }\n" +
       "            },\n" +
-      "            \"fcmTokens\": None,\n" +
+      "            \"fcmTokens\": null,\n" +
       "            \"socialNetworks\": [],\n" +
-      "            \"experiences\": None,\n" +
-      "            \"educations\": None\n" +
+      "            \"experiences\": null,\n" +
+      "            \"educations\": null\n" +
       "        },\n" +
       "        \"name\": \"Iñigo\",\n" +
-      "        \"city\": None,\n" +
+      "        \"city\": null,\n" +
       "        \"country\": \"Spain\",\n" +
-      "        \"address\": None,\n" +
-      "        \"latitude\": None,\n" +
-      "        \"longitude\": None,\n" +
+      "        \"address\": null,\n" +
+      "        \"latitude\": null,\n" +
+      "        \"longitude\": null,\n" +
       "        \"description\": \"Lorem ipsum...\",\n" +
-      "        \"phone\": None,\n" +
-      "        \"web\": None,\n" +
+      "        \"phone\": null,\n" +
+      "        \"web\": null,\n" +
       "        \"image\": {\n" +
       "            \"original\": \"/assets/img/default/actor.jpg\",\n" +
-      "            \"thumbnail\": None,\n" +
-      "            \"crop\": None\n" +
+      "            \"thumbnail\": null,\n" +
+      "            \"crop\": null\n" +
       "        },\n" +
       "        \"myFacet\": {\n" +
-      "            \"industries\": None,\n" +
-      "            \"businessModels\": None,\n" +
-      "            \"socialInnovations\": None,\n" +
-      "            \"deepTechs\": None\n" +
+      "            \"industries\": null,\n" +
+      "            \"businessModels\": null,\n" +
+      "            \"socialInnovations\": null,\n" +
+      "            \"deepTechs\": null\n" +
       "        },\n" +
       "        \"questFacet\": {\n" +
-      "            \"industries\": None,\n" +
-      "            \"businessModels\": None,\n" +
-      "            \"socialInnovations\": None,\n" +
-      "            \"deepTechs\": None\n" +
+      "            \"industries\": null,\n" +
+      "            \"businessModels\": null,\n" +
+      "            \"socialInnovations\": null,\n" +
+      "            \"deepTechs\": null\n" +
       "        },\n" +
       "        \"investment\": {\n" +
-      "            \"stage\": None,\n" +
-      "            \"stagesInvestments\": None,\n" +
+      "            \"stage\": null,\n" +
+      "            \"stagesInvestments\": null,\n" +
       "            \"numberPastExist\": 0,\n" +
-      "            \"trlStage\": None,\n" +
+      "            \"trlStage\": null,\n" +
       "            \"numberCurrentInvestments\": 0,\n" +
-      "            \"countriesInteres\": None\n" +
+      "            \"countriesInteres\": null\n" +
       "        },\n" +
       "        \"financial\": {\n" +
-      "            \"stage\": None,\n" +
+      "            \"stage\": null,\n" +
       "            \"seekedCapital\": 0,\n" +
-      "            \"trlStage\": None,\n" +
+      "            \"trlStage\": null,\n" +
       "            \"raisedCapital\": 0,\n" +
       "            \"totalFunding\": 0,\n" +
       "            \"premoneyValuation\": 0,\n" +
-      "            \"fundingStage\": None,\n" +
-      "            \"lastFunding\": None,\n" +
+      "            \"fundingStage\": null,\n" +
+      "            \"lastFunding\": null,\n" +
       "            \"numbersEmployees\": 0,\n" +
-      "            \"currency\": None\n" +
+      "            \"currency\": null\n" +
       "        },\n" +
       "        \"socialNetworks\": [],\n" +
-      "        \"media\": None,\n" +
+      "        \"media\": null,\n" +
       "        \"lastname\": \"Aramburu\",\n" +
       "        \"email\": \"iaramburu@moonshot.ceo\"\n" +
       "    },\n" +
@@ -4635,39 +4709,39 @@ export class CommunityPythonTemplates {
       "                \"formatted\": \"Wroclaw, 1, 20014 San Sebastián, Gipuzkoa, Spain\",\n" +
       "                \"components\": [\n" +
       "                    {\n" +
-      "                        \"name\": None,\n" +
-      "                        \"shortName\": None,\n" +
-      "                        \"type\": None\n" +
+      "                        \"name\": null,\n" +
+      "                        \"shortName\": null,\n" +
+      "                        \"type\": null\n" +
       "                    },\n" +
       "                    {\n" +
-      "                        \"name\": None,\n" +
-      "                        \"shortName\": None,\n" +
-      "                        \"type\": None\n" +
+      "                        \"name\": null,\n" +
+      "                        \"shortName\": null,\n" +
+      "                        \"type\": null\n" +
       "                    },\n" +
       "                    {\n" +
-      "                        \"name\": None,\n" +
-      "                        \"shortName\": None,\n" +
-      "                        \"type\": None\n" +
+      "                        \"name\": null,\n" +
+      "                        \"shortName\": null,\n" +
+      "                        \"type\": null\n" +
       "                    },\n" +
       "                    {\n" +
-      "                        \"name\": None,\n" +
-      "                        \"shortName\": None,\n" +
-      "                        \"type\": None\n" +
+      "                        \"name\": null,\n" +
+      "                        \"shortName\": null,\n" +
+      "                        \"type\": null\n" +
       "                    },\n" +
       "                    {\n" +
-      "                        \"name\": None,\n" +
-      "                        \"shortName\": None,\n" +
-      "                        \"type\": None\n" +
+      "                        \"name\": null,\n" +
+      "                        \"shortName\": null,\n" +
+      "                        \"type\": null\n" +
       "                    },\n" +
       "                    {\n" +
-      "                        \"name\": None,\n" +
-      "                        \"shortName\": None,\n" +
-      "                        \"type\": None\n" +
+      "                        \"name\": null,\n" +
+      "                        \"shortName\": null,\n" +
+      "                        \"type\": null\n" +
       "                    },\n" +
       "                    {\n" +
-      "                        \"name\": None,\n" +
-      "                        \"shortName\": None,\n" +
-      "                        \"type\": None\n" +
+      "                        \"name\": null,\n" +
+      "                        \"shortName\": null,\n" +
+      "                        \"type\": null\n" +
       "                    }\n" +
       "                ]\n" +
       "            },\n" +
@@ -4683,10 +4757,10 @@ export class CommunityPythonTemplates {
       "                    \"height\": 210\n" +
       "                }\n" +
       "            },\n" +
-      "            \"fcmTokens\": None,\n" +
+      "            \"fcmTokens\": null,\n" +
       "            \"socialNetworks\": [],\n" +
-      "            \"experiences\": None,\n" +
-      "            \"educations\": None\n" +
+      "            \"experiences\": null,\n" +
+      "            \"educations\": null\n" +
       "        },\n" +
       "        \"name\": \"Iñigo\",\n" +
       "        \"city\": \"Gipuzkoa\",\n" +
@@ -4695,8 +4769,8 @@ export class CommunityPythonTemplates {
       "        \"latitude\": 43.3035576,\n" +
       "        \"longitude\": -1.9590747,\n" +
       "        \"description\": \"asdfa\",\n" +
-      "        \"phone\": None,\n" +
-      "        \"web\": None,\n" +
+      "        \"phone\": null,\n" +
+      "        \"web\": null,\n" +
       "        \"image\": {\n" +
       "            \"original\": \"https://moonshot-innovation.s3.eu-central-1.amazonaws.com/60accfeb97acf93f5f69e05d/image/f5a27710-1f57-4c52-b256-3c35efd5bc19.jpg\",\n" +
       "            \"thumbnail\": \"https://moonshot-innovation.s3.eu-central-1.amazonaws.com/60accfeb97acf93f5f69e05d/image/58568682-5545-4dfa-ad9c-8a2541ff05d6.jpg\",\n" +
@@ -4707,13 +4781,13 @@ export class CommunityPythonTemplates {
       "                \"height\": 397\n" +
       "            }\n" +
       "        },\n" +
-      "        \"myFacet\": None,\n" +
-      "        \"questFacet\": None,\n" +
-      "        \"investment\": None,\n" +
-      "        \"financial\": None,\n" +
+      "        \"myFacet\": null,\n" +
+      "        \"questFacet\": null,\n" +
+      "        \"investment\": null,\n" +
+      "        \"financial\": null,\n" +
       "        \"socialNetworks\": [],\n" +
-      "        \"media\": None,\n" +
-      "        \"lastname\": None,\n" +
+      "        \"media\": null,\n" +
+      "        \"lastname\": null,\n" +
       "        \"email\": \"iaramburu@moonshot.ceo\"\n" +
       "    }\n" +
       "]"
@@ -4721,12 +4795,11 @@ export class CommunityPythonTemplates {
 
   public static actors_by_type_get: Template = {
     name: "actors/by-type",
-    code: "\nimport requests as reqs\n" +
+    code: "\nconst url = 'https://dev.moonshot.ceo/api/community/actors/by-type?types=STARTUP,COMPANY';\n" +
       "\n" +
-      "URL = \"https://dev.moonshot.ceo/api/community/actors/by-type?types=STARTUP,COMPANY\"\n" +
-      "\n" +
-      "response = reqs.get(URL)\n" +
-      "print(response.text)",
+      "fetch(url)\n" +
+      "  .then(response => response.json())\n" +
+      "  .then(data => console.log(JSON.stringify(data)));",
     response: "\n[\n" +
       "    {\n" +
       "        \"id\": \"60bca44d4eacd81a28cff65c\",\n" +
@@ -4738,44 +4811,44 @@ export class CommunityPythonTemplates {
       "            \"name\": \"David\",\n" +
       "            \"lastname\": \"Suriol\",\n" +
       "            \"address\": {\n" +
-      "                \"lat\": None,\n" +
-      "                \"lng\": None,\n" +
+      "                \"lat\": null,\n" +
+      "                \"lng\": null,\n" +
       "                \"formatted\": \"Madrid, Spain\",\n" +
-      "                \"components\": None\n" +
+      "                \"components\": null\n" +
       "            },\n" +
       "            \"email\": \"dsuriol@gmail.com\",\n" +
       "            \"about\": \"US president\",\n" +
       "            \"image\": {\n" +
       "                \"original\": \"https://moonshot-innovation.s3.eu-central-1.amazonaws.com/60acae8e2f799d228a4d4a86/image/aeb5d299-1eb0-47ce-bf15-dfc3e25250f4.png\",\n" +
-      "                \"thumbnail\": None,\n" +
-      "                \"crop\": None\n" +
+      "                \"thumbnail\": null,\n" +
+      "                \"crop\": null\n" +
       "            },\n" +
-      "            \"fcmTokens\": None,\n" +
+      "            \"fcmTokens\": null,\n" +
       "            \"socialNetworks\": [],\n" +
-      "            \"experiences\": None,\n" +
-      "            \"educations\": None\n" +
+      "            \"experiences\": null,\n" +
+      "            \"educations\": null\n" +
       "        },\n" +
       "        \"name\": \"Google Maps\",\n" +
       "        \"city\": \"Santa Clara County\",\n" +
       "        \"country\": \"United States\",\n" +
-      "        \"address\": None,\n" +
+      "        \"address\": null,\n" +
       "        \"latitude\": 40.4167754,\n" +
       "        \"longitude\": -3.7037902,\n" +
       "        \"description\": \"information company \",\n" +
-      "        \"phone\": None,\n" +
+      "        \"phone\": null,\n" +
       "        \"web\": \"www.google.com\",\n" +
       "        \"image\": {\n" +
       "            \"original\": \"https://moonshot-innovation.s3.eu-central-1.amazonaws.com/60acae8e2f799d228a4d4a86/image/6bd7ad4a-3557-4b23-8762-f4abef2f7720.png\",\n" +
-      "            \"thumbnail\": None,\n" +
-      "            \"crop\": None\n" +
+      "            \"thumbnail\": null,\n" +
+      "            \"crop\": null\n" +
       "        },\n" +
       "        \"myFacet\": {\n" +
-      "            \"industries\": None,\n" +
+      "            \"industries\": null,\n" +
       "            \"businessModels\": [\n" +
       "                \"SAAS\",\n" +
       "                \"SERVICES\"\n" +
       "            ],\n" +
-      "            \"socialInnovations\": None,\n" +
+      "            \"socialInnovations\": null,\n" +
       "            \"deepTechs\": [\n" +
       "                \"BRAIN_COMPUTER_INTERFACE\",\n" +
       "                \"COGNITIVE_EXPERT_ADVISORS\",\n" +
@@ -4798,33 +4871,33 @@ export class CommunityPythonTemplates {
       "                \"COMPUTER_AND_ELECTRONICS\",\n" +
       "                \"INFORMATION_TECHNOLOGY\"\n" +
       "            ],\n" +
-      "            \"businessModels\": None,\n" +
-      "            \"socialInnovations\": None,\n" +
-      "            \"deepTechs\": None\n" +
+      "            \"businessModels\": null,\n" +
+      "            \"socialInnovations\": null,\n" +
+      "            \"deepTechs\": null\n" +
       "        },\n" +
       "        \"investment\": {\n" +
-      "            \"stage\": None,\n" +
-      "            \"stagesInvestments\": None,\n" +
+      "            \"stage\": null,\n" +
+      "            \"stagesInvestments\": null,\n" +
       "            \"numberPastExist\": 0,\n" +
-      "            \"trlStage\": None,\n" +
+      "            \"trlStage\": null,\n" +
       "            \"numberCurrentInvestments\": 0,\n" +
-      "            \"countriesInteres\": None\n" +
+      "            \"countriesInteres\": null\n" +
       "        },\n" +
       "        \"financial\": {\n" +
-      "            \"stage\": None,\n" +
+      "            \"stage\": null,\n" +
       "            \"seekedCapital\": 0,\n" +
-      "            \"trlStage\": None,\n" +
+      "            \"trlStage\": null,\n" +
       "            \"raisedCapital\": 0,\n" +
       "            \"totalFunding\": 0,\n" +
       "            \"premoneyValuation\": 0,\n" +
-      "            \"fundingStage\": None,\n" +
-      "            \"lastFunding\": None,\n" +
+      "            \"fundingStage\": null,\n" +
+      "            \"lastFunding\": null,\n" +
       "            \"numbersEmployees\": 0,\n" +
-      "            \"currency\": None\n" +
+      "            \"currency\": null\n" +
       "        },\n" +
       "        \"socialNetworks\": [],\n" +
-      "        \"media\": None,\n" +
-      "        \"members\": None\n" +
+      "        \"media\": null,\n" +
+      "        \"members\": null\n" +
       "    },\n" +
       "    {\n" +
       "        \"id\": \"60d6095a71ca73649a03239a\",\n" +
@@ -4836,43 +4909,43 @@ export class CommunityPythonTemplates {
       "            \"name\": \"Borja\",\n" +
       "            \"lastname\": \"Álvarez\",\n" +
       "            \"address\": {\n" +
-      "                \"lat\": None,\n" +
-      "                \"lng\": None,\n" +
+      "                \"lat\": null,\n" +
+      "                \"lng\": null,\n" +
       "                \"formatted\": \"Las Palmas de G.C., Spain\",\n" +
-      "                \"components\": None\n" +
+      "                \"components\": null\n" +
       "            },\n" +
       "            \"email\": \"borja.gallifrey@gmail.com\",\n" +
       "            \"about\": \"Estudiante de ingeniería informática de la ULPGC.\",\n" +
       "            \"image\": {\n" +
       "                \"original\": \"https://moonshot-innovation.s3.eu-central-1.amazonaws.com/60d6095a71ca73649a03239b/image/7add0635-42c7-40a8-8e8f-5a5c4161e1e2.jpg\",\n" +
-      "                \"thumbnail\": None,\n" +
-      "                \"crop\": None\n" +
+      "                \"thumbnail\": null,\n" +
+      "                \"crop\": null\n" +
       "            },\n" +
-      "            \"fcmTokens\": None,\n" +
+      "            \"fcmTokens\": null,\n" +
       "            \"socialNetworks\": [],\n" +
-      "            \"experiences\": None,\n" +
-      "            \"educations\": None\n" +
+      "            \"experiences\": null,\n" +
+      "            \"educations\": null\n" +
       "        },\n" +
       "        \"name\": \"GamingVR\",\n" +
       "        \"city\": \"Las Palmas de G.C.\",\n" +
       "        \"country\": \"ES\",\n" +
       "        \"address\": \"C/ Triana 12\",\n" +
-      "        \"latitude\": None,\n" +
-      "        \"longitude\": None,\n" +
+      "        \"latitude\": null,\n" +
+      "        \"longitude\": null,\n" +
       "        \"description\": \"Desarrollamos tecnologías  relacionadas con la realidad virtual aplicadas al mundo gaming.\",\n" +
-      "        \"phone\": None,\n" +
+      "        \"phone\": null,\n" +
       "        \"web\": \"www.gamingVR.com\",\n" +
       "        \"image\": {\n" +
-      "            \"original\": \"https://moonshot-innovation.s3.eu-central-1.amazonaws.com/None/image/868ceb01-741e-4439-bed7-32fc13e617eb.jpg\",\n" +
-      "            \"thumbnail\": None,\n" +
-      "            \"crop\": None\n" +
+      "            \"original\": \"https://moonshot-innovation.s3.eu-central-1.amazonaws.com/null/image/868ceb01-741e-4439-bed7-32fc13e617eb.jpg\",\n" +
+      "            \"thumbnail\": null,\n" +
+      "            \"crop\": null\n" +
       "        },\n" +
       "        \"myFacet\": {\n" +
-      "            \"industries\": None,\n" +
+      "            \"industries\": null,\n" +
       "            \"businessModels\": [\n" +
       "                \"TECHNOLOGY\"\n" +
       "            ],\n" +
-      "            \"socialInnovations\": None,\n" +
+      "            \"socialInnovations\": null,\n" +
       "            \"deepTechs\": [\n" +
       "                \"HUMAN_COMPUTER_INTERACTION\",\n" +
       "                \"COMPUTER_VISION\",\n" +
@@ -4884,38 +4957,37 @@ export class CommunityPythonTemplates {
       "            \"industries\": [\n" +
       "                \"COMPUTER_AND_ELECTRONICS\"\n" +
       "            ],\n" +
-      "            \"businessModels\": None,\n" +
-      "            \"socialInnovations\": None,\n" +
-      "            \"deepTechs\": None\n" +
+      "            \"businessModels\": null,\n" +
+      "            \"socialInnovations\": null,\n" +
+      "            \"deepTechs\": null\n" +
       "        },\n" +
-      "        \"investment\": None,\n" +
+      "        \"investment\": null,\n" +
       "        \"financial\": {\n" +
-      "            \"stage\": None,\n" +
+      "            \"stage\": null,\n" +
       "            \"seekedCapital\": 0,\n" +
-      "            \"trlStage\": None,\n" +
+      "            \"trlStage\": null,\n" +
       "            \"raisedCapital\": 0,\n" +
       "            \"totalFunding\": 0,\n" +
       "            \"premoneyValuation\": 0,\n" +
-      "            \"fundingStage\": None,\n" +
-      "            \"lastFunding\": None,\n" +
+      "            \"fundingStage\": null,\n" +
+      "            \"lastFunding\": null,\n" +
       "            \"numbersEmployees\": 0,\n" +
-      "            \"currency\": None\n" +
+      "            \"currency\": null\n" +
       "        },\n" +
       "        \"socialNetworks\": [],\n" +
-      "        \"media\": None,\n" +
-      "        \"members\": None\n" +
+      "        \"media\": null,\n" +
+      "        \"members\": null\n" +
       "    }\n" +
       "]"
   }
 
   public static actors_by_state_get: Template = {
     name: "actors/by-state",
-    code: "\nimport requests as reqs\n" +
+    code: "\nconst url = 'https://dev.moonshot.ceo/api/community/actors/by-state?state=REJECTED';\n" +
       "\n" +
-      "URL = \"https://dev.moonshot.ceo/api/community/actors/by-state?state=REJECTED\"\n" +
-      "\n" +
-      "response = reqs.get(URL)\n" +
-      "print(response.text)",
+      "fetch(url)\n" +
+      "  .then(response => response.json())\n" +
+      "  .then(data => console.log(JSON.stringify(data)));",
     response: "\n[\n" +
       "   {\n" +
       "      \"id\":\"13\",\n" +
@@ -4940,7 +5012,7 @@ export class CommunityPythonTemplates {
       "               \"timestamp\":1630918457848\n" +
       "            }\n" +
       "         ],\n" +
-      "         \"image\":None,\n" +
+      "         \"image\":null,\n" +
       "         \"socialNetworks\":[\n" +
       "            \"www.twitter.com/Nestor\",\n" +
       "            \"www.linkedin.com/Nestor\"\n" +
@@ -5005,7 +5077,7 @@ export class CommunityPythonTemplates {
       "            },\n" +
       "            \"email\":\"fernando@hotmail.com\",\n" +
       "            \"about\":\"Profesor doctorado de la Universidad de Hardvard. Actualmente impartiendo asignaturas de matematica basica\",\n" +
-      "            \"image\":None,\n" +
+      "            \"image\":null,\n" +
       "            \"fcmTokens\":[\n" +
       "               {\n" +
       "                  \"tokenId\":\"fcmToken4\",\n" +
@@ -5044,7 +5116,7 @@ export class CommunityPythonTemplates {
       "                     \"formatted\":\"Cambridge, MA, Estados Unidos\"\n" +
       "                  },\n" +
       "                  \"startDate\":15319,\n" +
-      "                  \"endDate\":None,\n" +
+      "                  \"endDate\":null,\n" +
       "                  \"description\":\"Realizando trabajos de investigación en el área de los ordenadores cuánticos\"\n" +
       "               }\n" +
       "            ],\n" +
@@ -5085,7 +5157,7 @@ export class CommunityPythonTemplates {
       "                  \"timestamp\":1630918457848\n" +
       "               }\n" +
       "            ],\n" +
-      "            \"image\":None,\n" +
+      "            \"image\":null,\n" +
       "            \"socialNetworks\":[\n" +
       "               \"www.twitter.com/Roberto\",\n" +
       "               \"www.linkedin.com/Roberto\"\n" +
@@ -5203,12 +5275,11 @@ export class CommunityPythonTemplates {
 
   public static actors_by_member_get: Template = {
     name: "actors/by-member",
-    code: "\nimport requests as reqs\n" +
+    code: "\nconst url = 'https://dev.moonshot.ceo/api/community/actors/by-member?ownerMemberId=60accfeb97acf93f5f69e05d';\n" +
       "\n" +
-      "URL = \"https://dev.moonshot.ceo/api/community/actors/by-member?ownerMemberId=60accfeb97acf93f5f69e05d\"\n" +
-      "\n" +
-      "response = reqs.get(URL)\n" +
-      "print(response.text)",
+      "fetch(url)\n" +
+      "  .then(response => response.json())\n" +
+      "  .then(data => console.log(JSON.stringify(data)));",
     response: "\n[\n" +
       "    {\n" +
       "        \"id\": \"60accfec97acf93f5f69e05f\",\n" +
@@ -5225,39 +5296,39 @@ export class CommunityPythonTemplates {
       "                \"formatted\": \"Wroclaw, 1, 20014 San Sebastián, Gipuzkoa, Spain\",\n" +
       "                \"components\": [\n" +
       "                    {\n" +
-      "                        \"name\": None,\n" +
-      "                        \"shortName\": None,\n" +
-      "                        \"type\": None\n" +
+      "                        \"name\": null,\n" +
+      "                        \"shortName\": null,\n" +
+      "                        \"type\": null\n" +
       "                    },\n" +
       "                    {\n" +
-      "                        \"name\": None,\n" +
-      "                        \"shortName\": None,\n" +
-      "                        \"type\": None\n" +
+      "                        \"name\": null,\n" +
+      "                        \"shortName\": null,\n" +
+      "                        \"type\": null\n" +
       "                    },\n" +
       "                    {\n" +
-      "                        \"name\": None,\n" +
-      "                        \"shortName\": None,\n" +
-      "                        \"type\": None\n" +
+      "                        \"name\": null,\n" +
+      "                        \"shortName\": null,\n" +
+      "                        \"type\": null\n" +
       "                    },\n" +
       "                    {\n" +
-      "                        \"name\": None,\n" +
-      "                        \"shortName\": None,\n" +
-      "                        \"type\": None\n" +
+      "                        \"name\": null,\n" +
+      "                        \"shortName\": null,\n" +
+      "                        \"type\": null\n" +
       "                    },\n" +
       "                    {\n" +
-      "                        \"name\": None,\n" +
-      "                        \"shortName\": None,\n" +
-      "                        \"type\": None\n" +
+      "                        \"name\": null,\n" +
+      "                        \"shortName\": null,\n" +
+      "                        \"type\": null\n" +
       "                    },\n" +
       "                    {\n" +
-      "                        \"name\": None,\n" +
-      "                        \"shortName\": None,\n" +
-      "                        \"type\": None\n" +
+      "                        \"name\": null,\n" +
+      "                        \"shortName\": null,\n" +
+      "                        \"type\": null\n" +
       "                    },\n" +
       "                    {\n" +
-      "                        \"name\": None,\n" +
-      "                        \"shortName\": None,\n" +
-      "                        \"type\": None\n" +
+      "                        \"name\": null,\n" +
+      "                        \"shortName\": null,\n" +
+      "                        \"type\": null\n" +
       "                    }\n" +
       "                ]\n" +
       "            },\n" +
@@ -5273,59 +5344,59 @@ export class CommunityPythonTemplates {
       "                    \"height\": 210\n" +
       "                }\n" +
       "            },\n" +
-      "            \"fcmTokens\": None,\n" +
+      "            \"fcmTokens\": null,\n" +
       "            \"socialNetworks\": [],\n" +
-      "            \"experiences\": None,\n" +
-      "            \"educations\": None\n" +
+      "            \"experiences\": null,\n" +
+      "            \"educations\": null\n" +
       "        },\n" +
       "        \"name\": \"Iñigo\",\n" +
-      "        \"city\": None,\n" +
+      "        \"city\": null,\n" +
       "        \"country\": \"Spain\",\n" +
-      "        \"address\": None,\n" +
-      "        \"latitude\": None,\n" +
-      "        \"longitude\": None,\n" +
+      "        \"address\": null,\n" +
+      "        \"latitude\": null,\n" +
+      "        \"longitude\": null,\n" +
       "        \"description\": \"Lorem ipsum...\",\n" +
-      "        \"phone\": None,\n" +
-      "        \"web\": None,\n" +
+      "        \"phone\": null,\n" +
+      "        \"web\": null,\n" +
       "        \"image\": {\n" +
       "            \"original\": \"/assets/img/default/actor.jpg\",\n" +
-      "            \"thumbnail\": None,\n" +
-      "            \"crop\": None\n" +
+      "            \"thumbnail\": null,\n" +
+      "            \"crop\": null\n" +
       "        },\n" +
       "        \"myFacet\": {\n" +
-      "            \"industries\": None,\n" +
-      "            \"businessModels\": None,\n" +
-      "            \"socialInnovations\": None,\n" +
-      "            \"deepTechs\": None\n" +
+      "            \"industries\": null,\n" +
+      "            \"businessModels\": null,\n" +
+      "            \"socialInnovations\": null,\n" +
+      "            \"deepTechs\": null\n" +
       "        },\n" +
       "        \"questFacet\": {\n" +
-      "            \"industries\": None,\n" +
-      "            \"businessModels\": None,\n" +
-      "            \"socialInnovations\": None,\n" +
-      "            \"deepTechs\": None\n" +
+      "            \"industries\": null,\n" +
+      "            \"businessModels\": null,\n" +
+      "            \"socialInnovations\": null,\n" +
+      "            \"deepTechs\": null\n" +
       "        },\n" +
       "        \"investment\": {\n" +
-      "            \"stage\": None,\n" +
-      "            \"stagesInvestments\": None,\n" +
+      "            \"stage\": null,\n" +
+      "            \"stagesInvestments\": null,\n" +
       "            \"numberPastExist\": 0,\n" +
-      "            \"trlStage\": None,\n" +
+      "            \"trlStage\": null,\n" +
       "            \"numberCurrentInvestments\": 0,\n" +
-      "            \"countriesInteres\": None\n" +
+      "            \"countriesInteres\": null\n" +
       "        },\n" +
       "        \"financial\": {\n" +
-      "            \"stage\": None,\n" +
+      "            \"stage\": null,\n" +
       "            \"seekedCapital\": 0,\n" +
-      "            \"trlStage\": None,\n" +
+      "            \"trlStage\": null,\n" +
       "            \"raisedCapital\": 0,\n" +
       "            \"totalFunding\": 0,\n" +
       "            \"premoneyValuation\": 0,\n" +
-      "            \"fundingStage\": None,\n" +
-      "            \"lastFunding\": None,\n" +
+      "            \"fundingStage\": null,\n" +
+      "            \"lastFunding\": null,\n" +
       "            \"numbersEmployees\": 0,\n" +
-      "            \"currency\": None\n" +
+      "            \"currency\": null\n" +
       "        },\n" +
       "        \"socialNetworks\": [],\n" +
-      "        \"media\": None,\n" +
+      "        \"media\": null,\n" +
       "        \"lastname\": \"Aramburu\",\n" +
       "        \"email\": \"iaramburu@moonshot.ceo\"\n" +
       "    },\n" +
@@ -5344,39 +5415,39 @@ export class CommunityPythonTemplates {
       "                \"formatted\": \"Wroclaw, 1, 20014 San Sebastián, Gipuzkoa, Spain\",\n" +
       "                \"components\": [\n" +
       "                    {\n" +
-      "                        \"name\": None,\n" +
-      "                        \"shortName\": None,\n" +
-      "                        \"type\": None\n" +
+      "                        \"name\": null,\n" +
+      "                        \"shortName\": null,\n" +
+      "                        \"type\": null\n" +
       "                    },\n" +
       "                    {\n" +
-      "                        \"name\": None,\n" +
-      "                        \"shortName\": None,\n" +
-      "                        \"type\": None\n" +
+      "                        \"name\": null,\n" +
+      "                        \"shortName\": null,\n" +
+      "                        \"type\": null\n" +
       "                    },\n" +
       "                    {\n" +
-      "                        \"name\": None,\n" +
-      "                        \"shortName\": None,\n" +
-      "                        \"type\": None\n" +
+      "                        \"name\": null,\n" +
+      "                        \"shortName\": null,\n" +
+      "                        \"type\": null\n" +
       "                    },\n" +
       "                    {\n" +
-      "                        \"name\": None,\n" +
-      "                        \"shortName\": None,\n" +
-      "                        \"type\": None\n" +
+      "                        \"name\": null,\n" +
+      "                        \"shortName\": null,\n" +
+      "                        \"type\": null\n" +
       "                    },\n" +
       "                    {\n" +
-      "                        \"name\": None,\n" +
-      "                        \"shortName\": None,\n" +
-      "                        \"type\": None\n" +
+      "                        \"name\": null,\n" +
+      "                        \"shortName\": null,\n" +
+      "                        \"type\": null\n" +
       "                    },\n" +
       "                    {\n" +
-      "                        \"name\": None,\n" +
-      "                        \"shortName\": None,\n" +
-      "                        \"type\": None\n" +
+      "                        \"name\": null,\n" +
+      "                        \"shortName\": null,\n" +
+      "                        \"type\": null\n" +
       "                    },\n" +
       "                    {\n" +
-      "                        \"name\": None,\n" +
-      "                        \"shortName\": None,\n" +
-      "                        \"type\": None\n" +
+      "                        \"name\": null,\n" +
+      "                        \"shortName\": null,\n" +
+      "                        \"type\": null\n" +
       "                    }\n" +
       "                ]\n" +
       "            },\n" +
@@ -5392,10 +5463,10 @@ export class CommunityPythonTemplates {
       "                    \"height\": 210\n" +
       "                }\n" +
       "            },\n" +
-      "            \"fcmTokens\": None,\n" +
+      "            \"fcmTokens\": null,\n" +
       "            \"socialNetworks\": [],\n" +
-      "            \"experiences\": None,\n" +
-      "            \"educations\": None\n" +
+      "            \"experiences\": null,\n" +
+      "            \"educations\": null\n" +
       "        },\n" +
       "        \"name\": \"Iñigo\",\n" +
       "        \"city\": \"Gipuzkoa\",\n" +
@@ -5404,8 +5475,8 @@ export class CommunityPythonTemplates {
       "        \"latitude\": 43.3035576,\n" +
       "        \"longitude\": -1.9590747,\n" +
       "        \"description\": \"asdfa\",\n" +
-      "        \"phone\": None,\n" +
-      "        \"web\": None,\n" +
+      "        \"phone\": null,\n" +
+      "        \"web\": null,\n" +
       "        \"image\": {\n" +
       "            \"original\": \"https://moonshot-innovation.s3.eu-central-1.amazonaws.com/60accfeb97acf93f5f69e05d/image/f5a27710-1f57-4c52-b256-3c35efd5bc19.jpg\",\n" +
       "            \"thumbnail\": \"https://moonshot-innovation.s3.eu-central-1.amazonaws.com/60accfeb97acf93f5f69e05d/image/58568682-5545-4dfa-ad9c-8a2541ff05d6.jpg\",\n" +
@@ -5416,13 +5487,13 @@ export class CommunityPythonTemplates {
       "                \"height\": 397\n" +
       "            }\n" +
       "        },\n" +
-      "        \"myFacet\": None,\n" +
-      "        \"questFacet\": None,\n" +
-      "        \"investment\": None,\n" +
-      "        \"financial\": None,\n" +
+      "        \"myFacet\": null,\n" +
+      "        \"questFacet\": null,\n" +
+      "        \"investment\": null,\n" +
+      "        \"financial\": null,\n" +
       "        \"socialNetworks\": [],\n" +
-      "        \"media\": None,\n" +
-      "        \"lastname\": None,\n" +
+      "        \"media\": null,\n" +
+      "        \"lastname\": null,\n" +
       "        \"email\": \"iaramburu@moonshot.ceo\"\n" +
       "    },\n" +
       "    {\n" +
@@ -5440,39 +5511,39 @@ export class CommunityPythonTemplates {
       "                \"formatted\": \"Wroclaw, 1, 20014 San Sebastián, Gipuzkoa, Spain\",\n" +
       "                \"components\": [\n" +
       "                    {\n" +
-      "                        \"name\": None,\n" +
-      "                        \"shortName\": None,\n" +
-      "                        \"type\": None\n" +
+      "                        \"name\": null,\n" +
+      "                        \"shortName\": null,\n" +
+      "                        \"type\": null\n" +
       "                    },\n" +
       "                    {\n" +
-      "                        \"name\": None,\n" +
-      "                        \"shortName\": None,\n" +
-      "                        \"type\": None\n" +
+      "                        \"name\": null,\n" +
+      "                        \"shortName\": null,\n" +
+      "                        \"type\": null\n" +
       "                    },\n" +
       "                    {\n" +
-      "                        \"name\": None,\n" +
-      "                        \"shortName\": None,\n" +
-      "                        \"type\": None\n" +
+      "                        \"name\": null,\n" +
+      "                        \"shortName\": null,\n" +
+      "                        \"type\": null\n" +
       "                    },\n" +
       "                    {\n" +
-      "                        \"name\": None,\n" +
-      "                        \"shortName\": None,\n" +
-      "                        \"type\": None\n" +
+      "                        \"name\": null,\n" +
+      "                        \"shortName\": null,\n" +
+      "                        \"type\": null\n" +
       "                    },\n" +
       "                    {\n" +
-      "                        \"name\": None,\n" +
-      "                        \"shortName\": None,\n" +
-      "                        \"type\": None\n" +
+      "                        \"name\": null,\n" +
+      "                        \"shortName\": null,\n" +
+      "                        \"type\": null\n" +
       "                    },\n" +
       "                    {\n" +
-      "                        \"name\": None,\n" +
-      "                        \"shortName\": None,\n" +
-      "                        \"type\": None\n" +
+      "                        \"name\": null,\n" +
+      "                        \"shortName\": null,\n" +
+      "                        \"type\": null\n" +
       "                    },\n" +
       "                    {\n" +
-      "                        \"name\": None,\n" +
-      "                        \"shortName\": None,\n" +
-      "                        \"type\": None\n" +
+      "                        \"name\": null,\n" +
+      "                        \"shortName\": null,\n" +
+      "                        \"type\": null\n" +
       "                    }\n" +
       "                ]\n" +
       "            },\n" +
@@ -5488,10 +5559,10 @@ export class CommunityPythonTemplates {
       "                    \"height\": 210\n" +
       "                }\n" +
       "            },\n" +
-      "            \"fcmTokens\": None,\n" +
+      "            \"fcmTokens\": null,\n" +
       "            \"socialNetworks\": [],\n" +
-      "            \"experiences\": None,\n" +
-      "            \"educations\": None\n" +
+      "            \"experiences\": null,\n" +
+      "            \"educations\": null\n" +
       "        },\n" +
       "        \"name\": \"ABC\",\n" +
       "        \"city\": \"Gipuzkoa\",\n" +
@@ -5500,11 +5571,11 @@ export class CommunityPythonTemplates {
       "        \"latitude\": 43.3035576,\n" +
       "        \"longitude\": -1.9590747,\n" +
       "        \"description\": \"123\",\n" +
-      "        \"phone\": None,\n" +
-      "        \"web\": None,\n" +
+      "        \"phone\": null,\n" +
+      "        \"web\": null,\n" +
       "        \"image\": {\n" +
-      "            \"original\": \"https://moonshot-innovation.s3.eu-central-1.amazonaws.com/None/image/40423cd7-ca54-49bb-a6dc-873366d9224c.jpg\",\n" +
-      "            \"thumbnail\": \"https://moonshot-innovation.s3.eu-central-1.amazonaws.com/None/image/40154b0c-6a46-4f3f-9c5c-e8105acc2988.jpg\",\n" +
+      "            \"original\": \"https://moonshot-innovation.s3.eu-central-1.amazonaws.com/null/image/40423cd7-ca54-49bb-a6dc-873366d9224c.jpg\",\n" +
+      "            \"thumbnail\": \"https://moonshot-innovation.s3.eu-central-1.amazonaws.com/null/image/40154b0c-6a46-4f3f-9c5c-e8105acc2988.jpg\",\n" +
       "            \"crop\": {\n" +
       "                \"x\": 163,\n" +
       "                \"y\": 163,\n" +
@@ -5512,13 +5583,13 @@ export class CommunityPythonTemplates {
       "                \"height\": 1078\n" +
       "            }\n" +
       "        },\n" +
-      "        \"myFacet\": None,\n" +
-      "        \"questFacet\": None,\n" +
-      "        \"investment\": None,\n" +
-      "        \"financial\": None,\n" +
+      "        \"myFacet\": null,\n" +
+      "        \"questFacet\": null,\n" +
+      "        \"investment\": null,\n" +
+      "        \"financial\": null,\n" +
       "        \"socialNetworks\": [],\n" +
-      "        \"media\": None,\n" +
-      "        \"members\": None,\n" +
+      "        \"media\": null,\n" +
+      "        \"members\": null,\n" +
       "        \"clusterType\": \"DEEP_TECH_CLUSTER\"\n" +
       "    }\n" +
       "]"
@@ -5526,12 +5597,11 @@ export class CommunityPythonTemplates {
 
   public static actor_id_get: Template = {
     name: "actor/:id",
-    code: "\nimport requests as reqs\n" +
+    code: "\nconst url = 'https://dev.moonshot.ceo/api/community/actor/60accfec97acf93f5f69e05f';\n" +
       "\n" +
-      "URL = \"https://dev.moonshot.ceo/api/community/actor/60accfec97acf93f5f69e05f\"\n" +
-      "\n" +
-      "response = reqs.get(URL)\n" +
-      "print(response.text)",
+      "fetch(url)\n" +
+      "  .then(response => response.json())\n" +
+      "  .then(data => console.log(JSON.stringify(data)));",
     response: "\n{\n" +
       "    \"type\": \"EXPERT\",\n" +
       "    \"id\": \"60accfec97acf93f5f69e05f\",\n" +
@@ -5548,39 +5618,39 @@ export class CommunityPythonTemplates {
       "            \"formatted\": \"Wroclaw, 1, 20014 San Sebastián, Gipuzkoa, Spain\",\n" +
       "            \"components\": [\n" +
       "                {\n" +
-      "                    \"name\": None,\n" +
-      "                    \"shortName\": None,\n" +
-      "                    \"type\": None\n" +
+      "                    \"name\": null,\n" +
+      "                    \"shortName\": null,\n" +
+      "                    \"type\": null\n" +
       "                },\n" +
       "                {\n" +
-      "                    \"name\": None,\n" +
-      "                    \"shortName\": None,\n" +
-      "                    \"type\": None\n" +
+      "                    \"name\": null,\n" +
+      "                    \"shortName\": null,\n" +
+      "                    \"type\": null\n" +
       "                },\n" +
       "                {\n" +
-      "                    \"name\": None,\n" +
-      "                    \"shortName\": None,\n" +
-      "                    \"type\": None\n" +
+      "                    \"name\": null,\n" +
+      "                    \"shortName\": null,\n" +
+      "                    \"type\": null\n" +
       "                },\n" +
       "                {\n" +
-      "                    \"name\": None,\n" +
-      "                    \"shortName\": None,\n" +
-      "                    \"type\": None\n" +
+      "                    \"name\": null,\n" +
+      "                    \"shortName\": null,\n" +
+      "                    \"type\": null\n" +
       "                },\n" +
       "                {\n" +
-      "                    \"name\": None,\n" +
-      "                    \"shortName\": None,\n" +
-      "                    \"type\": None\n" +
+      "                    \"name\": null,\n" +
+      "                    \"shortName\": null,\n" +
+      "                    \"type\": null\n" +
       "                },\n" +
       "                {\n" +
-      "                    \"name\": None,\n" +
-      "                    \"shortName\": None,\n" +
-      "                    \"type\": None\n" +
+      "                    \"name\": null,\n" +
+      "                    \"shortName\": null,\n" +
+      "                    \"type\": null\n" +
       "                },\n" +
       "                {\n" +
-      "                    \"name\": None,\n" +
-      "                    \"shortName\": None,\n" +
-      "                    \"type\": None\n" +
+      "                    \"name\": null,\n" +
+      "                    \"shortName\": null,\n" +
+      "                    \"type\": null\n" +
       "                }\n" +
       "            ]\n" +
       "        },\n" +
@@ -5596,59 +5666,59 @@ export class CommunityPythonTemplates {
       "                \"height\": 210\n" +
       "            }\n" +
       "        },\n" +
-      "        \"fcmTokens\": None,\n" +
+      "        \"fcmTokens\": null,\n" +
       "        \"socialNetworks\": [],\n" +
-      "        \"experiences\": None,\n" +
-      "        \"educations\": None\n" +
+      "        \"experiences\": null,\n" +
+      "        \"educations\": null\n" +
       "    },\n" +
       "    \"name\": \"Iñigo\",\n" +
-      "    \"city\": None,\n" +
+      "    \"city\": null,\n" +
       "    \"country\": \"Spain\",\n" +
-      "    \"address\": None,\n" +
-      "    \"latitude\": None,\n" +
-      "    \"longitude\": None,\n" +
+      "    \"address\": null,\n" +
+      "    \"latitude\": null,\n" +
+      "    \"longitude\": null,\n" +
       "    \"description\": \"Lorem ipsum...\",\n" +
-      "    \"phone\": None,\n" +
-      "    \"web\": None,\n" +
+      "    \"phone\": null,\n" +
+      "    \"web\": null,\n" +
       "    \"image\": {\n" +
       "        \"original\": \"/assets/img/default/actor.jpg\",\n" +
-      "        \"thumbnail\": None,\n" +
-      "        \"crop\": None\n" +
+      "        \"thumbnail\": null,\n" +
+      "        \"crop\": null\n" +
       "    },\n" +
       "    \"myFacet\": {\n" +
-      "        \"industries\": None,\n" +
-      "        \"businessModels\": None,\n" +
-      "        \"socialInnovations\": None,\n" +
-      "        \"deepTechs\": None\n" +
+      "        \"industries\": null,\n" +
+      "        \"businessModels\": null,\n" +
+      "        \"socialInnovations\": null,\n" +
+      "        \"deepTechs\": null\n" +
       "    },\n" +
       "    \"questFacet\": {\n" +
-      "        \"industries\": None,\n" +
-      "        \"businessModels\": None,\n" +
-      "        \"socialInnovations\": None,\n" +
-      "        \"deepTechs\": None\n" +
+      "        \"industries\": null,\n" +
+      "        \"businessModels\": null,\n" +
+      "        \"socialInnovations\": null,\n" +
+      "        \"deepTechs\": null\n" +
       "    },\n" +
       "    \"investment\": {\n" +
-      "        \"stage\": None,\n" +
-      "        \"stagesInvestments\": None,\n" +
+      "        \"stage\": null,\n" +
+      "        \"stagesInvestments\": null,\n" +
       "        \"numberPastExist\": 0,\n" +
-      "        \"trlStage\": None,\n" +
+      "        \"trlStage\": null,\n" +
       "        \"numberCurrentInvestments\": 0,\n" +
-      "        \"countriesInteres\": None\n" +
+      "        \"countriesInteres\": null\n" +
       "    },\n" +
       "    \"financial\": {\n" +
-      "        \"stage\": None,\n" +
+      "        \"stage\": null,\n" +
       "        \"seekedCapital\": 0,\n" +
-      "        \"trlStage\": None,\n" +
+      "        \"trlStage\": null,\n" +
       "        \"raisedCapital\": 0,\n" +
       "        \"totalFunding\": 0,\n" +
       "        \"premoneyValuation\": 0,\n" +
-      "        \"fundingStage\": None,\n" +
-      "        \"lastFunding\": None,\n" +
+      "        \"fundingStage\": null,\n" +
+      "        \"lastFunding\": null,\n" +
       "        \"numbersEmployees\": 0,\n" +
-      "        \"currency\": None\n" +
+      "        \"currency\": null\n" +
       "    },\n" +
       "    \"socialNetworks\": [],\n" +
-      "    \"media\": None,\n" +
+      "    \"media\": null,\n" +
       "    \"lastname\": \"Aramburu\",\n" +
       "    \"email\": \"iaramburu@moonshot.ceo\"\n" +
       "}"
@@ -5656,11 +5726,9 @@ export class CommunityPythonTemplates {
 
   public static actor_post: Template = {
     name: "actor",
-    code: "\nimport requests as reqs\n" +
+    code: "\nconst url = 'https://dev.moonshot.ceo/api/community/actor';\n" +
       "\n" +
-      "URL = \"https://dev.moonshot.ceo/api/community/actor\"\n" +
-      "\n" +
-      "BODY = {\n" +
+      "const body = {\n" +
       "        \"id\": \"1\",\n" +
       "        \"type\": \"EXPERT\",\n" +
       "        \"state\": \"ACCEPTED\",\n" +
@@ -5683,7 +5751,7 @@ export class CommunityPythonTemplates {
       "                    \"timestamp\": 1622975724952\n" +
       "                }\n" +
       "            ],\n" +
-      "            \"image\": None,\n" +
+      "            \"image\": null,\n" +
       "            \"socialNetworks\": [\n" +
       "                \"www.twitter.com/Iñigo\",\n" +
       "                \"www.facebook.com/Iñigo\"\n" +
@@ -5781,18 +5849,20 @@ export class CommunityPythonTemplates {
       "        \"verificationToken\": \"1\"\n" +
       "    }\n" +
       "\n" +
-      "response = reqs.post(URL, data=BODY)\n" +
-      "print(response.text)",
+      "fetch(url, {\n" +
+      "  method: 'POST',\n" +
+      "  body: JSON.stringify(body)\n" +
+      "})\n" +
+      "  .then(response => response.json())\n" +
+      "  .then(data => console.log(JSON.stringify(data)));",
     response: null
   }
 
   public static actor_put: Template = {
     name: "actor",
-    code: "\nimport requests as reqs\n" +
+    code: "\nconst url = 'https://dev.moonshot.ceo/api/community/actor';\n" +
       "\n" +
-      "URL = \"https://dev.moonshot.ceo/api/community/actor\"\n" +
-      "\n" +
-      "BODY = {\n" +
+      "const body = {\n" +
       "   \"id\":\"60c22873f67cf3231da80ded\",\n" +
       "   \"type\":\"MENTOR\",\n" +
       "   \"name\":\"David\",\n" +
@@ -5802,12 +5872,12 @@ export class CommunityPythonTemplates {
       "   \"latitude\":40.4288373,\n" +
       "   \"longitude\":-3.539240200000001,\n" +
       "   \"description\":\"mentor\",\n" +
-      "   \"phone\":None,\n" +
-      "   \"web\":None,\n" +
+      "   \"phone\":null,\n" +
+      "   \"web\":null,\n" +
       "   \"image\":{\n" +
       "      \"original\":\"https://moonshot-innovation.s3.eu-central-1.amazonaws.com/60acae8e2f799d228a4d4a86/image/d6f9ece8-8d15-43a0-aa2a-1a87f443cfa0.jpg\",\n" +
-      "      \"thumbnail\":None,\n" +
-      "      \"crop\":None\n" +
+      "      \"thumbnail\":null,\n" +
+      "      \"crop\":null\n" +
       "   },\n" +
       "   \"myFacet\":{\n" +
       "      \"industries\":[\n" +
@@ -5843,9 +5913,9 @@ export class CommunityPythonTemplates {
       "      \"industries\":[\n" +
       "         \"WATER_AND_WASTE\"\n" +
       "      ],\n" +
-      "      \"businessModels\":None,\n" +
-      "      \"socialInnovations\":None,\n" +
-      "      \"deepTechs\":None\n" +
+      "      \"businessModels\":null,\n" +
+      "      \"socialInnovations\":null,\n" +
+      "      \"deepTechs\":null\n" +
       "   },\n" +
       "   \"investment\":{\n" +
       "      \"stage\":\"GOT_BETA\",\n" +
@@ -5874,64 +5944,72 @@ export class CommunityPythonTemplates {
       "   \"socialNetworks\":[\n" +
       "      \n" +
       "   ],\n" +
-      "   \"media\":None,\n" +
+      "   \"media\":null,\n" +
       "   \"lastname\":\"Suriol\",\n" +
       "   \"email\":\"dsuriol@moonshot.ceo\"\n" +
       "}\n" +
       "\n" +
-      "response = reqs.put(URL, data=BODY)\n" +
-      "print(response.text)",
+      "fetch(url, {\n" +
+      "  method: 'PUT',\n" +
+      "  body: JSON.stringify(body)\n" +
+      "})\n" +
+      "  .then(response => response.json())\n" +
+      "  .then(data => console.log(JSON.stringify(data)));",
     response: null
   }
 
   public static actor_accept_put: Template = {
     name: "actor/accept",
-    code: "\nimport requests as reqs\n" +
+    code: "\nconst url = 'https://dev.moonshot.ceo/api/community/actor/accept';\n" +
       "\n" +
-      "URL = \"https://dev.moonshot.ceo/api/community/actor/accept\"\n" +
-      "\n" +
-      "BODY = {\n" +
+      "const body = {\n" +
       "   \"id\":\"1\"\n" +
       "}\n" +
       "\n" +
-      "response = reqs.put(URL, data=BODY)\n" +
-      "print(response.text)",
+      "fetch(url, {\n" +
+      "  method: 'PUT',\n" +
+      "  body: JSON.stringify(body)\n" +
+      "})\n" +
+      "  .then(response => response.json())\n" +
+      "  .then(data => console.log(JSON.stringify(data)));",
     response: null
   }
 
   public static actor_reject_put: Template = {
     name: "actor/reject",
-    code: "\nimport requests as reqs\n" +
+    code: "\nconst url = 'https://dev.moonshot.ceo/api/community/actor/reject';\n" +
       "\n" +
-      "URL = \"https://dev.moonshot.ceo/api/community/actor/reject\"\n" +
-      "\n" +
-      "BODY = {\n" +
-      "   \"id\":\"1\"\n" +
+      "const body = {\n" +
+      "   \"id\":\"1\",\n" +
+      "   \"reason\": \"Is a fake profile\"\n" +
       "}\n" +
       "\n" +
-      "response = reqs.put(URL, data=BODY)\n" +
-      "print(response.text)",
+      "fetch(url, {\n" +
+      "  method: 'PUT',\n" +
+      "  body: JSON.stringify(body)\n" +
+      "})\n" +
+      "  .then(response => response.json())\n" +
+      "  .then(data => console.log(JSON.stringify(data)));",
     response: null
   }
 
   public static actor_id_delete: Template = {
     name: "actor/:id",
-    code: "\nimport requests as reqs\n" +
+    code: "\nconst url = 'https://dev.moonshot.ceo/api/community/actor/1';\n" +
       "\n" +
-      "URL = \"https://dev.moonshot.ceo/api/community/actor/1\"\n" +
-      "\n" +
-      "response = reqs.delete(URL)\n" +
-      "print(response.text)",
+      "fetch(url, {\n" +
+      "  method: 'DELETE'\n" +
+      "})\n" +
+      "  .then(response => response.json())\n" +
+      "  .then(data => console.log(JSON.stringify(data)));",
     response: null
   }
 
   public static fcm_token_put: Template = {
     name: "fcmToken",
-    code: "\nimport requests as reqs\n" +
+    code: "\nconst url = 'https://dev.moonshot.ceo/api/community/fcmToken';\n" +
       "\n" +
-      "URL = \"https://dev.moonshot.ceo/api/community/fcmToken\"\n" +
-      "\n" +
-      "BODY = {\n" +
+      "const body = {\n" +
       "  \"memberId\": \"60acae8e2f799d228a4d4a85\",\n" +
       "  \"fcmTokens\": [\n" +
       "    {\n" +
@@ -5942,19 +6020,22 @@ export class CommunityPythonTemplates {
       "  ]\n" +
       "}\n" +
       "\n" +
-      "response = reqs.put(URL, data=BODY)\n" +
-      "print(response.text)",
+      "fetch(url, {\n" +
+      "  method: 'PUT',\n" +
+      "  body: JSON.stringify(body)\n" +
+      "})\n" +
+      "  .then(response => response.json())\n" +
+      "  .then(data => console.log(JSON.stringify(data)));",
     response: null
   }
 
   public static member_logged_in_get: Template = {
     name: "member/logged-in",
-    code: "\nimport requests as reqs\n" +
+    code: "\nconst url = 'https://dev.moonshot.ceo/api/community/member/logged-in';\n" +
       "\n" +
-      "URL = \"https://dev.moonshot.ceo/api/community/member/logged-in\"\n" +
-      "\n" +
-      "response = reqs.get(URL)\n" +
-      "print(response.text)",
+      "fetch(url)\n" +
+      "  .then(response => response.json())\n" +
+      "  .then(data => console.log(JSON.stringify(data)));",
     response: "\n{\n" +
       "    \"id\": \"60acae8e2f799d228a4d4a85\",\n" +
       "    \"state\": \"ACCEPTED\",\n" +
@@ -5966,24 +6047,24 @@ export class CommunityPythonTemplates {
       "        \"formatted\": \"Pozuelo de Alarcón, Madrid, Spain\",\n" +
       "        \"components\": [\n" +
       "            {\n" +
-      "                \"name\": None,\n" +
-      "                \"shortName\": None,\n" +
-      "                \"type\": None\n" +
+      "                \"name\": null,\n" +
+      "                \"shortName\": null,\n" +
+      "                \"type\": null\n" +
       "            },\n" +
       "            {\n" +
-      "                \"name\": None,\n" +
-      "                \"shortName\": None,\n" +
-      "                \"type\": None\n" +
+      "                \"name\": null,\n" +
+      "                \"shortName\": null,\n" +
+      "                \"type\": null\n" +
       "            },\n" +
       "            {\n" +
-      "                \"name\": None,\n" +
-      "                \"shortName\": None,\n" +
-      "                \"type\": None\n" +
+      "                \"name\": null,\n" +
+      "                \"shortName\": null,\n" +
+      "                \"type\": null\n" +
       "            },\n" +
       "            {\n" +
-      "                \"name\": None,\n" +
-      "                \"shortName\": None,\n" +
-      "                \"type\": None\n" +
+      "                \"name\": null,\n" +
+      "                \"shortName\": null,\n" +
+      "                \"type\": null\n" +
       "            }\n" +
       "        ]\n" +
       "    },\n" +
@@ -6030,9 +6111,9 @@ export class CommunityPythonTemplates {
       "            \"title\": \"Co-Founder & Co-CEO\",\n" +
       "            \"type\": \"FULL_TIME\",\n" +
       "            \"company\": \"Vortex Bladeless\",\n" +
-      "            \"address\": None,\n" +
+      "            \"address\": null,\n" +
       "            \"startDate\": 17649,\n" +
-      "            \"endDate\": None,\n" +
+      "            \"endDate\": null,\n" +
       "            \"description\": \"\"\n" +
       "        },\n" +
       "        {\n" +
@@ -6040,9 +6121,9 @@ export class CommunityPythonTemplates {
       "            \"title\": \"Key Account Manager\",\n" +
       "            \"type\": \"FULL_TIME\",\n" +
       "            \"company\": \"Weber Shandwick\",\n" +
-      "            \"address\": None,\n" +
+      "            \"address\": null,\n" +
       "            \"startDate\": 10407,\n" +
-      "            \"endDate\": None,\n" +
+      "            \"endDate\": null,\n" +
       "            \"description\": \"\"\n" +
       "        },\n" +
       "        {\n" +
@@ -6050,9 +6131,9 @@ export class CommunityPythonTemplates {
       "            \"title\": \"CEO\",\n" +
       "            \"type\": \"FULL_TIME\",\n" +
       "            \"company\": \"Moonshot Innovation Sl\",\n" +
-      "            \"address\": None,\n" +
+      "            \"address\": null,\n" +
       "            \"startDate\": 18838,\n" +
-      "            \"endDate\": None,\n" +
+      "            \"endDate\": null,\n" +
       "            \"description\": \"\"\n" +
       "        },\n" +
       "        {\n" +
@@ -6060,9 +6141,9 @@ export class CommunityPythonTemplates {
       "            \"title\": \"Co-Founder & Co-CEO\",\n" +
       "            \"type\": \"FULL_TIME\",\n" +
       "            \"company\": \"Deutecno Noses & Sensors\",\n" +
-      "            \"address\": None,\n" +
+      "            \"address\": null,\n" +
       "            \"startDate\": 16220,\n" +
-      "            \"endDate\": None,\n" +
+      "            \"endDate\": null,\n" +
       "            \"description\": \"\"\n" +
       "        },\n" +
       "        {\n" +
@@ -6070,9 +6151,9 @@ export class CommunityPythonTemplates {
       "            \"title\": \"Owner\",\n" +
       "            \"type\": \"FULL_TIME\",\n" +
       "            \"company\": \"Life C Comunicación\",\n" +
-      "            \"address\": None,\n" +
+      "            \"address\": null,\n" +
       "            \"startDate\": 18838,\n" +
-      "            \"endDate\": None,\n" +
+      "            \"endDate\": null,\n" +
       "            \"description\": \"\"\n" +
       "        },\n" +
       "        {\n" +
@@ -6080,9 +6161,9 @@ export class CommunityPythonTemplates {
       "            \"title\": \"Owner\",\n" +
       "            \"type\": \"FULL_TIME\",\n" +
       "            \"company\": \"Calsot\",\n" +
-      "            \"address\": None,\n" +
+      "            \"address\": null,\n" +
       "            \"startDate\": 18838,\n" +
-      "            \"endDate\": None,\n" +
+      "            \"endDate\": null,\n" +
       "            \"description\": \"\"\n" +
       "        },\n" +
       "        {\n" +
@@ -6090,9 +6171,9 @@ export class CommunityPythonTemplates {
       "            \"title\": \"Account Assistant\",\n" +
       "            \"type\": \"FULL_TIME\",\n" +
       "            \"company\": \"Rogers & Cowan\",\n" +
-      "            \"address\": None,\n" +
+      "            \"address\": null,\n" +
       "            \"startDate\": 9860,\n" +
-      "            \"endDate\": None,\n" +
+      "            \"endDate\": null,\n" +
       "            \"description\": \"\"\n" +
       "        },\n" +
       "        {\n" +
@@ -6100,9 +6181,9 @@ export class CommunityPythonTemplates {
       "            \"title\": \"International Observer\",\n" +
       "            \"type\": \"FULL_TIME\",\n" +
       "            \"company\": \"OSCE-UN in Bosnia\",\n" +
-      "            \"address\": None,\n" +
+      "            \"address\": null,\n" +
       "            \"startDate\": 10225,\n" +
-      "            \"endDate\": None,\n" +
+      "            \"endDate\": null,\n" +
       "            \"description\": \"\"\n" +
       "        }\n" +
       "    ],\n" +
@@ -6112,10 +6193,10 @@ export class CommunityPythonTemplates {
       "            \"school\": \"Universidad de Navarra\",\n" +
       "            \"degree\": \"Licenciado en Periodismo\",\n" +
       "            \"fieldOfStudy\": \"\",\n" +
-      "            \"address\": None,\n" +
+      "            \"address\": null,\n" +
       "            \"startDate\": 9677,\n" +
-      "            \"endDate\": None,\n" +
-      "            \"grade\": None,\n" +
+      "            \"endDate\": null,\n" +
+      "            \"grade\": null,\n" +
       "            \"description\": \"\"\n" +
       "        },\n" +
       "        {\n" +
@@ -6123,10 +6204,10 @@ export class CommunityPythonTemplates {
       "            \"school\": \"IE\",\n" +
       "            \"degree\": \"MDCM\",\n" +
       "            \"fieldOfStudy\": \"\",\n" +
-      "            \"address\": None,\n" +
+      "            \"address\": null,\n" +
       "            \"startDate\": 10772,\n" +
-      "            \"endDate\": None,\n" +
-      "            \"grade\": None,\n" +
+      "            \"endDate\": null,\n" +
+      "            \"grade\": null,\n" +
       "            \"description\": \"\"\n" +
       "        },\n" +
       "        {\n" +
@@ -6134,10 +6215,10 @@ export class CommunityPythonTemplates {
       "            \"school\": \"Harvard University\",\n" +
       "            \"degree\": \"Sustainability\",\n" +
       "            \"fieldOfStudy\": \"\",\n" +
-      "            \"address\": None,\n" +
+      "            \"address\": null,\n" +
       "            \"startDate\": 16585,\n" +
-      "            \"endDate\": None,\n" +
-      "            \"grade\": None,\n" +
+      "            \"endDate\": null,\n" +
+      "            \"grade\": null,\n" +
       "            \"description\": \"\"\n" +
       "        },\n" +
       "        {\n" +
@@ -6145,10 +6226,10 @@ export class CommunityPythonTemplates {
       "            \"school\": \"Chicago Booth-Fundación NUMA\",\n" +
       "            \"degree\": \"Private Wealth Management\",\n" +
       "            \"fieldOfStudy\": \"\",\n" +
-      "            \"address\": None,\n" +
+      "            \"address\": null,\n" +
       "            \"startDate\": 16923,\n" +
-      "            \"endDate\": None,\n" +
-      "            \"grade\": None,\n" +
+      "            \"endDate\": null,\n" +
+      "            \"grade\": null,\n" +
       "            \"description\": \"\"\n" +
       "        }\n" +
       "    ],\n" +
@@ -6186,15 +6267,14 @@ export class CommunityPythonTemplates {
 
   public static members_get: Template = {
     name: "members",
-    code: "\nimport requests as reqs\n" +
+    code: "\nconst url = 'https://dev.moonshot.ceo/api/community/members';\n" +
       "\n" +
-      "URL = \"https://dev.moonshot.ceo/api/community/members\"\n" +
-      "\n" +
-      "response = reqs.get(URL)\n" +
-      "print(response.text)",
+      "fetch(url)\n" +
+      "  .then(response => response.json())\n" +
+      "  .then(data => console.log(JSON.stringify(data)));",
     response: "\n[\n" +
       "   {\n" +
-      "      \"_id\":\"1\",\n" +
+      "      \"id\":\"1\",\n" +
       "      \"state\":\"ACCEPTED\",\n" +
       "      \"name\":\"Iñigo\",\n" +
       "      \"lastname\":\"Aramburu\",\n" +
@@ -6205,7 +6285,7 @@ export class CommunityPythonTemplates {
       "      },\n" +
       "      \"email\":\"iaramburu@moonshot.ceo\",\n" +
       "      \"about\":\"Experto en Ingeniería del Software.\",\n" +
-      "      \"image\":None,\n" +
+      "      \"image\":null,\n" +
       "      \"fcmTokens\":[\n" +
       "         {\n" +
       "            \"tokenId\":\"fcmToken1\",\n" +
@@ -6219,7 +6299,7 @@ export class CommunityPythonTemplates {
       "      ],\n" +
       "      \"experiences\":[\n" +
       "         {\n" +
-      "            \"_id\":\"1\",\n" +
+      "            \"id\":\"1\",\n" +
       "            \"title\":\"Back-end developer en Moonshot Innovation\",\n" +
       "            \"type\":\"FULL_TIME\",\n" +
       "            \"company\":\"Moonshot Innovation\",\n" +
@@ -6235,7 +6315,7 @@ export class CommunityPythonTemplates {
       "      ],\n" +
       "      \"educations\":[\n" +
       "         {\n" +
-      "            \"_id\":\"1\",\n" +
+      "            \"id\":\"1\",\n" +
       "            \"school\":\"Universidad del País Vasco\",\n" +
       "            \"degree\":\"Ingeniería informática\",\n" +
       "            \"fieldOfStudy\":\"Ingeniería de software\",\n" +
@@ -6250,7 +6330,7 @@ export class CommunityPythonTemplates {
       "            \"description\":\"Estudios universitarios realizados en la Universidad del País Vasco\"\n" +
       "         },\n" +
       "         {\n" +
-      "            \"_id\":\"15\",\n" +
+      "            \"id\":\"15\",\n" +
       "            \"school\":\"Universidad del País Vasco\",\n" +
       "            \"degree\":\"Master en desarrollo web\",\n" +
       "            \"fieldOfStudy\":\"Desarrollo web\",\n" +
@@ -6267,7 +6347,7 @@ export class CommunityPythonTemplates {
       "      ]\n" +
       "   },\n" +
       "   {\n" +
-      "      \"_id\":\"2\",\n" +
+      "      \"id\":\"2\",\n" +
       "      \"state\":\"ACCEPTED\",\n" +
       "      \"name\":\"Jose Juan\",\n" +
       "      \"lastname\":\"Hernández\",\n" +
@@ -6280,7 +6360,7 @@ export class CommunityPythonTemplates {
       "      \"country\":\"España\",\n" +
       "      \"email\":\"josejuan@moonshot.ceo\",\n" +
       "      \"about\":\"Profesor de Ingeniería de Software de la Universidad de Las Palmas de Gran Canaria\",\n" +
-      "      \"image\":None,\n" +
+      "      \"image\":null,\n" +
       "      \"fcmTokens\":[\n" +
       "         {\n" +
       "            \"tokenId\":\"fcmToken2\",\n" +
@@ -6294,7 +6374,7 @@ export class CommunityPythonTemplates {
       "      ],\n" +
       "      \"experiences\":[\n" +
       "         {\n" +
-      "            \"_id\":\"1\",\n" +
+      "            \"id\":\"1\",\n" +
       "            \"title\":\"Back-end developer en Moonshot Innovation\",\n" +
       "            \"type\":\"FULL_TIME\",\n" +
       "            \"company\":\"Moonshot Innovation\",\n" +
@@ -6308,7 +6388,7 @@ export class CommunityPythonTemplates {
       "            \"description\":\"Scrum manager en Moonshot Innovation, trabajando en el equipo de back-end\"\n" +
       "         },\n" +
       "         {\n" +
-      "            \"_id\":\"2\",\n" +
+      "            \"id\":\"2\",\n" +
       "            \"title\":\"Profesor en la facultad de Ingenería informatica\",\n" +
       "            \"type\":\"OFFICIAL\",\n" +
       "            \"company\":\"Universidad de Las Palmas de Gran Canaria\",\n" +
@@ -6324,7 +6404,7 @@ export class CommunityPythonTemplates {
       "      ],\n" +
       "      \"educations\":[\n" +
       "         {\n" +
-      "            \"_id\":\"2\",\n" +
+      "            \"id\":\"2\",\n" +
       "            \"school\":\"Universidad de Las Palmas de Gran Canaria\",\n" +
       "            \"degree\":\"Ingeniería en telecomunicaciones\",\n" +
       "            \"fieldOfStudy\":\"Big data\",\n" +
@@ -6345,14 +6425,13 @@ export class CommunityPythonTemplates {
 
   public static member_id_get: Template = {
     name: "member/:id",
-    code: "\nimport requests as reqs\n" +
+    code: "\nconst url = 'https://dev.moonshot.ceo/api/community/member/2';\n" +
       "\n" +
-      "URL = \"https://dev.moonshot.ceo/api/community/member/2\"\n" +
-      "\n" +
-      "response = reqs.get(URL)\n" +
-      "print(response.text)",
+      "fetch(url)\n" +
+      "  .then(response => response.json())\n" +
+      "  .then(data => console.log(JSON.stringify(data)));",
     response: "\n{\n" +
-      "        \"_id\": \"2\",\n" +
+      "        \"id\": \"2\",\n" +
       "        \"state\": \"ACCEPTED\",\n" +
       "        \"name\": \"Jose Juan\",\n" +
       "        \"lastname\": \"Hernández\",\n" +
@@ -6365,7 +6444,7 @@ export class CommunityPythonTemplates {
       "        \"country\": \"España\",\n" +
       "        \"email\": \"josejuan@moonshot.ceo\",\n" +
       "        \"about\": \"Profesor de Ingeniería de Software de la Universidad de Las Palmas de Gran Canaria\",\n" +
-      "        \"image\": None,\n" +
+      "        \"image\": null,\n" +
       "        \"fcmTokens\": [\n" +
       "            {\n" +
       "                \"tokenId\": \"fcmToken2\",\n" +
@@ -6379,7 +6458,7 @@ export class CommunityPythonTemplates {
       "        ],\n" +
       "        \"experiences\": [\n" +
       "            {\n" +
-      "                \"_id\": \"1\",\n" +
+      "                \"id\": \"1\",\n" +
       "                \"title\": \"Back-end developer en Moonshot Innovation\",\n" +
       "                \"type\": \"FULL_TIME\",\n" +
       "                \"company\": \"Moonshot Innovation\",\n" +
@@ -6393,7 +6472,7 @@ export class CommunityPythonTemplates {
       "                \"description\": \"Scrum manager en Moonshot Innovation, trabajando en el equipo de back-end\"\n" +
       "            },\n" +
       "            {\n" +
-      "                \"_id\": \"2\",\n" +
+      "                \"id\": \"2\",\n" +
       "                \"title\": \"Profesor en la facultad de Ingenería informatica\",\n" +
       "                \"type\": \"OFFICIAL\",\n" +
       "                \"company\": \"Universidad de Las Palmas de Gran Canaria\",\n" +
@@ -6409,7 +6488,7 @@ export class CommunityPythonTemplates {
       "        ],\n" +
       "        \"educations\": [\n" +
       "            {\n" +
-      "                \"_id\": \"2\",\n" +
+      "                \"id\": \"2\",\n" +
       "                \"school\": \"Universidad de Las Palmas de Gran Canaria\",\n" +
       "                \"degree\": \"Ingeniería en telecomunicaciones\",\n" +
       "                \"fieldOfStudy\": \"Big data\",\n" +
@@ -6429,23 +6508,20 @@ export class CommunityPythonTemplates {
 
   public static member_id_marker_get: Template = {
     name: "member/:id/marker",
-    code: "\nimport requests as reqs\n" +
+    code: "\nconst url = 'https://dev.moonshot.ceo/api/community/member/2/marker';\n" +
       "\n" +
-      "URL = \"https://dev.moonshot.ceo/api/community/member/2/marker\"\n" +
-      "\n" +
-      "response = reqs.get(URL)\n" +
-      "print(response.text)",
+      "fetch(url)\n" +
+      "  .then(response => response.json())\n" +
+      "  .then(data => console.log(JSON.stringify(data)));",
     response: "This endpoint download a svg file"
   }
 
   public static member_put: Template = {
     name: "member",
-    code: "\nimport requests as reqs\n" +
+    code: "\nconst url = 'https://dev.moonshot.ceo/api/community/member';\n" +
       "\n" +
-      "URL = \"https://dev.moonshot.ceo/api/community/member\"\n" +
-      "\n" +
-      "BODY = {\n" +
-      "   \"_id\":\"1\",\n" +
+      "const body = {\n" +
+      "   \"id\":\"1\",\n" +
       "   \"state\":\"ACCEPTED\",\n" +
       "   \"name\":\"Iñigo\",\n" +
       "   \"lastname\":\"Aramburu\",\n" +
@@ -6456,36 +6532,39 @@ export class CommunityPythonTemplates {
       "   },\n" +
       "   \"email\":\"iaramburu@moonshot.ceo\",\n" +
       "   \"about\":\"Experto en Ingeniería del Software.\",\n" +
-      "   \"image\":None,\n" +
+      "   \"image\":null,\n" +
       "   \"socialNetworks\":[\n" +
       "      \"www.twitter.com/Iñigo\",\n" +
       "      \"www.facebook.com/Iñigo\"\n" +
       "   ]\n" +
       "}\n" +
       "\n" +
-      "response = reqs.put(URL, data=BODY)\n" +
-      "print(response.text)",
+      "fetch(url, {\n" +
+      "  method: 'PUT',\n" +
+      "  body: JSON.stringify(body)\n" +
+      "})\n" +
+      "  .then(response => response.json())\n" +
+      "  .then(data => console.log(JSON.stringify(data)));",
     response: null
   }
 
   public static member_id_delete: Template = {
-    name: "member",
-    code: "\nimport requests as reqs\n" +
+    name: "member/:id",
+    code: "\nconst url = 'https://dev.moonshot.ceo/api/community/member/1';\n" +
       "\n" +
-      "URL = \"https://dev.moonshot.ceo/api/community/member/1\"\n" +
-      "\n" +
-      "response = reqs.delete(URL)\n" +
-      "print(response.text)",
+      "fetch(url, {\n" +
+      "  method: 'DELETE'\n" +
+      "})\n" +
+      "  .then(response => response.json())\n" +
+      "  .then(data => console.log(JSON.stringify(data)));",
     response: null
   }
 
   public static education_post: Template = {
     name: "education",
-    code: "\nimport requests as reqs\n" +
+    code: "\nconst url = 'https://dev.moonshot.ceo/api/community/education';\n" +
       "\n" +
-      "URL = \"https://dev.moonshot.ceo/api/community/education\"\n" +
-      "\n" +
-      "BODY = {\n" +
+      "const body = {\n" +
       "   \"school\":\"Universidad de Las Palmas de Gran Canaria\",\n" +
       "   \"degree\":\"Ingeniería informática\",\n" +
       "   \"fieldOfStudy\":\"Software\",\n" +
@@ -6516,18 +6595,20 @@ export class CommunityPythonTemplates {
       "   \"grade\":7\n" +
       "}\n" +
       "\n" +
-      "response = reqs.post(URL, data=BODY)\n" +
-      "print(response.text)",
+      "fetch(url, {\n" +
+      "  method: 'POST',\n" +
+      "  body: JSON.stringify(body)\n" +
+      "})\n" +
+      "  .then(response => response.json())\n" +
+      "  .then(data => console.log(JSON.stringify(data)));",
     response: null
   }
 
   public static education_put: Template = {
     name: "education",
-    code: "\nimport requests as reqs\n" +
+    code: "\nconst url = 'https://dev.moonshot.ceo/api/community/education';\n" +
       "\n" +
-      "URL = \"https://dev.moonshot.ceo/api/community/education\"\n" +
-      "\n" +
-      "BODY = {\n" +
+      "const body = {\n" +
       "   \"school\":\"Universidad de Las Palmas de Gran Canaria\",\n" +
       "   \"degree\":\"Ingeniería informática\",\n" +
       "   \"fieldOfStudy\":\"Software\",\n" +
@@ -6558,29 +6639,32 @@ export class CommunityPythonTemplates {
       "   \"grade\":7\n" +
       "}\n" +
       "\n" +
-      "response = reqs.put(URL, data=BODY)\n" +
-      "print(response.text)",
+      "fetch(url, {\n" +
+      "  method: 'PUT',\n" +
+      "  body: JSON.stringify(body)\n" +
+      "})\n" +
+      "  .then(response => response.json())\n" +
+      "  .then(data => console.log(JSON.stringify(data)));",
     response: null
   }
 
   public static education_id_delete: Template = {
     name: "education/:id",
-    code: "\nimport requests as reqs\n" +
+    code: "\nconst url = 'https://dev.moonshot.ceo/api/community/education/1';\n" +
       "\n" +
-      "URL = \"https://dev.moonshot.ceo/api/community/education/1\"\n" +
-      "\n" +
-      "response = reqs.delete(URL)\n" +
-      "print(response.text)",
+      "fetch(url, {\n" +
+      "  method: 'DELETE'\n" +
+      "})\n" +
+      "  .then(response => response.json())\n" +
+      "  .then(data => console.log(JSON.stringify(data)));",
     response: null
   }
 
   public static experience_post: Template = {
     name: "experience",
-    code: "\nimport requests as reqs\n" +
+    code: "\nconst url = 'https://dev.moonshot.ceo/api/community/experience';\n" +
       "\n" +
-      "URL = \"https://dev.moonshot.ceo/api/community/experience\"\n" +
-      "\n" +
-      "BODY = {\n" +
+      "const body = {\n" +
       "   \"title\":\"Desarrollador de software\",\n" +
       "   \"description\":\"Desarrollador de Front-end y Back-end en Moonshot Innovation\",\n" +
       "   \"startDate\":18815,\n" +
@@ -6602,18 +6686,20 @@ export class CommunityPythonTemplates {
       "   \"company\":\"Moonshot Innovation\"\n" +
       "}\n" +
       "\n" +
-      "response = reqs.post(URL, data=BODY)\n" +
-      "print(response.text)",
+      "fetch(url, {\n" +
+      "  method: 'POST',\n" +
+      "  body: JSON.stringify(body)\n" +
+      "})\n" +
+      "  .then(response => response.json())\n" +
+      "  .then(data => console.log(JSON.stringify(data)));",
     response: null
   }
 
   public static experience_put: Template = {
     name: "experience",
-    code: "\nimport requests as reqs\n" +
+    code: "\nconst url = 'https://dev.moonshot.ceo/api/community/experience';\n" +
       "\n" +
-      "URL = \"https://dev.moonshot.ceo/api/community/experience\"\n" +
-      "\n" +
-      "BODY = {\n" +
+      "const body = {\n" +
       "   \"title\":\"Desarrollador de software\",\n" +
       "   \"description\":\"Desarrollador de Front-end y Back-end en Moonshot Innovation\",\n" +
       "   \"startDate\":18815,\n" +
@@ -6635,33 +6721,37 @@ export class CommunityPythonTemplates {
       "   \"company\":\"Moonshot Innovation\"\n" +
       "}\n" +
       "\n" +
-      "response = reqs.put(URL, data=BODY)\n" +
-      "print(response.text)",
+      "fetch(url, {\n" +
+      "  method: 'PUT',\n" +
+      "  body: JSON.stringify(body)\n" +
+      "})\n" +
+      "  .then(response => response.json())\n" +
+      "  .then(data => console.log(JSON.stringify(data)));",
     response: null
   }
 
   public static experience_id_delete: Template = {
     name: "experience/:id",
-    code: "\nimport requests as reqs\n" +
+    code: "\nconst url = 'https://dev.moonshot.ceo/api/community/experience/1';\n" +
       "\n" +
-      "URL = \"https://dev.moonshot.ceo/api/community/experience/1\"\n" +
-      "\n" +
-      "response = reqs.delete(URL)\n" +
-      "print(response.text)",
+      "fetch(url, {\n" +
+      "  method: 'DELETE'\n" +
+      "})\n" +
+      "  .then(response => response.json())\n" +
+      "  .then(data => console.log(JSON.stringify(data)));",
     response: null
   }
 
   public static projects_get: Template = {
     name: "projects",
-    code: "\nimport requests as reqs\n" +
+    code: "\nconst url = 'https://dev.moonshot.ceo/api/community/projects';\n" +
       "\n" +
-      "URL = \"https://dev.moonshot.ceo/api/community/projects\"\n" +
-      "\n" +
-      "response = reqs.get(URL)\n" +
-      "print(response.text)",
+      "fetch(url)\n" +
+      "  .then(response => response.json())\n" +
+      "  .then(data => console.log(JSON.stringify(data)));",
     response: "\n[\n" +
       "   {\n" +
-      "      \"_id\":\"1\",\n" +
+      "      \"id\":\"1\",\n" +
       "      \"actorId\":\"1\",\n" +
       "      \"name\":\"Patents\",\n" +
       "      \"description\":\"Patents\",\n" +
@@ -6672,7 +6762,7 @@ export class CommunityPythonTemplates {
       "      ],\n" +
       "      \"protectionMethod\":\"PATENTS\",\n" +
       "      \"projectManager\":{\n" +
-      "         \"_id\":\"1\",\n" +
+      "         \"id\":\"1\",\n" +
       "         \"state\":\"ACCEPTED\",\n" +
       "         \"name\":\"Iñigo\",\n" +
       "         \"lastname\":\"Aramburu\",\n" +
@@ -6683,7 +6773,7 @@ export class CommunityPythonTemplates {
       "         },\n" +
       "         \"email\":\"iaramburu@moonshot.ceo\",\n" +
       "         \"about\":\"Experto en Ingeniería del Software.\",\n" +
-      "         \"image\":None,\n" +
+      "         \"image\":null,\n" +
       "         \"fcmTokens\":[\n" +
       "            {\n" +
       "               \"tokenId\":\"fcmToken1\",\n" +
@@ -6697,7 +6787,7 @@ export class CommunityPythonTemplates {
       "         ],\n" +
       "         \"experiences\":[\n" +
       "            {\n" +
-      "               \"_id\":\"1\",\n" +
+      "               \"id\":\"1\",\n" +
       "               \"title\":\"Back-end developer en Moonshot Innovation\",\n" +
       "               \"type\":\"FULL_TIME\",\n" +
       "               \"company\":\"Moonshot Innovation\",\n" +
@@ -6713,7 +6803,7 @@ export class CommunityPythonTemplates {
       "         ],\n" +
       "         \"educations\":[\n" +
       "            {\n" +
-      "               \"_id\":\"1\",\n" +
+      "               \"id\":\"1\",\n" +
       "               \"school\":\"Universidad del País Vasco\",\n" +
       "               \"degree\":\"Ingeniería informática\",\n" +
       "               \"fieldOfStudy\":\"Ingeniería de software\",\n" +
@@ -6728,7 +6818,7 @@ export class CommunityPythonTemplates {
       "               \"description\":\"Estudios universitarios realizados en la Universidad del País Vasco\"\n" +
       "            },\n" +
       "            {\n" +
-      "               \"_id\":\"15\",\n" +
+      "               \"id\":\"15\",\n" +
       "               \"school\":\"Universidad del País Vasco\",\n" +
       "               \"degree\":\"Master en desarrollo web\",\n" +
       "               \"fieldOfStudy\":\"Desarrollo web\",\n" +
@@ -6746,7 +6836,7 @@ export class CommunityPythonTemplates {
       "      },\n" +
       "      \"teamMembers\":[\n" +
       "         {\n" +
-      "            \"_id\":\"2\",\n" +
+      "            \"id\":\"2\",\n" +
       "            \"state\":\"ACCEPTED\",\n" +
       "            \"name\":\"Jose Juan\",\n" +
       "            \"lastname\":\"Hernández\",\n" +
@@ -6759,7 +6849,7 @@ export class CommunityPythonTemplates {
       "            \"country\":\"España\",\n" +
       "            \"email\":\"josejuan@moonshot.ceo\",\n" +
       "            \"about\":\"Profesor de Ingeniería de Software de la Universidad de Las Palmas de Gran Canaria\",\n" +
-      "            \"image\":None,\n" +
+      "            \"image\":null,\n" +
       "            \"fcmTokens\":[\n" +
       "               {\n" +
       "                  \"tokenId\":\"fcmToken2\",\n" +
@@ -6773,7 +6863,7 @@ export class CommunityPythonTemplates {
       "            ],\n" +
       "            \"experiences\":[\n" +
       "               {\n" +
-      "                  \"_id\":\"1\",\n" +
+      "                  \"id\":\"1\",\n" +
       "                  \"title\":\"Back-end developer en Moonshot Innovation\",\n" +
       "                  \"type\":\"FULL_TIME\",\n" +
       "                  \"company\":\"Moonshot Innovation\",\n" +
@@ -6787,7 +6877,7 @@ export class CommunityPythonTemplates {
       "                  \"description\":\"Scrum manager en Moonshot Innovation, trabajando en el equipo de back-end\"\n" +
       "               },\n" +
       "               {\n" +
-      "                  \"_id\":\"2\",\n" +
+      "                  \"id\":\"2\",\n" +
       "                  \"title\":\"Profesor en la facultad de Ingenería informatica\",\n" +
       "                  \"type\":\"OFFICIAL\",\n" +
       "                  \"company\":\"Universidad de Las Palmas de Gran Canaria\",\n" +
@@ -6803,7 +6893,7 @@ export class CommunityPythonTemplates {
       "            ],\n" +
       "            \"educations\":[\n" +
       "               {\n" +
-      "                  \"_id\":\"2\",\n" +
+      "                  \"id\":\"2\",\n" +
       "                  \"school\":\"Universidad de Las Palmas de Gran Canaria\",\n" +
       "                  \"degree\":\"Ingeniería en telecomunicaciones\",\n" +
       "                  \"fieldOfStudy\":\"Big data\",\n" +
@@ -6820,7 +6910,7 @@ export class CommunityPythonTemplates {
       "            ]\n" +
       "         },\n" +
       "         {\n" +
-      "            \"_id\":\"3\",\n" +
+      "            \"id\":\"3\",\n" +
       "            \"state\":\"ACCEPTED\",\n" +
       "            \"name\":\"Jeremy\",\n" +
       "            \"lastname\":\"Trujillo\",\n" +
@@ -6831,7 +6921,7 @@ export class CommunityPythonTemplates {
       "            },\n" +
       "            \"email\":\"trujillosanchezjeremy@gmail.com\",\n" +
       "            \"about\":\"Alumno en prácticas en Moonshot y estudiante de la Universidad de Las Palmas de Gran Canaria\",\n" +
-      "            \"image\":None,\n" +
+      "            \"image\":null,\n" +
       "            \"fcmTokens\":[\n" +
       "               {\n" +
       "                  \"tokenId\":\"fcmToken3\",\n" +
@@ -6845,7 +6935,7 @@ export class CommunityPythonTemplates {
       "            ],\n" +
       "            \"experiences\":[\n" +
       "               {\n" +
-      "                  \"_id\":\"3\",\n" +
+      "                  \"id\":\"3\",\n" +
       "                  \"title\":\"Prácticas universitarias en Moonshot Innovation\",\n" +
       "                  \"type\":\"APPRENTICESHIP\",\n" +
       "                  \"company\":\"Moonshot Innovation\",\n" +
@@ -6855,18 +6945,18 @@ export class CommunityPythonTemplates {
       "                     \"formatted\":\"Madrid, Puerta del Sol\"\n" +
       "                  },\n" +
       "                  \"startDate\":15319,\n" +
-      "                  \"endDate\":None,\n" +
+      "                  \"endDate\":null,\n" +
       "                  \"description\":\"Prácticas extracurriculares a traves de la FULP (Universidad de las Palmas de Gran Canaria)\"\n" +
       "               }\n" +
       "            ],\n" +
       "            \"educations\":[\n" +
       "               {\n" +
-      "                  \"_id\":\"3\",\n" +
+      "                  \"id\":\"3\",\n" +
       "                  \"school\":\"Universidad de Las Palmas de Gran Canaria\",\n" +
       "                  \"degree\":\"Ingeniería informática\",\n" +
       "                  \"fieldOfStudy\":\"Ingeniería de software\",\n" +
       "                  \"startDate\":15319,\n" +
-      "                  \"endDate\":None,\n" +
+      "                  \"endDate\":null,\n" +
       "                  \"grade\":7,\n" +
       "                  \"address\":{\n" +
       "                     \"lat\":48.5,\n" +
@@ -6898,7 +6988,7 @@ export class CommunityPythonTemplates {
       "      ]\n" +
       "   },\n" +
       "   {\n" +
-      "      \"_id\":\"2\",\n" +
+      "      \"id\":\"2\",\n" +
       "      \"actorId\":\"1\",\n" +
       "      \"name\":\"Trade secret\",\n" +
       "      \"description\":\"Trade secret\",\n" +
@@ -6908,7 +6998,7 @@ export class CommunityPythonTemplates {
       "      ],\n" +
       "      \"protectionMethod\":\"TRADE_SECRETS\",\n" +
       "      \"projectManager\":{\n" +
-      "         \"_id\":\"4\",\n" +
+      "         \"id\":\"4\",\n" +
       "         \"state\":\"ACCEPTED\",\n" +
       "         \"name\":\"Saulo\",\n" +
       "         \"lastname\":\"Santana\",\n" +
@@ -6919,7 +7009,7 @@ export class CommunityPythonTemplates {
       "         },\n" +
       "         \"email\":\"saulobach1@gmail.com\",\n" +
       "         \"about\":\"Alumno en prácticas en Moonshot y estudiante de la Universidad de Las Palmas de Gran Canaria\",\n" +
-      "         \"image\":None,\n" +
+      "         \"image\":null,\n" +
       "         \"fcmTokens\":[\n" +
       "            {\n" +
       "               \"tokenId\":\"fcmToken4\",\n" +
@@ -6934,7 +7024,7 @@ export class CommunityPythonTemplates {
       "         ],\n" +
       "         \"experiences\":[\n" +
       "            {\n" +
-      "               \"_id\":\"3\",\n" +
+      "               \"id\":\"3\",\n" +
       "               \"title\":\"Prácticas universitarias en Moonshot Innovation\",\n" +
       "               \"type\":\"APPRENTICESHIP\",\n" +
       "               \"company\":\"Moonshot Innovation\",\n" +
@@ -6944,18 +7034,18 @@ export class CommunityPythonTemplates {
       "                  \"formatted\":\"Madrid, Puerta del Sol\"\n" +
       "               },\n" +
       "               \"startDate\":15319,\n" +
-      "               \"endDate\":None,\n" +
+      "               \"endDate\":null,\n" +
       "               \"description\":\"Prácticas extracurriculares a traves de la FULP (Universidad de las Palmas de Gran Canaria)\"\n" +
       "            }\n" +
       "         ],\n" +
       "         \"educations\":[\n" +
       "            {\n" +
-      "               \"_id\":\"3\",\n" +
+      "               \"id\":\"3\",\n" +
       "               \"school\":\"Universidad de Las Palmas de Gran Canaria\",\n" +
       "               \"degree\":\"Ingeniería informática\",\n" +
       "               \"fieldOfStudy\":\"Ingeniería de software\",\n" +
       "               \"startDate\":15319,\n" +
-      "               \"endDate\":None,\n" +
+      "               \"endDate\":null,\n" +
       "               \"grade\":7,\n" +
       "               \"address\":{\n" +
       "                  \"lat\":48.5,\n" +
@@ -6968,7 +7058,7 @@ export class CommunityPythonTemplates {
       "      },\n" +
       "      \"teamMembers\":[\n" +
       "         {\n" +
-      "            \"_id\":\"8\",\n" +
+      "            \"id\":\"8\",\n" +
       "            \"state\":\"ACCEPTED\",\n" +
       "            \"name\":\"Marcos\",\n" +
       "            \"lastname\":\"Fernandez\",\n" +
@@ -6981,7 +7071,7 @@ export class CommunityPythonTemplates {
       "            \"country\":\"Japon\",\n" +
       "            \"email\":\"marcos@outlook.es\",\n" +
       "            \"about\":\"Farmaceutico trabajador para la compañia Novartis, actual desarrolladora de la vacuna Pfizer\",\n" +
-      "            \"image\":None,\n" +
+      "            \"image\":null,\n" +
       "            \"fcmTokens\":[\n" +
       "               {\n" +
       "                  \"tokenId\":\"fcmToken1\",\n" +
@@ -7000,7 +7090,7 @@ export class CommunityPythonTemplates {
       "            ],\n" +
       "            \"experiences\":[\n" +
       "               {\n" +
-      "                  \"_id\":\"6\",\n" +
+      "                  \"id\":\"6\",\n" +
       "                  \"title\":\"Colaboración para crear la vacuna Pfizer\",\n" +
       "                  \"type\":\"FULL_TIME\",\n" +
       "                  \"company\":\"Novartis\",\n" +
@@ -7014,7 +7104,7 @@ export class CommunityPythonTemplates {
       "                  \"description\":\"Colaborador de la vacuna Pfizer contra el COVID-19\"\n" +
       "               },\n" +
       "               {\n" +
-      "                  \"_id\":\"7\",\n" +
+      "                  \"id\":\"7\",\n" +
       "                  \"title\":\"Colaboración para crear la vacuna de la gripe A\",\n" +
       "                  \"type\":\"INTERIM\",\n" +
       "                  \"company\":\"Novartis\",\n" +
@@ -7030,7 +7120,7 @@ export class CommunityPythonTemplates {
       "            ],\n" +
       "            \"educations\":[\n" +
       "               {\n" +
-      "                  \"_id\":\"7\",\n" +
+      "                  \"id\":\"7\",\n" +
       "                  \"school\":\"Universidad de Tokio\",\n" +
       "                  \"degree\":\"Farmaceutica\",\n" +
       "                  \"fieldOfStudy\":\"Pandemias\",\n" +
@@ -7073,14 +7163,13 @@ export class CommunityPythonTemplates {
 
   public static project_id_get: Template = {
     name: "project/:id",
-    code: "\nimport requests as reqs\n" +
+    code: "\nconst url = 'https://dev.moonshot.ceo/api/community/project/1';\n" +
       "\n" +
-      "URL = \"https://dev.moonshot.ceo/api/community/project/1\"\n" +
-      "\n" +
-      "response = reqs.get(URL)\n" +
-      "print(response.text)",
+      "fetch(url)\n" +
+      "  .then(response => response.json())\n" +
+      "  .then(data => console.log(JSON.stringify(data)));",
     response: "\n{\n" +
-      "   \"_id\":\"1\",\n" +
+      "   \"id\":\"1\",\n" +
       "   \"actorId\":\"1\",\n" +
       "   \"name\":\"Patents\",\n" +
       "   \"description\":\"Patents\",\n" +
@@ -7091,7 +7180,7 @@ export class CommunityPythonTemplates {
       "   ],\n" +
       "   \"protectionMethod\":\"PATENTS\",\n" +
       "   \"projectManager\":{\n" +
-      "      \"_id\":\"1\",\n" +
+      "      \"id\":\"1\",\n" +
       "      \"state\":\"ACCEPTED\",\n" +
       "      \"name\":\"Iñigo\",\n" +
       "      \"lastname\":\"Aramburu\",\n" +
@@ -7102,7 +7191,7 @@ export class CommunityPythonTemplates {
       "      },\n" +
       "      \"email\":\"iaramburu@moonshot.ceo\",\n" +
       "      \"about\":\"Experto en Ingeniería del Software.\",\n" +
-      "      \"image\":None,\n" +
+      "      \"image\":null,\n" +
       "      \"fcmTokens\":[\n" +
       "         {\n" +
       "            \"tokenId\":\"fcmToken1\",\n" +
@@ -7116,7 +7205,7 @@ export class CommunityPythonTemplates {
       "      ],\n" +
       "      \"experiences\":[\n" +
       "         {\n" +
-      "            \"_id\":\"1\",\n" +
+      "            \"id\":\"1\",\n" +
       "            \"title\":\"Back-end developer en Moonshot Innovation\",\n" +
       "            \"type\":\"FULL_TIME\",\n" +
       "            \"company\":\"Moonshot Innovation\",\n" +
@@ -7132,7 +7221,7 @@ export class CommunityPythonTemplates {
       "      ],\n" +
       "      \"educations\":[\n" +
       "         {\n" +
-      "            \"_id\":\"1\",\n" +
+      "            \"id\":\"1\",\n" +
       "            \"school\":\"Universidad del País Vasco\",\n" +
       "            \"degree\":\"Ingeniería informática\",\n" +
       "            \"fieldOfStudy\":\"Ingeniería de software\",\n" +
@@ -7147,7 +7236,7 @@ export class CommunityPythonTemplates {
       "            \"description\":\"Estudios universitarios realizados en la Universidad del País Vasco\"\n" +
       "         },\n" +
       "         {\n" +
-      "            \"_id\":\"15\",\n" +
+      "            \"id\":\"15\",\n" +
       "            \"school\":\"Universidad del País Vasco\",\n" +
       "            \"degree\":\"Master en desarrollo web\",\n" +
       "            \"fieldOfStudy\":\"Desarrollo web\",\n" +
@@ -7165,7 +7254,7 @@ export class CommunityPythonTemplates {
       "   },\n" +
       "   \"teamMembers\":[\n" +
       "      {\n" +
-      "         \"_id\":\"2\",\n" +
+      "         \"id\":\"2\",\n" +
       "         \"state\":\"ACCEPTED\",\n" +
       "         \"name\":\"Jose Juan\",\n" +
       "         \"lastname\":\"Hernández\",\n" +
@@ -7178,7 +7267,7 @@ export class CommunityPythonTemplates {
       "         \"country\":\"España\",\n" +
       "         \"email\":\"josejuan@moonshot.ceo\",\n" +
       "         \"about\":\"Profesor de Ingeniería de Software de la Universidad de Las Palmas de Gran Canaria\",\n" +
-      "         \"image\":None,\n" +
+      "         \"image\":null,\n" +
       "         \"fcmTokens\":[\n" +
       "            {\n" +
       "               \"tokenId\":\"fcmToken2\",\n" +
@@ -7192,7 +7281,7 @@ export class CommunityPythonTemplates {
       "         ],\n" +
       "         \"experiences\":[\n" +
       "            {\n" +
-      "               \"_id\":\"1\",\n" +
+      "               \"id\":\"1\",\n" +
       "               \"title\":\"Back-end developer en Moonshot Innovation\",\n" +
       "               \"type\":\"FULL_TIME\",\n" +
       "               \"company\":\"Moonshot Innovation\",\n" +
@@ -7206,7 +7295,7 @@ export class CommunityPythonTemplates {
       "               \"description\":\"Scrum manager en Moonshot Innovation, trabajando en el equipo de back-end\"\n" +
       "            },\n" +
       "            {\n" +
-      "               \"_id\":\"2\",\n" +
+      "               \"id\":\"2\",\n" +
       "               \"title\":\"Profesor en la facultad de Ingenería informatica\",\n" +
       "               \"type\":\"OFFICIAL\",\n" +
       "               \"company\":\"Universidad de Las Palmas de Gran Canaria\",\n" +
@@ -7222,7 +7311,7 @@ export class CommunityPythonTemplates {
       "         ],\n" +
       "         \"educations\":[\n" +
       "            {\n" +
-      "               \"_id\":\"2\",\n" +
+      "               \"id\":\"2\",\n" +
       "               \"school\":\"Universidad de Las Palmas de Gran Canaria\",\n" +
       "               \"degree\":\"Ingeniería en telecomunicaciones\",\n" +
       "               \"fieldOfStudy\":\"Big data\",\n" +
@@ -7239,7 +7328,7 @@ export class CommunityPythonTemplates {
       "         ]\n" +
       "      },\n" +
       "      {\n" +
-      "         \"_id\":\"3\",\n" +
+      "         \"id\":\"3\",\n" +
       "         \"state\":\"ACCEPTED\",\n" +
       "         \"name\":\"Jeremy\",\n" +
       "         \"lastname\":\"Trujillo\",\n" +
@@ -7250,7 +7339,7 @@ export class CommunityPythonTemplates {
       "         },\n" +
       "         \"email\":\"trujillosanchezjeremy@gmail.com\",\n" +
       "         \"about\":\"Alumno en prácticas en Moonshot y estudiante de la Universidad de Las Palmas de Gran Canaria\",\n" +
-      "         \"image\":None,\n" +
+      "         \"image\":null,\n" +
       "         \"fcmTokens\":[\n" +
       "            {\n" +
       "               \"tokenId\":\"fcmToken3\",\n" +
@@ -7264,7 +7353,7 @@ export class CommunityPythonTemplates {
       "         ],\n" +
       "         \"experiences\":[\n" +
       "            {\n" +
-      "               \"_id\":\"3\",\n" +
+      "               \"id\":\"3\",\n" +
       "               \"title\":\"Prácticas universitarias en Moonshot Innovation\",\n" +
       "               \"type\":\"APPRENTICESHIP\",\n" +
       "               \"company\":\"Moonshot Innovation\",\n" +
@@ -7274,18 +7363,18 @@ export class CommunityPythonTemplates {
       "                  \"formatted\":\"Madrid, Puerta del Sol\"\n" +
       "               },\n" +
       "               \"startDate\":15319,\n" +
-      "               \"endDate\":None,\n" +
+      "               \"endDate\":null,\n" +
       "               \"description\":\"Prácticas extracurriculares a traves de la FULP (Universidad de las Palmas de Gran Canaria)\"\n" +
       "            }\n" +
       "         ],\n" +
       "         \"educations\":[\n" +
       "            {\n" +
-      "               \"_id\":\"3\",\n" +
+      "               \"id\":\"3\",\n" +
       "               \"school\":\"Universidad de Las Palmas de Gran Canaria\",\n" +
       "               \"degree\":\"Ingeniería informática\",\n" +
       "               \"fieldOfStudy\":\"Ingeniería de software\",\n" +
       "               \"startDate\":15319,\n" +
-      "               \"endDate\":None,\n" +
+      "               \"endDate\":null,\n" +
       "               \"grade\":7,\n" +
       "               \"address\":{\n" +
       "                  \"lat\":48.5,\n" +
@@ -7320,12 +7409,10 @@ export class CommunityPythonTemplates {
 
   public static project_post: Template = {
     name: "project",
-    code: "\nimport requests as reqs\n" +
+    code: "\nconst url = 'https://dev.moonshot.ceo/api/community/project';\n" +
       "\n" +
-      "URL = \"https://dev.moonshot.ceo/api/community/project\"\n" +
-      "\n" +
-      "BODY = {\n" +
-      "   \"_id\":\"1\",\n" +
+      "const body = {\n" +
+      "   \"id\":\"1\",\n" +
       "   \"actorId\":\"1\",\n" +
       "   \"name\":\"Patents\",\n" +
       "   \"description\":\"Patents\",\n" +
@@ -7360,19 +7447,21 @@ export class CommunityPythonTemplates {
       "   ]\n" +
       "}\n" +
       "\n" +
-      "response = reqs.post(URL, data=BODY)\n" +
-      "print(response.text)",
+      "fetch(url, {\n" +
+      "  method: 'POST',\n" +
+      "  body: JSON.stringify(body)\n" +
+      "})\n" +
+      "  .then(response => response.json())\n" +
+      "  .then(data => console.log(JSON.stringify(data)));",
     response: null
   }
 
   public static project_put: Template = {
     name: "project",
-    code: "\nimport requests as reqs\n" +
+    code: "\nconst url = 'https://dev.moonshot.ceo/api/community/project';\n" +
       "\n" +
-      "URL = \"https://dev.moonshot.ceo/api/community/project\"\n" +
-      "\n" +
-      "BODY = {\n" +
-      "   \"_id\":\"1\",\n" +
+      "const body = {\n" +
+      "   \"id\":\"1\",\n" +
       "   \"actorId\":\"1\",\n" +
       "   \"name\":\"Patents\",\n" +
       "   \"description\":\"Patents\",\n" +
@@ -7407,19 +7496,24 @@ export class CommunityPythonTemplates {
       "   ]\n" +
       "}\n" +
       "\n" +
-      "response = reqs.put(URL, data=BODY)\n" +
-      "print(response.text)",
+      "fetch(url, {\n" +
+      "  method: 'PUT',\n" +
+      "  body: JSON.stringify(body)\n" +
+      "})\n" +
+      "  .then(response => response.json())\n" +
+      "  .then(data => console.log(JSON.stringify(data)));",
     response: null
   }
 
   public static project_id_delete: Template = {
     name: "project/:id",
-    code: "\nimport requests as reqs\n" +
+    code: "\nconst url = 'https://dev.moonshot.ceo/api/community/project/1';\n" +
       "\n" +
-      "URL = \"https://dev.moonshot.ceo/api/community/project/1\"\n" +
-      "\n" +
-      "response = reqs.delete(URL)\n" +
-      "print(response.text)",
+      "fetch(url, {\n" +
+      "  method: 'DELETE'\n" +
+      "})\n" +
+      "  .then(response => response.json())\n" +
+      "  .then(data => console.log(JSON.stringify(data)));",
     response: null
   }
 }

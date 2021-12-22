@@ -1,4 +1,4 @@
-import { Template } from '../../../app/model/Template';
+import { Template } from '../../../../app/model/Template';
 
 export class CoreJavascriptTemplates {
 

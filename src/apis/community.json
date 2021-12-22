@@ -575,7 +575,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/PublicChannelEventEmptySuscriptionError"
+                  "$ref": "#/components/schemas/PublicChannelEventEmptySubscriptionError"
                 }
               }
             }
@@ -1082,7 +1082,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/PublicChannelEventEmptySuscriptionError"
+                  "$ref": "#/components/schemas/PublicChannelEventEmptySubscriptionError"
                 }
               }
             }
@@ -2883,7 +2883,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/PublicChannelEventEmptySuscriptionError"
+                  "$ref": "#/components/schemas/PublicChannelEventEmptySubscriptionError"
                 }
               }
             }
@@ -9243,7 +9243,7 @@
           }
         }
       },
-      "PublicChannelEventEmptySuscriptionError": {
+      "PublicChannelEventEmptySubscriptionError": {
         "required": [
           "code",
           "message"
