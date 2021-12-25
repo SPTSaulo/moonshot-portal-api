@@ -5,6 +5,7 @@ import { OverviewComponent } from './overview/overview.component';
 import { PlatformPolicyComponent } from './platform-policy/platform-policy.component';
 import { DocumentationComponent } from './documentation/documentation.component';
 import { CodeExamplesComponent } from './code-examples/code-examples.component';
+import { EventTemplatesComponent } from './event-templates/event-templates.component';
 
 const routes: Routes = [
   {
@@ -35,6 +36,10 @@ const routes: Routes = [
   {
     path: 'code-examples/:module',
     component: CodeExamplesComponent
+  },
+  {
+    path: 'event-templates',
+    component: EventTemplatesComponent
   }
 ];
 

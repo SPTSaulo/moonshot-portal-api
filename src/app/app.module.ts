@@ -11,9 +11,12 @@ import { PlatformPolicyComponent } from './platform-policy/platform-policy.compo
 import { DocumentationComponent } from './documentation/documentation.component';
 import { ApiService } from './services/api.service';
 import { CodeExamplesComponent } from './code-examples/code-examples.component';
-import { TemplateReaderService } from './services/template-reader.service';
+import { EndpointTemplateReaderService } from './services/endpoint-template-reader.service';
 import { CodeExampleComponent } from './code-examples/code-example/code-example.component';
 import { FormsModule } from '@angular/forms';
+import { EventTemplatesComponent } from './event-templates/event-templates.component';
+import {EventTemplateReaderService} from './services/event-template-reader.service';
+import { EventTemplateComponent } from './event-templates/event-template/event-template.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +27,9 @@ import { FormsModule } from '@angular/forms';
     PlatformPolicyComponent,
     DocumentationComponent,
     CodeExamplesComponent,
-    CodeExampleComponent
+    CodeExampleComponent,
+    EventTemplatesComponent,
+    EventTemplateComponent
   ],
   imports: [
     BrowserModule,
@@ -32,7 +37,11 @@ import { FormsModule } from '@angular/forms';
     AppRoutingModule,
     FormsModule
   ],
-  providers: [ApiService, TemplateReaderService],
+  providers: [
+    ApiService,
+    EndpointTemplateReaderService,
+    EventTemplateReaderService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

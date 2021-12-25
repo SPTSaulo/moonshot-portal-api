@@ -575,7 +575,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/PublicChannelEventEmptySubscriptionError"
+                  "$ref": "#/components/schemas/PublicChannelEventEmptySuscriptionError"
                 }
               }
             }
@@ -1082,7 +1082,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/PublicChannelEventEmptySubscriptionError"
+                  "$ref": "#/components/schemas/PublicChannelEventEmptySuscriptionError"
                 }
               }
             }
@@ -2883,7 +2883,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/PublicChannelEventEmptySubscriptionError"
+                  "$ref": "#/components/schemas/PublicChannelEventEmptySuscriptionError"
                 }
               }
             }
@@ -4232,10 +4232,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "type": "array",
-                "items": {
-                  "$ref": "#/components/schemas/ActorCreateEvent"
-                }
+                "$ref": "#/components/schemas/ActorCreateEvent"
               }
             }
           }
@@ -5277,6 +5274,7 @@
         ],
         "summary": "Get project by id",
         "description": "Find a project in the database by id\n",
+        "operationId": "project",
         "parameters": [
           {
             "name": "id",
@@ -5320,6 +5318,51 @@
         "externalDocs": {
           "description": "Code Example",
           "url": "http://localhost:4200/code-examples/community#project/:id_get"
+        }
+      },
+      "delete": {
+        "tags": [
+          "Project"
+        ],
+        "summary": "Remove a project",
+        "description": "Remove a project in database\n",
+        "operationId": "projectDelete",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "experience id",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "mongo-id",
+              "example": "61445159784bca6ef764c6df"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "401": {
+            "description": "You must login before call this endpoint",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SecurityAccessUnauthorizedError"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "idToken": []
+          }
+        ],
+        "externalDocs": {
+          "description": "Code Example",
+          "url": "http://localhost:4200/code-examples/community#project_delete"
         }
       }
     },
@@ -5424,48 +5467,6 @@
         "externalDocs": {
           "description": "Code Example",
           "url": "http://localhost:4200/code-examples/community#project_put"
-        }
-      },
-      "delete": {
-        "tags": [
-          "Project"
-        ],
-        "summary": "Remove a project",
-        "description": "Remove a project in database\n",
-        "operationId": "projectDelet",
-        "responses": {
-          "200": {
-            "description": "OK"
-          },
-          "400": {
-            "description": "Body is empty or project id is empty",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProjectEmptyBodyError"
-                }
-              }
-            }
-          },
-          "401": {
-            "description": "You must login before call this endpoint",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/SecurityAccessUnauthorizedError"
-                }
-              }
-            }
-          }
-        },
-        "security": [
-          {
-            "idToken": []
-          }
-        ],
-        "externalDocs": {
-          "description": "Code Example",
-          "url": "http://localhost:4200/code-examples/community#project_delete"
         }
       }
     }
@@ -5704,27 +5705,26 @@
             "type": "string",
             "example": "Licenciado en Periodismo"
           },
+          "address": {
+            "$ref": "#/components/schemas/Address"
+          },
           "fieldOfStudy": {
             "type": "string",
             "example": "Periodismo radiofónico"
           },
           "startDate": {
-            "type": "string",
-            "format": "localdate",
-            "example": "2020-07-30T00:00:00.000Z"
+            "type": "number",
+            "format": "number of days since 01-01-1970",
+            "example": 167999
           },
           "endDate": {
-            "type": "string",
-            "format": "localdate",
-            "example": "2021-05-14T00:00:00.000Z"
+            "type": "number",
+            "format": "number of days since 01-01-1970",
+            "example": 167999
           },
           "grade": {
             "type": "number",
             "example": 8.5
-          },
-          "activitiesAndSocieties": {
-            "type": "string",
-            "example": "Equipo de rugby universitario"
           },
           "description": {
             "type": "string",
@@ -5747,7 +5747,7 @@
             "type": "string",
             "example": "Moonshot Innovation"
           },
-          "location": {
+          "address": {
             "$ref": "#/components/schemas/Address"
           },
           "startDate": {
@@ -6861,16 +6861,16 @@
             "type": "string",
             "example": "Software Engineering"
           },
-          "location": {
+          "address": {
             "$ref": "#/components/schemas/Address"
           },
           "startDate": {
-            "type": "string",
+            "type": "number",
             "format": "number of days since 01-01-1970",
             "example": 167999
           },
           "endDate": {
-            "type": "string",
+            "type": "number",
             "format": "number of days since 01-01-1970",
             "example": 167999
           },
@@ -6905,12 +6905,12 @@
             "$ref": "#/components/schemas/Address"
           },
           "startDate": {
-            "type": "string",
+            "type": "number",
             "format": "number of days since 01-01-1970",
             "example": 167999
           },
           "endDate": {
-            "type": "string",
+            "type": "number",
             "format": "number of days since 01-01-1970",
             "example": 167999
           },
@@ -6947,14 +6947,14 @@
             "$ref": "#/components/schemas/Address"
           },
           "startDate": {
-            "type": "string",
-            "format": "LocalDate",
-            "example": "2021-03-01T00:00:00.000Z"
+            "type": "number",
+            "format": "number of days since 01-01-1970",
+            "example": 167999
           },
           "endDate": {
-            "type": "string",
-            "format": "LocalDate",
-            "example": "2021-03-01T00:00:00.000Z"
+            "type": "number",
+            "format": "number of days since 01-01-1970",
+            "example": 167999
           },
           "description": {
             "type": "string",
@@ -7168,6 +7168,11 @@
             "type": "string",
             "format": "mongo-id",
             "example": "60acae8e2f799d228a4d4a85"
+          },
+          "newOwnerMemberId": {
+            "type": "string",
+            "format": "mongo-id",
+            "example": "60acae8e2f799d228a4d4a85"
           }
         }
       },
@@ -7256,6 +7261,11 @@
       },
       "WallPostCommentAddEvent": {
         "properties": {
+          "id": {
+            "type": "string",
+            "format": "mongo-id",
+            "example": "60acae8e2f799d228a4d4a85"
+          },
           "comment": {
             "$ref": "#/components/schemas/CreateComment"
           }
@@ -7278,16 +7288,10 @@
       "WallPostCommentUnlikeEvent": {
         "required": [
           "id",
-          "memberId",
           "commentId"
         ],
         "properties": {
           "id": {
-            "type": "string",
-            "format": "mongo-id",
-            "example": "60acae8e2f799d228a4d4a85"
-          },
-          "memberId": {
             "type": "string",
             "format": "mongo-id",
             "example": "60acae8e2f799d228a4d4a85"
@@ -9243,7 +9247,7 @@
           }
         }
       },
-      "PublicChannelEventEmptySubscriptionError": {
+      "PublicChannelEventEmptySuscriptionError": {
         "required": [
           "code",
           "message"

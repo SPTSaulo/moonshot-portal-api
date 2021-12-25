@@ -1,14 +1,14 @@
-import { Template } from '../../../../app/model/Template';
+import { EndpointTemplate } from '../../../../app/model/EndpointTemplate';
 
 export class FederationJavascriptTemplates {
 
-  public static version_get: Template = {
+  public static version_get: EndpointTemplate = {
     name: "version",
     code: "\nconst url = 'https://dev.moonshot.ceo/api/federation/version';\n\nfetch(url)\n  .then(response => response.json())\n  .then(data => console.log(JSON.stringify(data)));",
     response: "\n\"2.0.2.r15-RC1\""
   }
 
-  public static login_post: Template = {
+  public static login_post: EndpointTemplate = {
     name: "login",
     code: "\nconst url = 'https://dev.moonshot.ceo/api/federation/login';\n" +
       "const body = {\n" +
@@ -25,7 +25,7 @@ export class FederationJavascriptTemplates {
     response: null
   }
 
-  public static logout_get: Template = {
+  public static logout_get: EndpointTemplate = {
     name: "logout",
     code: "\nconst url = 'https://dev.moonshot.ceo/api/federation/logout';\n" +
       "\n" +
@@ -35,7 +35,7 @@ export class FederationJavascriptTemplates {
     response: null
   }
 
-  public static token_post: Template = {
+  public static token_post: EndpointTemplate = {
     name: "token",
     code: "\nconst url = 'https://dev.moonshot.ceo/api/federation/token?idToken=987012034912398417023948'\n" +
       "\n" +
@@ -47,7 +47,7 @@ export class FederationJavascriptTemplates {
     response: null
   }
 
-  public static communities_get: Template = {
+  public static communities_get: EndpointTemplate = {
     name: "communities",
     code: "\nconst url = 'https://dev.moonshot.ceo/api/federation/communities'\n" +
       "\n" +
@@ -62,7 +62,7 @@ export class FederationJavascriptTemplates {
       "]"
   }
 
-  public static modules_get: Template = {
+  public static modules_get: EndpointTemplate = {
     name: "modules",
     code: "\nconst url = 'https://dev.moonshot.ceo/api/federation/modules'\n" +
       "\n" +
@@ -76,7 +76,7 @@ export class FederationJavascriptTemplates {
       "]"
   }
 
-  public static user_id_get: Template = {
+  public static user_id_get: EndpointTemplate = {
     name: "user/:id",
     code: "\nconst url = 'https://dev.moonshot.ceo/api/federation/user/1'\n" +
       "\n" +
@@ -114,7 +114,7 @@ export class FederationJavascriptTemplates {
       "}"
   }
 
-  public static user_by_email_get: Template = {
+  public static user_by_email_get: EndpointTemplate = {
     name: "user/by/email",
     code: "\nconst url = 'https://dev.moonshot.ceo/api/federation/user/by/email?email=usuario1@gmail.com'\n" +
       "\n" +
@@ -152,7 +152,7 @@ export class FederationJavascriptTemplates {
       "}"
   }
 
-  public static users_get: Template = {
+  public static users_get: EndpointTemplate = {
     name: "users",
     code: "\nconst url = 'https://dev.moonshot.ceo/api/federation/users'\n" +
       "\n" +
@@ -216,7 +216,7 @@ export class FederationJavascriptTemplates {
       "]"
   }
 
-  public static users_by_roles_get: Template = {
+  public static users_by_roles_get: EndpointTemplate = {
     name: "users/by/roles",
     code: "\nconst url = 'https://dev.moonshot.ceo/api/federation/users/by/roles?roles=DEV:ECOSYSTEM_USER'\n" +
       "\n" +
@@ -280,7 +280,7 @@ export class FederationJavascriptTemplates {
       "]"
   }
 
-  public static users_by_perms_get: Template = {
+  public static users_by_perms_get: EndpointTemplate = {
     name: "users/by/perms",
     code: "\nconst url = 'https://dev.moonshot.ceo/api/federation/users/by/perms?perms=DEV:WALL_POST_CREATE'\n" +
       "\n" +
@@ -344,7 +344,7 @@ export class FederationJavascriptTemplates {
       "]"
   }
 
-  public static users_perms_get: Template = {
+  public static users_perms_get: EndpointTemplate = {
     name:"users/perms" ,
     code: "\nconst url = 'https://dev.moonshot.ceo/api/federation/users/perms?id=1'\n" +
       "\n" +
@@ -373,7 +373,7 @@ export class FederationJavascriptTemplates {
       "]"
   }
 
-  public static users_perms_put: Template = {
+  public static users_perms_put: EndpointTemplate = {
     name: "users/perms",
     code: "\nconst url = 'https://dev.moonshot.ceo/api/federation/users/perms?id=1'\n" +
       "const body = {\n" +
@@ -392,7 +392,7 @@ export class FederationJavascriptTemplates {
     response: null
   }
 
-  public static user_verify_put: Template = {
+  public static user_verify_put: EndpointTemplate = {
     name: "user/verify",
     code: "\nconst url = 'https://dev.moonshot.ceo/api/federation/user/verify'\n" +
       "const body = {\n" +
@@ -411,7 +411,7 @@ export class FederationJavascriptTemplates {
     response: null
   }
 
-  public static user_verify_resend_put: Template = {
+  public static user_verify_resend_put: EndpointTemplate = {
     name: "user/verify/re-send",
     code: "\nconst url = 'https://dev.moonshot.ceo/api/federation/user/verify/re-send'\n" +
       "\n" +
@@ -428,7 +428,7 @@ export class FederationJavascriptTemplates {
     response: null
   }
 
-  public static password_last_modification_get: Template = {
+  public static password_last_modification_get: EndpointTemplate = {
     name: "password/last-modification",
     code: "\nconst url = 'https://dev.moonshot.ceo/api/federation/password/last-modification?email=example1@gmail.com'\n" +
       "\n" +
@@ -438,7 +438,7 @@ export class FederationJavascriptTemplates {
     response: "\n2021-02-19",
   }
 
-  public static password_request_post: Template = {
+  public static password_request_post: EndpointTemplate = {
     name: "password/request",
     code: "\nconst url = 'https://dev.moonshot.ceo/api/federation/password/request'\n" +
       "const body = {\n" +
@@ -456,7 +456,7 @@ export class FederationJavascriptTemplates {
     response: null
   }
 
-  public static password_recover_post: Template = {
+  public static password_recover_post: EndpointTemplate = {
     name: "password/recover",
     code: "\nconst url = 'https://dev.moonshot.ceo/api/federation/password/recover'\n" +
       "const body = {\n" +
@@ -474,7 +474,7 @@ export class FederationJavascriptTemplates {
     response: null
   }
 
-  public static password_change_put: Template = {
+  public static password_change_put: EndpointTemplate = {
     name: "password/change",
     code: "\nconst url = 'https://dev.moonshot.ceo/api/federation/password/change'\n" +
       "const body = {\n" +
@@ -492,7 +492,7 @@ export class FederationJavascriptTemplates {
     response: null
   }
 
-  public static verifications_get: Template = {
+  public static verifications_get: EndpointTemplate = {
     name: "verifications",
     code: "\nconst url = 'https://dev.moonshot.ceo/api/federation/verifications'\n" +
       "\n" +

@@ -2589,6 +2589,9 @@
               "RECOVER_PASSWORD"
             ]
           },
+          "pushData": {
+            "$ref": "#/components/schemas/PushData"
+          },
           "email": {
             "$ref": "#/components/schemas/Email"
           },
@@ -2689,18 +2692,65 @@
           }
         }
       },
+      "PushData": {
+        "properties": {
+          "title": {
+            "type": "string",
+            "example": "David Suriol has sent you a direct chat message."
+          },
+          "body": {
+            "type": "string",
+            "example": "Bien!"
+          },
+          "icon": {
+            "type": "string",
+            "example": "https://moonshot-innovation.s3.eu-central-1.amazonaws.com/60b53ce23a28bb702667cbe6/image/3a5b0134-a3ef-4a49-9e5a-fe4d16fbac5c.jpg"
+          },
+          "fcmTokens": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/FcmToken"
+            }
+          },
+          "parameters": {
+            "type": "object",
+            "format": "Map<String,String>",
+            "additionalProperties": {
+              "type": "string",
+              "example": {
+                "action": "new-tab"
+              }
+            }
+          }
+        }
+      },
+      "FcmToken": {
+        "properties": {
+          "tokenId": {
+            "type": "string",
+            "format": "Firebase token",
+            "example": "enMcvL2-3YDmhocf25g5Nk:APA91bEljU6wo1S7Bj"
+          },
+          "device": {
+            "type": "string",
+            "example": "laptop/computer"
+          },
+          "timestamp": {
+            "type": "number",
+            "format": "timestamp",
+            "example": 1639687246
+          }
+        }
+      },
       "Email": {
         "properties": {
           "from": {
             "$ref": "#/components/schemas/EmailFrom"
           },
           "to": {
-            "type": "array",
-            "items": {
-              "type": "string",
-              "format": "email",
-              "example": "example1@gmail.com, example2@gmail.com"
-            }
+            "type": "string",
+            "format": "email",
+            "example": "example1@gmail.com, example2@gmail.com"
           },
           "cc": {
             "type": "array",
@@ -2726,20 +2776,9 @@
             "type": "string",
             "example": "MAIL_TEMPLATE_ECOSYSTEM_ACCESS_REQUEST"
           },
-          "attachments": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/EmailAttachment"
-            }
-          },
-          "inlines": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/EmailInline"
-            }
-          },
           "params": {
             "type": "object",
+            "format": "Map<String,String>",
             "additionalProperties": {
               "type": "string",
               "example": {
@@ -2760,30 +2799,6 @@
           "name": {
             "type": "string",
             "example": "example1"
-          }
-        }
-      },
-      "EmailAttachment": {
-        "properties": {
-          "name": {
-            "type": "string",
-            "example": "archivo1.pdf"
-          },
-          "file": {
-            "type": "object",
-            "format": "Java File object"
-          }
-        }
-      },
-      "EmailInline": {
-        "properties": {
-          "cid": {
-            "type": "string",
-            "example": "<foo4atfoo1atbar.net>"
-          },
-          "file": {
-            "type": "object",
-            "format": "Java File object"
           }
         }
       },

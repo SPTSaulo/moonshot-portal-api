@@ -1,0 +1,60 @@
+<div class="template" *ngIf="template.example">
+  <div class="template-header" [id]="'template-' + template.name">
+    <h3 class="template-title">{{ template.name }}</h3>
+    <div class="template-links">
+      <a
+        [ngClass]="{'template-link-active': active === 'example'}"
+        (click)="changeActiveLink('example')">
+        Example
+      </a>
+      |
+      <a
+        [ngClass]="{'template-link-active': active === 'schema'}"
+        (click)="changeActiveLink('schema')">
+        Schema
+      </a>
+    </div>
+  </div>
+  <div class="template-body">
+      <pre *ngIf="active === 'example'">
+        <span>{{ eventTemplateService.parseObjectToString(template.example) }}</span>
+      </pre>
+      <div *ngIf="active === 'schema'">
+        <pre>
+          <span>{{ eventTemplateService.parseTemplateSchemaToString(template.schema) }}</span>
+        </pre>
+        <span *ngIf="modelReferences && modelReferences.length > 0">
+          References:
+          <a
+            [href]="'/event-templates#template-' + getIdFromModelReference(modelReference)"
+            class="template-references-link"
+            *ngFor="let modelReference of modelReferences">
+            {{ modelReference }}
+          </a>
+        </span>
+      </div>
+  </div>
+</div>
+
+
+
+<div class="template" *ngIf="template.options">
+  <div class="template-header" [id]="'template-' + template.name">
+    <h3 class="template-title">{{ template.name }}</h3>
+  </div>
+  <div class="template-body">
+      <pre *ngIf="active === 'example'" class="pre-entity">
+        <span>This entity is a enum and this are the options:</span>
+        <span>{{ eventTemplateService.parseObjectToString(template.options) }}</span>
+      </pre>
+      <span *ngIf="modelReferences && modelReferences.length > 0">
+          References:
+          <a
+            [href]="'/event-templates#template-' + getIdFromModelReference(modelReference)"
+            class="template-references-link"
+            *ngFor="let modelReference of modelReferences">
+            {{ modelReference }}
+          </a>
+      </span>
+  </div>
+</div>

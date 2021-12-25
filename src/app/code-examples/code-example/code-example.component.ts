@@ -1,8 +1,8 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Endpoint } from '../../model/Endpoint';
 import { Language } from '../../model/Language';
-import { Template } from '../../model/Template';
-import { TemplateReaderService } from '../../services/template-reader.service';
+import { EndpointTemplate } from '../../model/EndpointTemplate';
+import { EndpointTemplateReaderService } from '../../services/endpoint-template-reader.service';
 import { Module } from '../../model/Module';
 
 @Component({
@@ -17,11 +17,11 @@ export class CodeExampleComponent implements OnInit {
   @Input('languages') languages: Language[]
 
   public selectedLanguage: Language = Language.JS
-  public template: Template
+  public template: EndpointTemplate
   public hideResponse: boolean = false
 
   constructor(
-    private _templateReaderService: TemplateReaderService
+    private _templateReaderService: EndpointTemplateReaderService
   ) {}
 
   ngOnInit() {

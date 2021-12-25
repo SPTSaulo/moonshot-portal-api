@@ -1,7 +1,7 @@
 import { Entity } from './Entity';
-import {ObjectType} from './ObjectType';
+import { ObjectType } from './ObjectType';
 
-export interface Event {
+export interface EventTemplate {
   name: string
   schema: {
     [key: string]: ObjectType

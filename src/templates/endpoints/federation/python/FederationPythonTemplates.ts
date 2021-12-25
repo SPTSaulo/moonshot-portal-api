@@ -1,8 +1,8 @@
-import { Template } from '../../../../app/model/Template';
+import { EndpointTemplate } from '../../../../app/model/EndpointTemplate';
 
 export class FederationPythonTemplates {
 
-  public static version_get: Template = {
+  public static version_get: EndpointTemplate = {
     name: "version",
     code: "\nimport requests as reqs\n" +
       "\n" +
@@ -13,7 +13,7 @@ export class FederationPythonTemplates {
     response: "\n"
   }
 
-  public static login_post: Template = {
+  public static login_post: EndpointTemplate = {
     name: "login",
     code: "\nimport requests as reqs\n" +
       "\n" +
@@ -29,7 +29,7 @@ export class FederationPythonTemplates {
     response: null
   }
 
-  public static logout_get: Template = {
+  public static logout_get: EndpointTemplate = {
     name: "logout",
     code: "\nimport requests as reqs\n" +
       "\n" +
@@ -40,7 +40,7 @@ export class FederationPythonTemplates {
     response: null
   }
 
-  public static token_post: Template = {
+  public static token_post: EndpointTemplate = {
     name: "token",
     code: "\nimport requests as reqs\n" +
       "\n" +
@@ -51,7 +51,7 @@ export class FederationPythonTemplates {
     response: null
   }
 
-  public static communities_get: Template = {
+  public static communities_get: EndpointTemplate = {
     name: "communities",
     code: "\nimport requests as reqs\n" +
       "\n" +
@@ -67,7 +67,7 @@ export class FederationPythonTemplates {
       "]"
   }
 
-  public static modules_get: Template = {
+  public static modules_get: EndpointTemplate = {
     name: "modules",
     code: "\nimport requests as reqs\n" +
       "\n" +
@@ -82,7 +82,7 @@ export class FederationPythonTemplates {
       "]"
   }
 
-  public static user_id_get: Template = {
+  public static user_id_get: EndpointTemplate = {
     name: "users/:id",
     code: "\nimport requests as reqs\n" +
       "\n" +
@@ -121,7 +121,7 @@ export class FederationPythonTemplates {
       "}"
   }
 
-  public static user_by_email_get: Template = {
+  public static user_by_email_get: EndpointTemplate = {
     name: "user/by/email",
     code: "\nimport requests as reqs\n" +
       "\n" +
@@ -160,7 +160,7 @@ export class FederationPythonTemplates {
       "}"
   }
 
-  public static users_get: Template = {
+  public static users_get: EndpointTemplate = {
     name: "users",
     code: "\nimport requests as reqs\n" +
       "\n" +
@@ -225,7 +225,7 @@ export class FederationPythonTemplates {
       "]"
   }
 
-  public static users_by_roles_get: Template = {
+  public static users_by_roles_get: EndpointTemplate = {
     name: "users/by/roles",
     code: "\nimport requests as reqs\n" +
       "\n" +
@@ -290,7 +290,7 @@ export class FederationPythonTemplates {
       "]"
   }
 
-  public static users_by_perms_get: Template = {
+  public static users_by_perms_get: EndpointTemplate = {
     name: "users/by/perms",
     code: "\nimport requests as reqs\n" +
       "\n" +
@@ -355,7 +355,7 @@ export class FederationPythonTemplates {
       "]"
   }
 
-  public static users_perms_get: Template = {
+  public static users_perms_get: EndpointTemplate = {
     name:"users/perms" ,
     code: "\nimport requests as reqs\n" +
       "\n" +
@@ -385,7 +385,7 @@ export class FederationPythonTemplates {
       "]"
   }
 
-  public static users_perms_put: Template = {
+  public static users_perms_put: EndpointTemplate = {
     name: "users/perms",
     code: "\nimport requests as reqs\n" +
       "\n" +
@@ -403,7 +403,7 @@ export class FederationPythonTemplates {
     response: null
   }
 
-  public static user_verify_put: Template = {
+  public static user_verify_put: EndpointTemplate = {
     name: "user/verify",
     code: "\nimport requests as reqs\n" +
       "\n" +
@@ -421,7 +421,7 @@ export class FederationPythonTemplates {
     response: null
   }
 
-  public static user_verify_resend_put: Template = {
+  public static user_verify_resend_put: EndpointTemplate = {
     name: "user/verify/re-send",
     code: "\nimport requests as reqs\n" +
       "\n" +
@@ -436,7 +436,7 @@ export class FederationPythonTemplates {
     response: null
   }
 
-  public static password_last_modification_get: Template = {
+  public static password_last_modification_get: EndpointTemplate = {
     name: "password/last-modification",
     code: "\nimport requests as reqs\n" +
       "\n" +
@@ -447,7 +447,7 @@ export class FederationPythonTemplates {
     response: "\n2021-02-19",
   }
 
-  public static password_request_post: Template = {
+  public static password_request_post: EndpointTemplate = {
     name: "password/request",
     code: "\nimport requests as reqs\n" +
       "\n" +
@@ -464,7 +464,7 @@ export class FederationPythonTemplates {
     response: null
   }
 
-  public static password_recover_post: Template = {
+  public static password_recover_post: EndpointTemplate = {
     name: "password/recover",
     code: "\nimport requests as reqs\n" +
       "\n" +
@@ -481,7 +481,7 @@ export class FederationPythonTemplates {
     response: null
   }
 
-  public static password_change_put: Template = {
+  public static password_change_put: EndpointTemplate = {
     name: "password/change",
     code: "\nimport requests as reqs\n" +
       "\n" +
@@ -498,7 +498,7 @@ export class FederationPythonTemplates {
     response: null
   }
 
-  public static verifications_get: Template = {
+  public static verifications_get: EndpointTemplate = {
     name: "verifications",
     code: "\nimport requests as reqs\n" +
       "\n" +

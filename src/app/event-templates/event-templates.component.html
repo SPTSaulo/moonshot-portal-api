@@ -1,0 +1,13 @@
+<div class="templates-wrapper" *ngIf="eventTemplates">
+  <h1>API PORTAL</h1>
+  <h2>EVENTS</h2>
+  <app-event-template
+    *ngFor="let template of eventTemplates"
+    [template]=template>
+  </app-event-template>
+  <h2>MODEL</h2>
+  <app-event-template
+    *ngFor="let template of objectTypeTemplates"
+    [template]=template>
+  </app-event-template>
+</div>

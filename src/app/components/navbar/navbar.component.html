@@ -9,6 +9,9 @@
     <a (click)="displaySubNavbar = false" [routerLink]="['/documentation']" [routerLinkActive]="['active-link']">Documentation</a>
   </li>
   <li>
+    <a (click)="displaySubNavbar = false" [routerLink]="['/event-templates']" [routerLinkActive]="['active-link']">Events Templates</a>
+  </li>
+  <li>
     <a (click)="displaySubNavbar = true" [routerLink]="['/code-examples', 'core']" [ngClass]="{'active-link': displaySubNavbar}">Code Examples</a>
   </li>
   <div *ngIf="displaySubNavbar">

@@ -1,4 +1,4 @@
-import {Template} from '../model/Template';
+import {EndpointTemplate} from '../model/EndpointTemplate';
 import {CoreJavascriptTemplates} from '../../templates/endpoints/core/javascript/CoreJavascriptTemplates';
 import {Endpoint} from '../model/Endpoint';
 import {Language} from '../model/Language';
@@ -12,9 +12,9 @@ import {CorePythonTemplates} from '../../templates/endpoints/core/python/CorePyt
 import {FederationPythonTemplates} from '../../templates/endpoints/federation/python/FederationPythonTemplates';
 import {CommunityPythonTemplates} from '../../templates/endpoints/community/python/CommunityPythonTemplates';
 
-export class TemplateReaderService {
+export class EndpointTemplateReaderService {
 
-  public getTemplate(endpoint: Endpoint, module: Module, language: Language): Template {
+  public getTemplate(endpoint: Endpoint, module: Module, language: Language): EndpointTemplate {
     switch (module) {
       case Module.CORE :
         return this.getCoreTemplate(endpoint, language)
@@ -25,7 +25,7 @@ export class TemplateReaderService {
     }
   }
 
-  private getCoreTemplate(endpoint: Endpoint, language: Language): Template {
+  private getCoreTemplate(endpoint: Endpoint, language: Language): EndpointTemplate {
     switch (language) {
       case Language.JS:
         return this.getCoreJavascriptTemplate(endpoint)
@@ -36,7 +36,7 @@ export class TemplateReaderService {
     }
   }
 
-  private getCommunityTemplate(endpoint: Endpoint, language: Language): Template {
+  private getCommunityTemplate(endpoint: Endpoint, language: Language): EndpointTemplate {
     switch (language) {
       case Language.JS:
         return this.getCommunityJavascriptTemplate(endpoint)
@@ -47,7 +47,7 @@ export class TemplateReaderService {
     }
   }
 
-  private getFederationTemplate(endpoint: Endpoint, language: Language): Template {
+  private getFederationTemplate(endpoint: Endpoint, language: Language): EndpointTemplate {
     switch (language) {
       case Language.JS:
         return this.getFederationJavascriptTemplate(endpoint)
@@ -58,7 +58,7 @@ export class TemplateReaderService {
     }
   }
 
-  private getCoreJavascriptTemplate(endpoint: Endpoint): Template {
+  private getCoreJavascriptTemplate(endpoint: Endpoint): EndpointTemplate {
     const templateName = endpoint.name + '_' + endpoint.method
     switch (templateName) {
       case 'version_get':
@@ -126,7 +126,7 @@ export class TemplateReaderService {
     }
   }
 
-  private getCoreJavaTemplate(endpoint: Endpoint): Template {
+  private getCoreJavaTemplate(endpoint: Endpoint): EndpointTemplate {
     const templateName = endpoint.name + '_' + endpoint.method
     switch (templateName) {
       case 'version_get':
@@ -194,7 +194,7 @@ export class TemplateReaderService {
     }
   }
 
-  private getCorePythonTemplate(endpoint: Endpoint): Template {
+  private getCorePythonTemplate(endpoint: Endpoint): EndpointTemplate {
     const templateName = endpoint.name + '_' + endpoint.method
     switch (templateName) {
       case 'version_get':
@@ -262,7 +262,7 @@ export class TemplateReaderService {
     }
   }
 
-  private getCommunityJavascriptTemplate(endpoint: Endpoint): Template {
+  private getCommunityJavascriptTemplate(endpoint: Endpoint): EndpointTemplate {
     const templateName = endpoint.name + '_' + endpoint.method
     switch (templateName) {
       case 'version_get': return CommunityJavascriptTemplates.version_get
@@ -367,7 +367,7 @@ export class TemplateReaderService {
     }
   }
 
-  private getCommunityJavaTemplate(endpoint: Endpoint): Template {
+  private getCommunityJavaTemplate(endpoint: Endpoint): EndpointTemplate {
     const templateName = endpoint.name + '_' + endpoint.method
     switch (templateName) {
       case 'version_get': return CommunityJavaTemplates.version_get
@@ -470,7 +470,7 @@ export class TemplateReaderService {
     }
   }
 
-  private getCommunityPythonTemplate(endpoint: Endpoint): Template {
+  private getCommunityPythonTemplate(endpoint: Endpoint): EndpointTemplate {
     const templateName = endpoint.name + '_' + endpoint.method
     switch (templateName) {
       case 'version_get':
@@ -674,7 +674,7 @@ export class TemplateReaderService {
     }
   }
 
-  private getFederationJavaTemplate(endpoint: Endpoint): Template {
+  private getFederationJavaTemplate(endpoint: Endpoint): EndpointTemplate {
     const templateName = endpoint.name + '_' + endpoint.method
     switch (templateName) {
       case 'version_get': return FederationJavaTemplates.version_get
@@ -702,7 +702,7 @@ export class TemplateReaderService {
   }
 
 
-  private getFederationJavascriptTemplate(endpoint: Endpoint): Template {
+  private getFederationJavascriptTemplate(endpoint: Endpoint): EndpointTemplate {
     const templateName = endpoint.name + '_' + endpoint.method
     switch (templateName) {
       case 'version_get': return FederationJavascriptTemplates.version_get
@@ -729,7 +729,7 @@ export class TemplateReaderService {
     }
   }
 
-  public getFederationPythonTemplate(endpoint: Endpoint): Template {
+  public getFederationPythonTemplate(endpoint: Endpoint): EndpointTemplate {
     const templateName = endpoint.name + '_' + endpoint.method
     switch (templateName) {
       case 'version_get': return FederationPythonTemplates.version_get

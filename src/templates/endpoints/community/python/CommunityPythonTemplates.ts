@@ -1,8 +1,8 @@
-import { Template } from '../../../../app/model/Template';
+import { EndpointTemplate } from '../../../../app/model/EndpointTemplate';
 
 export class CommunityPythonTemplates {
 
-  public static version_get: Template = {
+  public static version_get: EndpointTemplate = {
     name: "version",
     code: "\nimport requests as reqs\n" +
       "\n" +
@@ -13,7 +13,7 @@ export class CommunityPythonTemplates {
     response: "\n\"2.0.2.r15-SNAPSHOT\""
   }
 
-  public static online_events_get: Template = {
+  public static online_events_get: EndpointTemplate = {
     name: "online-events",
     code: "\nimport requests as reqs\n" +
       "\n" +
@@ -235,7 +235,7 @@ export class CommunityPythonTemplates {
       "]"
   }
 
-  public static online_events_id_get: Template = {
+  public static online_events_id_get: EndpointTemplate = {
     name: "online-event/:id",
     code: "\nimport requests as reqs\n" +
       "\n" +
@@ -455,7 +455,7 @@ export class CommunityPythonTemplates {
       "    }"
   }
 
-  public static online_event_post: Template = {
+  public static online_event_post: EndpointTemplate = {
     name: "online-event",
     code: "\nimport requests as reqs\n" +
       "\n" +
@@ -476,7 +476,7 @@ export class CommunityPythonTemplates {
     response: null
   }
 
-  public static online_event_put: Template = {
+  public static online_event_put: EndpointTemplate = {
     name: "online-event",
     code: "\nimport requests as reqs\n" +
       "\n" +
@@ -497,7 +497,7 @@ export class CommunityPythonTemplates {
     response: null
   }
 
-  public static online_event_id_delete: Template = {
+  public static online_event_id_delete: EndpointTemplate = {
     name: "online-event/:id",
     code: "\nimport requests as reqs\n" +
       "\n" +
@@ -507,7 +507,7 @@ export class CommunityPythonTemplates {
     response: null
   }
 
-  public static online_event_admin_put: Template = {
+  public static online_event_admin_put: EndpointTemplate = {
     name: "online-event/admin",
     code: "\nimport requests as reqs\n" +
       "\n" +
@@ -528,7 +528,7 @@ export class CommunityPythonTemplates {
     response: null
   }
 
-  public static online_event_subscription_put: Template = {
+  public static online_event_subscription_put: EndpointTemplate = {
     name: "online-event/subscription",
     code: "\nimport requests as reqs\n" +
       "\n" +
@@ -570,7 +570,7 @@ export class CommunityPythonTemplates {
     response: null
   }
 
-  public static online_event_unsubscription_put: Template = {
+  public static online_event_unsubscription_put: EndpointTemplate = {
     name: "online-event/unsubscription",
     code: "\nimport requests as reqs\n" +
       "\n" +
@@ -612,7 +612,7 @@ export class CommunityPythonTemplates {
     response: null
   }
 
-  public static online_event_id_admin_delete: Template = {
+  public static online_event_id_admin_delete: EndpointTemplate = {
     name: "online-event/:id/admin",
     code: "\nimport requests as reqs\n" +
       "\n" +
@@ -623,7 +623,7 @@ export class CommunityPythonTemplates {
     response: null
   }
 
-  public static face_to_face_events_get: Template = {
+  public static face_to_face_events_get: EndpointTemplate = {
     name: "face-to-face-events",
     code: "\nimport requests as reqs\n" +
       "\n" +
@@ -962,7 +962,7 @@ export class CommunityPythonTemplates {
       "]"
   }
 
-  public static face_to_face_event_id_get: Template = {
+  public static face_to_face_event_id_get: EndpointTemplate = {
     name: "face-to-face-event/:id",
     code: "\nimport requests as reqs\n" +
       "\n" +
@@ -1099,7 +1099,7 @@ export class CommunityPythonTemplates {
       "    }"
   }
 
-  public static face_to_face_event_post: Template = {
+  public static face_to_face_event_post: EndpointTemplate = {
     name: "face-to-face-event",
     code: "\nimport requests as reqs\n" +
       "\n" +
@@ -1120,7 +1120,7 @@ export class CommunityPythonTemplates {
     response: null
   }
 
-  public static face_to_face_event_put: Template = {
+  public static face_to_face_event_put: EndpointTemplate = {
     name: "face-to-face-event",
     code: "\nimport requests as reqs\n" +
       "\n" +
@@ -1141,7 +1141,7 @@ export class CommunityPythonTemplates {
     response: null
   }
 
-  public static face_to_face_event_id_delete: Template = {
+  public static face_to_face_event_id_delete: EndpointTemplate = {
     name: "face-to-face-event/:id",
     code: "\nimport requests as reqs\n" +
       "\n" +
@@ -1152,7 +1152,7 @@ export class CommunityPythonTemplates {
     response: null
   }
 
-  public static face_to_face_event_admin_put: Template = {
+  public static face_to_face_event_admin_put: EndpointTemplate = {
     name: "face-to-face-event/admin",
     code: "\nimport requests as reqs\n" +
       "\n" +
@@ -1173,7 +1173,7 @@ export class CommunityPythonTemplates {
     response: null
   }
 
-  public static face_to_face_event_subscription_put: Template = {
+  public static face_to_face_event_subscription_put: EndpointTemplate = {
     name: "face-to-face-event/subscription",
     code: "\nimport requests as reqs\n" +
       "\n" +
@@ -1215,7 +1215,7 @@ export class CommunityPythonTemplates {
     response: null
   }
 
-  public static face_to_face_event_unsubscription_put: Template = {
+  public static face_to_face_event_unsubscription_put: EndpointTemplate = {
     name: "face-to-face-event/unsubscription",
     code: "\nimport requests as reqs\n" +
       "\n" +
@@ -1257,7 +1257,7 @@ export class CommunityPythonTemplates {
     response: null
   }
 
-  public static face_to_face_event_id_admin_delete: Template = {
+  public static face_to_face_event_id_admin_delete: EndpointTemplate = {
     name: "face-to-face-event/:id/admin",
     code: "\nimport requests as reqs\n" +
       "\n" +
@@ -1268,7 +1268,7 @@ export class CommunityPythonTemplates {
     response: null
   }
 
-  public static room_documents_room_id_get: Template = {
+  public static room_documents_room_id_get: EndpointTemplate = {
     name: "room-documents/:room_id",
     code: "\nimport requests as reqs\n" +
       "\n" +
@@ -1307,7 +1307,7 @@ export class CommunityPythonTemplates {
       "]"
   }
 
-  public static room_links_room_id_get: Template = {
+  public static room_links_room_id_get: EndpointTemplate = {
     name: "room-links/:room_id",
     code: "\nimport requests as reqs\n" +
       "\n" +
@@ -1331,7 +1331,7 @@ export class CommunityPythonTemplates {
       "]"
   }
 
-  public static direct_chats_get: Template = {
+  public static direct_chats_get: EndpointTemplate = {
     name: "direct-chats",
     code: "\nimport requests as reqs\n" +
       "\n" +
@@ -1507,7 +1507,7 @@ export class CommunityPythonTemplates {
       "]"
   }
 
-  public static direct_chats_all_get: Template = {
+  public static direct_chats_all_get: EndpointTemplate = {
     name: "direct-chats/all",
     code: "\nimport requests as reqs\n" +
       "\n" +
@@ -1683,7 +1683,7 @@ export class CommunityPythonTemplates {
       "]"
   }
 
-  public static direct_chat_id_get: Template = {
+  public static direct_chat_id_get: EndpointTemplate = {
     name: "direct-chat/:id",
     code: "\nimport requests as reqs\n" +
       "\n" +
@@ -1790,7 +1790,7 @@ export class CommunityPythonTemplates {
       "    }"
   }
 
-  public static direct_chat_post: Template = {
+  public static direct_chat_post: EndpointTemplate = {
     name: "direct-chat",
     code: "\nimport requests as reqs\n" +
       "\n" +
@@ -1827,7 +1827,7 @@ export class CommunityPythonTemplates {
     response: null
   }
 
-  public static direct_chat_id_delete: Template = {
+  public static direct_chat_id_delete: EndpointTemplate = {
     name: "direct-chat/:id",
     code: "\nimport requests as reqs\n" +
       "\n" +
@@ -1838,7 +1838,7 @@ export class CommunityPythonTemplates {
     response: null
   }
 
-  public static direct_chat_message_post: Template = {
+  public static direct_chat_message_post: EndpointTemplate = {
     name: "direct-chat/message",
     code: "\nimport requests as reqs\n" +
       "\n" +
@@ -1883,7 +1883,7 @@ export class CommunityPythonTemplates {
     response: null
   }
 
-  public static direct_chat_messages_room_id_get: Template = {
+  public static direct_chat_messages_room_id_get: EndpointTemplate = {
     name: "direct-chat/message/:room_id",
     code: "\nimport requests as reqs\n" +
       "\n" +
@@ -1931,7 +1931,7 @@ export class CommunityPythonTemplates {
       "]"
   }
 
-  public static direct_chat_message_id_delete: Template = {
+  public static direct_chat_message_id_delete: EndpointTemplate = {
     name: "direct-chat/message/:id",
     code: "\nimport requests as reqs\n" +
       "\n" +
@@ -1942,7 +1942,7 @@ export class CommunityPythonTemplates {
     response: null
   }
 
-  public static follow_up_rooms_get: Template = {
+  public static follow_up_rooms_get: EndpointTemplate = {
     name: "follow-up-rooms",
     code: "\nimport requests as reqs\n" +
       "\n" +
@@ -2117,7 +2117,7 @@ export class CommunityPythonTemplates {
       "]"
   }
 
-  public static follow_up_rooms_all_get: Template = {
+  public static follow_up_rooms_all_get: EndpointTemplate = {
     name: "follow-up-rooms/all",
     code: "\nimport requests as reqs\n" +
       "\n" +
@@ -2292,7 +2292,7 @@ export class CommunityPythonTemplates {
       "]"
   }
 
-  public static follow_up_room_id_get: Template = {
+  public static follow_up_room_id_get: EndpointTemplate = {
     name: "follow-up-rooms/:id",
     code: "\nimport requests as reqs\n" +
       "\n" +
@@ -2382,7 +2382,7 @@ export class CommunityPythonTemplates {
       "   }"
   }
 
-  public static follow_up_room_post: Template = {
+  public static follow_up_room_post: EndpointTemplate = {
     name: "follow-up-room",
     code: "\nimport requests as reqs\n" +
       "\n" +
@@ -2426,7 +2426,7 @@ export class CommunityPythonTemplates {
     response: null
   }
 
-  public static follow_up_room_put: Template = {
+  public static follow_up_room_put: EndpointTemplate = {
     name: "follow-up-room",
     code: "\nimport requests as reqs\n" +
       "\n" +
@@ -2467,7 +2467,7 @@ export class CommunityPythonTemplates {
     response: null
   }
 
-  public static follow_up_room_add_member_put: Template = {
+  public static follow_up_room_add_member_put: EndpointTemplate = {
     name: "follow-up-room/add-member",
     code: "\nimport requests as reqs\n" +
       "\n" +
@@ -2485,7 +2485,7 @@ export class CommunityPythonTemplates {
     response: null
   }
 
-  public static follow_up_room_leave_member_put: Template = {
+  public static follow_up_room_leave_member_put: EndpointTemplate = {
     name: "follow-up-rooms/leave-member",
     code: "\nimport requests as reqs\n" +
       "\n" +
@@ -2505,7 +2505,7 @@ export class CommunityPythonTemplates {
     response: null
   }
 
-  public static follow_up_room_open_put: Template = {
+  public static follow_up_room_open_put: EndpointTemplate = {
     name: "follow-up-room/open",
     code: "\nimport requests as reqs\n" +
       "\n" +
@@ -2520,7 +2520,7 @@ export class CommunityPythonTemplates {
     response: null
   }
 
-  public static follow_up_room_close_put: Template = {
+  public static follow_up_room_close_put: EndpointTemplate = {
     name: "follow-up-room/close",
     code: "\nimport requests as reqs\n" +
       "\n" +
@@ -2535,7 +2535,7 @@ export class CommunityPythonTemplates {
     response: null
   }
 
-  public static follow_up_room_id_delete: Template = {
+  public static follow_up_room_id_delete: EndpointTemplate = {
     name: "follow-up-room/:id",
     code: "\nimport requests as reqs\n" +
       "\n" +
@@ -2546,7 +2546,7 @@ export class CommunityPythonTemplates {
     response: null
   }
 
-  public static follow_up_room_message_post: Template = {
+  public static follow_up_room_message_post: EndpointTemplate = {
     name: "follow-up-room/message",
     code: "\nimport requests as reqs\n" +
       "\n" +
@@ -2590,7 +2590,7 @@ export class CommunityPythonTemplates {
     response: null
   }
 
-  public static follow_up_room_message_id_delete: Template = {
+  public static follow_up_room_message_id_delete: EndpointTemplate = {
     name: "follow-up-room/message/:id",
     code: "\nimport requests as reqs\n" +
       "\n" +
@@ -2601,7 +2601,7 @@ export class CommunityPythonTemplates {
     response: null
   }
 
-  public static follow_up_room_message_id_admin_delete: Template = {
+  public static follow_up_room_message_id_admin_delete: EndpointTemplate = {
     name: "follow-up-room/message/:id/admin",
     code: "\nimport requests as reqs\n" +
       "\n" +
@@ -2612,7 +2612,7 @@ export class CommunityPythonTemplates {
     response: null
   }
 
-  public static follow_up_room_messages_room_id_get: Template = {
+  public static follow_up_room_messages_room_id_get: EndpointTemplate = {
     name: "follow-up-room/messages/:room_id",
     code: "\nimport requests as reqs\n" +
       "\n" +
@@ -2662,7 +2662,7 @@ export class CommunityPythonTemplates {
       "]"
   }
 
-  public static public_channels_get: Template = {
+  public static public_channels_get: EndpointTemplate = {
     name: "public-channel",
     code: "\nimport requests as reqs\n" +
       "\n" +
@@ -2860,7 +2860,7 @@ export class CommunityPythonTemplates {
       "]"
   }
 
-  public static public_channel_id_get: Template = {
+  public static public_channel_id_get: EndpointTemplate = {
     name: "public-channel/:id",
     code: "\nimport requests as reqs\n" +
       "\n" +
@@ -2979,7 +2979,7 @@ export class CommunityPythonTemplates {
       "}"
   }
 
-  public static public_channel_post: Template = {
+  public static public_channel_post: EndpointTemplate = {
     name: "public-channel",
     code: "\nimport requests as reqs\n" +
       "\n" +
@@ -3022,7 +3022,7 @@ export class CommunityPythonTemplates {
     response: null
   }
 
-  public static public_channel_put: Template = {
+  public static public_channel_put: EndpointTemplate = {
     name: "public-channel",
     code: "\nimport requests as reqs\n" +
       "\n" +
@@ -3064,7 +3064,7 @@ export class CommunityPythonTemplates {
     response: null
   }
 
-  public static public_channel_id_delete: Template = {
+  public static public_channel_id_delete: EndpointTemplate = {
     name: "public-channel/:id",
     code: "\nimport requests as reqs\n" +
       "\n" +
@@ -3075,7 +3075,7 @@ export class CommunityPythonTemplates {
     response: null
   }
 
-  public static public_channel_admin_put: Template = {
+  public static public_channel_admin_put: EndpointTemplate = {
     name: "public-channel/admin",
     code: "\nimport requests as reqs\n" +
       "\n" +
@@ -3117,7 +3117,7 @@ export class CommunityPythonTemplates {
     response: null
   }
 
-  public static public_channel_id_admin_delete: Template = {
+  public static public_channel_id_admin_delete: EndpointTemplate = {
     name: "public-channel/:id/admin",
     code: "\nimport requests as reqs\n" +
       "\n" +
@@ -3128,7 +3128,7 @@ export class CommunityPythonTemplates {
     response: null
   }
 
-  public static public_channel_subscribe_put: Template = {
+  public static public_channel_subscribe_put: EndpointTemplate = {
     name: "public-channel/subscribe",
     code: "\nimport requests as reqs\n" +
       "\n" +
@@ -3144,7 +3144,7 @@ export class CommunityPythonTemplates {
     response: null
   }
 
-  public static public_channel_unsubscribe_put: Template = {
+  public static public_channel_unsubscribe_put: EndpointTemplate = {
     name: "public-channel/unsubscribe",
     code: "\nimport requests as reqs\n" +
       "\n" +
@@ -3153,6 +3153,7 @@ export class CommunityPythonTemplates {
       "BODY = {\n" +
       "  \"id\":\"1\",\n" +
       "  \"memberId\":\"2\"\n" +
+      "  \"newOwnerMemberId\": \"5\"\n" +
       "}\n" +
       "\n" +
       "response = reqs.put(URL, data=BODY)\n" +
@@ -3160,7 +3161,7 @@ export class CommunityPythonTemplates {
     response: null
   }
 
-  public static public_channel_message_post: Template = {
+  public static public_channel_message_post: EndpointTemplate = {
     name: "public-channel/message",
     code: "\nimport requests as reqs\n" +
       "\n" +
@@ -3204,7 +3205,7 @@ export class CommunityPythonTemplates {
     response: null
   }
 
-  public static public_channel_message_id_delete: Template = {
+  public static public_channel_message_id_delete: EndpointTemplate = {
     name: "public-channel/message/:id",
     code: "\nimport requests as reqs\n" +
       "\n" +
@@ -3215,7 +3216,7 @@ export class CommunityPythonTemplates {
     response: null
   }
 
-  public static public_channel_message_id_admin_delete: Template = {
+  public static public_channel_message_id_admin_delete: EndpointTemplate = {
     name: "public-channel/message/:id/admin",
     code: "\nimport requests as reqs\n" +
       "\n" +
@@ -3226,7 +3227,7 @@ export class CommunityPythonTemplates {
     response: null
   }
 
-  public static public_channel_messages_room_id_get: Template = {
+  public static public_channel_messages_room_id_get: EndpointTemplate = {
     name: "public-channel/message/:roomId",
     code: "\nimport requests as reqs\n" +
       "\n" +
@@ -3301,7 +3302,7 @@ export class CommunityPythonTemplates {
       "]"
   }
 
-  public static wall_post_post: Template = {
+  public static wall_post_post: EndpointTemplate = {
     name: "wall-post",
     code: "\nimport requests as reqs\n" +
       "\n" +
@@ -3420,7 +3421,7 @@ export class CommunityPythonTemplates {
     response: null
   }
 
-  public static wall_post_put: Template = {
+  public static wall_post_put: EndpointTemplate = {
     name: "wall-post",
     code: "\nimport requests as reqs\n" +
       "\n" +
@@ -3442,7 +3443,7 @@ export class CommunityPythonTemplates {
     response: null
   }
 
-  public static wall_post_id_delete: Template = {
+  public static wall_post_id_delete: EndpointTemplate = {
     name: "wall-post/:id",
     code: "\nimport requests as reqs\n" +
       "\n" +
@@ -3453,7 +3454,7 @@ export class CommunityPythonTemplates {
     response: null
   }
 
-  public static wall_post_admin_put: Template = {
+  public static wall_post_admin_put: EndpointTemplate = {
     name: "wall-post/admin",
     code: "\nimport requests as reqs\n" +
       "\n" +
@@ -3475,7 +3476,7 @@ export class CommunityPythonTemplates {
     response: null
   }
 
-  public static wall_post_id_admin_delete: Template = {
+  public static wall_post_id_admin_delete: EndpointTemplate = {
     name: "wall-post/:id/admin",
     code: "\nimport requests as reqs\n" +
       "\n" +
@@ -3486,7 +3487,7 @@ export class CommunityPythonTemplates {
     response: null
   }
 
-  public static wall_post_like_put: Template = {
+  public static wall_post_like_put: EndpointTemplate = {
     name: "wall-post/like",
     code: "\nimport requests as reqs\n" +
       "\n" +
@@ -3501,7 +3502,7 @@ export class CommunityPythonTemplates {
       "print(response.text)",
     response: null
   }
-  public static wall_post_unlike_put: Template = {
+  public static wall_post_unlike_put: EndpointTemplate = {
     name: "wall-post/unlike",
     code: "\nimport requests as reqs\n" +
       "\n" +
@@ -3517,7 +3518,7 @@ export class CommunityPythonTemplates {
     response: null
   }
 
-  public static wall_post_comment_post: Template = {
+  public static wall_post_comment_post: EndpointTemplate = {
     name: "wall-post/comment",
     code: "\nimport requests as reqs\n" +
       "\n" +
@@ -3564,7 +3565,7 @@ export class CommunityPythonTemplates {
     response: null
   }
 
-  public static wall_post_comment_like_put: Template = {
+  public static wall_post_comment_like_put: EndpointTemplate = {
     name: "wall-post/comment/like",
     code: "\nimport requests as reqs\n" +
       "\n" +
@@ -3581,7 +3582,7 @@ export class CommunityPythonTemplates {
     response: null
   }
 
-  public static wall_post_comment_unlike_put: Template = {
+  public static wall_post_comment_unlike_put: EndpointTemplate = {
     name: "wall-post/comment/unlike",
     code: "\nimport requests as reqs\n" +
       "\n" +
@@ -3598,7 +3599,7 @@ export class CommunityPythonTemplates {
     response: null
   }
 
-  public static wall_post_id_get: Template = {
+  public static wall_post_id_get: EndpointTemplate = {
     name: "wall-post/:id",
     code: "\nimport requests as reqs\n" +
       "\n" +
@@ -3778,7 +3779,7 @@ export class CommunityPythonTemplates {
       "    }"
   }
 
-  public static wall_posts_get: Template = {
+  public static wall_posts_get: EndpointTemplate = {
     name: "wall-posts",
     code: "\nimport requests as reqs\n" +
       "\n" +
@@ -4220,7 +4221,7 @@ export class CommunityPythonTemplates {
       "]"
   }
 
-  public static actors_get: Template = {
+  public static actors_get: EndpointTemplate = {
     name: "actors",
     code: "\nimport requests as reqs\n" +
       "\n" +
@@ -4481,7 +4482,7 @@ export class CommunityPythonTemplates {
       "]"
   }
 
-  public static actors_import_csv_post: Template = {
+  public static actors_import_csv_post: EndpointTemplate = {
     name: "actors/import/csv",
     code: "\nimport requests as reqs\n" +
       "\n" +
@@ -4492,7 +4493,7 @@ export class CommunityPythonTemplates {
     response: null
   }
 
-  public static actors_by_name_and_state_get: Template = {
+  public static actors_by_name_and_state_get: EndpointTemplate = {
     name: "actors/by-name-and-state",
     code: "\nimport requests as reqs\n" +
       "\n" +
@@ -4719,7 +4720,7 @@ export class CommunityPythonTemplates {
       "]"
   }
 
-  public static actors_by_type_get: Template = {
+  public static actors_by_type_get: EndpointTemplate = {
     name: "actors/by-type",
     code: "\nimport requests as reqs\n" +
       "\n" +
@@ -4908,7 +4909,7 @@ export class CommunityPythonTemplates {
       "]"
   }
 
-  public static actors_by_state_get: Template = {
+  public static actors_by_state_get: EndpointTemplate = {
     name: "actors/by-state",
     code: "\nimport requests as reqs\n" +
       "\n" +
@@ -5201,7 +5202,7 @@ export class CommunityPythonTemplates {
       "]"
   }
 
-  public static actors_by_member_get: Template = {
+  public static actors_by_member_get: EndpointTemplate = {
     name: "actors/by-member",
     code: "\nimport requests as reqs\n" +
       "\n" +
@@ -5524,7 +5525,7 @@ export class CommunityPythonTemplates {
       "]"
   }
 
-  public static actor_id_get: Template = {
+  public static actor_id_get: EndpointTemplate = {
     name: "actor/:id",
     code: "\nimport requests as reqs\n" +
       "\n" +
@@ -5654,7 +5655,7 @@ export class CommunityPythonTemplates {
       "}"
   }
 
-  public static actor_post: Template = {
+  public static actor_post: EndpointTemplate = {
     name: "actor",
     code: "\nimport requests as reqs\n" +
       "\n" +
@@ -5786,7 +5787,7 @@ export class CommunityPythonTemplates {
     response: null
   }
 
-  public static actor_put: Template = {
+  public static actor_put: EndpointTemplate = {
     name: "actor",
     code: "\nimport requests as reqs\n" +
       "\n" +
@@ -5884,7 +5885,7 @@ export class CommunityPythonTemplates {
     response: null
   }
 
-  public static actor_accept_put: Template = {
+  public static actor_accept_put: EndpointTemplate = {
     name: "actor/accept",
     code: "\nimport requests as reqs\n" +
       "\n" +
@@ -5899,7 +5900,7 @@ export class CommunityPythonTemplates {
     response: null
   }
 
-  public static actor_reject_put: Template = {
+  public static actor_reject_put: EndpointTemplate = {
     name: "actor/reject",
     code: "\nimport requests as reqs\n" +
       "\n" +
@@ -5914,7 +5915,7 @@ export class CommunityPythonTemplates {
     response: null
   }
 
-  public static actor_id_delete: Template = {
+  public static actor_id_delete: EndpointTemplate = {
     name: "actor/:id",
     code: "\nimport requests as reqs\n" +
       "\n" +
@@ -5925,7 +5926,7 @@ export class CommunityPythonTemplates {
     response: null
   }
 
-  public static fcm_token_put: Template = {
+  public static fcm_token_put: EndpointTemplate = {
     name: "fcmToken",
     code: "\nimport requests as reqs\n" +
       "\n" +
@@ -5947,7 +5948,7 @@ export class CommunityPythonTemplates {
     response: null
   }
 
-  public static member_logged_in_get: Template = {
+  public static member_logged_in_get: EndpointTemplate = {
     name: "member/logged-in",
     code: "\nimport requests as reqs\n" +
       "\n" +
@@ -6184,7 +6185,7 @@ export class CommunityPythonTemplates {
       "}"
   }
 
-  public static members_get: Template = {
+  public static members_get: EndpointTemplate = {
     name: "members",
     code: "\nimport requests as reqs\n" +
       "\n" +
@@ -6343,7 +6344,7 @@ export class CommunityPythonTemplates {
       "]"
   }
 
-  public static member_id_get: Template = {
+  public static member_id_get: EndpointTemplate = {
     name: "member/:id",
     code: "\nimport requests as reqs\n" +
       "\n" +
@@ -6427,7 +6428,7 @@ export class CommunityPythonTemplates {
       "    }"
   }
 
-  public static member_id_marker_get: Template = {
+  public static member_id_marker_get: EndpointTemplate = {
     name: "member/:id/marker",
     code: "\nimport requests as reqs\n" +
       "\n" +
@@ -6438,7 +6439,7 @@ export class CommunityPythonTemplates {
     response: "This endpoint download a svg file"
   }
 
-  public static member_put: Template = {
+  public static member_put: EndpointTemplate = {
     name: "member",
     code: "\nimport requests as reqs\n" +
       "\n" +
@@ -6468,7 +6469,7 @@ export class CommunityPythonTemplates {
     response: null
   }
 
-  public static member_id_delete: Template = {
+  public static member_id_delete: EndpointTemplate = {
     name: "member",
     code: "\nimport requests as reqs\n" +
       "\n" +
@@ -6479,7 +6480,7 @@ export class CommunityPythonTemplates {
     response: null
   }
 
-  public static education_post: Template = {
+  public static education_post: EndpointTemplate = {
     name: "education",
     code: "\nimport requests as reqs\n" +
       "\n" +
@@ -6521,7 +6522,7 @@ export class CommunityPythonTemplates {
     response: null
   }
 
-  public static education_put: Template = {
+  public static education_put: EndpointTemplate = {
     name: "education",
     code: "\nimport requests as reqs\n" +
       "\n" +
@@ -6563,7 +6564,7 @@ export class CommunityPythonTemplates {
     response: null
   }
 
-  public static education_id_delete: Template = {
+  public static education_id_delete: EndpointTemplate = {
     name: "education/:id",
     code: "\nimport requests as reqs\n" +
       "\n" +
@@ -6574,7 +6575,7 @@ export class CommunityPythonTemplates {
     response: null
   }
 
-  public static experience_post: Template = {
+  public static experience_post: EndpointTemplate = {
     name: "experience",
     code: "\nimport requests as reqs\n" +
       "\n" +
@@ -6607,7 +6608,7 @@ export class CommunityPythonTemplates {
     response: null
   }
 
-  public static experience_put: Template = {
+  public static experience_put: EndpointTemplate = {
     name: "experience",
     code: "\nimport requests as reqs\n" +
       "\n" +
@@ -6640,7 +6641,7 @@ export class CommunityPythonTemplates {
     response: null
   }
 
-  public static experience_id_delete: Template = {
+  public static experience_id_delete: EndpointTemplate = {
     name: "experience/:id",
     code: "\nimport requests as reqs\n" +
       "\n" +
@@ -6651,7 +6652,7 @@ export class CommunityPythonTemplates {
     response: null
   }
 
-  public static projects_get: Template = {
+  public static projects_get: EndpointTemplate = {
     name: "projects",
     code: "\nimport requests as reqs\n" +
       "\n" +
@@ -7071,7 +7072,7 @@ export class CommunityPythonTemplates {
       "]"
   }
 
-  public static project_id_get: Template = {
+  public static project_id_get: EndpointTemplate = {
     name: "project/:id",
     code: "\nimport requests as reqs\n" +
       "\n" +
@@ -7318,7 +7319,7 @@ export class CommunityPythonTemplates {
       "}"
   }
 
-  public static project_post: Template = {
+  public static project_post: EndpointTemplate = {
     name: "project",
     code: "\nimport requests as reqs\n" +
       "\n" +
@@ -7365,7 +7366,7 @@ export class CommunityPythonTemplates {
     response: null
   }
 
-  public static project_put: Template = {
+  public static project_put: EndpointTemplate = {
     name: "project",
     code: "\nimport requests as reqs\n" +
       "\n" +
@@ -7412,7 +7413,7 @@ export class CommunityPythonTemplates {
     response: null
   }
 
-  public static project_id_delete: Template = {
+  public static project_id_delete: EndpointTemplate = {
     name: "project/:id",
     code: "\nimport requests as reqs\n" +
       "\n" +

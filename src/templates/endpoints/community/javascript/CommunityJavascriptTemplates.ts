@@ -1,8 +1,8 @@
-import { Template } from '../../../../app/model/Template';
+import {EndpointTemplate} from '../../../../app/model/EndpointTemplate';
 
 export class CommunityJavascriptTemplates {
 
-  public static version_get: Template = {
+  public static version_get: EndpointTemplate = {
     name: "version",
     code: "\nconst url = 'https://dev.moonshot.ceo/api/community/version';\n" +
       "\n" +
@@ -12,7 +12,7 @@ export class CommunityJavascriptTemplates {
     response: "\n\"2.0.2.r15-SNAPSHOT\""
   }
 
-  public static online_events_get: Template = {
+  public static online_events_get: EndpointTemplate = {
     name: "online-events",
     code: "\nconst url = 'https://dev.moonshot.ceo/api/community/online-events';\n" +
       "\n" +
@@ -233,7 +233,7 @@ export class CommunityJavascriptTemplates {
       "]"
   }
 
-  public static online_events_id_get: Template = {
+  public static online_events_id_get: EndpointTemplate = {
     name: "online-event/:id",
     code: "\nconst url = 'https://dev.moonshot.ceo/api/community/online-event/4';\n" +
       "\n" +
@@ -452,7 +452,7 @@ export class CommunityJavascriptTemplates {
       "    }"
   }
 
-  public static online_event_post: Template = {
+  public static online_event_post: EndpointTemplate = {
     name: "online-event",
     code: "\nconst url = 'https://dev.moonshot.ceo/api/community/online-event';\n" +
       "\n" +
@@ -475,7 +475,7 @@ export class CommunityJavascriptTemplates {
     response: null
   }
 
-  public static online_event_put: Template = {
+  public static online_event_put: EndpointTemplate = {
     name: "online-event",
     code: "\nconst url = 'https://dev.moonshot.ceo/api/community/online-event';\n" +
       "\n" +
@@ -498,7 +498,7 @@ export class CommunityJavascriptTemplates {
     response: null
   }
 
-  public static online_event_id_delete: Template = {
+  public static online_event_id_delete: EndpointTemplate = {
     name: "online-event/:id",
     code: "\nconst url = 'https://dev.moonshot.ceo/api/community/online-event/4';\n" +
       "\n" +
@@ -510,7 +510,7 @@ export class CommunityJavascriptTemplates {
     response: null
   }
 
-  public static online_event_admin_put: Template = {
+  public static online_event_admin_put: EndpointTemplate = {
     name: "online-event/admin",
     code: "\nconst url = 'https://dev.moonshot.ceo/api/community/online-event/admin';\n" +
       "\n" +
@@ -533,7 +533,7 @@ export class CommunityJavascriptTemplates {
     response: null
   }
 
-  public static online_event_subscription_put: Template = {
+  public static online_event_subscription_put: EndpointTemplate = {
     name: "online-event/subscription",
     code: "\nconst url = 'https://dev.moonshot.ceo/api/community/online-event/subscription';\n" +
       "\n" +
@@ -577,7 +577,7 @@ export class CommunityJavascriptTemplates {
     response: null
   }
 
-  public static online_event_unsubscription_put: Template = {
+  public static online_event_unsubscription_put: EndpointTemplate = {
     name: "online-event/unsubscription",
     code: "\nconst url = 'https://dev.moonshot.ceo/api/community/online-event/unsubscription';\n" +
       "\n" +
@@ -621,7 +621,7 @@ export class CommunityJavascriptTemplates {
     response: null
   }
 
-  public static online_event_id_admin_delete: Template = {
+  public static online_event_id_admin_delete: EndpointTemplate = {
     name: "online-event/:id/admin",
     code: "\nconst url = 'https://dev.moonshot.ceo/api/community/online-event/4/admin';\n" +
       "\n" +
@@ -633,7 +633,7 @@ export class CommunityJavascriptTemplates {
     response: null
   }
 
-  public static face_to_face_events_get: Template = {
+  public static face_to_face_events_get: EndpointTemplate = {
     name: "face-to-face-events",
     code: "\nconst url = 'https://dev.moonshot.ceo/api/community/face-to-face-events';\n" +
       "\n" +
@@ -971,7 +971,7 @@ export class CommunityJavascriptTemplates {
       "]"
   }
 
-  public static face_to_face_event_id_get: Template = {
+  public static face_to_face_event_id_get: EndpointTemplate = {
     name: "face-to-face-event/:id",
     code: "\nconst url = 'https://dev.moonshot.ceo/api/community/face-to-face-event/1';\n" +
       "\n" +
@@ -1107,7 +1107,7 @@ export class CommunityJavascriptTemplates {
       "    }"
   }
 
-  public static face_to_face_event_post: Template = {
+  public static face_to_face_event_post: EndpointTemplate = {
     name: "face-to-face-event",
     code: "\nconst url = 'https://dev.moonshot.ceo/api/community/face-to-face-event';\n" +
       "\n" +
@@ -1130,7 +1130,7 @@ export class CommunityJavascriptTemplates {
     response: null
   }
 
-  public static face_to_face_event_put: Template = {
+  public static face_to_face_event_put: EndpointTemplate = {
     name: "face-to-face-event",
     code: "\nconst url = 'https://dev.moonshot.ceo/api/community/face-to-face-event';\n" +
       "\n" +
@@ -1153,7 +1153,7 @@ export class CommunityJavascriptTemplates {
     response: null
   }
 
-  public static face_to_face_event_id_delete: Template = {
+  public static face_to_face_event_id_delete: EndpointTemplate = {
     name: "face-to-face-event/:id",
     code: "\nconst url = 'https://dev.moonshot.ceo/api/community/face-to-face-event/1';\n" +
       "\n" +
@@ -1165,7 +1165,7 @@ export class CommunityJavascriptTemplates {
     response: null
   }
 
-  public static face_to_face_event_admin_put: Template = {
+  public static face_to_face_event_admin_put: EndpointTemplate = {
     name: "face-to-face-event/admin",
     code: "\nconst url = 'https://dev.moonshot.ceo/api/community/face-to-face-event/admin';\n" +
       "\n" +
@@ -1188,7 +1188,7 @@ export class CommunityJavascriptTemplates {
     response: null
   }
 
-  public static face_to_face_event_subscription_put: Template = {
+  public static face_to_face_event_subscription_put: EndpointTemplate = {
     name: "face-to-face-event/subscription",
     code: "\nconst url = 'https://dev.moonshot.ceo/api/community/face-to-face-event/subscription';\n" +
       "\n" +
@@ -1232,7 +1232,7 @@ export class CommunityJavascriptTemplates {
     response: null
   }
 
-  public static face_to_face_event_unsubscription_put: Template = {
+  public static face_to_face_event_unsubscription_put: EndpointTemplate = {
     name: "face-to-face-event/unsubscription",
     code: "\nconst url = 'https://dev.moonshot.ceo/api/community/face-to-face-event/unsubscription';\n" +
       "\n" +
@@ -1276,7 +1276,7 @@ export class CommunityJavascriptTemplates {
     response: null
   }
 
-  public static face_to_face_event_id_admin_delete: Template = {
+  public static face_to_face_event_id_admin_delete: EndpointTemplate = {
     name: "face-to-face-event/:id/admin",
     code: "\nconst url = 'https://dev.moonshot.ceo/api/community/face-to-face-event/4/admin';\n" +
       "\n" +
@@ -1288,7 +1288,7 @@ export class CommunityJavascriptTemplates {
     response: null
   }
 
-  public static room_documents_room_id_get: Template = {
+  public static room_documents_room_id_get: EndpointTemplate = {
     name: "room-documents/:room_id",
     code: "\nconst url = 'https://dev.moonshot.ceo/api/community/room-documents/1';\n" +
       "\n" +
@@ -1326,7 +1326,7 @@ export class CommunityJavascriptTemplates {
       "]"
   }
 
-  public static room_links_room_id_get: Template = {
+  public static room_links_room_id_get: EndpointTemplate = {
     name: "room-links/:room_id",
     code: "\nconst url = 'https://dev.moonshot.ceo/api/community/room-links/1';\n" +
       "\n" +
@@ -1349,7 +1349,7 @@ export class CommunityJavascriptTemplates {
       "]"
   }
 
-  public static direct_chats_get: Template = {
+  public static direct_chats_get: EndpointTemplate = {
     name: "direct-chats",
     code: "\nconst url = 'https://dev.moonshot.ceo/api/community/direct-chats';\n" +
       "\n" +
@@ -1524,7 +1524,7 @@ export class CommunityJavascriptTemplates {
       "]"
   }
 
-  public static direct_chats_all_get: Template = {
+  public static direct_chats_all_get: EndpointTemplate = {
     name: "direct-chats/all",
     code: "\nconst url = 'https://dev.moonshot.ceo/api/community/direct-chats/all';\n" +
       "\n" +
@@ -1699,7 +1699,7 @@ export class CommunityJavascriptTemplates {
       "]"
   }
 
-  public static direct_chat_id_get: Template = {
+  public static direct_chat_id_get: EndpointTemplate = {
     name: "direct-chat/:id",
     code: "\nconst url = 'https://dev.moonshot.ceo/api/community/direct-chat/1';\n" +
       "\n" +
@@ -1805,7 +1805,7 @@ export class CommunityJavascriptTemplates {
       "    }"
   }
 
-  public static direct_chat_post: Template = {
+  public static direct_chat_post: EndpointTemplate = {
     name: "direct-chat",
     code: "\nconst url = 'https://dev.moonshot.ceo/api/community/direct-chat';\n" +
       "\n" +
@@ -1844,7 +1844,7 @@ export class CommunityJavascriptTemplates {
     response: null
   }
 
-  public static direct_chat_id_delete: Template = {
+  public static direct_chat_id_delete: EndpointTemplate = {
     name: "direct-chat/:id",
     code: "\nconst url = 'https://dev.moonshot.ceo/api/community/direct-chat/4';\n" +
       "\n" +
@@ -1856,7 +1856,7 @@ export class CommunityJavascriptTemplates {
     response: null
   }
 
-  public static direct_chat_message_post: Template = {
+  public static direct_chat_message_post: EndpointTemplate = {
     name: "direct-chat/message",
     code: "\nconst url = 'https://dev.moonshot.ceo/api/community/direct-chat/message';\n" +
       "\n" +
@@ -1902,7 +1902,7 @@ export class CommunityJavascriptTemplates {
     response: null
   }
 
-  public static direct_chat_messages_room_id_get: Template = {
+  public static direct_chat_messages_room_id_get: EndpointTemplate = {
     name: "direct-chat/message/:room_id",
     code: "\nconst url = 'https://dev.moonshot.ceo/api/community/direct-chat/messages/1';\n" +
       "\n" +
@@ -1949,7 +1949,7 @@ export class CommunityJavascriptTemplates {
       "]"
   }
 
-  public static direct_chat_message_id_delete: Template = {
+  public static direct_chat_message_id_delete: EndpointTemplate = {
     name: "direct-chat/message/:id",
     code: "\nconst url = 'https://dev.moonshot.ceo/api/community/direct-chat/message/1';\n" +
       "\n" +
@@ -1961,7 +1961,7 @@ export class CommunityJavascriptTemplates {
     response: null
   }
 
-  public static follow_up_rooms_get: Template = {
+  public static follow_up_rooms_get: EndpointTemplate = {
     name: "follow-up-rooms",
     code: "\nconst url = 'https://dev.moonshot.ceo/api/community/follow-up-rooms';\n" +
       "\n" +
@@ -2135,7 +2135,7 @@ export class CommunityJavascriptTemplates {
       "]"
   }
 
-  public static follow_up_rooms_all_get: Template = {
+  public static follow_up_rooms_all_get: EndpointTemplate = {
     name: "follow-up-rooms/all",
     code: "\nconst url = 'https://dev.moonshot.ceo/api/community/follow-up-rooms/all';\n" +
       "\n" +
@@ -2309,7 +2309,7 @@ export class CommunityJavascriptTemplates {
       "]"
   }
 
-  public static follow_up_room_id_get: Template = {
+  public static follow_up_room_id_get: EndpointTemplate = {
     name: "follow-up-rooms/:id",
     code: "\nconst url = 'https://dev.moonshot.ceo/api/community/follow-up-room/1';\n" +
       "\n" +
@@ -2398,7 +2398,7 @@ export class CommunityJavascriptTemplates {
       "   }"
   }
 
-  public static follow_up_room_post: Template = {
+  public static follow_up_room_post: EndpointTemplate = {
     name: "follow-up-room",
     code: "\nconst url = 'https://dev.moonshot.ceo/api/community/follow-up-room';\n" +
       "\n" +
@@ -2444,7 +2444,7 @@ export class CommunityJavascriptTemplates {
     response: null
   }
 
-  public static follow_up_room_put: Template = {
+  public static follow_up_room_put: EndpointTemplate = {
     name: "follow-up-room",
     code: "\nconst url = 'https://dev.moonshot.ceo/api/community/follow-up-room';\n" +
       "\n" +
@@ -2487,7 +2487,7 @@ export class CommunityJavascriptTemplates {
     response: null
   }
 
-  public static follow_up_room_add_member_put: Template = {
+  public static follow_up_room_add_member_put: EndpointTemplate = {
     name: "follow-up-rooms/add-member",
     code: "\nconst url = 'https://dev.moonshot.ceo/api/community/follow-up-room/add-member';\n" +
       "\n" +
@@ -2507,7 +2507,7 @@ export class CommunityJavascriptTemplates {
     response: null
   }
 
-  public static follow_up_room_leave_member_put: Template = {
+  public static follow_up_room_leave_member_put: EndpointTemplate = {
     name: "follow-up-rooms/leave-member",
     code: "\nconst url = 'https://dev.moonshot.ceo/api/community/follow-up-room/leave-member';\n" +
       "\n" +
@@ -2529,7 +2529,7 @@ export class CommunityJavascriptTemplates {
     response: null
   }
 
-  public static follow_up_room_open_put: Template = {
+  public static follow_up_room_open_put: EndpointTemplate = {
     name: "follow-up-room/open",
     code: "\nconst url = 'https://dev.moonshot.ceo/api/community/follow-up-room/open';\n" +
       "\n" +
@@ -2546,7 +2546,7 @@ export class CommunityJavascriptTemplates {
     response: null
   }
 
-  public static follow_up_room_close_put: Template = {
+  public static follow_up_room_close_put: EndpointTemplate = {
     name: "follow-up-room/close",
     code: "\nconst url = 'https://dev.moonshot.ceo/api/community/follow-up-room/close';\n" +
       "\n" +
@@ -2563,7 +2563,7 @@ export class CommunityJavascriptTemplates {
     response: null
   }
 
-  public static follow_up_room_id_delete: Template = {
+  public static follow_up_room_id_delete: EndpointTemplate = {
     name: "follow-up-room/:id",
     code: "\nconst url = 'https://dev.moonshot.ceo/api/community/follow-up-room/1';\n" +
       "\n" +
@@ -2575,7 +2575,7 @@ export class CommunityJavascriptTemplates {
     response: null
   }
 
-  public static follow_up_room_message_post: Template = {
+  public static follow_up_room_message_post: EndpointTemplate = {
     name: "follow-up-room/message",
     code: "\nconst url = 'https://dev.moonshot.ceo/api/community/follow-up-room/message';\n" +
       "\n" +
@@ -2621,7 +2621,7 @@ export class CommunityJavascriptTemplates {
     response: null
   }
 
-  public static follow_up_room_message_id_delete: Template = {
+  public static follow_up_room_message_id_delete: EndpointTemplate = {
     name: "follow-up-room/message/:id",
     code: "\nconst url = 'https://dev.moonshot.ceo/api/community/follow-up-room/message/1';\n" +
       "\n" +
@@ -2633,7 +2633,7 @@ export class CommunityJavascriptTemplates {
     response: null
   }
 
-  public static follow_up_room_message_id_admin_delete: Template = {
+  public static follow_up_room_message_id_admin_delete: EndpointTemplate = {
     name: "follow-up-room/message/:id/admin",
     code: "\nconst url = 'https://dev.moonshot.ceo/api/community/follow-up-room/message/1/admin';\n" +
       "\n" +
@@ -2645,7 +2645,7 @@ export class CommunityJavascriptTemplates {
     response: null
   }
 
-  public static follow_up_room_messages_room_id_get: Template = {
+  public static follow_up_room_messages_room_id_get: EndpointTemplate = {
     name: "follow-up-room/messages/:room_id",
     code: "\nconst url = 'https://dev.moonshot.ceo/api/community/follow-up-room/messages/1';\n" +
       "\n" +
@@ -2694,7 +2694,7 @@ export class CommunityJavascriptTemplates {
       "]"
   }
 
-  public static public_channels_get: Template = {
+  public static public_channels_get: EndpointTemplate = {
     name: "public-channels",
     code: "\nconst url = 'https://dev.moonshot.ceo/api/community/public-channels';\n" +
       "\n" +
@@ -2891,7 +2891,7 @@ export class CommunityJavascriptTemplates {
       "]"
   }
 
-  public static public_channel_id_get: Template = {
+  public static public_channel_id_get: EndpointTemplate = {
     name: "public-channel/:id",
     code: "\nconst url = 'https://dev.moonshot.ceo/api/community/public-channel/1';\n" +
       "\n" +
@@ -3009,7 +3009,7 @@ export class CommunityJavascriptTemplates {
       "}"
   }
 
-  public static public_channel_post: Template = {
+  public static public_channel_post: EndpointTemplate = {
     name: "public-channel",
     code: "\nconst url = 'https://dev.moonshot.ceo/api/community/public-channel';\n" +
       "\n" +
@@ -3054,7 +3054,7 @@ export class CommunityJavascriptTemplates {
     response: null
   }
 
-  public static public_channel_put: Template = {
+  public static public_channel_put: EndpointTemplate = {
     name: "public-channel",
     code: "\nconst url = 'https://dev.moonshot.ceo/api/community/public-channel';\n" +
       "\n" +
@@ -3098,7 +3098,7 @@ export class CommunityJavascriptTemplates {
     response: null
   }
 
-  public static public_channel_id_delete: Template = {
+  public static public_channel_id_delete: EndpointTemplate = {
     name: "public-channel/:id",
     code: "\nconst url = 'https://dev.moonshot.ceo/api/community/public-channel/1';\n" +
       "\n" +
@@ -3110,7 +3110,7 @@ export class CommunityJavascriptTemplates {
     response: null
   }
 
-  public static public_channel_admin_put: Template = {
+  public static public_channel_admin_put: EndpointTemplate = {
     name: "public-channel/admin",
     code: "\nconst url = 'https://dev.moonshot.ceo/api/community/public-channel/admin';\n" +
       "\n" +
@@ -3154,7 +3154,7 @@ export class CommunityJavascriptTemplates {
     response: null
   }
 
-  public static public_channel_id_admin_delete: Template = {
+  public static public_channel_id_admin_delete: EndpointTemplate = {
     name: "public-channel/:id/admin",
     code: "\nconst url = 'https://dev.moonshot.ceo/api/community/public-channel/1/admin';\n" +
       "\n" +
@@ -3166,7 +3166,7 @@ export class CommunityJavascriptTemplates {
     response: null
   }
 
-  public static public_channel_subscribe_put: Template = {
+  public static public_channel_subscribe_put: EndpointTemplate = {
     name: "public-channel/subscribe",
     code: "\nconst url = 'https://dev.moonshot.ceo/api/community/public-channel/subscribe';\n" +
       "\n" +
@@ -3183,13 +3183,14 @@ export class CommunityJavascriptTemplates {
     response: null
   }
 
-  public static public_channel_unsubscribe_put: Template = {
+  public static public_channel_unsubscribe_put: EndpointTemplate = {
     name: "public-channel/unsubscribe",
     code: "\nconst url = 'https://dev.moonshot.ceo/api/community/public-channel/unsubscribe';\n" +
       "\n" +
       "const body = {\n" +
       "  \"id\":\"1\",\n" +
-      "  \"memberId\":\"2\"\n}\n" +
+      "  \"memberId\":\"2\",\n" +
+      "  \"newOwnerMemberId\": \"5\"\n}\n" +
       "\n" +
       "fetch(url, {\n" +
       "  method: 'PUT',\n" +
@@ -3200,7 +3201,7 @@ export class CommunityJavascriptTemplates {
     response: null
   }
 
-  public static public_channel_message_post: Template = {
+  public static public_channel_message_post: EndpointTemplate = {
     name: "public-channel/message",
     code: "\nconst url = 'https://dev.moonshot.ceo/api/community/public-channel/message';\n" +
       "\n" +
@@ -3246,7 +3247,7 @@ export class CommunityJavascriptTemplates {
     response: null
   }
 
-  public static public_channel_message_id_delete: Template = {
+  public static public_channel_message_id_delete: EndpointTemplate = {
     name: "public-channel/message/:id",
     code: "\nconst url = 'https://dev.moonshot.ceo/api/community/public-channel/message/1';\n" +
       "\n" +
@@ -3258,7 +3259,7 @@ export class CommunityJavascriptTemplates {
     response: null
   }
 
-  public static public_channel_message_id_admin_delete: Template = {
+  public static public_channel_message_id_admin_delete: EndpointTemplate = {
     name: "public-channel/message/:id/admin",
     code: "\nconst url = 'https://dev.moonshot.ceo/api/community/public-channel/message/1/admin';\n" +
       "\n" +
@@ -3270,7 +3271,7 @@ export class CommunityJavascriptTemplates {
     response: null
   }
 
-  public static public_channel_messages_room_id_get: Template = {
+  public static public_channel_messages_room_id_get: EndpointTemplate = {
     name: "public-channel/messages/:room_id",
     code: "\nconst url = 'https://dev.moonshot.ceo/api/community/public-channel/messages/3';\n" +
       "\n" +
@@ -3344,7 +3345,7 @@ export class CommunityJavascriptTemplates {
       "]"
   }
 
-  public static wall_post_post: Template = {
+  public static wall_post_post: EndpointTemplate = {
     name: "wall-post",
     code: "\nconst url = 'https://dev.moonshot.ceo/api/community/wall-post';\n" +
       "\n" +
@@ -3465,7 +3466,7 @@ export class CommunityJavascriptTemplates {
     response: null
   }
 
-  public static wall_post_put: Template = {
+  public static wall_post_put: EndpointTemplate = {
     name: "wall-post",
     code: "\nconst url = 'https://dev.moonshot.ceo/api/community/wall-post';\n" +
       "\n" +
@@ -3489,7 +3490,7 @@ export class CommunityJavascriptTemplates {
     response: null
   }
 
-  public static wall_post_id_delete: Template = {
+  public static wall_post_id_delete: EndpointTemplate = {
     name: "wall-post/:id",
     code: "\nconst url = 'https://dev.moonshot.ceo/api/community/wall-post/1';\n" +
       "\n" +
@@ -3501,7 +3502,7 @@ export class CommunityJavascriptTemplates {
     response: null
   }
 
-  public static wall_post_admin_put: Template = {
+  public static wall_post_admin_put: EndpointTemplate = {
     name: "wall-post/admin",
     code: "\nconst url = 'https://dev.moonshot.ceo/api/community/wall-post/admin';\n" +
       "\n" +
@@ -3525,7 +3526,7 @@ export class CommunityJavascriptTemplates {
     response: null
   }
 
-  public static wall_post_id_admin_delete: Template = {
+  public static wall_post_id_admin_delete: EndpointTemplate = {
     name: "wall-post/:id/admin",
     code: "\nconst url = 'https://dev.moonshot.ceo/api/community/wall-post/1/admin';\n" +
       "\n" +
@@ -3537,7 +3538,7 @@ export class CommunityJavascriptTemplates {
     response: null
   }
 
-  public static wall_post_like_put: Template = {
+  public static wall_post_like_put: EndpointTemplate = {
     name: "wall-post/like",
     code: "\nconst url = 'https://dev.moonshot.ceo/api/community/wall-post/like';\n" +
       "\n" +
@@ -3554,7 +3555,7 @@ export class CommunityJavascriptTemplates {
       "  .then(data => console.log(JSON.stringify(data)));",
     response: null
   }
-  public static wall_post_unlike_put: Template = {
+  public static wall_post_unlike_put: EndpointTemplate = {
     name: "wall-post/unlike",
     code: "\nconst url = 'https://dev.moonshot.ceo/api/community/wall-post/unlike';\n" +
       "\n" +
@@ -3572,7 +3573,7 @@ export class CommunityJavascriptTemplates {
     response: null
   }
 
-  public static wall_post_comment_post: Template = {
+  public static wall_post_comment_post: EndpointTemplate = {
     name: "wall-post/comment",
     code: "\nconst url = 'https://dev.moonshot.ceo/api/community/wall-post/comment';\n" +
       "\n" +
@@ -3621,7 +3622,7 @@ export class CommunityJavascriptTemplates {
     response: null
   }
 
-  public static wall_post_comment_like_put: Template = {
+  public static wall_post_comment_like_put: EndpointTemplate = {
     name: "wall-post/comment/like",
     code: "\nconst url = 'https://dev.moonshot.ceo/api/community/wall-post/comment/like';\n" +
       "\n" +
@@ -3640,7 +3641,7 @@ export class CommunityJavascriptTemplates {
     response: null
   }
 
-  public static wall_post_comment_unlike_put: Template = {
+  public static wall_post_comment_unlike_put: EndpointTemplate = {
     name: "wall-post/comment/unlike",
     code: "\nconst url = 'https://dev.moonshot.ceo/api/community/wall-post/comment/unlike';\n" +
       "\n" +
@@ -3659,7 +3660,7 @@ export class CommunityJavascriptTemplates {
     response: null
   }
 
-  public static wall_post_id_get: Template = {
+  public static wall_post_id_get: EndpointTemplate = {
     name: "wall-post/:id",
     code: "\nconst url = 'https://dev.moonshot.ceo/api/community/wall-post/1';\n" +
       "\n" +
@@ -3838,7 +3839,7 @@ export class CommunityJavascriptTemplates {
       "    }"
   }
 
-  public static wall_posts_get: Template = {
+  public static wall_posts_get: EndpointTemplate = {
     name: "wall-posts",
     code: "\nconst url = 'https://dev.moonshot.ceo/api/community/wall-posts';\n" +
       "\n" +
@@ -4279,7 +4280,7 @@ export class CommunityJavascriptTemplates {
       "]"
   }
 
-  public static actors_get: Template = {
+  public static actors_get: EndpointTemplate = {
     name: "actors",
     code: "\nconst url = 'https://dev.moonshot.ceo/api/community/actors';\n" +
       "\n" +
@@ -4539,7 +4540,7 @@ export class CommunityJavascriptTemplates {
       "]"
   }
 
-  public static actors_import_csv_post: Template = {
+  public static actors_import_csv_post: EndpointTemplate = {
     name: "actors/import/csv",
     code: "\nconst body = {\n" +
       "  \"memberId\": \"60acae8e2f799d228a4d4a85\",\n" +
@@ -4567,7 +4568,7 @@ export class CommunityJavascriptTemplates {
     response: null
   }
 
-  public static actors_by_name_and_state_get: Template = {
+  public static actors_by_name_and_state_get: EndpointTemplate = {
     name: "actors/by-name-and-state",
     code: "\nconst url = 'https://dev.moonshot.ceo/api/community/actors/by-name-and-state?name=Iñigo&&state=ACTIVE';\n" +
       "\n" +
@@ -4793,7 +4794,7 @@ export class CommunityJavascriptTemplates {
       "]"
   }
 
-  public static actors_by_type_get: Template = {
+  public static actors_by_type_get: EndpointTemplate = {
     name: "actors/by-type",
     code: "\nconst url = 'https://dev.moonshot.ceo/api/community/actors/by-type?types=STARTUP,COMPANY';\n" +
       "\n" +
@@ -4981,7 +4982,7 @@ export class CommunityJavascriptTemplates {
       "]"
   }
 
-  public static actors_by_state_get: Template = {
+  public static actors_by_state_get: EndpointTemplate = {
     name: "actors/by-state",
     code: "\nconst url = 'https://dev.moonshot.ceo/api/community/actors/by-state?state=REJECTED';\n" +
       "\n" +
@@ -5273,7 +5274,7 @@ export class CommunityJavascriptTemplates {
       "]"
   }
 
-  public static actors_by_member_get: Template = {
+  public static actors_by_member_get: EndpointTemplate = {
     name: "actors/by-member",
     code: "\nconst url = 'https://dev.moonshot.ceo/api/community/actors/by-member?ownerMemberId=60accfeb97acf93f5f69e05d';\n" +
       "\n" +
@@ -5595,7 +5596,7 @@ export class CommunityJavascriptTemplates {
       "]"
   }
 
-  public static actor_id_get: Template = {
+  public static actor_id_get: EndpointTemplate = {
     name: "actor/:id",
     code: "\nconst url = 'https://dev.moonshot.ceo/api/community/actor/60accfec97acf93f5f69e05f';\n" +
       "\n" +
@@ -5724,7 +5725,7 @@ export class CommunityJavascriptTemplates {
       "}"
   }
 
-  public static actor_post: Template = {
+  public static actor_post: EndpointTemplate = {
     name: "actor",
     code: "\nconst url = 'https://dev.moonshot.ceo/api/community/actor';\n" +
       "\n" +
@@ -5858,7 +5859,7 @@ export class CommunityJavascriptTemplates {
     response: null
   }
 
-  public static actor_put: Template = {
+  public static actor_put: EndpointTemplate = {
     name: "actor",
     code: "\nconst url = 'https://dev.moonshot.ceo/api/community/actor';\n" +
       "\n" +
@@ -5958,7 +5959,7 @@ export class CommunityJavascriptTemplates {
     response: null
   }
 
-  public static actor_accept_put: Template = {
+  public static actor_accept_put: EndpointTemplate = {
     name: "actor/accept",
     code: "\nconst url = 'https://dev.moonshot.ceo/api/community/actor/accept';\n" +
       "\n" +
@@ -5975,7 +5976,7 @@ export class CommunityJavascriptTemplates {
     response: null
   }
 
-  public static actor_reject_put: Template = {
+  public static actor_reject_put: EndpointTemplate = {
     name: "actor/reject",
     code: "\nconst url = 'https://dev.moonshot.ceo/api/community/actor/reject';\n" +
       "\n" +
@@ -5993,7 +5994,7 @@ export class CommunityJavascriptTemplates {
     response: null
   }
 
-  public static actor_id_delete: Template = {
+  public static actor_id_delete: EndpointTemplate = {
     name: "actor/:id",
     code: "\nconst url = 'https://dev.moonshot.ceo/api/community/actor/1';\n" +
       "\n" +
@@ -6005,7 +6006,7 @@ export class CommunityJavascriptTemplates {
     response: null
   }
 
-  public static fcm_token_put: Template = {
+  public static fcm_token_put: EndpointTemplate = {
     name: "fcmToken",
     code: "\nconst url = 'https://dev.moonshot.ceo/api/community/fcmToken';\n" +
       "\n" +
@@ -6029,7 +6030,7 @@ export class CommunityJavascriptTemplates {
     response: null
   }
 
-  public static member_logged_in_get: Template = {
+  public static member_logged_in_get: EndpointTemplate = {
     name: "member/logged-in",
     code: "\nconst url = 'https://dev.moonshot.ceo/api/community/member/logged-in';\n" +
       "\n" +
@@ -6265,7 +6266,7 @@ export class CommunityJavascriptTemplates {
       "}"
   }
 
-  public static members_get: Template = {
+  public static members_get: EndpointTemplate = {
     name: "members",
     code: "\nconst url = 'https://dev.moonshot.ceo/api/community/members';\n" +
       "\n" +
@@ -6423,7 +6424,7 @@ export class CommunityJavascriptTemplates {
       "]"
   }
 
-  public static member_id_get: Template = {
+  public static member_id_get: EndpointTemplate = {
     name: "member/:id",
     code: "\nconst url = 'https://dev.moonshot.ceo/api/community/member/2';\n" +
       "\n" +
@@ -6506,7 +6507,7 @@ export class CommunityJavascriptTemplates {
       "    }"
   }
 
-  public static member_id_marker_get: Template = {
+  public static member_id_marker_get: EndpointTemplate = {
     name: "member/:id/marker",
     code: "\nconst url = 'https://dev.moonshot.ceo/api/community/member/2/marker';\n" +
       "\n" +
@@ -6516,7 +6517,7 @@ export class CommunityJavascriptTemplates {
     response: "This endpoint download a svg file"
   }
 
-  public static member_put: Template = {
+  public static member_put: EndpointTemplate = {
     name: "member",
     code: "\nconst url = 'https://dev.moonshot.ceo/api/community/member';\n" +
       "\n" +
@@ -6548,7 +6549,7 @@ export class CommunityJavascriptTemplates {
     response: null
   }
 
-  public static member_id_delete: Template = {
+  public static member_id_delete: EndpointTemplate = {
     name: "member/:id",
     code: "\nconst url = 'https://dev.moonshot.ceo/api/community/member/1';\n" +
       "\n" +
@@ -6560,7 +6561,7 @@ export class CommunityJavascriptTemplates {
     response: null
   }
 
-  public static education_post: Template = {
+  public static education_post: EndpointTemplate = {
     name: "education",
     code: "\nconst url = 'https://dev.moonshot.ceo/api/community/education';\n" +
       "\n" +
@@ -6604,7 +6605,7 @@ export class CommunityJavascriptTemplates {
     response: null
   }
 
-  public static education_put: Template = {
+  public static education_put: EndpointTemplate = {
     name: "education",
     code: "\nconst url = 'https://dev.moonshot.ceo/api/community/education';\n" +
       "\n" +
@@ -6648,7 +6649,7 @@ export class CommunityJavascriptTemplates {
     response: null
   }
 
-  public static education_id_delete: Template = {
+  public static education_id_delete: EndpointTemplate = {
     name: "education/:id",
     code: "\nconst url = 'https://dev.moonshot.ceo/api/community/education/1';\n" +
       "\n" +
@@ -6660,7 +6661,7 @@ export class CommunityJavascriptTemplates {
     response: null
   }
 
-  public static experience_post: Template = {
+  public static experience_post: EndpointTemplate = {
     name: "experience",
     code: "\nconst url = 'https://dev.moonshot.ceo/api/community/experience';\n" +
       "\n" +
@@ -6695,7 +6696,7 @@ export class CommunityJavascriptTemplates {
     response: null
   }
 
-  public static experience_put: Template = {
+  public static experience_put: EndpointTemplate = {
     name: "experience",
     code: "\nconst url = 'https://dev.moonshot.ceo/api/community/experience';\n" +
       "\n" +
@@ -6730,7 +6731,7 @@ export class CommunityJavascriptTemplates {
     response: null
   }
 
-  public static experience_id_delete: Template = {
+  public static experience_id_delete: EndpointTemplate = {
     name: "experience/:id",
     code: "\nconst url = 'https://dev.moonshot.ceo/api/community/experience/1';\n" +
       "\n" +
@@ -6742,7 +6743,7 @@ export class CommunityJavascriptTemplates {
     response: null
   }
 
-  public static projects_get: Template = {
+  public static projects_get: EndpointTemplate = {
     name: "projects",
     code: "\nconst url = 'https://dev.moonshot.ceo/api/community/projects';\n" +
       "\n" +
@@ -7161,7 +7162,7 @@ export class CommunityJavascriptTemplates {
       "]"
   }
 
-  public static project_id_get: Template = {
+  public static project_id_get: EndpointTemplate = {
     name: "project/:id",
     code: "\nconst url = 'https://dev.moonshot.ceo/api/community/project/1';\n" +
       "\n" +
@@ -7407,7 +7408,7 @@ export class CommunityJavascriptTemplates {
       "}"
   }
 
-  public static project_post: Template = {
+  public static project_post: EndpointTemplate = {
     name: "project",
     code: "\nconst url = 'https://dev.moonshot.ceo/api/community/project';\n" +
       "\n" +
@@ -7456,7 +7457,7 @@ export class CommunityJavascriptTemplates {
     response: null
   }
 
-  public static project_put: Template = {
+  public static project_put: EndpointTemplate = {
     name: "project",
     code: "\nconst url = 'https://dev.moonshot.ceo/api/community/project';\n" +
       "\n" +
@@ -7505,7 +7506,7 @@ export class CommunityJavascriptTemplates {
     response: null
   }
 
-  public static project_id_delete: Template = {
+  public static project_id_delete: EndpointTemplate = {
     name: "project/:id",
     code: "\nconst url = 'https://dev.moonshot.ceo/api/community/project/1';\n" +
       "\n" +

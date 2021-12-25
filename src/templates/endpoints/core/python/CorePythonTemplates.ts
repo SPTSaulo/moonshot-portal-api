@@ -1,8 +1,8 @@
-import { Template } from '../../../../app/model/Template';
+import { EndpointTemplate } from '../../../../app/model/EndpointTemplate';
 
 export class CorePythonTemplates {
 
-  public static version_get: Template = {
+  public static version_get: EndpointTemplate = {
     name: "version",
     code: "\nimport requests as reqs\n" +
       "\n" +
@@ -13,7 +13,7 @@ export class CorePythonTemplates {
     response: "\n\"2.0.2.r13-SNAPSHOT\""
   }
 
-  public static signedUrl_get: Template = {
+  public static signedUrl_get: EndpointTemplate = {
     name: "signed-url",
     code: "\nimport requests as reqs\n" +
       "\n" +
@@ -24,7 +24,7 @@ export class CorePythonTemplates {
     response: "\n\"https://moonshot-innovation.s3.eu-central-1.amazonaws.com/null/image/43b59550-750e-4592-8e32-97ad29a4025b.jpg\n?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20211024T193231Z&X-Amz-SignedHeaders=host&\nX-Amz-Expires=900&X-Amz-Credential=%2F20211024%2Feu-central-1%2Fs3%2Faws4_request&X-Amz-Signature=\n585e2c8c71e748eb6ae4cc602db86e8cfe2e45884902d97efce7bfcecba250e5\""
   }
 
-  public static openGraph_get: Template = {
+  public static openGraph_get: EndpointTemplate = {
     name: "openGraph",
     code: "\nimport requests as reqs\n" +
       "from requests.auth import HTTPBasicAuth\n" +
@@ -46,7 +46,7 @@ export class CorePythonTemplates {
       "}"
   }
 
-  public static navbar_get: Template = {
+  public static navbar_get: EndpointTemplate = {
     name: "navbar",
     code: "\nimport requests as reqs\n" +
       "\n" +
@@ -64,7 +64,7 @@ export class CorePythonTemplates {
       "}"
   }
 
-  public static industry_id_get: Template = {
+  public static industry_id_get: EndpointTemplate = {
     name: "industry/:id",
     code: "\nimport requests as reqs\n" +
       "\n" +
@@ -78,7 +78,7 @@ export class CorePythonTemplates {
       "}"
   }
 
-  public static industries_get: Template = {
+  public static industries_get: EndpointTemplate = {
     name: "industries",
     code: "\nimport requests as reqs\n" +
       "\n" +
@@ -234,7 +234,7 @@ export class CorePythonTemplates {
       "]"
   }
 
-  public static businessModel_id_get: Template = {
+  public static businessModel_id_get: EndpointTemplate = {
     name: "business-model/:id",
     code: "\nimport requests as reqs\n" +
       "\n" +
@@ -248,7 +248,7 @@ export class CorePythonTemplates {
       "}"
   }
 
-  public static businessModels_get: Template = {
+  public static businessModels_get: EndpointTemplate = {
     name: "business-models",
     code: "\nimport requests as reqs\n" +
       "\n" +
@@ -296,7 +296,7 @@ export class CorePythonTemplates {
       "]"
   }
 
-  public static socialInnovation_id_get: Template = {
+  public static socialInnovation_id_get: EndpointTemplate = {
     name: "social-innovation/:id",
     code: "\nimport requests as reqs\n" +
       "\n" +
@@ -310,7 +310,7 @@ export class CorePythonTemplates {
       "}"
   }
 
-  public static socialInnovations_get: Template = {
+  public static socialInnovations_get: EndpointTemplate = {
     name: "social-innovations",
     code: "\nimport requests as reqs\n" +
       "\n" +
@@ -390,7 +390,7 @@ export class CorePythonTemplates {
       "]"
   }
 
-  public static deepTech_id_get: Template = {
+  public static deepTech_id_get: EndpointTemplate = {
     name: "deep-tech/:id",
     code: "\nimport requests as reqs\n" +
       "\n" +
@@ -494,7 +494,7 @@ export class CorePythonTemplates {
       "}"
   }
 
-  public static deepTechs_get: Template = {
+  public static deepTechs_get: EndpointTemplate = {
     name: "deep-techs",
     code: "\nimport requests as reqs\n" +
       "\n" +
@@ -963,7 +963,7 @@ export class CorePythonTemplates {
       "]"
   }
 
-  public static ecosystemInitialized_get: Template = {
+  public static ecosystemInitialized_get: EndpointTemplate = {
     name: "ecosystem/initialized",
     code: "\nimport requests as reqs\n" +
       "\n" +
@@ -974,7 +974,7 @@ export class CorePythonTemplates {
     response: "\ntrue"
   }
 
-  public static ecosystem_get: Template = {
+  public static ecosystem_get: EndpointTemplate = {
     name: "ecosystem",
     code: "\nimport requests as reqs\n" +
       "\n" +
@@ -1058,7 +1058,7 @@ export class CorePythonTemplates {
       "}"
   }
 
-  public static ecosystem_post: Template = {
+  public static ecosystem_post: EndpointTemplate = {
     name: "ecosystem",
     code: "\n\n" +
       "import requests as reqs\n" +
@@ -1159,7 +1159,7 @@ export class CorePythonTemplates {
     response: null
   }
 
-  public static ecosystem_put: Template = {
+  public static ecosystem_put: EndpointTemplate = {
     name: "ecosystem",
     code: "\nimport requests as reqs\n" +
       "\n" +
@@ -1240,7 +1240,7 @@ export class CorePythonTemplates {
     response: null
   }
 
-  public static invitations_get: Template = {
+  public static invitations_get: EndpointTemplate = {
     name: "invitations",
     code: "\nimport requests as reqs\n" +
       "\n" +
@@ -1261,7 +1261,7 @@ export class CorePythonTemplates {
       "]",
   }
 
-  public static invitation_get: Template = {
+  public static invitation_get: EndpointTemplate = {
     name: "invitation",
     code: "\nimport requests as reqs\n" +
       "\n" +
@@ -1280,7 +1280,7 @@ export class CorePythonTemplates {
       "   }"
   }
 
-  public static invitation_post: Template = {
+  public static invitation_post: EndpointTemplate = {
     name: "invitation",
     code: "\nimport requests as reqs\n" +
       "\n" +
@@ -1299,7 +1299,7 @@ export class CorePythonTemplates {
     response: null
   }
 
-  public static invitation_put: Template = {
+  public static invitation_put: EndpointTemplate = {
     name: "invitation",
     code: "\nimport requests as reqs\n" +
       "\n" +
@@ -1315,7 +1315,7 @@ export class CorePythonTemplates {
     response: null
   }
 
-  public static invitation_id_delete: Template = {
+  public static invitation_id_delete: EndpointTemplate = {
     name: "invitation/:id",
     code: "\nimport requests as reqs\n" +
       "\n" +
@@ -1326,7 +1326,7 @@ export class CorePythonTemplates {
     response: null
   }
 
-  public static notifications_get: Template = {
+  public static notifications_get: EndpointTemplate = {
     name: "notifications",
     code: "\nimport requests as reqs\n" +
       "\n" +
@@ -1334,96 +1334,160 @@ export class CorePythonTemplates {
       "\n" +
       "response = reqs.get(URL)\n" +
       "print(response.text)",
-    response: "\n[\n" +
-      "  {\n" +
-      "    \"id\": \"61445159784bca6ef764c6df\",\n" +
-      "    \"channels\": [\n" +
-      "      \"EMAIL\"\n" +
-      "    ],\n" +
-      "    \"type\": \"ECOSYSTEM_ACCESS_REQUEST\",\n" +
-      "    \"email\": {\n" +
-      "      \"from\": {\n" +
-      "        \"email\": \"example1@gmail.com\",\n" +
-      "        \"name\": \"example1\"\n" +
-      "      },\n" +
-      "      \"to\": [\n" +
-      "        \"example1@gmail.com, example2@gmail.com\"\n" +
-      "      ],\n" +
-      "      \"cc\": [\n" +
-      "        \"example1@gmail.com, example2@gmail.com\"\n" +
-      "      ],\n" +
-      "      \"bcc\": [\n" +
-      "        \"example1@gmail.com, example2@gmail.com\"\n" +
-      "      ],\n" +
-      "      \"subject\": \"Ecosystem invitation\",\n" +
-      "      \"templateId\": \"MAIL_TEMPLATE_ECOSYSTEM_ACCESS_REQUEST\",\n" +
-      "      \"attachments\": [\n" +
-      "        {\n" +
-      "          \"name\": \"archivo1.pdf\",\n" +
-      "          \"file\": {}\n" +
-      "        }\n" +
-      "      ],\n" +
-      "      \"inlines\": [\n" +
-      "        {\n" +
-      "          \"cid\": \"foo4atfoo1atbar.net\",\n" +
-      "          \"file\": {}\n" +
-      "        }\n" +
-      "      ],\n" +
-      "      \"params\": {\n" +
-      "        \"additionalProp1\": {\n" +
-      "          \"reason\": \"No reason\",\n" +
-      "          \"image\": \"https://api.moonshot.ceo/api/media/5b8c41dbefc45400015a6f9a/userAvatar.jpeg\"\n" +
-      "        },\n" +
-      "        \"additionalProp2\": {\n" +
-      "          \"reason\": \"No reason\",\n" +
-      "          \"image\": \"https://api.moonshot.ceo/api/media/5b8c41dbefc45400015a6f9a/userAvatar.jpeg\"\n" +
-      "        },\n" +
-      "        \"additionalProp3\": {\n" +
-      "          \"reason\": \"No reason\",\n" +
-      "          \"image\": \"https://api.moonshot.ceo/api/media/5b8c41dbefc45400015a6f9a/userAvatar.jpeg\"\n" +
-      "        }\n" +
-      "      }\n" +
-      "    },\n" +
-      "    \"createdAt\": {},\n" +
-      "    \"owner\": {\n" +
-      "      \"id\": \"61445159784bca6ef764c6df\",\n" +
-      "      \"image\": {\n" +
-      "        \"original\": \"https://moonshot-innovation.s3.eu-central-1.amazonaws.com/60aca5fa0565c3210a322662/image/f306ce3b-4db9-4529-9bde-fdb133bbef1f.png\",\n" +
-      "        \"thumbnail\": \"https://moonshot-innovation.s3.eu-central-1.amazonaws.com/60aca5fa0565c3210a322662/image/f306ce3b-4db9-4529-9bde-fdb133bbef1f.png\",\n" +
-      "        \"crop\": {\n" +
-      "          \"x\": 100,\n" +
-      "          \"y\": 20,\n" +
-      "          \"width\": 1750,\n" +
-      "          \"height\": 500\n" +
-      "        }\n" +
-      "      },\n" +
-      "      \"name\": \"user1\"\n" +
-      "    },\n" +
-      "    \"recipients\": [\n" +
+    response: "\n{\n" +
+      "   \"numNotifications\":5,\n" +
+      "   \"notifications\":[\n" +
       "      {\n" +
-      "        \"id\": \"61445159784bca6ef764c6df\",\n" +
-      "        \"image\": {\n" +
-      "          \"original\": \"https://moonshot-innovation.s3.eu-central-1.amazonaws.com/60aca5fa0565c3210a322662/image/f306ce3b-4db9-4529-9bde-fdb133bbef1f.png\",\n" +
-      "          \"thumbnail\": \"https://moonshot-innovation.s3.eu-central-1.amazonaws.com/60aca5fa0565c3210a322662/image/f306ce3b-4db9-4529-9bde-fdb133bbef1f.png\",\n" +
-      "          \"crop\": {\n" +
-      "            \"x\": 100,\n" +
-      "            \"y\": 20,\n" +
-      "            \"width\": 1750,\n" +
-      "            \"height\": 500\n" +
-      "          }\n" +
-      "        },\n" +
-      "        \"name\": \"user1\"\n" +
+      "         \"id\":\"61a9e9c78eefec485375e0a1\",\n" +
+      "         \"channels\":[\n" +
+      "            \"EMAIL\",\n" +
+      "            \"PUSH\"\n" +
+      "         ],\n" +
+      "         \"type\":\"DIRECT_CHAT_NEW_MESSAGE\",\n" +
+      "         \"push\":{\n" +
+      "            \"title\":\"David Suriol has sent you a direct chat message.\",\n" +
+      "            \"body\":\"Bien!\",\n" +
+      "            \"icon\":\"https://moonshot-innovation.s3.eu-central-1.amazonaws.com/60b53ce23a28bb702667cbe6/image/3a5b0134-a3ef-4a49-9e5a-fe4d16fbac5c.jpg\",\n" +
+      "            \"fcmTokens\":[\n" +
+      "               {\n" +
+      "                  \"tokenId\":\"eL0_glBb1BMsdvVGaoMG-t:APA91bFpu39O4PRY3YJDHeRn4RI5Mtp0iDRkq_uQ-oVD4eLgHdjWaiKKI1vCus0dO7trnn7svtg2jGcqaOS67pomwDTzoDljBsACPrLRT6IWhry-dJYksFdWxzmMGQYOZY0Nwb6TFYVP\",\n" +
+      "                  \"device\":\"laptop/computer\",\n" +
+      "                  \"timestamp\":1636449280970\n" +
+      "               },\n" +
+      "               {\n" +
+      "                  \"tokenId\":\"cfXVHXJ13nqzf6heSBNFBC:APA91bE1UH4habWeaBJZKwrpB2XRZShMKBxdJ_p45r4d46N5f0lT35EDpET-irLIlv9e4uQIs_M0T4KEso0CqCTwjzYM4UrFploqliO0jOvAQCkLK3vfYKxIMh_Q0Xp8aGHsA_j3tx_v\",\n" +
+      "                  \"device\":\"laptop/computer\",\n" +
+      "                  \"timestamp\":1638522251181\n" +
+      "               }\n" +
+      "            ],\n" +
+      "            \"parameters\":{\n" +
+      "               \"action_url\":\"https://demo.moonshot.ceo/community/direct/60c7808acb43760a967eda7c\",\n" +
+      "               \"current_chat\":\"60c7808acb43760a967eda7c\",\n" +
+      "               \"action\":\"new-tab\"\n" +
+      "            }\n" +
+      "         },\n" +
+      "         \"email\":{\n" +
+      "            \"from\":{\n" +
+      "               \"email\":null,\n" +
+      "               \"name\":\"David Suriol\"\n" +
+      "            },\n" +
+      "            \"to\":\"saulobach1@gmail.com\",\n" +
+      "            \"cc\":null,\n" +
+      "            \"bcc\":null,\n" +
+      "            \"subject\":\"You have a new message\",\n" +
+      "            \"templateId\":\"direct_chat_message\",\n" +
+      "            \"params\":{\n" +
+      "               \"image\":\"https://api.moonshot.ceo/api/media/5b8c41dbefc45400015a6f9a/userAvatar.jpeg\",\n" +
+      "               \"link\":\"https://demo.moonshot.ceo/community/direct/60c7808acb43760a967eda7c\",\n" +
+      "               \"actorName\":\"David Suriol\"\n" +
+      "            }\n" +
+      "         },\n" +
+      "         \"readed\":true,\n" +
+      "         \"createdAt\":1638525383741,\n" +
+      "         \"owner\":{\n" +
+      "            \"id\":\"60b53ce23a28bb702667cbe6\",\n" +
+      "            \"image\":{\n" +
+      "               \"original\":\"https://moonshot-innovation.s3.eu-central-1.amazonaws.com/60b53ce2f54eb87400016b07/image/fdf85852-fa7c-410e-a9f7-0c1a7f7a8894.jpg\",\n" +
+      "               \"thumbnail\":\"https://moonshot-innovation.s3.eu-central-1.amazonaws.com/60b53ce23a28bb702667cbe6/image/3a5b0134-a3ef-4a49-9e5a-fe4d16fbac5c.jpg\",\n" +
+      "               \"crop\":{\n" +
+      "                  \"x\":0,\n" +
+      "                  \"y\":0,\n" +
+      "                  \"width\":340,\n" +
+      "                  \"height\":340\n" +
+      "               }\n" +
+      "            },\n" +
+      "            \"name\":\"David Suriol\"\n" +
+      "         },\n" +
+      "         \"recipients\":[\n" +
+      "            {\n" +
+      "               \"id\":\"60b543bd3a28bb702667cc09\",\n" +
+      "               \"image\":null,\n" +
+      "               \"name\":null\n" +
+      "            }\n" +
+      "         ],\n" +
+      "         \"followUpRoomId\":null,\n" +
+      "         \"directChatRoomId\":\"60c7808acb43760a967eda7c\",\n" +
+      "         \"wallPostName\":null,\n" +
+      "         \"followUpRoomName\":null\n" +
+      "      },\n" +
+      "      {\n" +
+      "         \"id\":\"61a9e29a8eefec485375e099\",\n" +
+      "         \"channels\":[\n" +
+      "            \"EMAIL\",\n" +
+      "            \"PUSH\"\n" +
+      "         ],\n" +
+      "         \"type\":\"DIRECT_CHAT_NEW_MESSAGE\",\n" +
+      "         \"push\":{\n" +
+      "            \"title\":\"David Suriol has sent you a direct chat message.\",\n" +
+      "            \"body\":\"\",\n" +
+      "            \"icon\":\"https://moonshot-innovation.s3.eu-central-1.amazonaws.com/60b53ce23a28bb702667cbe6/image/3a5b0134-a3ef-4a49-9e5a-fe4d16fbac5c.jpg\",\n" +
+      "            \"fcmTokens\":[\n" +
+      "               {\n" +
+      "                  \"tokenId\":\"eL0_glBb1BMsdvVGaoMG-t:APA91bFpu39O4PRY3YJDHeRn4RI5Mtp0iDRkq_uQ-oVD4eLgHdjWaiKKI1vCus0dO7trnn7svtg2jGcqaOS67pomwDTzoDljBsACPrLRT6IWhry-dJYksFdWxzmMGQYOZY0Nwb6TFYVP\",\n" +
+      "                  \"device\":\"laptop/computer\",\n" +
+      "                  \"timestamp\":1636449280970\n" +
+      "               },\n" +
+      "               {\n" +
+      "                  \"tokenId\":\"cfXVHXJ13nqzf6heSBNFBC:APA91bE1UH4habWeaBJZKwrpB2XRZShMKBxdJ_p45r4d46N5f0lT35EDpET-irLIlv9e4uQIs_M0T4KEso0CqCTwjzYM4UrFploqliO0jOvAQCkLK3vfYKxIMh_Q0Xp8aGHsA_j3tx_v\",\n" +
+      "                  \"device\":\"laptop/computer\",\n" +
+      "                  \"timestamp\":1638522251181\n" +
+      "               }\n" +
+      "            ],\n" +
+      "            \"parameters\":{\n" +
+      "               \"action_url\":\"https://demo.moonshot.ceo/community/direct/60c7808acb43760a967eda7c\",\n" +
+      "               \"current_chat\":\"60c7808acb43760a967eda7c\",\n" +
+      "               \"action\":\"new-tab\"\n" +
+      "            }\n" +
+      "         },\n" +
+      "         \"email\":{\n" +
+      "            \"from\":{\n" +
+      "               \"email\":null,\n" +
+      "               \"name\":\"David Suriol\"\n" +
+      "            },\n" +
+      "            \"to\":\"saulobach1@gmail.com\",\n" +
+      "            \"cc\":null,\n" +
+      "            \"bcc\":null,\n" +
+      "            \"subject\":\"You have a new message\",\n" +
+      "            \"templateId\":\"direct_chat_message\",\n" +
+      "            \"params\":{\n" +
+      "               \"image\":\"https://api.moonshot.ceo/api/media/5b8c41dbefc45400015a6f9a/userAvatar.jpeg\",\n" +
+      "               \"link\":\"https://demo.moonshot.ceo/community/direct/60c7808acb43760a967eda7c\",\n" +
+      "               \"actorName\":\"David Suriol\"\n" +
+      "            }\n" +
+      "         },\n" +
+      "         \"readed\":true,\n" +
+      "         \"createdAt\":1638523546560,\n" +
+      "         \"owner\":{\n" +
+      "            \"id\":\"60b53ce23a28bb702667cbe6\",\n" +
+      "            \"image\":{\n" +
+      "               \"original\":\"https://moonshot-innovation.s3.eu-central-1.amazonaws.com/60b53ce2f54eb87400016b07/image/fdf85852-fa7c-410e-a9f7-0c1a7f7a8894.jpg\",\n" +
+      "               \"thumbnail\":\"https://moonshot-innovation.s3.eu-central-1.amazonaws.com/60b53ce23a28bb702667cbe6/image/3a5b0134-a3ef-4a49-9e5a-fe4d16fbac5c.jpg\",\n" +
+      "               \"crop\":{\n" +
+      "                  \"x\":0,\n" +
+      "                  \"y\":0,\n" +
+      "                  \"width\":340,\n" +
+      "                  \"height\":340\n" +
+      "               }\n" +
+      "            },\n" +
+      "            \"name\":\"David Suriol\"\n" +
+      "         },\n" +
+      "         \"recipients\":[\n" +
+      "            {\n" +
+      "               \"id\":\"60b543bd3a28bb702667cc09\",\n" +
+      "               \"image\":null,\n" +
+      "               \"name\":null\n" +
+      "            }\n" +
+      "         ],\n" +
+      "         \"followUpRoomId\":null,\n" +
+      "         \"directChatRoomId\":\"60c7808acb43760a967eda7c\",\n" +
+      "         \"wallPostName\":null,\n" +
+      "         \"followUpRoomName\":null\n" +
       "      }\n" +
-      "    ],\n" +
-      "    \"followUpRoomId\": \"61445159784bca6ef764c6df\",\n" +
-      "    \"directChatRoomId\": \"61445159784bca6ef764c6df\",\n" +
-      "    \"wallPostName\": \"Wall post 1\",\n" +
-      "    \"followUpRoomName\": \"Follow up room 1\"\n" +
-      "  }\n" +
-      "]"
+      "   ]\n" +
+      "}"
   }
 
-  public static notifications_id_get: Template = {
+  public static notifications_id_get: EndpointTemplate = {
     name: "notification/:id",
     code: "\nimport requests as reqs\n" +
       "\n" +
@@ -1432,93 +1496,81 @@ export class CorePythonTemplates {
       "response = reqs.get(URL)\n" +
       "print(response.text)",
     response: "\n{\n" +
-      "  \"id\": \"1\",\n" +
-      "  \"channels\": [\n" +
-      "    \"EMAIL\"\n" +
-      "  ],\n" +
-      "  \"type\": \"ECOSYSTEM_ACCESS_REQUEST\",\n" +
-      "  \"email\": {\n" +
-      "    \"from\": {\n" +
-      "      \"email\": \"example1@gmail.com\",\n" +
-      "      \"name\": \"example1\"\n" +
-      "    },\n" +
-      "    \"to\": [\n" +
-      "      \"example1@gmail.com, example2@gmail.com\"\n" +
-      "    ],\n" +
-      "    \"cc\": [\n" +
-      "      \"example1@gmail.com, example2@gmail.com\"\n" +
-      "    ],\n" +
-      "    \"bcc\": [\n" +
-      "      \"example1@gmail.com, example2@gmail.com\"\n" +
-      "    ],\n" +
-      "    \"subject\": \"Ecosystem invitation\",\n" +
-      "    \"templateId\": \"MAIL_TEMPLATE_ECOSYSTEM_ACCESS_REQUEST\",\n" +
-      "    \"attachments\": [\n" +
+      "   \"id\":\"61a9e9c78eefec485375e0a1\",\n" +
+      "   \"channels\":[\n" +
+      "      \"EMAIL\",\n" +
+      "      \"PUSH\"\n" +
+      "   ],\n" +
+      "   \"type\":\"DIRECT_CHAT_NEW_MESSAGE\",\n" +
+      "   \"push\":{\n" +
+      "      \"title\":\"David Suriol has sent you a direct chat message.\",\n" +
+      "      \"body\":\"Bien!\",\n" +
+      "      \"icon\":\"https://moonshot-innovation.s3.eu-central-1.amazonaws.com/60b53ce23a28bb702667cbe6/image/3a5b0134-a3ef-4a49-9e5a-fe4d16fbac5c.jpg\",\n" +
+      "      \"fcmTokens\":[\n" +
+      "         {\n" +
+      "            \"tokenId\":\"eL0_glBb1BMsdvVGaoMG-t:APA91bFpu39O4PRY3YJDHeRn4RI5Mtp0iDRkq_uQ-oVD4eLgHdjWaiKKI1vCus0dO7trnn7svtg2jGcqaOS67pomwDTzoDljBsACPrLRT6IWhry-dJYksFdWxzmMGQYOZY0Nwb6TFYVP\",\n" +
+      "            \"device\":\"laptop/computer\",\n" +
+      "            \"timestamp\":1636449280970\n" +
+      "         },\n" +
+      "         {\n" +
+      "            \"tokenId\":\"cfXVHXJ13nqzf6heSBNFBC:APA91bE1UH4habWeaBJZKwrpB2XRZShMKBxdJ_p45r4d46N5f0lT35EDpET-irLIlv9e4uQIs_M0T4KEso0CqCTwjzYM4UrFploqliO0jOvAQCkLK3vfYKxIMh_Q0Xp8aGHsA_j3tx_v\",\n" +
+      "            \"device\":\"laptop/computer\",\n" +
+      "            \"timestamp\":1638522251181\n" +
+      "         }\n" +
+      "      ],\n" +
+      "      \"parameters\":{\n" +
+      "         \"action_url\":\"https://demo.moonshot.ceo/community/direct/60c7808acb43760a967eda7c\",\n" +
+      "         \"current_chat\":\"60c7808acb43760a967eda7c\",\n" +
+      "         \"action\":\"new-tab\"\n" +
+      "      }\n" +
+      "   },\n" +
+      "   \"email\":{\n" +
+      "      \"from\":{\n" +
+      "         \"email\":null,\n" +
+      "         \"name\":\"David Suriol\"\n" +
+      "      },\n" +
+      "      \"to\":\"saulobach1@gmail.com\",\n" +
+      "      \"cc\":null,\n" +
+      "      \"bcc\":null,\n" +
+      "      \"subject\":\"You have a new message\",\n" +
+      "      \"templateId\":\"direct_chat_message\",\n" +
+      "      \"params\":{\n" +
+      "         \"image\":\"https://api.moonshot.ceo/api/media/5b8c41dbefc45400015a6f9a/userAvatar.jpeg\",\n" +
+      "         \"link\":\"https://demo.moonshot.ceo/community/direct/60c7808acb43760a967eda7c\",\n" +
+      "         \"actorName\":\"David Suriol\"\n" +
+      "      }\n" +
+      "   },\n" +
+      "   \"readed\":true,\n" +
+      "   \"createdAt\":1638525383741,\n" +
+      "   \"owner\":{\n" +
+      "      \"id\":\"60b53ce23a28bb702667cbe6\",\n" +
+      "      \"image\":{\n" +
+      "         \"original\":\"https://moonshot-innovation.s3.eu-central-1.amazonaws.com/60b53ce2f54eb87400016b07/image/fdf85852-fa7c-410e-a9f7-0c1a7f7a8894.jpg\",\n" +
+      "         \"thumbnail\":\"https://moonshot-innovation.s3.eu-central-1.amazonaws.com/60b53ce23a28bb702667cbe6/image/3a5b0134-a3ef-4a49-9e5a-fe4d16fbac5c.jpg\",\n" +
+      "         \"crop\":{\n" +
+      "            \"x\":0,\n" +
+      "            \"y\":0,\n" +
+      "            \"width\":340,\n" +
+      "            \"height\":340\n" +
+      "         }\n" +
+      "      },\n" +
+      "      \"name\":\"David Suriol\"\n" +
+      "   },\n" +
+      "   \"recipients\":[\n" +
       "      {\n" +
-      "        \"name\": \"archivo1.pdf\",\n" +
-      "        \"file\": {}\n" +
+      "         \"id\":\"60b543bd3a28bb702667cc09\",\n" +
+      "         \"image\":null,\n" +
+      "         \"name\":null\n" +
       "      }\n" +
-      "    ],\n" +
-      "    \"inlines\": [\n" +
-      "      {\n" +
-      "        \"cid\": \"foo4atfoo1atbar.net\",\n" +
-      "        \"file\": {}\n" +
-      "      }\n" +
-      "    ],\n" +
-      "    \"params\": {\n" +
-      "      \"additionalProp1\": {\n" +
-      "        \"reason\": \"No reason\",\n" +
-      "        \"image\": \"https://api.moonshot.ceo/api/media/5b8c41dbefc45400015a6f9a/userAvatar.jpeg\"\n" +
-      "      },\n" +
-      "      \"additionalProp2\": {\n" +
-      "        \"reason\": \"No reason\",\n" +
-      "        \"image\": \"https://api.moonshot.ceo/api/media/5b8c41dbefc45400015a6f9a/userAvatar.jpeg\"\n" +
-      "      },\n" +
-      "      \"additionalProp3\": {\n" +
-      "        \"reason\": \"No reason\",\n" +
-      "        \"image\": \"https://api.moonshot.ceo/api/media/5b8c41dbefc45400015a6f9a/userAvatar.jpeg\"\n" +
-      "      }\n" +
-      "    }\n" +
-      "  },\n" +
-      "  \"createdAt\": {},\n" +
-      "  \"owner\": {\n" +
-      "    \"id\": \"61445159784bca6ef764c6df\",\n" +
-      "    \"image\": {\n" +
-      "      \"original\": \"https://moonshot-innovation.s3.eu-central-1.amazonaws.com/60aca5fa0565c3210a322662/image/f306ce3b-4db9-4529-9bde-fdb133bbef1f.png\",\n" +
-      "      \"thumbnail\": \"https://moonshot-innovation.s3.eu-central-1.amazonaws.com/60aca5fa0565c3210a322662/image/f306ce3b-4db9-4529-9bde-fdb133bbef1f.png\",\n" +
-      "      \"crop\": {\n" +
-      "        \"x\": 100,\n" +
-      "        \"y\": 20,\n" +
-      "        \"width\": 1750,\n" +
-      "        \"height\": 500\n" +
-      "      }\n" +
-      "    },\n" +
-      "    \"name\": \"user1\"\n" +
-      "  },\n" +
-      "  \"recipients\": [\n" +
-      "    {\n" +
-      "      \"id\": \"61445159784bca6ef764c6df\",\n" +
-      "      \"image\": {\n" +
-      "        \"original\": \"https://moonshot-innovation.s3.eu-central-1.amazonaws.com/60aca5fa0565c3210a322662/image/f306ce3b-4db9-4529-9bde-fdb133bbef1f.png\",\n" +
-      "        \"thumbnail\": \"https://moonshot-innovation.s3.eu-central-1.amazonaws.com/60aca5fa0565c3210a322662/image/f306ce3b-4db9-4529-9bde-fdb133bbef1f.png\",\n" +
-      "        \"crop\": {\n" +
-      "          \"x\": 100,\n" +
-      "          \"y\": 20,\n" +
-      "          \"width\": 1750,\n" +
-      "          \"height\": 500\n" +
-      "        }\n" +
-      "      },\n" +
-      "      \"name\": \"user1\"\n" +
-      "    }\n" +
-      "  ],\n" +
-      "  \"followUpRoomId\": \"61445159784bca6ef764c6df\",\n" +
-      "  \"directChatRoomId\": \"61445159784bca6ef764c6df\",\n" +
-      "  \"wallPostName\": \"Wall post 1\",\n" +
-      "  \"followUpRoomName\": \"Follow up room 1\"\n" +
+      "   ],\n" +
+      "   \"followUpRoomId\":null,\n" +
+      "   \"directChatRoomId\":\"60c7808acb43760a967eda7c\",\n" +
+      "   \"wallPostName\":null,\n" +
+      "   \"followUpRoomName\":null\n" +
       "}"
   }
 
-  public static notifications_pending_get: Template = {
+  public static notifications_pending_get: EndpointTemplate = {
     name: "notifications/pending",
     code: "\nimport requests as reqs\n" +
       "\n" +
@@ -1526,62 +1578,160 @@ export class CorePythonTemplates {
       "\n" +
       "response = reqs.get(URL)\n" +
       "print(response.text)",
-    response: "\n[\n" +
-      "   {\n" +
-      "      \"id\":\"61b1c98a4441d07b32464725\",\n" +
-      "      \"channels\":[\n" +
-      "         \"EMAIL\"\n" +
-      "      ],\n" +
-      "      \"type\":\"ECOSYSTEM_ACCESS_REQUEST\",\n" +
-      "      \"push\":null,\n" +
-      "      \"email\":{\n" +
-      "         \"from\":{\n" +
-      "            \"email\":null,\n" +
-      "            \"name\":\"Jeremy\"\n" +
-      "         },\n" +
-      "         \"to\":\"dsuriol@moonshot.ceo\",\n" +
-      "         \"cc\":null,\n" +
-      "         \"bcc\":null,\n" +
-      "         \"subject\":\"A user want to join to the ecosystem\",\n" +
-      "         \"templateId\":\"ecosystem_access_request\",\n" +
-      "         \"params\":{\n" +
-      "            \"owner\":\"jeremy.trujillo.jt15@gmail.com\",\n" +
-      "            \"image\":\"https://api.moonshot.ceo/api/media/5b8c41dbefc45400015a6f9a/userAvatar.jpeg\",\n" +
-      "            \"link\":\"https://dev.moonshot.ceo/management\"\n" +
-      "         }\n" +
-      "      },\n" +
-      "      \"readed\":False,\n" +
-      "      \"createdAt\":1639041418766,\n" +
-      "      \"owner\":{\n" +
-      "         \"id\":\"61b1c98af2a25d3ca476aa54\",\n" +
-      "         \"image\":{\n" +
-      "            \"original\":\"https://moonshot-innovation.s3.eu-central-1.amazonaws.com/null/image/959b2baa-6195-4f47-8a0d-8762d5e5d827.jpg\",\n" +
-      "            \"thumbnail\":\"https://moonshot-innovation.s3.eu-central-1.amazonaws.com/null/image/b2540583-081e-4dbf-901a-44820130086e.jpg\",\n" +
-      "            \"crop\":{\n" +
-      "               \"x\":0,\n" +
-      "               \"y\":0,\n" +
-      "               \"width\":1278,\n" +
-      "               \"height\":1278\n" +
+    response: "\n{\n" +
+      "   \"numNotifications\":5,\n" +
+      "   \"notifications\":[\n" +
+      "      {\n" +
+      "         \"id\":\"61a9e9c78eefec485375e0a1\",\n" +
+      "         \"channels\":[\n" +
+      "            \"EMAIL\",\n" +
+      "            \"PUSH\"\n" +
+      "         ],\n" +
+      "         \"type\":\"DIRECT_CHAT_NEW_MESSAGE\",\n" +
+      "         \"push\":{\n" +
+      "            \"title\":\"David Suriol has sent you a direct chat message.\",\n" +
+      "            \"body\":\"Bien!\",\n" +
+      "            \"icon\":\"https://moonshot-innovation.s3.eu-central-1.amazonaws.com/60b53ce23a28bb702667cbe6/image/3a5b0134-a3ef-4a49-9e5a-fe4d16fbac5c.jpg\",\n" +
+      "            \"fcmTokens\":[\n" +
+      "               {\n" +
+      "                  \"tokenId\":\"eL0_glBb1BMsdvVGaoMG-t:APA91bFpu39O4PRY3YJDHeRn4RI5Mtp0iDRkq_uQ-oVD4eLgHdjWaiKKI1vCus0dO7trnn7svtg2jGcqaOS67pomwDTzoDljBsACPrLRT6IWhry-dJYksFdWxzmMGQYOZY0Nwb6TFYVP\",\n" +
+      "                  \"device\":\"laptop/computer\",\n" +
+      "                  \"timestamp\":1636449280970\n" +
+      "               },\n" +
+      "               {\n" +
+      "                  \"tokenId\":\"cfXVHXJ13nqzf6heSBNFBC:APA91bE1UH4habWeaBJZKwrpB2XRZShMKBxdJ_p45r4d46N5f0lT35EDpET-irLIlv9e4uQIs_M0T4KEso0CqCTwjzYM4UrFploqliO0jOvAQCkLK3vfYKxIMh_Q0Xp8aGHsA_j3tx_v\",\n" +
+      "                  \"device\":\"laptop/computer\",\n" +
+      "                  \"timestamp\":1638522251181\n" +
+      "               }\n" +
+      "            ],\n" +
+      "            \"parameters\":{\n" +
+      "               \"action_url\":\"https://demo.moonshot.ceo/community/direct/60c7808acb43760a967eda7c\",\n" +
+      "               \"current_chat\":\"60c7808acb43760a967eda7c\",\n" +
+      "               \"action\":\"new-tab\"\n" +
       "            }\n" +
       "         },\n" +
-      "         \"name\":\"Jeremy\"\n" +
+      "         \"email\":{\n" +
+      "            \"from\":{\n" +
+      "               \"email\":null,\n" +
+      "               \"name\":\"David Suriol\"\n" +
+      "            },\n" +
+      "            \"to\":\"saulobach1@gmail.com\",\n" +
+      "            \"cc\":null,\n" +
+      "            \"bcc\":null,\n" +
+      "            \"subject\":\"You have a new message\",\n" +
+      "            \"templateId\":\"direct_chat_message\",\n" +
+      "            \"params\":{\n" +
+      "               \"image\":\"https://api.moonshot.ceo/api/media/5b8c41dbefc45400015a6f9a/userAvatar.jpeg\",\n" +
+      "               \"link\":\"https://demo.moonshot.ceo/community/direct/60c7808acb43760a967eda7c\",\n" +
+      "               \"actorName\":\"David Suriol\"\n" +
+      "            }\n" +
+      "         },\n" +
+      "         \"readed\":true,\n" +
+      "         \"createdAt\":1638525383741,\n" +
+      "         \"owner\":{\n" +
+      "            \"id\":\"60b53ce23a28bb702667cbe6\",\n" +
+      "            \"image\":{\n" +
+      "               \"original\":\"https://moonshot-innovation.s3.eu-central-1.amazonaws.com/60b53ce2f54eb87400016b07/image/fdf85852-fa7c-410e-a9f7-0c1a7f7a8894.jpg\",\n" +
+      "               \"thumbnail\":\"https://moonshot-innovation.s3.eu-central-1.amazonaws.com/60b53ce23a28bb702667cbe6/image/3a5b0134-a3ef-4a49-9e5a-fe4d16fbac5c.jpg\",\n" +
+      "               \"crop\":{\n" +
+      "                  \"x\":0,\n" +
+      "                  \"y\":0,\n" +
+      "                  \"width\":340,\n" +
+      "                  \"height\":340\n" +
+      "               }\n" +
+      "            },\n" +
+      "            \"name\":\"David Suriol\"\n" +
+      "         },\n" +
+      "         \"recipients\":[\n" +
+      "            {\n" +
+      "               \"id\":\"60b543bd3a28bb702667cc09\",\n" +
+      "               \"image\":null,\n" +
+      "               \"name\":null\n" +
+      "            }\n" +
+      "         ],\n" +
+      "         \"followUpRoomId\":null,\n" +
+      "         \"directChatRoomId\":\"60c7808acb43760a967eda7c\",\n" +
+      "         \"wallPostName\":null,\n" +
+      "         \"followUpRoomName\":null\n" +
       "      },\n" +
-      "      \"recipients\":[\n" +
-      "         {\n" +
-      "            \"id\":\"60acae8e2f799d228a4d4a85\",\n" +
-      "            \"image\":null,\n" +
-      "            \"name\":null\n" +
-      "         }\n" +
-      "      ],\n" +
-      "      \"followUpRoomId\":null,\n" +
-      "      \"directChatRoomId\":null,\n" +
-      "      \"wallPostName\":null,\n" +
-      "      \"followUpRoomName\":null\n" +
-      "   }\n" +
-      "]"
+      "      {\n" +
+      "         \"id\":\"61a9e29a8eefec485375e099\",\n" +
+      "         \"channels\":[\n" +
+      "            \"EMAIL\",\n" +
+      "            \"PUSH\"\n" +
+      "         ],\n" +
+      "         \"type\":\"DIRECT_CHAT_NEW_MESSAGE\",\n" +
+      "         \"push\":{\n" +
+      "            \"title\":\"David Suriol has sent you a direct chat message.\",\n" +
+      "            \"body\":\"\",\n" +
+      "            \"icon\":\"https://moonshot-innovation.s3.eu-central-1.amazonaws.com/60b53ce23a28bb702667cbe6/image/3a5b0134-a3ef-4a49-9e5a-fe4d16fbac5c.jpg\",\n" +
+      "            \"fcmTokens\":[\n" +
+      "               {\n" +
+      "                  \"tokenId\":\"eL0_glBb1BMsdvVGaoMG-t:APA91bFpu39O4PRY3YJDHeRn4RI5Mtp0iDRkq_uQ-oVD4eLgHdjWaiKKI1vCus0dO7trnn7svtg2jGcqaOS67pomwDTzoDljBsACPrLRT6IWhry-dJYksFdWxzmMGQYOZY0Nwb6TFYVP\",\n" +
+      "                  \"device\":\"laptop/computer\",\n" +
+      "                  \"timestamp\":1636449280970\n" +
+      "               },\n" +
+      "               {\n" +
+      "                  \"tokenId\":\"cfXVHXJ13nqzf6heSBNFBC:APA91bE1UH4habWeaBJZKwrpB2XRZShMKBxdJ_p45r4d46N5f0lT35EDpET-irLIlv9e4uQIs_M0T4KEso0CqCTwjzYM4UrFploqliO0jOvAQCkLK3vfYKxIMh_Q0Xp8aGHsA_j3tx_v\",\n" +
+      "                  \"device\":\"laptop/computer\",\n" +
+      "                  \"timestamp\":1638522251181\n" +
+      "               }\n" +
+      "            ],\n" +
+      "            \"parameters\":{\n" +
+      "               \"action_url\":\"https://demo.moonshot.ceo/community/direct/60c7808acb43760a967eda7c\",\n" +
+      "               \"current_chat\":\"60c7808acb43760a967eda7c\",\n" +
+      "               \"action\":\"new-tab\"\n" +
+      "            }\n" +
+      "         },\n" +
+      "         \"email\":{\n" +
+      "            \"from\":{\n" +
+      "               \"email\":null,\n" +
+      "               \"name\":\"David Suriol\"\n" +
+      "            },\n" +
+      "            \"to\":\"saulobach1@gmail.com\",\n" +
+      "            \"cc\":null,\n" +
+      "            \"bcc\":null,\n" +
+      "            \"subject\":\"You have a new message\",\n" +
+      "            \"templateId\":\"direct_chat_message\",\n" +
+      "            \"params\":{\n" +
+      "               \"image\":\"https://api.moonshot.ceo/api/media/5b8c41dbefc45400015a6f9a/userAvatar.jpeg\",\n" +
+      "               \"link\":\"https://demo.moonshot.ceo/community/direct/60c7808acb43760a967eda7c\",\n" +
+      "               \"actorName\":\"David Suriol\"\n" +
+      "            }\n" +
+      "         },\n" +
+      "         \"readed\":true,\n" +
+      "         \"createdAt\":1638523546560,\n" +
+      "         \"owner\":{\n" +
+      "            \"id\":\"60b53ce23a28bb702667cbe6\",\n" +
+      "            \"image\":{\n" +
+      "               \"original\":\"https://moonshot-innovation.s3.eu-central-1.amazonaws.com/60b53ce2f54eb87400016b07/image/fdf85852-fa7c-410e-a9f7-0c1a7f7a8894.jpg\",\n" +
+      "               \"thumbnail\":\"https://moonshot-innovation.s3.eu-central-1.amazonaws.com/60b53ce23a28bb702667cbe6/image/3a5b0134-a3ef-4a49-9e5a-fe4d16fbac5c.jpg\",\n" +
+      "               \"crop\":{\n" +
+      "                  \"x\":0,\n" +
+      "                  \"y\":0,\n" +
+      "                  \"width\":340,\n" +
+      "                  \"height\":340\n" +
+      "               }\n" +
+      "            },\n" +
+      "            \"name\":\"David Suriol\"\n" +
+      "         },\n" +
+      "         \"recipients\":[\n" +
+      "            {\n" +
+      "               \"id\":\"60b543bd3a28bb702667cc09\",\n" +
+      "               \"image\":null,\n" +
+      "               \"name\":null\n" +
+      "            }\n" +
+      "         ],\n" +
+      "         \"followUpRoomId\":null,\n" +
+      "         \"directChatRoomId\":\"60c7808acb43760a967eda7c\",\n" +
+      "         \"wallPostName\":null,\n" +
+      "         \"followUpRoomName\":null\n" +
+      "      }\n" +
+      "   ]\n" +
+      "}"
   }
 
-  public static notification_post: Template = {
+  public static notification_post: EndpointTemplate = {
     name: "notification",
     code: "\nimport requests as reqs\n" +
       "\n" +
@@ -1677,7 +1827,7 @@ export class CorePythonTemplates {
     response: null
   }
 
-  public static notification_put: Template = {
+  public static notification_put: EndpointTemplate = {
     name: "notification",
     code: "\nimport requests as reqs\n" +
       "\n" +
@@ -1694,7 +1844,7 @@ export class CorePythonTemplates {
     response: null
   }
 
-  public static notification_id_delete : Template = {
+  public static notification_id_delete : EndpointTemplate = {
     name: "notification:/id",
     code: "\nimport requests as reqs\n" +
       "\n" +
@@ -1705,7 +1855,7 @@ export class CorePythonTemplates {
     response: null
   }
 
-  public static setting_post: Template = {
+  public static setting_post: EndpointTemplate = {
     name: "setting",
     code: "\nimport requests as reqs\n" +
       "\n" +
@@ -1729,7 +1879,7 @@ export class CorePythonTemplates {
     response: null
   }
 
-  public static setting_put: Template = {
+  public static setting_put: EndpointTemplate = {
     name: "setting",
     code: "\nimport requests as reqs\n" +
       "\n" +
@@ -1754,7 +1904,7 @@ export class CorePythonTemplates {
     response: null
   }
 
-  public static setting_get: Template = {
+  public static setting_get: EndpointTemplate = {
     name: "setting",
     code: "\nimport requests as reqs\n" +
       "\n" +
