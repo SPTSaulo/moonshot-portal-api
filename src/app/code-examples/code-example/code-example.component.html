@@ -10,7 +10,7 @@
     <div class="endpoint-body">
       <div class="endpoint-code">
         <h4 class="endpoint-body-title">Code</h4>
-        <pre>
+        <pre class="endpoint-overflow">
             <span>{{ template.code }}</span>
         </pre>
       </div>
@@ -21,7 +21,7 @@
                 (click)="hideResponse = !hideResponse">
           {{ !hideResponse ? '(hide)' : '(show)' }}
         </button>
-        <pre *ngIf="template.response && !hideResponse">
+        <pre class="endpoint-overflow" *ngIf="template.response && !hideResponse">
           <code>{{ template.response }}</code>
         </pre>
         <span *ngIf="!template.response"><br>No response</span>

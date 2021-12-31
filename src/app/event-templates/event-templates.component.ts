@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { EventTemplate } from '../model/EventTemplate';
 import { EventTemplateReaderService } from '../services/event-template-reader.service';
-import {ObjectTypeTemplate} from '../model/ObjectTypeTemplate';
+import { ObjectTypeTemplate } from '../model/ObjectTypeTemplate';
 
 @Component({
   selector: 'app-event-templates',
@@ -15,10 +15,17 @@ export class EventTemplatesComponent implements OnInit {
 
 
   constructor(
-    private eventTemplateService: EventTemplateReaderService
+    private eventTemplateService: EventTemplateReaderService,
   ) { }
 
   ngOnInit() {
+    this.eventTemplateService.rechargeTemplates.subscribe(entity => {
+      if (entity) {
+        this.eventTemplates = this.eventTemplateService.getEventTemplatesByEntity(entity);
+      } else {
+        this.eventTemplates = this.eventTemplateService.getEventTemplates();
+      }
+    })
     this.eventTemplates = this.eventTemplateService.getEventTemplates()
     this.objectTypeTemplates = this.eventTemplateService.getObjectTypesTemplates()
   }

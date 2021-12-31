@@ -1,28 +1,32 @@
-<ul>
+<ul class="main-list">
   <li>
-    <a (click)="displaySubNavbar = false" [routerLink]="['/overview']" [routerLinkActive]="['active-link']">Overview</a>
+    <a (click)="displayModulesNavbar = false; displayEntitiesNavbar = false" [routerLink]="['/overview']" [routerLinkActive]="['active-link']">Overview</a>
   </li>
   <li>
-    <a (click)="displaySubNavbar = false" [routerLink]="['/platform-policy']" [routerLinkActive]="['active-link']">Platform Policy</a>
+    <a (click)="displayModulesNavbar = false; displayEntitiesNavbar = false" [routerLink]="['/platform-policy']" [routerLinkActive]="['active-link']">Platform Policy</a>
   </li>
   <li>
-    <a (click)="displaySubNavbar = false" [routerLink]="['/documentation']" [routerLinkActive]="['active-link']">Documentation</a>
+    <a (click)="displayModulesNavbar = false; displayEntitiesNavbar = false" [routerLink]="['/documentation']" [routerLinkActive]="['active-link']">Documentation</a>
   </li>
   <li>
-    <a (click)="displaySubNavbar = false" [routerLink]="['/event-templates']" [routerLinkActive]="['active-link']">Events Templates</a>
+    <a (click)="getEntities()" [routerLink]="['/event-templates']" [routerLinkActive]="['active-link']">Events Templates</a>
   </li>
   <li>
-    <a (click)="displaySubNavbar = true" [routerLink]="['/code-examples', 'core']" [ngClass]="{'active-link': displaySubNavbar}">Code Examples</a>
+    <a (click)="displayModulesNavbar = !displayModulesNavbar; displayEntitiesNavbar = false" [routerLink]="['/code-examples', 'core']" [ngClass]="{'active-link': displayModulesNavbar}">Code Examples</a>
   </li>
-  <div *ngIf="displaySubNavbar">
-    <li>
-      <a [routerLink]="['/code-examples', 'core']" [routerLinkActive]="['active-link']">Core</a>
-    </li>
-    <li>
-      <a [routerLink]="['/code-examples', 'community']" [routerLinkActive]="['active-link']">Community</a>
-    </li>
-    <li>
-      <a [routerLink]="['/code-examples', 'federation']" [routerLinkActive]="['active-link']">Federation</a>
-    </li>
-  </div>
+</ul>
+<ul class="main-list modules-list" *ngIf="displayModulesNavbar">
+  <li>
+    <a [routerLink]="['/code-examples', 'core']" [routerLinkActive]="['active-link']">Core</a>
+  </li>
+  <li>
+    <a [routerLink]="['/code-examples', 'community']" [routerLinkActive]="['active-link']">Community</a>
+  </li>
+  <li>
+    <a [routerLink]="['/code-examples', 'federation']" [routerLinkActive]="['active-link']">Federation</a>
+  </li>
+</ul>
+<ul class="main-list entities-list" *ngIf="displayEntitiesNavbar">
+  <li *ngFor="let entity of entities">
+    <a [ngClass]="{'active-entity': entity === activeEntity}" (click)="filterByEntity(entity)">{{ entity | uppercase }}</a>
 </ul>
