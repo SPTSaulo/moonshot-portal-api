@@ -25,7 +25,7 @@ export class CodeExampleComponent implements OnInit {
   ) {}
 
   ngOnInit() {
-    this.template = this._templateReaderService.getTemplate(this.endpoint, this.module, this.selectedLanguage)
+    this.loadTemplate();
   }
 
   changeTemplate() {

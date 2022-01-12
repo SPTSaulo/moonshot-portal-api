@@ -10,7 +10,7 @@ export class FederationPythonTemplates {
       "\n" +
       "response = reqs.get(URL)\n" +
       "print(response.text)",
-    response: "\n"
+    response: "\n\"2.0.2.r15-RC1\""
   }
 
   public static login_post: EndpointTemplate = {

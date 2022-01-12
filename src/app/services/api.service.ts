@@ -636,6 +636,22 @@ export class ApiService {
         '- Todos los endpoints de obtención, creación y modificación de proyectos\n' +
         '- Todos los endpoints de obtención, creación y modificación de ajustes del ecosistema\n',
       swagger: ApisConstants.community
+    },
+    {
+      name: 'datahub',
+      endpoints: [
+        {
+          name: 'version',
+          method: Method.GET,
+        },
+        {
+          name: 'event',
+          method: Method.POST
+        }
+      ],
+      description: "Esta es la api de Datahub. Esta api recoge todos los endpoints relacionados con la gestión de los eventos. En esta api encontrará los siguientes endpoints:\n" +
+        "- Todos los endpoints de creación los eventos de Moonshot.\n",
+      swagger: ApisConstants.datahub
     }
   ]
 

@@ -64,7 +64,7 @@ export class ApisConstants {
             "Version"
           ],
           "summary": "API version",
-          "description": "Return the lastest version of the API\n",
+          "description": "Return the latest version of the API\n",
           "operationId": "apiVersion",
           "responses": {
             "200": {
@@ -1520,7 +1520,7 @@ export class ApisConstants {
             "Version"
           ],
           "summary": "API version",
-          "description": "Return the lastest version of the API\n",
+          "description": "Return the latest version of the API\n",
           "operationId": "apiVersion",
           "responses": {
             "200": {
@@ -11319,7 +11319,7 @@ export class ApisConstants {
             "Version"
           ],
           "summary": "API version",
-          "description": "Return the lastest version of the API\n",
+          "description": "Return the latest version of the API\n",
           "operationId": "apiVersion",
           "responses": {
             "200": {
@@ -14198,6 +14198,239 @@ export class ApisConstants {
               },
               "authorizationUrl": "https://dev.moonshot.ceo/api/federation/login",
               "tokenUrl": "https://dev.moonshot.ceo/api/federation/token"
+            }
+          }
+        }
+      }
+    }
+  }
+
+  public static datahub: Object = {
+    "openapi": "3.0.1",
+    "info": {
+      "title": "Datahub API",
+      "description": "Moonshot Datahub API",
+      "contact": {
+        "email": "saulosantanab@gmail.com"
+      },
+      "version": "1.0.0"
+    },
+    "servers": [
+      {
+        "url": "https://dev.moonshot.ceo/api/datahub"
+      }
+    ],
+    "tags": [
+      {
+        "name": "Version",
+        "description": "Endpoint that return Datahub last version"
+      },
+      {
+        "name": "Event",
+        "description": "Endpoint that create a Moonshot Event"
+      }
+    ],
+    "paths": {
+      "/version": {
+        "get": {
+          "tags": [
+            "Version"
+          ],
+          "summary": "API version",
+          "description": "Return the latest version of the API\n",
+          "operationId": "apiVersion",
+          "responses": {
+            "200": {
+              "description": "API Version",
+              "content": {
+                "text/plain": {
+                  "schema": {
+                    "type": "string",
+                    "example": "1.0.25.r6-RC1"
+                  }
+                }
+              }
+            },
+            "500": {
+              "description": "Cannot verify the certificate"
+            }
+          },
+          "externalDocs": {
+            "description": "Code Example",
+            "url": "http://localhost:4200/code-examples/datahub#version_get"
+          }
+        }
+      },
+      "/event": {
+        "post": {
+          "tags": [
+            "Event"
+          ],
+          "summary": "Create Moonshot event",
+          "description": "Create Moonshot event, save in the file system and send to the broker",
+          "operationId": "moonshotEvent",
+          "requestBody": {
+            "description": "Object that contains all parameters to create a Moonshot Event",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Event"
+                }
+              }
+            }
+          },
+          "responses": {
+            "200": {
+              "description": "OK"
+            },
+            "403": {
+              "description": "The application has not the neccesar",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/SecurityAccessForbiddenError"
+                  }
+                }
+              }
+            }
+          },
+          "externalDocs": {
+            "description": "Here you can find what you must to send in 'data' property",
+            "url": "http://localhost:4200/event-templates"
+          }
+        }
+      }
+    },
+    "components": {
+      "schemas": {
+        "Event": {
+          "required": [
+            "id",
+            "type",
+            "data",
+            "module",
+            "version",
+            "createdAt"
+          ],
+          "properties": {
+            "id": {
+              "type": "string",
+              "format": "UUID",
+              "example": "560a8451-a29c-41d4-a716-544676554400"
+            },
+            "type": {
+              "type": "string",
+              "enum": [
+                "ONLINE_EVENT_CREATE_EVENT",
+                "ONLINE_EVENT_UPDATE_EVENT",
+                "ONLINE_EVENT_SUBSCRIPTION_EVENT",
+                "ONLINE_EVENT_UNSUBSCRIPTION_EVENT",
+                "ONLINE_EVENT_DELETE_EVENT",
+                "FACE_TO_FACE_EVENT_CREATE_EVENT",
+                "FACE_TO_FACE_EVENT_UPDATE_EVENT",
+                "FACE_TO_FACE_EVENT_SUBSCRIPTION_EVENT",
+                "FACE_TO_FACE_EVENT_UNSUBSCRIPTION_EVENT",
+                "FACE_TO_FACE_EVENT_DELETE_EVENT",
+                "DIRECT_CHAT_CREATE_EVENT",
+                "DIRECT_CHAT_DELETE_EVENT",
+                "DIRECT_CHAT_MESSAGE_ADD_EVENT",
+                "DIRECT_CHAT_MESSAGE_DELETE_EVENT",
+                "FOLLOW_UP_ROOM_CREATE_EVENT",
+                "FOLLOW_UP_ROOM_UPDATE_EVENT",
+                "FOLLOW_UP_ROOM_ADD_MEMBER_EVENT",
+                "FOLLOW_UP_ROOM_LEAVE_MEMBER_EVENT",
+                "FOLLOW_UP_ROOM_CLOSE_EVENT",
+                "FOLLOW_UP_ROOM_OPEN_EVENT",
+                "FOLLOW_UP_ROOM_DELETE_EVENT",
+                "FOLLOW_UP_ROOM_MESSAGE_ADD_EVENT",
+                "FOLLOW_UP_ROOM_MESSAGE_DELETE_EVENT",
+                "PUBLIC_CHANNEL_CREATE_EVENT",
+                "PUBLIC_CHANNEL_UPDATE_EVENT",
+                "PUBLIC_CHANNEL_DELETE_EVENT",
+                "PUBLIC_CHANNEL_SUBSCRIBE_EVENT",
+                "PUBLIC_CHANNEL_UNSUBSCRIBE_EVENT",
+                "PUBLIC_CHANNEL_MESSAGE_ADD_EVENT",
+                "PUBLIC_CHANNEL_MESSAGE_DELETE_EVENT",
+                "WALL_POST_CREATE_EVENT",
+                "WALL_POST_UPDATE_EVENT",
+                "WALL_POST_DELETE_EVENT",
+                "WALL_POST_LIKE_EVENT",
+                "WALL_POST_UNLIKE_EVENT",
+                "WALL_POST_COMMENT_ADD_EVENT",
+                "WALL_POST_COMMENT_LIKE_EVENT",
+                "WALL_POST_COMMENT_UNLIKE_EVENT",
+                "ACTOR_CREATE_EVENT",
+                "ACTOR_UPDATE_EVENT",
+                "ACTOR_DELETE_EVENT",
+                "ACTOR_ACCEPT_EVENT",
+                "ACTOR_REJECT_EVENT",
+                "ACTOR_ADD_NEW_MEMBER_EVENT",
+                "MEMBER_UPDATE_EVENT",
+                "MEMBER_DELETE_EVENT",
+                "MEMBER_CREATE_EDUCATION_EVENT",
+                "MEMBER_UPDATE_EDUCATION_EVENT",
+                "MEMBER_DELETE_EDUCATION_EVENT",
+                "MEMBER_CREATE_EXPERIENCE_EVENT",
+                "MEMBER_UPDATE_EXPERIENCE_EVENT",
+                "MEMBER_DELETE_EXPERIENCE_EVENT",
+                "MEMBER_SET_FCM_TOKEN_EVENT",
+                "PROJECT_CREATE_EVENT",
+                "PROJECT_UPDATE_EVENT",
+                "PROJECT_DELETE_EVENT",
+                "ECOSYSTEM_CREATE_EVENT",
+                "ECOSYSTEM_UPDATE_EVENT",
+                "ECOSYSTEM_INVITE_EVENT",
+                "INVITATION_UPDATE_EVENT",
+                "INVITATION_DELETE_EVENT",
+                "PASSWORD_RECOVER_EVENT",
+                "PASSWORD_REQUEST_EVENT",
+                "PASSWORD_CHANGE_EVENT",
+                "USER_PERMS_UPDATE_EVENT",
+                "USER_VERIFY_EVENT",
+                "RESEND_VERIFICATION_EMAIL_EVENT",
+                "BUSINESS_MODEL_CREATE_EVENT",
+                "DEEP_TECH_CREATE_EVENT",
+                "INDUSTRY_CREATE_EVENT",
+                "SOCIAL_INNOVATION_CREATE_EVENT",
+                "NOTIFICATION_CREATE_EVENT",
+                "NOTIFICATION_DELETE_EVENT",
+                "NOTIFICATION_UPDATE_EVENT",
+                "SETTING_SAVE_EVENT"
+              ]
+            },
+            "data": {
+              "type": "Generic Java type",
+              "example": "See external documents in this endpoint"
+            },
+            "ecosystem": {
+              "type": "string",
+              "example": "Moonshot DEV"
+            },
+            "module": {
+              "type": "string",
+              "example": "community"
+            },
+            "version": {
+              "type": "string",
+              "example": "2.0.11.r20"
+            },
+            "createdAt": {
+              "type": "string",
+              "format": "timestamp",
+              "example": 1639590502463
+            }
+          }
+        },
+        "SecurityAccessForbiddenError": {
+          "type": "object",
+          "properties": {
+            "message": {
+              "type": "string",
+              "example": "Forbidden."
+            },
+            "code": {
+              "type": "string",
+              "example": "SECURITY_ACCESS_FORBIDDEN"
             }
           }
         }

@@ -25,6 +25,9 @@
   <li>
     <a [routerLink]="['/code-examples', 'federation']" [routerLinkActive]="['active-link']">Federation</a>
   </li>
+  <li>
+    <a [routerLink]="['/code-examples', 'datahub']" [routerLinkActive]="['active-link']">Datahub</a>
+  </li>
 </ul>
 <ul class="main-list entities-list" *ngIf="displayEntitiesNavbar">
   <li *ngFor="let entity of entities">

@@ -11,6 +11,9 @@ import {CommunityJavaTemplates} from '../../templates/endpoints/community/java/C
 import {CorePythonTemplates} from '../../templates/endpoints/core/python/CorePythonTemplates';
 import {FederationPythonTemplates} from '../../templates/endpoints/federation/python/FederationPythonTemplates';
 import {CommunityPythonTemplates} from '../../templates/endpoints/community/python/CommunityPythonTemplates';
+import {DatahubJavascriptTemplates} from '../../templates/endpoints/datahub/javascript/DatahubJavascriptTemplates';
+import {DatahubJavaTemplates} from '../../templates/endpoints/datahub/java/DatahubJavaTemplates';
+import {DatahubPythonTemplates} from '../../templates/endpoints/datahub/python/DatahubPythonTemplates';
 
 export class EndpointTemplateReaderService {
 
@@ -22,6 +25,8 @@ export class EndpointTemplateReaderService {
         return this.getCommunityTemplate(endpoint, language)
       case Module.FEDERATION :
         return this.getFederationTemplate(endpoint, language)
+      case Module.DATAHUB :
+        return this.getDatahubTemplate(endpoint, language)
     }
   }
 
@@ -55,6 +60,17 @@ export class EndpointTemplateReaderService {
         return this.getFederationJavaTemplate(endpoint)
       case Language.PYTHON:
         return this.getFederationPythonTemplate(endpoint)
+    }
+  }
+
+  private getDatahubTemplate(endpoint: Endpoint, language: Language): EndpointTemplate {
+    switch (language) {
+      case Language.JS:
+        return this.getDatahubJavascriptTemplate(endpoint)
+      case Language.JAVA:
+        return this.getDatahubJavaTemplate(endpoint)
+      case Language.PYTHON:
+        return this.getDatahubPythonTemplate(endpoint)
     }
   }
 
@@ -753,6 +769,30 @@ export class EndpointTemplateReaderService {
       case 'password/change_put': return FederationPythonTemplates.password_change_put
       case 'verifications_get': return FederationPythonTemplates.verifications_get
       default: return null
+    }
+  }
+
+  public getDatahubJavascriptTemplate(endpoint: Endpoint): EndpointTemplate {
+    const templateName = endpoint.name + '_' + endpoint.method
+    switch (templateName) {
+      case 'version_get': return DatahubJavascriptTemplates.version_get
+      case 'event_post': return DatahubJavascriptTemplates.event_post
+    }
+  }
+
+  public getDatahubJavaTemplate(endpoint: Endpoint): EndpointTemplate {
+    const templateName = endpoint.name + '_' + endpoint.method
+    switch (templateName) {
+      case 'version_get': return DatahubJavaTemplates.version_get
+      case 'event_post': return DatahubJavaTemplates.event_post
+    }
+  }
+
+  public getDatahubPythonTemplate(endpoint: Endpoint): EndpointTemplate {
+    const templateName = endpoint.name + '_' + endpoint.method
+    switch (templateName) {
+      case 'version_get': return DatahubPythonTemplates.version_get
+      case 'event_post': return DatahubPythonTemplates.event_post
     }
   }
 }
