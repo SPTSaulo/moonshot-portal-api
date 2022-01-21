@@ -77,7 +77,7 @@ export class FederationJavascriptTemplates {
   }
 
   public static user_id_get: EndpointTemplate = {
-    name: "user/:id",
+    name: "users/:id",
     code: "\nconst url = 'https://dev.moonshot.ceo/api/federation/user/1'\n" +
       "\n" +
       "fetch(url)\n" +
@@ -115,7 +115,7 @@ export class FederationJavascriptTemplates {
   }
 
   public static user_by_email_get: EndpointTemplate = {
-    name: "user/by/email",
+    name: "users/by/email",
     code: "\nconst url = 'https://dev.moonshot.ceo/api/federation/user/by/email?email=usuario1@gmail.com'\n" +
       "\n" +
       "fetch(url)\n" +
@@ -346,7 +346,7 @@ export class FederationJavascriptTemplates {
 
   public static users_perms_get: EndpointTemplate = {
     name:"users/perms" ,
-    code: "\nconst url = 'https://dev.moonshot.ceo/api/federation/users/perms?id=1'\n" +
+    code: "\nconst url = 'https://dev.moonshot.ceo/api/federation/users/1/perms'\n" +
       "\n" +
       "fetch(url)\n" +
       "  .then(response => response.json())\n" +
@@ -375,9 +375,8 @@ export class FederationJavascriptTemplates {
 
   public static users_perms_put: EndpointTemplate = {
     name: "users/perms",
-    code: "\nconst url = 'https://dev.moonshot.ceo/api/federation/users/perms?id=1'\n" +
+    code: "\nconst url = 'https://dev.moonshot.ceo/api/federation/users/1/perms'\n" +
       "const body = {\n" +
-      "  id: \"1\",\n" +
       "  perms: [\n" +
       "    \"DEV:WALL_POST_CREATE\"\n" +
       "  ]\n" +
@@ -393,7 +392,7 @@ export class FederationJavascriptTemplates {
   }
 
   public static user_verify_put: EndpointTemplate = {
-    name: "user/verify",
+    name: "users/verify",
     code: "\nconst url = 'https://dev.moonshot.ceo/api/federation/user/verify'\n" +
       "const body = {\n" +
       "  token: \"50946306-47f9-11ec-81d3-0242ac130003\",\n" +
@@ -412,7 +411,7 @@ export class FederationJavascriptTemplates {
   }
 
   public static user_verify_resend_put: EndpointTemplate = {
-    name: "user/verify/re-send",
+    name: "users/verify/re-send",
     code: "\nconst url = 'https://dev.moonshot.ceo/api/federation/user/verify/re-send'\n" +
       "\n" +
       "const body = {\n" +
@@ -429,7 +428,7 @@ export class FederationJavascriptTemplates {
   }
 
   public static password_last_modification_get: EndpointTemplate = {
-    name: "password/last-modification",
+    name: "passwords/last-modification",
     code: "\nconst url = 'https://dev.moonshot.ceo/api/federation/password/last-modification?email=example1@gmail.com'\n" +
       "\n" +
       "fetch(url)\n" +
@@ -439,7 +438,7 @@ export class FederationJavascriptTemplates {
   }
 
   public static password_request_post: EndpointTemplate = {
-    name: "password/request",
+    name: "passwords/request",
     code: "\nconst url = 'https://dev.moonshot.ceo/api/federation/password/request'\n" +
       "const body = {\n" +
       "  id: \"1\",\n" +
@@ -457,7 +456,7 @@ export class FederationJavascriptTemplates {
   }
 
   public static password_recover_post: EndpointTemplate = {
-    name: "password/recover",
+    name: "passwords/recover",
     code: "\nconst url = 'https://dev.moonshot.ceo/api/federation/password/recover'\n" +
       "const body = {\n" +
       "  token: \"50946306-47f9-11ec-81d3-0242ac130003\",\n" +
@@ -475,7 +474,7 @@ export class FederationJavascriptTemplates {
   }
 
   public static password_change_put: EndpointTemplate = {
-    name: "password/change",
+    name: "passwords/change",
     code: "\nconst url = 'https://dev.moonshot.ceo/api/federation/password/change'\n" +
       "const body = {\n" +
       "  password: \"hola123\",\n" +

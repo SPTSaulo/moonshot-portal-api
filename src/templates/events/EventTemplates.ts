@@ -2252,11 +2252,15 @@ export class EventTemplates {
     name: "USER_VERIFY_EVENT",
     schema: {
       "token": ObjectType.STRING,
-      "email": ObjectType.STRING
+      "email": ObjectType.STRING,
+      "password": ObjectType.STRING,
+      "repeatPassword": ObjectType.STRING
     },
     example: {
       "token": "eyJhbGciOiJSUzI1NiIsIn",
-      "email": "example1@gmail.com"
+      "email": "example1@gmail.com",
+      "password": "hola123",
+      "repeatPassword": "hola123"
     },
     entity: Entity.USER
   }

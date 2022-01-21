@@ -32,11 +32,11 @@ export class ApiService {
           method: Method.GET
         },
         {
-          name: 'user/:id',
+          name: 'users/:id',
           method: Method.GET
         },
         {
-          name: 'user/by/email',
+          name: 'users/by/email',
           method: Method.GET
         },
         {
@@ -52,35 +52,35 @@ export class ApiService {
           method: Method.GET
         },
         {
-          name: 'users/perms',
+          name: 'users/:id/perms',
           method: Method.GET
         },
         {
-          name: 'users/perms',
+          name: 'users/:id/perms',
           method: Method.PUT
         },
         {
-          name: 'user/verify',
+          name: 'users/verify',
           method: Method.PUT
         },
         {
-          name: 'user/verify/re-send',
+          name: 'users/verify/re-send',
           method: Method.PUT
         },
         {
-          name: 'password/last-modification',
+          name: 'passwords/last-modification',
           method: Method.GET
         },
         {
-          name: 'password/request',
+          name: 'passwords/request',
           method: Method.POST
         },
         {
-          name: 'password/recover',
+          name: 'passwords/recover/:token',
           method: Method.POST
         },
         {
-          name: 'password/change',
+          name: 'passwords/change',
           method: Method.PUT
         },
         {
@@ -117,7 +117,7 @@ export class ApiService {
           method: Method.GET
         },
         {
-          name: 'industry/:id',
+          name: 'industries/:id',
           method: Method.GET
         },
         {
@@ -125,7 +125,7 @@ export class ApiService {
           method: Method.GET
         },
         {
-          name: 'business-model/:id',
+          name: 'business-models/:id',
           method: Method.GET
         },
         {
@@ -133,7 +133,7 @@ export class ApiService {
           method: Method.GET
         },
         {
-          name: 'social-innovation/:id',
+          name: 'social-innovations/:id',
           method: Method.GET
         },
         {
@@ -141,7 +141,7 @@ export class ApiService {
           method: Method.GET
         },
         {
-          name: 'deep-tech/:id',
+          name: 'deep-techs/:id',
           method: Method.GET
         },
         {
@@ -149,19 +149,19 @@ export class ApiService {
           method: Method.GET
         },
         {
-          name: 'ecosystem/initialized',
+          name: 'ecosystems/initialized',
           method: Method.GET
         },
         {
-          name: 'ecosystem',
+          name: 'ecosystems',
           method: Method.GET
         },
         {
-          name: 'ecosystem',
+          name: 'ecosystems',
           method: Method.POST
         },
         {
-          name: 'ecosystem',
+          name: 'ecosystems',
           method: Method.PUT
         },
         {
@@ -169,19 +169,19 @@ export class ApiService {
           method: Method.GET
         },
         {
-          name: 'invitation',
+          name: 'invitations/by/email',
           method: Method.GET
         },
         {
-          name: 'invitation',
+          name: 'invitations',
           method: Method.POST
         },
         {
-          name: 'invitation',
+          name: 'invitations',
           method: Method.PUT
         },
         {
-          name: 'invitation/:id',
+          name: 'invitations/:id',
           method: Method.DELETE
         },
         {
@@ -189,7 +189,7 @@ export class ApiService {
           method: Method.GET
         },
         {
-          name: 'notification/:id',
+          name: 'notifications/:id',
           method: Method.GET
         },
         {
@@ -197,27 +197,27 @@ export class ApiService {
           method: Method.GET
         },
         {
-          name: 'notification',
+          name: 'notifications',
           method: Method.POST
         },
         {
-          name: 'notification',
+          name: 'notifications',
           method: Method.PUT
         },
         {
-          name: 'notification/:id',
+          name: 'notifications/:id',
           method: Method.DELETE
         },
         {
-          name: 'setting',
+          name: 'settings',
           method: Method.GET
         },
         {
-          name: 'setting',
+          name: 'settings',
           method: Method.POST
         },
         {
-          name: 'setting',
+          name: 'settings',
           method: Method.PUT
         }
       ],

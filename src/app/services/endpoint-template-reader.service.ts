@@ -85,57 +85,57 @@ export class EndpointTemplateReaderService {
         return CoreJavascriptTemplates.openGraph_get
       case 'navbar_get':
         return CoreJavascriptTemplates.navbar_get
-      case 'industry/:id_get':
+      case 'industries/:id_get':
         return CoreJavascriptTemplates.industry_id_get
       case 'industries_get':
         return CoreJavascriptTemplates.industries_get
-      case 'business-model/:id_get':
+      case 'business-models/:id_get':
         return CoreJavascriptTemplates.businessModel_id_get
       case 'business-models_get':
         return CoreJavascriptTemplates.businessModels_get
-      case 'social-innovation/:id_get':
+      case 'social-innovations/:id_get':
         return CoreJavascriptTemplates.socialInnovation_id_get
       case 'social-innovations_get':
         return CoreJavascriptTemplates.socialInnovations_get
-      case 'deep-tech/:id_get':
+      case 'deep-techs/:id_get':
         return CoreJavascriptTemplates.deepTech_id_get
       case 'deep-techs_get':
         return CoreJavascriptTemplates.deepTechs_get
-      case 'ecosystem/initialized_get':
+      case 'ecosystems/initialized_get':
         return CoreJavascriptTemplates.ecosystemInitialized_get
-      case 'ecosystem_get':
+      case 'ecosystems_get':
         return CoreJavascriptTemplates.ecosystem_get
-      case 'ecosystem_post':
+      case 'ecosystems_post':
         return CoreJavascriptTemplates.ecosystem_post
-      case 'ecosystem_put':
+      case 'ecosystems_put':
         return CoreJavascriptTemplates.ecosystem_put
       case 'invitations_get':
         return CoreJavascriptTemplates.invitations_get
-      case 'invitation_get':
-        return CoreJavascriptTemplates.invitation_get
-      case 'invitation_post':
+      case 'invitations/by/email_get':
+        return CoreJavascriptTemplates.invitations_by_email_get
+      case 'invitations_post':
         return CoreJavascriptTemplates.invitation_post
-      case 'invitation_put':
+      case 'invitations_put':
         return CoreJavascriptTemplates.invitation_put
-      case 'invitation/:id_delete':
+      case 'invitations/:id_delete':
         return CoreJavascriptTemplates.invitation_id_delete
       case 'notifications_get':
         return CoreJavascriptTemplates.notifications_get
-      case 'notification/:id_get':
+      case 'notifications/:id_get':
         return CoreJavascriptTemplates.notifications_id_get
       case 'notifications/pending_get':
         return CoreJavascriptTemplates.notifications_pending_get
-      case 'notification_post':
+      case 'notifications_post':
         return CoreJavascriptTemplates.notification_post
-      case 'notification_put':
+      case 'notifications_put':
         return CoreJavascriptTemplates.notification_put
-      case 'notification/:id_delete':
+      case 'notifications/:id_delete':
         return CoreJavascriptTemplates.notification_id_delete
-      case 'setting_post':
+      case 'settings_post':
         return CoreJavascriptTemplates.setting_post
-      case 'setting_put':
+      case 'settings_put':
         return CoreJavascriptTemplates.setting_put
-      case 'setting_get':
+      case 'settings_get':
         return CoreJavascriptTemplates.setting_get
       default:
         return null
@@ -153,57 +153,57 @@ export class EndpointTemplateReaderService {
         return CoreJavaTemplates.openGraph_get
       case 'navbar_get':
         return CoreJavaTemplates.navbar_get
-      case 'industry/:id_get':
+      case 'industries/:id_get':
         return CoreJavaTemplates.industry_id_get
       case 'industries_get':
         return CoreJavaTemplates.industries_get
-      case 'business-model/:id_get':
+      case 'business-models/:id_get':
         return CoreJavaTemplates.businessModel_id_get
       case 'business-models_get':
         return CoreJavaTemplates.businessModels_get
-      case 'social-innovation/:id_get':
+      case 'social-innovations/:id_get':
         return CoreJavaTemplates.socialInnovation_id_get
       case 'social-innovations_get':
         return CoreJavaTemplates.socialInnovations_get
-      case 'deep-tech/:id_get':
+      case 'deep-techs/:id_get':
         return CoreJavaTemplates.deepTech_id_get
       case 'deep-techs_get':
         return CoreJavaTemplates.deepTechs_get
-      case 'ecosystem/initialized_get':
+      case 'ecosystems/initialized_get':
         return CoreJavaTemplates.ecosystemInitialized_get
-      case 'ecosystem_get':
+      case 'ecosystems_get':
         return CoreJavaTemplates.ecosystem_get
-      case 'ecosystem_post':
+      case 'ecosystems_post':
         return CoreJavaTemplates.ecosystem_post
-      case 'ecosystem_put':
+      case 'ecosystems_put':
         return CoreJavaTemplates.ecosystem_put
       case 'invitations_get':
         return CoreJavaTemplates.invitations_get
-      case 'invitation_get':
-        return CoreJavaTemplates.invitation_get
-      case 'invitation_post':
+      case 'invitations/by/email_get':
+        return CoreJavaTemplates.invitations_by_email_get
+      case 'invitations_post':
         return CoreJavaTemplates.invitation_post
-      case 'invitation_put':
+      case 'invitations_put':
         return CoreJavaTemplates.invitation_put
-      case 'invitation/:id_delete':
+      case 'invitations/:id_delete':
         return CoreJavaTemplates.invitation_id_delete
       case 'notifications_get':
         return CoreJavaTemplates.notifications_get
-      case 'notification/:id_get':
+      case 'notifications/:id_get':
         return CoreJavaTemplates.notifications_id_get
       case 'notifications/pending_get':
         return CoreJavaTemplates.notifications_pending_get
-      case 'notification_post':
+      case 'notifications_post':
         return CoreJavaTemplates.notification_post
-      case 'notification_put':
+      case 'notifications_put':
         return CoreJavaTemplates.notification_put
-      case 'notification/:id_delete':
+      case 'notifications/:id_delete':
         return CoreJavaTemplates.notification_id_delete
-      case 'setting_post':
+      case 'settings_post':
         return CoreJavaTemplates.setting_post
-      case 'setting_put':
+      case 'settings_put':
         return CoreJavaTemplates.setting_put
-      case 'setting_get':
+      case 'settings_get':
         return CoreJavaTemplates.setting_get
       default:
         return null
@@ -221,57 +221,57 @@ export class EndpointTemplateReaderService {
         return CorePythonTemplates.openGraph_get
       case 'navbar_get':
         return CorePythonTemplates.navbar_get
-      case 'industry/:id_get':
+      case 'industries/:id_get':
         return CorePythonTemplates.industry_id_get
       case 'industries_get':
         return CorePythonTemplates.industries_get
-      case 'business-model/:id_get':
+      case 'business-models/:id_get':
         return CorePythonTemplates.businessModel_id_get
       case 'business-models_get':
         return CorePythonTemplates.businessModels_get
-      case 'social-innovation/:id_get':
+      case 'social-innovations/:id_get':
         return CorePythonTemplates.socialInnovation_id_get
       case 'social-innovations_get':
         return CorePythonTemplates.socialInnovations_get
-      case 'deep-tech/:id_get':
+      case 'deep-techs/:id_get':
         return CorePythonTemplates.deepTech_id_get
       case 'deep-techs_get':
         return CorePythonTemplates.deepTechs_get
-      case 'ecosystem/initialized_get':
+      case 'ecosystems/initialized_get':
         return CorePythonTemplates.ecosystemInitialized_get
-      case 'ecosystem_get':
+      case 'ecosystems_get':
         return CorePythonTemplates.ecosystem_get
-      case 'ecosystem_post':
+      case 'ecosystems_post':
         return CorePythonTemplates.ecosystem_post
-      case 'ecosystem_put':
+      case 'ecosystems_put':
         return CorePythonTemplates.ecosystem_put
       case 'invitations_get':
         return CorePythonTemplates.invitations_get
-      case 'invitation_get':
-        return CorePythonTemplates.invitation_get
-      case 'invitation_post':
+      case 'invitations/by/email_get':
+        return CorePythonTemplates.invitations_by_email_get
+      case 'invitations_post':
         return CorePythonTemplates.invitation_post
-      case 'invitation_put':
+      case 'invitations_put':
         return CorePythonTemplates.invitation_put
-      case 'invitation/:id_delete':
+      case 'invitations/:id_delete':
         return CorePythonTemplates.invitation_id_delete
       case 'notifications_get':
         return CorePythonTemplates.notifications_get
-      case 'notification/:id_get':
+      case 'notifications/:id_get':
         return CorePythonTemplates.notifications_id_get
       case 'notifications/pending_get':
         return CorePythonTemplates.notifications_pending_get
-      case 'notification_post':
+      case 'notifications_post':
         return CorePythonTemplates.notification_post
-      case 'notification_put':
+      case 'notifications_put':
         return CorePythonTemplates.notification_put
-      case 'notification/:id_delete':
+      case 'notifications/:id_delete':
         return CorePythonTemplates.notification_id_delete
-      case 'setting_post':
+      case 'settings_post':
         return CorePythonTemplates.setting_post
-      case 'setting_put':
+      case 'settings_put':
         return CorePythonTemplates.setting_put
-      case 'setting_get':
+      case 'settings_get':
         return CorePythonTemplates.setting_get
       default:
         return null
@@ -699,19 +699,19 @@ export class EndpointTemplateReaderService {
       case 'token_post': return FederationJavaTemplates.token_post
       case 'communities_get': return FederationJavaTemplates.communities_get
       case 'modules_get': return FederationJavaTemplates.modules_get
-      case 'user/:id_get': return FederationJavaTemplates.user_id_get
-      case 'user/by/email_get': return FederationJavaTemplates.user_by_email_get
+      case 'users/:id_get': return FederationJavaTemplates.user_id_get
+      case 'users/by/email_get': return FederationJavaTemplates.user_by_email_get
       case 'users_get': return FederationJavaTemplates.users_get
       case 'users/by/roles_get': return FederationJavaTemplates.users_by_roles_get
       case 'users/by/perms_get': return FederationJavaTemplates.users_by_perms_get
-      case 'users/perms_get': return FederationJavaTemplates.users_perms_get
-      case 'users/perms_put': return FederationJavaTemplates.users_perms_put
+      case 'users/:id/perms_get': return FederationJavaTemplates.users_perms_get
+      case 'users/:id/perms_put': return FederationJavaTemplates.users_perms_put
       case 'users/verify_put': return FederationJavaTemplates.user_verify_put
-      case 'user/verify/re-send_put': return FederationJavaTemplates.user_verify_resend_put
-      case 'password/last-modification_get': return FederationJavaTemplates.password_last_modification_get
-      case 'password/request_post': return FederationJavaTemplates.password_request_post
-      case 'password/recover_post': return FederationJavaTemplates.password_recover_post
-      case 'password/change_put': return FederationJavaTemplates.password_change_put
+      case 'users/verify/re-send_put': return FederationJavaTemplates.user_verify_resend_put
+      case 'passwords/last-modification_get': return FederationJavaTemplates.password_last_modification_get
+      case 'passwords/request_post': return FederationJavaTemplates.password_request_post
+      case 'passwords/recover/:token_post': return FederationJavaTemplates.password_recover_post
+      case 'passwords/change_put': return FederationJavaTemplates.password_change_put
       case 'verifications_get': return FederationJavaTemplates.verifications_get
       default: return null
     }
@@ -727,19 +727,19 @@ export class EndpointTemplateReaderService {
       case 'token_post': return FederationJavascriptTemplates.token_post
       case 'communities_get': return FederationJavascriptTemplates.communities_get
       case 'modules_get': return FederationJavascriptTemplates.modules_get
-      case 'user/:id_get': return FederationJavascriptTemplates.user_id_get
-      case 'user/by/email_get': return FederationJavascriptTemplates.user_by_email_get
+      case 'users/:id_get': return FederationJavascriptTemplates.user_id_get
+      case 'users/by/email_get': return FederationJavascriptTemplates.user_by_email_get
       case 'users_get': return FederationJavascriptTemplates.users_get
       case 'users/by/roles_get': return FederationJavascriptTemplates.users_by_roles_get
       case 'users/by/perms_get': return FederationJavascriptTemplates.users_by_perms_get
-      case 'users/perms_get': return FederationJavascriptTemplates.users_perms_get
-      case 'users/perms_put': return FederationJavascriptTemplates.users_perms_put
-      case 'user/verify_put': return FederationJavascriptTemplates.user_verify_put
-      case 'user/verify/re-send_put': return FederationJavascriptTemplates.user_verify_resend_put
-      case 'password/last-modification_get': return FederationJavascriptTemplates.password_last_modification_get
-      case 'password/request_post': return FederationJavascriptTemplates.password_request_post
-      case 'password/recover_post': return FederationJavascriptTemplates.password_recover_post
-      case 'password/change_put': return FederationJavascriptTemplates.password_change_put
+      case 'users/:id/perms_get': return FederationJavascriptTemplates.users_perms_get
+      case 'users/:id/perms_put': return FederationJavascriptTemplates.users_perms_put
+      case 'users/verify_put': return FederationJavascriptTemplates.user_verify_put
+      case 'users/verify/re-send_put': return FederationJavascriptTemplates.user_verify_resend_put
+      case 'passwords/last-modification_get': return FederationJavascriptTemplates.password_last_modification_get
+      case 'passwords/request_post': return FederationJavascriptTemplates.password_request_post
+      case 'passwords/recover/:token_post': return FederationJavascriptTemplates.password_recover_post
+      case 'passwords/change_put': return FederationJavascriptTemplates.password_change_put
       case 'verifications_get': return FederationJavascriptTemplates.verifications_get
       default: return null
     }
@@ -754,19 +754,19 @@ export class EndpointTemplateReaderService {
       case 'token_post': return FederationPythonTemplates.token_post
       case 'communities_get': return FederationPythonTemplates.communities_get
       case 'modules_get': return FederationPythonTemplates.modules_get
-      case 'user/:id_get': return FederationPythonTemplates.user_id_get
-      case 'user/by/email_get': return FederationPythonTemplates.user_by_email_get
+      case 'users/:id_get': return FederationPythonTemplates.user_id_get
+      case 'users/by/email_get': return FederationPythonTemplates.user_by_email_get
       case 'users_get': return FederationPythonTemplates.users_get
       case 'users/by/roles_get': return FederationPythonTemplates.users_by_roles_get
       case 'users/by/perms_get': return FederationPythonTemplates.users_by_perms_get
-      case 'users/perms_get': return FederationPythonTemplates.users_perms_get
-      case 'users/perms_put': return FederationPythonTemplates.users_perms_put
-      case 'user/verify_put': return FederationPythonTemplates.user_verify_put
-      case 'user/verify/re-send_put': return FederationPythonTemplates.user_verify_resend_put
-      case 'password/last-modification_get': return FederationPythonTemplates.password_last_modification_get
-      case 'password/request_post': return FederationPythonTemplates.password_request_post
-      case 'password/recover_post': return FederationPythonTemplates.password_recover_post
-      case 'password/change_put': return FederationPythonTemplates.password_change_put
+      case 'users/:id/perms_get': return FederationPythonTemplates.users_perms_get
+      case 'users/:id/perms_put': return FederationPythonTemplates.users_perms_put
+      case 'users/verify_put': return FederationPythonTemplates.user_verify_put
+      case 'users/verify/re-send_put': return FederationPythonTemplates.user_verify_resend_put
+      case 'passwords/last-modification_get': return FederationPythonTemplates.password_last_modification_get
+      case 'passwords/request_post': return FederationPythonTemplates.password_request_post
+      case 'passwords/recover/:token_post': return FederationPythonTemplates.password_recover_post
+      case 'passwords/change_put': return FederationPythonTemplates.password_change_put
       case 'verifications_get': return FederationPythonTemplates.verifications_get
       default: return null
     }

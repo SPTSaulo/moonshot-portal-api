@@ -65,10 +65,10 @@ export class CorePythonTemplates {
   }
 
   public static industry_id_get: EndpointTemplate = {
-    name: "industry/:id",
+    name: "industries/:id",
     code: "\nimport requests as reqs\n" +
       "\n" +
-      "URL = \"https://dev.moonshot.ceo/api/core/industry/618e7b8e7c55d04f82a5f3bd\"\n" +
+      "URL = \"https://dev.moonshot.ceo/api/core/industries/618e7b8e7c55d04f82a5f3bd\"\n" +
       "\n" +
       "response = reqs.get(URL)\n" +
       "print(response.text)",
@@ -235,10 +235,10 @@ export class CorePythonTemplates {
   }
 
   public static businessModel_id_get: EndpointTemplate = {
-    name: "business-model/:id",
+    name: "business-models/:id",
     code: "\nimport requests as reqs\n" +
       "\n" +
-      "URL = \"https://dev.moonshot.ceo/api/core/business-model/1\"\n" +
+      "URL = \"https://dev.moonshot.ceo/api/core/business-models/1\"\n" +
       "\n" +
       "response = reqs.get(URL)\n" +
       "print(response.text)",
@@ -297,10 +297,10 @@ export class CorePythonTemplates {
   }
 
   public static socialInnovation_id_get: EndpointTemplate = {
-    name: "social-innovation/:id",
+    name: "social-innovations/:id",
     code: "\nimport requests as reqs\n" +
       "\n" +
-      "URL = \"https://dev.moonshot.ceo/api/core/social-innovation/1\"\n" +
+      "URL = \"https://dev.moonshot.ceo/api/core/social-innovations/1\"\n" +
       "\n" +
       "response = reqs.get(URL)\n" +
       "print(response.text)",
@@ -391,10 +391,10 @@ export class CorePythonTemplates {
   }
 
   public static deepTech_id_get: EndpointTemplate = {
-    name: "deep-tech/:id",
+    name: "deep-techs/:id",
     code: "\nimport requests as reqs\n" +
       "\n" +
-      "URL = \"https://dev.moonshot.ceo/api/core/deep-tech/1\"\n" +
+      "URL = \"https://dev.moonshot.ceo/api/core/deep-techs/1\"\n" +
       "\n" +
       "response = reqs.get(URL)\n" +
       "print(response.text)",
@@ -964,10 +964,10 @@ export class CorePythonTemplates {
   }
 
   public static ecosystemInitialized_get: EndpointTemplate = {
-    name: "ecosystem/initialized",
+    name: "ecosystems/initialized",
     code: "\nimport requests as reqs\n" +
       "\n" +
-      "URL = \"https://dev.moonshot.ceo/api/core/ecosystem/initialized\"\n" +
+      "URL = \"https://dev.moonshot.ceo/api/core/ecosystems/initialized\"\n" +
       "\n" +
       "response = reqs.get(URL)\n" +
       "print(response.text)",
@@ -975,10 +975,10 @@ export class CorePythonTemplates {
   }
 
   public static ecosystem_get: EndpointTemplate = {
-    name: "ecosystem",
+    name: "ecosystems",
     code: "\nimport requests as reqs\n" +
       "\n" +
-      "URL = \"https://dev.moonshot.ceo/api/core/ecosystem\"\n" +
+      "URL = \"https://dev.moonshot.ceo/api/core/ecosystems\"\n" +
       "\n" +
       "response = reqs.get(URL)\n" +
       "print(response.text)",
@@ -1059,11 +1059,11 @@ export class CorePythonTemplates {
   }
 
   public static ecosystem_post: EndpointTemplate = {
-    name: "ecosystem",
+    name: "ecosystems",
     code: "\n\n" +
       "import requests as reqs\n" +
       "\n" +
-      "URL = \"https://dev.moonshot.ceo/api/core/ecosystem\"\n" +
+      "URL = \"https://dev.moonshot.ceo/api/core/ecosystems\"\n" +
       "\n" +
       "BODY = {\n" +
       "  \"type\":\"CORPORATE\",\n" +
@@ -1160,10 +1160,10 @@ export class CorePythonTemplates {
   }
 
   public static ecosystem_put: EndpointTemplate = {
-    name: "ecosystem",
+    name: "ecosystems",
     code: "\nimport requests as reqs\n" +
       "\n" +
-      "URL = \"https://dev.moonshot.ceo/api/core/ecosystem\"\n" +
+      "URL = \"https://dev.moonshot.ceo/api/core/ecosystems\"\n" +
       "\n" +
       "BODY = {\n" +
       "  \"id\":\"60acae8f2f799d228a4d4a87\",\n" +
@@ -1261,11 +1261,11 @@ export class CorePythonTemplates {
       "]",
   }
 
-  public static invitation_get: EndpointTemplate = {
-    name: "invitation",
+  public static invitations_by_email_get: EndpointTemplate = {
+    name: "invitations/by/email",
     code: "\nimport requests as reqs\n" +
       "\n" +
-      "URL = \"https://dev.moonshot.ceo/api/core/invitation?email=borja-1@hotmail.es\"\n" +
+      "URL = \"https://dev.moonshot.ceo/api/core/invitations?email=borja-1@hotmail.es\"\n" +
       "\n" +
       "response = reqs.get(URL)\n" +
       "print(response.text)",
@@ -1281,10 +1281,10 @@ export class CorePythonTemplates {
   }
 
   public static invitation_post: EndpointTemplate = {
-    name: "invitation",
+    name: "invitations",
     code: "\nimport requests as reqs\n" +
       "\n" +
-      "URL = \"https://dev.moonshot.ceo/api/core/invitation\"\n" +
+      "URL = \"https://dev.moonshot.ceo/api/core/invitations\"\n" +
       "\n" +
       "BODY = {\n" +
       "  \"email\":\"borja-1@hotmail.es\",\n" +
@@ -1300,10 +1300,10 @@ export class CorePythonTemplates {
   }
 
   public static invitation_put: EndpointTemplate = {
-    name: "invitation",
+    name: "invitations",
     code: "\nimport requests as reqs\n" +
       "\n" +
-      "URL = \"https://dev.moonshot.ceo/api/core/invitation\"\n" +
+      "URL = \"https://dev.moonshot.ceo/api/core/invitations\"\n" +
       "\n" +
       "BODY = {\n" +
       "  \"id\":\"61b1cd9b4441d07b3246472c\",\n" +
@@ -1316,10 +1316,10 @@ export class CorePythonTemplates {
   }
 
   public static invitation_id_delete: EndpointTemplate = {
-    name: "invitation/:id",
+    name: "invitations/:id",
     code: "\nimport requests as reqs\n" +
       "\n" +
-      "URL = \"https://dev.moonshot.ceo/api/core/invitation/61b1cd9b4441d07b3246472c\"\n" +
+      "URL = \"https://dev.moonshot.ceo/api/core/invitations/61b1cd9b4441d07b3246472c\"\n" +
       "\n" +
       "response = reqs.delete(URL)\n" +
       "print(response.text)",
@@ -1488,10 +1488,10 @@ export class CorePythonTemplates {
   }
 
   public static notifications_id_get: EndpointTemplate = {
-    name: "notification/:id",
+    name: "notifications/:id",
     code: "\nimport requests as reqs\n" +
       "\n" +
-      "URL = \"https://dev.moonshot.ceo/api/core/notification/1\"\n" +
+      "URL = \"https://dev.moonshot.ceo/api/core/notifications/1\"\n" +
       "\n" +
       "response = reqs.get(URL)\n" +
       "print(response.text)",
@@ -1732,10 +1732,10 @@ export class CorePythonTemplates {
   }
 
   public static notification_post: EndpointTemplate = {
-    name: "notification",
+    name: "notifications",
     code: "\nimport requests as reqs\n" +
       "\n" +
-      "URL = \"https://dev.moonshot.ceo/api/core/notification\"\n" +
+      "URL = \"https://dev.moonshot.ceo/api/core/notifications\"\n" +
       "\n" +
       "BODY = {\n" +
       "  \"channels\": [\n" +
@@ -1828,10 +1828,10 @@ export class CorePythonTemplates {
   }
 
   public static notification_put: EndpointTemplate = {
-    name: "notification",
+    name: "notifications",
     code: "\nimport requests as reqs\n" +
       "\n" +
-      "URL = \"https://dev.moonshot.ceo/api/core/notification\"\n" +
+      "URL = \"https://dev.moonshot.ceo/api/core/notifications\"\n" +
       "\n" +
       "BODY = {\n" +
       "  \"id\": \"61445159784bca6ef764c6df\",\n" +
@@ -1845,10 +1845,10 @@ export class CorePythonTemplates {
   }
 
   public static notification_id_delete : EndpointTemplate = {
-    name: "notification:/id",
+    name: "notifications:/id",
     code: "\nimport requests as reqs\n" +
       "\n" +
-      "URL = \"https://dev.moonshot.ceo/api/core/notification/1\"\n" +
+      "URL = \"https://dev.moonshot.ceo/api/core/notifications/1\"\n" +
       "\n" +
       "response = reqs.delete(URL)\n" +
       "print(response.text)",
@@ -1856,10 +1856,10 @@ export class CorePythonTemplates {
   }
 
   public static setting_post: EndpointTemplate = {
-    name: "setting",
+    name: "settings",
     code: "\nimport requests as reqs\n" +
       "\n" +
-      "URL = \"https://dev.moonshot.ceo/api/core/setting\"\n" +
+      "URL = \"https://dev.moonshot.ceo/api/core/settings\"\n" +
       "\n" +
       "BODY = {\n" +
       "   \"banner\":{\n" +
@@ -1880,10 +1880,10 @@ export class CorePythonTemplates {
   }
 
   public static setting_put: EndpointTemplate = {
-    name: "setting",
+    name: "settings",
     code: "\nimport requests as reqs\n" +
       "\n" +
-      "URL = \"https://dev.moonshot.ceo/api/core/setting\"\n" +
+      "URL = \"https://dev.moonshot.ceo/api/core/settings\"\n" +
       "\n" +
       "BODY = {\n" +
       "   \"id\":1,\n" +
@@ -1905,10 +1905,10 @@ export class CorePythonTemplates {
   }
 
   public static setting_get: EndpointTemplate = {
-    name: "setting",
+    name: "settings",
     code: "\nimport requests as reqs\n" +
       "\n" +
-      "URL = \"https://dev.moonshot.ceo/api/core/setting\"\n" +
+      "URL = \"https://dev.moonshot.ceo/api/core/settings\"\n" +
       "\n" +
       "response = reqs.get(URL)\n" +
       "print(response.text)",

@@ -57,8 +57,8 @@ export class CoreJavascriptTemplates {
   }
 
   public static industry_id_get: EndpointTemplate = {
-    name: "industry/:id",
-    code: "\nconst url = 'https://dev.moonshot.ceo/api/core/industry/1';\n" +
+    name: "industries/:id",
+    code: "\nconst url = 'https://dev.moonshot.ceo/api/core/industries/1';\n" +
       "\n" +
       "fetch(url)\n" +
       "  .then(response => response.json())\n" +
@@ -225,8 +225,8 @@ export class CoreJavascriptTemplates {
   }
 
   public static businessModel_id_get: EndpointTemplate = {
-    name: "business-model/:id",
-    code: "\nconst url = 'https://dev.moonshot.ceo/api/core/business-model/1'\n" +
+    name: "business-models/:id",
+    code: "\nconst url = 'https://dev.moonshot.ceo/api/core/business-models/1'\n" +
       "\n" +
       "fetch(url)\n" +
       "  .then(response => response.json())\n" +
@@ -285,9 +285,9 @@ export class CoreJavascriptTemplates {
   }
 
   public static socialInnovation_id_get: EndpointTemplate = {
-    name: "social-innovation/:id",
+    name: "social-innovations/:id",
     code: "\nconst id = '6166d928899c7c3640ee96c4'\n" +
-      "const url = 'https://dev.moonshot.ceo/api/core/social-innovation/' + id\n" +
+      "const url = 'https://dev.moonshot.ceo/api/core/social-innovations/' + id\n" +
       "\n" +
       "fetch(url)\n" +
       "  .then(response => response.json())\n" +
@@ -378,9 +378,9 @@ export class CoreJavascriptTemplates {
   }
 
   public static deepTech_id_get: EndpointTemplate = {
-    name: "deep-tech/:id",
+    name: "deep-techs/:id",
     code: "\nconst id = '6166d926899c7c3640ee969b'\n" +
-      "const url = 'https://dev.moonshot.ceo/api/core/deep-tech/' + id\n" +
+      "const url = 'https://dev.moonshot.ceo/api/core/deep-techs/' + id\n" +
       "\n" +
       "fetch(url)\n" +
       "  .then(response => response.json())\n" +
@@ -950,8 +950,8 @@ export class CoreJavascriptTemplates {
   }
 
   public static ecosystemInitialized_get: EndpointTemplate = {
-    name: "ecosystem/initialized",
-    code: "\nconst url = 'https://dev.moonshot.ceo/api/core/ecosystem/initialized'\n" +
+    name: "ecosystems/initialized",
+    code: "\nconst url = 'https://dev.moonshot.ceo/api/core/ecosystems/initialized'\n" +
       "\n" +
       "fetch(url)\n" +
       "  .then(response => response.json())\n" +
@@ -960,8 +960,8 @@ export class CoreJavascriptTemplates {
   }
 
   public static ecosystem_get: EndpointTemplate = {
-    name: "ecosystem",
-    code: "\nconst url = 'https://dev.moonshot.ceo/api/core/ecosystem'\n" +
+    name: "ecosystems",
+    code: "\nconst url = 'https://dev.moonshot.ceo/api/core/ecosystems'\n" +
       "\n" +
       "fetch(url)\n" +
       "  .then(response => response.json())\n" +
@@ -1043,8 +1043,8 @@ export class CoreJavascriptTemplates {
   }
 
   public static ecosystem_post: EndpointTemplate = {
-    name: "ecosystem",
-    code: "\nconst url = 'https://dev.moonshot.ceo/api/core/ecosystem'\n" +
+    name: "ecosystems",
+    code: "\nconst url = 'https://dev.moonshot.ceo/api/core/ecosystems'\n" +
       "const body = {\n" +
       "  \"type\":\"CORPORATE\",\n" +
       "  \"name\":\"DEV  Moonshot\",\n" +
@@ -1143,8 +1143,8 @@ export class CoreJavascriptTemplates {
   }
 
   public static ecosystem_put: EndpointTemplate = {
-    name: "ecosystem",
-    code: "\nconst url = 'https://dev.moonshot.ceo/api/core/ecosystem'\n" +
+    name: "ecosystems",
+    code: "\nconst url = 'https://dev.moonshot.ceo/api/core/ecosystems'\n" +
       "\nconst body = {\n" +
       "  \"id\":\"60acae8f2f799d228a4d4a87\",\n" +
       "  \"type\":\"CORPORATE\",\n" +
@@ -1244,9 +1244,9 @@ export class CoreJavascriptTemplates {
       "]",
   }
 
-  public static invitation_get: EndpointTemplate = {
-    name: "invitation",
-    code: "\nconst url = 'https://dev.moonshot.ceo/api/core/invitation?email=borja-1@hotmail.es';\n" +
+  public static invitations_by_email_get: EndpointTemplate = {
+    name: "invitations/by/email",
+    code: "\nconst url = 'https://dev.moonshot.ceo/api/core/invitations?email=borja-1@hotmail.es';\n" +
       "\n" +
       "fetch(url)\n" +
       "  .then(response => response.json())\n" +
@@ -1263,8 +1263,8 @@ export class CoreJavascriptTemplates {
   }
 
   public static invitation_post: EndpointTemplate = {
-    name: "invitation",
-    code: "\nconst url = 'https://dev.moonshot.ceo/api/core/invitation';\n" +
+    name: "invitations",
+    code: "\nconst url = 'https://dev.moonshot.ceo/api/core/invitations';\n" +
       "\n" +
       "const body = {\n" +
       "  \"email\":\"borja-1@hotmail.es\",\n" +
@@ -1284,8 +1284,8 @@ export class CoreJavascriptTemplates {
   }
 
   public static invitation_put: EndpointTemplate = {
-    name: "invitation",
-    code: "\nconst url = 'https://dev.moonshot.ceo/api/core/invitation';\n" +
+    name: "invitations",
+    code: "\nconst url = 'https://dev.moonshot.ceo/api/core/invitations';\n" +
       "\n" +
       "const body = {\n" +
       "  \"id\":\"61b1cd9b4441d07b3246472c\",\n" +
@@ -1302,8 +1302,8 @@ export class CoreJavascriptTemplates {
   }
 
   public static invitation_id_delete: EndpointTemplate = {
-    name: "invitation/:id",
-    code: "\nconst url = 'https://dev.moonshot.ceo/api/core/invitation/61b1cd9b4441d07b3246472c';\n" +
+    name: "invitations/:id",
+    code: "\nconst url = 'https://dev.moonshot.ceo/api/core/invitations/61b1cd9b4441d07b3246472c';\n" +
       "\n" +
       "fetch(url, {\n" +
       "  method: 'DELETE'\n" +
@@ -1474,8 +1474,8 @@ export class CoreJavascriptTemplates {
   }
 
   public static notifications_id_get: EndpointTemplate = {
-    name: "notification/:id",
-    code: "\nconst url = 'https://dev.moonshot.ceo/api/core/notification/1';\n" +
+    name: "notifications/:id",
+    code: "\nconst url = 'https://dev.moonshot.ceo/api/core/notifications/1';\n" +
       "\n" +
       "fetch(url)\n" +
       "  .then(response => response.json())\n" +
@@ -1716,8 +1716,8 @@ export class CoreJavascriptTemplates {
   }
 
   public static notification_post: EndpointTemplate = {
-    name: "notification",
-    code: "\nconst url = 'https://dev.moonshot.ceo/api/core/notification';\n" +
+    name: "notifications",
+    code: "\nconst url = 'https://dev.moonshot.ceo/api/core/notifications';\n" +
       "\n" +
       "const body = {\n" +
       "   \"id\":\"61a9e9c78eefec485375e0a1\",\n" +
@@ -1803,8 +1803,8 @@ export class CoreJavascriptTemplates {
   }
 
   public static notification_put : EndpointTemplate = {
-    name: "notification",
-    code: "\nconst url = 'https://dev.moonshot.ceo/api/core/notification';\n" +
+    name: "notifications",
+    code: "\nconst url = 'https://dev.moonshot.ceo/api/core/notifications';\n" +
       "\n" +
       "const body = {\n" +
       "  id: \"1\",\n" +
@@ -1822,8 +1822,8 @@ export class CoreJavascriptTemplates {
   }
 
   public static notification_id_delete : EndpointTemplate = {
-    name: "notification/:id",
-    code: "\nconst url = 'https://dev.moonshot.ceo/api/core/notification/1';\n" +
+    name: "notifications/:id",
+    code: "\nconst url = 'https://dev.moonshot.ceo/api/core/notifications/1';\n" +
       "\n" +
       "fetch(url, {\n" +
       "  method: 'DELETE'\n" +
@@ -1834,8 +1834,8 @@ export class CoreJavascriptTemplates {
   }
 
   public static setting_post: EndpointTemplate = {
-    name: "setting",
-    code: "\nconst url = 'https://dev.moonshot.ceo/api/core/setting';\n" +
+    name: "settings",
+    code: "\nconst url = 'https://dev.moonshot.ceo/api/core/settings';\n" +
       "\n" +
       "const body = {\n" +
       "  banner:{\n" +
@@ -1860,8 +1860,8 @@ export class CoreJavascriptTemplates {
   }
 
   public static setting_put: EndpointTemplate = {
-    name: "setting",
-    code: "\nconst url = 'https://dev.moonshot.ceo/api/core/setting';\n" +
+    name: "settings",
+    code: "\nconst url = 'https://dev.moonshot.ceo/api/core/settings';\n" +
       "\n" +
       "const body = {\n" +
       "  id: \"1\",\n" +
@@ -1887,8 +1887,8 @@ export class CoreJavascriptTemplates {
   }
 
   public static setting_get: EndpointTemplate = {
-    name: "setting",
-    code: "\nconst url = 'https://dev.moonshot.ceo/api/core/setting';\n" +
+    name: "settings",
+    code: "\nconst url = 'https://dev.moonshot.ceo/api/core/settings';\n" +
       "\n" +
       "fetch(url)\n" +
       "  .then(response => response.json())\n" +

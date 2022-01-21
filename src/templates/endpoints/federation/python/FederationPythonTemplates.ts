@@ -122,7 +122,7 @@ export class FederationPythonTemplates {
   }
 
   public static user_by_email_get: EndpointTemplate = {
-    name: "user/by/email",
+    name: "users/by/email",
     code: "\nimport requests as reqs\n" +
       "\n" +
       "URL = \"https://dev.moonshot.ceo/api/federation/user/by/email?email=usuario1@gmail.com\"\n" +
@@ -359,7 +359,7 @@ export class FederationPythonTemplates {
     name:"users/perms" ,
     code: "\nimport requests as reqs\n" +
       "\n" +
-      "URL = \"https://dev.moonshot.ceo/api/federation/users/perms?id=1\"\n" +
+      "URL = \"https://dev.moonshot.ceo/api/federation/users/1/perms\"\n" +
       "\n" +
       "response = reqs.get(URL)\n" +
       "print(response.text)",
@@ -389,10 +389,9 @@ export class FederationPythonTemplates {
     name: "users/perms",
     code: "\nimport requests as reqs\n" +
       "\n" +
-      "URL = \"https://dev.moonshot.ceo/api/federation/users/perms?id=1\"\n" +
+      "URL = \"https://dev.moonshot.ceo/api/federation/users/1/perms\"\n" +
       "\n" +
       "BODY = {\n" +
-      "  \"id\": \"1\",\n" +
       "  \"perms\": [\n" +
       "    \"DEV:WALL_POST_CREATE\"\n" +
       "  ]\n" +
@@ -404,7 +403,7 @@ export class FederationPythonTemplates {
   }
 
   public static user_verify_put: EndpointTemplate = {
-    name: "user/verify",
+    name: "users/verify",
     code: "\nimport requests as reqs\n" +
       "\n" +
       "URL = \"https://dev.moonshot.ceo/api/federation/user/verify\"\n" +
@@ -422,7 +421,7 @@ export class FederationPythonTemplates {
   }
 
   public static user_verify_resend_put: EndpointTemplate = {
-    name: "user/verify/re-send",
+    name: "users/verify/re-send",
     code: "\nimport requests as reqs\n" +
       "\n" +
       "URL = \"https://dev.moonshot.ceo/api/federation/user/verify/re-send\"\n" +
@@ -437,7 +436,7 @@ export class FederationPythonTemplates {
   }
 
   public static password_last_modification_get: EndpointTemplate = {
-    name: "password/last-modification",
+    name: "passwords/last-modification",
     code: "\nimport requests as reqs\n" +
       "\n" +
       "URL = \"https://dev.moonshot.ceo/api/federation/password/last-modification?email=example1@gmail.com\"\n" +
@@ -448,7 +447,7 @@ export class FederationPythonTemplates {
   }
 
   public static password_request_post: EndpointTemplate = {
-    name: "password/request",
+    name: "passwords/request",
     code: "\nimport requests as reqs\n" +
       "\n" +
       "URL = \"https://dev.moonshot.ceo/api/federation/password/request\"\n" +
@@ -465,7 +464,7 @@ export class FederationPythonTemplates {
   }
 
   public static password_recover_post: EndpointTemplate = {
-    name: "password/recover",
+    name: "passwords/recover",
     code: "\nimport requests as reqs\n" +
       "\n" +
       "URL = \"https://dev.moonshot.ceo/api/federation/password/recover\"\n" +
@@ -482,7 +481,7 @@ export class FederationPythonTemplates {
   }
 
   public static password_change_put: EndpointTemplate = {
-    name: "password/change",
+    name: "passwords/change",
     code: "\nimport requests as reqs\n" +
       "\n" +
       "URL = \"https://dev.moonshot.ceo/api/federation/password/change\"\n" +

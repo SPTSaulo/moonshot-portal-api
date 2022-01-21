@@ -64,7 +64,7 @@ export class ApisConstants {
             "Version"
           ],
           "summary": "API version",
-          "description": "Return the latest version of the API\n",
+          "description": "Return the lastest version of the API\n",
           "operationId": "apiVersion",
           "responses": {
             "200": {
@@ -314,7 +314,7 @@ export class ApisConstants {
           }
         }
       },
-      "/user/{id}": {
+      "/users/{id}": {
         "get": {
           "tags": [
             "User"
@@ -379,11 +379,11 @@ export class ApisConstants {
           ],
           "externalDocs": {
             "description": "Code Example",
-            "url": "http://localhost:4200/code-examples/federation#user/:id_get"
+            "url": "http://localhost:4200/code-examples/federation#users/:id_get"
           }
         }
       },
-      "/user/by/email": {
+      "/users/by/email": {
         "get": {
           "tags": [
             "User"
@@ -436,7 +436,7 @@ export class ApisConstants {
           ],
           "externalDocs": {
             "description": "Code Example",
-            "url": "http://localhost:4200/code-examples/federation#user/by/email_get"
+            "url": "http://localhost:4200/code-examples/federation#users/by/email_get"
           }
         }
       },
@@ -632,7 +632,7 @@ export class ApisConstants {
           }
         }
       },
-      "/users/perms": {
+      "/users/{id}/perms": {
         "get": {
           "tags": [
             "User"
@@ -642,7 +642,7 @@ export class ApisConstants {
           "parameters": [
             {
               "name": "id",
-              "in": "query",
+              "in": "path",
               "description": "User id",
               "required": true,
               "schema": {
@@ -709,7 +709,7 @@ export class ApisConstants {
           ],
           "externalDocs": {
             "description": "Code Example",
-            "url": "http://localhost:4200/code-examples/federation#users/perms_get"
+            "url": "http://localhost:4200/code-examples/federation#users/:id/perms_get"
           }
         },
         "put": {
@@ -718,6 +718,19 @@ export class ApisConstants {
           ],
           "summary": "Update user permissions",
           "description": "Update user permission in database\n",
+          "parameters": [
+            {
+              "name": "id",
+              "in": "path",
+              "description": "User id",
+              "required": true,
+              "schema": {
+                "type": "string",
+                "format": "mongo-id",
+                "example": "61445159784bca6ef764c6df"
+              }
+            }
+          ],
           "requestBody": {
             "description": "Object that contains all parameters to update the user permissions",
             "content": {
@@ -775,11 +788,11 @@ export class ApisConstants {
           ],
           "externalDocs": {
             "description": "Code Example",
-            "url": "http://localhost:4200/code-examples/federation#users/perms_put"
+            "url": "http://localhost:4200/code-examples/federation#users/:id/perms_put"
           }
         }
       },
-      "/user/verify": {
+      "/users/verify": {
         "put": {
           "tags": [
             "User"
@@ -813,11 +826,11 @@ export class ApisConstants {
           },
           "externalDocs": {
             "description": "Code Example",
-            "url": "http://localhost:4200/code-examples/federation#user/verify_put"
+            "url": "http://localhost:4200/code-examples/federation#users/verify_put"
           }
         }
       },
-      "/user/verify/re-send": {
+      "/users/verify/re-send": {
         "put": {
           "tags": [
             "User"
@@ -851,11 +864,11 @@ export class ApisConstants {
           },
           "externalDocs": {
             "description": "Code Example",
-            "url": "http://localhost:4200/code-examples/federation#user/verify/re-send_put"
+            "url": "http://localhost:4200/code-examples/federation#users/verify/re-send_put"
           }
         }
       },
-      "/password/last-modification": {
+      "/passwords/last-modification": {
         "get": {
           "tags": [
             "Password"
@@ -901,11 +914,11 @@ export class ApisConstants {
           },
           "externalDocs": {
             "description": "Code Example",
-            "url": "http://localhost:4200/code-examples/federation#password/last-modification_get"
+            "url": "http://localhost:4200/code-examples/federation#passwords/last-modification_get"
           }
         }
       },
-      "/password/request": {
+      "/passwords/request": {
         "post": {
           "tags": [
             "Password"
@@ -939,17 +952,30 @@ export class ApisConstants {
           },
           "externalDocs": {
             "description": "Code Example",
-            "url": "http://localhost:4200/code-examples/federation#password/request_post"
+            "url": "http://localhost:4200/code-examples/federation#passwords/request_post"
           }
         }
       },
-      "/password/recover": {
+      "/passwords/recover/{token}": {
         "post": {
           "tags": [
             "Password"
           ],
           "summary": "Update user password",
           "description": "Find user and update the password in database \n",
+          "parameters": [
+            {
+              "name": "token",
+              "in": "path",
+              "description": "Recover password token",
+              "required": true,
+              "schema": {
+                "type": "string",
+                "format": "uuid",
+                "example": "123e4567-e89b-12d3-a456-426614174000"
+              }
+            }
+          ],
           "requestBody": {
             "description": "Object that contains all parameters to recover the user password",
             "content": {
@@ -977,11 +1003,11 @@ export class ApisConstants {
           },
           "externalDocs": {
             "description": "Code Example",
-            "url": "http://localhost:4200/code-examples/federation#password/recover_post"
+            "url": "http://localhost:4200/code-examples/federation#passwords/recover/:token_post"
           }
         }
       },
-      "/password/change": {
+      "/passwords/change": {
         "put": {
           "tags": [
             "Password"
@@ -1033,7 +1059,7 @@ export class ApisConstants {
           ],
           "externalDocs": {
             "description": "Code Example",
-            "url": "http://localhost:4200/code-examples/federation#password/change_put"
+            "url": "http://localhost:4200/code-examples/federation#passwords/change_put"
           }
         }
       },
@@ -1191,15 +1217,9 @@ export class ApisConstants {
         },
         "UserPermsUpdateEvent": {
           "required": [
-            "id",
             "perms"
           ],
           "properties": {
-            "id": {
-              "type": "string",
-              "format": "mongo-id",
-              "example": "60acae8e2f799d228a4d4a85"
-            },
             "perms": {
               "type": "array",
               "items": {
@@ -1235,15 +1255,9 @@ export class ApisConstants {
         "PasswordRecoverEvent": {
           "required": [
             "password",
-            "repeatPassword",
-            "token"
+            "repeatPassword"
           ],
           "properties": {
-            "token": {
-              "type": "string",
-              "format": "uuid",
-              "example": "123e4567-e89b-12d3-a456-426614174000"
-            },
             "password": {
               "type": "string",
               "example": "hola123"
@@ -1325,7 +1339,9 @@ export class ApisConstants {
         "UserVerifyEvent": {
           "required": [
             "token",
-            "email"
+            "email",
+            "password",
+            "repeatPassword"
           ],
           "properties": {
             "token": {
@@ -1337,6 +1353,14 @@ export class ApisConstants {
               "type": "string",
               "format": "email",
               "example": "example1@gmail.com"
+            },
+            "password": {
+              "type": "string",
+              "example": "hola123"
+            },
+            "repeatPassword": {
+              "type": "string",
+              "example": "hola123"
             }
           }
         },

@@ -5,12 +5,16 @@ export class CommunityJavaTemplates {
 
   public static version_get: EndpointTemplate = {
     name: "version",
-    code: "\nconst url = 'https://dev.moonshot.ceo/api/community/version';\n" +
-      "\n" +
-      "fetch(url)\n" +
-      "  .then(response => response.json())\n" +
-      "  .then(data => console.log(JSON.stringify(data)));",
-    response: "\n\"2.0.2.r15-SNAPSHOT\""
+    code: "\nSystem.setProperty(\"COMMUNITY_HOST\", \"localhost\");\n" +
+      "System.setProperty(\"COMMUNITY_PORT\", \"8083\");\n" +
+      "System.setProperty(\"AUTH0_DOMAIN\", \"dev-708nr3pf.eu.auth0.com\");\n" +
+      "String clientId = \"iUNFZUf83T5OazTjDv3gkjwfGMZ7fGT9\";\n" +
+      "String clientSecret = \"xWJN3YO0kuJ-gD19zltey9N5R1Cz0ltQJZtad-p1YQJCh6-hckl8I_hnbMbHuSQ4\";\n" +
+      "App app = new App(clientId, clientSecret);\n" +
+      "CommunityApi communityApi = new CommunityApi();\n" +
+      "String version = communityApi.internal().version(app).getResponse();\n" +
+      "System.out.println(version);",
+    response: "\n\"2.0.11.r20-SNAPSHOT\""
   }
 
   public static online_events_get: EndpointTemplate = {
