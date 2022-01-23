@@ -4488,7 +4488,7 @@ export class CommunityPythonTemplates {
       "\n" +
       "URL = \"https://dev.moonshot.ceo/api/community/actors/import/csv\"\n" +
       "\n" +
-      "response = reqs.put(URL, files={'name': open('test.csv', 'r')})\n" +
+      "response = reqs.put(URL, files={'file': open('YOUR_CSV_FILE', 'r')})\n" +
       "print(response.text)",
     response: null
   }

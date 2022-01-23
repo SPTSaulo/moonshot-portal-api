@@ -1142,11 +1142,55 @@ export class CoreJavascriptTemplates {
     response: null
   }
 
+  public static ecosystem_upload_original_post: EndpointTemplate = {
+    name: "ecosystems/upload/original",
+    code: "\nconst formData = new FormData();\n" +
+      "const url = 'https://dev.moonshot.ceo/api/core/ecosystems/upload/original'\n" +
+      "     \n" +
+      "formData.append(\"file\", 'YOUR_FILE');\n" +
+      "\n" +
+      "fetch(url, {\n" +
+      "  method: 'POST',\n" +
+      "  body: formData\n" +
+      "})\n" +
+      "  .then(path => console.log(path))",
+    response: "\nhttps://localhost/drive/ecosystem/profile/original/61eaffcdad2bd12319fd4eba.png"
+  }
+
+  public static ecosystem_upload_thumbnail_post: EndpointTemplate = {
+    name: "ecosystems/upload/thumbnail",
+    code: "\nconst formData = new FormData();\n" +
+      "const url = 'https://dev.moonshot.ceo/api/core/ecosystems/upload/thumbnail'\n" +
+      "     \n" +
+      "formData.append(\"file\", 'YOUR_FILE');\n" +
+      "\n" +
+      "fetch(url, {\n" +
+      "  method: 'POST',\n" +
+      "  body: formData\n" +
+      "})\n" +
+      "  .then(path => console.log(path))",
+    response: "\nhttps://localhost/drive/ecosystem/profile/thumbnail/61eaffcdad2bd12319fd4eba.png"
+  }
+
+  public static ecosystem_id_upload_media_put: EndpointTemplate = {
+    name: "ecosystem/:id/upload/media",
+    code: "\nconst formData = new FormData();\n" +
+      "const url = 'https://dev.moonshot.ceo/api/core/ecosystems/1/upload/media'\n" +
+      "     \n" +
+      "formData.append(\"file\", 'YOUR_FILE');\n" +
+      "\n" +
+      "fetch(url, {\n" +
+      "  method: 'POST',\n" +
+      "  body: formData\n" +
+      "})\n" +
+      "  .then(path => console.log(path))",
+    response: "\nhttps://localhost/drive/ecosystem/media/61eaffcdad2bd12319fd4eba.png"
+  }
+
   public static ecosystem_put: EndpointTemplate = {
-    name: "ecosystems",
-    code: "\nconst url = 'https://dev.moonshot.ceo/api/core/ecosystems'\n" +
+    name: "ecosystems/:id",
+    code: "\nconst url = 'https://dev.moonshot.ceo/api/core/ecosystems/1'\n" +
       "\nconst body = {\n" +
-      "  \"id\":\"60acae8f2f799d228a4d4a87\",\n" +
       "  \"type\":\"CORPORATE\",\n" +
       "  \"name\":\"DEV  Moonshot\",\n" +
       "  \"address\":\"Calle Poniente, 33\",\n" +
@@ -1271,7 +1315,8 @@ export class CoreJavascriptTemplates {
       "  \"reason\":\"En nombre del ecosistema DEV  Moonshot, me complace invitarlo a participar en nuestro Ecosistema de Innovación, un entorno digital para compartir ideas y proyectos disruptivos, así como para colaborar en desafíos y talleres. Espero que se una a nuestro ecosistema, con otros socios exclusivos, para observar de cerca nuestros objetivos disruptivos comunes.\",\n" +
       "  \"notification\":true,\n" +
       "  \"createdAt\":1639042457835,\n" +
-      "  \"lastEmail\":1639042457835\n" +
+      "  \"senderId\":\"1\",\n" +
+      "  \"sentOn\":1639590502463,\n" +
       " }\n" +
       "\n" +
       "fetch(url, {\n" +
@@ -1284,12 +1329,12 @@ export class CoreJavascriptTemplates {
   }
 
   public static invitation_put: EndpointTemplate = {
-    name: "invitations",
-    code: "\nconst url = 'https://dev.moonshot.ceo/api/core/invitations';\n" +
+    name: "invitations/:id",
+    code: "\nconst url = 'https://dev.moonshot.ceo/api/core/invitations/1';\n" +
       "\n" +
       "const body = {\n" +
-      "  \"id\":\"61b1cd9b4441d07b3246472c\",\n" +
-      "  \"lastEmail\":1639042457835\n" +
+      "  \"senderId\":\"1\",\n" +
+      "  \"sentOn\":1639590502463,\n" +
       " }\n" +
       "\n" +
       "fetch(url, {\n" +
@@ -1803,11 +1848,10 @@ export class CoreJavascriptTemplates {
   }
 
   public static notification_put : EndpointTemplate = {
-    name: "notifications",
-    code: "\nconst url = 'https://dev.moonshot.ceo/api/core/notifications';\n" +
+    name: "notifications/:id",
+    code: "\nconst url = 'https://dev.moonshot.ceo/api/core/notifications/1';\n" +
       "\n" +
       "const body = {\n" +
-      "  id: \"1\",\n" +
       "  type: \"ECOSYSTEM_ACCESS_REQUEST\",\n" +
       "  readed: \"true\"\n" +
       "}\n" +
@@ -1834,32 +1878,6 @@ export class CoreJavascriptTemplates {
   }
 
   public static setting_post: EndpointTemplate = {
-    name: "settings",
-    code: "\nconst url = 'https://dev.moonshot.ceo/api/core/settings';\n" +
-      "\n" +
-      "const body = {\n" +
-      "  banner:{\n" +
-      "    \"original\":\"https://moonshot-innovation.s3.eu-central-1.amazonaws.com/60d6031b0d5a16054411a570/image/a920a411-31f2-4d13-8ebb-81c347607705.jpeg\",\n" +
-      "    \"thumbnail\":\"https://moonshot-innovation.s3.eu-central-1.amazonaws.com/60d6031b0d5a16054411a570/image/44159982-303f-44ee-b903-94ca6147bbb9.jpeg\",\n" +
-      "    \"crop\":{\n" +
-      "       \"x\":129,\n" +
-      "       \"y\":34,\n" +
-      "       \"width\":921,\n" +
-      "       \"height\":921\n" +
-      "    }\n" +
-      "  }\n" +
-      "}\n" +
-      "\n" +
-      "fetch(url, {\n" +
-      "  method: 'POST',\n" +
-      "  body: JSON.stringify(body)\n" +
-      "})\n" +
-      "  .then(response => response.json())\n" +
-      "  .then(data => console.log(JSON.stringify(data)));",
-    response: null
-  }
-
-  public static setting_put: EndpointTemplate = {
     name: "settings",
     code: "\nconst url = 'https://dev.moonshot.ceo/api/core/settings';\n" +
       "\n" +
@@ -1906,5 +1924,65 @@ export class CoreJavascriptTemplates {
       "      }\n" +
       "   }\n" +
       "}"
+  }
+
+  public static setting_upload_original_post: EndpointTemplate = {
+    name: "settings/upload/original",
+    code: "\nconst formData = new FormData();\n" +
+      "const url = 'https://dev.moonshot.ceo/api/core/settings/upload/original'\n" +
+      "     \n" +
+      "formData.append(\"file\", 'YOUR_FILE');\n" +
+      "\n" +
+      "fetch(url, {\n" +
+      "  method: 'POST',\n" +
+      "  body: formData\n" +
+      "})\n" +
+      "  .then(path => console.log(path))",
+    response: "\nhttps://localhost/drive/settings/banner/original/61eaffcdad2bd12319fd4eba.png"
+  }
+
+  public static setting_upload_thumbnail_post: EndpointTemplate = {
+    name: "settings/upload/thumbnail",
+    code: "\nconst formData = new FormData();\n" +
+      "const url = 'https://dev.moonshot.ceo/api/core/settings/upload/thumbnail'\n" +
+      "     \n" +
+      "formData.append(\"file\", 'YOUR_FILE');\n" +
+      "\n" +
+      "fetch(url, {\n" +
+      "  method: 'POST',\n" +
+      "  body: formData\n" +
+      "})\n" +
+      "  .then(path => console.log(path))",
+    response: "\nhttps://localhost/drive/settings/banner/original/61eaffcdad2bd12319fd4eba.png"
+  }
+
+  public static challenge_upload_media_post: EndpointTemplate = {
+    name: "challenges/upload/media",
+    code: "\nconst formData = new FormData();\n" +
+      "const url = 'https://dev.moonshot.ceo/api/core/challenges/upload/media'\n" +
+      "     \n" +
+      "formData.append(\"file\", 'YOUR_FILE');\n" +
+      "\n" +
+      "fetch(url, {\n" +
+      "  method: 'POST',\n" +
+      "  body: formData\n" +
+      "})\n" +
+      "  .then(path => console.log(path))",
+    response: "\nhttps://localhost/drive/challenges/media/61eaffcdad2bd12319fd4eba.png"
+  }
+
+  public static challenge_upload_news_post: EndpointTemplate = {
+    name: "challenges/upload/news",
+    code: "\nconst formData = new FormData();\n" +
+      "const url = 'https://dev.moonshot.ceo/api/core/challenges/upload/news'\n" +
+      "     \n" +
+      "formData.append(\"file\", 'YOUR_FILE');\n" +
+      "\n" +
+      "fetch(url, {\n" +
+      "  method: 'POST',\n" +
+      "  body: formData\n" +
+      "})\n" +
+      "  .then(path => console.log(path))",
+    response: "\nhttps://localhost/drive/challenges/news/61eaffcdad2bd12319fd4eba.png"
   }
 }

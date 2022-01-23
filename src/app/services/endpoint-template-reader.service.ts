@@ -107,7 +107,13 @@ export class EndpointTemplateReaderService {
         return CoreJavascriptTemplates.ecosystem_get
       case 'ecosystems_post':
         return CoreJavascriptTemplates.ecosystem_post
-      case 'ecosystems_put':
+      case 'ecosystems/upload/original_post':
+        return CoreJavascriptTemplates.ecosystem_upload_original_post
+      case 'ecosystems/upload/thumbnail_post':
+        return CoreJavascriptTemplates.ecosystem_upload_thumbnail_post
+      case 'ecosystems/:id/upload/media_put':
+        return CoreJavascriptTemplates.ecosystem_id_upload_media_put
+      case 'ecosystems/:id_put':
         return CoreJavascriptTemplates.ecosystem_put
       case 'invitations_get':
         return CoreJavascriptTemplates.invitations_get
@@ -115,7 +121,7 @@ export class EndpointTemplateReaderService {
         return CoreJavascriptTemplates.invitations_by_email_get
       case 'invitations_post':
         return CoreJavascriptTemplates.invitation_post
-      case 'invitations_put':
+      case 'invitations/:id_put':
         return CoreJavascriptTemplates.invitation_put
       case 'invitations/:id_delete':
         return CoreJavascriptTemplates.invitation_id_delete
@@ -127,16 +133,22 @@ export class EndpointTemplateReaderService {
         return CoreJavascriptTemplates.notifications_pending_get
       case 'notifications_post':
         return CoreJavascriptTemplates.notification_post
-      case 'notifications_put':
+      case 'notifications/:id_put':
         return CoreJavascriptTemplates.notification_put
       case 'notifications/:id_delete':
         return CoreJavascriptTemplates.notification_id_delete
       case 'settings_post':
         return CoreJavascriptTemplates.setting_post
-      case 'settings_put':
-        return CoreJavascriptTemplates.setting_put
       case 'settings_get':
         return CoreJavascriptTemplates.setting_get
+      case 'settings/upload/original_post':
+        return CoreJavascriptTemplates.setting_upload_original_post
+      case 'settings/upload/thumbnail_post':
+        return CoreJavascriptTemplates.setting_upload_thumbnail_post
+      case 'challenges/upload/media_post':
+        return CoreJavascriptTemplates.challenge_upload_media_post
+      case 'challenges/upload/news_post':
+        return CoreJavascriptTemplates.challenge_upload_news_post
       default:
         return null
     }
@@ -175,7 +187,13 @@ export class EndpointTemplateReaderService {
         return CoreJavaTemplates.ecosystem_get
       case 'ecosystems_post':
         return CoreJavaTemplates.ecosystem_post
-      case 'ecosystems_put':
+      case 'ecosystems/upload/original_post':
+        return CoreJavaTemplates.ecosystem_upload_original_post
+      case 'ecosystems/upload/thumbnail_post':
+        return CoreJavaTemplates.ecosystem_upload_thumbnail_post
+      case 'ecosystems/:id/upload/media_put':
+        return CoreJavaTemplates.ecosystem_id_upload_media_put
+      case 'ecosystems/:id_put':
         return CoreJavaTemplates.ecosystem_put
       case 'invitations_get':
         return CoreJavaTemplates.invitations_get
@@ -183,7 +201,7 @@ export class EndpointTemplateReaderService {
         return CoreJavaTemplates.invitations_by_email_get
       case 'invitations_post':
         return CoreJavaTemplates.invitation_post
-      case 'invitations_put':
+      case 'invitations/:id_put':
         return CoreJavaTemplates.invitation_put
       case 'invitations/:id_delete':
         return CoreJavaTemplates.invitation_id_delete
@@ -195,16 +213,22 @@ export class EndpointTemplateReaderService {
         return CoreJavaTemplates.notifications_pending_get
       case 'notifications_post':
         return CoreJavaTemplates.notification_post
-      case 'notifications_put':
+      case 'notifications/:id_put':
         return CoreJavaTemplates.notification_put
       case 'notifications/:id_delete':
         return CoreJavaTemplates.notification_id_delete
       case 'settings_post':
         return CoreJavaTemplates.setting_post
-      case 'settings_put':
-        return CoreJavaTemplates.setting_put
       case 'settings_get':
         return CoreJavaTemplates.setting_get
+      case 'settings/upload/original_post':
+        return CoreJavaTemplates.setting_upload_original_post
+      case 'settings/upload/thumbnail_post':
+        return CoreJavaTemplates.setting_upload_thumbnail_post
+      case 'challenges/upload/media_post':
+        return CoreJavaTemplates.challenge_upload_media_post
+      case 'challenges/upload/news_post':
+        return CoreJavaTemplates.challenge_upload_news_post
       default:
         return null
     }
@@ -243,7 +267,13 @@ export class EndpointTemplateReaderService {
         return CorePythonTemplates.ecosystem_get
       case 'ecosystems_post':
         return CorePythonTemplates.ecosystem_post
-      case 'ecosystems_put':
+      case 'ecosystems/upload/original_post':
+        return CorePythonTemplates.ecosystem_upload_original_post
+      case 'ecosystems/upload/thumbnail_post':
+        return CorePythonTemplates.ecosystem_upload_thumbnail_post
+      case 'ecosystems/:id/upload/media_put':
+        return CorePythonTemplates.ecosystem_id_upload_media_put
+      case 'ecosystems/:id_put':
         return CorePythonTemplates.ecosystem_put
       case 'invitations_get':
         return CorePythonTemplates.invitations_get
@@ -251,7 +281,7 @@ export class EndpointTemplateReaderService {
         return CorePythonTemplates.invitations_by_email_get
       case 'invitations_post':
         return CorePythonTemplates.invitation_post
-      case 'invitations_put':
+      case 'invitations/:id_put':
         return CorePythonTemplates.invitation_put
       case 'invitations/:id_delete':
         return CorePythonTemplates.invitation_id_delete
@@ -263,16 +293,22 @@ export class EndpointTemplateReaderService {
         return CorePythonTemplates.notifications_pending_get
       case 'notifications_post':
         return CorePythonTemplates.notification_post
-      case 'notifications_put':
+      case 'notifications/:id_put':
         return CorePythonTemplates.notification_put
       case 'notifications/:id_delete':
         return CorePythonTemplates.notification_id_delete
       case 'settings_post':
         return CorePythonTemplates.setting_post
-      case 'settings_put':
-        return CorePythonTemplates.setting_put
       case 'settings_get':
         return CorePythonTemplates.setting_get
+      case 'settings/upload/original_post':
+        return CorePythonTemplates.setting_upload_original_post
+      case 'settings/upload/thumbnail_post':
+        return CorePythonTemplates.setting_upload_thumbnail_post
+      case 'challenges/upload/media_post':
+        return CorePythonTemplates.challenge_upload_media_post
+      case 'challenges/upload/news_post':
+        return CorePythonTemplates.challenge_upload_news_post
       default:
         return null
     }

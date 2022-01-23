@@ -13,6 +13,7 @@ export class EventTemplateReaderService {
     EventTemplates.OnlineEventSubscriptionEvent,
     EventTemplates.OnlineEventUnsubscriptionEvent,
     EventTemplates.OnlineEventDeleteEvent,
+    EventTemplates.FaceToFaceEventCreateEvent,
     EventTemplates.FaceToFaceEventUpdateEvent,
     EventTemplates.FaceToFaceEventSubscriptionEvent,
     EventTemplates.FaceToFaceEventUnsubscriptionEvent,
@@ -49,6 +50,8 @@ export class EventTemplateReaderService {
     EventTemplates.ActorUpdateEvent,
     EventTemplates.ActorAddNewMemberEvent,
     EventTemplates.ActorDeleteEvent,
+    EventTemplates.ActorAcceptEvent,
+    EventTemplates.ActorRejectEvent,
     EventTemplates.MemberUpdateEvent,
     EventTemplates.MemberDeleteEvent,
     EventTemplates.MemberCreateEducationEvent,
@@ -79,8 +82,7 @@ export class EventTemplateReaderService {
     EventTemplates.NotificationCreateEvent,
     EventTemplates.NotificationUpdateEvent,
     EventTemplates.NotificationDeleteEvent,
-    EventTemplates.SettingCreateEvent,
-    EventTemplates.SettingUpdateEvent
+    EventTemplates.SettingSaveEvent
   ]
 
   private objectTypesTemplates: ObjectTypeTemplate[] = [

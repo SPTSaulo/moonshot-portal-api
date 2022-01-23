@@ -34,6 +34,9 @@ export class CodeExampleComponent implements OnInit {
 
   private loadTemplate() {
     this.template = this._templateReaderService.getTemplate(this.endpoint, this.module, this.selectedLanguage)
+    if (!this.template) {
+      console.log(this.endpoint);
+    }
   }
 
 }

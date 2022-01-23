@@ -2156,27 +2156,31 @@ export class EventTemplates {
       "reason": ObjectType.STRING,
       "notification": ObjectType.BOOLEAN,
       "createdAt": ObjectType.NUMBER,
-      "lastEmail": ObjectType.NUMBER
+      "senderId": ObjectType.STRING,
+      "sentOn": ObjectType.NUMBER
     },
     example: {
       "email": "example1@gmail.com",
       "reason": "Access denied",
       "notification": true,
       "createdAt": 1639590502463,
-      "lastEmail": 1639590502463
+      "senderId": "1",
+      "sentOn": 1639590502463
     },
-    entity: Entity.ECOSYSTEM
+    entity: Entity.INVITATION
   }
 
   public static InvitationUpdateEvent: EventTemplate = {
     name: "INVITATION_UPDATE_EVENT",
     schema: {
       "id": ObjectType.STRING,
-      "lastEmail": ObjectType.NUMBER
+      "senderId": ObjectType.STRING,
+      "sentOn": ObjectType.NUMBER
     },
     example: {
       "id": "61445159784bca6ef764c6df",
-      "lastEmail": 1639590502463
+      "senderId": "1",
+      "sentOn": 1639590502463
     },
     entity: Entity.INVITATION
   }
@@ -2460,28 +2464,8 @@ export class EventTemplates {
     entity: Entity.NOTIFICATION
   }
 
-  public static SettingCreateEvent: EventTemplate = {
-    name: "SETTING_CREATE_EVENT",
-    schema: {
-      "banner": ObjectType.IMAGE
-    },
-    example: {
-      "banner": {
-        "original": "https://moonshot-innovation.s3.eu-central-1.amazonaws.com/60aca5fa0565c3210a322662/image/f306ce3b-4db9-4529-9bde-fdb133bbef1f.png",
-        "thumbnail": "https://moonshot-innovation.s3.eu-central-1.amazonaws.com/60aca5fa0565c3210a322662/image/f306ce3b-4db9-4529-9bde-fdb133bbef1f.png",
-        "crop": {
-          "x": 100,
-          "y": 20,
-          "width": 1750,
-          "height": 500
-        }
-      }
-    },
-    entity: Entity.SETTING
-  }
-
-  public static SettingUpdateEvent: EventTemplate = {
-    name: "SETTING_UPDATE_EVENT",
+  public static SettingSaveEvent: EventTemplate = {
+    name: "SETTING_SAVE_EVENT",
     schema: {
       "id": ObjectType.STRING,
       "banner": ObjectType.IMAGE

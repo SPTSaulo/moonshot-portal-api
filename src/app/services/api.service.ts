@@ -161,7 +161,19 @@ export class ApiService {
           method: Method.POST
         },
         {
-          name: 'ecosystems',
+          name: 'ecosystems/upload/original',
+          method: Method.POST
+        },
+        {
+          name: 'ecosystems/upload/thumbnail',
+          method: Method.POST
+        },
+        {
+          name: 'ecosystems/:id/upload/media',
+          method: Method.PUT
+        },
+        {
+          name: 'ecosystems/:id',
           method: Method.PUT
         },
         {
@@ -177,7 +189,7 @@ export class ApiService {
           method: Method.POST
         },
         {
-          name: 'invitations',
+          name: 'invitations/:id',
           method: Method.PUT
         },
         {
@@ -201,7 +213,7 @@ export class ApiService {
           method: Method.POST
         },
         {
-          name: 'notifications',
+          name: 'notifications/:id',
           method: Method.PUT
         },
         {
@@ -217,16 +229,29 @@ export class ApiService {
           method: Method.POST
         },
         {
-          name: 'settings',
-          method: Method.PUT
+          name: 'settings/upload/original',
+          method: Method.POST
+        },
+        {
+          name: 'settings/upload/thumbnail',
+          method: Method.POST
+        },
+        {
+          name: 'challenges/upload/media',
+          method: Method.POST
+        },
+        {
+          name: 'challenges/upload/news',
+          method: Method.POST
         }
       ],
       description: 'Esta es la api de Core. ' +
         'Esta api recoge todos los enpoints relacionados con las funcionalidades principales de la plataforma. ' +
         'En esta api encontrará los siguientes endpoints:\n' +
         '- Todos los endpoints de obtención de taxonomias\n' +
-        '- Todos los endpoints de obtención, creación y modificación de un ecosystema\n' +
-        '- Todos los endpoints de obtenición y creación de notificaciones\n',
+        '- Todos los endpoints de obtención, creación y modificación de un ecosistema\n' +
+        '- Todos los endpoints de obtención y creación de notificaciones\n' +
+        '- Todos los endpoints de modificación de retos',
       swagger: ApisConstants.core
     },
     {

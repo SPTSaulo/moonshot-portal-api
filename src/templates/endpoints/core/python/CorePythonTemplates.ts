@@ -1159,14 +1159,46 @@ export class CorePythonTemplates {
     response: null
   }
 
-  public static ecosystem_put: EndpointTemplate = {
-    name: "ecosystems",
+  public static ecosystem_upload_original_post: EndpointTemplate = {
+    name: "ecosystems/upload/original",
     code: "\nimport requests as reqs\n" +
       "\n" +
-      "URL = \"https://dev.moonshot.ceo/api/core/ecosystems\"\n" +
+      "URL = \"https://dev.moonshot.ceo/api/core/ecosystems/upload/original\"\n" +
+      "\n" +
+      "response = reqs.put(URL, files={'file': open('YOUR_FILE', 'r')})\n" +
+      "print(response.text)",
+    response: "\nhttps://localhost/drive/ecosystem/profile/original/61eaffcdad2bd12319fd4eba.png"
+  }
+
+  public static ecosystem_upload_thumbnail_post: EndpointTemplate = {
+    name: "ecosystems/upload/thumbnail",
+    code: "\nimport requests as reqs\n" +
+      "\n" +
+      "URL = \"https://dev.moonshot.ceo/api/core/ecosystems/upload/thumbnail\"\n" +
+      "\n" +
+      "response = reqs.put(URL, files={'file': open('YOUR_FILE', 'r')})\n" +
+      "print(response.text)",
+    response: "\nhttps://localhost/drive/ecosystem/profile/thumbnail/61eaffcdad2bd12319fd4eba.png"
+  }
+
+  public static ecosystem_id_upload_media_put: EndpointTemplate = {
+    name: "ecosystems/:id/upload/media",
+    code: "\nimport requests as reqs\n" +
+      "\n" +
+      "URL = \"https://dev.moonshot.ceo/api/core/ecosystems/1/upload/media\"\n" +
+      "\n" +
+      "response = reqs.put(URL, files={'file': open('YOUR_FILE', 'r')})\n" +
+      "print(response.text)",
+    response: "\nhttps://localhost/drive/ecosystem/media/61eaffcdad2bd12319fd4eba.png"
+  }
+
+  public static ecosystem_put: EndpointTemplate = {
+    name: "ecosystems/:id",
+    code: "\nimport requests as reqs\n" +
+      "\n" +
+      "URL = \"https://dev.moonshot.ceo/api/core/ecosystems/1\"\n" +
       "\n" +
       "BODY = {\n" +
-      "  \"id\":\"60acae8f2f799d228a4d4a87\",\n" +
       "  \"type\":\"CORPORATE\",\n" +
       "  \"name\":\"DEV  Moonshot\",\n" +
       "  \"address\":\"Calle Poniente, 33\",\n" +
@@ -1291,7 +1323,8 @@ export class CorePythonTemplates {
       "  \"reason\":\"En nombre del ecosistema DEV  Moonshot, me complace invitarlo a participar en nuestro Ecosistema de Innovación, un entorno digital para compartir ideas y proyectos disruptivos, así como para colaborar en desafíos y talleres. Espero que se una a nuestro ecosistema, con otros socios exclusivos, para observar de cerca nuestros objetivos disruptivos comunes.\",\n" +
       "  \"notification\":True,\n" +
       "  \"createdAt\":1639042457835,\n" +
-      "  \"lastEmail\":1639042457835\n" +
+      "  \"senderId\":\"1\",\n" +
+      "  \"sentOn\":1639590502463,\n" +
       "}\n" +
       "\n" +
       "response = reqs.post(URL, data=BODY)\n" +
@@ -1300,14 +1333,14 @@ export class CorePythonTemplates {
   }
 
   public static invitation_put: EndpointTemplate = {
-    name: "invitations",
+    name: "invitations/:id",
     code: "\nimport requests as reqs\n" +
       "\n" +
-      "URL = \"https://dev.moonshot.ceo/api/core/invitations\"\n" +
+      "URL = \"https://dev.moonshot.ceo/api/core/invitations/1\"\n" +
       "\n" +
       "BODY = {\n" +
-      "  \"id\":\"61b1cd9b4441d07b3246472c\",\n" +
-      "  \"lastEmail\":1639042457835\n" +
+      "  \"senderId\":\"1\",\n" +
+      "  \"sentOn\":1639590502463,\n" +
       "}\n" +
       "\n" +
       "response = reqs.put(URL, data=BODY)\n" +
@@ -1828,13 +1861,12 @@ export class CorePythonTemplates {
   }
 
   public static notification_put: EndpointTemplate = {
-    name: "notifications",
+    name: "notifications/:id",
     code: "\nimport requests as reqs\n" +
       "\n" +
-      "URL = \"https://dev.moonshot.ceo/api/core/notifications\"\n" +
+      "URL = \"https://dev.moonshot.ceo/api/core/notifications/1\"\n" +
       "\n" +
       "BODY = {\n" +
-      "  \"id\": \"61445159784bca6ef764c6df\",\n" +
       "  \"type\": \"ECOSYSTEM_ACCESS_REQUEST\",\n" +
       "  \"readed\": True\n" +
       "}\n" +
@@ -1856,30 +1888,6 @@ export class CorePythonTemplates {
   }
 
   public static setting_post: EndpointTemplate = {
-    name: "settings",
-    code: "\nimport requests as reqs\n" +
-      "\n" +
-      "URL = \"https://dev.moonshot.ceo/api/core/settings\"\n" +
-      "\n" +
-      "BODY = {\n" +
-      "   \"banner\":{\n" +
-      "      \"original\":\"https://moonshot-innovation.s3.eu-central-1.amazonaws.com/60d6031b0d5a16054411a570/image/44159982-303f-44ee-b903-94ca6147bbb9.jpeg\",\n" +
-      "      \"thumbnail\":\"https://moonshot-innovation.s3.eu-central-1.amazonaws.com/60d6031b0d5a16054411a570/image/44159982-303f-44ee-b903-94ca6147bbb9.jpeg\",\n" +
-      "      \"crop\":{\n" +
-      "         \"x\":129,\n" +
-      "         \"y\":34,\n" +
-      "         \"width\":921,\n" +
-      "         \"height\":921\n" +
-      "      }\n" +
-      "   }\n" +
-      "}\n" +
-      "\n" +
-      "response = reqs.post(URL, data=BODY)\n" +
-      "print(response.text)",
-    response: null
-  }
-
-  public static setting_put: EndpointTemplate = {
     name: "settings",
     code: "\nimport requests as reqs\n" +
       "\n" +
@@ -1925,6 +1933,50 @@ export class CorePythonTemplates {
       "      }\n" +
       "   }\n" +
       "}"
+  }
+
+  public static setting_upload_original_post: EndpointTemplate = {
+    name: "settings/upload/original",
+    code: "\nimport requests as reqs\n" +
+      "\n" +
+      "URL = \"https://dev.moonshot.ceo/api/core/settings/upload/original\"\n" +
+      "\n" +
+      "response = reqs.put(URL, files={'file': open('YOUR_FILE', 'r')})\n" +
+      "print(response.text)",
+    response: "\nhttps://localhost/drive/settings/banner/original/61eaffcdad2bd12319fd4eba.png"
+  }
+
+  public static setting_upload_thumbnail_post: EndpointTemplate = {
+    name: "settings/upload/thumbnail",
+    code: "\nimport requests as reqs\n" +
+      "\n" +
+      "URL = \"https://dev.moonshot.ceo/api/core/settings/upload/thumbnail\"\n" +
+      "\n" +
+      "response = reqs.put(URL, files={'file': open('YOUR_FILE', 'r')})\n" +
+      "print(response.text)",
+    response: "\nhttps://localhost/drive/settings/banner/thumbnail/61eaffcdad2bd12319fd4eba.png"
+  }
+
+  public static challenge_upload_media_post: EndpointTemplate = {
+    name: "challenges/upload/media",
+    code: "\nimport requests as reqs\n" +
+      "\n" +
+      "URL = \"https://dev.moonshot.ceo/api/core/challenges/upload/media\"\n" +
+      "\n" +
+      "response = reqs.put(URL, files={'file': open('YOUR_FILE', 'r')})\n" +
+      "print(response.text)",
+    response: "\nhttps://localhost/drive/challenges/media/61eaffcdad2bd12319fd4eba.png"
+  }
+
+  public static challenge_upload_news_post: EndpointTemplate = {
+    name: "challenges/upload/news",
+    code: "\nimport requests as reqs\n" +
+      "\n" +
+      "URL = \"https://dev.moonshot.ceo/api/core/challenges/upload/news\"\n" +
+      "\n" +
+      "response = reqs.put(URL, files={'file': open('YOUR_FILE', 'r')})\n" +
+      "print(response.text)",
+    response: "\nhttps://localhost/drive/challenges/news/61eaffcdad2bd12319fd4eba.png"
   }
 }
 

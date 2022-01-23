@@ -1144,8 +1144,26 @@ export class CoreJavaTemplates {
     response: null
   }
 
+  public static ecosystem_upload_original_post: EndpointTemplate = {
+    name: "ecosystems/upload/original",
+    code: "\nTODO",
+    response: "\nTODO"
+  }
+
+  public static ecosystem_upload_thumbnail_post: EndpointTemplate = {
+    name: "ecosystems/upload/thumbnail",
+    code: "\nTODO",
+    response: "\nTODO"
+  }
+
+  public static ecosystem_id_upload_media_put: EndpointTemplate = {
+    name: "ecosystems/:id/upload/media",
+    code: "\nTODO",
+    response: "\nTODO"
+  }
+
   public static ecosystem_put: EndpointTemplate = {
-    name: "ecosystemls",
+    name: "ecosystems/:id",
     code: "\nSystem.setProperty(\"CORE_HOST\", \"localhost\");\n" +
       "System.setProperty(\"CORE_PORT\", \"8082\");\n" +
       "System.setProperty(\"AUTH0_DOMAIN\", \"dev-708nr3pf.eu.auth0.com\");\n" +
@@ -1252,7 +1270,7 @@ export class CoreJavaTemplates {
   }
 
   public static invitation_put: EndpointTemplate = {
-    name: "invitations",
+    name: "invitations/:id",
     code: "\nSystem.setProperty(\"CORE_HOST\", \"localhost\");\n" +
       "System.setProperty(\"CORE_PORT\", \"8082\");\n" +
       "System.setProperty(\"AUTH0_DOMAIN\", \"dev-708nr3pf.eu.auth0.com\");\n" +
@@ -1970,7 +1988,7 @@ export class CoreJavaTemplates {
   }
 
   public static notification_put: EndpointTemplate = {
-    name: "notifications",
+    name: "notifications/:id",
     code: "\nSystem.setProperty(\"CORE_HOST\", \"localhost\");\n" +
       "System.setProperty(\"CORE_PORT\", \"8082\");\n" +
       "System.setProperty(\"AUTH0_DOMAIN\", \"dev-708nr3pf.eu.auth0.com\");\n" +
@@ -2014,21 +2032,6 @@ export class CoreJavaTemplates {
     response: null
   }
 
-  public static setting_put: EndpointTemplate = {
-    name: "settings",
-    code: "\nSystem.setProperty(\"CORE_HOST\", \"localhost\");\n" +
-      "System.setProperty(\"CORE_PORT\", \"8082\");\n" +
-      "System.setProperty(\"AUTH0_DOMAIN\", \"dev-708nr3pf.eu.auth0.com\");\n" +
-      "String clientId = \"iUNFZUf83T5OazTjDv3gkjwfGMZ7fGT9\";\n" +
-      "String clientSecret = \"xWJN3YO0kuJ-gD19zltey9N5R1Cz0ltQJZtad-p1YQJCh6-hckl8I_hnbMbHuSQ4\";\n" +
-      "App app = new App(clientId, clientSecret);\n" +
-      "CoreApi coreApi = new CoreApi();\n" +
-      "SettingSaveEvent settingSaveEvent = new SettingSaveEvent();\n" +
-      "settingSaveEvent.setBanner(new Image());\n" +
-      "coreApi.settings().save(app, settingSaveEvent);",
-    response: null
-  }
-
   public static setting_get: EndpointTemplate = {
     name: "settings",
     code: "\nSystem.setProperty(\"CORE_HOST\", \"localhost\");\n" +
@@ -2056,5 +2059,27 @@ export class CoreJavaTemplates {
       "}"
   }
 
+  public static setting_upload_original_post: EndpointTemplate = {
+    name: "settings/upload/original",
+    code: "\nTODO",
+    response: "\nTODO"
+  }
 
+  public static setting_upload_thumbnail_post: EndpointTemplate = {
+    name: "settings/upload/thumbnail",
+    code: "\nTODO",
+    response: "\nTODO"
+  }
+
+  public static challenge_upload_media_post: EndpointTemplate = {
+    name: "challenges/upload/media",
+    code: "\nTODO",
+    response: "\nTODO"
+  }
+
+  public static challenge_upload_news_post: EndpointTemplate = {
+    name: "challenges/upload/news",
+    code: "\nTODO",
+    response: "\nTODO"
+  }
 }
