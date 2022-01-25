@@ -1501,10 +1501,6 @@ export class ApisConstants {
         "description": "Endpoints about FaceToFace entity"
       },
       {
-        "name": "Room",
-        "description": "Endpoints about Room entity"
-      },
-      {
         "name": "DirectChat",
         "description": "Endpoints about DirectChat entity"
       },
@@ -1531,10 +1527,6 @@ export class ApisConstants {
       {
         "name": "Project",
         "description": "Endpoints about Project entity"
-      },
-      {
-        "name": "Setting",
-        "description": "Endpoints about Setting entity"
       }
     ],
     "paths": {
@@ -1544,7 +1536,7 @@ export class ApisConstants {
             "Version"
           ],
           "summary": "API version",
-          "description": "Return the latest version of the API\n",
+          "description": "Return the lastest version of the API\n",
           "operationId": "apiVersion",
           "responses": {
             "200": {
@@ -1607,118 +1599,7 @@ export class ApisConstants {
             "description": "Code Example",
             "url": "http://localhost:4200/code-examples/community#online-events_get"
           }
-        }
-      },
-      "/online-event/{id}": {
-        "get": {
-          "tags": [
-            "OnlineEvent"
-          ],
-          "summary": "Get an online event by id",
-          "description": "Find an online event in the database by its identifier\n",
-          "operationId": "onlineEventById",
-          "parameters": [
-            {
-              "name": "id",
-              "in": "path",
-              "description": "online event id",
-              "required": true,
-              "schema": {
-                "type": "string",
-                "format": "mongo-id",
-                "example": "61445159784bca6ef764c6df"
-              }
-            }
-          ],
-          "responses": {
-            "200": {
-              "description": "Get online event successfully",
-              "content": {
-                "application/json": {
-                  "schema": {
-                    "$ref": "#/components/schemas/OnlineEvent"
-                  }
-                }
-              }
-            },
-            "401": {
-              "description": "You must login before call this endpoint",
-              "content": {
-                "application/json": {
-                  "schema": {
-                    "$ref": "#/components/schemas/SecurityAccessUnauthorizedError"
-                  }
-                }
-              }
-            }
-          },
-          "security": [
-            {
-              "idToken": []
-            }
-          ],
-          "externalDocs": {
-            "description": "Code Example",
-            "url": "http://localhost:4200/code-examples/community#online-event/:id_get"
-          }
         },
-        "delete": {
-          "tags": [
-            "OnlineEvent"
-          ],
-          "summary": "Remove an online event",
-          "description": "Remove an online event from database\n",
-          "operationId": "onlineEventDelete",
-          "parameters": [
-            {
-              "name": "id",
-              "in": "path",
-              "description": "online event id",
-              "required": true,
-              "schema": {
-                "type": "string",
-                "format": "mongo-id",
-                "example": "61445159784bca6ef764c6df"
-              }
-            }
-          ],
-          "responses": {
-            "200": {
-              "description": "OK"
-            },
-            "400": {
-              "description": "The user is not the online event owner",
-              "content": {
-                "application/json": {
-                  "schema": {
-                    "$ref": "#/components/schemas/OnlineEventForbiddenError"
-                  }
-                }
-              }
-            },
-            "401": {
-              "description": "You must login before call this endpoint",
-              "content": {
-                "application/json": {
-                  "schema": {
-                    "$ref": "#/components/schemas/SecurityAccessUnauthorizedError"
-                  }
-                }
-              }
-            }
-          },
-          "security": [
-            {
-              "idToken": []
-            }
-          ],
-          "externalDocs": {
-            "description": "Code Example",
-            "url": "http://localhost:4200/code-examples/community#online-event_delete"
-          }
-        }
-      },
-      "/online-event": {
         "post": {
           "tags": [
             "OnlineEvent"
@@ -1781,7 +1662,61 @@ export class ApisConstants {
           ],
           "externalDocs": {
             "description": "Code Example",
-            "url": "http://localhost:4200/code-examples/community#online-event_post"
+            "url": "http://localhost:4200/code-examples/community#online-events_post"
+          }
+        }
+      },
+      "/online-events/{id}": {
+        "get": {
+          "tags": [
+            "OnlineEvent"
+          ],
+          "summary": "Get an online event by id",
+          "description": "Find an online event in the database by its identifier\n",
+          "operationId": "onlineEventById",
+          "parameters": [
+            {
+              "name": "id",
+              "in": "path",
+              "description": "online event id",
+              "required": true,
+              "schema": {
+                "type": "string",
+                "format": "mongo-id",
+                "example": "61445159784bca6ef764c6df"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "Get online event successfully",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/OnlineEvent"
+                  }
+                }
+              }
+            },
+            "401": {
+              "description": "You must login before call this endpoint",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/SecurityAccessUnauthorizedError"
+                  }
+                }
+              }
+            }
+          },
+          "security": [
+            {
+              "idToken": []
+            }
+          ],
+          "externalDocs": {
+            "description": "Code Example",
+            "url": "http://localhost:4200/code-examples/community#online-events/:id_get"
           }
         },
         "put": {
@@ -1791,6 +1726,19 @@ export class ApisConstants {
           "summary": "Update an online event",
           "description": "Find and update an online event in the database\n",
           "operationId": "onlineEventUpdate",
+          "parameters": [
+            {
+              "name": "id",
+              "in": "path",
+              "description": "online event id",
+              "required": true,
+              "schema": {
+                "type": "string",
+                "format": "mongo-id",
+                "example": "61445159784bca6ef764c6df"
+              }
+            }
+          ],
           "requestBody": {
             "description": "Object that contain all parameters to update an online event",
             "content": {
@@ -1833,11 +1781,126 @@ export class ApisConstants {
           ],
           "externalDocs": {
             "description": "Code Example",
-            "url": "http://localhost:4200/code-examples/community#online-event_put"
+            "url": "http://localhost:4200/code-examples/community#online-events/:id_put"
+          }
+        },
+        "delete": {
+          "tags": [
+            "OnlineEvent"
+          ],
+          "summary": "Remove an online event",
+          "description": "Remove an online event from database\n",
+          "operationId": "onlineEventDelete",
+          "parameters": [
+            {
+              "name": "id",
+              "in": "path",
+              "description": "online event id",
+              "required": true,
+              "schema": {
+                "type": "string",
+                "format": "mongo-id",
+                "example": "61445159784bca6ef764c6df"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "OK"
+            },
+            "400": {
+              "description": "The user is not the online event owner",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/OnlineEventForbiddenError"
+                  }
+                }
+              }
+            },
+            "401": {
+              "description": "You must login before call this endpoint",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/SecurityAccessUnauthorizedError"
+                  }
+                }
+              }
+            }
+          },
+          "security": [
+            {
+              "idToken": []
+            }
+          ],
+          "externalDocs": {
+            "description": "Code Example",
+            "url": "http://localhost:4200/code-examples/community#online-events/:id_delete"
           }
         }
       },
-      "/online-event/admin": {
+      "/online-events/upload": {
+        "post": {
+          "tags": [
+            "OnlineEvent"
+          ],
+          "summary": "Upload an online event image",
+          "description": "Save an online event image in your filesystem\n",
+          "operationId": "onlineEventUpload",
+          "requestBody": {
+            "content": {
+              "multipart/form-data": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "file": {
+                      "type": "string",
+                      "format": "binary"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "responses": {
+            "200": {
+              "description": "Url where the file is located",
+              "content": {
+                "text/plain": {
+                  "schema": {
+                    "type": "string",
+                    "example": "https://localhost/drive/events/images/61eaffcdad2bd12319fd4eba.png"
+                  }
+                }
+              }
+            },
+            "401": {
+              "description": "You must login before call this endpoint",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/SecurityAccessUnauthorizedError"
+                  }
+                }
+              }
+            }
+          },
+          "security": [
+            {
+              "idToken": []
+            },
+            {
+              "onlineEventCreate": []
+            }
+          ],
+          "externalDocs": {
+            "description": "Code Example",
+            "url": "http://localhost:4200/code-examples/community#online-events/upload_post"
+          }
+        }
+      },
+      "/online-events/{id}/admin": {
         "put": {
           "tags": [
             "OnlineEvent"
@@ -1845,6 +1908,19 @@ export class ApisConstants {
           "summary": "Update any online event",
           "description": "Find and update an online event in database\n",
           "operationId": "onlineEventUpdateAdmin",
+          "parameters": [
+            {
+              "name": "id",
+              "in": "path",
+              "description": "online event id",
+              "required": true,
+              "schema": {
+                "type": "string",
+                "format": "mongo-id",
+                "example": "61445159784bca6ef764c6df"
+              }
+            }
+          ],
           "requestBody": {
             "description": "Object that contain all parameters to update an online event",
             "content": {
@@ -1900,11 +1976,9 @@ export class ApisConstants {
           ],
           "externalDocs": {
             "description": "Code Example",
-            "url": "http://localhost:4200/code-examples/community#online-event/admin_put"
+            "url": "http://localhost:4200/code-examples/community#online-events/:id/admin_put"
           }
-        }
-      },
-      "/online-event/{id}/admin": {
+        },
         "delete": {
           "tags": [
             "OnlineEvent"
@@ -1960,11 +2034,11 @@ export class ApisConstants {
           ],
           "externalDocs": {
             "description": "Code Example",
-            "url": "http://localhost:4200/code-examples/community#online-event/admin_delete"
+            "url": "http://localhost:4200/code-examples/community#online-events/:id/admin_delete"
           }
         }
       },
-      "/online-event/subscription": {
+      "/online-events/{id}/subscription": {
         "put": {
           "tags": [
             "OnlineEvent"
@@ -1982,6 +2056,19 @@ export class ApisConstants {
               }
             }
           },
+          "parameters": [
+            {
+              "name": "id",
+              "in": "path",
+              "description": "online event id",
+              "required": true,
+              "schema": {
+                "type": "string",
+                "format": "mongo-id",
+                "example": "61445159784bca6ef764c6df"
+              }
+            }
+          ],
           "responses": {
             "200": {
               "description": "OK"
@@ -2014,11 +2101,11 @@ export class ApisConstants {
           ],
           "externalDocs": {
             "description": "Code Example",
-            "url": "http://localhost:4200/code-examples/community#online-event/subscription_put"
+            "url": "http://localhost:4200/code-examples/community#online-events/:id/subscription_put"
           }
         }
       },
-      "/online-event/unsubscription": {
+      "/online-events/{id}/unsubscription": {
         "put": {
           "tags": [
             "OnlineEvent"
@@ -2026,6 +2113,19 @@ export class ApisConstants {
           "summary": "Unsubcribe from an online event",
           "description": "Unsubscribe from an online event to stop being a participant\n",
           "operationId": "onlineEventUnsubscribe",
+          "parameters": [
+            {
+              "name": "id",
+              "in": "path",
+              "description": "online event id",
+              "required": true,
+              "schema": {
+                "type": "string",
+                "format": "mongo-id",
+                "example": "61445159784bca6ef764c6df"
+              }
+            }
+          ],
           "requestBody": {
             "description": "Object that contain all parameters to unsubscribe from an online event",
             "content": {
@@ -2068,7 +2168,7 @@ export class ApisConstants {
           ],
           "externalDocs": {
             "description": "Code Example",
-            "url": "http://localhost:4200/code-examples/community#online-event/unsubscription_put"
+            "url": "http://localhost:4200/code-examples/community#online-events/:id/unsubscription_put"
           }
         }
       },
@@ -2114,118 +2214,7 @@ export class ApisConstants {
             "description": "Code Example",
             "url": "http://localhost:4200/code-examples/community#face-to-face-events_get"
           }
-        }
-      },
-      "/face-to-face-event/{id}": {
-        "get": {
-          "tags": [
-            "FaceToFace"
-          ],
-          "summary": "Get a face to face event by id",
-          "description": "Find a face to face event in the database by its identifier\n",
-          "operationId": "faceToFaceEventById",
-          "parameters": [
-            {
-              "name": "id",
-              "in": "path",
-              "description": "face to face event id",
-              "required": true,
-              "schema": {
-                "type": "string",
-                "format": "mongo-id",
-                "example": "61445159784bca6ef764c6df"
-              }
-            }
-          ],
-          "responses": {
-            "200": {
-              "description": "Get face to face event successfully",
-              "content": {
-                "application/json": {
-                  "schema": {
-                    "$ref": "#/components/schemas/FaceToFaceEvent"
-                  }
-                }
-              }
-            },
-            "401": {
-              "description": "You must login before call this endpoint",
-              "content": {
-                "application/json": {
-                  "schema": {
-                    "$ref": "#/components/schemas/SecurityAccessUnauthorizedError"
-                  }
-                }
-              }
-            }
-          },
-          "security": [
-            {
-              "idToken": []
-            }
-          ],
-          "externalDocs": {
-            "description": "Code Example",
-            "url": "http://localhost:4200/code-examples/community#face-to-face-event/:id_get"
-          }
         },
-        "delete": {
-          "tags": [
-            "FaceToFace"
-          ],
-          "summary": "Remove a face to face event",
-          "description": "Remove a face to face event from database\n",
-          "operationId": "faceToFaceEventDelete",
-          "parameters": [
-            {
-              "name": "id",
-              "in": "path",
-              "description": "face to face event id",
-              "required": true,
-              "schema": {
-                "type": "string",
-                "format": "mongo-id",
-                "example": "61445159784bca6ef764c6df"
-              }
-            }
-          ],
-          "responses": {
-            "200": {
-              "description": "OK"
-            },
-            "400": {
-              "description": "The user is not the face to face event owner",
-              "content": {
-                "application/json": {
-                  "schema": {
-                    "$ref": "#/components/schemas/FaceToFaceEventForbiddenError"
-                  }
-                }
-              }
-            },
-            "401": {
-              "description": "You must login before call this endpoint",
-              "content": {
-                "application/json": {
-                  "schema": {
-                    "$ref": "#/components/schemas/SecurityAccessUnauthorizedError"
-                  }
-                }
-              }
-            }
-          },
-          "security": [
-            {
-              "idToken": []
-            }
-          ],
-          "externalDocs": {
-            "description": "Code Example",
-            "url": "http://localhost:4200/code-examples/community#face-to-face-event_delete"
-          }
-        }
-      },
-      "/face-to-face-event": {
         "post": {
           "tags": [
             "FaceToFace"
@@ -2288,7 +2277,61 @@ export class ApisConstants {
           ],
           "externalDocs": {
             "description": "Code Example",
-            "url": "http://localhost:4200/code-examples/community#face-to-face-event_post"
+            "url": "http://localhost:4200/code-examples/community#face-to-face-events_post"
+          }
+        }
+      },
+      "/face-to-face-events/{id}": {
+        "get": {
+          "tags": [
+            "FaceToFace"
+          ],
+          "summary": "Get a face to face event by id",
+          "description": "Find a face to face event in the database by its identifier\n",
+          "operationId": "faceToFaceEventById",
+          "parameters": [
+            {
+              "name": "id",
+              "in": "path",
+              "description": "face to face event id",
+              "required": true,
+              "schema": {
+                "type": "string",
+                "format": "mongo-id",
+                "example": "61445159784bca6ef764c6df"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "Get face to face event successfully",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/FaceToFaceEvent"
+                  }
+                }
+              }
+            },
+            "401": {
+              "description": "You must login before call this endpoint",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/SecurityAccessUnauthorizedError"
+                  }
+                }
+              }
+            }
+          },
+          "security": [
+            {
+              "idToken": []
+            }
+          ],
+          "externalDocs": {
+            "description": "Code Example",
+            "url": "http://localhost:4200/code-examples/community#face-to-face-events/:id_get"
           }
         },
         "put": {
@@ -2298,6 +2341,19 @@ export class ApisConstants {
           "summary": "Update a face to face event",
           "description": "Find and update a face to face event in the database\n",
           "operationId": "faceToFaceEventUpdate",
+          "parameters": [
+            {
+              "name": "id",
+              "in": "path",
+              "description": "face to face event id",
+              "required": true,
+              "schema": {
+                "type": "string",
+                "format": "mongo-id",
+                "example": "61445159784bca6ef764c6df"
+              }
+            }
+          ],
           "requestBody": {
             "description": "Object that contain all parameters to update a face to face event",
             "content": {
@@ -2340,11 +2396,126 @@ export class ApisConstants {
           ],
           "externalDocs": {
             "description": "Code Example",
-            "url": "http://localhost:4200/code-examples/community#face-to-face-event_put"
+            "url": "http://localhost:4200/code-examples/community#face-to-face-events/:id_put"
+          }
+        },
+        "delete": {
+          "tags": [
+            "FaceToFace"
+          ],
+          "summary": "Remove a face to face event",
+          "description": "Remove a face to face event from database\n",
+          "operationId": "faceToFaceEventDelete",
+          "parameters": [
+            {
+              "name": "id",
+              "in": "path",
+              "description": "face to face event id",
+              "required": true,
+              "schema": {
+                "type": "string",
+                "format": "mongo-id",
+                "example": "61445159784bca6ef764c6df"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "OK"
+            },
+            "400": {
+              "description": "The user is not the face to face event owner",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/FaceToFaceEventForbiddenError"
+                  }
+                }
+              }
+            },
+            "401": {
+              "description": "You must login before call this endpoint",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/SecurityAccessUnauthorizedError"
+                  }
+                }
+              }
+            }
+          },
+          "security": [
+            {
+              "idToken": []
+            }
+          ],
+          "externalDocs": {
+            "description": "Code Example",
+            "url": "http://localhost:4200/code-examples/community#face-to-face-events/:id_delete"
           }
         }
       },
-      "/face-to-face/admin": {
+      "/face-to-face-events/upload": {
+        "post": {
+          "tags": [
+            "FaceToFace"
+          ],
+          "summary": "Upload a face to face event image",
+          "description": "Save a face to face event image in your filesystem\n",
+          "operationId": "faceToFaceEventUpload",
+          "requestBody": {
+            "content": {
+              "multipart/form-data": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "file": {
+                      "type": "string",
+                      "format": "binary"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "responses": {
+            "200": {
+              "description": "Url where the file is located",
+              "content": {
+                "text/plain": {
+                  "schema": {
+                    "type": "string",
+                    "example": "https://localhost/drive/events/images/61eaffcdad2bd12319fd4eba.png"
+                  }
+                }
+              }
+            },
+            "401": {
+              "description": "You must login before call this endpoint",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/SecurityAccessUnauthorizedError"
+                  }
+                }
+              }
+            }
+          },
+          "security": [
+            {
+              "idToken": []
+            },
+            {
+              "faceToFaceEventCreate": []
+            }
+          ],
+          "externalDocs": {
+            "description": "Code Example",
+            "url": "http://localhost:4200/code-examples/community#face-to-face-events/upload_post"
+          }
+        }
+      },
+      "/face-to-face-events/{id}/admin": {
         "put": {
           "tags": [
             "FaceToFace"
@@ -2362,6 +2533,19 @@ export class ApisConstants {
               }
             }
           },
+          "parameters": [
+            {
+              "name": "id",
+              "in": "path",
+              "description": "face to face event id",
+              "required": true,
+              "schema": {
+                "type": "string",
+                "format": "mongo-id",
+                "example": "61445159784bca6ef764c6df"
+              }
+            }
+          ],
           "responses": {
             "200": {
               "description": "OK"
@@ -2407,11 +2591,9 @@ export class ApisConstants {
           ],
           "externalDocs": {
             "description": "Code Example",
-            "url": "http://localhost:4200/code-examples/community#face-to-face-event/admin_put"
+            "url": "http://localhost:4200/code-examples/community#face-to-face-events/:id/admin_put"
           }
-        }
-      },
-      "/face-to-face-event/{id}/admin": {
+        },
         "delete": {
           "tags": [
             "FaceToFace"
@@ -2467,11 +2649,11 @@ export class ApisConstants {
           ],
           "externalDocs": {
             "description": "Code Example",
-            "url": "http://localhost:4200/code-examples/community#face-to-face-event/admin_delete"
+            "url": "http://localhost:4200/code-examples/community#face-to-face-events/:id/admin_delete"
           }
         }
       },
-      "/face-to-face-event/subscription": {
+      "/face-to-face-events/{id}/subscription": {
         "put": {
           "tags": [
             "FaceToFace"
@@ -2489,6 +2671,19 @@ export class ApisConstants {
               }
             }
           },
+          "parameters": [
+            {
+              "name": "id",
+              "in": "path",
+              "description": "face to face event id",
+              "required": true,
+              "schema": {
+                "type": "string",
+                "format": "mongo-id",
+                "example": "61445159784bca6ef764c6df"
+              }
+            }
+          ],
           "responses": {
             "200": {
               "description": "OK"
@@ -2521,11 +2716,11 @@ export class ApisConstants {
           ],
           "externalDocs": {
             "description": "Code Example",
-            "url": "http://localhost:4200/code-examples/community#face-to-face-event/subscription_put"
+            "url": "http://localhost:4200/code-examples/community#face-to-face-events/:id/subscription_put"
           }
         }
       },
-      "/face-to-face-event/unsubscription": {
+      "/face-to-face-events/{id}/unsubscription": {
         "put": {
           "tags": [
             "FaceToFace"
@@ -2533,6 +2728,19 @@ export class ApisConstants {
           "summary": "Unsubcribe from a face to face event",
           "description": "Unsubscribe from a face to face event to stop being a participant\n",
           "operationId": "faceToFaceEventUnsubscribe",
+          "parameters": [
+            {
+              "name": "id",
+              "in": "path",
+              "description": "face to face event id",
+              "required": true,
+              "schema": {
+                "type": "string",
+                "format": "mongo-id",
+                "example": "61445159784bca6ef764c6df"
+              }
+            }
+          ],
           "requestBody": {
             "description": "Object that contain all parameters to unsubscribe from an face to face event",
             "content": {
@@ -2575,120 +2783,7 @@ export class ApisConstants {
           ],
           "externalDocs": {
             "description": "Code Example",
-            "url": "http://localhost:4200/code-examples/community#face-to-face-event/unsubscription_put"
-          }
-        }
-      },
-      "/room-documents/{room_id}": {
-        "get": {
-          "tags": [
-            "Room"
-          ],
-          "summary": "Get all documents from the room",
-          "description": "Find the room in database and return all the documents\n",
-          "operationId": "roomDocuments",
-          "parameters": [
-            {
-              "name": "room_id",
-              "in": "path",
-              "description": "room id",
-              "required": true,
-              "schema": {
-                "type": "string",
-                "format": "mongo-id",
-                "example": "61445159784bca6ef764c6df"
-              }
-            }
-          ],
-          "responses": {
-            "200": {
-              "description": "Get documents successfully",
-              "content": {
-                "application/json": {
-                  "schema": {
-                    "type": "array",
-                    "items": {
-                      "$ref": "#/components/schemas/Document"
-                    }
-                  }
-                }
-              }
-            },
-            "401": {
-              "description": "You must login before call this endpoint",
-              "content": {
-                "application/json": {
-                  "schema": {
-                    "$ref": "#/components/schemas/SecurityAccessUnauthorizedError"
-                  }
-                }
-              }
-            }
-          },
-          "security": [
-            {
-              "idToken": []
-            }
-          ],
-          "externalDocs": {
-            "description": "Code Example",
-            "url": "http://localhost:4200/code-examples/community#room-documents/:room_id_get"
-          }
-        }
-      },
-      "/room-links/{room_id}": {
-        "get": {
-          "tags": [
-            "Room"
-          ],
-          "summary": "Get all links from the room",
-          "description": "Find the room in databse and return all the links\n",
-          "parameters": [
-            {
-              "name": "room_id",
-              "in": "path",
-              "description": "room id",
-              "required": true,
-              "schema": {
-                "type": "string",
-                "format": "mongo-id",
-                "example": "61445159784bca6ef764c6df"
-              }
-            }
-          ],
-          "responses": {
-            "200": {
-              "description": "Get links successfully",
-              "content": {
-                "application/json": {
-                  "schema": {
-                    "type": "array",
-                    "items": {
-                      "$ref": "#/components/schemas/Link"
-                    }
-                  }
-                }
-              }
-            },
-            "401": {
-              "description": "You must login before call this endpoint",
-              "content": {
-                "application/json": {
-                  "schema": {
-                    "$ref": "#/components/schemas/SecurityAccessUnauthorizedError"
-                  }
-                }
-              }
-            }
-          },
-          "security": [
-            {
-              "idToken": []
-            }
-          ],
-          "externalDocs": {
-            "description": "Code Example",
-            "url": "http://localhost:4200/code-examples/community#room-links/:room_id_get"
+            "url": "http://localhost:4200/code-examples/community#face-to-face-events/:id/unsubscription_put"
           }
         }
       },
@@ -2737,14 +2832,66 @@ export class ApisConstants {
             "description": "Code Example",
             "url": "http://localhost:4200/code-examples/community#direct-chats_get"
           }
+        },
+        "post": {
+          "tags": [
+            "DirectChat"
+          ],
+          "summary": "Create a direct chat",
+          "description": "Create and insert a direct chat in database\n",
+          "operationId": "directChatCreate",
+          "requestBody": {
+            "description": "Object that contain all parameters to create a direct chat",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/DirectChatCreateEvent"
+                }
+              }
+            }
+          },
+          "responses": {
+            "200": {
+              "description": "OK"
+            },
+            "400": {
+              "description": "Body is empty or direct chat already exist",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/DirectChatEmptyBodyError"
+                  }
+                }
+              }
+            },
+            "401": {
+              "description": "You must login before call this endpoint",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/SecurityAccessUnauthorizedError"
+                  }
+                }
+              }
+            }
+          },
+          "security": [
+            {
+              "idToken": []
+            }
+          ],
+          "externalDocs": {
+            "description": "Code Example",
+            "url": "http://localhost:4200/code-examples/community#direct-chats_post"
+          }
         }
       },
-      "/direct-chats/all": {
+      "/direct-chats/all/member-participate": {
         "get": {
           "tags": [
             "DirectChat"
           ],
-          "summary": "Get all direct chats",
+          "summary": "Get all direct chats where member who make the request participate",
           "description": "Find all direct chats in database\n",
           "operationId": "directChatsAll",
           "responses": {
@@ -2792,11 +2939,11 @@ export class ApisConstants {
           ],
           "externalDocs": {
             "description": "Code Example",
-            "url": "http://localhost:4200/code-examples/community#direct-chats/all_get"
+            "url": "http://localhost:4200/code-examples/community#direct-chats/all/member-participate_get"
           }
         }
       },
-      "/direct-chat/{id}": {
+      "/direct-chats/{id}": {
         "get": {
           "tags": [
             "DirectChat"
@@ -2846,7 +2993,7 @@ export class ApisConstants {
           ],
           "externalDocs": {
             "description": "Code Example",
-            "url": "http://localhost:4200/code-examples/community#direct-chat/:id_get"
+            "url": "http://localhost:4200/code-examples/community#direct-chats/:id_get"
           }
         },
         "delete": {
@@ -2901,119 +3048,11 @@ export class ApisConstants {
           ],
           "externalDocs": {
             "description": "Code Example",
-            "url": "http://localhost:4200/code-examples/community#direct-chat_delete"
+            "url": "http://localhost:4200/code-examples/community#direct-chats/:id_delete"
           }
         }
       },
-      "/direct-chat": {
-        "post": {
-          "tags": [
-            "DirectChat"
-          ],
-          "summary": "Create a direct chat",
-          "description": "Create and insert a direct chat in database\n",
-          "operationId": "directChatCreate",
-          "requestBody": {
-            "description": "Object that contain all parameters to create a direct chat",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/DirectChatCreateEvent"
-                }
-              }
-            }
-          },
-          "responses": {
-            "200": {
-              "description": "OK"
-            },
-            "400": {
-              "description": "Body is empty or direct chat already exist",
-              "content": {
-                "application/json": {
-                  "schema": {
-                    "$ref": "#/components/schemas/DirectChatEmptyBodyError"
-                  }
-                }
-              }
-            },
-            "401": {
-              "description": "You must login before call this endpoint",
-              "content": {
-                "application/json": {
-                  "schema": {
-                    "$ref": "#/components/schemas/SecurityAccessUnauthorizedError"
-                  }
-                }
-              }
-            }
-          },
-          "security": [
-            {
-              "idToken": []
-            }
-          ],
-          "externalDocs": {
-            "description": "Code Example",
-            "url": "http://localhost:4200/code-examples/community#direct-chat_post"
-          }
-        }
-      },
-      "/direct-chat/message": {
-        "post": {
-          "tags": [
-            "DirectChat"
-          ],
-          "summary": "Send a message to the direct chat",
-          "description": "Find and update a direct chat in database with the new message\n",
-          "operationId": "directChatCreateMessage",
-          "requestBody": {
-            "description": "Object that contain all parameters to create a message",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/MessageAddEvent"
-                }
-              }
-            }
-          },
-          "responses": {
-            "200": {
-              "description": "OK"
-            },
-            "400": {
-              "description": "Body is empty, direct chat id is empty, message content is empty, document link is empty, document category is empty, document filename is empty or cannot find direct chat",
-              "content": {
-                "application/json": {
-                  "schema": {
-                    "$ref": "#/components/schemas/AddMessageEmptyBodyError"
-                  }
-                }
-              }
-            },
-            "401": {
-              "description": "You must login before call this endpoint",
-              "content": {
-                "application/json": {
-                  "schema": {
-                    "$ref": "#/components/schemas/SecurityAccessUnauthorizedError"
-                  }
-                }
-              }
-            }
-          },
-          "security": [
-            {
-              "idToken": []
-            }
-          ],
-          "externalDocs": {
-            "description": "Code Example",
-            "url": "http://localhost:4200/code-examples/community#direct-chat/message_post"
-          }
-        }
-      },
-      "/direct-chat/message/{id}": {
+      "/direct-chats/{id}/messages/{message_id}": {
         "delete": {
           "tags": [
             "DirectChat"
@@ -3024,6 +3063,17 @@ export class ApisConstants {
           "parameters": [
             {
               "name": "id",
+              "in": "path",
+              "description": "direct chat id",
+              "required": true,
+              "schema": {
+                "type": "string",
+                "format": "mongo-id",
+                "example": "61445159784bca6ef764c6df"
+              }
+            },
+            {
+              "name": "message_id",
               "in": "path",
               "description": "direct chat message id",
               "required": true,
@@ -3066,11 +3116,11 @@ export class ApisConstants {
           ],
           "externalDocs": {
             "description": "Code Example",
-            "url": "http://localhost:4200/code-examples/community#direct-chat/message_delete"
+            "url": "http://localhost:4200/code-examples/community#direct-chats/:id/messages/:message_id_delete"
           }
         }
       },
-      "/direct-chat/messages/{room_id}": {
+      "/direct-chats/{id}/messages": {
         "get": {
           "tags": [
             "DirectChat"
@@ -3080,7 +3130,7 @@ export class ApisConstants {
           "operationId": "directChatMessages",
           "parameters": [
             {
-              "name": "room_id",
+              "name": "id",
               "in": "path",
               "description": "direct chat id",
               "required": true,
@@ -3120,7 +3170,256 @@ export class ApisConstants {
           ],
           "externalDocs": {
             "description": "Code Example",
-            "url": "http://localhost:4200/code-examples/community#direct-chat/messages/:room_id_get"
+            "url": "http://localhost:4200/code-examples/community#direct-chats/:id/messages_get"
+          }
+        },
+        "post": {
+          "tags": [
+            "DirectChat"
+          ],
+          "summary": "Send a message to the direct chat",
+          "description": "Find and update a direct chat in database with the new message\n",
+          "operationId": "directChatCreateMessage",
+          "parameters": [
+            {
+              "name": "id",
+              "in": "path",
+              "description": "direct chat id",
+              "required": true,
+              "schema": {
+                "type": "string",
+                "format": "mongo-id",
+                "example": "61445159784bca6ef764c6df"
+              }
+            }
+          ],
+          "requestBody": {
+            "description": "Object that contain all parameters to create a message",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/MessageAddEvent"
+                }
+              }
+            }
+          },
+          "responses": {
+            "200": {
+              "description": "OK"
+            },
+            "400": {
+              "description": "Body is empty, direct chat id is empty, message content is empty, document link is empty, document category is empty, document filename is empty or cannot find direct chat",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/AddMessageEmptyBodyError"
+                  }
+                }
+              }
+            },
+            "401": {
+              "description": "You must login before call this endpoint",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/SecurityAccessUnauthorizedError"
+                  }
+                }
+              }
+            }
+          },
+          "security": [
+            {
+              "idToken": []
+            }
+          ],
+          "externalDocs": {
+            "description": "Code Example",
+            "url": "http://localhost:4200/code-examples/community#direct-chats/:id/message_post"
+          }
+        }
+      },
+      "/direct-chats/{id}/documents": {
+        "get": {
+          "tags": [
+            "DirectChat"
+          ],
+          "summary": "Get all documents from the direct chat",
+          "description": "Find the direct chat in database and return all the documents\n",
+          "operationId": "directChatsDocuments",
+          "parameters": [
+            {
+              "name": "id",
+              "in": "path",
+              "description": "Direct chat id",
+              "required": true,
+              "schema": {
+                "type": "string",
+                "format": "mongo-id",
+                "example": "61445159784bca6ef764c6df"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "Get documents successfully",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "type": "array",
+                    "items": {
+                      "$ref": "#/components/schemas/Document"
+                    }
+                  }
+                }
+              }
+            },
+            "401": {
+              "description": "You must login before call this endpoint",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/SecurityAccessUnauthorizedError"
+                  }
+                }
+              }
+            }
+          },
+          "security": [
+            {
+              "idToken": []
+            }
+          ],
+          "externalDocs": {
+            "description": "Code Example",
+            "url": "http://localhost:4200/code-examples/community#direct-chats/:id/documents_get"
+          }
+        }
+      },
+      "/direct-chats/{id}/links": {
+        "get": {
+          "tags": [
+            "DirectChat"
+          ],
+          "summary": "Get all links from the direct chat",
+          "description": "Find the direct chat in database and return all the links\n",
+          "operationId": "directChatsLinks",
+          "parameters": [
+            {
+              "name": "id",
+              "in": "path",
+              "description": "Direct chat id",
+              "required": true,
+              "schema": {
+                "type": "string",
+                "format": "mongo-id",
+                "example": "61445159784bca6ef764c6df"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "Get links successfully",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "type": "array",
+                    "items": {
+                      "$ref": "#/components/schemas/Link"
+                    }
+                  }
+                }
+              }
+            },
+            "401": {
+              "description": "You must login before call this endpoint",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/SecurityAccessUnauthorizedError"
+                  }
+                }
+              }
+            }
+          },
+          "security": [
+            {
+              "idToken": []
+            }
+          ],
+          "externalDocs": {
+            "description": "Code Example",
+            "url": "http://localhost:4200/code-examples/community#direct-chats/:id/links_get"
+          }
+        }
+      },
+      "/direct-chats/{id}/upload": {
+        "put": {
+          "tags": [
+            "DirectChat"
+          ],
+          "summary": "Upload a direct chat image",
+          "description": "Save a direct chat image in your filesystem\n",
+          "operationId": "directChatEventUpload",
+          "parameters": [
+            {
+              "name": "id",
+              "in": "path",
+              "description": "direct chat id",
+              "required": true,
+              "schema": {
+                "type": "string",
+                "format": "mongo-id",
+                "example": "61445159784bca6ef764c6df"
+              }
+            }
+          ],
+          "requestBody": {
+            "content": {
+              "multipart/form-data": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "file": {
+                      "type": "string",
+                      "format": "binary"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "responses": {
+            "200": {
+              "description": "Url where the file is located",
+              "content": {
+                "text/plain": {
+                  "schema": {
+                    "type": "string",
+                    "example": "https://localhost/drive/direct-chats/files/61445159784bca6ef764c6df/61eaffcdad2bd12319fd4eba.png"
+                  }
+                }
+              }
+            },
+            "401": {
+              "description": "You must login before call this endpoint",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/SecurityAccessUnauthorizedError"
+                  }
+                }
+              }
+            }
+          },
+          "security": [
+            {
+              "idToken": []
+            }
+          ],
+          "externalDocs": {
+            "description": "Code Example",
+            "url": "http://localhost:4200/code-examples/community#direct-chats/:id/upload_put"
           }
         }
       },
@@ -3163,60 +3462,6 @@ export class ApisConstants {
             },
             {
               "memberId": []
-            }
-          ],
-          "externalDocs": {
-            "description": "Code Example",
-            "url": "http://localhost:4200/code-examples/community#follow-up-rooms_get"
-          }
-        }
-      },
-      "/follow-up-rooms/all": {
-        "get": {
-          "tags": [
-            "FollowUpRoom"
-          ],
-          "summary": "Get all follow up rooms",
-          "description": "Find all follow up rooms in database\n",
-          "operationId": "followUpRoomsAll",
-          "responses": {
-            "200": {
-              "description": "Get follow up rooms successfully",
-              "content": {
-                "application/json": {
-                  "schema": {
-                    "type": "array",
-                    "items": {
-                      "$ref": "#/components/schemas/FollowUpRoom"
-                    }
-                  }
-                }
-              }
-            },
-            "401": {
-              "description": "You must login before call this endpoint",
-              "content": {
-                "application/json": {
-                  "schema": {
-                    "$ref": "#/components/schemas/SecurityAccessUnauthorizedError"
-                  }
-                }
-              }
-            },
-            "403": {
-              "description": "User does not have the necessary permissions",
-              "content": {
-                "application/json": {
-                  "schema": {
-                    "$ref": "#/components/schemas/SecurityAccessForbiddenError"
-                  }
-                }
-              }
-            }
-          },
-          "security": [
-            {
-              "idToken": []
             },
             {
               "followUpRoomAnyList": []
@@ -3224,110 +3469,9 @@ export class ApisConstants {
           ],
           "externalDocs": {
             "description": "Code Example",
-            "url": "http://localhost:4200/code-examples/community#follow-up-rooms/all_get"
-          }
-        }
-      },
-      "/follow-up-room/{id}": {
-        "get": {
-          "tags": [
-            "FollowUpRoom"
-          ],
-          "summary": "Get a follow up room by id",
-          "description": "Find a follow up room in the database by its identifier\n",
-          "operationId": "followUpRoomById",
-          "parameters": [
-            {
-              "name": "id",
-              "in": "path",
-              "description": "follow up room id",
-              "required": true,
-              "schema": {
-                "type": "string",
-                "format": "mongo-id",
-                "example": "61445159784bca6ef764c6df"
-              }
-            }
-          ],
-          "responses": {
-            "200": {
-              "description": "Get follow up room successfully",
-              "content": {
-                "application/json": {
-                  "schema": {
-                    "$ref": "#/components/schemas/FollowUpRoom"
-                  }
-                }
-              }
-            },
-            "401": {
-              "description": "You must login before call this endpoint",
-              "content": {
-                "application/json": {
-                  "schema": {
-                    "$ref": "#/components/schemas/SecurityAccessUnauthorizedError"
-                  }
-                }
-              }
-            }
-          },
-          "security": [
-            {
-              "idToken": []
-            }
-          ],
-          "externalDocs": {
-            "description": "Code Example",
-            "url": "http://localhost:4200/code-examples/community#follow-up-room/:id_get"
+            "url": "http://localhost:4200/code-examples/community#follow-up-rooms_get"
           }
         },
-        "delete": {
-          "tags": [
-            "FollowUpRoom"
-          ],
-          "summary": "Remove a follow up room",
-          "description": "Remove a follow up room from database\n",
-          "operationId": "followUpRoomDelete",
-          "parameters": [
-            {
-              "name": "id",
-              "in": "path",
-              "description": "follow up room id",
-              "required": true,
-              "schema": {
-                "type": "string",
-                "format": "mongo-id",
-                "example": "61445159784bca6ef764c6df"
-              }
-            }
-          ],
-          "responses": {
-            "200": {
-              "description": "OK"
-            },
-            "401": {
-              "description": "You must login before call this endpoint",
-              "content": {
-                "application/json": {
-                  "schema": {
-                    "$ref": "#/components/schemas/SecurityAccessUnauthorizedError"
-                  }
-                }
-              }
-            }
-          },
-          "security": [
-            {
-              "idToken": []
-            }
-          ],
-          "externalDocs": {
-            "description": "Code Example",
-            "url": "http://localhost:4200/code-examples/community#follow-up-room_delete"
-          }
-        }
-      },
-      "/follow-up-room": {
         "post": {
           "tags": [
             "FollowUpRoom"
@@ -3377,7 +3521,115 @@ export class ApisConstants {
           ],
           "externalDocs": {
             "description": "Code Example",
-            "url": "http://localhost:4200/code-examples/community#follow-up-room_post"
+            "url": "http://localhost:4200/code-examples/community#follow-up-rooms_post"
+          }
+        }
+      },
+      "/follow-up-rooms/all/member-participate": {
+        "get": {
+          "tags": [
+            "FollowUpRoom"
+          ],
+          "summary": "Get all follow up rooms",
+          "description": "Find all follow up rooms in database\n",
+          "operationId": "followUpRoomsAll",
+          "responses": {
+            "200": {
+              "description": "Get follow up rooms successfully",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "type": "array",
+                    "items": {
+                      "$ref": "#/components/schemas/FollowUpRoom"
+                    }
+                  }
+                }
+              }
+            },
+            "401": {
+              "description": "You must login before call this endpoint",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/SecurityAccessUnauthorizedError"
+                  }
+                }
+              }
+            },
+            "403": {
+              "description": "User does not have the necessary permissions",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/SecurityAccessForbiddenError"
+                  }
+                }
+              }
+            }
+          },
+          "security": [
+            {
+              "idToken": []
+            }
+          ],
+          "externalDocs": {
+            "description": "Code Example",
+            "url": "http://localhost:4200/code-examples/community#follow-up-rooms/all/member-participate_get"
+          }
+        }
+      },
+      "/follow-up-rooms/{id}": {
+        "get": {
+          "tags": [
+            "FollowUpRoom"
+          ],
+          "summary": "Get a follow up room by id",
+          "description": "Find a follow up room in the database by its identifier\n",
+          "operationId": "followUpRoomById",
+          "parameters": [
+            {
+              "name": "id",
+              "in": "path",
+              "description": "follow up room id",
+              "required": true,
+              "schema": {
+                "type": "string",
+                "format": "mongo-id",
+                "example": "61445159784bca6ef764c6df"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "Get follow up room successfully",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/FollowUpRoom"
+                  }
+                }
+              }
+            },
+            "401": {
+              "description": "You must login before call this endpoint",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/SecurityAccessUnauthorizedError"
+                  }
+                }
+              }
+            }
+          },
+          "security": [
+            {
+              "idToken": []
+            }
+          ],
+          "externalDocs": {
+            "description": "Code Example",
+            "url": "http://localhost:4200/code-examples/community#follow-up-rooms/:id_get"
           }
         },
         "put": {
@@ -3387,6 +3639,19 @@ export class ApisConstants {
           "summary": "Update a follow up room",
           "description": "Find and update a follow up room in the database\n",
           "operationId": "followUpRoomUpdate",
+          "parameters": [
+            {
+              "name": "id",
+              "in": "path",
+              "description": "follow up room id",
+              "required": true,
+              "schema": {
+                "type": "string",
+                "format": "mongo-id",
+                "example": "61445159784bca6ef764c6df"
+              }
+            }
+          ],
           "requestBody": {
             "description": "Object that contain all parameters to update a follow up room",
             "content": {
@@ -3429,11 +3694,56 @@ export class ApisConstants {
           ],
           "externalDocs": {
             "description": "Code Example",
-            "url": "http://localhost:4200/code-examples/community#follow-up-room_put"
+            "url": "http://localhost:4200/code-examples/community#follow-up-rooms/:id_put"
+          }
+        },
+        "delete": {
+          "tags": [
+            "FollowUpRoom"
+          ],
+          "summary": "Remove a follow up room",
+          "description": "Remove a follow up room from database\n",
+          "operationId": "followUpRoomDelete",
+          "parameters": [
+            {
+              "name": "id",
+              "in": "path",
+              "description": "follow up room id",
+              "required": true,
+              "schema": {
+                "type": "string",
+                "format": "mongo-id",
+                "example": "61445159784bca6ef764c6df"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "OK"
+            },
+            "401": {
+              "description": "You must login before call this endpoint",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/SecurityAccessUnauthorizedError"
+                  }
+                }
+              }
+            }
+          },
+          "security": [
+            {
+              "idToken": []
+            }
+          ],
+          "externalDocs": {
+            "description": "Code Example",
+            "url": "http://localhost:4200/code-examples/community#follow-up-rooms/:id_delete"
           }
         }
       },
-      "/follow-up-room/add-member": {
+      "/follow-up-rooms/{id}/members/add": {
         "put": {
           "tags": [
             "FollowUpRoom"
@@ -3441,6 +3751,19 @@ export class ApisConstants {
           "summary": "Add a participant in the follow up room",
           "description": "Find and update the partcipants of the follow up room\n",
           "operationId": "folloUpRoomAddMember",
+          "parameters": [
+            {
+              "name": "id",
+              "in": "path",
+              "description": "follow up room id",
+              "required": true,
+              "schema": {
+                "type": "string",
+                "format": "mongo-id",
+                "example": "61445159784bca6ef764c6df"
+              }
+            }
+          ],
           "requestBody": {
             "description": "Object that contain all parameters to add a member in a follow up room",
             "content": {
@@ -3483,11 +3806,11 @@ export class ApisConstants {
           ],
           "externalDocs": {
             "description": "Code Example",
-            "url": "http://localhost:4200/code-examples/community#follow-up-room/add-member_put"
+            "url": "http://localhost:4200/code-examples/community#follow-up-rooms/:id/members/add_put"
           }
         }
       },
-      "/follow-up-room/leave-member": {
+      "/follow-up-room/{id}/members/leave": {
         "put": {
           "tags": [
             "FollowUpRoom"
@@ -3495,6 +3818,19 @@ export class ApisConstants {
           "summary": "Remove a participant from the follow up room",
           "description": "Find and update the partcipants of the follow up room\n",
           "operationId": "folloUpRoomRemoveMember",
+          "parameters": [
+            {
+              "name": "id",
+              "in": "path",
+              "description": "follow up room id",
+              "required": true,
+              "schema": {
+                "type": "string",
+                "format": "mongo-id",
+                "example": "61445159784bca6ef764c6df"
+              }
+            }
+          ],
           "requestBody": {
             "description": "Object that contain all parameters to remove a member in a follow up room",
             "content": {
@@ -3537,11 +3873,11 @@ export class ApisConstants {
           ],
           "externalDocs": {
             "description": "Code Example",
-            "url": "http://localhost:4200/code-examples/community#follow-up-room/leave-member_put"
+            "url": "http://localhost:4200/code-examples/community#follow-up-rooms/:id/members/leave_put"
           }
         }
       },
-      "/follow-up-room/open": {
+      "/follow-up-rooms/{id}/open": {
         "put": {
           "tags": [
             "FollowUpRoom"
@@ -3549,16 +3885,19 @@ export class ApisConstants {
           "summary": "Open a follow up room",
           "description": "Find and update the follow up room state to OPEN\n",
           "operationId": "followUpRoomOpen",
-          "requestBody": {
-            "description": "Object that contain all parameters to open a follow up room",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/FollowUpRoomOpenEvent"
-                }
+          "parameters": [
+            {
+              "name": "id",
+              "in": "path",
+              "description": "follow up room id",
+              "required": true,
+              "schema": {
+                "type": "string",
+                "format": "mongo-id",
+                "example": "61445159784bca6ef764c6df"
               }
             }
-          },
+          ],
           "responses": {
             "200": {
               "description": "OK"
@@ -3591,11 +3930,11 @@ export class ApisConstants {
           ],
           "externalDocs": {
             "description": "Code Example",
-            "url": "http://localhost:4200/code-examples/community#follow-up-room/open_put"
+            "url": "http://localhost:4200/code-examples/community#follow-up-rooms/:id/open_put"
           }
         }
       },
-      "/follow-up-room/close": {
+      "/follow-up-rooms/{id}/close": {
         "put": {
           "tags": [
             "FollowUpRoom"
@@ -3603,16 +3942,19 @@ export class ApisConstants {
           "summary": "Close a follow up room",
           "description": "Find and update the follow up room state to CLOSE\n",
           "operationId": "followUpRoomClose",
-          "requestBody": {
-            "description": "Object that contain all parameters to close a follow up room",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/FollowUpRoomCloseEvent"
-                }
+          "parameters": [
+            {
+              "name": "id",
+              "in": "path",
+              "description": "follow up room id",
+              "required": true,
+              "schema": {
+                "type": "string",
+                "format": "mongo-id",
+                "example": "61445159784bca6ef764c6df"
               }
             }
-          },
+          ],
           "responses": {
             "200": {
               "description": "OK"
@@ -3645,11 +3987,192 @@ export class ApisConstants {
           ],
           "externalDocs": {
             "description": "Code Example",
-            "url": "http://localhost:4200/code-examples/community#follow-up-room/close_put"
+            "url": "http://localhost:4200/code-examples/community#follow-up-rooms/:id/close_put"
           }
         }
       },
-      "/follow-up-room/message": {
+      "/follow-up-room/{id}/messages/{message_id}": {
+        "delete": {
+          "tags": [
+            "FollowUpRoom"
+          ],
+          "summary": "Remove a follow up room message",
+          "description": "Remove a follow up room message from database\n",
+          "operationId": "followUpRoomDeleteMessage",
+          "parameters": [
+            {
+              "name": "id",
+              "in": "path",
+              "description": "follow up room id",
+              "required": true,
+              "schema": {
+                "type": "string",
+                "format": "mongo-id",
+                "example": "61445159784bca6ef764c6df"
+              }
+            },
+            {
+              "name": "message_id",
+              "in": "path",
+              "description": "follow up room message id",
+              "required": true,
+              "schema": {
+                "type": "string",
+                "format": "mongo-id",
+                "example": "61445159784bca6ef764c6df"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "OK"
+            },
+            "400": {
+              "description": "The user is not the message owner",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/AddMessageForbiddenError"
+                  }
+                }
+              }
+            },
+            "401": {
+              "description": "You must login before call this endpoint",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/SecurityAccessUnauthorizedError"
+                  }
+                }
+              }
+            }
+          },
+          "security": [
+            {
+              "idToken": []
+            }
+          ],
+          "externalDocs": {
+            "description": "Code Example",
+            "url": "http://localhost:4200/code-examples/community#follow-up-rooms/:id/messages/:message_id_delete"
+          }
+        }
+      },
+      "/follow-up-room/{id}/messages/{message_id}/admin": {
+        "delete": {
+          "tags": [
+            "FollowUpRoom"
+          ],
+          "summary": "Delete any follow up room message",
+          "description": "Delete a follow up room message from database\n",
+          "operationId": "followUpRoomDeleteMessageAdmin",
+          "parameters": [
+            {
+              "name": "id",
+              "in": "path",
+              "description": "follow up room id",
+              "required": true,
+              "schema": {
+                "type": "string",
+                "format": "mongo-id",
+                "example": "61445159784bca6ef764c6df"
+              }
+            },
+            {
+              "name": "message_id",
+              "in": "path",
+              "description": "follow up room message id",
+              "required": true,
+              "schema": {
+                "type": "string",
+                "format": "mongo-id",
+                "example": "61445159784bca6ef764c6df"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "OK"
+            },
+            "401": {
+              "description": "You must login before call this endpoint",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/SecurityAccessUnauthorizedError"
+                  }
+                }
+              }
+            }
+          },
+          "security": [
+            {
+              "idToken": []
+            }
+          ],
+          "externalDocs": {
+            "description": "Code Example",
+            "url": "http://localhost:4200/code-examples/community#follow-up-rooms/:id/messages/:message_id/admin_delete"
+          }
+        }
+      },
+      "/follow-up-rooms/{id}/messages": {
+        "get": {
+          "tags": [
+            "FollowUpRoom"
+          ],
+          "summary": "Get all messages from the follow up room",
+          "description": "Find the room in database and return all the messages\n",
+          "operationId": "followUpRoomMessages",
+          "parameters": [
+            {
+              "name": "id",
+              "in": "path",
+              "description": "Follow up room id",
+              "required": true,
+              "schema": {
+                "type": "string",
+                "format": "mongo-id",
+                "example": "61445159784bca6ef764c6df"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "Get messages successfully",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "type": "array",
+                    "items": {
+                      "$ref": "#/components/schemas/Message"
+                    }
+                  }
+                }
+              }
+            },
+            "401": {
+              "description": "You must login before call this endpoint",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/SecurityAccessUnauthorizedError"
+                  }
+                }
+              }
+            }
+          },
+          "security": [
+            {
+              "idToken": []
+            }
+          ],
+          "externalDocs": {
+            "description": "Code Example",
+            "url": "http://localhost:4200/code-examples/community#follow-up-rooms/:id/messages_get"
+          }
+        },
         "post": {
           "tags": [
             "FollowUpRoom"
@@ -3657,6 +4180,19 @@ export class ApisConstants {
           "summary": "Send a message to the follow up room",
           "description": "Find and update a follow up room in database with the new message\n",
           "operationId": "followUpRoomCreateMessage",
+          "parameters": [
+            {
+              "name": "id",
+              "in": "path",
+              "description": "follow up room id",
+              "required": true,
+              "schema": {
+                "type": "string",
+                "format": "mongo-id",
+                "example": "61445159784bca6ef764c6df"
+              }
+            }
+          ],
           "requestBody": {
             "description": "Object that contain all parameters to create a message",
             "content": {
@@ -3699,127 +4235,23 @@ export class ApisConstants {
           ],
           "externalDocs": {
             "description": "Code Example",
-            "url": "http://localhost:4200/code-examples/community#follow-up-room/message_post"
+            "url": "http://localhost:4200/code-examples/community#follow-up-rooms/:id/messages_post"
           }
         }
       },
-      "/follow-up-room/message/{id}": {
-        "delete": {
-          "tags": [
-            "FollowUpRoom"
-          ],
-          "summary": "Remove a follow up room message",
-          "description": "Remove a follow up room message from database\n",
-          "operationId": "followUpRoomDeleteMessage",
-          "parameters": [
-            {
-              "name": "id",
-              "in": "path",
-              "description": "online event id",
-              "required": true,
-              "schema": {
-                "type": "string",
-                "format": "mongo-id",
-                "example": "61445159784bca6ef764c6df"
-              }
-            }
-          ],
-          "responses": {
-            "200": {
-              "description": "OK"
-            },
-            "400": {
-              "description": "The user is not the message owner",
-              "content": {
-                "application/json": {
-                  "schema": {
-                    "$ref": "#/components/schemas/AddMessageForbiddenError"
-                  }
-                }
-              }
-            },
-            "401": {
-              "description": "You must login before call this endpoint",
-              "content": {
-                "application/json": {
-                  "schema": {
-                    "$ref": "#/components/schemas/SecurityAccessUnauthorizedError"
-                  }
-                }
-              }
-            }
-          },
-          "security": [
-            {
-              "idToken": []
-            }
-          ],
-          "externalDocs": {
-            "description": "Code Example",
-            "url": "http://localhost:4200/code-examples/community#follow-up-room/message_delete"
-          }
-        }
-      },
-      "/follow-up-room/message/{id}/admin": {
-        "delete": {
-          "tags": [
-            "FollowUpRoom"
-          ],
-          "summary": "Delete any follow up room message",
-          "description": "Delete a follow up room message from database\n",
-          "operationId": "followUpRoomDeleteMessageAdmin",
-          "parameters": [
-            {
-              "name": "id",
-              "in": "path",
-              "description": "online event id",
-              "required": true,
-              "schema": {
-                "type": "string",
-                "format": "mongo-id",
-                "example": "61445159784bca6ef764c6df"
-              }
-            }
-          ],
-          "responses": {
-            "200": {
-              "description": "OK"
-            },
-            "401": {
-              "description": "You must login before call this endpoint",
-              "content": {
-                "application/json": {
-                  "schema": {
-                    "$ref": "#/components/schemas/SecurityAccessUnauthorizedError"
-                  }
-                }
-              }
-            }
-          },
-          "security": [
-            {
-              "idToken": []
-            }
-          ],
-          "externalDocs": {
-            "description": "Code Example",
-            "url": "http://localhost:4200/code-examples/community#follow-up-room/message/admin_delete"
-          }
-        }
-      },
-      "/follow-up-room/messages/{room_id}": {
+      "/follow-up-rooms/{id}/documents": {
         "get": {
           "tags": [
             "FollowUpRoom"
           ],
-          "summary": "Get all messages from the follow up room",
-          "description": "Find the room in database and return all the messages\n",
-          "operationId": "followUpRoomMessages",
+          "summary": "Get all documents from the follow up room",
+          "description": "Find the follow up room in database and return all the documents\n",
+          "operationId": "followUpRoomsDocuments",
           "parameters": [
             {
-              "name": "room_id",
+              "name": "id",
               "in": "path",
-              "description": "room id",
+              "description": "follow up room id",
               "required": true,
               "schema": {
                 "type": "string",
@@ -3830,13 +4262,13 @@ export class ApisConstants {
           ],
           "responses": {
             "200": {
-              "description": "Get messages successfully",
+              "description": "Get documents successfully",
               "content": {
                 "application/json": {
                   "schema": {
                     "type": "array",
                     "items": {
-                      "$ref": "#/components/schemas/Message"
+                      "$ref": "#/components/schemas/Document"
                     }
                   }
                 }
@@ -3860,7 +4292,134 @@ export class ApisConstants {
           ],
           "externalDocs": {
             "description": "Code Example",
-            "url": "http://localhost:4200/code-examples/community#follow-up-room/messages/:room_id_get"
+            "url": "http://localhost:4200/code-examples/community#follow-up-rooms/:id/documents_get"
+          }
+        }
+      },
+      "/follow-up-rooms/{id}/links": {
+        "get": {
+          "tags": [
+            "FollowUpRoom"
+          ],
+          "summary": "Get all links from the follow up room",
+          "description": "Find the follow up room in database and return all the links\n",
+          "operationId": "followUpRoomsLinks",
+          "parameters": [
+            {
+              "name": "id",
+              "in": "path",
+              "description": "follow up room id",
+              "required": true,
+              "schema": {
+                "type": "string",
+                "format": "mongo-id",
+                "example": "61445159784bca6ef764c6df"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "Get links successfully",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "type": "array",
+                    "items": {
+                      "$ref": "#/components/schemas/Link"
+                    }
+                  }
+                }
+              }
+            },
+            "401": {
+              "description": "You must login before call this endpoint",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/SecurityAccessUnauthorizedError"
+                  }
+                }
+              }
+            }
+          },
+          "security": [
+            {
+              "idToken": []
+            }
+          ],
+          "externalDocs": {
+            "description": "Code Example",
+            "url": "http://localhost:4200/code-examples/community#follow-up-rooms/:id/links_get"
+          }
+        }
+      },
+      "/follow-up-rooms/{id}/upload": {
+        "put": {
+          "tags": [
+            "FollowUpRoom"
+          ],
+          "summary": "Upload a follow up room image",
+          "description": "Save a follow up room image in your filesystem\n",
+          "operationId": "followUpRoomEventUpload",
+          "parameters": [
+            {
+              "name": "id",
+              "in": "path",
+              "description": "follow up room id",
+              "required": true,
+              "schema": {
+                "type": "string",
+                "format": "mongo-id",
+                "example": "61445159784bca6ef764c6df"
+              }
+            }
+          ],
+          "requestBody": {
+            "content": {
+              "multipart/form-data": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "file": {
+                      "type": "string",
+                      "format": "binary"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "responses": {
+            "200": {
+              "description": "Url where the file is located",
+              "content": {
+                "text/plain": {
+                  "schema": {
+                    "type": "string",
+                    "example": "https://localhost/drive/follow-up-rooms/files/61445159784bca6ef764c6df/61eaffcdad2bd12319fd4eba.png"
+                  }
+                }
+              }
+            },
+            "401": {
+              "description": "You must login before call this endpoint",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/SecurityAccessUnauthorizedError"
+                  }
+                }
+              }
+            }
+          },
+          "security": [
+            {
+              "idToken": []
+            }
+          ],
+          "externalDocs": {
+            "description": "Code Example",
+            "url": "http://localhost:4200/code-examples/community#follow-up-rooms/:id/upload_put"
           }
         }
       },
@@ -3906,118 +4465,7 @@ export class ApisConstants {
             "description": "Code Example",
             "url": "http://localhost:4200/code-examples/community#public-channels_get"
           }
-        }
-      },
-      "/public-channel/{id}": {
-        "get": {
-          "tags": [
-            "PublicChannel"
-          ],
-          "summary": "Get a public channel by id",
-          "description": "Find a public channel in the database by its identifier\n",
-          "operationId": "publicChannelById",
-          "parameters": [
-            {
-              "name": "id",
-              "in": "path",
-              "description": "public channel room id",
-              "required": true,
-              "schema": {
-                "type": "string",
-                "format": "mongo-id",
-                "example": "61445159784bca6ef764c6df"
-              }
-            }
-          ],
-          "responses": {
-            "200": {
-              "description": "Get public channel room successfully",
-              "content": {
-                "application/json": {
-                  "schema": {
-                    "$ref": "#/components/schemas/PublicChannel"
-                  }
-                }
-              }
-            },
-            "401": {
-              "description": "You must login before call this endpoint",
-              "content": {
-                "application/json": {
-                  "schema": {
-                    "$ref": "#/components/schemas/SecurityAccessUnauthorizedError"
-                  }
-                }
-              }
-            }
-          },
-          "security": [
-            {
-              "idToken": []
-            }
-          ],
-          "externalDocs": {
-            "description": "Code Example",
-            "url": "http://localhost:4200/code-examples/community#public-channel/:id_get"
-          }
         },
-        "delete": {
-          "tags": [
-            "PublicChannel"
-          ],
-          "summary": "Remove a public channel",
-          "description": "Remove a public channel from database\n",
-          "operationId": "publicChannelDelete",
-          "parameters": [
-            {
-              "name": "id",
-              "in": "path",
-              "description": "online event id",
-              "required": true,
-              "schema": {
-                "type": "string",
-                "format": "mongo-id",
-                "example": "61445159784bca6ef764c6df"
-              }
-            }
-          ],
-          "responses": {
-            "200": {
-              "description": "OK"
-            },
-            "400": {
-              "description": "The user is not the public channer owner",
-              "content": {
-                "application/json": {
-                  "schema": {
-                    "$ref": "#/components/schemas/PublicChannelForbiddenError"
-                  }
-                }
-              }
-            },
-            "401": {
-              "description": "You must login before call this endpoint",
-              "content": {
-                "application/json": {
-                  "schema": {
-                    "$ref": "#/components/schemas/SecurityAccessUnauthorizedError"
-                  }
-                }
-              }
-            }
-          },
-          "security": [
-            {
-              "idToken": []
-            }
-          ],
-          "externalDocs": {
-            "description": "Code Example",
-            "url": "http://localhost:4200/code-examples/community#public-channel_delete"
-          }
-        }
-      },
-      "/public-channel": {
         "post": {
           "tags": [
             "PublicChannel"
@@ -4079,7 +4527,116 @@ export class ApisConstants {
           ],
           "externalDocs": {
             "description": "Code Example",
-            "url": "http://localhost:4200/code-examples/community#public-channel_post"
+            "url": "http://localhost:4200/code-examples/community#public-channels_post"
+          }
+        }
+      },
+      "/public-channels/{id}": {
+        "get": {
+          "tags": [
+            "PublicChannel"
+          ],
+          "summary": "Get a public channel by id",
+          "description": "Find a public channel in the database by its identifier\n",
+          "operationId": "publicChannelById",
+          "parameters": [
+            {
+              "name": "id",
+              "in": "path",
+              "description": "public channel room id",
+              "required": true,
+              "schema": {
+                "type": "string",
+                "format": "mongo-id",
+                "example": "61445159784bca6ef764c6df"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "Get public channel room successfully",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/PublicChannel"
+                  }
+                }
+              }
+            },
+            "401": {
+              "description": "You must login before call this endpoint",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/SecurityAccessUnauthorizedError"
+                  }
+                }
+              }
+            }
+          },
+          "security": [
+            {
+              "idToken": []
+            }
+          ],
+          "externalDocs": {
+            "description": "Code Example",
+            "url": "http://localhost:4200/code-examples/community#public-channels/:id_get"
+          }
+        },
+        "delete": {
+          "tags": [
+            "PublicChannel"
+          ],
+          "summary": "Remove a public channel",
+          "description": "Remove a public channel from database\n",
+          "operationId": "publicChannelDelete",
+          "parameters": [
+            {
+              "name": "id",
+              "in": "path",
+              "description": "online event id",
+              "required": true,
+              "schema": {
+                "type": "string",
+                "format": "mongo-id",
+                "example": "61445159784bca6ef764c6df"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "OK"
+            },
+            "400": {
+              "description": "The user is not the public channer owner",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/PublicChannelForbiddenError"
+                  }
+                }
+              }
+            },
+            "401": {
+              "description": "You must login before call this endpoint",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/SecurityAccessUnauthorizedError"
+                  }
+                }
+              }
+            }
+          },
+          "security": [
+            {
+              "idToken": []
+            }
+          ],
+          "externalDocs": {
+            "description": "Code Example",
+            "url": "http://localhost:4200/code-examples/community#public-channels/:id_delete"
           }
         },
         "put": {
@@ -4089,6 +4646,19 @@ export class ApisConstants {
           "summary": "Update a public channel",
           "description": "Find and update a public channel in the database\n",
           "operationId": "publicChannelUpdate",
+          "parameters": [
+            {
+              "name": "id",
+              "in": "path",
+              "description": "public channel id",
+              "required": true,
+              "schema": {
+                "type": "string",
+                "format": "mongo-id",
+                "example": "61445159784bca6ef764c6df"
+              }
+            }
+          ],
           "requestBody": {
             "content": {
               "application/json": {
@@ -4130,11 +4700,11 @@ export class ApisConstants {
           ],
           "externalDocs": {
             "description": "Code Example",
-            "url": "http://localhost:4200/code-examples/community#public-channel_put"
+            "url": "http://localhost:4200/code-examples/community#public-channels/:id_put"
           }
         }
       },
-      "/public-channel/admin": {
+      "/public-channel/{id}/admin": {
         "put": {
           "tags": [
             "PublicChannel"
@@ -4151,6 +4721,19 @@ export class ApisConstants {
               }
             }
           },
+          "parameters": [
+            {
+              "name": "id",
+              "in": "path",
+              "description": "public channel id",
+              "required": true,
+              "schema": {
+                "type": "string",
+                "format": "mongo-id",
+                "example": "61445159784bca6ef764c6df"
+              }
+            }
+          ],
           "responses": {
             "200": {
               "description": "OK"
@@ -4196,11 +4779,9 @@ export class ApisConstants {
           ],
           "externalDocs": {
             "description": "Code Example",
-            "url": "http://localhost:4200/code-examples/community#public-channel/admin_put"
+            "url": "http://localhost:4200/code-examples/community#public-channels/:id/admin_put"
           }
-        }
-      },
-      "/public-channel/{id}/admin": {
+        },
         "delete": {
           "tags": [
             "PublicChannel"
@@ -4255,18 +4836,18 @@ export class ApisConstants {
           ],
           "externalDocs": {
             "description": "Code Example",
-            "url": "http://localhost:4200/code-examples/community#public-channel/admin_delete"
+            "url": "http://localhost:4200/code-examples/community#public-channels/:id/admin_delete"
           }
         }
       },
-      "/public-channel/message/{id}/admin": {
-        "delete": {
+      "/public-channels/{id}/subscribe": {
+        "put": {
           "tags": [
             "PublicChannel"
           ],
-          "summary": "Remove any public channel message",
-          "description": "Remove a public channel message from database\n",
-          "operationId": "publicChannelDeleteAdmin",
+          "summary": "Subscribe to a public channel",
+          "description": "Subscribe to a public channel to become a participant\n",
+          "operationId": "publicChannelSubscribe",
           "parameters": [
             {
               "name": "id",
@@ -4280,60 +4861,6 @@ export class ApisConstants {
               }
             }
           ],
-          "responses": {
-            "200": {
-              "description": "OK"
-            },
-            "400": {
-              "description": "The user is not the owner of the public channel",
-              "content": {
-                "application/json": {
-                  "schema": {
-                    "$ref": "#/components/schemas/PublicChannelForbiddenError"
-                  }
-                }
-              }
-            },
-            "401": {
-              "description": "You must login before call this endpoint",
-              "content": {
-                "application/json": {
-                  "schema": {
-                    "$ref": "#/components/schemas/SecurityAccessUnauthorizedError"
-                  }
-                }
-              }
-            },
-            "403": {
-              "description": "User does not have the necessary permissions",
-              "content": {
-                "application/json": {
-                  "schema": {
-                    "$ref": "#/components/schemas/SecurityAccessForbiddenError"
-                  }
-                }
-              }
-            }
-          },
-          "security": [
-            {
-              "idToken": []
-            }
-          ],
-          "externalDocs": {
-            "description": "Code Example",
-            "url": "http://localhost:4200/code-examples/community#public-channel/admin_delete"
-          }
-        }
-      },
-      "/public-channel/subscribe": {
-        "put": {
-          "tags": [
-            "PublicChannel"
-          ],
-          "summary": "Subscribe to a public channel",
-          "description": "Subscribe to a public channel to become a participant\n",
-          "operationId": "publicChannelSubscribe",
           "requestBody": {
             "description": "Object that contain all parameters to suscribe to a public channel",
             "content": {
@@ -4376,11 +4903,11 @@ export class ApisConstants {
           ],
           "externalDocs": {
             "description": "Code Example",
-            "url": "http://localhost:4200/code-examples/community#public-channel/subscribe_put"
+            "url": "http://localhost:4200/code-examples/community#public-channels/:id/subscribe_put"
           }
         }
       },
-      "/public-channel/unsubscribe": {
+      "/public-channels/{id}/unsubscribe": {
         "put": {
           "tags": [
             "PublicChannel"
@@ -4388,6 +4915,19 @@ export class ApisConstants {
           "summary": "Unsubcribe to a public channel",
           "description": "Unsubscribe from a public channel to stop being a participant\n",
           "operationId": "publicChannelUnsubscribe",
+          "parameters": [
+            {
+              "name": "id",
+              "in": "path",
+              "description": "public channel id",
+              "required": true,
+              "schema": {
+                "type": "string",
+                "format": "mongo-id",
+                "example": "61445159784bca6ef764c6df"
+              }
+            }
+          ],
           "requestBody": {
             "description": "Object that contain all parameters to unsubscribe to a public channel",
             "content": {
@@ -4430,11 +4970,66 @@ export class ApisConstants {
           ],
           "externalDocs": {
             "description": "Code Example",
-            "url": "http://localhost:4200/code-examples/community#public-channel/unsubscribe_put"
+            "url": "http://localhost:4200/code-examples/community#public-channels/:id/unsubscribe_put"
           }
         }
       },
-      "/public-channel/message": {
+      "/public-channels/{id}/messages": {
+        "get": {
+          "tags": [
+            "PublicChannel"
+          ],
+          "summary": "Gets public channel messages",
+          "description": "Find the room in database and return all the messages\n",
+          "operationId": "publicChannelUpRoomMessages",
+          "parameters": [
+            {
+              "name": "id",
+              "in": "path",
+              "description": "public Channel id",
+              "required": true,
+              "schema": {
+                "type": "string",
+                "format": "mongo-id",
+                "example": "61445159784bca6ef764c6df"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "Get messages successfully",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "type": "array",
+                    "items": {
+                      "$ref": "#/components/schemas/Message"
+                    }
+                  }
+                }
+              }
+            },
+            "401": {
+              "description": "You must login before call this endpoint",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/SecurityAccessUnauthorizedError"
+                  }
+                }
+              }
+            }
+          },
+          "security": [
+            {
+              "idToken": []
+            }
+          ],
+          "externalDocs": {
+            "description": "Code Example",
+            "url": "http://localhost:4200/code-examples/community#public-channels/:id/messages_get"
+          }
+        },
         "post": {
           "tags": [
             "PublicChannel"
@@ -4442,6 +5037,19 @@ export class ApisConstants {
           "summary": "Send a message to the public channel",
           "description": "Find and update a public channel in database with the new message\n",
           "operationId": "publicChannelCreateMessage",
+          "parameters": [
+            {
+              "name": "id",
+              "in": "path",
+              "description": "public Channel id",
+              "required": true,
+              "schema": {
+                "type": "string",
+                "format": "mongo-id",
+                "example": "61445159784bca6ef764c6df"
+              }
+            }
+          ],
           "requestBody": {
             "description": "Object that contain all parameters to create a message",
             "content": {
@@ -4484,11 +5092,11 @@ export class ApisConstants {
           ],
           "externalDocs": {
             "description": "Code Example",
-            "url": "http://localhost:4200/code-examples/community#public-channel/message_post"
+            "url": "http://localhost:4200/code-examples/community#public-channels/:id/messages_post"
           }
         }
       },
-      "/public-channel/message/{id}": {
+      "/public-channels/{id}/messages/{message_id}": {
         "delete": {
           "tags": [
             "PublicChannel"
@@ -4501,6 +5109,17 @@ export class ApisConstants {
               "name": "id",
               "in": "path",
               "description": "public channel id",
+              "required": true,
+              "schema": {
+                "type": "string",
+                "format": "mongo-id",
+                "example": "61445159784bca6ef764c6df"
+              }
+            },
+            {
+              "name": "message_id",
+              "in": "path",
+              "description": "public channel message id",
               "required": true,
               "schema": {
                 "type": "string",
@@ -4531,23 +5150,34 @@ export class ApisConstants {
           ],
           "externalDocs": {
             "description": "Code Example",
-            "url": "http://localhost:4200/code-examples/community#public-channel/message_delete"
+            "url": "http://localhost:4200/code-examples/community#public-channels/:id/messages/:message_id_delete"
           }
         }
       },
-      "/public-channel/messages/{room_id}": {
-        "get": {
+      "/public-channels/{id}/messages/{message_id}/admin": {
+        "delete": {
           "tags": [
             "PublicChannel"
           ],
-          "summary": "Get all messages from the public channel",
-          "description": "Find the public channel in database and return all the messages\n",
-          "operationId": "publicChannelMessages",
+          "summary": "Remove a public channel message",
+          "description": "Remove a public channel message from database\n",
+          "operationId": "publicChannelDeleteMessageAdmin",
           "parameters": [
             {
-              "name": "room_id",
+              "name": "id",
               "in": "path",
-              "description": "room id",
+              "description": "public channel id",
+              "required": true,
+              "schema": {
+                "type": "string",
+                "format": "mongo-id",
+                "example": "61445159784bca6ef764c6df"
+              }
+            },
+            {
+              "name": "message_id",
+              "in": "path",
+              "description": "public channel message id",
               "required": true,
               "schema": {
                 "type": "string",
@@ -4558,13 +5188,60 @@ export class ApisConstants {
           ],
           "responses": {
             "200": {
-              "description": "Get messages successfully",
+              "description": "OK"
+            },
+            "401": {
+              "description": "You must login before call this endpoint",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/SecurityAccessUnauthorizedError"
+                  }
+                }
+              }
+            }
+          },
+          "security": [
+            {
+              "idToken": []
+            }
+          ],
+          "externalDocs": {
+            "description": "Code Example",
+            "url": "http://localhost:4200/code-examples/community#public-channels/:id/messages/:message_id/admin_delete"
+          }
+        }
+      },
+      "/public-channels/{id}/documents": {
+        "get": {
+          "tags": [
+            "PublicChannel"
+          ],
+          "summary": "Get all documents from the public channel",
+          "description": "Find the public channel in database and return all the documents\n",
+          "operationId": "publicChannelRoomsDocuments",
+          "parameters": [
+            {
+              "name": "id",
+              "in": "path",
+              "description": "public channel room id",
+              "required": true,
+              "schema": {
+                "type": "string",
+                "format": "mongo-id",
+                "example": "61445159784bca6ef764c6df"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "Get documents successfully",
               "content": {
                 "application/json": {
                   "schema": {
                     "type": "array",
                     "items": {
-                      "$ref": "#/components/schemas/Message"
+                      "$ref": "#/components/schemas/Document"
                     }
                   }
                 }
@@ -4588,201 +5265,18 @@ export class ApisConstants {
           ],
           "externalDocs": {
             "description": "Code Example",
-            "url": "http://localhost:4200/code-examples/community#public-channel/messages/:room_id_get"
+            "url": "http://localhost:4200/code-examples/community#public-channels/:id/documents_get"
           }
         }
       },
-      "/wall-post": {
-        "post": {
+      "/public-channels/{id}/links": {
+        "get": {
           "tags": [
-            "WallPost"
+            "PublicChannel"
           ],
-          "summary": "Create a wall post",
-          "description": "Create and insert a wall post in database\n",
-          "operationId": "wallPostCreate",
-          "requestBody": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/WallPostCreateEvent"
-                }
-              }
-            }
-          },
-          "responses": {
-            "200": {
-              "description": "OK"
-            },
-            "400": {
-              "description": "Body is empty or wall post content is empty",
-              "content": {
-                "application/json": {
-                  "schema": {
-                    "$ref": "#/components/schemas/WallPostEmptyBodyError"
-                  }
-                }
-              }
-            },
-            "401": {
-              "description": "You must login before call this endpoint",
-              "content": {
-                "application/json": {
-                  "schema": {
-                    "$ref": "#/components/schemas/SecurityAccessUnauthorizedError"
-                  }
-                }
-              }
-            },
-            "403": {
-              "description": "User does not have the necessary permissions",
-              "content": {
-                "application/json": {
-                  "schema": {
-                    "$ref": "#/components/schemas/SecurityAccessForbiddenError"
-                  }
-                }
-              }
-            }
-          },
-          "security": [
-            {
-              "idToken": []
-            },
-            {
-              "wallPostCreate": []
-            }
-          ],
-          "externalDocs": {
-            "description": "Code Example",
-            "url": "http://localhost:4200/code-examples/community#wall-post_post"
-          }
-        },
-        "put": {
-          "tags": [
-            "WallPost"
-          ],
-          "summary": "Update a wall post",
-          "description": "Find and update a wall post in the database\n",
-          "operationId": "wallPostUpdate",
-          "requestBody": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/WallPostUpdateEvent"
-                }
-              }
-            }
-          },
-          "responses": {
-            "200": {
-              "description": "OK"
-            },
-            "400": {
-              "description": "Body is empty, wall post id is empty, wall post content is empty or user is not the wall post owner",
-              "content": {
-                "application/json": {
-                  "schema": {
-                    "$ref": "#/components/schemas/WallPostEmptyBodyError"
-                  }
-                }
-              }
-            },
-            "401": {
-              "description": "You must login before call this endpoint",
-              "content": {
-                "application/json": {
-                  "schema": {
-                    "$ref": "#/components/schemas/SecurityAccessUnauthorizedError"
-                  }
-                }
-              }
-            }
-          },
-          "security": [
-            {
-              "idToken": []
-            }
-          ],
-          "externalDocs": {
-            "description": "Code Example",
-            "url": "http://localhost:4200/code-examples/community#wall-post_put"
-          }
-        }
-      },
-      "/wall-post/admin": {
-        "put": {
-          "tags": [
-            "WallPost"
-          ],
-          "summary": "Update any wall post",
-          "description": "Find and update any wall post\n",
-          "operationId": "wallPostUpdateAdmin",
-          "requestBody": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/WallPostUpdateEvent"
-                }
-              }
-            }
-          },
-          "responses": {
-            "200": {
-              "description": "OK"
-            },
-            "400": {
-              "description": "Body is empty, wall post id is empty or wall post content is empty",
-              "content": {
-                "application/json": {
-                  "schema": {
-                    "$ref": "#/components/schemas/WallPostEmptyBodyError"
-                  }
-                }
-              }
-            },
-            "401": {
-              "description": "You must login before call this endpoint",
-              "content": {
-                "application/json": {
-                  "schema": {
-                    "$ref": "#/components/schemas/SecurityAccessUnauthorizedError"
-                  }
-                }
-              }
-            },
-            "403": {
-              "description": "User does not have the necessary permissions",
-              "content": {
-                "application/json": {
-                  "schema": {
-                    "$ref": "#/components/schemas/SecurityAccessForbiddenError"
-                  }
-                }
-              }
-            }
-          },
-          "security": [
-            {
-              "idToken": []
-            },
-            {
-              "wallPostAnyUpdate": []
-            }
-          ],
-          "externalDocs": {
-            "description": "Code Example",
-            "url": "http://localhost:4200/code-examples/community#wall-post/admin_put"
-          }
-        }
-      },
-      "/wall-post/{id}/admin": {
-        "delete": {
-          "tags": [
-            "WallPost"
-          ],
-          "summary": "Remove any wall post",
-          "description": "Remove any wall post from database\n",
-          "operationId": "wallPostDeleteAdmin",
+          "summary": "Get all links from the public channel",
+          "description": "Find the public channel in database and return all the links\n",
+          "operationId": "publicChannelLinks",
           "parameters": [
             {
               "name": "id",
@@ -4798,7 +5292,17 @@ export class ApisConstants {
           ],
           "responses": {
             "200": {
-              "description": "OK"
+              "description": "Get links successfully",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "type": "array",
+                    "items": {
+                      "$ref": "#/components/schemas/Link"
+                    }
+                  }
+                }
+              }
             },
             "401": {
               "description": "You must login before call this endpoint",
@@ -4809,310 +5313,32 @@ export class ApisConstants {
                   }
                 }
               }
-            },
-            "403": {
-              "description": "User does not have the necessary permissions",
-              "content": {
-                "application/json": {
-                  "schema": {
-                    "$ref": "#/components/schemas/SecurityAccessForbiddenError"
-                  }
-                }
-              }
             }
           },
           "security": [
             {
               "idToken": []
-            },
-            {
-              "wallPostAnyDelete": []
             }
           ],
           "externalDocs": {
             "description": "Code Example",
-            "url": "http://localhost:4200/code-examples/community#wall-post/admin_delete"
+            "url": "http://localhost:4200/code-examples/community#public-channels/:id/links_get"
           }
         }
       },
-      "/wall-post/like": {
+      "/public-channels/{id}/upload": {
         "put": {
           "tags": [
-            "WallPost"
+            "PublicChannel"
           ],
-          "summary": "Give like to a wall post",
-          "description": "Find and update a wall post with the new like\n",
-          "operationId": "wallPostLike",
-          "requestBody": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/WallPostLikeEvent"
-                }
-              }
-            }
-          },
-          "responses": {
-            "200": {
-              "description": "OK"
-            },
-            "400": {
-              "description": "Body is empty",
-              "content": {
-                "application/json": {
-                  "schema": {
-                    "$ref": "#/components/schemas/WallPostEmptyBodyError"
-                  }
-                }
-              }
-            },
-            "401": {
-              "description": "You must login before call this endpoint",
-              "content": {
-                "application/json": {
-                  "schema": {
-                    "$ref": "#/components/schemas/SecurityAccessUnauthorizedError"
-                  }
-                }
-              }
-            }
-          },
-          "security": [
-            {
-              "idToken": []
-            }
-          ],
-          "externalDocs": {
-            "description": "Code Example",
-            "url": "http://localhost:4200/code-examples/community#wall-post/like_put"
-          }
-        }
-      },
-      "/wall-post/unlike": {
-        "put": {
-          "tags": [
-            "WallPost"
-          ],
-          "summary": "Delete like from a wall post",
-          "description": "Find and update a wall post without the new like\n",
-          "operationId": "wallPostUnlike",
-          "requestBody": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/WallPostUnlikeEvent"
-                }
-              }
-            }
-          },
-          "responses": {
-            "200": {
-              "description": "OK"
-            },
-            "400": {
-              "description": "Body is empty",
-              "content": {
-                "application/json": {
-                  "schema": {
-                    "$ref": "#/components/schemas/WallPostEmptyBodyError"
-                  }
-                }
-              }
-            },
-            "401": {
-              "description": "You must login before call this endpoint",
-              "content": {
-                "application/json": {
-                  "schema": {
-                    "$ref": "#/components/schemas/SecurityAccessUnauthorizedError"
-                  }
-                }
-              }
-            }
-          },
-          "security": [
-            {
-              "idToken": []
-            }
-          ],
-          "externalDocs": {
-            "description": "Code Example",
-            "url": "http://localhost:4200/code-examples/community#wall-post/unlike_put"
-          }
-        }
-      },
-      "/wall-post/comment": {
-        "post": {
-          "tags": [
-            "WallPost"
-          ],
-          "summary": "Comment a wall post",
-          "description": "Find and update a wall post with the new comment\n",
-          "operationId": "wallPostComment",
-          "requestBody": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/WallPostCommentAddEvent"
-                }
-              }
-            }
-          },
-          "responses": {
-            "200": {
-              "description": "OK"
-            },
-            "400": {
-              "description": "Body is empty",
-              "content": {
-                "application/json": {
-                  "schema": {
-                    "$ref": "#/components/schemas/WallPostEmptyBodyError"
-                  }
-                }
-              }
-            },
-            "401": {
-              "description": "You must login before call this endpoint",
-              "content": {
-                "application/json": {
-                  "schema": {
-                    "$ref": "#/components/schemas/SecurityAccessUnauthorizedError"
-                  }
-                }
-              }
-            }
-          },
-          "security": [
-            {
-              "idToken": []
-            }
-          ],
-          "externalDocs": {
-            "description": "Code Example",
-            "url": "http://localhost:4200/code-examples/community#wall-post/comment_post"
-          }
-        }
-      },
-      "/wall-post/comment/like": {
-        "put": {
-          "tags": [
-            "WallPost"
-          ],
-          "summary": "Give like to a wall post comment",
-          "description": "Find and update a wall post with the new comment like\n",
-          "operationId": "wallPostCommentLike",
-          "requestBody": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/WallPostCommentLikeEvent"
-                }
-              }
-            }
-          },
-          "responses": {
-            "200": {
-              "description": "OK"
-            },
-            "400": {
-              "description": "Body is empty",
-              "content": {
-                "application/json": {
-                  "schema": {
-                    "$ref": "#/components/schemas/WallPostEmptyBodyError"
-                  }
-                }
-              }
-            },
-            "401": {
-              "description": "You must login before call this endpoint",
-              "content": {
-                "application/json": {
-                  "schema": {
-                    "$ref": "#/components/schemas/SecurityAccessUnauthorizedError"
-                  }
-                }
-              }
-            }
-          },
-          "security": [
-            {
-              "idToken": []
-            }
-          ],
-          "externalDocs": {
-            "description": "Code Example",
-            "url": "http://localhost:4200/code-examples/community#wall-post/comment/like_put"
-          }
-        }
-      },
-      "/wall-post/comment/unlike": {
-        "put": {
-          "tags": [
-            "WallPost"
-          ],
-          "summary": "Remove like from a wall post comment",
-          "description": "Find and update a wall post without the comment like\n",
-          "operationId": "wallPostCommentUnlike",
-          "requestBody": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/WallPostCommentUnlikeEvent"
-                }
-              }
-            }
-          },
-          "responses": {
-            "200": {
-              "description": "OK"
-            },
-            "400": {
-              "description": "Body is empty",
-              "content": {
-                "application/json": {
-                  "schema": {
-                    "$ref": "#/components/schemas/WallPostEmptyBodyError"
-                  }
-                }
-              }
-            },
-            "401": {
-              "description": "You must login before call this endpoint",
-              "content": {
-                "application/json": {
-                  "schema": {
-                    "$ref": "#/components/schemas/SecurityAccessUnauthorizedError"
-                  }
-                }
-              }
-            }
-          },
-          "security": [
-            {
-              "idToken": []
-            }
-          ],
-          "externalDocs": {
-            "description": "Code Example",
-            "url": "http://localhost:4200/code-examples/community#wall-post/comment/unlike_put"
-          }
-        }
-      },
-      "/wall-post/{id}": {
-        "get": {
-          "tags": [
-            "WallPost"
-          ],
-          "summary": "Get a wall post by id",
-          "description": "Find a wall post in the database by its identifier\n",
-          "operationId": "wallPostById",
+          "summary": "Upload a public channel image",
+          "description": "Save a public channel image in your filesystem\n",
+          "operationId": "publicChannelUpload",
           "parameters": [
             {
               "name": "id",
               "in": "path",
-              "description": "wall post id",
+              "description": "public channel id",
               "required": true,
               "schema": {
                 "type": "string",
@@ -5121,13 +5347,29 @@ export class ApisConstants {
               }
             }
           ],
+          "requestBody": {
+            "content": {
+              "multipart/form-data": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "file": {
+                      "type": "string",
+                      "format": "binary"
+                    }
+                  }
+                }
+              }
+            }
+          },
           "responses": {
             "200": {
-              "description": "Get wall post successfully",
+              "description": "Url where the file is located",
               "content": {
-                "application/json": {
+                "text/plain": {
                   "schema": {
-                    "$ref": "#/components/schemas/WallPost"
+                    "type": "string",
+                    "example": "https://localhost/drive/follow-up-rooms/files/61445159784bca6ef764c6df/61eaffcdad2bd12319fd4eba.png"
                   }
                 }
               }
@@ -5150,62 +5392,7 @@ export class ApisConstants {
           ],
           "externalDocs": {
             "description": "Code Example",
-            "url": "http://localhost:4200/code-examples/community#wall-post/:id_get"
-          }
-        },
-        "delete": {
-          "tags": [
-            "WallPost"
-          ],
-          "summary": "Remove a wall post",
-          "description": "Remove a wall post from database\n",
-          "operationId": "wallPostDelete",
-          "parameters": [
-            {
-              "name": "id",
-              "in": "path",
-              "description": "wall post id",
-              "required": true,
-              "schema": {
-                "type": "string",
-                "format": "mongo-id",
-                "example": "61445159784bca6ef764c6df"
-              }
-            }
-          ],
-          "responses": {
-            "200": {
-              "description": "OK"
-            },
-            "400": {
-              "description": "The user is not the wall post owner",
-              "content": {
-                "application/json": {
-                  "schema": {
-                    "$ref": "#/components/schemas/WallPostForbiddenError"
-                  }
-                }
-              }
-            },
-            "401": {
-              "description": "You must login before call this endpoint",
-              "content": {
-                "application/json": {
-                  "schema": {
-                    "$ref": "#/components/schemas/SecurityAccessUnauthorizedError"
-                  }
-                }
-              }
-            }
-          },
-          "security": [
-            {
-              "idToken": []
-            }
-          ],
-          "externalDocs": {
-            "description": "Code Example",
-            "url": "http://localhost:4200/code-examples/community#wall-post_delete"
+            "url": "http://localhost:4200/code-examples/community#public-channels/:id/upload_put"
           }
         }
       },
@@ -5281,6 +5468,753 @@ export class ApisConstants {
             "description": "Code Example",
             "url": "http://localhost:4200/code-examples/community#wall-posts_get"
           }
+        },
+        "post": {
+          "tags": [
+            "WallPost"
+          ],
+          "summary": "Create a wall post",
+          "description": "Create and insert a wall post in database\n",
+          "operationId": "wallPostCreate",
+          "requestBody": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/WallPostCreateEvent"
+                }
+              }
+            }
+          },
+          "responses": {
+            "200": {
+              "description": "OK"
+            },
+            "400": {
+              "description": "Body is empty or wall post content is empty",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/WallPostEmptyBodyError"
+                  }
+                }
+              }
+            },
+            "401": {
+              "description": "You must login before call this endpoint",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/SecurityAccessUnauthorizedError"
+                  }
+                }
+              }
+            },
+            "403": {
+              "description": "User does not have the necessary permissions",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/SecurityAccessForbiddenError"
+                  }
+                }
+              }
+            }
+          },
+          "security": [
+            {
+              "idToken": []
+            },
+            {
+              "wallPostCreate": []
+            }
+          ],
+          "externalDocs": {
+            "description": "Code Example",
+            "url": "http://localhost:4200/code-examples/community#wall-posts_post"
+          }
+        }
+      },
+      "/wall-posts/{id}": {
+        "get": {
+          "tags": [
+            "WallPost"
+          ],
+          "summary": "Get a wall post by id",
+          "description": "Find a wall post in the database by its identifier\n",
+          "operationId": "wallPostById",
+          "parameters": [
+            {
+              "name": "id",
+              "in": "path",
+              "description": "wall post id",
+              "required": true,
+              "schema": {
+                "type": "string",
+                "format": "mongo-id",
+                "example": "61445159784bca6ef764c6df"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "Get wall post successfully",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/WallPost"
+                  }
+                }
+              }
+            },
+            "401": {
+              "description": "You must login before call this endpoint",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/SecurityAccessUnauthorizedError"
+                  }
+                }
+              }
+            }
+          },
+          "security": [
+            {
+              "idToken": []
+            }
+          ],
+          "externalDocs": {
+            "description": "Code Example",
+            "url": "http://localhost:4200/code-examples/community#wall-posts/:id_get"
+          }
+        },
+        "put": {
+          "tags": [
+            "WallPost"
+          ],
+          "summary": "Update a wall post",
+          "description": "Find and update a wall post in the database\n",
+          "operationId": "wallPostUpdate",
+          "parameters": [
+            {
+              "name": "id",
+              "in": "path",
+              "description": "wall post id",
+              "required": true,
+              "schema": {
+                "type": "string",
+                "format": "mongo-id",
+                "example": "61445159784bca6ef764c6df"
+              }
+            }
+          ],
+          "requestBody": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/WallPostUpdateEvent"
+                }
+              }
+            }
+          },
+          "responses": {
+            "200": {
+              "description": "OK"
+            },
+            "400": {
+              "description": "Body is empty, wall post id is empty, wall post content is empty or user is not the wall post owner",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/WallPostEmptyBodyError"
+                  }
+                }
+              }
+            },
+            "401": {
+              "description": "You must login before call this endpoint",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/SecurityAccessUnauthorizedError"
+                  }
+                }
+              }
+            }
+          },
+          "security": [
+            {
+              "idToken": []
+            }
+          ],
+          "externalDocs": {
+            "description": "Code Example",
+            "url": "http://localhost:4200/code-examples/community#wall-posts/:id_put"
+          }
+        },
+        "delete": {
+          "tags": [
+            "WallPost"
+          ],
+          "summary": "Remove a wall post",
+          "description": "Remove a wall post from database\n",
+          "operationId": "wallPostDelete",
+          "parameters": [
+            {
+              "name": "id",
+              "in": "path",
+              "description": "wall post id",
+              "required": true,
+              "schema": {
+                "type": "string",
+                "format": "mongo-id",
+                "example": "61445159784bca6ef764c6df"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "OK"
+            },
+            "400": {
+              "description": "The user is not the wall post owner",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/WallPostForbiddenError"
+                  }
+                }
+              }
+            },
+            "401": {
+              "description": "You must login before call this endpoint",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/SecurityAccessUnauthorizedError"
+                  }
+                }
+              }
+            }
+          },
+          "security": [
+            {
+              "idToken": []
+            }
+          ],
+          "externalDocs": {
+            "description": "Code Example",
+            "url": "http://localhost:4200/code-examples/community#wall-posts/:id_delete"
+          }
+        }
+      },
+      "/wall-posts/{id}/admin": {
+        "put": {
+          "tags": [
+            "WallPost"
+          ],
+          "summary": "Update any wall post",
+          "description": "Find and update any wall post\n",
+          "operationId": "wallPostUpdateAdmin",
+          "parameters": [
+            {
+              "name": "id",
+              "in": "path",
+              "description": "wall post id",
+              "required": true,
+              "schema": {
+                "type": "string",
+                "format": "mongo-id",
+                "example": "61445159784bca6ef764c6df"
+              }
+            }
+          ],
+          "requestBody": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/WallPostUpdateEvent"
+                }
+              }
+            }
+          },
+          "responses": {
+            "200": {
+              "description": "OK"
+            },
+            "400": {
+              "description": "Body is empty, wall post id is empty or wall post content is empty",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/WallPostEmptyBodyError"
+                  }
+                }
+              }
+            },
+            "401": {
+              "description": "You must login before call this endpoint",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/SecurityAccessUnauthorizedError"
+                  }
+                }
+              }
+            },
+            "403": {
+              "description": "User does not have the necessary permissions",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/SecurityAccessForbiddenError"
+                  }
+                }
+              }
+            }
+          },
+          "security": [
+            {
+              "idToken": []
+            },
+            {
+              "wallPostAnyUpdate": []
+            }
+          ],
+          "externalDocs": {
+            "description": "Code Example",
+            "url": "http://localhost:4200/code-examples/community#wall-posts/:id/admin_put"
+          }
+        },
+        "delete": {
+          "tags": [
+            "WallPost"
+          ],
+          "summary": "Remove any wall post",
+          "description": "Remove any wall post from database\n",
+          "operationId": "wallPostDeleteAdmin",
+          "parameters": [
+            {
+              "name": "id",
+              "in": "path",
+              "description": "wall post id",
+              "required": true,
+              "schema": {
+                "type": "string",
+                "format": "mongo-id",
+                "example": "61445159784bca6ef764c6df"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "OK"
+            },
+            "401": {
+              "description": "You must login before call this endpoint",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/SecurityAccessUnauthorizedError"
+                  }
+                }
+              }
+            },
+            "403": {
+              "description": "User does not have the necessary permissions",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/SecurityAccessForbiddenError"
+                  }
+                }
+              }
+            }
+          },
+          "security": [
+            {
+              "idToken": []
+            },
+            {
+              "wallPostAnyDelete": []
+            }
+          ],
+          "externalDocs": {
+            "description": "Code Example",
+            "url": "http://localhost:4200/code-examples/community#wall-posts/:id/admin_delete"
+          }
+        }
+      },
+      "/wall-posts/{id}/like": {
+        "put": {
+          "tags": [
+            "WallPost"
+          ],
+          "summary": "Give like to a wall post",
+          "description": "Find and update a wall post with the new like\n",
+          "operationId": "wallPostLike",
+          "parameters": [
+            {
+              "name": "id",
+              "in": "path",
+              "description": "wall post id",
+              "required": true,
+              "schema": {
+                "type": "string",
+                "format": "mongo-id",
+                "example": "61445159784bca6ef764c6df"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "OK"
+            },
+            "400": {
+              "description": "Body is empty",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/WallPostEmptyBodyError"
+                  }
+                }
+              }
+            },
+            "401": {
+              "description": "You must login before call this endpoint",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/SecurityAccessUnauthorizedError"
+                  }
+                }
+              }
+            }
+          },
+          "security": [
+            {
+              "idToken": []
+            }
+          ],
+          "externalDocs": {
+            "description": "Code Example",
+            "url": "http://localhost:4200/code-examples/community#wall-posts/:id/like_put"
+          }
+        }
+      },
+      "/wall-posts/{id}/unlike": {
+        "put": {
+          "tags": [
+            "WallPost"
+          ],
+          "summary": "Delete like from a wall post",
+          "description": "Find and update a wall post without the new like\n",
+          "operationId": "wallPostUnlike",
+          "parameters": [
+            {
+              "name": "id",
+              "in": "path",
+              "description": "wall post id",
+              "required": true,
+              "schema": {
+                "type": "string",
+                "format": "mongo-id",
+                "example": "61445159784bca6ef764c6df"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "OK"
+            },
+            "400": {
+              "description": "Body is empty",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/WallPostEmptyBodyError"
+                  }
+                }
+              }
+            },
+            "401": {
+              "description": "You must login before call this endpoint",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/SecurityAccessUnauthorizedError"
+                  }
+                }
+              }
+            }
+          },
+          "security": [
+            {
+              "idToken": []
+            }
+          ],
+          "externalDocs": {
+            "description": "Code Example",
+            "url": "http://localhost:4200/code-examples/community#wall-posts/:id/unlike_put"
+          }
+        }
+      },
+      "/wall-posts/{id}/comments": {
+        "post": {
+          "tags": [
+            "WallPost"
+          ],
+          "summary": "Comment a wall post",
+          "description": "Find and update a wall post with the new comment\n",
+          "operationId": "wallPostComment",
+          "parameters": [
+            {
+              "name": "id",
+              "in": "path",
+              "description": "wall post id",
+              "required": true,
+              "schema": {
+                "type": "string",
+                "format": "mongo-id",
+                "example": "61445159784bca6ef764c6df"
+              }
+            }
+          ],
+          "requestBody": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/WallPostCommentAddEvent"
+                }
+              }
+            }
+          },
+          "responses": {
+            "200": {
+              "description": "OK"
+            },
+            "400": {
+              "description": "Body is empty",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/WallPostEmptyBodyError"
+                  }
+                }
+              }
+            },
+            "401": {
+              "description": "You must login before call this endpoint",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/SecurityAccessUnauthorizedError"
+                  }
+                }
+              }
+            }
+          },
+          "security": [
+            {
+              "idToken": []
+            }
+          ],
+          "externalDocs": {
+            "description": "Code Example",
+            "url": "http://localhost:4200/code-examples/community#wall-posts/:id/comments_post"
+          }
+        }
+      },
+      "/wall-posts/{id}/comments/{comment_id}/like": {
+        "put": {
+          "tags": [
+            "WallPost"
+          ],
+          "summary": "Give like to a wall post comment",
+          "description": "Find and update a wall post with the new comment like\n",
+          "operationId": "wallPostCommentLike",
+          "parameters": [
+            {
+              "name": "id",
+              "in": "path",
+              "description": "wall post id",
+              "required": true,
+              "schema": {
+                "type": "string",
+                "format": "mongo-id",
+                "example": "61445159784bca6ef764c6df"
+              }
+            },
+            {
+              "name": "comment_id",
+              "in": "path",
+              "description": "wall post comment id",
+              "required": true,
+              "schema": {
+                "type": "string",
+                "format": "mongo-id",
+                "example": "61445159784bca6ef764c6df"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "OK"
+            },
+            "400": {
+              "description": "Body is empty",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/WallPostEmptyBodyError"
+                  }
+                }
+              }
+            },
+            "401": {
+              "description": "You must login before call this endpoint",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/SecurityAccessUnauthorizedError"
+                  }
+                }
+              }
+            }
+          },
+          "security": [
+            {
+              "idToken": []
+            }
+          ],
+          "externalDocs": {
+            "description": "Code Example",
+            "url": "http://localhost:4200/code-examples/community#wall-posts/:id/comments/:comment_id/like_put"
+          }
+        }
+      },
+      "/wall-posts/{id}/comments/{comment_id}/unlike": {
+        "put": {
+          "tags": [
+            "WallPost"
+          ],
+          "summary": "Remove like from a wall post comment",
+          "description": "Find and update a wall post without the comment like\n",
+          "operationId": "wallPostCommentUnlike",
+          "parameters": [
+            {
+              "name": "id",
+              "in": "path",
+              "description": "wall post id",
+              "required": true,
+              "schema": {
+                "type": "string",
+                "format": "mongo-id",
+                "example": "61445159784bca6ef764c6df"
+              }
+            },
+            {
+              "name": "comment_id",
+              "in": "path",
+              "description": "wall post comment id",
+              "required": true,
+              "schema": {
+                "type": "string",
+                "format": "mongo-id",
+                "example": "61445159784bca6ef764c6df"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "OK"
+            },
+            "400": {
+              "description": "Body is empty",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/WallPostEmptyBodyError"
+                  }
+                }
+              }
+            },
+            "401": {
+              "description": "You must login before call this endpoint",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/SecurityAccessUnauthorizedError"
+                  }
+                }
+              }
+            }
+          },
+          "security": [
+            {
+              "idToken": []
+            }
+          ],
+          "externalDocs": {
+            "description": "Code Example",
+            "url": "http://localhost:4200/code-examples/community#wall-posts/:id/comments/:comment_id/unlike_put"
+          }
+        }
+      },
+      "/wall-posts/upload": {
+        "post": {
+          "tags": [
+            "WallPost"
+          ],
+          "summary": "Upload a wall post document",
+          "description": "Save a wall post document in your filesystem\n",
+          "operationId": "wallPostDocumentUpload",
+          "requestBody": {
+            "content": {
+              "multipart/form-data": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "file": {
+                      "type": "string",
+                      "format": "binary"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "responses": {
+            "200": {
+              "description": "Url where the file is located",
+              "content": {
+                "text/plain": {
+                  "schema": {
+                    "type": "string",
+                    "example": "https://localhost/drive/post/file/61eaffcdad2bd12319fd4eba.png"
+                  }
+                }
+              }
+            },
+            "401": {
+              "description": "You must login before call this endpoint",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/SecurityAccessUnauthorizedError"
+                  }
+                }
+              }
+            }
+          },
+          "security": [
+            {
+              "idToken": []
+            }
+          ],
+          "externalDocs": {
+            "description": "Code Example",
+            "url": "http://localhost:4200/code-examples/community#wall-posts/upload_post"
+          }
         }
       },
       "/actors": {
@@ -5322,9 +6256,63 @@ export class ApisConstants {
             "description": "Code Example",
             "url": "http://localhost:4200/code-examples/community#actors_get"
           }
+        },
+        "post": {
+          "tags": [
+            "Actor"
+          ],
+          "summary": "Create an actor",
+          "description": "Create and insert an actor in database\n",
+          "operationId": "actorCreate",
+          "requestBody": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ActorCreateEvent"
+                }
+              }
+            }
+          },
+          "responses": {
+            "200": {
+              "description": "OK"
+            },
+            "400": {
+              "description": "Body is empty, ownerMember is empty, invalid owner member, invalid password, invalid actor or ecosystem does not accept this type of actor",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "type": "array",
+                    "items": {
+                      "$ref": "#/components/schemas/ActorEmptyBodyError"
+                    }
+                  }
+                }
+              }
+            },
+            "401": {
+              "description": "You must login before call this endpoint",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/SecurityAccessUnauthorizedError"
+                  }
+                }
+              }
+            }
+          },
+          "security": [
+            {
+              "idToken": []
+            }
+          ],
+          "externalDocs": {
+            "description": "Code Example",
+            "url": "http://localhost:4200/code-examples/community#actors_post"
+          }
         }
       },
-      "/actors/by-name-and-state": {
+      "/actors/by/name-and-state": {
         "get": {
           "tags": [
             "Actor"
@@ -5397,11 +6385,11 @@ export class ApisConstants {
           ],
           "externalDocs": {
             "description": "Code Example",
-            "url": "http://localhost:4200/code-examples/community#actors/by-name-and-state_get"
+            "url": "http://localhost:4200/code-examples/community#actors/by/name-and-state_get"
           }
         }
       },
-      "/actors/by-type": {
+      "/actors/by/types": {
         "get": {
           "tags": [
             "Actor"
@@ -5451,11 +6439,11 @@ export class ApisConstants {
           ],
           "externalDocs": {
             "description": "Code Example",
-            "url": "http://localhost:4200/code-examples/community#actors/by-type_get"
+            "url": "http://localhost:4200/code-examples/community#actors/by/types_get"
           }
         }
       },
-      "/actors/by-state": {
+      "/actors/by/state": {
         "get": {
           "tags": [
             "Actor"
@@ -5506,11 +6494,11 @@ export class ApisConstants {
           ],
           "externalDocs": {
             "description": "Code Example",
-            "url": "http://localhost:4200/code-examples/community#actors/by-state_get"
+            "url": "http://localhost:4200/code-examples/community#actors/by/state_get"
           }
         }
       },
-      "/actors/by-member": {
+      "/actors/by/member": {
         "get": {
           "tags": [
             "Actor"
@@ -5574,11 +6562,11 @@ export class ApisConstants {
           ],
           "externalDocs": {
             "description": "Code Example",
-            "url": "http://localhost:4200/code-examples/community#actors/by-member_get"
+            "url": "http://localhost:4200/code-examples/community#actors/by/member_get"
           }
         }
       },
-      "/actor/{id}": {
+      "/actors/{id}": {
         "get": {
           "tags": [
             "Actor"
@@ -5631,7 +6619,71 @@ export class ApisConstants {
           ],
           "externalDocs": {
             "description": "Code Example",
-            "url": "http://localhost:4200/code-examples/community#actor/:id_get"
+            "url": "http://localhost:4200/code-examples/community#actors/:id_get"
+          }
+        },
+        "put": {
+          "tags": [
+            "Actor"
+          ],
+          "summary": "Update an actor",
+          "description": "Find and update an actor in the database\n",
+          "operationId": "actorUpdate",
+          "parameters": [
+            {
+              "name": "id",
+              "in": "path",
+              "description": "actor id",
+              "required": true,
+              "schema": {
+                "type": "string",
+                "format": "mongo-id",
+                "example": "61445159784bca6ef764c6df"
+              }
+            }
+          ],
+          "requestBody": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ActorUpdateEvent"
+                }
+              }
+            }
+          },
+          "responses": {
+            "200": {
+              "description": "OK"
+            },
+            "400": {
+              "description": "Body is empty, invalid actor id or a required parameter is null",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/ActorEmptyBodyError"
+                  }
+                }
+              }
+            },
+            "401": {
+              "description": "You must login before call this endpoint",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/SecurityAccessUnauthorizedError"
+                  }
+                }
+              }
+            }
+          },
+          "security": [
+            {
+              "idToken": []
+            }
+          ],
+          "externalDocs": {
+            "description": "Code Example",
+            "url": "http://localhost:4200/code-examples/community#actors/:id_put"
           }
         },
         "delete": {
@@ -5686,134 +6738,31 @@ export class ApisConstants {
           ],
           "externalDocs": {
             "description": "Code Example",
-            "url": "http://localhost:4200/code-examples/community#actor_delete"
+            "url": "http://localhost:4200/code-examples/community#actors/:id_delete"
           }
         }
       },
-      "/actor": {
-        "post": {
-          "tags": [
-            "Actor"
-          ],
-          "summary": "Create an actor",
-          "description": "Create and insert an actor in database\n",
-          "operationId": "actorCreate",
-          "requestBody": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ActorCreateEvent"
-                }
-              }
-            }
-          },
-          "responses": {
-            "200": {
-              "description": "OK"
-            },
-            "400": {
-              "description": "Body is empty, ownerMember is empty, invalid owner member, invalid password, invalid actor or ecosystem does not accept this type of actor",
-              "content": {
-                "application/json": {
-                  "schema": {
-                    "type": "array",
-                    "items": {
-                      "$ref": "#/components/schemas/ActorEmptyBodyError"
-                    }
-                  }
-                }
-              }
-            },
-            "401": {
-              "description": "You must login before call this endpoint",
-              "content": {
-                "application/json": {
-                  "schema": {
-                    "$ref": "#/components/schemas/SecurityAccessUnauthorizedError"
-                  }
-                }
-              }
-            }
-          },
-          "security": [
-            {
-              "idToken": []
-            }
-          ],
-          "externalDocs": {
-            "description": "Code Example",
-            "url": "http://localhost:4200/code-examples/community#actor_post"
-          }
-        },
+      "/actors/{id}/accept": {
         "put": {
           "tags": [
             "Actor"
           ],
-          "summary": "Update an actor",
-          "description": "Find and update an actor in the database\n",
-          "operationId": "actorUpdate",
-          "requestBody": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ActorUpdateEvent"
-                }
-              }
-            }
-          },
-          "responses": {
-            "200": {
-              "description": "OK"
-            },
-            "400": {
-              "description": "Body is empty, invalid actor id or a required parameter is null",
-              "content": {
-                "application/json": {
-                  "schema": {
-                    "$ref": "#/components/schemas/ActorEmptyBodyError"
-                  }
-                }
-              }
-            },
-            "401": {
-              "description": "You must login before call this endpoint",
-              "content": {
-                "application/json": {
-                  "schema": {
-                    "$ref": "#/components/schemas/SecurityAccessUnauthorizedError"
-                  }
-                }
-              }
-            }
-          },
-          "security": [
-            {
-              "idToken": []
-            }
-          ],
-          "externalDocs": {
-            "description": "Code Example",
-            "url": "http://localhost:4200/code-examples/community#actor_put"
-          }
-        }
-      },
-      "/actor/accept": {
-        "put": {
-          "tags": [
-            "Actor"
-          ],
-          "summary": "Change actor status to accept",
+          "summary": "Accept actor",
           "description": "Find and update the actor with the new status\n",
           "operationId": "actorAccept",
-          "requestBody": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ActorAcceptEvent"
-                }
+          "parameters": [
+            {
+              "name": "id",
+              "in": "path",
+              "description": "actor id",
+              "required": true,
+              "schema": {
+                "type": "string",
+                "format": "mongo-id",
+                "example": "61445159784bca6ef764c6df"
               }
             }
-          },
+          ],
           "responses": {
             "200": {
               "description": "OK"
@@ -5859,27 +6808,31 @@ export class ApisConstants {
           ],
           "externalDocs": {
             "description": "Code Example",
-            "url": "http://localhost:4200/code-examples/community#actor/accept_put"
+            "url": "http://localhost:4200/code-examples/community#actors/:id/accept_put"
           }
         }
       },
-      "/actor/reject": {
+      "/actors/{id}/reject": {
         "put": {
           "tags": [
             "Actor"
           ],
-          "summary": "Change actor status to reject",
+          "summary": "Reject actor",
           "description": "Find and update the actor with the new status\n",
           "operationId": "actorReject",
-          "requestBody": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ActorRejectEvent"
-                }
+          "parameters": [
+            {
+              "name": "id",
+              "in": "path",
+              "description": "actor id",
+              "required": true,
+              "schema": {
+                "type": "string",
+                "format": "mongo-id",
+                "example": "61445159784bca6ef764c6df"
               }
             }
-          },
+          ],
           "responses": {
             "200": {
               "description": "OK"
@@ -5925,7 +6878,7 @@ export class ApisConstants {
           ],
           "externalDocs": {
             "description": "Code Example",
-            "url": "http://localhost:4200/code-examples/community#actor/reject_put"
+            "url": "http://localhost:4200/code-examples/community#actors/:id/reject_put"
           }
         }
       },
@@ -5982,7 +6935,161 @@ export class ApisConstants {
           }
         }
       },
-      "/fcmToken": {
+      "/actors/upload/original": {
+        "post": {
+          "tags": [
+            "Actor"
+          ],
+          "summary": "Update the actor´s original image",
+          "description": "Save actor´s original image in your filesystem\n",
+          "operationId": "actorUpdateOrginalImage",
+          "requestBody": {
+            "content": {
+              "multipart/form-data": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "file": {
+                      "type": "string",
+                      "format": "binary"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "responses": {
+            "200": {
+              "description": "Url where the file is located",
+              "content": {
+                "text/plain": {
+                  "schema": {
+                    "type": "string",
+                    "example": "https://localhost/drive/actors/profile/original/61eaffcdad2bd12319fd4eba.png"
+                  }
+                }
+              }
+            }
+          },
+          "externalDocs": {
+            "description": "Code Example",
+            "url": "http://localhost:4200/code-examples/community#actors/upload/original_post"
+          }
+        }
+      },
+      "/actors/upload/thumbnail": {
+        "post": {
+          "tags": [
+            "Actor"
+          ],
+          "summary": "Update the actor´s thumbnail image",
+          "description": "Save actor´s thumbnail image in your filesystem\n",
+          "operationId": "actorUpdateThumbnailImage",
+          "requestBody": {
+            "content": {
+              "multipart/form-data": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "file": {
+                      "type": "string",
+                      "format": "binary"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "responses": {
+            "200": {
+              "description": "Url where the file is located",
+              "content": {
+                "text/plain": {
+                  "schema": {
+                    "type": "string",
+                    "example": "https://localhost/drive/actors/profile/thumbnail/61eaffcdad2bd12319fd4eba.png"
+                  }
+                }
+              }
+            }
+          },
+          "externalDocs": {
+            "description": "Code Example",
+            "url": "http://localhost:4200/code-examples/community#actors/upload/thumbnail_post"
+          }
+        }
+      },
+      "/actor/{id}/upload/media": {
+        "put": {
+          "tags": [
+            "Actor"
+          ],
+          "summary": "Upload actor media",
+          "description": "Save media in your filesystem\n",
+          "operationId": "actorUpdateMedia",
+          "parameters": [
+            {
+              "name": "id",
+              "in": "path",
+              "description": "file id",
+              "required": true,
+              "schema": {
+                "type": "string",
+                "format": "mongo-id",
+                "example": "60acae8e2f799d228a4d4a85"
+              }
+            }
+          ],
+          "requestBody": {
+            "content": {
+              "multipart/form-data": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "file": {
+                      "type": "string",
+                      "format": "binary"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "responses": {
+            "200": {
+              "description": "Url where the file is located",
+              "content": {
+                "text/plain": {
+                  "schema": {
+                    "type": "string",
+                    "example": "https://localhost/drive/actor/media/1/61eaffcdad2bd12319fd4eba.png"
+                  }
+                }
+              }
+            },
+            "401": {
+              "description": "You must login before call this endpoint",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/SecurityAccessUnauthorizedError"
+                  }
+                }
+              }
+            }
+          },
+          "security": [
+            {
+              "idToken": []
+            }
+          ],
+          "externalDocs": {
+            "description": "Code Example",
+            "url": "http://localhost:4200/code-examples/community#actors/:id/upload/media_put"
+          }
+        }
+      },
+      "/members/fcm-token": {
         "put": {
           "tags": [
             "Member"
@@ -6038,11 +7145,11 @@ export class ApisConstants {
           ],
           "externalDocs": {
             "description": "Code Example",
-            "url": "http://localhost:4200/code-examples/community#fcmToken_put"
+            "url": "http://localhost:4200/code-examples/community#members/fcm-token_put"
           }
         }
       },
-      "/member/logged-in": {
+      "/members/logged-in": {
         "get": {
           "tags": [
             "Member"
@@ -6089,7 +7196,7 @@ export class ApisConstants {
           ],
           "externalDocs": {
             "description": "Code Example",
-            "url": "http://localhost:4200/code-examples/community#member/logged-in_get"
+            "url": "http://localhost:4200/code-examples/community#members/logged-in_get"
           }
         }
       },
@@ -6147,7 +7254,7 @@ export class ApisConstants {
           }
         }
       },
-      "/member/{id}": {
+      "/members/{id}": {
         "get": {
           "tags": [
             "Member"
@@ -6197,7 +7304,71 @@ export class ApisConstants {
           ],
           "externalDocs": {
             "description": "Code Example",
-            "url": "http://localhost:4200/code-examples/community#member/:id_get"
+            "url": "http://localhost:4200/code-examples/community#members/:id_get"
+          }
+        },
+        "put": {
+          "tags": [
+            "Member"
+          ],
+          "summary": "Update a member",
+          "description": "Find and update a member in the database\n",
+          "operationId": "memberUpdate",
+          "parameters": [
+            {
+              "name": "id",
+              "in": "path",
+              "description": "member id",
+              "required": true,
+              "schema": {
+                "type": "string",
+                "format": "mongo-id",
+                "example": "61445159784bca6ef764c6df"
+              }
+            }
+          ],
+          "requestBody": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/MemberUpdateEvent"
+                }
+              }
+            }
+          },
+          "responses": {
+            "200": {
+              "description": "OK"
+            },
+            "400": {
+              "description": "Body is empty, member id is empty, a required param is empty",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/MemberEmptyBodyError"
+                  }
+                }
+              }
+            },
+            "401": {
+              "description": "You must login before call this endpoint",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/SecurityAccessUnauthorizedError"
+                  }
+                }
+              }
+            }
+          },
+          "security": [
+            {
+              "idToken": []
+            }
+          ],
+          "externalDocs": {
+            "description": "Code Example",
+            "url": "http://localhost:4200/code-examples/community#members/:id_put"
           }
         },
         "delete": {
@@ -6242,11 +7413,11 @@ export class ApisConstants {
           ],
           "externalDocs": {
             "description": "Code Example",
-            "url": "http://localhost:4200/code-examples/community#member_delete"
+            "url": "http://localhost:4200/code-examples/community#members/:id_delete"
           }
         }
       },
-      "/member/{id}/marker": {
+      "/members/{id}/marker": {
         "get": {
           "tags": [
             "Member"
@@ -6313,64 +7484,95 @@ export class ApisConstants {
           ],
           "externalDocs": {
             "description": "Code Example",
-            "url": "http://localhost:4200/code-examples/community#member/:id/marker_get"
+            "url": "http://localhost:4200/code-examples/community#members/:id/marker_get"
           }
         }
       },
-      "/member": {
-        "put": {
+      "/members/upload/original": {
+        "post": {
           "tags": [
             "Member"
           ],
-          "summary": "Update a member",
-          "description": "Find and update a member in the database\n",
-          "operationId": "memberUpdate",
+          "summary": "Update the member´s original image",
+          "description": "Save member´s original image in your filesystem\n",
+          "operationId": "memberUpdateOrginalImage",
           "requestBody": {
             "content": {
-              "application/json": {
+              "multipart/form-data": {
                 "schema": {
-                  "$ref": "#/components/schemas/MemberUpdateEvent"
+                  "type": "object",
+                  "properties": {
+                    "file": {
+                      "type": "string",
+                      "format": "binary"
+                    }
+                  }
                 }
               }
             }
           },
           "responses": {
             "200": {
-              "description": "OK"
-            },
-            "400": {
-              "description": "Body is empty, member id is empty, a required param is empty",
+              "description": "Url where the file is located",
               "content": {
-                "application/json": {
+                "text/plain": {
                   "schema": {
-                    "$ref": "#/components/schemas/MemberEmptyBodyError"
-                  }
-                }
-              }
-            },
-            "401": {
-              "description": "You must login before call this endpoint",
-              "content": {
-                "application/json": {
-                  "schema": {
-                    "$ref": "#/components/schemas/SecurityAccessUnauthorizedError"
+                    "type": "string",
+                    "example": "https://localhost/drive/actors/profile/original/61eaffcdad2bd12319fd4eba.png"
                   }
                 }
               }
             }
           },
-          "security": [
-            {
-              "idToken": []
-            }
-          ],
           "externalDocs": {
             "description": "Code Example",
-            "url": "http://localhost:4200/code-examples/community#member_put"
+            "url": "http://localhost:4200/code-examples/community#members/upload/original_post"
           }
         }
       },
-      "/education": {
+      "/members/upload/thumbnail": {
+        "post": {
+          "tags": [
+            "Member"
+          ],
+          "summary": "Update the member´s thumbnail image",
+          "description": "Save actor´s thumbnail image in your filesystem\n",
+          "operationId": "memberUpdateThumbnailImage",
+          "requestBody": {
+            "content": {
+              "multipart/form-data": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "file": {
+                      "type": "string",
+                      "format": "binary"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "responses": {
+            "200": {
+              "description": "Url where the file is located",
+              "content": {
+                "text/plain": {
+                  "schema": {
+                    "type": "string",
+                    "example": "https://localhost/drive/members/profile/thumbnail/61eaffcdad2bd12319fd4eba.png"
+                  }
+                }
+              }
+            }
+          },
+          "externalDocs": {
+            "description": "Code Example",
+            "url": "http://localhost:4200/code-examples/community#members/upload/thumbnail_post"
+          }
+        }
+      },
+      "/members/education": {
         "post": {
           "tags": [
             "Member"
@@ -6419,9 +7621,11 @@ export class ApisConstants {
           ],
           "externalDocs": {
             "description": "Code Example",
-            "url": "http://localhost:4200/code-examples/community#education_post"
+            "url": "http://localhost:4200/code-examples/community#members/education_post"
           }
-        },
+        }
+      },
+      "/members/education/{education_id}": {
         "put": {
           "tags": [
             "Member"
@@ -6429,6 +7633,19 @@ export class ApisConstants {
           "summary": "Update an education",
           "description": "Find and update a member with the updated education\n",
           "operationId": "memberEducationUpdate",
+          "parameters": [
+            {
+              "name": "education_id",
+              "in": "path",
+              "description": "education id",
+              "required": true,
+              "schema": {
+                "type": "string",
+                "format": "mongo-id",
+                "example": "61445159784bca6ef764c6df"
+              }
+            }
+          ],
           "requestBody": {
             "content": {
               "application/json": {
@@ -6470,11 +7687,9 @@ export class ApisConstants {
           ],
           "externalDocs": {
             "description": "Code Example",
-            "url": "http://localhost:4200/code-examples/community#education_put"
+            "url": "http://localhost:4200/code-examples/community#/members/education/:education_id_put"
           }
-        }
-      },
-      "/education/{id}": {
+        },
         "delete": {
           "tags": [
             "Member"
@@ -6484,7 +7699,7 @@ export class ApisConstants {
           "operationId": "memberEducationDelete",
           "parameters": [
             {
-              "name": "id",
+              "name": "education_id",
               "in": "path",
               "description": "education id",
               "required": true,
@@ -6517,11 +7732,11 @@ export class ApisConstants {
           ],
           "externalDocs": {
             "description": "Code Example",
-            "url": "http://localhost:4200/code-examples/community#education_delete"
+            "url": "http://localhost:4200/code-examples/community#members/education/:education_id_delete"
           }
         }
       },
-      "/experience": {
+      "/members/experience": {
         "post": {
           "tags": [
             "Member"
@@ -6570,9 +7785,11 @@ export class ApisConstants {
           ],
           "externalDocs": {
             "description": "Code Example",
-            "url": "http://localhost:4200/code-examples/community#experience_post"
+            "url": "http://localhost:4200/code-examples/community#members/experience_post"
           }
-        },
+        }
+      },
+      "/members/experience/{experience_id}": {
         "put": {
           "tags": [
             "Member"
@@ -6580,6 +7797,19 @@ export class ApisConstants {
           "summary": "Update an experience",
           "description": "Find and update a member with the updated experience\n",
           "operationId": "memberExperienceUpdate",
+          "parameters": [
+            {
+              "name": "experience_id",
+              "in": "path",
+              "description": "experience id",
+              "required": true,
+              "schema": {
+                "type": "string",
+                "format": "mongo-id",
+                "example": "61445159784bca6ef764c6df"
+              }
+            }
+          ],
           "requestBody": {
             "content": {
               "application/json": {
@@ -6621,11 +7851,9 @@ export class ApisConstants {
           ],
           "externalDocs": {
             "description": "Code Example",
-            "url": "http://localhost:4200/code-examples/community#experience_put"
+            "url": "http://localhost:4200/code-examples/community#members/experience/:experience_id_put"
           }
-        }
-      },
-      "/experience/{id}": {
+        },
         "delete": {
           "tags": [
             "Member"
@@ -6635,7 +7863,7 @@ export class ApisConstants {
           "operationId": "memberExperienceDelete",
           "parameters": [
             {
-              "name": "id",
+              "name": "experience_id",
               "in": "path",
               "description": "experience id",
               "required": true,
@@ -6678,11 +7906,11 @@ export class ApisConstants {
           ],
           "externalDocs": {
             "description": "Code Example",
-            "url": "http://localhost:4200/code-examples/community#experience_delete"
+            "url": "http://localhost:4200/code-examples/community#members/experience/:experience_id_delete"
           }
         }
       },
-      "/projects": {
+      "/projects/by/actor": {
         "get": {
           "tags": [
             "Project"
@@ -6733,11 +7961,11 @@ export class ApisConstants {
           ],
           "externalDocs": {
             "description": "Code Example",
-            "url": "http://localhost:4200/code-examples/community#projects_get"
+            "url": "http://localhost:4200/code-examples/community#projects/by/actor_get"
           }
         }
       },
-      "/project/{id}": {
+      "/projects/{id}": {
         "get": {
           "tags": [
             "Project"
@@ -6787,7 +8015,71 @@ export class ApisConstants {
           ],
           "externalDocs": {
             "description": "Code Example",
-            "url": "http://localhost:4200/code-examples/community#project/:id_get"
+            "url": "http://localhost:4200/code-examples/community#projects/:id_get"
+          }
+        },
+        "put": {
+          "tags": [
+            "Project"
+          ],
+          "summary": "Update a project",
+          "description": "Find and update a project in database\n",
+          "operationId": "projectUpdate",
+          "parameters": [
+            {
+              "name": "id",
+              "in": "path",
+              "description": "experience id",
+              "required": true,
+              "schema": {
+                "type": "string",
+                "format": "mongo-id",
+                "example": "61445159784bca6ef764c6df"
+              }
+            }
+          ],
+          "requestBody": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProjectUpdateEvent"
+                }
+              }
+            }
+          },
+          "responses": {
+            "200": {
+              "description": "OK"
+            },
+            "400": {
+              "description": "Body is empty, project id is empty or a required param is empty",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/ProjectEmptyBodyError"
+                  }
+                }
+              }
+            },
+            "401": {
+              "description": "You must login before call this endpoint",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/SecurityAccessUnauthorizedError"
+                  }
+                }
+              }
+            }
+          },
+          "security": [
+            {
+              "idToken": []
+            }
+          ],
+          "externalDocs": {
+            "description": "Code Example",
+            "url": "http://localhost:4200/code-examples/community#projects/:id_put"
           }
         },
         "delete": {
@@ -6832,11 +8124,11 @@ export class ApisConstants {
           ],
           "externalDocs": {
             "description": "Code Example",
-            "url": "http://localhost:4200/code-examples/community#project_delete"
+            "url": "http://localhost:4200/code-examples/community#projects/:id_delete"
           }
         }
       },
-      "/project": {
+      "/projects": {
         "post": {
           "tags": [
             "Project"
@@ -6885,35 +8177,54 @@ export class ApisConstants {
           ],
           "externalDocs": {
             "description": "Code Example",
-            "url": "http://localhost:4200/code-examples/community#project_post"
+            "url": "http://localhost:4200/code-examples/community#projects_post"
           }
-        },
+        }
+      },
+      "/projects/{id}/upload/media": {
         "put": {
           "tags": [
             "Project"
           ],
-          "summary": "Update a project",
-          "description": "Find and update a project in database\n",
-          "operationId": "projectUpdate",
+          "summary": "Upload project media",
+          "description": "Save media in your filesystem\n",
+          "operationId": "projectUpdateMedia",
+          "parameters": [
+            {
+              "name": "id",
+              "in": "path",
+              "description": "file id",
+              "required": true,
+              "schema": {
+                "type": "string",
+                "format": "mongo-id",
+                "example": "60acae8e2f799d228a4d4a85"
+              }
+            }
+          ],
           "requestBody": {
             "content": {
-              "application/json": {
+              "multipart/form-data": {
                 "schema": {
-                  "$ref": "#/components/schemas/ProjectUpdateEvent"
+                  "type": "object",
+                  "properties": {
+                    "file": {
+                      "type": "string",
+                      "format": "binary"
+                    }
+                  }
                 }
               }
             }
           },
           "responses": {
             "200": {
-              "description": "OK"
-            },
-            "400": {
-              "description": "Body is empty, project id is empty or a required param is empty",
+              "description": "Url where the file is located",
               "content": {
-                "application/json": {
+                "text/plain": {
                   "schema": {
-                    "$ref": "#/components/schemas/ProjectEmptyBodyError"
+                    "type": "string",
+                    "example": "https://localhost/drive/projects/media/1/61eaffcdad2bd12319fd4eba.png"
                   }
                 }
               }
@@ -6936,7 +8247,7 @@ export class ApisConstants {
           ],
           "externalDocs": {
             "description": "Code Example",
-            "url": "http://localhost:4200/code-examples/community#project_put"
+            "url": "http://localhost:4200/code-examples/community#projects/:id/upload/media_put"
           }
         }
       }
@@ -8191,17 +9502,11 @@ export class ApisConstants {
         },
         "OnlineEventUpdateEvent": {
           "required": [
-            "id",
             "title",
             "timestamp",
             "description"
           ],
           "properties": {
-            "id": {
-              "type": "string",
-              "format": "mongo-id",
-              "example": "60acae8e2f799d228a4d4a85"
-            },
             "title": {
               "type": "string",
               "example": "Event to improve our programming skills"
@@ -8225,15 +9530,7 @@ export class ApisConstants {
           }
         },
         "OnlineEventSubscriptionEvent": {
-          "required": [
-            "id"
-          ],
           "properties": {
-            "id": {
-              "type": "string",
-              "format": "mongo-id",
-              "example": "60acae8e2f799d228a4d4a85"
-            },
             "participants": {
               "type": "array",
               "items": {
@@ -8243,15 +9540,7 @@ export class ApisConstants {
           }
         },
         "OnlineEventUnsubscriptionEvent": {
-          "required": [
-            "id"
-          ],
           "properties": {
-            "id": {
-              "type": "string",
-              "format": "mongo-id",
-              "example": "60acae8e2f799d228a4d4a85"
-            },
             "participants": {
               "type": "array",
               "items": {
@@ -8306,7 +9595,6 @@ export class ApisConstants {
         },
         "MemberEducationUpdateEvent": {
           "required": [
-            "id",
             "school",
             "degree",
             "address",
@@ -8314,11 +9602,6 @@ export class ApisConstants {
             "description"
           ],
           "properties": {
-            "id": {
-              "type": "string",
-              "format": "mongo-id",
-              "example": "60acae8e2f799d228a4d4a85"
-            },
             "school": {
               "type": "string",
               "example": "Hardvard University"
@@ -8392,7 +9675,6 @@ export class ApisConstants {
         },
         "MemberExperienceUpdateEvent": {
           "required": [
-            "id",
             "title",
             "company",
             "adress",
@@ -8400,11 +9682,6 @@ export class ApisConstants {
             "description"
           ],
           "properties": {
-            "id": {
-              "type": "string",
-              "format": "mongo-id",
-              "example": "60acae8e2f799d228a4d4a85"
-            },
             "title": {
               "type": "string",
               "example": "Back-end developer en Moonshot Innovation"
@@ -8433,15 +9710,7 @@ export class ApisConstants {
           }
         },
         "FaceToFaceEventSubscriptionEvent": {
-          "required": [
-            "id"
-          ],
           "properties": {
-            "id": {
-              "type": "string",
-              "format": "mongo-id",
-              "example": "60acae8e2f799d228a4d4a85"
-            },
             "participants": {
               "type": "array",
               "items": {
@@ -8451,15 +9720,7 @@ export class ApisConstants {
           }
         },
         "FaceToFaceEventUnsubscriptionEvent": {
-          "required": [
-            "id"
-          ],
           "properties": {
-            "id": {
-              "type": "string",
-              "format": "mongo-id",
-              "example": "60acae8e2f799d228a4d4a85"
-            },
             "participants": {
               "type": "array",
               "items": {
@@ -8492,22 +9753,16 @@ export class ApisConstants {
             },
             "direction": {
               "type": "string",
-              "example": "c/Alcala de Heranez, 17"
+              "example": "c/Alcala de Hernanez, 17"
             }
           }
         },
         "FaceToFaceEventUpdateEvent": {
           "required": [
-            "id",
             "title",
             "description"
           ],
           "properties": {
-            "id": {
-              "type": "string",
-              "format": "mongo-id",
-              "example": "60acae8e2f799d228a4d4a85"
-            },
             "title": {
               "type": "string",
               "example": "Event to improve our programming skills"
@@ -8564,16 +9819,10 @@ export class ApisConstants {
         },
         "PublicChannelUpdateEvent": {
           "required": [
-            "id",
             "title",
             "description"
           ],
           "properties": {
-            "id": {
-              "type": "string",
-              "format": "mongo-id",
-              "example": "60acae8e2f799d228a4d4a85"
-            },
             "ownerMemberId": {
               "type": "string",
               "format": "mongo-id",
@@ -8684,15 +9933,9 @@ export class ApisConstants {
         },
         "WallPostUpdateEvent": {
           "required": [
-            "id",
             "content"
           ],
           "properties": {
-            "id": {
-              "type": "string",
-              "format": "mongo-id",
-              "example": "60acae8e2f799d228a4d4a85"
-            },
             "content": {
               "type": "string",
               "example": "First wall post in this ecoystem"
@@ -8705,71 +9948,10 @@ export class ApisConstants {
             }
           }
         },
-        "WallPostLikeEvent": {
-          "required": [
-            "id"
-          ],
-          "properties": {
-            "id": {
-              "type": "string",
-              "format": "mongo-id",
-              "example": "60acae8e2f799d228a4d4a85"
-            }
-          }
-        },
-        "WallPostUnlikeEvent": {
-          "required": [
-            "id"
-          ],
-          "properties": {
-            "id": {
-              "type": "string",
-              "format": "mongo-id",
-              "example": "60acae8e2f799d228a4d4a85"
-            }
-          }
-        },
         "WallPostCommentAddEvent": {
           "properties": {
-            "id": {
-              "type": "string",
-              "format": "mongo-id",
-              "example": "60acae8e2f799d228a4d4a85"
-            },
             "comment": {
               "$ref": "#/components/schemas/CreateComment"
-            }
-          }
-        },
-        "WallPostCommentLikeEvent": {
-          "properties": {
-            "id": {
-              "type": "string",
-              "format": "mongo-id",
-              "example": "60acae8e2f799d228a4d4a85"
-            },
-            "commentId": {
-              "type": "string",
-              "format": "mongo-id",
-              "example": "60acae8e2f799d228a4d4a85"
-            }
-          }
-        },
-        "WallPostCommentUnlikeEvent": {
-          "required": [
-            "id",
-            "commentId"
-          ],
-          "properties": {
-            "id": {
-              "type": "string",
-              "format": "mongo-id",
-              "example": "60acae8e2f799d228a4d4a85"
-            },
-            "commentId": {
-              "type": "string",
-              "format": "mongo-id",
-              "example": "60acae8e2f799d228a4d4a85"
             }
           }
         },
@@ -8885,7 +10067,6 @@ export class ApisConstants {
         },
         "ActorUpdateEvent": {
           "required": [
-            "id",
             "ownerMember",
             "name",
             "image",
@@ -8897,11 +10078,6 @@ export class ApisConstants {
             "email"
           ],
           "properties": {
-            "id": {
-              "type": "string",
-              "format": "mongo-id",
-              "example": "60acae8e2f799d228a4d4a85"
-            },
             "type": {
               "type": "string",
               "enum": [
@@ -8996,33 +10172,8 @@ export class ApisConstants {
             }
           }
         },
-        "ActorAcceptEvent": {
-          "required": [
-            "id"
-          ],
-          "properties": {
-            "id": {
-              "type": "string",
-              "format": "mongo-id",
-              "example": "60acae8e2f799d228a4d4a85"
-            }
-          }
-        },
-        "ActorRejectEvent": {
-          "required": [
-            "id"
-          ],
-          "properties": {
-            "id": {
-              "type": "string",
-              "format": "mongo-id",
-              "example": "60acae8e2f799d228a4d4a85"
-            }
-          }
-        },
         "MemberUpdateEvent": {
           "required": [
-            "id",
             "name",
             "lastname",
             "email",
@@ -9030,11 +10181,6 @@ export class ApisConstants {
             "image"
           ],
           "properties": {
-            "id": {
-              "type": "string",
-              "format": "mongo-id",
-              "example": "61445159784bca6ef764c6df"
-            },
             "name": {
               "type": "string",
               "example": "Carlos"
@@ -9183,7 +10329,6 @@ export class ApisConstants {
         },
         "ProjectUpdateEvent": {
           "required": [
-            "id",
             "actorId",
             "name",
             "description",
@@ -9199,11 +10344,6 @@ export class ApisConstants {
             "socialInnovation"
           ],
           "properties": {
-            "id": {
-              "type": "string",
-              "format": "mongo-id",
-              "example": "60acae8e2f799d228a4d4a85"
-            },
             "actorId": {
               "type": "string",
               "format": "mongo-id",
@@ -10853,16 +11993,10 @@ export class ApisConstants {
         },
         "FollowUpRoomUpdateEvent": {
           "required": [
-            "id",
             "title",
             "description"
           ],
           "properties": {
-            "id": {
-              "type": "string",
-              "format": "mongo-id",
-              "example": "60acae8e2f799d228a4d4a85"
-            },
             "participants": {
               "type": "array",
               "items": {
@@ -10890,15 +12024,7 @@ export class ApisConstants {
           }
         },
         "FollowUpRoomAddMemberEvent": {
-          "required": [
-            "id"
-          ],
           "properties": {
-            "id": {
-              "type": "string",
-              "format": "mongo-id",
-              "example": "60acae8e2f799d228a4d4a85"
-            },
             "memberIds": {
               "type": "array",
               "items": {
@@ -10911,15 +12037,9 @@ export class ApisConstants {
         },
         "FollowUpRoomRemoveMemberEvent": {
           "required": [
-            "id",
             "newOwnerMemberId"
           ],
           "properties": {
-            "id": {
-              "type": "string",
-              "format": "mongo-id",
-              "example": "60acae8e2f799d228a4d4a85"
-            },
             "leaveMemberIds": {
               "type": "array",
               "items": {
@@ -10935,41 +12055,11 @@ export class ApisConstants {
             }
           }
         },
-        "FollowUpRoomOpenEvent": {
-          "required": [
-            "id"
-          ],
-          "properties": {
-            "id": {
-              "type": "string",
-              "format": "mongo-id",
-              "example": "60acae8e2f799d228a4d4a85"
-            }
-          }
-        },
-        "FollowUpRoomCloseEvent": {
-          "required": [
-            "id"
-          ],
-          "properties": {
-            "id": {
-              "type": "string",
-              "format": "mongo-id",
-              "example": "60acae8e2f799d228a4d4a85"
-            }
-          }
-        },
         "MessageAddEvent": {
           "required": [
-            "roomId",
             "content"
           ],
           "properties": {
-            "roomId": {
-              "type": "string",
-              "format": "mongo-id",
-              "example": "60acae8e2f799d228a4d4a85"
-            },
             "content": {
               "type": "string",
               "example": "Hello world"
@@ -12123,7 +13213,7 @@ export class ApisConstants {
                 "text/plain": {
                   "schema": {
                     "type": "string",
-                    "example": "https://localhost/drive/ecosystem/media/61eaffcdad2bd12319fd4eba.png"
+                    "example": "https://localhost/drive/ecosystem/media/1/61eaffcdad2bd12319fd4eba.png"
                   }
                 }
               }

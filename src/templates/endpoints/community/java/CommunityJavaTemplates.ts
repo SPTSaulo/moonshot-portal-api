@@ -24,49 +24,55 @@ export class CommunityJavaTemplates {
   }
 
   public static online_events_id_get: EndpointTemplate = {
-    name: "online-event/:id",
+    name: "online-events/:id",
     code: "TODO",
     response: "TODO"
   }
 
   public static online_event_post: EndpointTemplate = {
-    name: "online-event",
+    name: "online-events",
     code: "TODO",
     response: "TODO"
   }
 
-  public static online_event_put: EndpointTemplate = {
-    name: "online-event",
+  public static online_event_upload_post: EndpointTemplate = {
+    name: "online-events/update",
+    code: "TODO",
+    response: "TODO"
+  }
+
+  public static online_event_id_put: EndpointTemplate = {
+    name: "online-events/:id",
     code: "TODO",
     response: "TODO"
   }
 
   public static online_event_id_delete: EndpointTemplate = {
-    name: "online-event/:id",
+    name: "online-events/:id",
     code: "TODO",
     response: "TODO"
   }
 
-  public static online_event_admin_put: EndpointTemplate = {
-    name: "online-event/admin",
+  public static online_event_id_admin_put: EndpointTemplate = {
+    name: "online-events/:id/admin",
     code: "TODO",
     response: "TODO"
   }
 
-  public static online_event_subscription_put: EndpointTemplate = {
-    name: "online-event/subscription",
+  public static online_event_id_subscription_put: EndpointTemplate = {
+    name: "online-events/:id/subscription",
     code: "TODO",
     response: "TODO"
   }
 
-  public static online_event_unsubscription_put: EndpointTemplate = {
-    name: "online-event/unsubscription",
+  public static online_event_id_unsubscription_put: EndpointTemplate = {
+    name: "online-events/:id/unsubscription",
     code: "TODO",
     response: "TODO"
   }
 
   public static online_event_id_admin_delete: EndpointTemplate = {
-    name: "online-event/:id/admin",
+    name: "online-events/:id/admin",
     code: "TODO",
     response: "TODO"
   }
@@ -78,61 +84,55 @@ export class CommunityJavaTemplates {
   }
 
   public static face_to_face_event_id_get: EndpointTemplate = {
-    name: "face-to-face-event/:id",
+    name: "face-to-face-events/:id",
     code: "TODO",
     response: "TODO"
   }
 
   public static face_to_face_event_post: EndpointTemplate = {
-    name: "face-to-face-event",
+    name: "face-to-face-events",
     code: "TODO",
     response: "TODO"
   }
 
-  public static face_to_face_event_put: EndpointTemplate = {
-    name: "face-to-face-event",
+  public static face_to_face_event_id_put: EndpointTemplate = {
+    name: "face-to-face-events/:id",
     code: "TODO",
     response: "TODO"
   }
 
   public static face_to_face_event_id_delete: EndpointTemplate = {
-    name: "face-to-face-event/:id",
+    name: "face-to-face-events/:id",
     code: "TODO",
     response: "TODO"
   }
 
-  public static face_to_face_event_admin_put: EndpointTemplate = {
-    name: "face-to-face-event/admin",
+  public static face_to_face_event_upload_post: EndpointTemplate = {
+    name: "face-to-face-events/upload",
     code: "TODO",
     response: "TODO"
   }
 
-  public static face_to_face_event_subscription_put: EndpointTemplate = {
-    name: "face-to-face-event/subscription",
+  public static face_to_face_event_id_admin_put: EndpointTemplate = {
+    name: "face-to-face-events/:id/admin",
     code: "TODO",
     response: "TODO"
   }
 
-  public static face_to_face_event_unsubscription_put: EndpointTemplate = {
-    name: "face-to-face-event/unsubscription",
+  public static face_to_face_event_id_subscription_put: EndpointTemplate = {
+    name: "face-to-face-events/:id/subscription",
+    code: "TODO",
+    response: "TODO"
+  }
+
+  public static face_to_face_event_id_unsubscription_put: EndpointTemplate = {
+    name: "face-to-face-events/:id/unsubscription",
     code: "TODO",
     response: "TODO"
   }
 
   public static face_to_face_event_id_admin_delete: EndpointTemplate = {
-    name: "face-to-face-event/:id/admin",
-    code: "TODO",
-    response: "TODO"
-  }
-
-  public static room_documents_room_id_get: EndpointTemplate = {
-    name: "room-documents/:room_id",
-    code: "TODO",
-    response: "TODO"
-  }
-
-  public static room_links_room_id_get: EndpointTemplate = {
-    name: "room-links/:room_id",
+    name: "face-to-face-events/:id/admin",
     code: "TODO",
     response: "TODO"
   }
@@ -143,44 +143,62 @@ export class CommunityJavaTemplates {
     response: "TODO"
   }
 
-  public static direct_chats_all_get: EndpointTemplate = {
-    name: "direct-chats/all",
+  public static direct_chats_all_member_participate_get: EndpointTemplate = {
+    name: "direct-chats/all/member-participate",
     code: "TODO",
     response: "TODO"
   }
 
   public static direct_chat_id_get: EndpointTemplate = {
-    name: "direct-chat/:id",
+    name: "direct-chats/:id",
     code: "TODO",
     response: "TODO"
   }
 
   public static direct_chat_post: EndpointTemplate = {
-    name: "direct-chat",
+    name: "direct-chats",
     code: "TODO",
     response: "TODO"
   }
 
   public static direct_chat_id_delete: EndpointTemplate = {
-    name: "direct-chat/:id",
+    name: "direct-chats/:id",
     code: "TODO",
     response: "TODO"
   }
 
-  public static direct_chat_message_post: EndpointTemplate = {
-    name: "direct-chat/message",
+  public static direct_chat_id_message_post: EndpointTemplate = {
+    name: "direct-chats/:id/messages",
     code: "TODO",
     response: "TODO"
   }
 
-  public static direct_chat_messages_room_id_get: EndpointTemplate = {
-    name: "direct-chat/message/:room_id",
+  public static direct_chat_id_messages_get: EndpointTemplate = {
+    name: "direct-chats/:id/messages",
     code: "TODO",
     response: "TODO"
   }
 
-  public static direct_chat_message_id_delete: EndpointTemplate = {
-    name: "direct-chat/message/:id",
+  public static direct_chat_id_message_id_delete: EndpointTemplate = {
+    name: "direct-chats/:id/messages/:message_id",
+    code: "TODO",
+    response: "TODO"
+  }
+
+  public static direct_chat_id_documents_get: EndpointTemplate = {
+    name: "direct-chats/:id/documents",
+    code: "TODO",
+    response: "TODO"
+  }
+
+  public static direct_chat_id_links_get: EndpointTemplate = {
+    name: "direct-chats/:id/links",
+    code: "TODO",
+    response: "TODO"
+  }
+
+  public static direct_chat_id_upload_put: EndpointTemplate = {
+    name: "direct-chats/:id/upload",
     code: "TODO",
     response: "TODO"
   }
@@ -191,7 +209,7 @@ export class CommunityJavaTemplates {
     response: "TODO"
   }
 
-  public static follow_up_rooms_all_get: EndpointTemplate = {
+  public static follow_up_rooms_all_member_participate_get: EndpointTemplate = {
     name: "follow-up-rooms/all",
     code: "TODO",
     response: "TODO"
@@ -209,205 +227,253 @@ export class CommunityJavaTemplates {
     response: "TODO"
   }
 
-  public static follow_up_room_put: EndpointTemplate = {
-    name: "follow-up-rooms",
+  public static follow_up_room_id_put: EndpointTemplate = {
+    name: "follow-up-rooms/:id",
     code: "TODO",
     response: "TODO"
   }
 
-  public static follow_up_room_add_member_put: EndpointTemplate = {
-    name: "follow-up-rooms/add-member",
+  public static follow_up_room_id_members_add_put: EndpointTemplate = {
+    name: "follow-up-rooms/:id/members/add",
     code: "TODO",
     response: "TODO"
   }
 
-  public static follow_up_room_leave_member_put: EndpointTemplate = {
-    name: "follow-up-rooms/leave-member",
+  public static follow_up_room_id_members_leave_put: EndpointTemplate = {
+    name: "follow-up-rooms/:id/members/leave",
     code: "TODO",
     response: "TODO"
   }
 
-  public static follow_up_room_open_put: EndpointTemplate = {
-    name: "follow-up-room/open",
+  public static follow_up_room_id_open_put: EndpointTemplate = {
+    name: "follow-up-rooms/:id/open",
     code: "TODO",
     response: "TODO"
   }
 
-  public static follow_up_room_close_put: EndpointTemplate = {
-    name: "follow-up-room/close",
+  public static follow_up_room_id_close_put: EndpointTemplate = {
+    name: "follow-up-rooms/:id/close",
     code: "TODO",
     response: "TODO"
   }
 
   public static follow_up_room_id_delete: EndpointTemplate = {
-    name: "follow-up-room/:id",
+    name: "follow-up-rooms/:id",
     code: "TODO",
     response: "TODO"
   }
 
-  public static follow_up_room_message_post: EndpointTemplate = {
-    name: "follow-up-room/message",
+  public static follow_up_room_id_message_post: EndpointTemplate = {
+    name: "follow-up-rooms/:id/messages",
     code: "TODO",
     response: "TODO"
   }
 
-  public static follow_up_room_message_id_delete: EndpointTemplate = {
-    name: "follow-up-room/message/:id",
+  public static follow_up_room_id_message_id_delete: EndpointTemplate = {
+    name: "follow-up-rooms/:id/message/:message_id",
     code: "TODO",
     response: "TODO"
   }
 
   public static follow_up_room_message_id_admin_delete: EndpointTemplate = {
-    name: "follow-up-room/message/:id/admin",
+    name: "follow-up-rooms/:id/messages/:message_id/admin",
     code: "TODO",
     response: "TODO"
   }
 
-  public static follow_up_room_messages_room_id_get: EndpointTemplate = {
-    name: "follow-up-room/messages/:room_id",
+  public static follow_up_room_id_message_get: EndpointTemplate = {
+    name: "follow-up-rooms/:id/messages",
+    code: "TODO",
+    response: "TODO"
+  }
+
+  public static follow_up_room_id_documents_get: EndpointTemplate = {
+    name: "follow-up-rooms/:id/documents",
+    code: "TODO",
+    response: "TODO"
+  }
+
+  public static follow_up_room_id_links_get: EndpointTemplate = {
+    name: "follow-up-rooms/:id/links",
+    code: "TODO",
+    response: "TODO"
+  }
+
+  public static follow_up_room_id_upload_put: EndpointTemplate = {
+    name: "follow-up-rooms/:id/upload",
     code: "TODO",
     response: "TODO"
   }
 
   public static public_channels_get: EndpointTemplate = {
-    name: "public-channel",
+    name: "public-channels",
     code: "TODO",
     response: "TODO"
   }
 
   public static public_channel_id_get: EndpointTemplate = {
-    name: "public-channel/:id",
+    name: "public-channels/:id",
     code: "TODO",
     response: "TODO"
   }
 
   public static public_channel_post: EndpointTemplate = {
-    name: "public-channel",
+    name: "public-channels",
     code: "TODO",
     response: "TODO"
   }
 
-  public static public_channel_put: EndpointTemplate = {
-    name: "public-channel",
+  public static public_channel_id_put: EndpointTemplate = {
+    name: "public-channels/:id",
     code: "TODO",
     response: "TODO"
   }
 
   public static public_channel_id_delete: EndpointTemplate = {
-    name: "public-channel/:id",
+    name: "public-channels/:id",
+    code: "TODO",
+    response: "TODO"
+  }
+
+  public static public_channel_id_admin_put: EndpointTemplate = {
+    name: "public-channels/:id/admin",
     code: "TODO",
     response: "TODO"
   }
 
   public static public_channel_id_admin_delete: EndpointTemplate = {
-    name: "public-channel/:id/admin",
+    name: "public-channels/:id/admin",
     code: "TODO",
     response: "TODO"
   }
 
   public static public_channel_subscribe_put: EndpointTemplate = {
-    name: "public-channel/subscribe",
+    name: "public-channels/:id/subscribe",
     code: "TODO",
     response: "TODO"
   }
 
   public static public_channel_unsubscribe_put: EndpointTemplate = {
-    name: "public-channel/unsubscribe",
+    name: "public-channels/:id/unsubscribe",
     code: "TODO",
     response: "TODO"
   }
 
   public static public_channel_message_post: EndpointTemplate = {
-    name: "public-channel/message",
+    name: "public-channels/:id/messages",
     code: "TODO",
     response: "TODO"
   }
 
   public static public_channel_message_id_delete: EndpointTemplate = {
-    name: "public-channel/message/:id",
+    name: "public-channels/:id/messages/:message_id",
     code: "TODO",
     response: "TODO"
   }
 
   public static public_channel_message_id_admin_delete: EndpointTemplate = {
-    name: "public-channel/message/:id/admin",
+    name: "public-channels/:id/messages/:message_id/admin",
     code: "TODO",
     response: "TODO"
   }
 
-  public static public_channel_messages_room_id_get: EndpointTemplate = {
-    name: "public-channel/message/:roomId",
+  public static public_channel_id_messages_get: EndpointTemplate = {
+    name: "public-channels/:id/messages",
+    code: "TODO",
+    response: "TODO"
+  }
+
+  public static public_channel_id_documents_get: EndpointTemplate = {
+    name: "public-channels/:id/documents",
+    code: "TODO",
+    response: "TODO"
+  }
+
+  public static public_channel_id_links_get: EndpointTemplate = {
+    name: "public-channels/:id/links",
+    code: "TODO",
+    response: "TODO"
+  }
+
+  public static public_channel_id_upload_put: EndpointTemplate = {
+    name: "public-channels/:id/upload",
     code: "TODO",
     response: "TODO"
   }
 
   public static wall_post_post: EndpointTemplate = {
-    name: "wall-post",
+    name: "wall-posts",
     code: "TODO",
     response: "TODO"
   }
 
-  public static wall_post_put: EndpointTemplate = {
-    name: "wall-post",
+  public static wall_post_id_put: EndpointTemplate = {
+    name: "wall-posts/:id",
     code: "TODO",
     response: "TODO"
   }
 
   public static wall_post_id_delete: EndpointTemplate = {
-    name: "wall-post/:id",
+    name: "wall-posts/:id",
     code: "TODO",
     response: "TODO"
   }
 
-  public static wall_post_admin_put: EndpointTemplate = {
-    name: "wall-post/admin",
+  public static wall_post_id_admin_put: EndpointTemplate = {
+    name: "wall-posts/:id/admin",
     code: "TODO",
     response: "TODO"
   }
 
   public static wall_post_id_admin_delete: EndpointTemplate = {
-    name: "wall-post/:id/admin",
+    name: "wall-posts/:id/admin",
     code: "TODO",
     response: "TODO"
   }
 
-  public static wall_post_like_put: EndpointTemplate = {
-    name: "wall-post/like",
+  public static wall_post_id_like_put: EndpointTemplate = {
+    name: "wall-posts/:id/like",
     code: "TODO",
     response: "TODO"
   }
-  public static wall_post_unlike_put: EndpointTemplate = {
-    name: "wall-post/unlike",
-    code: "TODO",
-    response: "TODO"
-  }
-
-  public static wall_post_comment_post: EndpointTemplate = {
-    name: "wall-post/comment",
+  public static wall_post_id_unlike_put: EndpointTemplate = {
+    name: "wall-posts/:id/unlike",
     code: "TODO",
     response: "TODO"
   }
 
-  public static wall_post_comment_like_put: EndpointTemplate = {
-    name: "wall-post/comment/like",
+  public static wall_post_id_comment_post: EndpointTemplate = {
+    name: "wall-posts/:id/comment",
     code: "TODO",
     response: "TODO"
   }
 
-  public static wall_post_comment_unlike_put: EndpointTemplate = {
-    name: "wall-post/comment/unlike",
+  public static wall_post_id_comment_id_like_put: EndpointTemplate = {
+    name: "wall-posts/:id/comment/:comment_id/like",
+    code: "TODO",
+    response: "TODO"
+  }
+
+  public static wall_post_id_comment_id_unlike_put: EndpointTemplate = {
+    name: "wall-posts/:id/comment/:comment_id/unlike",
     code: "TODO",
     response: "TODO"
   }
 
   public static wall_post_id_get: EndpointTemplate = {
-    name: "wall-post/:id",
+    name: "wall-posts/:id",
     code: "TODO",
     response: "TODO"
   }
 
   public static wall_posts_get: EndpointTemplate = {
     name: "wall-posts",
+    code: "TODO",
+    response: "TODO"
+  }
+
+  public static wall_post_upload_post: EndpointTemplate = {
+    name: "wall-posts/upload",
     code: "TODO",
     response: "TODO"
   }
@@ -425,73 +491,91 @@ export class CommunityJavaTemplates {
   }
 
   public static actors_by_name_and_state_get: EndpointTemplate = {
-    name: "actors/by-name-and-state",
+    name: "actors/by/name-and-state",
     code: "TODO",
     response: "TODO"
   }
 
   public static actors_by_type_get: EndpointTemplate = {
-    name: "actors/by-type",
+    name: "actors/by/types",
     code: "TODO",
     response: "TODO"
   }
 
   public static actors_by_state_get: EndpointTemplate = {
-    name: "actors/by-state",
+    name: "actors/by/state",
     code: "TODO",
     response: "TODO"
   }
 
   public static actors_by_member_get: EndpointTemplate = {
-    name: "actors/by-member",
+    name: "actors/by/member",
     code: "TODO",
     response: "TODO"
   }
 
-  public static actors_id_get: EndpointTemplate = {
+  public static actor_id_get: EndpointTemplate = {
     name: "actors/:id",
     code: "TODO",
     response: "TODO"
   }
 
   public static actor_post: EndpointTemplate = {
-    name: "actor",
+    name: "actors",
     code: "TODO",
     response: "TODO"
   }
 
-  public static actor_put: EndpointTemplate = {
-    name: "actor",
+  public static actor_id_put: EndpointTemplate = {
+    name: "actors/:id",
     code: "TODO",
     response: "TODO"
   }
 
-  public static actor_accept_put: EndpointTemplate = {
-    name: "actor/accept",
+  public static actor_id_accept_put: EndpointTemplate = {
+    name: "actors/:id/accept",
     code: "TODO",
     response: "TODO"
   }
 
-  public static actor_reject_put: EndpointTemplate = {
-    name: "actor/reject",
+  public static actor_id_reject_put: EndpointTemplate = {
+    name: "actors/:id/reject",
     code: "TODO",
     response: "TODO"
   }
 
   public static actor_id_delete: EndpointTemplate = {
-    name: "actor/:id",
+    name: "actors/:id",
     code: "TODO",
     response: "TODO"
   }
 
-  public static fcm_token_put: EndpointTemplate = {
-    name: "fcmToken",
+  public static actor_upload_original_post: EndpointTemplate = {
+    name: 'actors/upload/original',
+    code: "TODO",
+    response: "TODO"
+  }
+
+  public static actor_upload_thumbnail_post: EndpointTemplate = {
+    name: 'actors/upload/thumbnail',
+    code: "TODO",
+    response: "TODO"
+  }
+
+  public static actor_id_upload_media_put: EndpointTemplate = {
+    name: 'actors/:id/upload/media',
+    code: "TODO",
+    response: "TODO"
+  }
+
+  public static member_fcm_token_put: EndpointTemplate = {
+    name: "members/fcm-token",
     code: "\nTODO",
     response: "\nTODO"
   }
 
   public static member_logged_in_get: EndpointTemplate = {
-    name: "member/logged-in",
+    name: "members/logged-in",
     code: "TODO",
     response: "TODO"
   }
@@ -503,93 +587,110 @@ export class CommunityJavaTemplates {
   }
 
   public static member_id_get: EndpointTemplate = {
-    name: "member/:id",
+    name: "members/:id",
     code: "TODO",
     response: "TODO"
   }
 
   public static member_id_marker_get: EndpointTemplate = {
-    name: "member/:id/marker",
+    name: "members/:id/marker",
     code: "TODO",
     response: "TODO"
   }
 
-  public static member_put: EndpointTemplate = {
-    name: "member",
+  public static member_upload_original_post: EndpointTemplate = {
+    name: "members/upload/original",
+    code: "TODO",
+    response: "TODO"
+  }
+
+  public static member_upload_thumbnail_post: EndpointTemplate = {
+    name: "members/upload/thumbnail",
+    code: "TODO",
+    response: "TODO"
+  }
+
+  public static member_id_put: EndpointTemplate = {
+    name: "members/:id",
     code: "TODO",
     response: "TODO"
   }
 
   public static member_id_delete: EndpointTemplate = {
-    name: "member/:id",
+    name: "members/:id",
     code: "TODO",
     response: "TODO"
   }
 
   public static education_post: EndpointTemplate = {
-    name: "education",
+    name: "members/education",
     code: "TODO",
     response: "TODO"
   }
 
-  public static education_put: EndpointTemplate = {
-    name: "education",
+  public static education_id_put: EndpointTemplate = {
+    name: "members/education/:education_id",
     code: "TODO",
     response: "TODO"
   }
 
   public static education_id_delete: EndpointTemplate = {
-    name: "education/:id",
+    name: "members/education/:education_id",
     code: "TODO",
     response: "TODO"
   }
 
   public static experience_post: EndpointTemplate = {
-    name: "experience",
+    name: "members/experience",
     code: "TODO",
     response: "TODO"
   }
 
-  public static experience_put: EndpointTemplate = {
-    name: "experience",
+  public static experience_id_put: EndpointTemplate = {
+    name: "members/experience/experience_id",
     code: "TODO",
     response: "TODO"
   }
 
   public static experience_id_delete: EndpointTemplate = {
-    name: "experience/:id",
+    name: "members/experience/:experience_id",
     code: "TODO",
     response: "TODO"
   }
 
-  public static projects_get: EndpointTemplate = {
-    name: "projects",
+  public static projects_by_actor_get: EndpointTemplate = {
+    name: "projects/by/actor",
     code: "TODO",
     response: "TODO"
   }
 
   public static project_id_get: EndpointTemplate = {
-    name: "project/:id",
+    name: "projects/:id",
     code: "TODO",
     response: "TODO"
   }
 
   public static project_post: EndpointTemplate = {
-    name: "project",
+    name: "projects",
     code: "TODO",
     response: "TODO"
   }
 
-  public static project_put: EndpointTemplate = {
-    name: "project",
+  public static project_id_put: EndpointTemplate = {
+    name: "projects/:id",
     code: "TODO",
     response: "TODO"
   }
 
-  public static project_delete: EndpointTemplate = {
-    name: "project/:id",
+  public static project_id_delete: EndpointTemplate = {
+    name: "projects/:id",
     code: "TODO",
     response: "TODO"
   }
 
+  public static project_id_upload_media_put: EndpointTemplate = {
+    name: "projects/:id/upload/media",
+    code: "TODO",
+    response: "TODO"
+  }
 }

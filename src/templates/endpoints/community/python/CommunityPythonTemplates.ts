@@ -236,10 +236,10 @@ export class CommunityPythonTemplates {
   }
 
   public static online_events_id_get: EndpointTemplate = {
-    name: "online-event/:id",
+    name: "online-events/:id",
     code: "\nimport requests as reqs\n" +
       "\n" +
-      "URL = \"https://dev.moonshot.ceo/api/community/online-event/4\"\n" +
+      "URL = \"https://dev.moonshot.ceo/api/community/online-events/4\"\n" +
       "\n" +
       "response = reqs.get(URL)\n" +
       "print(response.text)",
@@ -456,10 +456,10 @@ export class CommunityPythonTemplates {
   }
 
   public static online_event_post: EndpointTemplate = {
-    name: "online-event",
+    name: "online-events",
     code: "\nimport requests as reqs\n" +
       "\n" +
-      "URL = \"https://dev.moonshot.ceo/api/community/online-event\"\n" +
+      "URL = \"https://dev.moonshot.ceo/api/community/online-events\"\n" +
       "\n" +
       "BODY = {\n" +
       "  \"id\": \"4\",\n" +
@@ -476,14 +476,24 @@ export class CommunityPythonTemplates {
     response: null
   }
 
-  public static online_event_put: EndpointTemplate = {
-    name: "online-event",
+  public static online_event_upload_post: EndpointTemplate = {
+    name: "online-events/upload",
     code: "\nimport requests as reqs\n" +
       "\n" +
-      "URL = \"https://dev.moonshot.ceo/api/community/online-event\"\n" +
+      "URL = \"https://dev.moonshot.ceo/api/community/online-events/upload\"\n" +
+      "\n" +
+      "response = reqs.post(URL, files={'file': open('YOUR_FILE', 'r')})\n" +
+      "print(response.text)",
+    response: "\nhttps://localhost/drive/events/images/61eaffcdad2bd12319fd4eba.png"
+  }
+
+  public static online_event_id_put: EndpointTemplate = {
+    name: "online-events/:id",
+    code: "\nimport requests as reqs\n" +
+      "\n" +
+      "URL = \"https://dev.moonshot.ceo/api/community/online-events/1\"\n" +
       "\n" +
       "BODY = {\n" +
-      "  \"id\": \"4\",\n" +
       "  \"title\": \"Evento para conocernos\",\n" +
       "  \"timestamp\": 1414281600,\n" +
       "  \"description\": \"Evento para mejorar el ambiente laboral y las relaciones con el resto de personas del ecosistema\",\n" +
@@ -498,23 +508,22 @@ export class CommunityPythonTemplates {
   }
 
   public static online_event_id_delete: EndpointTemplate = {
-    name: "online-event/:id",
+    name: "online-events/:id",
     code: "\nimport requests as reqs\n" +
       "\n" +
-      "URL = \"https://dev.moonshot.ceo/api/community/online-event/4\"\n\n" +
+      "URL = \"https://dev.moonshot.ceo/api/community/online-events/4\"\n\n" +
       "response = reqs.delete(URL)\n" +
       "print(response.text)",
     response: null
   }
 
-  public static online_event_admin_put: EndpointTemplate = {
-    name: "online-event/admin",
+  public static online_event_id_admin_put: EndpointTemplate = {
+    name: "online-events/1/admin",
     code: "\nimport requests as reqs\n" +
       "\n" +
-      "URL = \"https://dev.moonshot.ceo/api/community/online-event/admin\"\n" +
+      "URL = \"https://dev.moonshot.ceo/api/community/online-events/1/admin\"\n" +
       "\n" +
       "BODY = {\n" +
-      "  \"id\": \"4\",\n" +
       "  \"title\": \"Evento para conocernos\",\n" +
       "  \"timestamp\": 1414281600,\n" +
       "  \"description\": \"Evento para mejorar el ambiente laboral y las relaciones con el resto de personas del ecosistema\",\n" +
@@ -528,14 +537,13 @@ export class CommunityPythonTemplates {
     response: null
   }
 
-  public static online_event_subscription_put: EndpointTemplate = {
-    name: "online-event/subscription",
+  public static online_event_id_subscription_put: EndpointTemplate = {
+    name: "online-events/:id/subscription",
     code: "\nimport requests as reqs\n" +
       "\n" +
-      "URL = \"https://dev.moonshot.ceo/api/community/online-event/subscription\"\n" +
+      "URL = \"https://dev.moonshot.ceo/api/community/online-events/1/subscription\"\n" +
       "\n" +
       "BODY = {\n" +
-      "   \"id\":\"1\",\n" +
       "   \"participants\":[\n" +
       "      {\n" +
       "         \"id\":\"1\",\n" +
@@ -570,14 +578,13 @@ export class CommunityPythonTemplates {
     response: null
   }
 
-  public static online_event_unsubscription_put: EndpointTemplate = {
-    name: "online-event/unsubscription",
+  public static online_event_id_unsubscription_put: EndpointTemplate = {
+    name: "online-events/:id/unsubscription",
     code: "\nimport requests as reqs\n" +
       "\n" +
-      "URL = \"https://dev.moonshot.ceo/api/community/online-event/unsubscription\"\n" +
+      "URL = \"https://dev.moonshot.ceo/api/community/online-events/1/unsubscription\"\n" +
       "\n" +
       "BODY = {\n" +
-      "   \"id\":\"1\",\n" +
       "   \"participants\":[\n" +
       "      {\n" +
       "         \"id\":\"1\",\n" +
@@ -613,10 +620,10 @@ export class CommunityPythonTemplates {
   }
 
   public static online_event_id_admin_delete: EndpointTemplate = {
-    name: "online-event/:id/admin",
+    name: "online-events/:id/admin",
     code: "\nimport requests as reqs\n" +
       "\n" +
-      "URL = \"https://dev.moonshot.ceo/api/community/online-event/4/admin\"\n" +
+      "URL = \"https://dev.moonshot.ceo/api/community/online-events/4/admin\"\n" +
       "\n" +
       "response = reqs.delete(URL)\n" +
       "print(response.text)",
@@ -963,10 +970,10 @@ export class CommunityPythonTemplates {
   }
 
   public static face_to_face_event_id_get: EndpointTemplate = {
-    name: "face-to-face-event/:id",
+    name: "face-to-face-events/:id",
     code: "\nimport requests as reqs\n" +
       "\n" +
-      "URL = \"https://dev.moonshot.ceo/api/community/face-to-face-event/1\"\n" +
+      "URL = \"https://dev.moonshot.ceo/api/community/face-to-face-events/1\"\n" +
       "\n" +
       "response = reqs.get(URL)\n" +
       "print(response.text)",
@@ -1100,10 +1107,10 @@ export class CommunityPythonTemplates {
   }
 
   public static face_to_face_event_post: EndpointTemplate = {
-    name: "face-to-face-event",
+    name: "face-to-face-events",
     code: "\nimport requests as reqs\n" +
       "\n" +
-      "URL = \"https://dev.moonshot.ceo/api/community/face-to-face-event\"\n" +
+      "URL = \"https://dev.moonshot.ceo/api/community/face-to-face-events\"\n" +
       "\n" +
       "BODY =  {\n" +
       " \"id\":\"1\",\n" +
@@ -1120,14 +1127,13 @@ export class CommunityPythonTemplates {
     response: null
   }
 
-  public static face_to_face_event_put: EndpointTemplate = {
-    name: "face-to-face-event",
+  public static face_to_face_event_id_put: EndpointTemplate = {
+    name: "face-to-face-events/:id",
     code: "\nimport requests as reqs\n" +
       "\n" +
-      "URL = \"https://dev.moonshot.ceo/api/community/face-to-face-event\"\n" +
+      "URL = \"https://dev.moonshot.ceo/api/community/face-to-face-events/1\"\n" +
       "\n" +
       "BODY =  {\n" +
-      " \"id\":\"1\",\n" +
       " \"title\":\"Reunion horarios Enero\",\n" +
       " \"timestamp\":1546387200,\n" +
       " \"description\":\"Reunion para definir los horarios de la empresa en el mes de Enero\",\n" +
@@ -1142,24 +1148,34 @@ export class CommunityPythonTemplates {
   }
 
   public static face_to_face_event_id_delete: EndpointTemplate = {
-    name: "face-to-face-event/:id",
+    name: "face-to-face-events/:id",
     code: "\nimport requests as reqs\n" +
       "\n" +
-      "URL = \"https://dev.moonshot.ceo/api/community/face-to-face-event/1\"\n" +
+      "URL = \"https://dev.moonshot.ceo/api/community/face-to-face-events/1\"\n" +
       "\n" +
       "response = reqs.delete(URL)\n" +
       "print(response.text)",
     response: null
   }
 
-  public static face_to_face_event_admin_put: EndpointTemplate = {
-    name: "face-to-face-event/admin",
+  public static face_to_face_event_upload_post: EndpointTemplate = {
+    name: "face-to-face-events/upload",
     code: "\nimport requests as reqs\n" +
       "\n" +
-      "URL = \"https://dev.moonshot.ceo/api/community/face-to-face-event/admin\"\n" +
+      "URL = \"https://dev.moonshot.ceo/api/core/face-to-face-events/upload\"\n" +
+      "\n" +
+      "response = reqs.post(URL, files={'file': open('YOUR_FILE', 'r')})\n" +
+      "print(response.text)",
+    response: "\nhttps://localhost/drive/events/images/61eaffcdad2bd12319fd4eba.png"
+  }
+
+  public static face_to_face_event_id_admin_put: EndpointTemplate = {
+    name: "face-to-face-events/:id/admin",
+    code: "\nimport requests as reqs\n" +
+      "\n" +
+      "URL = \"https://dev.moonshot.ceo/api/community/face-to-face-events/1/admin\"\n" +
       "\n" +
       "BODY =  {\n" +
-      " \"id\":\"1\",\n" +
       " \"title\":\"Reunion horarios Enero\",\n" +
       " \"timestamp\":1546387200,\n" +
       " \"description\":\"Reunion para definir los horarios de la empresa en el mes de Enero\",\n" +
@@ -1173,14 +1189,13 @@ export class CommunityPythonTemplates {
     response: null
   }
 
-  public static face_to_face_event_subscription_put: EndpointTemplate = {
-    name: "face-to-face-event/subscription",
+  public static face_to_face_event_id_subscription_put: EndpointTemplate = {
+    name: "face-to-face-events/:id/subscription",
     code: "\nimport requests as reqs\n" +
       "\n" +
-      "URL = \"https://dev.moonshot.ceo/api/community/face-to-face-event/subscription\"\n" +
+      "URL = \"https://dev.moonshot.ceo/api/community/face-to-face-events/1/subscription\"\n" +
       "\n" +
       "BODY =  {\n" +
-      "   \"id\":\"1\",\n" +
       "   \"participants\":[\n" +
       "      {\n" +
       "         \"id\":\"1\",\n" +
@@ -1215,14 +1230,13 @@ export class CommunityPythonTemplates {
     response: null
   }
 
-  public static face_to_face_event_unsubscription_put: EndpointTemplate = {
-    name: "face-to-face-event/unsubscription",
+  public static face_to_face_event_id_unsubscription_put: EndpointTemplate = {
+    name: "face-to-face-events/:id/unsubscription",
     code: "\nimport requests as reqs\n" +
       "\n" +
-      "URL = \"https://dev.moonshot.ceo/api/community/face-to-face-event/unsubscription\"\n" +
+      "URL = \"https://dev.moonshot.ceo/api/community/face-to-face-events/1/unsubscription\"\n" +
       "\n" +
       "BODY =  {\n" +
-      "   \"id\":\"1\",\n" +
       "   \"participants\":[\n" +
       "      {\n" +
       "         \"id\":\"1\",\n" +
@@ -1258,10 +1272,10 @@ export class CommunityPythonTemplates {
   }
 
   public static face_to_face_event_id_admin_delete: EndpointTemplate = {
-    name: "face-to-face-event/:id/admin",
+    name: "face-to-face-events/:id/admin",
     code: "\nimport requests as reqs\n" +
       "\n" +
-      "URL = \"https://dev.moonshot.ceo/api/community/face-to-face-event/4/admin\"\n" +
+      "URL = \"https://dev.moonshot.ceo/api/community/face-to-face-events/4/admin\"\n" +
       "\n" +
       "response = reqs.delete(URL)\n" +
       "print(response.text)",
@@ -1507,11 +1521,11 @@ export class CommunityPythonTemplates {
       "]"
   }
 
-  public static direct_chats_all_get: EndpointTemplate = {
-    name: "direct-chats/all",
+  public static direct_chats_all_member_participate_get: EndpointTemplate = {
+    name: "direct-chats/all/member-participate",
     code: "\nimport requests as reqs\n" +
       "\n" +
-      "URL = \"https://dev.moonshot.ceo/api/community/direct-chats/all\"\n" +
+      "URL = \"https://dev.moonshot.ceo/api/community/direct-chats/all/member-participate\"\n" +
       "\n" +
       "response = reqs.get(URL)\n" +
       "print(response.text)",
@@ -1684,10 +1698,10 @@ export class CommunityPythonTemplates {
   }
 
   public static direct_chat_id_get: EndpointTemplate = {
-    name: "direct-chat/:id",
+    name: "direct-chats/:id",
     code: "\nimport requests as reqs\n" +
       "\n" +
-      "URL = \"https://dev.moonshot.ceo/api/community/direct-chat/1\"\n" +
+      "URL = \"https://dev.moonshot.ceo/api/community/direct-chats/1\"\n" +
       "\n" +
       "response = reqs.get(URL)\n" +
       "print(response.text)",
@@ -1791,10 +1805,10 @@ export class CommunityPythonTemplates {
   }
 
   public static direct_chat_post: EndpointTemplate = {
-    name: "direct-chat",
+    name: "direct-chats",
     code: "\nimport requests as reqs\n" +
       "\n" +
-      "URL = \"https://dev.moonshot.ceo/api/community/direct-chat\"\n" +
+      "URL = \"https://dev.moonshot.ceo/api/community/direct-chats\"\n" +
       "\n" +
       "BODY =  {\n" +
       "  \"id\": \"1\",\n" +
@@ -1828,21 +1842,21 @@ export class CommunityPythonTemplates {
   }
 
   public static direct_chat_id_delete: EndpointTemplate = {
-    name: "direct-chat/:id",
+    name: "direct-chats/:id",
     code: "\nimport requests as reqs\n" +
       "\n" +
-      "URL = \"https://dev.moonshot.ceo/api/community/direct-chat/1\"\n" +
+      "URL = \"https://dev.moonshot.ceo/api/community/direct-chats/1\"\n" +
       "\n" +
       "response = reqs.delete(URL)\n" +
       "print(response.text)",
     response: null
   }
 
-  public static direct_chat_message_post: EndpointTemplate = {
-    name: "direct-chat/message",
+  public static direct_chat_id_message_post: EndpointTemplate = {
+    name: "direct-chats/:id/messages",
     code: "\nimport requests as reqs\n" +
       "\n" +
-      "URL = \"https://dev.moonshot.ceo/api/community/direct-chat/message\"\n" +
+      "URL = \"https://dev.moonshot.ceo/api/community/direct-chats/1/message\"\n" +
       "\n" +
       "BODY =  {\n" +
       "   \"id\":\"2\",\n" +
@@ -1883,11 +1897,11 @@ export class CommunityPythonTemplates {
     response: null
   }
 
-  public static direct_chat_messages_room_id_get: EndpointTemplate = {
-    name: "direct-chat/message/:room_id",
+  public static direct_chat_id_messages_get: EndpointTemplate = {
+    name: "direct-chats/:id/messages",
     code: "\nimport requests as reqs\n" +
       "\n" +
-      "URL = \"https://dev.moonshot.ceo/api/community/direct-chat/messages/1\"\n" +
+      "URL = \"https://dev.moonshot.ceo/api/community/direct-chats/1/messages\"\n" +
       "\n" +
       "response = reqs.get(URL)\n" +
       "print(response.text)",
@@ -1931,15 +1945,89 @@ export class CommunityPythonTemplates {
       "]"
   }
 
-  public static direct_chat_message_id_delete: EndpointTemplate = {
-    name: "direct-chat/message/:id",
+  public static direct_chat_id_message_id_delete: EndpointTemplate = {
+    name: "direct-chats/:id/messages/:message_id",
     code: "\nimport requests as reqs\n" +
       "\n" +
-      "URL = \"https://dev.moonshot.ceo/api/community/direct-chat/message/1\"\n" +
+      "URL = \"https://dev.moonshot.ceo/api/community/direct-chats/1/messages/1\"\n" +
       "\n" +
       "response = reqs.delete(URL)\n" +
       "print(response.text)",
     response: null
+  }
+
+  public static direct_chat_id_documents_get: EndpointTemplate = {
+    name: "direct-chats/:id/documents",
+    code: "\nimport requests as reqs\n" +
+      "\n" +
+      "URL = \"https://dev.moonshot.ceo/api/community/direct-chats/1/documents\"\n" +
+      "\n" +
+      "response = reqs.get(URL)\n" +
+      "print(response.text)",
+    response: "\n[\n" +
+      "   {\n" +
+      "      \"id\":\"1\",\n" +
+      "      \"link\":\"https://moonshot.ceo/archivoTrabajo.pdf\",\n" +
+      "      \"category\":\"PDF\",\n" +
+      "      \"roomId\":\"1\",\n" +
+      "      \"memberId\":\"2\",\n" +
+      "      \"filename\":\"archivoTrabajo\",\n" +
+      "      \"createdAt\":1621412130000\n" +
+      "   },\n" +
+      "   {\n" +
+      "      \"id\":\"2\",\n" +
+      "      \"link\":\"https://moonshot.ceo/planosPrimeraPlanta.pdf\",\n" +
+      "      \"category\":\"PDF\",\n" +
+      "      \"roomId\":\"3\",\n" +
+      "      \"memberId\":\"5\",\n" +
+      "      \"filename\":\"planosPrimeraPlanta\",\n" +
+      "      \"createdAt\":1621415730000\n" +
+      "   },\n" +
+      "   {\n" +
+      "      \"id\":\"3\",\n" +
+      "      \"link\":\"https://moonshot.ceo/planosSegundaPlanta.image\",\n" +
+      "      \"category\":\"IMAGE\",\n" +
+      "      \"roomId\":\"3\",\n" +
+      "      \"memberId\":\"6\",\n" +
+      "      \"filename\":\"planosSegundaPlanta\",\n" +
+      "      \"createdAt\":1621419330000\n" +
+      "   }\n" +
+      "]"
+  }
+
+  public static direct_chat_id_links_get: EndpointTemplate = {
+    name: "direct-chats/:id/links",
+    code: "\nimport requests as reqs\n" +
+      "\n" +
+      "URL = \"https://dev.moonshot.ceo/api/community/direct-chats/1/links\"\n" +
+      "\n" +
+      "response = reqs.get(URL)\n" +
+      "print(response.text)",
+    response: "\n[\n" +
+      "   {\n" +
+      "      \"id\":\"1\",\n" +
+      "      \"url\":\"https://dev.moonshot.ceo/documento1.pdf\",\n" +
+      "      \"roomId\":\"2\",\n" +
+      "      \"createdAt\":1637417185\n" +
+      "   },\n" +
+      "   {\n" +
+      "      \"id\":\"2\",\n" +
+      "      \"url\":\"https://dev.moonshot.ceo/documento2.pdf\",\n" +
+      "      \"roomId\":\"7\",\n" +
+      "      \"createdAt\":1637417190\n" +
+      "   }\n" +
+      "]"
+  }
+
+  public static direct_chat_id_upload_put: EndpointTemplate = {
+    name: "direct-chats/:id/upload",
+    code: "\nimport requests as reqs\n" +
+      "\n" +
+      "URL = \"https://dev.moonshot.ceo/api/community/direct-chats/1/upload\"\n" +
+      "\n" +
+      "response = reqs.put(URL, files={'file': open('YOUR_FILE', 'r')})\n" +
+      "print(response.text)",
+    response: "\nhttps://localhost/drive/direct-chats/files/1/61eaffcdad2bd12319fd4eba.png"
   }
 
   public static follow_up_rooms_get: EndpointTemplate = {
@@ -2117,8 +2205,8 @@ export class CommunityPythonTemplates {
       "]"
   }
 
-  public static follow_up_rooms_all_get: EndpointTemplate = {
-    name: "follow-up-rooms/all",
+  public static follow_up_rooms_all_member_participate_get: EndpointTemplate = {
+    name: "follow-up-rooms/all/member-participate",
     code: "\nimport requests as reqs\n" +
       "\n" +
       "URL = \"https://dev.moonshot.ceo/api/community/follow-up-rooms/all\"\n" +
@@ -2383,10 +2471,10 @@ export class CommunityPythonTemplates {
   }
 
   public static follow_up_room_post: EndpointTemplate = {
-    name: "follow-up-room",
+    name: "follow-up-rooms",
     code: "\nimport requests as reqs\n" +
       "\n" +
-      "URL = \"https://dev.moonshot.ceo/api/community/follow-up-room\"\n" +
+      "URL = \"https://dev.moonshot.ceo/api/community/follow-up-rooms\"\n" +
       "\n" +
       "BODY = {\n" +
       "  \"id\": \"1\",\n" +
@@ -2426,14 +2514,13 @@ export class CommunityPythonTemplates {
     response: null
   }
 
-  public static follow_up_room_put: EndpointTemplate = {
-    name: "follow-up-room",
+  public static follow_up_room_id_put: EndpointTemplate = {
+    name: "follow-up-rooms/:id",
     code: "\nimport requests as reqs\n" +
       "\n" +
-      "URL = \"https://dev.moonshot.ceo/api/community/follow-up-room\"\n" +
+      "URL = \"https://dev.moonshot.ceo/api/community/follow-up-rooms/1\"\n" +
       "\n" +
       "BODY = {\n" +
-      "  \"id\": \"1\",\n" +
       "  \"title\": \"Reunion general\",\n" +
       "  \"description\": \"Reunion para hablar de los objetivos a futuro\",\n" +
       "  \"participants\": [\n" +
@@ -2467,14 +2554,13 @@ export class CommunityPythonTemplates {
     response: null
   }
 
-  public static follow_up_room_add_member_put: EndpointTemplate = {
-    name: "follow-up-room/add-member",
+  public static follow_up_room_id_members_add_put: EndpointTemplate = {
+    name: "follow-up-rooms/:id/members/add",
     code: "\nimport requests as reqs\n" +
       "\n" +
-      "URL = \"https://dev.moonshot.ceo/api/community/follow-up-room/add-member\"\n" +
+      "URL = \"https://dev.moonshot.ceo/api/community/follow-up-rooms/:id/members/add\"\n" +
       "\n" +
       "BODY = {\n" +
-      "  \"id\": \"1\",\n" +
       "  \"memberIds\": [\n" +
       "    \"1\", \"2\", \"3\"\n" +
       "  ]\n" +
@@ -2485,14 +2571,13 @@ export class CommunityPythonTemplates {
     response: null
   }
 
-  public static follow_up_room_leave_member_put: EndpointTemplate = {
-    name: "follow-up-rooms/leave-member",
+  public static follow_up_room_id_members_leave_put: EndpointTemplate = {
+    name: "follow-up-rooms/:id/members/leave",
     code: "\nimport requests as reqs\n" +
       "\n" +
-      "URL = \"https://dev.moonshot.ceo/api/community/follow-up-room/leave-member\"\n" +
+      "URL = \"https://dev.moonshot.ceo/api/community/follow-up-rooms/1/members/leave\"\n" +
       "\n" +
       "BODY = {\n" +
-      "   \"id\":\"1\",\n" +
       "   \"leaveMemberId\":[\n" +
       "      \"1\",\n" +
       "      \"2\"\n" +
@@ -2505,57 +2590,46 @@ export class CommunityPythonTemplates {
     response: null
   }
 
-  public static follow_up_room_open_put: EndpointTemplate = {
-    name: "follow-up-room/open",
+  public static follow_up_room_id_open_put: EndpointTemplate = {
+    name: "follow-up-rooms/:id/open",
     code: "\nimport requests as reqs\n" +
       "\n" +
-      "URL = \"https://dev.moonshot.ceo/api/community/follow-up-room/open\"\n" +
+      "URL = \"https://dev.moonshot.ceo/api/community/follow-up-rooms/1/open\"\n" +
       "\n" +
-      "BODY = {\n" +
-      "   \"id\":\"1\"\n" +
-      "}\n" +
-      "\n" +
-      "response = reqs.put(URL, data=BODY)\n" +
+      "response = reqs.put(URL)\n" +
       "print(response.text)",
     response: null
   }
 
-  public static follow_up_room_close_put: EndpointTemplate = {
-    name: "follow-up-room/close",
+  public static follow_up_room_id_close_put: EndpointTemplate = {
+    name: "follow-up-rooms/:id/close",
     code: "\nimport requests as reqs\n" +
       "\n" +
-      "URL = \"https://dev.moonshot.ceo/api/community/follow-up-room/open\"\n" +
+      "URL = \"https://dev.moonshot.ceo/api/community/follow-up-rooms/1/close\"\n" +
       "\n" +
-      "BODY = {\n" +
-      "   \"id\":\"1\"\n" +
-      "}\n" +
-      "\n" +
-      "response = reqs.put(URL, data=BODY)\n" +
+      "response = reqs.put(URL)\n" +
       "print(response.text)",
     response: null
   }
 
   public static follow_up_room_id_delete: EndpointTemplate = {
-    name: "follow-up-room/:id",
+    name: "follow-up-rooms/:id",
     code: "\nimport requests as reqs\n" +
       "\n" +
-      "URL = \"https://dev.moonshot.ceo/api/community/follow-up-room/1\"\n" +
+      "URL = \"https://dev.moonshot.ceo/api/community/follow-up-rooms/1\"\n" +
       "\n" +
       "response = reqs.delete(URL)\n" +
       "print(response.text)",
     response: null
   }
 
-  public static follow_up_room_message_post: EndpointTemplate = {
-    name: "follow-up-room/message",
+  public static follow_up_room_id_message_post: EndpointTemplate = {
+    name: "follow-up-rooms/:id/messages",
     code: "\nimport requests as reqs\n" +
       "\n" +
-      "URL = \"https://dev.moonshot.ceo/api/community/follow-up-room/message\"\n" +
+      "URL = \"https://dev.moonshot.ceo/api/community/follow-up-rooms/1/messages\"\n" +
       "\n" +
       "BODY = {\n" +
-      "   \"id\":\"2\",\n" +
-      "   \"roomId\":\"1\",\n" +
-      "   \"authorMemberId\":\"2\",\n" +
       "   \"content\":\"Sí, claro.\",\n" +
       "   \"documents\":[\n" +
       "      {\n" +
@@ -2590,11 +2664,11 @@ export class CommunityPythonTemplates {
     response: null
   }
 
-  public static follow_up_room_message_id_delete: EndpointTemplate = {
-    name: "follow-up-room/message/:id",
+  public static follow_up_room_id_message_id_delete: EndpointTemplate = {
+    name: "follow-up-rooms/messages/:id/messages/:message_id",
     code: "\nimport requests as reqs\n" +
       "\n" +
-      "URL = \"https://dev.moonshot.ceo/api/community/follow-up-room/message/1\"\n" +
+      "URL = \"https://dev.moonshot.ceo/api/community/follow-up-rooms/1/messages/1\"\n" +
       "\n" +
       "response = reqs.delete(URL)\n" +
       "print(response.text)",
@@ -2602,21 +2676,21 @@ export class CommunityPythonTemplates {
   }
 
   public static follow_up_room_message_id_admin_delete: EndpointTemplate = {
-    name: "follow-up-room/message/:id/admin",
+    name: "follow-up-rooms/message/:id/admin",
     code: "\nimport requests as reqs\n" +
       "\n" +
-      "URL = \"https://dev.moonshot.ceo/api/community/follow-up-room/message/1/admin\"\n" +
+      "URL = \"https://dev.moonshot.ceo/api/community/follow-up-rooms/message/1/admin\"\n" +
       "\n" +
       "response = reqs.delete(URL)\n" +
       "print(response.text)",
     response: null
   }
 
-  public static follow_up_room_messages_room_id_get: EndpointTemplate = {
-    name: "follow-up-room/messages/:room_id",
+  public static follow_up_room_id_message_get: EndpointTemplate = {
+    name: "follow-up-rooms/:id/messages",
     code: "\nimport requests as reqs\n" +
       "\n" +
-      "URL = \"https://dev.moonshot.ceo/api/community/follow-up-room/messages/1\"\n" +
+      "URL = \"https://dev.moonshot.ceo/api/community/follow-up-rooms/1/messages\"\n" +
       "\n" +
       "response = reqs.get(URL)\n" +
       "print(response.text)",
@@ -2662,8 +2736,82 @@ export class CommunityPythonTemplates {
       "]"
   }
 
+  public static follow_up_room_id_documents_get: EndpointTemplate = {
+    name: "follow-up-rooms/:id/documents",
+    code: "\nimport requests as reqs\n" +
+      "\n" +
+      "URL = \"https://dev.moonshot.ceo/api/community/follow-up-rooms/1/documents\"\n" +
+      "\n" +
+      "response = reqs.get(URL)\n" +
+      "print(response.text)",
+    response: "\n[\n" +
+      "   {\n" +
+      "      \"id\":\"1\",\n" +
+      "      \"link\":\"https://moonshot.ceo/archivoTrabajo.pdf\",\n" +
+      "      \"category\":\"PDF\",\n" +
+      "      \"roomId\":\"1\",\n" +
+      "      \"memberId\":\"2\",\n" +
+      "      \"filename\":\"archivoTrabajo\",\n" +
+      "      \"createdAt\":1621412130000\n" +
+      "   },\n" +
+      "   {\n" +
+      "      \"id\":\"2\",\n" +
+      "      \"link\":\"https://moonshot.ceo/planosPrimeraPlanta.pdf\",\n" +
+      "      \"category\":\"PDF\",\n" +
+      "      \"roomId\":\"3\",\n" +
+      "      \"memberId\":\"5\",\n" +
+      "      \"filename\":\"planosPrimeraPlanta\",\n" +
+      "      \"createdAt\":1621415730000\n" +
+      "   },\n" +
+      "   {\n" +
+      "      \"id\":\"3\",\n" +
+      "      \"link\":\"https://moonshot.ceo/planosSegundaPlanta.image\",\n" +
+      "      \"category\":\"IMAGE\",\n" +
+      "      \"roomId\":\"3\",\n" +
+      "      \"memberId\":\"6\",\n" +
+      "      \"filename\":\"planosSegundaPlanta\",\n" +
+      "      \"createdAt\":1621419330000\n" +
+      "   }\n" +
+      "]"
+  }
+
+  public static follow_up_room_id_links_get: EndpointTemplate = {
+    name: "follow-up-rooms/:id/links",
+    code: "\nimport requests as reqs\n" +
+      "\n" +
+      "URL = \"https://dev.moonshot.ceo/api/community/follow-up-rooms/1/links\"\n" +
+      "\n" +
+      "response = reqs.get(URL)\n" +
+      "print(response.text)",
+    response: "\n[\n" +
+      "   {\n" +
+      "      \"id\":\"1\",\n" +
+      "      \"url\":\"https://dev.moonshot.ceo/documento1.pdf\",\n" +
+      "      \"roomId\":\"2\",\n" +
+      "      \"createdAt\":1637417185\n" +
+      "   },\n" +
+      "   {\n" +
+      "      \"id\":\"2\",\n" +
+      "      \"url\":\"https://dev.moonshot.ceo/documento2.pdf\",\n" +
+      "      \"roomId\":\"7\",\n" +
+      "      \"createdAt\":1637417190\n" +
+      "   }\n" +
+      "]"
+  }
+
+  public static follow_up_room_id_upload_put: EndpointTemplate = {
+    name: "follow-up-rooms/:id/upload",
+    code: "\nimport requests as reqs\n" +
+      "\n" +
+      "URL = \"https://dev.moonshot.ceo/api/community/follow-up-rooms/1/upload\"\n" +
+      "\n" +
+      "response = reqs.put(URL, files={'file': open('YOUR_FILE', 'r')})\n" +
+      "print(response.text)",
+    response: "\nhttps://localhost/drive/follow-up-rooms/files/1/61eaffcdad2bd12319fd4eba.png"
+  }
+
   public static public_channels_get: EndpointTemplate = {
-    name: "public-channel",
+    name: "public-channels",
     code: "\nimport requests as reqs\n" +
       "\n" +
       "URL = \"https://dev.moonshot.ceo/api/community/public-channels\"\n" +
@@ -2861,10 +3009,10 @@ export class CommunityPythonTemplates {
   }
 
   public static public_channel_id_get: EndpointTemplate = {
-    name: "public-channel/:id",
+    name: "public-channels/:id",
     code: "\nimport requests as reqs\n" +
       "\n" +
-      "URL = \"https://dev.moonshot.ceo/api/community/public-channel/1\"\n" +
+      "URL = \"https://dev.moonshot.ceo/api/community/public-channels/1\"\n" +
       "\n" +
       "response = reqs.get(URL)\n" +
       "print(response.text)",
@@ -2980,10 +3128,10 @@ export class CommunityPythonTemplates {
   }
 
   public static public_channel_post: EndpointTemplate = {
-    name: "public-channel",
+    name: "public-channels",
     code: "\nimport requests as reqs\n" +
       "\n" +
-      "URL = \"https://dev.moonshot.ceo/api/community/public-channel\"\n" +
+      "URL = \"https://dev.moonshot.ceo/api/community/public-channels\"\n" +
       "\n" +
       "BODY = {\n" +
       "   \"id\":\"1\",\n" +
@@ -3022,14 +3170,13 @@ export class CommunityPythonTemplates {
     response: null
   }
 
-  public static public_channel_put: EndpointTemplate = {
-    name: "public-channel",
+  public static public_channel_id_put: EndpointTemplate = {
+    name: "public-channels/:id",
     code: "\nimport requests as reqs\n" +
       "\n" +
-      "URL = \"https://dev.moonshot.ceo/api/community/public-channel\"\n" +
+      "URL = \"https://dev.moonshot.ceo/api/community/public-channels/1\"\n" +
       "\n" +
       "BODY = {\n" +
-      "   \"id\":\"1\",\n" +
       "   \"ownerMemberId\":\"8\",\n" +
       "   \"title\":\"Canal compartir conocimientos\",\n" +
       "   \"description\":\"Canal para compartir conocimientos de diversos temas\",\n" +
@@ -3065,10 +3212,10 @@ export class CommunityPythonTemplates {
   }
 
   public static public_channel_id_delete: EndpointTemplate = {
-    name: "public-channel/:id",
+    name: "public-channels/:id",
     code: "\nimport requests as reqs\n" +
       "\n" +
-      "URL = \"https://dev.moonshot.ceo/api/community/public-channel/1\"\n" +
+      "URL = \"https://dev.moonshot.ceo/api/community/public-channels/1\"\n" +
       "\n" +
       "response = reqs.delete(URL)\n" +
       "print(response.text)",
@@ -3076,13 +3223,12 @@ export class CommunityPythonTemplates {
   }
 
   public static public_channel_admin_put: EndpointTemplate = {
-    name: "public-channel/admin",
+    name: "public-channels/:id/admin",
     code: "\nimport requests as reqs\n" +
       "\n" +
-      "URL = \"https://dev.moonshot.ceo/api/community/public-channel/admin\"\n" +
+      "URL = \"https://dev.moonshot.ceo/api/community/public-channels/1/admin\"\n" +
       "\n" +
       "BODY = {\n" +
-      "   \"id\":\"1\",\n" +
       "   \"ownerMemberId\":\"8\",\n" +
       "   \"title\":\"Canal compartir conocimientos\",\n" +
       "   \"description\":\"Canal para compartir conocimientos de diversos temas\",\n" +
@@ -3118,10 +3264,10 @@ export class CommunityPythonTemplates {
   }
 
   public static public_channel_id_admin_delete: EndpointTemplate = {
-    name: "public-channel/:id/admin",
+    name: "public-channels/:id/admin",
     code: "\nimport requests as reqs\n" +
       "\n" +
-      "URL = \"https://dev.moonshot.ceo/api/community/public-channel/1/admin\"\n" +
+      "URL = \"https://dev.moonshot.ceo/api/community/public-channels/1/admin\"\n" +
       "\n" +
       "response = reqs.delete(URL)\n" +
       "print(response.text)",
@@ -3129,13 +3275,12 @@ export class CommunityPythonTemplates {
   }
 
   public static public_channel_subscribe_put: EndpointTemplate = {
-    name: "public-channel/subscribe",
+    name: "public-channels/:id/subscribe",
     code: "\nimport requests as reqs\n" +
       "\n" +
-      "URL = \"https://dev.moonshot.ceo/api/community/public-channel/subscribe\"\n" +
+      "URL = \"https://dev.moonshot.ceo/api/community/public-channels/1/subscribe\"\n" +
       "\n" +
       "BODY = {\n" +
-      "  \"id\":\"1\",\n" +
       "  \"memberId\":\"2\"\n" +
       "}\n" +
       "\n" +
@@ -3145,13 +3290,12 @@ export class CommunityPythonTemplates {
   }
 
   public static public_channel_unsubscribe_put: EndpointTemplate = {
-    name: "public-channel/unsubscribe",
+    name: "public-channels/:id/unsubscribe",
     code: "\nimport requests as reqs\n" +
       "\n" +
-      "URL = \"https://dev.moonshot.ceo/api/community/public-channel/unsubscribe\"\n" +
+      "URL = \"https://dev.moonshot.ceo/api/community/public-channels/1/unsubscribe\"\n" +
       "\n" +
       "BODY = {\n" +
-      "  \"id\":\"1\",\n" +
       "  \"memberId\":\"2\"\n" +
       "  \"newOwnerMemberId\": \"5\"\n" +
       "}\n" +
@@ -3162,15 +3306,12 @@ export class CommunityPythonTemplates {
   }
 
   public static public_channel_message_post: EndpointTemplate = {
-    name: "public-channel/message",
+    name: "public-channels/:id/messages",
     code: "\nimport requests as reqs\n" +
       "\n" +
-      "URL = \"https://dev.moonshot.ceo/api/community/public-channel/message\"\n" +
+      "URL = \"https://dev.moonshot.ceo/api/community/public-channels/1/messages\"\n" +
       "\n" +
       "BODY = {\n" +
-      "   \"id\":\"2\",\n" +
-      "   \"roomId\":\"1\",\n" +
-      "   \"authorMemberId\":\"2\",\n" +
       "   \"content\":\"Sí, claro.\",\n" +
       "   \"documents\":[\n" +
       "      {\n" +
@@ -3206,10 +3347,10 @@ export class CommunityPythonTemplates {
   }
 
   public static public_channel_message_id_delete: EndpointTemplate = {
-    name: "public-channel/message/:id",
+    name: "public-channels/:id/messages/:message_id",
     code: "\nimport requests as reqs\n" +
       "\n" +
-      "URL = \"https://dev.moonshot.ceo/api/community/public-channel/message/2\"\n" +
+      "URL = \"https://dev.moonshot.ceo/api/community/public-channels/1/messages/1\"\n" +
       "\n" +
       "response = reqs.delete(URL)\n" +
       "print(response.text)",
@@ -3217,21 +3358,21 @@ export class CommunityPythonTemplates {
   }
 
   public static public_channel_message_id_admin_delete: EndpointTemplate = {
-    name: "public-channel/message/:id/admin",
+    name: "public-channels/:id/messages/:message_id/admin",
     code: "\nimport requests as reqs\n" +
       "\n" +
-      "URL = \"https://dev.moonshot.ceo/api/community/public-channel/message/1/admin\"\n" +
+      "URL = \"https://dev.moonshot.ceo/api/community/public-channels/1/messages/1/admin\"\n" +
       "\n" +
       "response = reqs.delete(URL)\n" +
       "print(response.text)",
     response: null
   }
 
-  public static public_channel_messages_room_id_get: EndpointTemplate = {
-    name: "public-channel/message/:roomId",
+  public static public_channel_id_messages_get: EndpointTemplate = {
+    name: "public-channels/:id/messages",
     code: "\nimport requests as reqs\n" +
       "\n" +
-      "URL = \"https://dev.moonshot.ceo/api/community/public-channel/messages/3\"\n" +
+      "URL = \"https://dev.moonshot.ceo/api/community/public-channels/1/messages\"\n" +
       "\n" +
       "response = reqs.get(URL)\n" +
       "print(response.text)",
@@ -3302,11 +3443,85 @@ export class CommunityPythonTemplates {
       "]"
   }
 
-  public static wall_post_post: EndpointTemplate = {
-    name: "wall-post",
+  public static public_channel_id_documents_get: EndpointTemplate = {
+    name: "public-channels/:id/documents",
     code: "\nimport requests as reqs\n" +
       "\n" +
-      "URL = \"https://dev.moonshot.ceo/api/community/wall-post\"\n" +
+      "URL = \"https://dev.moonshot.ceo/api/community/follow-up-rooms/1/documents\"\n" +
+      "\n" +
+      "response = reqs.get(URL)\n" +
+      "print(response.text)",
+    response: "\n[\n" +
+      "   {\n" +
+      "      \"id\":\"1\",\n" +
+      "      \"link\":\"https://moonshot.ceo/archivoTrabajo.pdf\",\n" +
+      "      \"category\":\"PDF\",\n" +
+      "      \"roomId\":\"1\",\n" +
+      "      \"memberId\":\"2\",\n" +
+      "      \"filename\":\"archivoTrabajo\",\n" +
+      "      \"createdAt\":1621412130000\n" +
+      "   },\n" +
+      "   {\n" +
+      "      \"id\":\"2\",\n" +
+      "      \"link\":\"https://moonshot.ceo/planosPrimeraPlanta.pdf\",\n" +
+      "      \"category\":\"PDF\",\n" +
+      "      \"roomId\":\"3\",\n" +
+      "      \"memberId\":\"5\",\n" +
+      "      \"filename\":\"planosPrimeraPlanta\",\n" +
+      "      \"createdAt\":1621415730000\n" +
+      "   },\n" +
+      "   {\n" +
+      "      \"id\":\"3\",\n" +
+      "      \"link\":\"https://moonshot.ceo/planosSegundaPlanta.image\",\n" +
+      "      \"category\":\"IMAGE\",\n" +
+      "      \"roomId\":\"3\",\n" +
+      "      \"memberId\":\"6\",\n" +
+      "      \"filename\":\"planosSegundaPlanta\",\n" +
+      "      \"createdAt\":1621419330000\n" +
+      "   }\n" +
+      "]"
+  }
+
+  public static public_channel_id_links_get: EndpointTemplate = {
+    name: "public-channels/:id/links",
+    code: "\nimport requests as reqs\n" +
+      "\n" +
+      "URL = \"https://dev.moonshot.ceo/api/community/public-channels/1/links\"\n" +
+      "\n" +
+      "response = reqs.get(URL)\n" +
+      "print(response.text)",
+    response: "\n[\n" +
+      "   {\n" +
+      "      \"id\":\"1\",\n" +
+      "      \"url\":\"https://dev.moonshot.ceo/documento1.pdf\",\n" +
+      "      \"roomId\":\"2\",\n" +
+      "      \"createdAt\":1637417185\n" +
+      "   },\n" +
+      "   {\n" +
+      "      \"id\":\"2\",\n" +
+      "      \"url\":\"https://dev.moonshot.ceo/documento2.pdf\",\n" +
+      "      \"roomId\":\"7\",\n" +
+      "      \"createdAt\":1637417190\n" +
+      "   }\n" +
+      "]"
+  }
+
+  public static public_channel_id_upload_put: EndpointTemplate = {
+    name: "public-channels/:id/upload",
+    code: "\nimport requests as reqs\n" +
+      "\n" +
+      "URL = \"https://dev.moonshot.ceo/api/community/public-channels/1/upload\"\n" +
+      "\n" +
+      "response = reqs.put(URL, files={'file': open('YOUR_FILE', 'r')})\n" +
+      "print(response.text)",
+    response: "\nhttps://localhost/drive/public-channels/files/1/61eaffcdad2bd12319fd4eba.png"
+  }
+
+  public static wall_post_post: EndpointTemplate = {
+    name: "wall-posts",
+    code: "\nimport requests as reqs\n" +
+      "\n" +
+      "URL = \"https://dev.moonshot.ceo/api/community/wall-posts\"\n" +
       "\n" +
       "BODY = {\n" +
       " \"id\":\"1\",\n" +
@@ -3421,14 +3636,13 @@ export class CommunityPythonTemplates {
     response: null
   }
 
-  public static wall_post_put: EndpointTemplate = {
-    name: "wall-post",
+  public static wall_post_id_put: EndpointTemplate = {
+    name: "wall-posts/:id",
     code: "\nimport requests as reqs\n" +
       "\n" +
-      "URL = \"https://dev.moonshot.ceo/api/community/wall-post\"\n" +
+      "URL = \"https://dev.moonshot.ceo/api/community/wall-posts/1\"\n" +
       "\n" +
       "BODY = {\n" +
-      "   \"id\":\"1\",\n" +
       "   \"content\":\"https://www.elsur.cl/impresa/2021/04/03/full/cuerpo-principal/10/\",\n" +
       "   \"attachments\":[\n" +
       "      {\n" +
@@ -3444,24 +3658,23 @@ export class CommunityPythonTemplates {
   }
 
   public static wall_post_id_delete: EndpointTemplate = {
-    name: "wall-post/:id",
+    name: "wall-posts/:id",
     code: "\nimport requests as reqs\n" +
       "\n" +
-      "URL = \"https://dev.moonshot.ceo/api/community/wall-post/1\"\n" +
+      "URL = \"https://dev.moonshot.ceo/api/community/wall-posts/1\"\n" +
       "\n" +
       "response = reqs.delete(URL)\n" +
       "print(response.text)",
     response: null
   }
 
-  public static wall_post_admin_put: EndpointTemplate = {
-    name: "wall-post/admin",
+  public static wall_post_id_admin_put: EndpointTemplate = {
+    name: "wall-posts/:id/admin",
     code: "\nimport requests as reqs\n" +
       "\n" +
-      "URL = \"https://dev.moonshot.ceo/api/community/wall-post/admin\"\n" +
+      "URL = \"https://dev.moonshot.ceo/api/community/wall-posts/1/admin\"\n" +
       "\n" +
       "BODY = {\n" +
-      "   \"id\":\"1\",\n" +
       "   \"content\":\"https://www.elsur.cl/impresa/2021/04/03/full/cuerpo-principal/10/\",\n" +
       "   \"attachments\":[\n" +
       "      {\n" +
@@ -3477,55 +3690,44 @@ export class CommunityPythonTemplates {
   }
 
   public static wall_post_id_admin_delete: EndpointTemplate = {
-    name: "wall-post/:id/admin",
+    name: "wall-posts/:id/admin",
     code: "\nimport requests as reqs\n" +
       "\n" +
-      "URL = \"https://dev.moonshot.ceo/api/community/wall-post/1/admin\"\n" +
+      "URL = \"https://dev.moonshot.ceo/api/community/wall-posts/1/admin\"\n" +
       "\n" +
       "response = reqs.delete(URL)\n" +
       "print(response.text)",
     response: null
   }
 
-  public static wall_post_like_put: EndpointTemplate = {
-    name: "wall-post/like",
+  public static wall_post_id_like_put: EndpointTemplate = {
+    name: "wall-posts/:id/like",
     code: "\nimport requests as reqs\n" +
       "\n" +
-      "URL = \"https://dev.moonshot.ceo/api/community/wall-post/like\"\n" +
+      "URL = \"https://dev.moonshot.ceo/api/community/wall-posts/1/like\"\n" +
       "\n" +
-      "BODY = {\n" +
-      "   \"id\":\"1\",\n" +
-      "   \"memberId\":\"5\"\n" +
-      "}\n" +
-      "\n" +
-      "response = reqs.put(URL, data=BODY)\n" +
+      "response = reqs.put(URL)\n" +
       "print(response.text)",
     response: null
   }
-  public static wall_post_unlike_put: EndpointTemplate = {
-    name: "wall-post/unlike",
+  public static wall_post_id_unlike_put: EndpointTemplate = {
+    name: "wall-posts/:id/unlike",
     code: "\nimport requests as reqs\n" +
       "\n" +
       "URL = \"https://dev.moonshot.ceo/api/community/wall-post/unlike\"\n" +
       "\n" +
-      "BODY = {\n" +
-      "   \"id\":\"1\",\n" +
-      "   \"memberId\":\"5\"\n" +
-      "}\n" +
-      "\n" +
-      "response = reqs.put(URL, data=BODY)\n" +
+      "response = reqs.put(URL)\n" +
       "print(response.text)",
     response: null
   }
 
-  public static wall_post_comment_post: EndpointTemplate = {
-    name: "wall-post/comment",
+  public static wall_post_id_comment_post: EndpointTemplate = {
+    name: "wall-posts/:id/comments",
     code: "\nimport requests as reqs\n" +
       "\n" +
-      "URL = \"https://dev.moonshot.ceo/api/community/wall-post/comment\"\n" +
+      "URL = \"https://dev.moonshot.ceo/api/community/wall-posts/1/comments\"\n" +
       "\n" +
       "BODY = {\n" +
-      "   \"id\":\"1\",\n" +
       "   \"comment\":{\n" +
       "      \"id\":\"4\",\n" +
       "      \"content\":\"test\",\n" +
@@ -3565,45 +3767,33 @@ export class CommunityPythonTemplates {
     response: null
   }
 
-  public static wall_post_comment_like_put: EndpointTemplate = {
-    name: "wall-post/comment/like",
+  public static wall_post_id_comment_id_like_put: EndpointTemplate = {
+    name: "wall-posts/:id/comments/:comment_id/like",
     code: "\nimport requests as reqs\n" +
       "\n" +
-      "URL = \"https://dev.moonshot.ceo/api/community/wall-post/comment/like\"\n" +
+      "URL = \"https://dev.moonshot.ceo/api/community/wall-posts/1/comments/1/like\"\n" +
       "\n" +
-      "BODY = {\n" +
-      " \"id\":\"1\",\n" +
-      " \"memberId\":\"5\",\n" +
-      " \"commentId\":\"9\"\n" +
-      "}\n" +
-      "\n" +
-      "response = reqs.put(URL, data=BODY)\n" +
+      "response = reqs.put(URL)\n" +
       "print(response.text)",
     response: null
   }
 
-  public static wall_post_comment_unlike_put: EndpointTemplate = {
-    name: "wall-post/comment/unlike",
+  public static wall_post_id_comment_id_unlike_put: EndpointTemplate = {
+    name: "wall-posts/:id/comments/:comment_id/unlike",
     code: "\nimport requests as reqs\n" +
       "\n" +
-      "URL = \"https://dev.moonshot.ceo/api/community/wall-post/comment/unlike\"\n" +
+      "URL = \"https://dev.moonshot.ceo/api/community/wall-posts/1/comments/1/unlike\"\n" +
       "\n" +
-      "BODY = {\n" +
-      " \"id\":\"1\",\n" +
-      " \"memberId\":\"5\",\n" +
-      " \"commentId\":\"9\"\n" +
-      "}\n" +
-      "\n" +
-      "response = reqs.put(URL, data=BODY)\n" +
+      "response = reqs.put(URL)\n" +
       "print(response.text)",
     response: null
   }
 
   public static wall_post_id_get: EndpointTemplate = {
-    name: "wall-post/:id",
+    name: "wall-posts/:id",
     code: "\nimport requests as reqs\n" +
       "\n" +
-      "URL = \"https://dev.moonshot.ceo/api/community/wall-post/1\"\n" +
+      "URL = \"https://dev.moonshot.ceo/api/community/wall-posts/1\"\n" +
       "\n" +
       "response = reqs.get(URL)\n" +
       "print(response.text)",
@@ -4221,6 +4411,17 @@ export class CommunityPythonTemplates {
       "]"
   }
 
+  public static wall_post_upload_post: EndpointTemplate = {
+    name: "wall-posts/upload",
+    code: "\nimport requests as reqs\n" +
+      "\n" +
+      "URL = \"https://dev.moonshot.ceo/api/community/wall-posts/upload\"\n" +
+      "\n" +
+      "response = reqs.post(URL, files={'file': open('YOUR_FILE', 'r')})\n" +
+      "print(response.text)",
+    response: "\nhttps://localhost/drive/posts/files/61eaffcdad2bd12319fd4eba.png"
+  }
+
   public static actors_get: EndpointTemplate = {
     name: "actors",
     code: "\nimport requests as reqs\n" +
@@ -4494,10 +4695,10 @@ export class CommunityPythonTemplates {
   }
 
   public static actors_by_name_and_state_get: EndpointTemplate = {
-    name: "actors/by-name-and-state",
+    name: "actors/by/name-and-state",
     code: "\nimport requests as reqs\n" +
       "\n" +
-      "URL = \"https://dev.moonshot.ceo/api/community/actors/by-name-and-state?name=Iñigo&&state=ACTIVE\"\n" +
+      "URL = \"https://dev.moonshot.ceo/api/community/actors/by/name-and-state?name=Iñigo&&state=ACTIVE\"\n" +
       "\n" +
       "response = reqs.get(URL)\n" +
       "print(response.text)",
@@ -4721,10 +4922,10 @@ export class CommunityPythonTemplates {
   }
 
   public static actors_by_type_get: EndpointTemplate = {
-    name: "actors/by-type",
+    name: "actors/by/types",
     code: "\nimport requests as reqs\n" +
       "\n" +
-      "URL = \"https://dev.moonshot.ceo/api/community/actors/by-type?types=STARTUP,COMPANY\"\n" +
+      "URL = \"https://dev.moonshot.ceo/api/community/actors/by/types?types=STARTUP,COMPANY\"\n" +
       "\n" +
       "response = reqs.get(URL)\n" +
       "print(response.text)",
@@ -4910,10 +5111,10 @@ export class CommunityPythonTemplates {
   }
 
   public static actors_by_state_get: EndpointTemplate = {
-    name: "actors/by-state",
+    name: "actors/by/state",
     code: "\nimport requests as reqs\n" +
       "\n" +
-      "URL = \"https://dev.moonshot.ceo/api/community/actors/by-state?state=REJECTED\"\n" +
+      "URL = \"https://dev.moonshot.ceo/api/community/actors/by/state?state=REJECTED\"\n" +
       "\n" +
       "response = reqs.get(URL)\n" +
       "print(response.text)",
@@ -5203,10 +5404,10 @@ export class CommunityPythonTemplates {
   }
 
   public static actors_by_member_get: EndpointTemplate = {
-    name: "actors/by-member",
+    name: "actors/by/member",
     code: "\nimport requests as reqs\n" +
       "\n" +
-      "URL = \"https://dev.moonshot.ceo/api/community/actors/by-member?ownerMemberId=60accfeb97acf93f5f69e05d\"\n" +
+      "URL = \"https://dev.moonshot.ceo/api/community/actors/by/member?ownerMemberId=60accfeb97acf93f5f69e05d\"\n" +
       "\n" +
       "response = reqs.get(URL)\n" +
       "print(response.text)",
@@ -5526,10 +5727,10 @@ export class CommunityPythonTemplates {
   }
 
   public static actor_id_get: EndpointTemplate = {
-    name: "actor/:id",
+    name: "actors/:id",
     code: "\nimport requests as reqs\n" +
       "\n" +
-      "URL = \"https://dev.moonshot.ceo/api/community/actor/60accfec97acf93f5f69e05f\"\n" +
+      "URL = \"https://dev.moonshot.ceo/api/community/actors/1\"\n" +
       "\n" +
       "response = reqs.get(URL)\n" +
       "print(response.text)",
@@ -5656,7 +5857,7 @@ export class CommunityPythonTemplates {
   }
 
   public static actor_post: EndpointTemplate = {
-    name: "actor",
+    name: "actors",
     code: "\nimport requests as reqs\n" +
       "\n" +
       "URL = \"https://dev.moonshot.ceo/api/community/actor\"\n" +
@@ -5787,14 +5988,13 @@ export class CommunityPythonTemplates {
     response: null
   }
 
-  public static actor_put: EndpointTemplate = {
-    name: "actor",
+  public static actor_id_put: EndpointTemplate = {
+    name: "actors/:id",
     code: "\nimport requests as reqs\n" +
       "\n" +
-      "URL = \"https://dev.moonshot.ceo/api/community/actor\"\n" +
+      "URL = \"https://dev.moonshot.ceo/api/community/actors/1\"\n" +
       "\n" +
       "BODY = {\n" +
-      "   \"id\":\"60c22873f67cf3231da80ded\",\n" +
       "   \"type\":\"MENTOR\",\n" +
       "   \"name\":\"David\",\n" +
       "   \"city\":\"Madrid\",\n" +
@@ -5885,52 +6085,77 @@ export class CommunityPythonTemplates {
     response: null
   }
 
-  public static actor_accept_put: EndpointTemplate = {
-    name: "actor/accept",
+  public static actor_id_accept_put: EndpointTemplate = {
+    name: "actors/:id/accept",
     code: "\nimport requests as reqs\n" +
       "\n" +
-      "URL = \"https://dev.moonshot.ceo/api/community/actor/accept\"\n" +
+      "URL = \"https://dev.moonshot.ceo/api/community/actors/1/accept\"\n" +
       "\n" +
-      "BODY = {\n" +
-      "   \"id\":\"1\"\n" +
-      "}\n" +
-      "\n" +
-      "response = reqs.put(URL, data=BODY)\n" +
+      "response = reqs.put(URL)\n" +
       "print(response.text)",
     response: null
   }
 
-  public static actor_reject_put: EndpointTemplate = {
-    name: "actor/reject",
+  public static actor_id_reject_put: EndpointTemplate = {
+    name: "actors/:id/reject",
     code: "\nimport requests as reqs\n" +
       "\n" +
-      "URL = \"https://dev.moonshot.ceo/api/community/actor/reject\"\n" +
+      "URL = \"https://dev.moonshot.ceo/api/community/actors/1/reject\"\n" +
       "\n" +
-      "BODY = {\n" +
-      "   \"id\":\"1\"\n" +
-      "}\n" +
-      "\n" +
-      "response = reqs.put(URL, data=BODY)\n" +
+      "response = reqs.put(URL)\n" +
       "print(response.text)",
     response: null
   }
 
   public static actor_id_delete: EndpointTemplate = {
-    name: "actor/:id",
+    name: "actors/:id",
     code: "\nimport requests as reqs\n" +
       "\n" +
-      "URL = \"https://dev.moonshot.ceo/api/community/actor/1\"\n" +
+      "URL = \"https://dev.moonshot.ceo/api/community/actors/1\"\n" +
       "\n" +
       "response = reqs.delete(URL)\n" +
       "print(response.text)",
     response: null
   }
 
-  public static fcm_token_put: EndpointTemplate = {
-    name: "fcmToken",
+  public static actor_upload_original_post: EndpointTemplate = {
+    name: "actors/upload/original",
     code: "\nimport requests as reqs\n" +
       "\n" +
-      "URL = \"https://dev.moonshot.ceo/api/community/fcmToken\"\n" +
+      "URL = \"https://dev.moonshot.ceo/api/community/actors/upload/original\"\n" +
+      "\n" +
+      "response = reqs.put(URL, files={'file': open('YOUR_FILE', 'r')})\n" +
+      "print(response.text)",
+    response: "\nhttps://localhost/drive/actors/profile/original/61eaffcdad2bd12319fd4eba.png"
+  }
+
+  public static actor_upload_thumbnail_post: EndpointTemplate = {
+    name: "actors/upload/thumbnail",
+    code: "\nimport requests as reqs\n" +
+      "\n" +
+      "URL = \"https://dev.moonshot.ceo/api/community/actors/upload/thumbnail\"\n" +
+      "\n" +
+      "response = reqs.put(URL, files={'file': open('YOUR_FILE', 'r')})\n" +
+      "print(response.text)",
+    response: "\nhttps://localhost/drive/actors/profile/thumbnail/61eaffcdad2bd12319fd4eba.png"
+  }
+
+  public static actor_id_upload_media_put: EndpointTemplate = {
+    name: "actors/:id/upload/media",
+    code: "\nimport requests as reqs\n" +
+      "\n" +
+      "URL = \"https://dev.moonshot.ceo/api/community/actors/1/upload/media\"\n" +
+      "\n" +
+      "response = reqs.put(URL, files={'file': open('YOUR_FILE', 'r')})\n" +
+      "print(response.text)",
+    response: "\nhttps://localhost/drive/actors/media/1/61eaffcdad2bd12319fd4eba.png"
+  }
+
+  public static member_fcm_token_put: EndpointTemplate = {
+    name: "members/fcm-token",
+    code: "\nimport requests as reqs\n" +
+      "\n" +
+      "URL = \"https://dev.moonshot.ceo/api/community/members/fcm-token\"\n" +
       "\n" +
       "BODY = {\n" +
       "  \"memberId\": \"60acae8e2f799d228a4d4a85\",\n" +
@@ -5949,10 +6174,10 @@ export class CommunityPythonTemplates {
   }
 
   public static member_logged_in_get: EndpointTemplate = {
-    name: "member/logged-in",
+    name: "members/logged-in",
     code: "\nimport requests as reqs\n" +
       "\n" +
-      "URL = \"https://dev.moonshot.ceo/api/community/member/logged-in\"\n" +
+      "URL = \"https://dev.moonshot.ceo/api/community/members/logged-in\"\n" +
       "\n" +
       "response = reqs.get(URL)\n" +
       "print(response.text)",
@@ -6195,7 +6420,7 @@ export class CommunityPythonTemplates {
       "print(response.text)",
     response: "\n[\n" +
       "   {\n" +
-      "      \"_id\":\"1\",\n" +
+      "      \"id\":\"1\",\n" +
       "      \"state\":\"ACCEPTED\",\n" +
       "      \"name\":\"Iñigo\",\n" +
       "      \"lastname\":\"Aramburu\",\n" +
@@ -6220,7 +6445,7 @@ export class CommunityPythonTemplates {
       "      ],\n" +
       "      \"experiences\":[\n" +
       "         {\n" +
-      "            \"_id\":\"1\",\n" +
+      "            \"id\":\"1\",\n" +
       "            \"title\":\"Back-end developer en Moonshot Innovation\",\n" +
       "            \"type\":\"FULL_TIME\",\n" +
       "            \"company\":\"Moonshot Innovation\",\n" +
@@ -6236,7 +6461,7 @@ export class CommunityPythonTemplates {
       "      ],\n" +
       "      \"educations\":[\n" +
       "         {\n" +
-      "            \"_id\":\"1\",\n" +
+      "            \"id\":\"1\",\n" +
       "            \"school\":\"Universidad del País Vasco\",\n" +
       "            \"degree\":\"Ingeniería informática\",\n" +
       "            \"fieldOfStudy\":\"Ingeniería de software\",\n" +
@@ -6251,7 +6476,7 @@ export class CommunityPythonTemplates {
       "            \"description\":\"Estudios universitarios realizados en la Universidad del País Vasco\"\n" +
       "         },\n" +
       "         {\n" +
-      "            \"_id\":\"15\",\n" +
+      "            \"id\":\"15\",\n" +
       "            \"school\":\"Universidad del País Vasco\",\n" +
       "            \"degree\":\"Master en desarrollo web\",\n" +
       "            \"fieldOfStudy\":\"Desarrollo web\",\n" +
@@ -6268,7 +6493,7 @@ export class CommunityPythonTemplates {
       "      ]\n" +
       "   },\n" +
       "   {\n" +
-      "      \"_id\":\"2\",\n" +
+      "      \"id\":\"2\",\n" +
       "      \"state\":\"ACCEPTED\",\n" +
       "      \"name\":\"Jose Juan\",\n" +
       "      \"lastname\":\"Hernández\",\n" +
@@ -6295,7 +6520,7 @@ export class CommunityPythonTemplates {
       "      ],\n" +
       "      \"experiences\":[\n" +
       "         {\n" +
-      "            \"_id\":\"1\",\n" +
+      "            \"id\":\"1\",\n" +
       "            \"title\":\"Back-end developer en Moonshot Innovation\",\n" +
       "            \"type\":\"FULL_TIME\",\n" +
       "            \"company\":\"Moonshot Innovation\",\n" +
@@ -6309,7 +6534,7 @@ export class CommunityPythonTemplates {
       "            \"description\":\"Scrum manager en Moonshot Innovation, trabajando en el equipo de back-end\"\n" +
       "         },\n" +
       "         {\n" +
-      "            \"_id\":\"2\",\n" +
+      "            \"id\":\"2\",\n" +
       "            \"title\":\"Profesor en la facultad de Ingenería informatica\",\n" +
       "            \"type\":\"OFFICIAL\",\n" +
       "            \"company\":\"Universidad de Las Palmas de Gran Canaria\",\n" +
@@ -6325,7 +6550,7 @@ export class CommunityPythonTemplates {
       "      ],\n" +
       "      \"educations\":[\n" +
       "         {\n" +
-      "            \"_id\":\"2\",\n" +
+      "            \"id\":\"2\",\n" +
       "            \"school\":\"Universidad de Las Palmas de Gran Canaria\",\n" +
       "            \"degree\":\"Ingeniería en telecomunicaciones\",\n" +
       "            \"fieldOfStudy\":\"Big data\",\n" +
@@ -6345,15 +6570,15 @@ export class CommunityPythonTemplates {
   }
 
   public static member_id_get: EndpointTemplate = {
-    name: "member/:id",
+    name: "members/:id",
     code: "\nimport requests as reqs\n" +
       "\n" +
-      "URL = \"https://dev.moonshot.ceo/api/community/member/2\"\n" +
+      "URL = \"https://dev.moonshot.ceo/api/community/members/2\"\n" +
       "\n" +
       "response = reqs.get(URL)\n" +
       "print(response.text)",
     response: "\n{\n" +
-      "        \"_id\": \"2\",\n" +
+      "        \"id\": \"2\",\n" +
       "        \"state\": \"ACCEPTED\",\n" +
       "        \"name\": \"Jose Juan\",\n" +
       "        \"lastname\": \"Hernández\",\n" +
@@ -6380,7 +6605,7 @@ export class CommunityPythonTemplates {
       "        ],\n" +
       "        \"experiences\": [\n" +
       "            {\n" +
-      "                \"_id\": \"1\",\n" +
+      "                \"id\": \"1\",\n" +
       "                \"title\": \"Back-end developer en Moonshot Innovation\",\n" +
       "                \"type\": \"FULL_TIME\",\n" +
       "                \"company\": \"Moonshot Innovation\",\n" +
@@ -6394,7 +6619,7 @@ export class CommunityPythonTemplates {
       "                \"description\": \"Scrum manager en Moonshot Innovation, trabajando en el equipo de back-end\"\n" +
       "            },\n" +
       "            {\n" +
-      "                \"_id\": \"2\",\n" +
+      "                \"id\": \"2\",\n" +
       "                \"title\": \"Profesor en la facultad de Ingenería informatica\",\n" +
       "                \"type\": \"OFFICIAL\",\n" +
       "                \"company\": \"Universidad de Las Palmas de Gran Canaria\",\n" +
@@ -6410,7 +6635,7 @@ export class CommunityPythonTemplates {
       "        ],\n" +
       "        \"educations\": [\n" +
       "            {\n" +
-      "                \"_id\": \"2\",\n" +
+      "                \"id\": \"2\",\n" +
       "                \"school\": \"Universidad de Las Palmas de Gran Canaria\",\n" +
       "                \"degree\": \"Ingeniería en telecomunicaciones\",\n" +
       "                \"fieldOfStudy\": \"Big data\",\n" +
@@ -6429,24 +6654,45 @@ export class CommunityPythonTemplates {
   }
 
   public static member_id_marker_get: EndpointTemplate = {
-    name: "member/:id/marker",
+    name: "members/:id/marker",
     code: "\nimport requests as reqs\n" +
       "\n" +
-      "URL = \"https://dev.moonshot.ceo/api/community/member/2/marker\"\n" +
+      "URL = \"https://dev.moonshot.ceo/api/community/members/2/marker\"\n" +
       "\n" +
       "response = reqs.get(URL)\n" +
       "print(response.text)",
     response: "This endpoint download a svg file"
   }
 
-  public static member_put: EndpointTemplate = {
-    name: "member",
+  public static member_upload_original_post: EndpointTemplate = {
+    name: "members/upload/original",
     code: "\nimport requests as reqs\n" +
       "\n" +
-      "URL = \"https://dev.moonshot.ceo/api/community/member\"\n" +
+      "URL = \"https://dev.moonshot.ceo/api/community/members/upload/original\"\n" +
+      "\n" +
+      "response = reqs.put(URL, files={'file': open('YOUR_FILE', 'r')})\n" +
+      "print(response.text)",
+    response: "\nhttps://localhost/drive/members/profile/original/61eaffcdad2bd12319fd4eba.png"
+  }
+
+  public static member_upload_thumbnail_post: EndpointTemplate = {
+    name: "members/upload/thumbnail",
+    code: "\nimport requests as reqs\n" +
+      "\n" +
+      "URL = \"https://dev.moonshot.ceo/api/community/members/upload/thumbnail\"\n" +
+      "\n" +
+      "response = reqs.put(URL, files={'file': open('YOUR_FILE', 'r')})\n" +
+      "print(response.text)",
+    response: "\nhttps://localhost/drive/members/profile/thumbnail/61eaffcdad2bd12319fd4eba.png"
+  }
+
+  public static member_id_put: EndpointTemplate = {
+    name: "members/:id",
+    code: "\nimport requests as reqs\n" +
+      "\n" +
+      "URL = \"https://dev.moonshot.ceo/api/community/members/1\"\n" +
       "\n" +
       "BODY = {\n" +
-      "   \"_id\":\"1\",\n" +
       "   \"state\":\"ACCEPTED\",\n" +
       "   \"name\":\"Iñigo\",\n" +
       "   \"lastname\":\"Aramburu\",\n" +
@@ -6470,10 +6716,10 @@ export class CommunityPythonTemplates {
   }
 
   public static member_id_delete: EndpointTemplate = {
-    name: "member",
+    name: "members/:id",
     code: "\nimport requests as reqs\n" +
       "\n" +
-      "URL = \"https://dev.moonshot.ceo/api/community/member/1\"\n" +
+      "URL = \"https://dev.moonshot.ceo/api/community/members/1\"\n" +
       "\n" +
       "response = reqs.delete(URL)\n" +
       "print(response.text)",
@@ -6481,10 +6727,10 @@ export class CommunityPythonTemplates {
   }
 
   public static education_post: EndpointTemplate = {
-    name: "education",
+    name: "members/education",
     code: "\nimport requests as reqs\n" +
       "\n" +
-      "URL = \"https://dev.moonshot.ceo/api/community/education\"\n" +
+      "URL = \"https://dev.moonshot.ceo/api/community/members/education\"\n" +
       "\n" +
       "BODY = {\n" +
       "   \"school\":\"Universidad de Las Palmas de Gran Canaria\",\n" +
@@ -6522,11 +6768,11 @@ export class CommunityPythonTemplates {
     response: null
   }
 
-  public static education_put: EndpointTemplate = {
-    name: "education",
+  public static education_id_put: EndpointTemplate = {
+    name: "members/education/:education_id",
     code: "\nimport requests as reqs\n" +
       "\n" +
-      "URL = \"https://dev.moonshot.ceo/api/community/education\"\n" +
+      "URL = \"https://dev.moonshot.ceo/api/community/members/education/1\"\n" +
       "\n" +
       "BODY = {\n" +
       "   \"school\":\"Universidad de Las Palmas de Gran Canaria\",\n" +
@@ -6565,10 +6811,10 @@ export class CommunityPythonTemplates {
   }
 
   public static education_id_delete: EndpointTemplate = {
-    name: "education/:id",
+    name: "members/education/:id",
     code: "\nimport requests as reqs\n" +
       "\n" +
-      "URL = \"https://dev.moonshot.ceo/api/community/education/1\"\n" +
+      "URL = \"https://dev.moonshot.ceo/api/community/members/education/1\"\n" +
       "\n" +
       "response = reqs.delete(URL)\n" +
       "print(response.text)",
@@ -6576,7 +6822,7 @@ export class CommunityPythonTemplates {
   }
 
   public static experience_post: EndpointTemplate = {
-    name: "experience",
+    name: "members/experience",
     code: "\nimport requests as reqs\n" +
       "\n" +
       "URL = \"https://dev.moonshot.ceo/api/community/experience\"\n" +
@@ -6608,11 +6854,11 @@ export class CommunityPythonTemplates {
     response: null
   }
 
-  public static experience_put: EndpointTemplate = {
-    name: "experience",
+  public static experience_id_put: EndpointTemplate = {
+    name: "members/experience/:experience_id",
     code: "\nimport requests as reqs\n" +
       "\n" +
-      "URL = \"https://dev.moonshot.ceo/api/community/experience\"\n" +
+      "URL = \"https://dev.moonshot.ceo/api/community/members/experience/1\"\n" +
       "\n" +
       "BODY = {\n" +
       "   \"title\":\"Desarrollador de software\",\n" +
@@ -6642,27 +6888,27 @@ export class CommunityPythonTemplates {
   }
 
   public static experience_id_delete: EndpointTemplate = {
-    name: "experience/:id",
+    name: "members/experience/:id",
     code: "\nimport requests as reqs\n" +
       "\n" +
-      "URL = \"https://dev.moonshot.ceo/api/community/experience/1\"\n" +
+      "URL = \"https://dev.moonshot.ceo/api/community/members/experience/1\"\n" +
       "\n" +
       "response = reqs.delete(URL)\n" +
       "print(response.text)",
     response: null
   }
 
-  public static projects_get: EndpointTemplate = {
-    name: "projects",
+  public static projects_by_actor_get: EndpointTemplate = {
+    name: "projects/by/actor",
     code: "\nimport requests as reqs\n" +
       "\n" +
-      "URL = \"https://dev.moonshot.ceo/api/community/projects\"\n" +
+      "URL = \"https://dev.moonshot.ceo/api/community/projects/by/actor?actorId=1\"\n" +
       "\n" +
       "response = reqs.get(URL)\n" +
       "print(response.text)",
     response: "\n[\n" +
       "   {\n" +
-      "      \"_id\":\"1\",\n" +
+      "      \"id\":\"1\",\n" +
       "      \"actorId\":\"1\",\n" +
       "      \"name\":\"Patents\",\n" +
       "      \"description\":\"Patents\",\n" +
@@ -6673,7 +6919,7 @@ export class CommunityPythonTemplates {
       "      ],\n" +
       "      \"protectionMethod\":\"PATENTS\",\n" +
       "      \"projectManager\":{\n" +
-      "         \"_id\":\"1\",\n" +
+      "         \"id\":\"1\",\n" +
       "         \"state\":\"ACCEPTED\",\n" +
       "         \"name\":\"Iñigo\",\n" +
       "         \"lastname\":\"Aramburu\",\n" +
@@ -6698,7 +6944,7 @@ export class CommunityPythonTemplates {
       "         ],\n" +
       "         \"experiences\":[\n" +
       "            {\n" +
-      "               \"_id\":\"1\",\n" +
+      "               \"id\":\"1\",\n" +
       "               \"title\":\"Back-end developer en Moonshot Innovation\",\n" +
       "               \"type\":\"FULL_TIME\",\n" +
       "               \"company\":\"Moonshot Innovation\",\n" +
@@ -6714,7 +6960,7 @@ export class CommunityPythonTemplates {
       "         ],\n" +
       "         \"educations\":[\n" +
       "            {\n" +
-      "               \"_id\":\"1\",\n" +
+      "               \"id\":\"1\",\n" +
       "               \"school\":\"Universidad del País Vasco\",\n" +
       "               \"degree\":\"Ingeniería informática\",\n" +
       "               \"fieldOfStudy\":\"Ingeniería de software\",\n" +
@@ -6729,7 +6975,7 @@ export class CommunityPythonTemplates {
       "               \"description\":\"Estudios universitarios realizados en la Universidad del País Vasco\"\n" +
       "            },\n" +
       "            {\n" +
-      "               \"_id\":\"15\",\n" +
+      "               \"id\":\"15\",\n" +
       "               \"school\":\"Universidad del País Vasco\",\n" +
       "               \"degree\":\"Master en desarrollo web\",\n" +
       "               \"fieldOfStudy\":\"Desarrollo web\",\n" +
@@ -6747,7 +6993,7 @@ export class CommunityPythonTemplates {
       "      },\n" +
       "      \"teamMembers\":[\n" +
       "         {\n" +
-      "            \"_id\":\"2\",\n" +
+      "            \"id\":\"2\",\n" +
       "            \"state\":\"ACCEPTED\",\n" +
       "            \"name\":\"Jose Juan\",\n" +
       "            \"lastname\":\"Hernández\",\n" +
@@ -6774,7 +7020,7 @@ export class CommunityPythonTemplates {
       "            ],\n" +
       "            \"experiences\":[\n" +
       "               {\n" +
-      "                  \"_id\":\"1\",\n" +
+      "                  \"id\":\"1\",\n" +
       "                  \"title\":\"Back-end developer en Moonshot Innovation\",\n" +
       "                  \"type\":\"FULL_TIME\",\n" +
       "                  \"company\":\"Moonshot Innovation\",\n" +
@@ -6788,7 +7034,7 @@ export class CommunityPythonTemplates {
       "                  \"description\":\"Scrum manager en Moonshot Innovation, trabajando en el equipo de back-end\"\n" +
       "               },\n" +
       "               {\n" +
-      "                  \"_id\":\"2\",\n" +
+      "                  \"id\":\"2\",\n" +
       "                  \"title\":\"Profesor en la facultad de Ingenería informatica\",\n" +
       "                  \"type\":\"OFFICIAL\",\n" +
       "                  \"company\":\"Universidad de Las Palmas de Gran Canaria\",\n" +
@@ -6804,7 +7050,7 @@ export class CommunityPythonTemplates {
       "            ],\n" +
       "            \"educations\":[\n" +
       "               {\n" +
-      "                  \"_id\":\"2\",\n" +
+      "                  \"id\":\"2\",\n" +
       "                  \"school\":\"Universidad de Las Palmas de Gran Canaria\",\n" +
       "                  \"degree\":\"Ingeniería en telecomunicaciones\",\n" +
       "                  \"fieldOfStudy\":\"Big data\",\n" +
@@ -6821,7 +7067,7 @@ export class CommunityPythonTemplates {
       "            ]\n" +
       "         },\n" +
       "         {\n" +
-      "            \"_id\":\"3\",\n" +
+      "            \"id\":\"3\",\n" +
       "            \"state\":\"ACCEPTED\",\n" +
       "            \"name\":\"Jeremy\",\n" +
       "            \"lastname\":\"Trujillo\",\n" +
@@ -6846,7 +7092,7 @@ export class CommunityPythonTemplates {
       "            ],\n" +
       "            \"experiences\":[\n" +
       "               {\n" +
-      "                  \"_id\":\"3\",\n" +
+      "                  \"id\":\"3\",\n" +
       "                  \"title\":\"Prácticas universitarias en Moonshot Innovation\",\n" +
       "                  \"type\":\"APPRENTICESHIP\",\n" +
       "                  \"company\":\"Moonshot Innovation\",\n" +
@@ -6862,7 +7108,7 @@ export class CommunityPythonTemplates {
       "            ],\n" +
       "            \"educations\":[\n" +
       "               {\n" +
-      "                  \"_id\":\"3\",\n" +
+      "                  \"id\":\"3\",\n" +
       "                  \"school\":\"Universidad de Las Palmas de Gran Canaria\",\n" +
       "                  \"degree\":\"Ingeniería informática\",\n" +
       "                  \"fieldOfStudy\":\"Ingeniería de software\",\n" +
@@ -6899,7 +7145,7 @@ export class CommunityPythonTemplates {
       "      ]\n" +
       "   },\n" +
       "   {\n" +
-      "      \"_id\":\"2\",\n" +
+      "      \"id\":\"2\",\n" +
       "      \"actorId\":\"1\",\n" +
       "      \"name\":\"Trade secret\",\n" +
       "      \"description\":\"Trade secret\",\n" +
@@ -6909,7 +7155,7 @@ export class CommunityPythonTemplates {
       "      ],\n" +
       "      \"protectionMethod\":\"TRADE_SECRETS\",\n" +
       "      \"projectManager\":{\n" +
-      "         \"_id\":\"4\",\n" +
+      "         \"id\":\"4\",\n" +
       "         \"state\":\"ACCEPTED\",\n" +
       "         \"name\":\"Saulo\",\n" +
       "         \"lastname\":\"Santana\",\n" +
@@ -6935,7 +7181,7 @@ export class CommunityPythonTemplates {
       "         ],\n" +
       "         \"experiences\":[\n" +
       "            {\n" +
-      "               \"_id\":\"3\",\n" +
+      "               \"id\":\"3\",\n" +
       "               \"title\":\"Prácticas universitarias en Moonshot Innovation\",\n" +
       "               \"type\":\"APPRENTICESHIP\",\n" +
       "               \"company\":\"Moonshot Innovation\",\n" +
@@ -6951,7 +7197,7 @@ export class CommunityPythonTemplates {
       "         ],\n" +
       "         \"educations\":[\n" +
       "            {\n" +
-      "               \"_id\":\"3\",\n" +
+      "               \"id\":\"3\",\n" +
       "               \"school\":\"Universidad de Las Palmas de Gran Canaria\",\n" +
       "               \"degree\":\"Ingeniería informática\",\n" +
       "               \"fieldOfStudy\":\"Ingeniería de software\",\n" +
@@ -6969,7 +7215,7 @@ export class CommunityPythonTemplates {
       "      },\n" +
       "      \"teamMembers\":[\n" +
       "         {\n" +
-      "            \"_id\":\"8\",\n" +
+      "            \"id\":\"8\",\n" +
       "            \"state\":\"ACCEPTED\",\n" +
       "            \"name\":\"Marcos\",\n" +
       "            \"lastname\":\"Fernandez\",\n" +
@@ -7001,7 +7247,7 @@ export class CommunityPythonTemplates {
       "            ],\n" +
       "            \"experiences\":[\n" +
       "               {\n" +
-      "                  \"_id\":\"6\",\n" +
+      "                  \"id\":\"6\",\n" +
       "                  \"title\":\"Colaboración para crear la vacuna Pfizer\",\n" +
       "                  \"type\":\"FULL_TIME\",\n" +
       "                  \"company\":\"Novartis\",\n" +
@@ -7015,7 +7261,7 @@ export class CommunityPythonTemplates {
       "                  \"description\":\"Colaborador de la vacuna Pfizer contra el COVID-19\"\n" +
       "               },\n" +
       "               {\n" +
-      "                  \"_id\":\"7\",\n" +
+      "                  \"id\":\"7\",\n" +
       "                  \"title\":\"Colaboración para crear la vacuna de la gripe A\",\n" +
       "                  \"type\":\"INTERIM\",\n" +
       "                  \"company\":\"Novartis\",\n" +
@@ -7031,7 +7277,7 @@ export class CommunityPythonTemplates {
       "            ],\n" +
       "            \"educations\":[\n" +
       "               {\n" +
-      "                  \"_id\":\"7\",\n" +
+      "                  \"id\":\"7\",\n" +
       "                  \"school\":\"Universidad de Tokio\",\n" +
       "                  \"degree\":\"Farmaceutica\",\n" +
       "                  \"fieldOfStudy\":\"Pandemias\",\n" +
@@ -7073,15 +7319,15 @@ export class CommunityPythonTemplates {
   }
 
   public static project_id_get: EndpointTemplate = {
-    name: "project/:id",
+    name: "projects/:id",
     code: "\nimport requests as reqs\n" +
       "\n" +
-      "URL = \"https://dev.moonshot.ceo/api/community/project/1\"\n" +
+      "URL = \"https://dev.moonshot.ceo/api/community/projects/1\"\n" +
       "\n" +
       "response = reqs.get(URL)\n" +
       "print(response.text)",
     response: "\n{\n" +
-      "   \"_id\":\"1\",\n" +
+      "   \"id\":\"1\",\n" +
       "   \"actorId\":\"1\",\n" +
       "   \"name\":\"Patents\",\n" +
       "   \"description\":\"Patents\",\n" +
@@ -7092,7 +7338,7 @@ export class CommunityPythonTemplates {
       "   ],\n" +
       "   \"protectionMethod\":\"PATENTS\",\n" +
       "   \"projectManager\":{\n" +
-      "      \"_id\":\"1\",\n" +
+      "      \"id\":\"1\",\n" +
       "      \"state\":\"ACCEPTED\",\n" +
       "      \"name\":\"Iñigo\",\n" +
       "      \"lastname\":\"Aramburu\",\n" +
@@ -7117,7 +7363,7 @@ export class CommunityPythonTemplates {
       "      ],\n" +
       "      \"experiences\":[\n" +
       "         {\n" +
-      "            \"_id\":\"1\",\n" +
+      "            \"id\":\"1\",\n" +
       "            \"title\":\"Back-end developer en Moonshot Innovation\",\n" +
       "            \"type\":\"FULL_TIME\",\n" +
       "            \"company\":\"Moonshot Innovation\",\n" +
@@ -7133,7 +7379,7 @@ export class CommunityPythonTemplates {
       "      ],\n" +
       "      \"educations\":[\n" +
       "         {\n" +
-      "            \"_id\":\"1\",\n" +
+      "            \"id\":\"1\",\n" +
       "            \"school\":\"Universidad del País Vasco\",\n" +
       "            \"degree\":\"Ingeniería informática\",\n" +
       "            \"fieldOfStudy\":\"Ingeniería de software\",\n" +
@@ -7148,7 +7394,7 @@ export class CommunityPythonTemplates {
       "            \"description\":\"Estudios universitarios realizados en la Universidad del País Vasco\"\n" +
       "         },\n" +
       "         {\n" +
-      "            \"_id\":\"15\",\n" +
+      "            \"id\":\"15\",\n" +
       "            \"school\":\"Universidad del País Vasco\",\n" +
       "            \"degree\":\"Master en desarrollo web\",\n" +
       "            \"fieldOfStudy\":\"Desarrollo web\",\n" +
@@ -7166,7 +7412,7 @@ export class CommunityPythonTemplates {
       "   },\n" +
       "   \"teamMembers\":[\n" +
       "      {\n" +
-      "         \"_id\":\"2\",\n" +
+      "         \"id\":\"2\",\n" +
       "         \"state\":\"ACCEPTED\",\n" +
       "         \"name\":\"Jose Juan\",\n" +
       "         \"lastname\":\"Hernández\",\n" +
@@ -7193,7 +7439,7 @@ export class CommunityPythonTemplates {
       "         ],\n" +
       "         \"experiences\":[\n" +
       "            {\n" +
-      "               \"_id\":\"1\",\n" +
+      "               \"id\":\"1\",\n" +
       "               \"title\":\"Back-end developer en Moonshot Innovation\",\n" +
       "               \"type\":\"FULL_TIME\",\n" +
       "               \"company\":\"Moonshot Innovation\",\n" +
@@ -7207,7 +7453,7 @@ export class CommunityPythonTemplates {
       "               \"description\":\"Scrum manager en Moonshot Innovation, trabajando en el equipo de back-end\"\n" +
       "            },\n" +
       "            {\n" +
-      "               \"_id\":\"2\",\n" +
+      "               \"id\":\"2\",\n" +
       "               \"title\":\"Profesor en la facultad de Ingenería informatica\",\n" +
       "               \"type\":\"OFFICIAL\",\n" +
       "               \"company\":\"Universidad de Las Palmas de Gran Canaria\",\n" +
@@ -7223,7 +7469,7 @@ export class CommunityPythonTemplates {
       "         ],\n" +
       "         \"educations\":[\n" +
       "            {\n" +
-      "               \"_id\":\"2\",\n" +
+      "               \"id\":\"2\",\n" +
       "               \"school\":\"Universidad de Las Palmas de Gran Canaria\",\n" +
       "               \"degree\":\"Ingeniería en telecomunicaciones\",\n" +
       "               \"fieldOfStudy\":\"Big data\",\n" +
@@ -7240,7 +7486,7 @@ export class CommunityPythonTemplates {
       "         ]\n" +
       "      },\n" +
       "      {\n" +
-      "         \"_id\":\"3\",\n" +
+      "         \"id\":\"3\",\n" +
       "         \"state\":\"ACCEPTED\",\n" +
       "         \"name\":\"Jeremy\",\n" +
       "         \"lastname\":\"Trujillo\",\n" +
@@ -7265,7 +7511,7 @@ export class CommunityPythonTemplates {
       "         ],\n" +
       "         \"experiences\":[\n" +
       "            {\n" +
-      "               \"_id\":\"3\",\n" +
+      "               \"id\":\"3\",\n" +
       "               \"title\":\"Prácticas universitarias en Moonshot Innovation\",\n" +
       "               \"type\":\"APPRENTICESHIP\",\n" +
       "               \"company\":\"Moonshot Innovation\",\n" +
@@ -7281,7 +7527,7 @@ export class CommunityPythonTemplates {
       "         ],\n" +
       "         \"educations\":[\n" +
       "            {\n" +
-      "               \"_id\":\"3\",\n" +
+      "               \"id\":\"3\",\n" +
       "               \"school\":\"Universidad de Las Palmas de Gran Canaria\",\n" +
       "               \"degree\":\"Ingeniería informática\",\n" +
       "               \"fieldOfStudy\":\"Ingeniería de software\",\n" +
@@ -7320,13 +7566,13 @@ export class CommunityPythonTemplates {
   }
 
   public static project_post: EndpointTemplate = {
-    name: "project",
+    name: "projects",
     code: "\nimport requests as reqs\n" +
       "\n" +
-      "URL = \"https://dev.moonshot.ceo/api/community/project\"\n" +
+      "URL = \"https://dev.moonshot.ceo/api/community/projects\"\n" +
       "\n" +
       "BODY = {\n" +
-      "   \"_id\":\"1\",\n" +
+      "   \"id\":\"1\",\n" +
       "   \"actorId\":\"1\",\n" +
       "   \"name\":\"Patents\",\n" +
       "   \"description\":\"Patents\",\n" +
@@ -7366,14 +7612,13 @@ export class CommunityPythonTemplates {
     response: null
   }
 
-  public static project_put: EndpointTemplate = {
-    name: "project",
+  public static project_id_put: EndpointTemplate = {
+    name: "projects/:id",
     code: "\nimport requests as reqs\n" +
       "\n" +
-      "URL = \"https://dev.moonshot.ceo/api/community/project\"\n" +
+      "URL = \"https://dev.moonshot.ceo/api/community/projects/1\"\n" +
       "\n" +
       "BODY = {\n" +
-      "   \"_id\":\"1\",\n" +
       "   \"actorId\":\"1\",\n" +
       "   \"name\":\"Patents\",\n" +
       "   \"description\":\"Patents\",\n" +
@@ -7414,13 +7659,24 @@ export class CommunityPythonTemplates {
   }
 
   public static project_id_delete: EndpointTemplate = {
-    name: "project/:id",
+    name: "projects/:id",
     code: "\nimport requests as reqs\n" +
       "\n" +
-      "URL = \"https://dev.moonshot.ceo/api/community/project/1\"\n" +
+      "URL = \"https://dev.moonshot.ceo/api/community/projects/1\"\n" +
       "\n" +
       "response = reqs.delete(URL)\n" +
       "print(response.text)",
     response: null
+  }
+
+  public static project_id_upload_media_put: EndpointTemplate = {
+    name: "projects/:id/upload/media",
+    code: "\nimport requests as reqs\n" +
+      "\n" +
+      "URL = \"https://dev.moonshot.ceo/api/community/projects/1/upload/media\"\n" +
+      "\n" +
+      "response = reqs.put(URL, files={'file': open('YOUR_FILE', 'r')})\n" +
+      "print(response.text)",
+    response: "\nhttps://localhost/drive/projects/media/1/61eaffcdad2bd12319fd4eba.png"
   }
 }

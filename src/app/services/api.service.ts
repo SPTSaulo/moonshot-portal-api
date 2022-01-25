@@ -266,35 +266,39 @@ export class ApiService {
           method: Method.GET
         },
         {
-          name: 'online-event/:id',
+          name: 'online-events/:id',
           method: Method.GET
         },
         {
-          name: 'online-event',
+          name: 'online-events',
           method: Method.POST
         },
         {
-          name: 'online-event',
+          name: 'online-events/upload',
+          method: Method.POST
+        },
+        {
+          name: 'online-events/:id',
           method: Method.PUT
         },
         {
-          name: 'online-event/:id',
+          name: 'online-events/:id',
           method: Method.DELETE
         },
         {
-          name: 'online-event/admin',
+          name: 'online-events/:id/admin',
           method: Method.PUT
         },
         {
-          name: 'online-event/subscription',
+          name: 'online-events/:id/subscription',
           method: Method.PUT
         },
         {
-          name: 'online-event/unsubscription',
+          name: 'online-events/:id/unsubscription',
           method: Method.PUT
         },
         {
-          name: 'online-event/:id/admin',
+          name: 'online-events/:id/admin',
           method: Method.DELETE
         },
         {
@@ -302,232 +306,268 @@ export class ApiService {
           method: Method.GET
         },
         {
-          name: 'face-to-face-event/:id',
+          name: 'face-to-face-events/:id',
           method: Method.GET
         },
         {
-          name: 'face-to-face-event',
+          name: 'face-to-face-events',
           method: Method.POST
         },
         {
-          name: 'face-to-face-event',
+          name: 'face-to-face-events/upload',
+          method: Method.POST
+        },
+        {
+          name: 'face-to-face-events/:id',
           method: Method.PUT
         },
         {
-          name: 'face-to-face-event/:id',
+          name: 'face-to-face-events/:id',
           method: Method.DELETE
         },
         {
-          name: 'face-to-face-event/admin',
+          name: 'face-to-face-events/:id/admin',
           method: Method.PUT
         },
         {
-          name: 'face-to-face-event/subscription',
+          name: 'face-to-face-events/:id/subscription',
           method: Method.PUT
         },
         {
-          name: 'face-to-face-event/unsubscription',
+          name: 'face-to-face-events/:id/unsubscription',
           method: Method.PUT
         },
         {
-          name: 'face-to-face-event/:id/admin',
+          name: 'face-to-face-events/:id/admin',
           method: Method.DELETE
-        },
-        {
-          name: 'room-documents/:room_id',
-          method: Method.GET
-        },
-        {
-          name: 'room-links/:room_id',
-          method: Method.GET
         },
         {
           name: 'direct-chats',
           method: Method.GET
         },
         {
-          name: 'direct-chats/all',
+          name: 'direct-chats/all/member-participate',
           method: Method.GET
         },
         {
-          name: 'direct-chat/:id',
+          name: 'direct-chats/:id',
           method: Method.GET
         },
         {
-          name: 'direct-chat',
+          name: 'direct-chats',
           method: Method.POST
         },
         {
-          name: 'direct-chat/:id',
+          name: 'direct-chats/:id',
           method: Method.DELETE
         },
         {
-          name: 'direct-chat/message',
+          name: 'direct-chats/:id/messages',
           method: Method.POST
         },
         {
-          name: 'direct-chat/messages/:room_id',
+          name: 'direct-chats/:id/messages',
           method: Method.GET
         },
         {
-          name: 'direct-chat/message/:id',
+          name: 'direct-chats/:id/messages/:message_id',
           method: Method.DELETE
+        },
+        {
+          name: 'direct-chats/:id/documents',
+          method: Method.GET
+        },
+        {
+          name: 'direct-chats/:id/links',
+          method: Method.GET
+        },
+        {
+          name: 'direct-chats/:id/upload',
+          method: Method.PUT
         },
         {
           name: 'follow-up-rooms',
           method: Method.GET
         },
         {
-          name: 'follow-up-rooms/all',
+          name: 'follow-up-rooms/all/member-participate',
           method: Method.GET
         },
         {
-          name: 'follow-up-room/:id',
+          name: 'follow-up-rooms/:id',
           method: Method.GET
         },
         {
-          name: 'follow-up-room',
+          name: 'follow-up-rooms',
           method: Method.POST
         },
         {
-          name: 'follow-up-room',
+          name: 'follow-up-rooms/:id',
           method: Method.PUT
         },
         {
-          name: 'follow-up-room/add-member',
+          name: 'follow-up-rooms/:id/members/add',
           method: Method.PUT
         },
         {
-          name: 'follow-up-room/leave-member',
+          name: 'follow-up-rooms/:id/members/leave',
           method: Method.PUT
         },
         {
-          name: 'follow-up-room/open',
+          name: 'follow-up-rooms/:id/open',
           method: Method.PUT
         },
         {
-          name: 'follow-up-room/close',
+          name: 'follow-up-rooms/:id/close',
           method: Method.PUT
         },
         {
-          name: 'follow-up-room/:id',
+          name: 'follow-up-rooms/:id',
           method: Method.DELETE
         },
         {
-          name: 'follow-up-room/message',
+          name: 'follow-up-rooms/:id/messages',
           method: Method.POST
         },
         {
-          name: 'follow-up-room/message/:id',
+          name: 'follow-up-rooms/:id/messages/:message_id',
           method: Method.DELETE
         },
         {
-          name: 'follow-up-room/message/:id/admin',
+          name: 'follow-up-rooms/:id/messages/:message_id/admin',
           method: Method.DELETE
         },
         {
-          name: 'follow-up-room/messages/:room_id',
+          name: 'follow-up-rooms/:id/messages',
           method: Method.GET
+        },
+        {
+          name: 'follow-up-rooms/:id/documents',
+          method: Method.GET
+        },
+        {
+          name: 'follow-up-rooms/:id/links',
+          method: Method.GET
+        },
+        {
+          name: 'follow-up-rooms/:id/upload',
+          method: Method.PUT
         },
         {
           name: 'public-channels',
           method: Method.GET
         },
         {
-          name: 'public-channel/:id',
+          name: 'public-channels/:id',
           method: Method.GET
         },
         {
-          name: 'public-channel',
+          name: 'public-channels',
           method: Method.POST
         },
         {
-          name: 'public-channel',
+          name: 'public-channels/:id',
           method: Method.PUT
         },
         {
-          name: 'public-channel/:id',
+          name: 'public-channels/:id',
           method: Method.DELETE
         },
         {
-          name: 'public-channel/admin',
+          name: 'public-channels/:id/admin',
           method: Method.PUT
         },
         {
-          name: 'public-channel/:id/admin',
+          name: 'public-channels/:id/admin',
           method: Method.DELETE
         },
         {
-          name: 'public-channel/subscribe',
+          name: 'public-channels/:id/subscribe',
           method: Method.PUT
         },
         {
-          name: 'public-channel/unsubscribe',
+          name: 'public-channels/:id/unsubscribe',
           method: Method.PUT
         },
         {
-          name: 'public-channel/message',
-          method: Method.POST
-        },
-        {
-          name: 'public-channel/message/:id',
-          method: Method.DELETE
-        },
-        {
-          name: 'public-channel/message/:id/admin',
-          method: Method.DELETE
-        },
-        {
-          name: 'public-channel/messages/:room_id',
+          name: 'public-channels/:id/messages',
           method: Method.GET
         },
         {
-          name: 'wall-post',
+          name: 'public-channels/:id/messages',
           method: Method.POST
         },
         {
-          name: 'wall-post',
-          method: Method.PUT
-        },
-        {
-          name: 'wall-post/:id',
+          name: 'public-channels/:id/messages/:message_id',
           method: Method.DELETE
         },
         {
-          name: 'wall-post/admin',
-          method: Method.PUT
-        },
-        {
-          name: 'wall-post/:id/admin',
+          name: 'public-channels/:id/messages/:message_id/admin',
           method: Method.DELETE
         },
         {
-          name: 'wall-post/like',
-          method: Method.PUT
-        },
-        {
-          name: 'wall-post/unlike',
-          method: Method.PUT
-        },
-        {
-          name: 'wall-post/comment',
-          method: Method.POST
-        },
-        {
-          name: 'wall-post/comment/like',
-          method: Method.PUT
-        },
-        {
-          name: 'wall-post/comment/unlike',
-          method: Method.PUT
-        },
-        {
-          name: 'wall-post/:id',
+          name: 'public-channels/:id/documents',
           method: Method.GET
+        },
+        {
+          name: 'public-channels/:id/links',
+          method: Method.GET
+        },
+        {
+          name: 'public-channels/:id/upload',
+          method: Method.PUT
         },
         {
           name: 'wall-posts',
           method: Method.GET
+        },
+        {
+          name: 'wall-posts/:id',
+          method: Method.GET
+        },
+        {
+          name: 'wall-posts',
+          method: Method.POST
+        },
+        {
+          name: 'wall-posts/upload',
+          method: Method.POST
+        },
+        {
+          name: 'wall-posts/:id',
+          method: Method.PUT
+        },
+        {
+          name: 'wall-posts/:id',
+          method: Method.DELETE
+        },
+        {
+          name: 'wall-posts/:id/admin',
+          method: Method.PUT
+        },
+        {
+          name: 'wall-posts/:id/admin',
+          method: Method.DELETE
+        },
+        {
+          name: 'wall-posts/:id/like',
+          method: Method.PUT
+        },
+        {
+          name: 'wall-posts/:id/unlike',
+          method: Method.PUT
+        },
+        {
+          name: 'wall-posts/:id/comments',
+          method: Method.POST
+        },
+        {
+          name: 'wall-posts/:id/comments/:comment_id/like',
+          method: Method.PUT
+        },
+        {
+          name: 'wall-posts/:id/comments/:comment_id/unlike',
+          method: Method.PUT
         },
         {
           name: 'actors',
@@ -538,51 +578,63 @@ export class ApiService {
           method: Method.POST
         },
         {
-          name: 'actors/by-name-and-state',
+          name: 'actors/by/name-and-state',
           method: Method.GET
         },
         {
-          name: 'actors/by-type',
+          name: 'actors/by/types',
           method: Method.GET
         },
         {
-          name: 'actors/by-state',
+          name: 'actors/by/state',
           method: Method.GET
         },
         {
-          name: 'actors/by-member',
+          name: 'actors/by/member',
           method: Method.GET
         },
         {
-          name: 'actor/:id',
+          name: 'actors/:id',
           method: Method.GET
         },
         {
-          name: 'actor',
+          name: 'actors',
           method: Method.POST
         },
         {
-          name: 'actor',
+          name: 'actors/:id',
           method: Method.PUT
         },
         {
-          name: 'actor/accept',
+          name: 'actors/:id/accept',
           method: Method.PUT
         },
         {
-          name: 'actor/reject',
+          name: 'actors/:id/reject',
           method: Method.PUT
         },
         {
-          name: 'actor/:id',
+          name: 'actors/:id',
           method: Method.DELETE
         },
         {
-          name: 'fcmToken',
+          name: 'actors/upload/original',
+          method: Method.POST
+        },
+        {
+          name: 'actors/upload/thumbnail',
+          method: Method.POST
+        },
+        {
+          name: 'actors/:id/upload/media',
           method: Method.PUT
         },
         {
-          name: 'member/logged-in',
+          name: 'members/fcm-token',
+          method: Method.PUT
+        },
+        {
+          name: 'members/logged-in',
           method: Method.GET
         },
         {
@@ -590,64 +642,76 @@ export class ApiService {
           method: Method.GET
         },
         {
-          name: 'member/:id',
+          name: 'members/:id',
           method: Method.GET
         },
         {
-          name: 'member/:id/marker',
+          name: 'members/:id/marker',
           method: Method.GET
         },
         {
-          name: 'member',
-          method: Method.PUT
-        },
-        {
-          name: 'member/:id',
-          method: Method.DELETE
-        },
-        {
-          name: 'education',
+          name: 'members/upload/original',
           method: Method.POST
         },
         {
-          name: 'education',
-          method: Method.PUT
-        },
-        {
-          name: 'education/:id',
-          method: Method.DELETE
-        },
-        {
-          name: 'experience',
+          name: 'members/upload/thumbnail',
           method: Method.POST
         },
         {
-          name: 'experience',
+          name: 'members/:id',
           method: Method.PUT
         },
         {
-          name: 'experience/:id',
+          name: 'members/:id',
           method: Method.DELETE
+        },
+        {
+          name: 'members/education',
+          method:Method.POST
+        },
+        {
+          name: 'members/education/:education_id',
+          method: Method.PUT
+        },
+        {
+          name: 'members/education/:education_id',
+          method: Method.DELETE
+        },
+        {
+          name: 'members/experience',
+          method: Method.POST
+        },
+        {
+          name: 'members/experience/:experience_id',
+          method: Method.PUT
+        },
+        {
+          name: 'members/experience/:experience_id',
+          method: Method.DELETE
+        },
+        {
+          name: 'projects/by/actor',
+          method: Method.GET
+        },
+        {
+          name: 'projects/:id',
+          method: Method.GET
         },
         {
           name: 'projects',
-          method: Method.GET
-        },
-        {
-          name: 'project/:id',
-          method: Method.GET
-        },
-        {
-          name: 'project',
           method: Method.POST
         },
         {
-          name: 'project',
+          name: 'projects/:id',
           method: Method.PUT
         },
         {
-          name: 'project/:id',
+          name: 'projects/:id',
           method: Method.DELETE
+        },
+        {
+          name: "projects/:id/upload/media",
+          method: Method.PUT
         }
       ],
       description: 'Esta es la api de Community. ' +
@@ -656,7 +720,7 @@ export class ApiService {
         '- Todos los endpoints de obtención, creación y modificación de los eventos (eventos onlines y eventos presenciales).\n' +
         '- Todos los endpoints de obtención, creación y modificación de salas de comunicación (follow up rooms, direct chats y public channels)\n' +
         '- Todos los endpoints de obtención, creación y modificación de las publicaciones en el muro del ecosistema\n' +
-        '- Todos los endpoints de obtención, creación y modificación de actores\n' +
+        '- Todos los endpoints de obtención, creación y modificación de actorses\n' +
         '- Todos los endpoints de obtención, creación y modificación de miembros\n' +
         '- Todos los endpoints de obtención, creación y modificación de proyectos\n' +
         '- Todos los endpoints de obtención, creación y modificación de ajustes del ecosistema\n',

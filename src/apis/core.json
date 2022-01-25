@@ -850,7 +850,7 @@
               "text/plain": {
                 "schema": {
                   "type": "string",
-                  "example": "https://localhost/drive/ecosystem/media/61eaffcdad2bd12319fd4eba.png"
+                  "example": "https://localhost/drive/ecosystem/media/1/61eaffcdad2bd12319fd4eba.png"
                 }
               }
             }

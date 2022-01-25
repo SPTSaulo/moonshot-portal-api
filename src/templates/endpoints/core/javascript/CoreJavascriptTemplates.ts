@@ -1184,7 +1184,7 @@ export class CoreJavascriptTemplates {
       "  body: formData\n" +
       "})\n" +
       "  .then(path => console.log(path))",
-    response: "\nhttps://localhost/drive/ecosystem/media/61eaffcdad2bd12319fd4eba.png"
+    response: "\nhttps://localhost/drive/ecosystem/media/1/61eaffcdad2bd12319fd4eba.png"
   }
 
   public static ecosystem_put: EndpointTemplate = {
