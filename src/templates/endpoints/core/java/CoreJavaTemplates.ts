@@ -1002,7 +1002,7 @@ export class CoreJavaTemplates {
   }
 
   public static ecosystemInitialized_get: EndpointTemplate = {
-    name: "ecosystemls/initialized",
+    name: "ecosystem/initialized",
     code: "\nSystem.setProperty(\"CORE_HOST\", \"localhost\");\n" +
       "System.setProperty(\"CORE_PORT\", \"8082\");\n" +
       "System.setProperty(\"AUTH0_DOMAIN\", \"dev-708nr3pf.eu.auth0.com\");\n" +
@@ -1016,7 +1016,7 @@ export class CoreJavaTemplates {
   }
 
   public static ecosystem_get: EndpointTemplate = {
-    name: "ecosystemls",
+    name: "ecosystem",
     code: "\nSystem.setProperty(\"CORE_HOST\", \"localhost\");\n" +
       "System.setProperty(\"CORE_PORT\", \"8082\");\n" +
       "System.setProperty(\"AUTH0_DOMAIN\", \"dev-708nr3pf.eu.auth0.com\");\n" +
@@ -1110,7 +1110,7 @@ export class CoreJavaTemplates {
   }
 
   public static ecosystem_post: EndpointTemplate = {
-    name: "ecosystemls",
+    name: "ecosystem",
     code: "\nSystem.setProperty(\"CORE_HOST\", \"localhost\");\n" +
       " System.setProperty(\"CORE_PORT\", \"8082\");\n" +
       " System.setProperty(\"AUTH0_DOMAIN\", \"dev-708nr3pf.eu.auth0.com\");\n" +

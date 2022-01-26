@@ -3222,7 +3222,7 @@ export class CommunityPythonTemplates {
     response: null
   }
 
-  public static public_channel_admin_put: EndpointTemplate = {
+  public static public_channel_id_admin_put: EndpointTemplate = {
     name: "public-channels/:id/admin",
     code: "\nimport requests as reqs\n" +
       "\n" +

@@ -3266,7 +3266,7 @@ export class CommunityJavascriptTemplates {
     response: null
   }
 
-  public static public_channel_admin_put: EndpointTemplate = {
+  public static public_channel_id_admin_put: EndpointTemplate = {
     name: "public-channels/:id/admin",
     code: "\nconst url = 'https://dev.moonshot.ceo/api/community/public-channels/1/admin';\n" +
       "\n" +
@@ -5938,7 +5938,7 @@ export class CommunityJavascriptTemplates {
   }
 
   public static actor_post: EndpointTemplate = {
-    name: "actor",
+    name: "actors",
     code: "\nconst url = 'https://dev.moonshot.ceo/api/community/actors';\n" +
       "\n" +
       "const body = {\n" +

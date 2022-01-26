@@ -260,7 +260,7 @@ export class EndpointTemplateReaderService {
       case 'public-channels_post': return CommunityJavascriptTemplates.public_channel_post
       case 'public-channels/:id_put': return CommunityJavascriptTemplates.public_channel_id_put
       case 'public-channels/:id_delete': return CommunityJavascriptTemplates.public_channel_id_delete
-      case 'public-channels/:id/admin_put': return CommunityJavascriptTemplates.public_channel_admin_put
+      case 'public-channels/:id/admin_put': return CommunityJavascriptTemplates.public_channel_id_admin_put
       case 'public-channels/:id/admin_delete': return CommunityJavascriptTemplates.public_channel_id_admin_delete
       case 'public-channels/:id/subscribe_put': return CommunityJavascriptTemplates.public_channel_subscribe_put
       case 'public-channels/:id/unsubscribe_put': return CommunityJavascriptTemplates.public_channel_unsubscribe_put
@@ -502,7 +502,7 @@ export class EndpointTemplateReaderService {
       case 'public-channels_post': return CommunityPythonTemplates.public_channel_post
       case 'public-channels/:id_put': return CommunityPythonTemplates.public_channel_id_put
       case 'public-channels/:id_delete': return CommunityPythonTemplates.public_channel_id_delete
-      case 'public-channels/:id/admin_put': return CommunityPythonTemplates.public_channel_admin_put
+      case 'public-channels/:id/admin_put': return CommunityPythonTemplates.public_channel_id_admin_put
       case 'public-channels/:id/admin_delete': return CommunityPythonTemplates.public_channel_id_admin_delete
       case 'public-channels/:id/subscribe_put': return CommunityPythonTemplates.public_channel_subscribe_put
       case 'public-channels/:id/unsubscribe_put': return CommunityPythonTemplates.public_channel_unsubscribe_put
