@@ -22,27 +22,27 @@ export class ApisConstants {
     "tags": [
       {
         "name": "Version",
-        "description": "Endpoint that return Core last version"
+        "description": "Endpoint that returns Core last version"
       },
       {
         "name": "Login",
-        "description": "Endpoint that allow user login in the application"
+        "description": "Endpoint that allows user login into the application"
       },
       {
         "name": "Token",
-        "description": "Endpoint that return user token"
+        "description": "Endpoint that returns user token"
       },
       {
         "name": "Logout",
-        "description": "Endpoint that allow user exit from de application"
+        "description": "Endpoint that allows user exit from de application"
       },
       {
         "name": "Community",
-        "description": "Enpoint that return all communities in your ecosystem"
+        "description": "Endpoint that returns all communities in your ecosystem"
       },
       {
         "name": "Module",
-        "description": "Enpoint that return all modules in your ecosystem"
+        "description": "Endpoint that returns all modules in your ecosystem"
       },
       {
         "name": "User",
@@ -64,7 +64,7 @@ export class ApisConstants {
             "Version"
           ],
           "summary": "API version",
-          "description": "Return the lastest version of the API\n",
+          "description": "Return the latest version of the API\n",
           "operationId": "apiVersion",
           "responses": {
             "200": {
@@ -197,10 +197,10 @@ export class ApisConstants {
           ],
           "responses": {
             "200": {
-              "description": "Add authentication token to cookies successfully"
+              "description": "Authentication token added successfully"
             },
             "500": {
-              "description": "Cannot find the user associated to tokenId parameter",
+              "description": "Cannot find the user associated to idToken parameter",
               "content": {
                 "application/json": {
                   "schema": {
@@ -222,11 +222,11 @@ export class ApisConstants {
             "Community"
           ],
           "summary": "Get ecosystem communities",
-          "description": "Get all comunities where user is logged\n",
-          "operationId": "comunities",
+          "description": "Get all user communities\n",
+          "operationId": "communities",
           "responses": {
             "200": {
-              "description": "Get comunities successfully",
+              "description": "Get communities successfully",
               "content": {
                 "application/json": {
                   "schema": {
@@ -266,7 +266,7 @@ export class ApisConstants {
             "Module"
           ],
           "summary": "Get Moonshot modules",
-          "description": "Get Moonshot modules available to the user\n",
+          "description": "Get all user modules\n",
           "operationId": "modules",
           "responses": {
             "200": {
@@ -319,8 +319,8 @@ export class ApisConstants {
           "tags": [
             "User"
           ],
-          "summary": "Get user by id",
-          "description": "Find a user in the database by its identifier and get all the data associated\n",
+          "summary": "Get user by its identifier",
+          "description": "Find an user in the database by its identifier and get all the data associated\n",
           "operationId": "userById",
           "parameters": [
             {
@@ -389,7 +389,7 @@ export class ApisConstants {
             "User"
           ],
           "summary": "Get user by email",
-          "description": "Find a user in the database by email\n",
+          "description": "Find an user in the database by email\n",
           "operationId": "userByEmail",
           "parameters": [
             {
@@ -409,7 +409,7 @@ export class ApisConstants {
           ],
           "responses": {
             "200": {
-              "description": "Get users data successfully",
+              "description": "Get user data successfully",
               "content": {
                 "application/json": {
                   "schema": {
@@ -505,7 +505,7 @@ export class ApisConstants {
             "User"
           ],
           "summary": "Get users by roles",
-          "description": "Find a user in the database by roles and get all the data associated\n",
+          "description": "Find users in the database by roles and get all the data associated\n",
           "operationId": "usersByRoles",
           "parameters": [
             {
@@ -580,7 +580,7 @@ export class ApisConstants {
             "User"
           ],
           "summary": "Get user by permissions",
-          "description": "Find a user in the database by permissions and get all the data associated\n",
+          "description": "Find users in the database by permissions and get all the data associated\n",
           "parameters": [
             {
               "name": "perms",
@@ -638,7 +638,7 @@ export class ApisConstants {
             "User"
           ],
           "summary": "Get user permissions",
-          "description": "Find a user in the database by id and get the permissions associated\n",
+          "description": "Find an user in the database by its identifier and get the permissions associated\n",
           "parameters": [
             {
               "name": "id",
@@ -798,7 +798,7 @@ export class ApisConstants {
             "User"
           ],
           "summary": "Verify user",
-          "description": "Verify a user and allow him access to the platform\n",
+          "description": "Verify an user and allow him access to the platform\n",
           "requestBody": {
             "description": "Object that contains all parameters to verify an user",
             "content": {
@@ -836,7 +836,7 @@ export class ApisConstants {
             "User"
           ],
           "summary": "Resend email verification",
-          "description": "Resend email verification and save a EmailVerification entity in the database\n",
+          "description": "Resend email verification and save an  EmailVerification entity in the database\n",
           "requestBody": {
             "description": "Object that contains all parameters to resend a verification email",
             "content": {
@@ -873,8 +873,8 @@ export class ApisConstants {
           "tags": [
             "Password"
           ],
-          "summary": "Get last password modification",
-          "description": "Find last password modification in Auth0 by user email\n",
+          "summary": "Get the latest password modification",
+          "description": "Find the latest password modification in Auth0 by user email\n",
           "parameters": [
             {
               "name": "email",
@@ -940,7 +940,7 @@ export class ApisConstants {
               "description": "OK"
             },
             "400": {
-              "description": "Body is not correctly defined or cannot find user associated to email",
+              "description": "Body is not correctly defined or cannot find an user associated to email",
               "content": {
                 "application/json": {
                   "schema": {
@@ -1069,7 +1069,7 @@ export class ApisConstants {
             "Verification"
           ],
           "summary": "Get all verifications",
-          "description": "Find all verifications in the database and get all the data asociated\n",
+          "description": "Find all verifications in the database and get all the data associated\n",
           "operationId": "verification",
           "responses": {
             "200": {
@@ -1490,7 +1490,7 @@ export class ApisConstants {
     "tags": [
       {
         "name": "Version",
-        "description": "Endpoint that return Community last version"
+        "description": "Endpoint that returns Community last version"
       },
       {
         "name": "OnlineEvent",
@@ -1536,7 +1536,7 @@ export class ApisConstants {
             "Version"
           ],
           "summary": "API version",
-          "description": "Return the lastest version of the API\n",
+          "description": "Return the latest version of the API\n",
           "operationId": "apiVersion",
           "responses": {
             "200": {
@@ -1608,7 +1608,7 @@ export class ApisConstants {
           "description": "Create and insert an online event in database\n",
           "operationId": "onlineEventCreate",
           "requestBody": {
-            "description": "Object that contain all parameters to create an online event",
+            "description": "Object that contains all parameters to create an online event",
             "content": {
               "application/json": {
                 "schema": {
@@ -1671,7 +1671,7 @@ export class ApisConstants {
           "tags": [
             "OnlineEvent"
           ],
-          "summary": "Get an online event by id",
+          "summary": "Get an online event by its identifier",
           "description": "Find an online event in the database by its identifier\n",
           "operationId": "onlineEventById",
           "parameters": [
@@ -1723,8 +1723,8 @@ export class ApisConstants {
           "tags": [
             "OnlineEvent"
           ],
-          "summary": "Update an online event",
-          "description": "Find and update an online event in the database\n",
+          "summary": "Update an user online event",
+          "description": "Find and update an user online event in the database\n",
           "operationId": "onlineEventUpdate",
           "parameters": [
             {
@@ -1740,7 +1740,7 @@ export class ApisConstants {
             }
           ],
           "requestBody": {
-            "description": "Object that contain all parameters to update an online event",
+            "description": "Object that contains all parameters to update an online event",
             "content": {
               "application/json": {
                 "schema": {
@@ -1788,8 +1788,8 @@ export class ApisConstants {
           "tags": [
             "OnlineEvent"
           ],
-          "summary": "Remove an online event",
-          "description": "Remove an online event from database\n",
+          "summary": "Remove an user online event",
+          "description": "Remove an user online event from database\n",
           "operationId": "onlineEventDelete",
           "parameters": [
             {
@@ -1846,7 +1846,7 @@ export class ApisConstants {
             "OnlineEvent"
           ],
           "summary": "Upload an online event image",
-          "description": "Save an online event image in your filesystem\n",
+          "description": "Save an online event image in your file system\n",
           "operationId": "onlineEventUpload",
           "requestBody": {
             "content": {
@@ -1922,7 +1922,7 @@ export class ApisConstants {
             }
           ],
           "requestBody": {
-            "description": "Object that contain all parameters to update an online event",
+            "description": "Object that contains all parameters to update an online event",
             "content": {
               "application/json": {
                 "schema": {
@@ -1983,8 +1983,8 @@ export class ApisConstants {
           "tags": [
             "OnlineEvent"
           ],
-          "summary": "Delete any online event",
-          "description": "Delete an online event from database\n",
+          "summary": "Remove any online event",
+          "description": "Remove an online event from database\n",
           "operationId": "onlineEventDeleteAdmin",
           "parameters": [
             {
@@ -2045,9 +2045,9 @@ export class ApisConstants {
           ],
           "summary": "Subscribe to an online event",
           "description": "Subscribe to an online event to become a participant\n",
-          "operationId": "onlineEventSuscribe",
+          "operationId": "onlineEventSubscribe",
           "requestBody": {
-            "description": "Object that contain all parameters to suscribe to an online event",
+            "description": "Object that contains all parameters to subscribe to an online event",
             "content": {
               "application/json": {
                 "schema": {
@@ -2110,7 +2110,7 @@ export class ApisConstants {
           "tags": [
             "OnlineEvent"
           ],
-          "summary": "Unsubcribe from an online event",
+          "summary": "Unsubscribe from an online event",
           "description": "Unsubscribe from an online event to stop being a participant\n",
           "operationId": "onlineEventUnsubscribe",
           "parameters": [
@@ -2127,7 +2127,7 @@ export class ApisConstants {
             }
           ],
           "requestBody": {
-            "description": "Object that contain all parameters to unsubscribe from an online event",
+            "description": "Object that contains all parameters to unsubscribe from an online event",
             "content": {
               "application/json": {
                 "schema": {
@@ -2178,7 +2178,7 @@ export class ApisConstants {
             "FaceToFace"
           ],
           "summary": "Get all face to face events",
-          "description": "Find all face to face in the database\n",
+          "description": "Find all face to face events in the database\n",
           "operationId": "faceToFaceEvents",
           "responses": {
             "200": {
@@ -2223,7 +2223,7 @@ export class ApisConstants {
           "description": "Create and insert a face to face event in database\n",
           "operationId": "faceToFaceEventCreate",
           "requestBody": {
-            "description": "Object that contain all parameters to update an online event",
+            "description": "Object that contains all parameters to update a face to face event",
             "content": {
               "application/json": {
                 "schema": {
@@ -2286,7 +2286,7 @@ export class ApisConstants {
           "tags": [
             "FaceToFace"
           ],
-          "summary": "Get a face to face event by id",
+          "summary": "Get a face to face event by its identifier",
           "description": "Find a face to face event in the database by its identifier\n",
           "operationId": "faceToFaceEventById",
           "parameters": [
@@ -2338,8 +2338,8 @@ export class ApisConstants {
           "tags": [
             "FaceToFace"
           ],
-          "summary": "Update a face to face event",
-          "description": "Find and update a face to face event in the database\n",
+          "summary": "Update an user face to face event",
+          "description": "Find and update an user face to face event in the database\n",
           "operationId": "faceToFaceEventUpdate",
           "parameters": [
             {
@@ -2355,7 +2355,7 @@ export class ApisConstants {
             }
           ],
           "requestBody": {
-            "description": "Object that contain all parameters to update a face to face event",
+            "description": "Object that contains all parameters to update a face to face event",
             "content": {
               "application/json": {
                 "schema": {
@@ -2403,8 +2403,8 @@ export class ApisConstants {
           "tags": [
             "FaceToFace"
           ],
-          "summary": "Remove a face to face event",
-          "description": "Remove a face to face event from database\n",
+          "summary": "Remove an user face to face event",
+          "description": "Remove an user face to face event from database\n",
           "operationId": "faceToFaceEventDelete",
           "parameters": [
             {
@@ -2461,7 +2461,7 @@ export class ApisConstants {
             "FaceToFace"
           ],
           "summary": "Upload a face to face event image",
-          "description": "Save a face to face event image in your filesystem\n",
+          "description": "Save a face to face event image in your file system\n",
           "operationId": "faceToFaceEventUpload",
           "requestBody": {
             "content": {
@@ -2521,10 +2521,10 @@ export class ApisConstants {
             "FaceToFace"
           ],
           "summary": "Update any face to face event",
-          "description": "Find and update an face to face event in database\n",
+          "description": "Find and update any face to face event in database\n",
           "operationId": "faceToFaceEventUpdateAdmin",
           "requestBody": {
-            "description": "Object that contain all parameters to update a face to face event",
+            "description": "Object that contains all parameters to update any face to face event",
             "content": {
               "application/json": {
                 "schema": {
@@ -2598,8 +2598,8 @@ export class ApisConstants {
           "tags": [
             "FaceToFace"
           ],
-          "summary": "Delete any face to face event",
-          "description": "Delete a face to face event from database\n",
+          "summary": "Remove any face to face event",
+          "description": "Remove a face to face event from database\n",
           "operationId": "faceToFaceEventDeleteAdmin",
           "parameters": [
             {
@@ -2660,9 +2660,9 @@ export class ApisConstants {
           ],
           "summary": "Subscribe to a face to face event",
           "description": "Subscribe to a face to face event to become a participant\n",
-          "operationId": "faceToFaceEventSuscribe",
+          "operationId": "faceToFaceEventSubscribe",
           "requestBody": {
-            "description": "Object that contain all parameters to suscribe to a face to face event",
+            "description": "Object that contains all parameters to subscribe to a face to face event",
             "content": {
               "application/json": {
                 "schema": {
@@ -2725,7 +2725,7 @@ export class ApisConstants {
           "tags": [
             "FaceToFace"
           ],
-          "summary": "Unsubcribe from a face to face event",
+          "summary": "Unsubscribe from a face to face event",
           "description": "Unsubscribe from a face to face event to stop being a participant\n",
           "operationId": "faceToFaceEventUnsubscribe",
           "parameters": [
@@ -2742,7 +2742,7 @@ export class ApisConstants {
             }
           ],
           "requestBody": {
-            "description": "Object that contain all parameters to unsubscribe from an face to face event",
+            "description": "Object that contains all parameters to unsubscribe from an face to face event",
             "content": {
               "application/json": {
                 "schema": {
@@ -2841,7 +2841,7 @@ export class ApisConstants {
           "description": "Create and insert a direct chat in database\n",
           "operationId": "directChatCreate",
           "requestBody": {
-            "description": "Object that contain all parameters to create a direct chat",
+            "description": "Object that contains all parameters to create a direct chat",
             "content": {
               "application/json": {
                 "schema": {
@@ -2891,7 +2891,7 @@ export class ApisConstants {
           "tags": [
             "DirectChat"
           ],
-          "summary": "Get all direct chats where member who make the request participate",
+          "summary": "Get all direct chats where member who makes the request participate",
           "description": "Find all direct chats in database\n",
           "operationId": "directChatsAll",
           "responses": {
@@ -2948,7 +2948,7 @@ export class ApisConstants {
           "tags": [
             "DirectChat"
           ],
-          "summary": "Get a direct chat by id",
+          "summary": "Get a direct chat by its identifier",
           "description": "Find a direct chat in the database by its identifier\n",
           "operationId": "directChatById",
           "parameters": [
@@ -3126,7 +3126,7 @@ export class ApisConstants {
             "DirectChat"
           ],
           "summary": "Get all messages from the direct chat",
-          "description": "Find all message from the direct chat online event in the database\n",
+          "description": "Find all message from the direct chat in the database\n",
           "operationId": "directChatMessages",
           "parameters": [
             {
@@ -3194,7 +3194,7 @@ export class ApisConstants {
             }
           ],
           "requestBody": {
-            "description": "Object that contain all parameters to create a message",
+            "description": "Object that contains all parameters to create a message",
             "content": {
               "application/json": {
                 "schema": {
@@ -3359,7 +3359,7 @@ export class ApisConstants {
             "DirectChat"
           ],
           "summary": "Upload a direct chat image",
-          "description": "Save a direct chat image in your filesystem\n",
+          "description": "Save a direct chat image in your file system\n",
           "operationId": "directChatEventUpload",
           "parameters": [
             {
@@ -3480,7 +3480,7 @@ export class ApisConstants {
           "description": "Create and insert a follow up room in database\n",
           "operationId": "followUpRoomCreate",
           "requestBody": {
-            "description": "Object that contain all parameters to create a follow up room",
+            "description": "Object that contains all parameters to create a follow up room",
             "content": {
               "application/json": {
                 "schema": {
@@ -3584,7 +3584,7 @@ export class ApisConstants {
           "tags": [
             "FollowUpRoom"
           ],
-          "summary": "Get a follow up room by id",
+          "summary": "Get a follow up room by its identifier",
           "description": "Find a follow up room in the database by its identifier\n",
           "operationId": "followUpRoomById",
           "parameters": [
@@ -3653,7 +3653,7 @@ export class ApisConstants {
             }
           ],
           "requestBody": {
-            "description": "Object that contain all parameters to update a follow up room",
+            "description": "Object that contains all parameters to update a follow up room",
             "content": {
               "application/json": {
                 "schema": {
@@ -3765,7 +3765,7 @@ export class ApisConstants {
             }
           ],
           "requestBody": {
-            "description": "Object that contain all parameters to add a member in a follow up room",
+            "description": "Object that contains all parameters to add a member in a follow up room",
             "content": {
               "application/json": {
                 "schema": {
@@ -3832,7 +3832,7 @@ export class ApisConstants {
             }
           ],
           "requestBody": {
-            "description": "Object that contain all parameters to remove a member in a follow up room",
+            "description": "Object that contains all parameters to remove a member in a follow up room",
             "content": {
               "application/json": {
                 "schema": {
@@ -3883,7 +3883,7 @@ export class ApisConstants {
             "FollowUpRoom"
           ],
           "summary": "Open a follow up room",
-          "description": "Find and update the follow up room state to OPEN\n",
+          "description": "Find and update the follow up room state to open\n",
           "operationId": "followUpRoomOpen",
           "parameters": [
             {
@@ -3940,7 +3940,7 @@ export class ApisConstants {
             "FollowUpRoom"
           ],
           "summary": "Close a follow up room",
-          "description": "Find and update the follow up room state to CLOSE\n",
+          "description": "Find and update the follow up room state to close\n",
           "operationId": "followUpRoomClose",
           "parameters": [
             {
@@ -3996,8 +3996,8 @@ export class ApisConstants {
           "tags": [
             "FollowUpRoom"
           ],
-          "summary": "Remove a follow up room message",
-          "description": "Remove a follow up room message from database\n",
+          "summary": "Remove an user follow up room message",
+          "description": "Remove an user follow up room message from database\n",
           "operationId": "followUpRoomDeleteMessage",
           "parameters": [
             {
@@ -4064,8 +4064,8 @@ export class ApisConstants {
           "tags": [
             "FollowUpRoom"
           ],
-          "summary": "Delete any follow up room message",
-          "description": "Delete a follow up room message from database\n",
+          "summary": "Remove any follow up room message",
+          "description": "Remove a follow up room message from database\n",
           "operationId": "followUpRoomDeleteMessageAdmin",
           "parameters": [
             {
@@ -4123,7 +4123,7 @@ export class ApisConstants {
             "FollowUpRoom"
           ],
           "summary": "Get all messages from the follow up room",
-          "description": "Find the room in database and return all the messages\n",
+          "description": "Find the follow up room in database and return all the messages\n",
           "operationId": "followUpRoomMessages",
           "parameters": [
             {
@@ -4178,7 +4178,7 @@ export class ApisConstants {
             "FollowUpRoom"
           ],
           "summary": "Send a message to the follow up room",
-          "description": "Find and update a follow up room in database with the new message\n",
+          "description": "Add a new follow up room message in the database\n",
           "operationId": "followUpRoomCreateMessage",
           "parameters": [
             {
@@ -4194,7 +4194,7 @@ export class ApisConstants {
             }
           ],
           "requestBody": {
-            "description": "Object that contain all parameters to create a message",
+            "description": "Object that contains all parameters to create a message",
             "content": {
               "application/json": {
                 "schema": {
@@ -4359,7 +4359,7 @@ export class ApisConstants {
             "FollowUpRoom"
           ],
           "summary": "Upload a follow up room image",
-          "description": "Save a follow up room image in your filesystem\n",
+          "description": "Save a follow up room image in your file system\n",
           "operationId": "followUpRoomEventUpload",
           "parameters": [
             {
@@ -4536,7 +4536,7 @@ export class ApisConstants {
           "tags": [
             "PublicChannel"
           ],
-          "summary": "Get a public channel by id",
+          "summary": "Get a public channel by its identifier",
           "description": "Find a public channel in the database by its identifier\n",
           "operationId": "publicChannelById",
           "parameters": [
@@ -4588,8 +4588,8 @@ export class ApisConstants {
           "tags": [
             "PublicChannel"
           ],
-          "summary": "Remove a public channel",
-          "description": "Remove a public channel from database\n",
+          "summary": "Remove an user public channel",
+          "description": "Remove an user public channel from database\n",
           "operationId": "publicChannelDelete",
           "parameters": [
             {
@@ -4609,7 +4609,7 @@ export class ApisConstants {
               "description": "OK"
             },
             "400": {
-              "description": "The user is not the public channer owner",
+              "description": "The user is not the public channel owner",
               "content": {
                 "application/json": {
                   "schema": {
@@ -4643,8 +4643,8 @@ export class ApisConstants {
           "tags": [
             "PublicChannel"
           ],
-          "summary": "Update a public channel",
-          "description": "Find and update a public channel in the database\n",
+          "summary": "Update an user public channel",
+          "description": "Find and update an user public channel in the database\n",
           "operationId": "publicChannelUpdate",
           "parameters": [
             {
@@ -4862,7 +4862,7 @@ export class ApisConstants {
             }
           ],
           "requestBody": {
-            "description": "Object that contain all parameters to suscribe to a public channel",
+            "description": "Object that contains all parameters to subscribe to a public channel",
             "content": {
               "application/json": {
                 "schema": {
@@ -4912,7 +4912,7 @@ export class ApisConstants {
           "tags": [
             "PublicChannel"
           ],
-          "summary": "Unsubcribe to a public channel",
+          "summary": "Unsubscribe to a public channel",
           "description": "Unsubscribe from a public channel to stop being a participant\n",
           "operationId": "publicChannelUnsubscribe",
           "parameters": [
@@ -4929,7 +4929,7 @@ export class ApisConstants {
             }
           ],
           "requestBody": {
-            "description": "Object that contain all parameters to unsubscribe to a public channel",
+            "description": "Object that contains all parameters to unsubscribe to a public channel",
             "content": {
               "application/json": {
                 "schema": {
@@ -4980,7 +4980,7 @@ export class ApisConstants {
             "PublicChannel"
           ],
           "summary": "Gets public channel messages",
-          "description": "Find the room in database and return all the messages\n",
+          "description": "Find the public channel in database and return all the messages\n",
           "operationId": "publicChannelUpRoomMessages",
           "parameters": [
             {
@@ -5051,7 +5051,7 @@ export class ApisConstants {
             }
           ],
           "requestBody": {
-            "description": "Object that contain all parameters to create a message",
+            "description": "Object that contains all parameters to create a message",
             "content": {
               "application/json": {
                 "schema": {
@@ -5101,8 +5101,8 @@ export class ApisConstants {
           "tags": [
             "PublicChannel"
           ],
-          "summary": "Remove a public channel message",
-          "description": "Remove a public channel message from database\n",
+          "summary": "Remove an user public channel message",
+          "description": "Remove an user public channel message from database\n",
           "operationId": "publicChannelDeleteMessage",
           "parameters": [
             {
@@ -5159,8 +5159,8 @@ export class ApisConstants {
           "tags": [
             "PublicChannel"
           ],
-          "summary": "Remove a public channel message",
-          "description": "Remove a public channel message from database\n",
+          "summary": "Remove any public channel message",
+          "description": "Remove any public channel message from database\n",
           "operationId": "publicChannelDeleteMessageAdmin",
           "parameters": [
             {
@@ -5332,7 +5332,7 @@ export class ApisConstants {
             "PublicChannel"
           ],
           "summary": "Upload a public channel image",
-          "description": "Save a public channel image in your filesystem\n",
+          "description": "Save a public channel image in your file system\n",
           "operationId": "publicChannelUpload",
           "parameters": [
             {
@@ -5539,7 +5539,7 @@ export class ApisConstants {
           "tags": [
             "WallPost"
           ],
-          "summary": "Get a wall post by id",
+          "summary": "Get a wall post by its identifier",
           "description": "Find a wall post in the database by its identifier\n",
           "operationId": "wallPostById",
           "parameters": [
@@ -5591,8 +5591,8 @@ export class ApisConstants {
           "tags": [
             "WallPost"
           ],
-          "summary": "Update a wall post",
-          "description": "Find and update a wall post in the database\n",
+          "summary": "Update an user wall post",
+          "description": "Find and update an user wall post in the database\n",
           "operationId": "wallPostUpdate",
           "parameters": [
             {
@@ -5655,8 +5655,8 @@ export class ApisConstants {
           "tags": [
             "WallPost"
           ],
-          "summary": "Remove a wall post",
-          "description": "Remove a wall post from database\n",
+          "summary": "Remove an user wall post",
+          "description": "Remove an user wall post from database\n",
           "operationId": "wallPostDelete",
           "parameters": [
             {
@@ -5906,7 +5906,7 @@ export class ApisConstants {
           "tags": [
             "WallPost"
           ],
-          "summary": "Delete like from a wall post",
+          "summary": "Remove like from a wall post",
           "description": "Find and update a wall post without the new like\n",
           "operationId": "wallPostUnlike",
           "parameters": [
@@ -6166,7 +6166,7 @@ export class ApisConstants {
             "WallPost"
           ],
           "summary": "Upload a wall post document",
-          "description": "Save a wall post document in your filesystem\n",
+          "description": "Save a wall post document in your file system\n",
           "operationId": "wallPostDocumentUpload",
           "requestBody": {
             "content": {
@@ -6278,7 +6278,7 @@ export class ApisConstants {
               "description": "OK"
             },
             "400": {
-              "description": "Body is empty, ownerMember is empty, invalid owner member, invalid password, invalid actor or ecosystem does not accept this type of actor",
+              "description": "Body is empty, owner member is empty, owner member is invalid, invalid password, invalid actor or ecosystem does not accept this type of actor",
               "content": {
                 "application/json": {
                   "schema": {
@@ -6768,7 +6768,7 @@ export class ApisConstants {
               "description": "OK"
             },
             "400": {
-              "description": "Body is empty or actor is empty",
+              "description": "Body is empty or cannot find the actor",
               "content": {
                 "application/json": {
                   "schema": {
@@ -6838,7 +6838,7 @@ export class ApisConstants {
               "description": "OK"
             },
             "400": {
-              "description": "Body is empty or actor is empty",
+              "description": "Body is empty or cannot find the actor",
               "content": {
                 "application/json": {
                   "schema": {
@@ -6941,7 +6941,7 @@ export class ApisConstants {
             "Actor"
           ],
           "summary": "Update the actor´s original image",
-          "description": "Save actor´s original image in your filesystem\n",
+          "description": "Save actor´s original image in your file system\n",
           "operationId": "actorUpdateOrginalImage",
           "requestBody": {
             "content": {
@@ -6983,7 +6983,7 @@ export class ApisConstants {
             "Actor"
           ],
           "summary": "Update the actor´s thumbnail image",
-          "description": "Save actor´s thumbnail image in your filesystem\n",
+          "description": "Save actor´s thumbnail image in your file system\n",
           "operationId": "actorUpdateThumbnailImage",
           "requestBody": {
             "content": {
@@ -7025,7 +7025,7 @@ export class ApisConstants {
             "Actor"
           ],
           "summary": "Upload actor media",
-          "description": "Save media in your filesystem\n",
+          "description": "Save media in your file system\n",
           "operationId": "actorUpdateMedia",
           "parameters": [
             {
@@ -7095,7 +7095,7 @@ export class ApisConstants {
             "Member"
           ],
           "summary": "Assign a fcm token",
-          "description": "update a member by assigning it a fcm token\n",
+          "description": "Update a member by assigning it a fcm token\n",
           "operationId": "fcmToken",
           "requestBody": {
             "content": {
@@ -7205,7 +7205,7 @@ export class ApisConstants {
           "tags": [
             "Member"
           ],
-          "summary": "Get members by ids",
+          "summary": "Get all members",
           "description": "Find the members in database by their identifiers\n",
           "operationId": "members",
           "parameters": [
@@ -7259,7 +7259,7 @@ export class ApisConstants {
           "tags": [
             "Member"
           ],
-          "summary": "Get a member by id",
+          "summary": "Get a member by its identifier",
           "description": "Find a member in the database by its identifier\n",
           "operationId": "member",
           "parameters": [
@@ -7422,7 +7422,7 @@ export class ApisConstants {
           "tags": [
             "Member"
           ],
-          "summary": "Get a member marker by id",
+          "summary": "Get a member marker by its identifier",
           "description": "Find a member marker in the database by its identifier\n",
           "operationId": "memberMarker",
           "parameters": [
@@ -7494,7 +7494,7 @@ export class ApisConstants {
             "Member"
           ],
           "summary": "Update the member´s original image",
-          "description": "Save member´s original image in your filesystem\n",
+          "description": "Save member´s original image in your file system\n",
           "operationId": "memberUpdateOrginalImage",
           "requestBody": {
             "content": {
@@ -7536,7 +7536,7 @@ export class ApisConstants {
             "Member"
           ],
           "summary": "Update the member´s thumbnail image",
-          "description": "Save actor´s thumbnail image in your filesystem\n",
+          "description": "Save member´s thumbnail image in your file system\n",
           "operationId": "memberUpdateThumbnailImage",
           "requestBody": {
             "content": {
@@ -7970,8 +7970,8 @@ export class ApisConstants {
           "tags": [
             "Project"
           ],
-          "summary": "Get project by id",
-          "description": "Find a project in the database by id\n",
+          "summary": "Get project by its identifier",
+          "description": "Find a project in the database by its identifier\n",
           "operationId": "project",
           "parameters": [
             {
@@ -8087,7 +8087,7 @@ export class ApisConstants {
             "Project"
           ],
           "summary": "Remove a project",
-          "description": "Remove a project in database\n",
+          "description": "Remove a project from database\n",
           "operationId": "projectDelete",
           "parameters": [
             {
@@ -8187,7 +8187,7 @@ export class ApisConstants {
             "Project"
           ],
           "summary": "Upload project media",
-          "description": "Save media in your filesystem\n",
+          "description": "Save media in your file system\n",
           "operationId": "projectUpdateMedia",
           "parameters": [
             {
@@ -12379,19 +12379,19 @@ export class ApisConstants {
     "tags": [
       {
         "name": "Version",
-        "description": "Endpoint that return Core last version"
+        "description": "Endpoint that returns Core last version"
       },
       {
         "name": "Signed Url",
-        "description": "Enpoint that sign a url"
+        "description": "Endpoint that signs an url"
       },
       {
         "name": "Open Graph",
-        "description": "Endpoint that return OG Tags"
+        "description": "Endpoint that returns og tags"
       },
       {
         "name": "Navbar",
-        "description": "Endpoint that return navbar information"
+        "description": "Endpoint that returns navbar information"
       },
       {
         "name": "Industry",
@@ -12437,7 +12437,7 @@ export class ApisConstants {
             "Version"
           ],
           "summary": "API version",
-          "description": "Return the lastest version of the API\n",
+          "description": "Return the latest version of the API\n",
           "operationId": "apiVersion",
           "responses": {
             "200": {
@@ -12466,14 +12466,14 @@ export class ApisConstants {
           "tags": [
             "Signed Url"
           ],
-          "summary": "Sign a url",
-          "description": "Generate a URL that provides permission to access a file\n",
+          "summary": "Sign an url",
+          "description": "Generate an url that provides permission to access a file\n",
           "operationId": "signUrl",
           "parameters": [
             {
               "name": "filename",
               "in": "query",
-              "description": "Filename which you want save in Amazon Web Services",
+              "description": "Filename which you want to save in Moonshot drive folder",
               "required": true,
               "schema": {
                 "type": "string",
@@ -12493,7 +12493,7 @@ export class ApisConstants {
           ],
           "responses": {
             "200": {
-              "description": "Generate a url successfully",
+              "description": "Generate an url successfully",
               "content": {
                 "application/json": {
                   "schema": {
@@ -12525,14 +12525,14 @@ export class ApisConstants {
           "tags": [
             "Open Graph"
           ],
-          "summary": "Get OG tags",
-          "description": "Get all OG tags from a url\n",
+          "summary": "Get og tags",
+          "description": "Get all og tags from an url\n",
           "operationId": "openGraph",
           "parameters": [
             {
               "name": "url",
               "in": "query",
-              "description": "Url from you want to get OG tags",
+              "description": "Url from you want to get og tags",
               "required": true,
               "schema": {
                 "type": "string",
@@ -12542,7 +12542,7 @@ export class ApisConstants {
           ],
           "responses": {
             "200": {
-              "description": "Get OG tags successfully",
+              "description": "Get og tags successfully",
               "content": {
                 "application/json": {
                   "schema": {
@@ -12552,7 +12552,7 @@ export class ApisConstants {
               }
             },
             "400": {
-              "description": "Cannot get og tags from URL",
+              "description": "Cannot get og tags from url",
               "content": {
                 "application/json": {
                   "schema": {
@@ -12589,11 +12589,11 @@ export class ApisConstants {
             "Navbar"
           ],
           "summary": "Get navbar information",
-          "description": "Find navbar information in database for a especific user\n",
+          "description": "Find navbar information in database for an specific user\n",
           "operationId": "navbar",
           "responses": {
             "200": {
-              "description": "Get navbar information successfully",
+              "description": "Get Navbar information successfully",
               "content": {
                 "application/json": {
                   "schema": {
@@ -12632,7 +12632,7 @@ export class ApisConstants {
           "tags": [
             "Industry"
           ],
-          "summary": "Get industry taxonomy by id",
+          "summary": "Get industry taxonomy by its identifier",
           "description": "Find an industry taxonomy in the database by its identifier\n",
           "operationId": "industryById",
           "parameters": [
@@ -12700,7 +12700,7 @@ export class ApisConstants {
           "tags": [
             "Business Model"
           ],
-          "summary": "Get business model taxonomy by id",
+          "summary": "Get business model taxonomy by its identifier",
           "description": "Find a business model taxonomy in the database by its identifier\n",
           "operationId": "businessModelById",
           "parameters": [
@@ -12768,7 +12768,7 @@ export class ApisConstants {
           "tags": [
             "Social Innovation"
           ],
-          "summary": "Get social innovation taxonomy by id",
+          "summary": "Get social innovation taxonomy by its identifier",
           "description": "Find a social innovation taxonomy in the database by its identifier\n",
           "operationId": "socialInnovationById",
           "parameters": [
@@ -12836,7 +12836,7 @@ export class ApisConstants {
           "tags": [
             "Deep Tech"
           ],
-          "summary": "Get deep tech taxonomy by id",
+          "summary": "Get deep tech taxonomy by its identifier",
           "description": "Find a deep tech taxonomy in the database by its identifier\n",
           "operationId": "deepTechById",
           "parameters": [
@@ -12905,7 +12905,7 @@ export class ApisConstants {
             "Ecosystem"
           ],
           "summary": "Check if the ecosystem has been created",
-          "description": "Check the database if there is an ecosystem to not allow creating another\n",
+          "description": "Check the database if there is an ecosystem\n",
           "operationId": "ecosystemInitialized",
           "responses": {
             "200": {
@@ -12932,7 +12932,7 @@ export class ApisConstants {
             "Ecosystem"
           ],
           "summary": "Get current ecosystem",
-          "description": "Find current ecosystem in database and get all the data associated\n",
+          "description": "Find the current ecosystem in database and get all the data associated\n",
           "operationId": "ecosystemFind",
           "responses": {
             "200": {
@@ -12974,7 +12974,7 @@ export class ApisConstants {
           "description": "Create a new ecosystem if another has not already been created\n",
           "operationId": "ecosystemCreate",
           "requestBody": {
-            "description": "Object that contain all parameters to create new ecosystem",
+            "description": "Object that contains all parameters to create new ecosystem",
             "content": {
               "application/json": {
                 "schema": {
@@ -13026,7 +13026,7 @@ export class ApisConstants {
             }
           ],
           "requestBody": {
-            "description": "Object that contain all parameters to update an ecosystem",
+            "description": "Object that contains all parameters to update an ecosystem",
             "content": {
               "application/json": {
                 "schema": {
@@ -13092,7 +13092,7 @@ export class ApisConstants {
             "Ecosystem"
           ],
           "summary": "Update the ecosystem´s original image",
-          "description": "Save ecosystem´s original image in your filesystem\n",
+          "description": "Save ecosystem´s original image in your file system\n",
           "operationId": "ecosystemUpdateOrginalImage",
           "requestBody": {
             "content": {
@@ -13134,7 +13134,7 @@ export class ApisConstants {
             "Ecosystem"
           ],
           "summary": "Update the ecosystem´s thumbnail image",
-          "description": "Save ecosystem´s thumbnail image in your filesystem\n",
+          "description": "Save ecosystem´s thumbnail image in your file system\n",
           "operationId": "ecosystemUpdateThumbnailImage",
           "requestBody": {
             "content": {
@@ -13176,7 +13176,7 @@ export class ApisConstants {
             "Ecosystem"
           ],
           "summary": "Upload media to the ecosystem",
-          "description": "Save media in your filesystem\n",
+          "description": "Save media in your file system\n",
           "operationId": "ecosystemUpdateMedia",
           "parameters": [
             {
@@ -13558,7 +13558,7 @@ export class ApisConstants {
           "tags": [
             "Invitation"
           ],
-          "summary": "Delete an invitation",
+          "summary": "Remove an invitation",
           "description": "Find and remove an invitation in the database\n",
           "operationId": "invitationDelete",
           "parameters": [
@@ -13620,7 +13620,7 @@ export class ApisConstants {
           "tags": [
             "Notification"
           ],
-          "summary": "Get notification by id",
+          "summary": "Get notification by its identifier",
           "description": "Find a notification in the database by its identifier\n",
           "operationId": "notificationById",
           "parameters": [
@@ -13675,7 +13675,7 @@ export class ApisConstants {
           "tags": [
             "Notification"
           ],
-          "summary": "Remove a notification by id",
+          "summary": "Remove a notification by its identifier",
           "description": "Remove a notification from the database by its identifier\n",
           "operationId": "notificationDelete",
           "parameters": [
@@ -13915,7 +13915,7 @@ export class ApisConstants {
           "tags": [
             "Setting"
           ],
-          "summary": "Get current ecosystem setting",
+          "summary": "Get current ecosystem Setting",
           "description": "Find current ecosystem setting in database and all the data associated\n",
           "operationId": "setting",
           "responses": {
@@ -13964,7 +13964,7 @@ export class ApisConstants {
           "tags": [
             "Setting"
           ],
-          "summary": "Create an ecosystem setting",
+          "summary": "Create an ecosystem Setting",
           "description": "Create and insert an ecosystem setting in database\n",
           "requestBody": {
             "description": "Object that contains all parameters to create a setting",
@@ -14032,9 +14032,9 @@ export class ApisConstants {
           "tags": [
             "Setting"
           ],
-          "summary": "Update the settings´s original image",
-          "description": "Save ecosystem´s original image in your filesystem\n",
-          "operationId": "settingUpdateOrginalImage",
+          "summary": "Update the Setting´s original image",
+          "description": "Save ecosystem´s original image in your file system\n",
+          "operationId": "settingUpdateOriginalImage",
           "requestBody": {
             "content": {
               "multipart/form-data": {
@@ -14104,8 +14104,8 @@ export class ApisConstants {
           "tags": [
             "Setting"
           ],
-          "summary": "Update the settings´s thumbnail image",
-          "description": "Save ecosystem´s thumbnail image in your filesystem\n",
+          "summary": "Update the Setting´s thumbnail image",
+          "description": "Save ecosystem´s thumbnail image in your file system\n",
           "operationId": "settingUpdateThumbnailImage",
           "requestBody": {
             "content": {
@@ -14176,8 +14176,8 @@ export class ApisConstants {
           "tags": [
             "Challenge"
           ],
-          "summary": "Upload challenge media",
-          "description": "Save media in your filesystem\n",
+          "summary": "Upload Challenge media",
+          "description": "Save media in your file system\n",
           "operationId": "challengeUpdateMedia",
           "requestBody": {
             "content": {
@@ -14233,8 +14233,8 @@ export class ApisConstants {
           "tags": [
             "Challenge"
           ],
-          "summary": "Upload challenge news",
-          "description": "Save news in your filesystem\n",
+          "summary": "Upload Challenge news",
+          "description": "Save news in your file system\n",
           "operationId": "challengeUpdateNews",
           "requestBody": {
             "content": {
@@ -14331,7 +14331,7 @@ export class ApisConstants {
               "type": "string",
               "example": "In this video I show you how to build a Mario in JavaScript using the Kaboom.js library in my code editor of choice"
             },
-            "imageURL": {
+            "imageUrl": {
               "type": "string",
               "example": "https://i.ytimg.com/vi/2nucjefSr6I/maxresdefault.jpg"
             },
@@ -14346,7 +14346,7 @@ export class ApisConstants {
           "properties": {
             "message": {
               "type": "string",
-              "example": "OpenGraph tags URL not found."
+              "example": "OpenGraph tags url not found."
             },
             "code": {
               "type": "string",
@@ -14359,7 +14359,7 @@ export class ApisConstants {
           "properties": {
             "message": {
               "type": "string",
-              "example": "Invalid S3 signed URL."
+              "example": "Invalid S3 signed url."
             },
             "code": {
               "type": "string",
@@ -15724,11 +15724,11 @@ export class ApisConstants {
     "tags": [
       {
         "name": "Version",
-        "description": "Endpoint that return Datahub last version"
+        "description": "Endpoint that returns Datahub latest version"
       },
       {
         "name": "Event",
-        "description": "Endpoint that create a Moonshot Event"
+        "description": "Endpoint that creates a Moonshot Event"
       }
     ],
     "paths": {
@@ -15768,7 +15768,7 @@ export class ApisConstants {
             "Event"
           ],
           "summary": "Create Moonshot event",
-          "description": "Create Moonshot event, save in the file system and send to the broker",
+          "description": "Create Moonshot event, save in the file system and send it to the broker",
           "operationId": "moonshotEvent",
           "requestBody": {
             "description": "Object that contains all parameters to create a Moonshot Event",
@@ -15785,7 +15785,7 @@ export class ApisConstants {
               "description": "OK"
             },
             "403": {
-              "description": "The application has not the neccesar",
+              "description": "The application has not the necessary permissions",
               "content": {
                 "application/json": {
                   "schema": {

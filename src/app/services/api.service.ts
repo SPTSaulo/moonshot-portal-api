@@ -88,13 +88,14 @@ export class ApiService {
           method: Method.GET
         }
       ],
-      description: 'Esta es la api de Federation. ' +
-        'Esta api recoge todos los enpoints relacionados con los usuarios de Moonshot Innovation. ' +
-        'En esta api encontrará los siguientes endpoints:\n' +
-        '- Todos los endpoints relacionados con la sesión del usuario\n' +
-        '- Todos los endpoints de obtención de usuarios\n' +
-        '- Todos los endpoints de modificación de los permisos de los usuarios\n' +
-        '- Todos los endpoints de recuperación de la contraseña\n',
+      description: 'This is the Federation API. ' +
+        'This api collects all the enpoints related to Moonshot Innovation users. ' +
+        'In this api you will find the following endpoints:\n' +
+        '- All user session endpoints\n' +
+        '- All user permissions modification endpoints\n' +
+        '- All user acquisition endpoints\n' +
+        '- All user session endpoints\n' +
+        '- All password recovery endpoints\n',
       swagger: ApisConstants.federation
     },
     {
@@ -245,13 +246,14 @@ export class ApiService {
           method: Method.POST
         }
       ],
-      description: 'Esta es la api de Core. ' +
-        'Esta api recoge todos los enpoints relacionados con las funcionalidades principales de la plataforma. ' +
-        'En esta api encontrará los siguientes endpoints:\n' +
-        '- Todos los endpoints de obtención de taxonomias\n' +
-        '- Todos los endpoints de obtención, creación y modificación de un ecosistema\n' +
-        '- Todos los endpoints de obtención y creación de notificaciones\n' +
-        '- Todos los endpoints de modificación de retos',
+      description: 'This is the Core API. ' +
+        'This API collects all the endpoints related to the main functionalities of the platform. ' +
+        'In this api you will find the following endpoints:' +
+        '\n' +
+        '- All taxonomy acquisition endpoints\n' +
+        '- All ecosystem acquisition, creation and modifications endpoints\n' +
+        '- All notifications acquisition and creation endpoints\n' +
+        '- All challenges modification endpoints',
       swagger: ApisConstants.core
     },
     {
@@ -714,16 +716,16 @@ export class ApiService {
           method: Method.PUT
         }
       ],
-      description: 'Esta es la api de Community. ' +
-        'Esta api recoge todos los endpoints relacionados con el modulo de Comunidades. ' +
-        'En esta api encontrará los siguientes endpoints:\n' +
-        '- Todos los endpoints de obtención, creación y modificación de los eventos (eventos onlines y eventos presenciales).\n' +
-        '- Todos los endpoints de obtención, creación y modificación de salas de comunicación (follow up rooms, direct chats y public channels)\n' +
-        '- Todos los endpoints de obtención, creación y modificación de las publicaciones en el muro del ecosistema\n' +
-        '- Todos los endpoints de obtención, creación y modificación de actorses\n' +
-        '- Todos los endpoints de obtención, creación y modificación de miembros\n' +
-        '- Todos los endpoints de obtención, creación y modificación de proyectos\n' +
-        '- Todos los endpoints de obtención, creación y modificación de ajustes del ecosistema\n',
+      description: 'This is Community API. ' +
+        'This API collects all the endpoints related to the Community module. ' +
+        'In this api you will find the following endpoints:\n' +
+        '- All events (online events and face to face events) acquisition, creation and modification endpoints.\n' +
+        '- All rooms (follow up rooms, direct chats and public channel) acquisition, creation and modification endpoints\n' +
+        '- All wall post acquisition, creation and modification endpoints\n' +
+        '- All actors acquisition, creation and modification endpoints\n' +
+        '- All members acquisition, creation and modification endpoints\n' +
+        '- All projects acquisition, creation and modification endpoints\n' +
+        '- All ecosystem settings acquisition, creation and modification endpoints\n',
       swagger: ApisConstants.community
     },
     {
@@ -738,8 +740,9 @@ export class ApiService {
           method: Method.POST
         }
       ],
-      description: "Esta es la api de Datahub. Esta api recoge todos los endpoints relacionados con la gestión de los eventos. En esta api encontrará los siguientes endpoints:\n" +
-        "- Todos los endpoints de creación los eventos de Moonshot.\n",
+      description: "This is Datahub API. This api collects all the endpoints related to the management of events. " +
+        "In this api you will find the following endpoints:\n" +
+        "- All events (Moonshot events) creation endpoints.\n",
       swagger: ApisConstants.datahub
     }
   ]

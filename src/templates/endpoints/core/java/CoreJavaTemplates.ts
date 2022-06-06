@@ -6,8 +6,8 @@ export class CoreJavaTemplates {
     name: "version",
     code: "\nSystem.setProperty(\"CORE_HOST\", \"localhost\");\n" +
       "System.setProperty(\"CORE_PORT\", \"8082\");\n" +
-      "String clientId = \"iUNFZUf83T5OazTjDv3gkjwfGMZ7fGT9\";\n" +
-      "String clientSecret = \"xWJN3YO0kuJ-gD19zltey9N5R1Cz0ltQJZtad-p1YQJCh6-hckl8I_hnbMbHuSQ4\";\n" +
+      "String clientId = \"YOUR_CLIENT_ID\";\n" +
+      "String clientId = \"YOUR_CLIENT_SECRET\";\n" +
       "App app = new App(clientId, clientSecret);\n" +
       "CoreApi coreApi = new CoreApi();\n" +
       "String version = coreApi.internal().version(app).getResponse();\n" +
@@ -20,8 +20,8 @@ export class CoreJavaTemplates {
     code: "\nSystem.setProperty(\"CORE_HOST\", \"localhost\");\n" +
       "System.setProperty(\"CORE_PORT\", \"8082\");\n" +
       "System.setProperty(\"AUTH0_DOMAIN\", \"dev-708nr3pf.eu.auth0.com\");\n" +
-      "String clientId = \"iUNFZUf83T5OazTjDv3gkjwfGMZ7fGT9\";\n" +
-      "String clientSecret = \"xWJN3YO0kuJ-gD19zltey9N5R1Cz0ltQJZtad-p1YQJCh6-hckl8I_hnbMbHuSQ4\";\n" +
+      "String clientId = \"YOUR_CLIENT_ID\";\n" +
+      "String clientId = \"YOUR_CLIENT_SECRET\";\n" +
       "App app = new App(clientId, clientSecret);\n" +
       "CoreApi coreApi = new CoreApi();\n" +
       "String signedUrl = coreApi.internal().signedUrl(app, \"ejemplo1.pdf\", \"application/pdf\").getResponse();\n" +
@@ -34,8 +34,8 @@ export class CoreJavaTemplates {
     code: "\nSystem.setProperty(\"CORE_HOST\", \"localhost\");\n" +
       "System.setProperty(\"CORE_PORT\", \"8082\");\n" +
       "System.setProperty(\"AUTH0_DOMAIN\", \"dev-708nr3pf.eu.auth0.com\");\n" +
-      "String clientId = \"iUNFZUf83T5OazTjDv3gkjwfGMZ7fGT9\";\n" +
-      "String clientSecret = \"xWJN3YO0kuJ-gD19zltey9N5R1Cz0ltQJZtad-p1YQJCh6-hckl8I_hnbMbHuSQ4\";\n" +
+      "String clientId = \"YOUR_CLIENT_ID\";\n" +
+      "String clientId = \"YOUR_CLIENT_SECRET\";\n" +
       "App app = new App(clientId, clientSecret);\n" +
       "CoreApi coreApi = new CoreApi();\n" +
       "String opengraph = coreApi.internal().openGraph(app, \"https://youtu.be/k3zoVAMuW5w\").getResponse();\n" +
@@ -53,8 +53,8 @@ export class CoreJavaTemplates {
     code: "\nSystem.setProperty(\"CORE_HOST\", \"localhost\");\n" +
       "System.setProperty(\"CORE_PORT\", \"8082\");\n" +
       "System.setProperty(\"AUTH0_DOMAIN\", \"dev-708nr3pf.eu.auth0.com\");\n" +
-      "String clientId = \"iUNFZUf83T5OazTjDv3gkjwfGMZ7fGT9\";\n" +
-      "String clientSecret = \"xWJN3YO0kuJ-gD19zltey9N5R1Cz0ltQJZtad-p1YQJCh6-hckl8I_hnbMbHuSQ4\";\n" +
+      "String clientId = \"YOUR_CLIENT_ID\";\n" +
+      "String clientId = \"YOUR_CLIENT_SECRET\";\n" +
       "App app = new App(clientId, clientSecret);\n" +
       "CoreApi coreApi = new CoreApi();\n" +
       "Navbar navbar = coreApi.internal().navbar(app).getResponse();\n" +
@@ -75,8 +75,8 @@ export class CoreJavaTemplates {
     code: "\nSystem.setProperty(\"CORE_HOST\", \"localhost\");\n" +
       "System.setProperty(\"CORE_PORT\", \"8082\");\n" +
       "System.setProperty(\"AUTH0_DOMAIN\", \"dev-708nr3pf.eu.auth0.com\");\n" +
-      "String clientId = \"iUNFZUf83T5OazTjDv3gkjwfGMZ7fGT9\";\n" +
-      "String clientSecret = \"xWJN3YO0kuJ-gD19zltey9N5R1Cz0ltQJZtad-p1YQJCh6-hckl8I_hnbMbHuSQ4\";\n" +
+      "String clientId = \"YOUR_CLIENT_ID\";\n" +
+      "String clientId = \"YOUR_CLIENT_SECRET\";\n" +
       "App app = new App(clientId, clientSecret);\n" +
       "CoreApi coreApi = new CoreApi();\n" +
       "Taxonomy industry = coreApi.industries().industry(app, \"61e81133a0f21a79320fcacb\").getResponse();\n" +
@@ -93,8 +93,8 @@ export class CoreJavaTemplates {
     code: "\nSystem.setProperty(\"CORE_HOST\", \"localhost\");\n" +
       "System.setProperty(\"CORE_PORT\", \"8082\");\n" +
       "System.setProperty(\"AUTH0_DOMAIN\", \"dev-708nr3pf.eu.auth0.com\");\n" +
-      "String clientId = \"iUNFZUf83T5OazTjDv3gkjwfGMZ7fGT9\";\n" +
-      "String clientSecret = \"xWJN3YO0kuJ-gD19zltey9N5R1Cz0ltQJZtad-p1YQJCh6-hckl8I_hnbMbHuSQ4\";\n" +
+      "String clientId = \"YOUR_CLIENT_ID\";\n" +
+      "String clientId = \"YOUR_CLIENT_SECRET\";\n" +
       "App app = new App(clientId, clientSecret);\n" +
       "CoreApi coreApi = new CoreApi();\n" +
       "List<Taxonomy> industries = coreApi.industries().all(app).getResponse();\n" +
@@ -253,8 +253,8 @@ export class CoreJavaTemplates {
     code: "\nSystem.setProperty(\"CORE_HOST\", \"localhost\");\n" +
       "System.setProperty(\"CORE_PORT\", \"8082\");\n" +
       "System.setProperty(\"AUTH0_DOMAIN\", \"dev-708nr3pf.eu.auth0.com\");\n" +
-      "String clientId = \"iUNFZUf83T5OazTjDv3gkjwfGMZ7fGT9\";\n" +
-      "String clientSecret = \"xWJN3YO0kuJ-gD19zltey9N5R1Cz0ltQJZtad-p1YQJCh6-hckl8I_hnbMbHuSQ4\";\n" +
+      "String clientId = \"YOUR_CLIENT_ID\";\n" +
+      "String clientId = \"YOUR_CLIENT_SECRET\";\n" +
       "App app = new App(clientId, clientSecret);\n" +
       "CoreApi coreApi = new CoreApi();\n" +
       "Taxonomy businessModel = coreApi.businessModels().businessModel(app, \"61e81133a0f21a79320fcabd\").getResponse();\n" +
@@ -271,8 +271,8 @@ export class CoreJavaTemplates {
     code: "\nSystem.setProperty(\"CORE_HOST\", \"localhost\");\n" +
       "System.setProperty(\"CORE_PORT\", \"8082\");\n" +
       "System.setProperty(\"AUTH0_DOMAIN\", \"dev-708nr3pf.eu.auth0.com\");\n" +
-      "String clientId = \"iUNFZUf83T5OazTjDv3gkjwfGMZ7fGT9\";\n" +
-      "String clientSecret = \"xWJN3YO0kuJ-gD19zltey9N5R1Cz0ltQJZtad-p1YQJCh6-hckl8I_hnbMbHuSQ4\";\n" +
+      "String clientId = \"YOUR_CLIENT_ID\";\n" +
+      "String clientId = \"YOUR_CLIENT_SECRET\";\n" +
       "App app = new App(clientId, clientSecret);\n" +
       "CoreApi coreApi = new CoreApi();\n" +
       "List<Taxonomy> businessModels = coreApi.businessModels().all(app).getResponse();\n" +
@@ -323,8 +323,8 @@ export class CoreJavaTemplates {
     code: "\nSystem.setProperty(\"CORE_HOST\", \"localhost\");\n" +
       "System.setProperty(\"CORE_PORT\", \"8082\");\n" +
       "System.setProperty(\"AUTH0_DOMAIN\", \"dev-708nr3pf.eu.auth0.com\");\n" +
-      "String clientId = \"iUNFZUf83T5OazTjDv3gkjwfGMZ7fGT9\";\n" +
-      "String clientSecret = \"xWJN3YO0kuJ-gD19zltey9N5R1Cz0ltQJZtad-p1YQJCh6-hckl8I_hnbMbHuSQ4\";\n" +
+      "String clientId = \"YOUR_CLIENT_ID\";\n" +
+      "String clientId = \"YOUR_CLIENT_SECRET\";\n" +
       "App app = new App(clientId, clientSecret);\n" +
       "CoreApi coreApi = new CoreApi();\n" +
       "Taxonomy socialInnovation = coreApi.socialInnovations().socialInnovation(app, \"61e81134a0f21a79320fcaef\").getResponse();\n" +
@@ -341,8 +341,8 @@ export class CoreJavaTemplates {
     code: "\nSystem.setProperty(\"CORE_HOST\", \"localhost\");\n" +
       "System.setProperty(\"CORE_PORT\", \"8082\");\n" +
       "System.setProperty(\"AUTH0_DOMAIN\", \"dev-708nr3pf.eu.auth0.com\");\n" +
-      "String clientId = \"iUNFZUf83T5OazTjDv3gkjwfGMZ7fGT9\";\n" +
-      "String clientSecret = \"xWJN3YO0kuJ-gD19zltey9N5R1Cz0ltQJZtad-p1YQJCh6-hckl8I_hnbMbHuSQ4\";\n" +
+      "String clientId = \"YOUR_CLIENT_ID\";\n" +
+      "String clientId = \"YOUR_CLIENT_SECRET\";\n" +
       "App app = new App(clientId, clientSecret);\n" +
       "CoreApi coreApi = new CoreApi();\n" +
       "List<Taxonomy> socialInnovations = coreApi.socialInnovations().all(app).getResponse();\n" +
@@ -425,8 +425,8 @@ export class CoreJavaTemplates {
     code: "\nSystem.setProperty(\"CORE_HOST\", \"localhost\");\n" +
       "System.setProperty(\"CORE_PORT\", \"8082\");\n" +
       "System.setProperty(\"AUTH0_DOMAIN\", \"dev-708nr3pf.eu.auth0.com\");\n" +
-      "String clientId = \"iUNFZUf83T5OazTjDv3gkjwfGMZ7fGT9\";\n" +
-      "String clientSecret = \"xWJN3YO0kuJ-gD19zltey9N5R1Cz0ltQJZtad-p1YQJCh6-hckl8I_hnbMbHuSQ4\";\n" +
+      "String clientId = \"YOUR_CLIENT_ID\";\n" +
+      "String clientId = \"YOUR_CLIENT_SECRET\";\n" +
       "App app = new App(clientId, clientSecret);\n" +
       "CoreApi coreApi = new CoreApi();\n" +
       "DeepTechNode deepTech = coreApi.deepTechs().deepTech(app, \"61e81133a0f21a79320fcac6\").getResponse();\n" +
@@ -533,8 +533,8 @@ export class CoreJavaTemplates {
     code: "\nSystem.setProperty(\"CORE_HOST\", \"localhost\");\n" +
       "System.setProperty(\"CORE_PORT\", \"8082\");\n" +
       "System.setProperty(\"AUTH0_DOMAIN\", \"dev-708nr3pf.eu.auth0.com\");\n" +
-      "String clientId = \"iUNFZUf83T5OazTjDv3gkjwfGMZ7fGT9\";\n" +
-      "String clientSecret = \"xWJN3YO0kuJ-gD19zltey9N5R1Cz0ltQJZtad-p1YQJCh6-hckl8I_hnbMbHuSQ4\";\n" +
+      "String clientId = \"YOUR_CLIENT_ID\";\n" +
+      "String clientId = \"YOUR_CLIENT_SECRET\";\n" +
       "App app = new App(clientId, clientSecret);\n" +
       "CoreApi coreApi = new CoreApi();\n" +
       "List<DeepTechNode> deepTechs = coreApi.deepTechs().all(app).getResponse();\n" +
@@ -1006,8 +1006,8 @@ export class CoreJavaTemplates {
     code: "\nSystem.setProperty(\"CORE_HOST\", \"localhost\");\n" +
       "System.setProperty(\"CORE_PORT\", \"8082\");\n" +
       "System.setProperty(\"AUTH0_DOMAIN\", \"dev-708nr3pf.eu.auth0.com\");\n" +
-      "String clientId = \"iUNFZUf83T5OazTjDv3gkjwfGMZ7fGT9\";\n" +
-      "String clientSecret = \"xWJN3YO0kuJ-gD19zltey9N5R1Cz0ltQJZtad-p1YQJCh6-hckl8I_hnbMbHuSQ4\";\n" +
+      "String clientId = \"YOUR_CLIENT_ID\";\n" +
+      "String clientId = \"YOUR_CLIENT_SECRET\";\n" +
       "App app = new App(clientId, clientSecret);\n" +
       "CoreApi coreApi = new CoreApi();\n" +
       "Boolean initialized = coreApi.ecosystems().initialized(app).getResponse();\n" +
@@ -1020,8 +1020,8 @@ export class CoreJavaTemplates {
     code: "\nSystem.setProperty(\"CORE_HOST\", \"localhost\");\n" +
       "System.setProperty(\"CORE_PORT\", \"8082\");\n" +
       "System.setProperty(\"AUTH0_DOMAIN\", \"dev-708nr3pf.eu.auth0.com\");\n" +
-      "String clientId = \"iUNFZUf83T5OazTjDv3gkjwfGMZ7fGT9\";\n" +
-      "String clientSecret = \"xWJN3YO0kuJ-gD19zltey9N5R1Cz0ltQJZtad-p1YQJCh6-hckl8I_hnbMbHuSQ4\";\n" +
+      "String clientId = \"YOUR_CLIENT_ID\";\n" +
+      "String clientId = \"YOUR_CLIENT_SECRET\";\n" +
       "App app = new App(clientId, clientSecret);\n" +
       "CoreApi coreApi = new CoreApi();\n" +
       "Ecosystem ecosystem = coreApi.ecosystems().current(app).getResponse();\n" +
@@ -1112,54 +1112,78 @@ export class CoreJavaTemplates {
   public static ecosystem_post: EndpointTemplate = {
     name: "ecosystem",
     code: "\nSystem.setProperty(\"CORE_HOST\", \"localhost\");\n" +
-      " System.setProperty(\"CORE_PORT\", \"8082\");\n" +
-      " System.setProperty(\"AUTH0_DOMAIN\", \"dev-708nr3pf.eu.auth0.com\");\n" +
-      " String clientId = \"iUNFZUf83T5OazTjDv3gkjwfGMZ7fGT9\";\n" +
-      " String clientSecret = \"xWJN3YO0kuJ-gD19zltey9N5R1Cz0ltQJZtad-p1YQJCh6-hckl8I_hnbMbHuSQ4\";\n" +
-      " App app = new App(clientId, clientSecret);\n" +
-      " CoreApi coreApi = new CoreApi();\n" +
-      " EcosystemCreateEvent ecosystemCreateEvent = new EcosystemCreateEvent();\n" +
-      " ecosystemCreateEvent.setType(EcosystemType.CORPORATE);\n" +
-      " ecosystemCreateEvent.setName(\"New ecosystem\");\n" +
-      " ecosystemCreateEvent.setAddress(\"Calle Poniente, 33\");\n" +
-      " ecosystemCreateEvent.setLatitude(22.7);\n" +
-      " ecosystemCreateEvent.setLongitude(80.9);\n" +
-      " ecosystemCreateEvent.setCity(\"Madrid\");\n" +
-      " ecosystemCreateEvent.setCountry(\"Spain\");\n" +
-      " ecosystemCreateEvent.setPhone(\"+34666666666\");\n" +
-      " ecosystemCreateEvent.setWeb(\"https://dev.moonshot.ceo\");\n" +
-      " ecosystemCreateEvent.setDescription(\"Ecosystem description\");\n" +
-      " ecosystemCreateEvent.setObjectives(\"Ecosystem objectives\");\n" +
-      " ecosystemCreateEvent.setLogo(new Image());\n" +
-      " ecosystemCreateEvent.setAcceptedActors(new ArrayList<String>());\n" +
-      " ecosystemCreateEvent.setServices(new ArrayList<EcosystemServiceType>());\n" +
-      " ecosystemCreateEvent.setCustomServices(new ArrayList<String>());\n" +
-      " ecosystemCreateEvent.setMedia(new ArrayList<String>());\n" +
-      " ecosystemCreateEvent.setSocialNetworks(new ArrayList<String>());\n" +
-      " ecosystemCreateEvent.setDeepTechs(new ArrayList<String>());\n" +
-      " ecosystemCreateEvent.setBusinessModels(new ArrayList<String>());\n" +
-      " ecosystemCreateEvent.setIndustries(new ArrayList<String>());\n" +
-      " ecosystemCreateEvent.setSocialNetworks(new ArrayList<String>());\n" +
-      " coreApi.ecosystems().create(app, ecosystemCreateEvent);",
+      "System.setProperty(\"CORE_PORT\", \"8082\");\n" +
+      "System.setProperty(\"AUTH0_DOMAIN\", \"dev-708nr3pf.eu.auth0.com\");\n" +
+      "String clientId = \"YOUR_CLIENT_ID\";\n" +
+      "String clientId = \"YOUR_CLIENT_SECRET\";\n" +
+      "App app = new App(clientId, clientSecret);\n" +
+      "CoreApi coreApi = new CoreApi();\n" +
+      "EcosystemCreateEvent ecosystemCreateEvent = new EcosystemCreateEvent();\n" +
+      "ecosystemCreateEvent.setType(EcosystemType.CORPORATE);\n" +
+      "eecosystemCreateEvent.setName(\"New ecosystem\");\n" +
+      "ecosystemCreateEvent.setAddress(\"Calle Poniente, 33\");\n" +
+      "ecosystemCreateEvent.setLatitude(22.7);\n" +
+      "ecosystemCreateEvent.setLongitude(80.9);\n" +
+      "ecosystemCreateEvent.setCity(\"Madrid\");\n" +
+      "ecosystemCreateEvent.setCountry(\"Spain\");\n" +
+      "ecosystemCreateEvent.setPhone(\"+34666666666\");\n" +
+      "ecosystemCreateEvent.setWeb(\"https://dev.moonshot.ceo\");\n" +
+      "ecosystemCreateEvent.setDescription(\"Ecosystem description\");\n" +
+      "ecosystemCreateEvent.setObjectives(\"Ecosystem objectives\");\n" +
+      "ecosystemCreateEvent.setLogo(new Image());\n" +
+      "ecosystemCreateEvent.setAcceptedActors(new ArrayList<String>());\n" +
+      "ecosystemCreateEvent.setServices(new ArrayList<EcosystemServiceType>());\n" +
+      "ecosystemCreateEvent.setCustomServices(new ArrayList<String>());\n" +
+      "ecosystemCreateEvent.setMedia(new ArrayList<String>());\n" +
+      "ecosystemCreateEvent.setSocialNetworks(new ArrayList<String>());\n" +
+      "ecosystemCreateEvent.setDeepTechs(new ArrayList<String>());\n" +
+      "ecosystemCreateEvent.setBusinessModels(new ArrayList<String>());\n" +
+      "ecosystemCreateEvent.setIndustries(new ArrayList<String>());\n" +
+      "ecosystemCreateEvent.setSocialNetworks(new ArrayList<String>());\n" +
+      "coreApi.ecosystems().create(app, ecosystemCreateEvent);",
     response: null
   }
 
   public static ecosystem_upload_original_post: EndpointTemplate = {
     name: "ecosystems/upload/original",
-    code: "\nTODO",
-    response: "\nTODO"
+    code: "\nSystem.setProperty(\"CORE_HOST\", \"localhost\");\n" +
+      "System.setProperty(\"CORE_PORT\", \"8082\");\n" +
+      "System.setProperty(\"AUTH0_DOMAIN\", \"dev-708nr3pf.eu.auth0.com\");\n" +
+      "String clientId = \"YOUR_CLIENT_ID\";\n" +
+      "String clientId = \"YOUR_CLIENT_SECRET\";\n" +
+      "App app = new App(clientId, clientSecret);\n" +
+      "CoreApi coreApi = new CoreApi();\n" +
+      "File file = new File(\"C:\\\\Users\\\\saulo\\\\Downloads\\\\descarga.jpg\");\n" +
+      "coreApi.ecosystems().uploadOriginal(app, file);",
+    response: null
   }
 
   public static ecosystem_upload_thumbnail_post: EndpointTemplate = {
     name: "ecosystems/upload/thumbnail",
-    code: "\nTODO",
-    response: "\nTODO"
+    code: "\nSystem.setProperty(\"CORE_HOST\", \"localhost\");\n" +
+      "System.setProperty(\"CORE_PORT\", \"8082\");\n" +
+      "System.setProperty(\"AUTH0_DOMAIN\", \"dev-708nr3pf.eu.auth0.com\");\n" +
+      "String clientId = \"YOUR_CLIENT_ID\";\n" +
+      "String clientId = \"YOUR_CLIENT_SECRET\";\n" +
+      "App app = new App(clientId, clientSecret);\n" +
+      "CoreApi coreApi = new CoreApi();\n" +
+      "File file = new File(\"C:\\\\Users\\\\saulo\\\\Downloads\\\\descarga.jpg\");\n" +
+      "coreApi.ecosystems().uploadThumbnail(app, file);",
+    response: null
   }
 
   public static ecosystem_id_upload_media_put: EndpointTemplate = {
     name: "ecosystems/:id/upload/media",
-    code: "\nTODO",
-    response: "\nTODO"
+    code: "\nSystem.setProperty(\"CORE_HOST\", \"localhost\");\n" +
+      "System.setProperty(\"CORE_PORT\", \"8082\");\n" +
+      "System.setProperty(\"AUTH0_DOMAIN\", \"dev-708nr3pf.eu.auth0.com\");\n" +
+      "String clientId = \"YOUR_CLIENT_ID\";\n" +
+      "String clientId = \"YOUR_CLIENT_SECRET\";\n" +
+      "App app = new App(clientId, clientSecret);\n" +
+      "CoreApi coreApi = new CoreApi();\n" +
+      "File file = new File(\"C:\\\\Users\\\\saulo\\\\Downloads\\\\descarga.jpg\");\n" +
+      "coreApi.ecosystems().uploadMedia(app, \"1\", file);",
+    response: null
   }
 
   public static ecosystem_put: EndpointTemplate = {
@@ -1167,8 +1191,8 @@ export class CoreJavaTemplates {
     code: "\nSystem.setProperty(\"CORE_HOST\", \"localhost\");\n" +
       "System.setProperty(\"CORE_PORT\", \"8082\");\n" +
       "System.setProperty(\"AUTH0_DOMAIN\", \"dev-708nr3pf.eu.auth0.com\");\n" +
-      "String clientId = \"iUNFZUf83T5OazTjDv3gkjwfGMZ7fGT9\";\n" +
-      "String clientSecret = \"xWJN3YO0kuJ-gD19zltey9N5R1Cz0ltQJZtad-p1YQJCh6-hckl8I_hnbMbHuSQ4\";\n" +
+      "String clientId = \"YOUR_CLIENT_ID\";\n" +
+      "String clientId = \"YOUR_CLIENT_SECRET\";\n" +
       "App app = new App(clientId, clientSecret);\n" +
       "CoreApi coreApi = new CoreApi();\n" +
       "Ecosystem ecosystem = coreApi.ecosystems().current(app).getResponse();\n" +
@@ -1204,8 +1228,8 @@ export class CoreJavaTemplates {
     code: "\nSystem.setProperty(\"CORE_HOST\", \"localhost\");\n" +
       "System.setProperty(\"CORE_PORT\", \"8082\");\n" +
       "System.setProperty(\"AUTH0_DOMAIN\", \"dev-708nr3pf.eu.auth0.com\");\n" +
-      "String clientId = \"iUNFZUf83T5OazTjDv3gkjwfGMZ7fGT9\";\n" +
-      "String clientSecret = \"xWJN3YO0kuJ-gD19zltey9N5R1Cz0ltQJZtad-p1YQJCh6-hckl8I_hnbMbHuSQ4\";\n" +
+      "String clientId = \"YOUR_CLIENT_ID\";\n" +
+      "String clientId = \"YOUR_CLIENT_SECRET\";\n" +
       "App app = new App(clientId, clientSecret);\n" +
       "CoreApi coreApi = new CoreApi();\n" +
       "Invitation invitation = coreApi.invitations().paged(app, null, 0).getResponse();\n" +
@@ -1229,8 +1253,8 @@ export class CoreJavaTemplates {
     code: "\nSystem.setProperty(\"CORE_HOST\", \"localhost\");\n" +
       "System.setProperty(\"CORE_PORT\", \"8082\");\n" +
       "System.setProperty(\"AUTH0_DOMAIN\", \"dev-708nr3pf.eu.auth0.com\");\n" +
-      "String clientId = \"iUNFZUf83T5OazTjDv3gkjwfGMZ7fGT9\";\n" +
-      "String clientSecret = \"xWJN3YO0kuJ-gD19zltey9N5R1Cz0ltQJZtad-p1YQJCh6-hckl8I_hnbMbHuSQ4\";\n" +
+      "String clientId = \"YOUR_CLIENT_ID\";\n" +
+      "String clientId = \"YOUR_CLIENT_SECRET\";\n" +
       "App app = new App(clientId, clientSecret);\n" +
       "CoreApi coreApi = new CoreApi();\n" +
       "Invitation invitation = coreApi.invitations().byEmail(app, \"saulosantanab@hotmail.com\").getResponse();\n" +
@@ -1254,8 +1278,8 @@ export class CoreJavaTemplates {
     code: "\nSystem.setProperty(\"CORE_HOST\", \"localhost\");\n" +
       "System.setProperty(\"CORE_PORT\", \"8082\");\n" +
       "System.setProperty(\"AUTH0_DOMAIN\", \"dev-708nr3pf.eu.auth0.com\");\n" +
-      "String clientId = \"iUNFZUf83T5OazTjDv3gkjwfGMZ7fGT9\";\n" +
-      "String clientSecret = \"xWJN3YO0kuJ-gD19zltey9N5R1Cz0ltQJZtad-p1YQJCh6-hckl8I_hnbMbHuSQ4\";\n" +
+      "String clientId = \"YOUR_CLIENT_ID\";\n" +
+      "String clientId = \"YOUR_CLIENT_SECRET\";\n" +
       "App app = new App(clientId, clientSecret);\n" +
       "CoreApi coreApi = new CoreApi();\n" +
       "InvitationCreateEvent invitation = new InvitationCreateEvent();\n" +
@@ -1274,8 +1298,8 @@ export class CoreJavaTemplates {
     code: "\nSystem.setProperty(\"CORE_HOST\", \"localhost\");\n" +
       "System.setProperty(\"CORE_PORT\", \"8082\");\n" +
       "System.setProperty(\"AUTH0_DOMAIN\", \"dev-708nr3pf.eu.auth0.com\");\n" +
-      "String clientId = \"iUNFZUf83T5OazTjDv3gkjwfGMZ7fGT9\";\n" +
-      "String clientSecret = \"xWJN3YO0kuJ-gD19zltey9N5R1Cz0ltQJZtad-p1YQJCh6-hckl8I_hnbMbHuSQ4\";\n" +
+      "String clientId = \"YOUR_CLIENT_ID\";\n" +
+      "String clientId = \"YOUR_CLIENT_SECRET\";\n" +
       "App app = new App(clientId, clientSecret);\n" +
       "CoreApi coreApi = new CoreApi();\n" +
       "Invitation invitation = coreApi.invitations().byEmail(app, \"saulosantanab@hotmail.com\").getResponse();\n" +
@@ -1292,8 +1316,8 @@ export class CoreJavaTemplates {
     code: "\nSystem.setProperty(\"CORE_HOST\", \"localhost\");\n" +
       "System.setProperty(\"CORE_PORT\", \"8082\");\n" +
       "System.setProperty(\"AUTH0_DOMAIN\", \"dev-708nr3pf.eu.auth0.com\");\n" +
-      "String clientId = \"iUNFZUf83T5OazTjDv3gkjwfGMZ7fGT9\";\n" +
-      "String clientSecret = \"xWJN3YO0kuJ-gD19zltey9N5R1Cz0ltQJZtad-p1YQJCh6-hckl8I_hnbMbHuSQ4\";\n" +
+      "String clientId = \"YOUR_CLIENT_ID\";\n" +
+      "String clientId = \"YOUR_CLIENT_SECRET\";\n" +
       "App app = new App(clientId, clientSecret);\n" +
       "CoreApi coreApi = new CoreApi();\n" +
       "coreApi.invitations().delete(app, \"1\");",
@@ -1305,8 +1329,8 @@ export class CoreJavaTemplates {
     code: "\nSystem.setProperty(\"CORE_HOST\", \"localhost\");\n" +
       "System.setProperty(\"CORE_PORT\", \"8082\");\n" +
       "System.setProperty(\"AUTH0_DOMAIN\", \"dev-708nr3pf.eu.auth0.com\");\n" +
-      "String clientId = \"iUNFZUf83T5OazTjDv3gkjwfGMZ7fGT9\";\n" +
-      "String clientSecret = \"xWJN3YO0kuJ-gD19zltey9N5R1Cz0ltQJZtad-p1YQJCh6-hckl8I_hnbMbHuSQ4\";\n" +
+      "String clientId = \"YOUR_CLIENT_ID\";\n" +
+      "String clientId = \"YOUR_CLIENT_SECRET\";\n" +
       "App app = new App(clientId, clientSecret);\n" +
       "CoreApi coreApi = new CoreApi();\n" +
       "NotificationPage notificationPage = coreApi.notifications().paged(app, 1, 10).getResponse();\n" +
@@ -1825,8 +1849,8 @@ export class CoreJavaTemplates {
     code: "\nSystem.setProperty(\"CORE_HOST\", \"localhost\");\n" +
       "System.setProperty(\"CORE_PORT\", \"8082\");\n" +
       "System.setProperty(\"AUTH0_DOMAIN\", \"dev-708nr3pf.eu.auth0.com\");\n" +
-      "String clientId = \"iUNFZUf83T5OazTjDv3gkjwfGMZ7fGT9\";\n" +
-      "String clientSecret = \"xWJN3YO0kuJ-gD19zltey9N5R1Cz0ltQJZtad-p1YQJCh6-hckl8I_hnbMbHuSQ4\";\n" +
+      "String clientId = \"YOUR_CLIENT_ID\";\n" +
+      "String clientId = \"YOUR_CLIENT_SECRET\";\n" +
       "App app = new App(clientId, clientSecret);\n" +
       "CoreApi coreApi = new CoreApi();\n" +
       "Notification notification = coreApi.notifications().notification(app, \"61979934ff9e3333fc5d77f1\").getResponse();\n" +
@@ -1891,8 +1915,8 @@ export class CoreJavaTemplates {
     code: "\nSystem.setProperty(\"CORE_HOST\", \"localhost\");\n" +
       "System.setProperty(\"CORE_PORT\", \"8082\");\n" +
       "System.setProperty(\"AUTH0_DOMAIN\", \"dev-708nr3pf.eu.auth0.com\");\n" +
-      "String clientId = \"iUNFZUf83T5OazTjDv3gkjwfGMZ7fGT9\";\n" +
-      "String clientSecret = \"xWJN3YO0kuJ-gD19zltey9N5R1Cz0ltQJZtad-p1YQJCh6-hckl8I_hnbMbHuSQ4\";\n" +
+      "String clientId = \"YOUR_CLIENT_ID\";\n" +
+      "String clientId = \"YOUR_CLIENT_SECRET\";\n" +
       "App app = new App(clientId, clientSecret);\n" +
       "CoreApi coreApi = new CoreApi();\n" +
       "NotificationPage notificationPage = coreApi.notifications().pending(app).getResponse();\n" +
@@ -1966,8 +1990,8 @@ export class CoreJavaTemplates {
     code: "\nSystem.setProperty(\"CORE_HOST\", \"localhost\");\n" +
       "System.setProperty(\"CORE_PORT\", \"8082\");\n" +
       "System.setProperty(\"AUTH0_DOMAIN\", \"dev-708nr3pf.eu.auth0.com\");\n" +
-      "String clientId = \"iUNFZUf83T5OazTjDv3gkjwfGMZ7fGT9\";\n" +
-      "String clientSecret = \"xWJN3YO0kuJ-gD19zltey9N5R1Cz0ltQJZtad-p1YQJCh6-hckl8I_hnbMbHuSQ4\";\n" +
+      "String clientId = \"YOUR_CLIENT_ID\";\n" +
+      "String clientId = \"YOUR_CLIENT_SECRET\";\n" +
       "App app = new App(clientId, clientSecret);\n" +
       "CoreApi coreApi = new CoreApi();\n" +
       "Notification notification = new Notification();\n" +
@@ -1992,8 +2016,8 @@ export class CoreJavaTemplates {
     code: "\nSystem.setProperty(\"CORE_HOST\", \"localhost\");\n" +
       "System.setProperty(\"CORE_PORT\", \"8082\");\n" +
       "System.setProperty(\"AUTH0_DOMAIN\", \"dev-708nr3pf.eu.auth0.com\");\n" +
-      "String clientId = \"iUNFZUf83T5OazTjDv3gkjwfGMZ7fGT9\";\n" +
-      "String clientSecret = \"xWJN3YO0kuJ-gD19zltey9N5R1Cz0ltQJZtad-p1YQJCh6-hckl8I_hnbMbHuSQ4\";\n" +
+      "String clientId = \"YOUR_CLIENT_ID\";\n" +
+      "String clientId = \"YOUR_CLIENT_SECRET\";\n" +
       "App app = new App(clientId, clientSecret);\n" +
       "CoreApi coreApi = new CoreApi();\n" +
       "Notification notification = coreApi.notifications().notification(app, \"61979934ff9e3333fc5d77f1\").getResponse();\n" +
@@ -2009,8 +2033,8 @@ export class CoreJavaTemplates {
     code: "\nSystem.setProperty(\"CORE_HOST\", \"localhost\");\n" +
       "System.setProperty(\"CORE_PORT\", \"8082\");\n" +
       "System.setProperty(\"AUTH0_DOMAIN\", \"dev-708nr3pf.eu.auth0.com\");\n" +
-      "String clientId = \"iUNFZUf83T5OazTjDv3gkjwfGMZ7fGT9\";\n" +
-      "String clientSecret = \"xWJN3YO0kuJ-gD19zltey9N5R1Cz0ltQJZtad-p1YQJCh6-hckl8I_hnbMbHuSQ4\";\n" +
+      "String clientId = \"YOUR_CLIENT_ID\";\n" +
+      "String clientId = \"YOUR_CLIENT_SECRET\";\n" +
       "App app = new App(clientId, clientSecret);\n" +
       "CoreApi coreApi = new CoreApi();\n" +
       "coreApi.notifications().delete(app, \"61979934ff9e3333fc5d77f1\");",
@@ -2022,8 +2046,8 @@ export class CoreJavaTemplates {
     code: "\nSystem.setProperty(\"CORE_HOST\", \"localhost\");\n" +
       "System.setProperty(\"CORE_PORT\", \"8082\");\n" +
       "System.setProperty(\"AUTH0_DOMAIN\", \"dev-708nr3pf.eu.auth0.com\");\n" +
-      "String clientId = \"iUNFZUf83T5OazTjDv3gkjwfGMZ7fGT9\";\n" +
-      "String clientSecret = \"xWJN3YO0kuJ-gD19zltey9N5R1Cz0ltQJZtad-p1YQJCh6-hckl8I_hnbMbHuSQ4\";\n" +
+      "String clientId = \"YOUR_CLIENT_ID\";\n" +
+      "String clientId = \"YOUR_CLIENT_SECRET\";\n" +
       "App app = new App(clientId, clientSecret);\n" +
       "CoreApi coreApi = new CoreApi();\n" +
       "SettingSaveEvent settingSaveEvent = new SettingSaveEvent();\n" +
@@ -2037,8 +2061,8 @@ export class CoreJavaTemplates {
     code: "\nSystem.setProperty(\"CORE_HOST\", \"localhost\");\n" +
       "System.setProperty(\"CORE_PORT\", \"8082\");\n" +
       "System.setProperty(\"AUTH0_DOMAIN\", \"dev-708nr3pf.eu.auth0.com\");\n" +
-      "String clientId = \"iUNFZUf83T5OazTjDv3gkjwfGMZ7fGT9\";\n" +
-      "String clientSecret = \"xWJN3YO0kuJ-gD19zltey9N5R1Cz0ltQJZtad-p1YQJCh6-hckl8I_hnbMbHuSQ4\";\n" +
+      "String clientId = \"YOUR_CLIENT_ID\";\n" +
+      "String clientId = \"YOUR_CLIENT_SECRET\";\n" +
       "App app = new App(clientId, clientSecret);\n" +
       "CoreApi coreApi = new CoreApi();\n" +
       "Setting setting = coreApi.settings().current(app).getResponse();\n" +
@@ -2061,25 +2085,57 @@ export class CoreJavaTemplates {
 
   public static setting_upload_original_post: EndpointTemplate = {
     name: "settings/upload/original",
-    code: "\nTODO",
-    response: "\nTODO"
+    code: "\nSystem.setProperty(\"CORE_HOST\", \"localhost\");\n" +
+      "System.setProperty(\"CORE_PORT\", \"8082\");\n" +
+      "System.setProperty(\"AUTH0_DOMAIN\", \"dev-708nr3pf.eu.auth0.com\");\n" +
+      "String clientId = \"YOUR_CLIENT_ID\";\n" +
+      "String clientId = \"YOUR_CLIENT_SECRET\";\n" +
+      "App app = new App(clientId, clientSecret);\n" +
+      "CoreApi coreApi = new CoreApi();\n" +
+      "File file = new File(\"C:\\\\Users\\\\saulo\\\\Downloads\\\\descarga.jpg\");\n" +
+      "coreApi.settings().uploadOriginal(app, file);",
+    response: null
   }
 
   public static setting_upload_thumbnail_post: EndpointTemplate = {
     name: "settings/upload/thumbnail",
-    code: "\nTODO",
-    response: "\nTODO"
+    code: "\nSystem.setProperty(\"CORE_HOST\", \"localhost\");\n" +
+      "System.setProperty(\"CORE_PORT\", \"8082\");\n" +
+      "System.setProperty(\"AUTH0_DOMAIN\", \"dev-708nr3pf.eu.auth0.com\");\n" +
+      "String clientId = \"YOUR_CLIENT_ID\";\n" +
+      "String clientId = \"YOUR_CLIENT_SECRET\";\n" +
+      "App app = new App(clientId, clientSecret);\n" +
+      "CoreApi coreApi = new CoreApi();\n" +
+      "File file = new File(\"C:\\\\Users\\\\saulo\\\\Downloads\\\\descarga.jpg\");\n" +
+      "coreApi.settings().uploadThumbnail(app, file);",
+    response: null
   }
 
   public static challenge_upload_media_post: EndpointTemplate = {
     name: "challenges/upload/media",
-    code: "\nTODO",
-    response: "\nTODO"
+    code: "\nSystem.setProperty(\"CORE_HOST\", \"localhost\");\n" +
+      "System.setProperty(\"CORE_PORT\", \"8082\");\n" +
+      "System.setProperty(\"AUTH0_DOMAIN\", \"dev-708nr3pf.eu.auth0.com\");\n" +
+      "String clientId = \"YOUR_CLIENT_ID\";\n" +
+      "String clientId = \"YOUR_CLIENT_SECRET\";\n" +
+      "App app = new App(clientId, clientSecret);\n" +
+      "CoreApi coreApi = new CoreApi();\n" +
+      "File file = new File(\"C:\\\\Users\\\\saulo\\\\Downloads\\\\descarga.jpg\");\n" +
+      "coreApi.challenges().uploadMedia(app, file);",
+    response: null
   }
 
   public static challenge_upload_news_post: EndpointTemplate = {
     name: "challenges/upload/news",
-    code: "\nTODO",
-    response: "\nTODO"
+    code: "System.setProperty(\"CORE_HOST\", \"localhost\");\n" +
+      "System.setProperty(\"CORE_PORT\", \"8082\");\n" +
+      "System.setProperty(\"AUTH0_DOMAIN\", \"dev-708nr3pf.eu.auth0.com\");\n" +
+      "String clientId = \"YOUR_CLIENT_ID\";\n" +
+      "String clientId = \"YOUR_CLIENT_SECRET\";\n" +
+      "App app = new App(clientId, clientSecret);\n" +
+      "CoreApi coreApi = new CoreApi();\n" +
+      "File file = new File(\"C:\\\\Users\\\\saulo\\\\Downloads\\\\descarga.jpg\");\n" +
+      "coreApi.challenges().uploadNews(app, file);",
+    response: null
   }
 }
