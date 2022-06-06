@@ -20,7 +20,7 @@
   "tags": [
     {
       "name": "Version",
-      "description": "Endpoint that return Core last version"
+      "description": "Endpoint that return Federation last version"
     },
     {
       "name": "Login",

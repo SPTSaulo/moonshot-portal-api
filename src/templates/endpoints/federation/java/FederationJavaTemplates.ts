@@ -7,8 +7,8 @@ export class FederationJavaTemplates {
     code: "\nSystem.setProperty(\"FEDERATION_HOST\", \"localhost\");\n" +
       "System.setProperty(\"FEDERATION_PORT\", \"8081\");\n" +
       "System.setProperty(\"AUTH0_DOMAIN\", \"dev-708nr3pf.eu.auth0.com\");\n" +
-      "String clientId = \"iUNFZUf83T5OazTjDv3gkjwfGMZ7fGT9\";\n" +
-      "String clientSecret = \"xWJN3YO0kuJ-gD19zltey9N5R1Cz0ltQJZtad-p1YQJCh6-hckl8I_hnbMbHuSQ4\";\n" +
+      "String clientId = \"YOUR_CLIENT_ID\";\n" +
+      "String clientId = \"YOUR_CLIENT_SECRET\";\n" +
       "App app = new App(clientId, clientSecret);\n" +
       "FederationApi federationApi = new FederationApi();\n" +
       "String version = federationApi.internal().version(app).getResponse();\n" +
@@ -21,8 +21,8 @@ export class FederationJavaTemplates {
     code: "\nSystem.setProperty(\"FEDERATION_HOST\", \"localhost\");\n" +
       "System.setProperty(\"FEDERATION_PORT\", \"8081\");\n" +
       "System.setProperty(\"AUTH0_DOMAIN\", \"dev-708nr3pf.eu.auth0.com\");\n" +
-      "String clientId = \"iUNFZUf83T5OazTjDv3gkjwfGMZ7fGT9\";\n" +
-      "String clientSecret = \"xWJN3YO0kuJ-gD19zltey9N5R1Cz0ltQJZtad-p1YQJCh6-hckl8I_hnbMbHuSQ4\";\n" +
+      "String clientId = \"YOUR_CLIENT_ID\";\n" +
+      "String clientId = \"YOUR_CLIENT_SECRET\";\n" +
       "App app = new App(clientId, clientSecret);\n" +
       "FederationApi federationApi = new FederationApi();\n" +
       "federationApi.internal().login(app, \"YOUR_EMAIL\", \"YOUR_PASSWORD\");",
@@ -34,8 +34,8 @@ export class FederationJavaTemplates {
     code: "\nSystem.setProperty(\"FEDERATION_HOST\", \"localhost\");\n" +
       "System.setProperty(\"FEDERATION_PORT\", \"8081\");\n" +
       "System.setProperty(\"AUTH0_DOMAIN\", \"dev-708nr3pf.eu.auth0.com\");\n" +
-      "String clientId = \"iUNFZUf83T5OazTjDv3gkjwfGMZ7fGT9\";\n" +
-      "String clientSecret = \"xWJN3YO0kuJ-gD19zltey9N5R1Cz0ltQJZtad-p1YQJCh6-hckl8I_hnbMbHuSQ4\";\n" +
+      "String clientId = \"YOUR_CLIENT_ID\";\n" +
+      "String clientId = \"YOUR_CLIENT_SECRET\";\n" +
       "App app = new App(clientId, clientSecret);\n" +
       "FederationApi federationApi = new FederationApi();\n" +
       "String logout = federationApi.internal().logout(app).getResponse();\n" +
@@ -48,8 +48,8 @@ export class FederationJavaTemplates {
     code: "\nSystem.setProperty(\"FEDERATION_HOST\", \"localhost\");\n" +
       "System.setProperty(\"FEDERATION_PORT\", \"8081\");\n" +
       "System.setProperty(\"AUTH0_DOMAIN\", \"dev-708nr3pf.eu.auth0.com\");\n" +
-      "String clientId = \"iUNFZUf83T5OazTjDv3gkjwfGMZ7fGT9\";\n" +
-      "String clientSecret = \"xWJN3YO0kuJ-gD19zltey9N5R1Cz0ltQJZtad-p1YQJCh6-hckl8I_hnbMbHuSQ4\";\n" +
+      "String clientId = \"YOUR_CLIENT_ID\";\n" +
+      "String clientId = \"YOUR_CLIENT_SECRET\";\n" +
       "App app = new App(clientId, clientSecret);\n" +
       "FederationApi federationApi = new FederationApi();\n" +
       "federationApi.internal().token(app, \"YOUR_TOKEN\");",
@@ -61,8 +61,8 @@ export class FederationJavaTemplates {
     code: "\nSystem.setProperty(\"FEDERATION_HOST\", \"localhost\");\n" +
       "System.setProperty(\"FEDERATION_PORT\", \"8081\");\n" +
       "System.setProperty(\"AUTH0_DOMAIN\", \"dev-708nr3pf.eu.auth0.com\");\n" +
-      "String clientId = \"iUNFZUf83T5OazTjDv3gkjwfGMZ7fGT9\";\n" +
-      "String clientSecret = \"xWJN3YO0kuJ-gD19zltey9N5R1Cz0ltQJZtad-p1YQJCh6-hckl8I_hnbMbHuSQ4\";\n" +
+      "String clientId = \"YOUR_CLIENT_ID\";\n" +
+      "String clientId = \"YOUR_CLIENT_SECRET\";\n" +
       "App app = new App(clientId, clientSecret);\n" +
       "FederationApi federationApi = new FederationApi();\n" +
       "List<Community> communities = federationApi.internal().communities(app).getResponse();\n" +
@@ -81,8 +81,8 @@ export class FederationJavaTemplates {
     code: "\nSystem.setProperty(\"FEDERATION_HOST\", \"localhost\");\n" +
       "System.setProperty(\"FEDERATION_PORT\", \"8081\");\n" +
       "System.setProperty(\"AUTH0_DOMAIN\", \"dev-708nr3pf.eu.auth0.com\");\n" +
-      "String clientId = \"iUNFZUf83T5OazTjDv3gkjwfGMZ7fGT9\";\n" +
-      "String clientSecret = \"xWJN3YO0kuJ-gD19zltey9N5R1Cz0ltQJZtad-p1YQJCh6-hckl8I_hnbMbHuSQ4\";\n" +
+      "String clientId = \"YOUR_CLIENT_ID\";\n" +
+      "String clientId = \"YOUR_CLIENT_SECRET\";\n" +
       "App app = new App(clientId, clientSecret);\n" +
       "FederationApi federationApi = new FederationApi();\n" +
       "List<String> modules = federationApi.internal().modules(app, \"saulobach1@gmail.com\").getResponse();\n" +
@@ -100,8 +100,8 @@ export class FederationJavaTemplates {
     code: "\nSystem.setProperty(\"FEDERATION_HOST\", \"localhost\");\n" +
       "System.setProperty(\"FEDERATION_PORT\", \"8081\");\n" +
       "System.setProperty(\"AUTH0_DOMAIN\", \"dev-708nr3pf.eu.auth0.com\");\n" +
-      "String clientId = \"iUNFZUf83T5OazTjDv3gkjwfGMZ7fGT9\";\n" +
-      "String clientSecret = \"xWJN3YO0kuJ-gD19zltey9N5R1Cz0ltQJZtad-p1YQJCh6-hckl8I_hnbMbHuSQ4\";\n" +
+      "String clientId = \"YOUR_CLIENT_ID\";\n" +
+      "String clientId = \"YOUR_CLIENT_SECRET\";\n" +
       "App app = new App(clientId, clientSecret);\n" +
       "FederationApi federationApi = new FederationApi();\n" +
       "User user = federationApi.users().user(app, \"1\").getResponse();\n" +
@@ -143,8 +143,8 @@ export class FederationJavaTemplates {
     code: "\nSystem.setProperty(\"FEDERATION_HOST\", \"localhost\");\n" +
       "System.setProperty(\"FEDERATION_PORT\", \"8081\");\n" +
       "System.setProperty(\"AUTH0_DOMAIN\", \"dev-708nr3pf.eu.auth0.com\");\n" +
-      "String clientId = \"iUNFZUf83T5OazTjDv3gkjwfGMZ7fGT9\";\n" +
-      "String clientSecret = \"xWJN3YO0kuJ-gD19zltey9N5R1Cz0ltQJZtad-p1YQJCh6-hckl8I_hnbMbHuSQ4\";\n" +
+      "String clientId = \"YOUR_CLIENT_ID\";\n" +
+      "String clientId = \"YOUR_CLIENT_SECRET\";\n" +
       "App app = new App(clientId, clientSecret);\n" +
       "FederationApi federationApi = new FederationApi();\n" +
       "User user = federationApi.users().userByEmail(app, \"user1@gmail.com\").getResponse();\n" +
@@ -186,8 +186,8 @@ export class FederationJavaTemplates {
     code: "\nSystem.setProperty(\"FEDERATION_HOST\", \"localhost\");\n" +
       "System.setProperty(\"FEDERATION_PORT\", \"8081\");\n" +
       "System.setProperty(\"AUTH0_DOMAIN\", \"dev-708nr3pf.eu.auth0.com\");\n" +
-      "String clientId = \"iUNFZUf83T5OazTjDv3gkjwfGMZ7fGT9\";\n" +
-      "String clientSecret = \"xWJN3YO0kuJ-gD19zltey9N5R1Cz0ltQJZtad-p1YQJCh6-hckl8I_hnbMbHuSQ4\";\n" +
+      "String clientId = \"YOUR_CLIENT_ID\";\n" +
+      "String clientId = \"YOUR_CLIENT_SECRET\";\n" +
       "App app = new App(clientId, clientSecret);\n" +
       "FederationApi federationApi = new FederationApi();\n" +
       "List<User> users = federationApi.users().all(app).getResponse();\n" +
@@ -255,8 +255,8 @@ export class FederationJavaTemplates {
     code: "\nSystem.setProperty(\"FEDERATION_HOST\", \"localhost\");\n" +
       "System.setProperty(\"FEDERATION_PORT\", \"8081\");\n" +
       "System.setProperty(\"AUTH0_DOMAIN\", \"dev-708nr3pf.eu.auth0.com\");\n" +
-      "String clientId = \"iUNFZUf83T5OazTjDv3gkjwfGMZ7fGT9\";\n" +
-      "String clientSecret = \"xWJN3YO0kuJ-gD19zltey9N5R1Cz0ltQJZtad-p1YQJCh6-hckl8I_hnbMbHuSQ4\";\n" +
+      "String clientId = \"YOUR_CLIENT_ID\";\n" +
+      "String clientId = \"YOUR_CLIENT_SECRET\";\n" +
       "App app = new App(clientId, clientSecret);\n" +
       "FederationApi federationApi = new FederationApi();\n" +
       "List<User> users = federationApi.users().byRoles(app, new ArrayList<Role>()).getResponse();\n" +
@@ -324,8 +324,8 @@ export class FederationJavaTemplates {
     code: "\nSystem.setProperty(\"FEDERATION_HOST\", \"localhost\");\n" +
       "System.setProperty(\"FEDERATION_PORT\", \"8081\");\n" +
       "System.setProperty(\"AUTH0_DOMAIN\", \"dev-708nr3pf.eu.auth0.com\");\n" +
-      "String clientId = \"iUNFZUf83T5OazTjDv3gkjwfGMZ7fGT9\";\n" +
-      "String clientSecret = \"xWJN3YO0kuJ-gD19zltey9N5R1Cz0ltQJZtad-p1YQJCh6-hckl8I_hnbMbHuSQ4\";\n" +
+      "String clientId = \"YOUR_CLIENT_ID\";\n" +
+      "String clientId = \"YOUR_CLIENT_SECRET\";\n" +
       "App app = new App(clientId, clientSecret);\n" +
       "FederationApi federationApi = new FederationApi();\n" +
       "List<User> users = federationApi.users().byPerms(app, new ArrayList<Permission>()).getResponse();\n" +
@@ -393,8 +393,8 @@ export class FederationJavaTemplates {
     code: "\nSystem.setProperty(\"FEDERATION_HOST\", \"localhost\");\n" +
       "System.setProperty(\"FEDERATION_PORT\", \"8081\");\n" +
       "System.setProperty(\"AUTH0_DOMAIN\", \"dev-708nr3pf.eu.auth0.com\");\n" +
-      "String clientId = \"iUNFZUf83T5OazTjDv3gkjwfGMZ7fGT9\";\n" +
-      "String clientSecret = \"xWJN3YO0kuJ-gD19zltey9N5R1Cz0ltQJZtad-p1YQJCh6-hckl8I_hnbMbHuSQ4\";\n" +
+      "String clientId = \"YOUR_CLIENT_ID\";\n" +
+      "String clientId = \"YOUR_CLIENT_SECRET\";\n" +
       "App app = new App(clientId, clientSecret);\n" +
       "FederationApi federationApi = new FederationApi();\n" +
       "List<Permission> permissions = federationApi.users().perms(app, \"60acae8e2f799d228a4d4a85\").getResponse();\n" +
@@ -427,8 +427,8 @@ export class FederationJavaTemplates {
     code: "\nSystem.setProperty(\"FEDERATION_HOST\", \"localhost\");\n" +
       "System.setProperty(\"FEDERATION_PORT\", \"8081\");\n" +
       "System.setProperty(\"AUTH0_DOMAIN\", \"dev-708nr3pf.eu.auth0.com\");\n" +
-      "String clientId = \"iUNFZUf83T5OazTjDv3gkjwfGMZ7fGT9\";\n" +
-      "String clientSecret = \"xWJN3YO0kuJ-gD19zltey9N5R1Cz0ltQJZtad-p1YQJCh6-hckl8I_hnbMbHuSQ4\";\n" +
+      "String clientId = \"YOUR_CLIENT_ID\";\n" +
+      "String clientId = \"YOUR_CLIENT_SECRET\";\n" +
       "App app = new App(clientId, clientSecret);\n" +
       "FederationApi federationApi = new FederationApi();\n" +
       "User user = federationApi.users().user(app, \"1\").getResponse();\n" +
@@ -444,8 +444,8 @@ export class FederationJavaTemplates {
     code: "\nSystem.setProperty(\"FEDERATION_HOST\", \"localhost\");\n" +
       "System.setProperty(\"FEDERATION_PORT\", \"8081\");\n" +
       "System.setProperty(\"AUTH0_DOMAIN\", \"dev-708nr3pf.eu.auth0.com\");\n" +
-      "String clientId = \"iUNFZUf83T5OazTjDv3gkjwfGMZ7fGT9\";\n" +
-      "String clientSecret = \"xWJN3YO0kuJ-gD19zltey9N5R1Cz0ltQJZtad-p1YQJCh6-hckl8I_hnbMbHuSQ4\";\n" +
+      "String clientId = \"YOUR_CLIENT_ID\";\n" +
+      "String clientId = \"YOUR_CLIENT_SECRET\";\n" +
       "App app = new App(clientId, clientSecret);\n" +
       "FederationApi federationApi = new FederationApi();\n" +
       "UserVerifyEvent userVerifyEvent = new UserVerifyEvent();\n" +
@@ -462,8 +462,8 @@ export class FederationJavaTemplates {
     code: "\nSystem.setProperty(\"FEDERATION_HOST\", \"localhost\");\n" +
       "System.setProperty(\"FEDERATION_PORT\", \"8081\");\n" +
       "System.setProperty(\"AUTH0_DOMAIN\", \"dev-708nr3pf.eu.auth0.com\");\n" +
-      "String clientId = \"iUNFZUf83T5OazTjDv3gkjwfGMZ7fGT9\";\n" +
-      "String clientSecret = \"xWJN3YO0kuJ-gD19zltey9N5R1Cz0ltQJZtad-p1YQJCh6-hckl8I_hnbMbHuSQ4\";\n" +
+      "String clientId = \"YOUR_CLIENT_ID\";\n" +
+      "String clientId = \"YOUR_CLIENT_SECRET\";\n" +
       "App app = new App(clientId, clientSecret);\n" +
       "FederationApi federationApi = new FederationApi();\n" +
       "ResendVerificationEmailEvent resendVerificationEmailEvent = new ResendVerificationEmailEvent();\n" +
@@ -477,8 +477,8 @@ export class FederationJavaTemplates {
     code: "\nSystem.setProperty(\"FEDERATION_HOST\", \"localhost\");\n" +
       "System.setProperty(\"FEDERATION_PORT\", \"8081\");\n" +
       "System.setProperty(\"AUTH0_DOMAIN\", \"dev-708nr3pf.eu.auth0.com\");\n" +
-      "String clientId = \"iUNFZUf83T5OazTjDv3gkjwfGMZ7fGT9\";\n" +
-      "String clientSecret = \"xWJN3YO0kuJ-gD19zltey9N5R1Cz0ltQJZtad-p1YQJCh6-hckl8I_hnbMbHuSQ4\";\n" +
+      "String clientId = \"YOUR_CLIENT_ID\";\n" +
+      "String clientId = \"YOUR_CLIENT_SECRET\";\n" +
       "App app = new App(clientId, clientSecret);\n" +
       "FederationApi federationApi = new FederationApi();\n" +
       "LocalDate lastModificationPassword = federationApi.passwords().lastModification(app, \"YOUR_EMAIL\").getResponse();\n" +
@@ -491,8 +491,8 @@ export class FederationJavaTemplates {
     code: "\nSystem.setProperty(\"FEDERATION_HOST\", \"localhost\");\n" +
       "System.setProperty(\"FEDERATION_PORT\", \"8081\");\n" +
       "System.setProperty(\"AUTH0_DOMAIN\", \"dev-708nr3pf.eu.auth0.com\");\n" +
-      "String clientId = \"iUNFZUf83T5OazTjDv3gkjwfGMZ7fGT9\";\n" +
-      "String clientSecret = \"xWJN3YO0kuJ-gD19zltey9N5R1Cz0ltQJZtad-p1YQJCh6-hckl8I_hnbMbHuSQ4\";\n" +
+      "String clientId = \"YOUR_CLIENT_ID\";\n" +
+      "String clientId = \"YOUR_CLIENT_SECRET\";\n" +
       "App app = new App(clientId, clientSecret);\n" +
       "FederationApi federationApi = new FederationApi();\n" +
       "User user = federationApi.users().user(app, \"1\").getResponse();\n" +
@@ -508,8 +508,8 @@ export class FederationJavaTemplates {
     code: "\nSystem.setProperty(\"FEDERATION_HOST\", \"localhost\");\n" +
       "System.setProperty(\"FEDERATION_PORT\", \"8081\");\n" +
       "System.setProperty(\"AUTH0_DOMAIN\", \"dev-708nr3pf.eu.auth0.com\");\n" +
-      "String clientId = \"iUNFZUf83T5OazTjDv3gkjwfGMZ7fGT9\";\n" +
-      "String clientSecret = \"xWJN3YO0kuJ-gD19zltey9N5R1Cz0ltQJZtad-p1YQJCh6-hckl8I_hnbMbHuSQ4\";\n" +
+      "String clientId = \"YOUR_CLIENT_ID\";\n" +
+      "String clientId = \"YOUR_CLIENT_SECRET\";\n" +
       "App app = new App(clientId, clientSecret);\n" +
       "FederationApi federationApi = new FederationApi();\n" +
       "User user = federationApi.users().user(app, \"1\").getResponse();\n" +
@@ -526,8 +526,8 @@ export class FederationJavaTemplates {
     code: "\nSystem.setProperty(\"FEDERATION_HOST\", \"localhost\");\n" +
       "System.setProperty(\"FEDERATION_PORT\", \"8081\");\n" +
       "System.setProperty(\"AUTH0_DOMAIN\", \"dev-708nr3pf.eu.auth0.com\");\n" +
-      "String clientId = \"iUNFZUf83T5OazTjDv3gkjwfGMZ7fGT9\";\n" +
-      "String clientSecret = \"xWJN3YO0kuJ-gD19zltey9N5R1Cz0ltQJZtad-p1YQJCh6-hckl8I_hnbMbHuSQ4\";\n" +
+      "String clientId = \"YOUR_CLIENT_ID\";\n" +
+      "String clientId = \"YOUR_CLIENT_SECRET\";\n" +
       "App app = new App(clientId, clientSecret);\n" +
       "FederationApi federationApi = new FederationApi();\n" +
       "User user = federationApi.users().user(app, \"1\").getResponse();\n" +
@@ -544,8 +544,8 @@ export class FederationJavaTemplates {
     code: "\nSystem.setProperty(\"FEDERATION_HOST\", \"localhost\");\n" +
       "System.setProperty(\"FEDERATION_PORT\", \"8081\");\n" +
       "System.setProperty(\"AUTH0_DOMAIN\", \"dev-708nr3pf.eu.auth0.com\");\n" +
-      "String clientId = \"iUNFZUf83T5OazTjDv3gkjwfGMZ7fGT9\";\n" +
-      "String clientSecret = \"xWJN3YO0kuJ-gD19zltey9N5R1Cz0ltQJZtad-p1YQJCh6-hckl8I_hnbMbHuSQ4\";\n" +
+      "String clientId = \"YOUR_CLIENT_ID\";\n" +
+      "String clientId = \"YOUR_CLIENT_SECRET\";\n" +
       "App app = new App(clientId, clientSecret);\n" +
       "FederationApi federationApi = new FederationApi();\n" +
       "List<Verification> verifications = federationApi.verifications().all(app).getResponse();\n" +

@@ -15,7 +15,7 @@ import { EndpointTemplateReaderService } from './services/endpoint-template-read
 import { CodeExampleComponent } from './code-examples/code-example/code-example.component';
 import { FormsModule } from '@angular/forms';
 import { EventTemplatesComponent } from './event-templates/event-templates.component';
-import {EventTemplateReaderService} from './services/event-template-reader.service';
+import { EventTemplateReaderService } from './services/event-template-reader.service';
 import { EventTemplateComponent } from './event-templates/event-template/event-template.component';
 
 @NgModule({

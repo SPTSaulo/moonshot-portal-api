@@ -7,8 +7,8 @@ export class CommunityJavaTemplates {
     code: "\nSystem.setProperty(\"COMMUNITY_HOST\", \"localhost\");\n" +
       "System.setProperty(\"COMMUNITY_PORT\", \"8083\");\n" +
       "System.setProperty(\"AUTH0_DOMAIN\", \"dev-708nr3pf.eu.auth0.com\");\n" +
-      "String clientId = \"iUNFZUf83T5OazTjDv3gkjwfGMZ7fGT9\";\n" +
-      "String clientSecret = \"xWJN3YO0kuJ-gD19zltey9N5R1Cz0ltQJZtad-p1YQJCh6-hckl8I_hnbMbHuSQ4\";\n" +
+      "String clientId = \"YOUR_CLIENT_ID\";\n" +
+      "String clientSecret = \"YOUR_CLIENT_SECRET\";\n" +
       "App app = new App(clientId, clientSecret);\n" +
       "CommunityApi communityApi = new CommunityApi();\n" +
       "String version = communityApi.internal().version(app).getResponse();\n" +
@@ -21,8 +21,8 @@ export class CommunityJavaTemplates {
     code: "\nSystem.setProperty(\"COMMUNITY_HOST\", \"localhost\");\n" +
       "System.setProperty(\"COMMUNITY_PORT\", \"8083\");\n" +
       "System.setProperty(\"AUTH0_DOMAIN\", \"dev-708nr3pf.eu.auth0.com\");\n" +
-      "String clientId = \"iUNFZUf83T5OazTjDv3gkjwfGMZ7fGT9\";\n" +
-      "String clientSecret = \"xWJN3YO0kuJ-gD19zltey9N5R1Cz0ltQJZtad-p1YQJCh6-hckl8I_hnbMbHuSQ4\";\n" +
+      "String clientId = \"YOUR_CLIENT_ID\";\n" +
+      "String clientSecret = \"YOUR_CLIENT_SECRET\";\n" +
       "App app = new App(clientId, clientSecret);\n" +
       "CommunityApi communityApi = new CommunityApi();\n" +
       "List<OnlineEvent> onlineEvents = communityApi.onlineEvents().all(app).getResponse();\n" +
@@ -247,8 +247,8 @@ export class CommunityJavaTemplates {
     code: "\nSystem.setProperty(\"COMMUNITY_HOST\", \"localhost\");\n" +
       "System.setProperty(\"COMMUNITY_PORT\", \"8083\");\n" +
       "System.setProperty(\"AUTH0_DOMAIN\", \"dev-708nr3pf.eu.auth0.com\");\n" +
-      "String clientId = \"iUNFZUf83T5OazTjDv3gkjwfGMZ7fGT9\";\n" +
-      "String clientSecret = \"xWJN3YO0kuJ-gD19zltey9N5R1Cz0ltQJZtad-p1YQJCh6-hckl8I_hnbMbHuSQ4\";\n" +
+      "String clientId = \"YOUR_CLIENT_ID\";\n" +
+      "String clientSecret = \"YOUR_CLIENT_SECRET\";\n" +
       "App app = new App(clientId, clientSecret);\n" +
       "CommunityApi communityApi = new CommunityApi();\n" +
       "OnlineEvent onlineEvent = communityApi.onlineEvents().get(app, \"60b7ad03c54a116f0e0ca3df\").getResponse();\n" +
@@ -471,8 +471,8 @@ export class CommunityJavaTemplates {
     code: "\nSystem.setProperty(\"COMMUNITY_HOST\", \"localhost\");\n" +
       "System.setProperty(\"COMMUNITY_PORT\", \"8083\");\n" +
       "System.setProperty(\"AUTH0_DOMAIN\", \"dev-708nr3pf.eu.auth0.com\");\n" +
-      "String clientId = \"iUNFZUf83T5OazTjDv3gkjwfGMZ7fGT9\";\n" +
-      "String clientSecret = \"xWJN3YO0kuJ-gD19zltey9N5R1Cz0ltQJZtad-p1YQJCh6-hckl8I_hnbMbHuSQ4\";\n" +
+      "String clientId = \"YOUR_CLIENT_ID\";\n" +
+      "String clientSecret = \"YOUR_CLIENT_SECRET\";\n" +
       "App app = new App(clientId, clientSecret);\n" +
       "CommunityApi communityApi = new CommunityApi();\n" +
       "OnlineEventCreateEvent onlineEventCreateEvent = new OnlineEventCreateEvent();\n" +
@@ -489,8 +489,8 @@ export class CommunityJavaTemplates {
     code: "\nSystem.setProperty(\"COMMUNITY_HOST\", \"localhost\");\n" +
       "System.setProperty(\"COMMUNITY_PORT\", \"8083\");\n" +
       "System.setProperty(\"AUTH0_DOMAIN\", \"dev-708nr3pf.eu.auth0.com\");\n" +
-      "String clientId = \"iUNFZUf83T5OazTjDv3gkjwfGMZ7fGT9\";\n" +
-      "String clientSecret = \"xWJN3YO0kuJ-gD19zltey9N5R1Cz0ltQJZtad-p1YQJCh6-hckl8I_hnbMbHuSQ4\";\n" +
+      "String clientId = \"YOUR_CLIENT_ID\";\n" +
+      "String clientSecret = \"YOUR_CLIENT_SECRET\";\n" +
       "App app = new App(clientId, clientSecret);\n" +
       "CommunityApi communityApi = new CommunityApi();\n" +
       "File file = new File(\"C:\\Users\\saulo\\OneDrive\\Imágenes\\evento.jpg\");\n" +
@@ -503,8 +503,8 @@ export class CommunityJavaTemplates {
     code: "\nSystem.setProperty(\"COMMUNITY_HOST\", \"localhost\");\n" +
       "System.setProperty(\"COMMUNITY_PORT\", \"8083\");\n" +
       "System.setProperty(\"AUTH0_DOMAIN\", \"dev-708nr3pf.eu.auth0.com\");\n" +
-      "String clientId = \"iUNFZUf83T5OazTjDv3gkjwfGMZ7fGT9\";\n" +
-      "String clientSecret = \"xWJN3YO0kuJ-gD19zltey9N5R1Cz0ltQJZtad-p1YQJCh6-hckl8I_hnbMbHuSQ4\";\n" +
+      "String clientId = \"YOUR_CLIENT_ID\";\n" +
+      "String clientSecret = \"YOUR_CLIENT_SECRET\";\n" +
       "App app = new App(clientId, clientSecret);\n" +
       "CommunityApi communityApi = new CommunityApi();\n" +
       "OnlineEvent onlineEvent = communityApi.onlineEvents().get(app, \"60b7ad03c54a116f0e0ca3df\").getResponse();\n" +
@@ -524,8 +524,8 @@ export class CommunityJavaTemplates {
     code: "\nSystem.setProperty(\"COMMUNITY_HOST\", \"localhost\");\n" +
       "System.setProperty(\"COMMUNITY_PORT\", \"8083\");\n" +
       "System.setProperty(\"AUTH0_DOMAIN\", \"dev-708nr3pf.eu.auth0.com\");\n" +
-      "String clientId = \"iUNFZUf83T5OazTjDv3gkjwfGMZ7fGT9\";\n" +
-      "String clientSecret = \"xWJN3YO0kuJ-gD19zltey9N5R1Cz0ltQJZtad-p1YQJCh6-hckl8I_hnbMbHuSQ4\";\n" +
+      "String clientId = \"YOUR_CLIENT_ID\";\n" +
+      "String clientSecret = \"YOUR_CLIENT_SECRET\";\n" +
       "App app = new App(clientId, clientSecret);\n" +
       "CommunityApi communityApi = new CommunityApi();\n" +
       "communityApi.onlineEvents().delete(app, \"60b7ad03c54a116f0e0ca3df\", false).getResponse();",
@@ -537,8 +537,8 @@ export class CommunityJavaTemplates {
     code: "\nSystem.setProperty(\"COMMUNITY_HOST\", \"localhost\");\n" +
       "System.setProperty(\"COMMUNITY_PORT\", \"8083\");\n" +
       "System.setProperty(\"AUTH0_DOMAIN\", \"dev-708nr3pf.eu.auth0.com\");\n" +
-      "String clientId = \"iUNFZUf83T5OazTjDv3gkjwfGMZ7fGT9\";\n" +
-      "String clientSecret = \"xWJN3YO0kuJ-gD19zltey9N5R1Cz0ltQJZtad-p1YQJCh6-hckl8I_hnbMbHuSQ4\";\n" +
+      "String clientId = \"YOUR_CLIENT_ID\";\n" +
+      "String clientSecret = \"YOUR_CLIENT_SECRET\";\n" +
       "App app = new App(clientId, clientSecret);\n" +
       "CommunityApi communityApi = new CommunityApi();\n" +
       "OnlineEvent onlineEvent = communityApi.onlineEvents().get(app, \"60b7ad03c54a116f0e0ca3df\").getResponse();\n" +
@@ -558,8 +558,8 @@ export class CommunityJavaTemplates {
     code: "\nSystem.setProperty(\"COMMUNITY_HOST\", \"localhost\");\n" +
       "System.setProperty(\"COMMUNITY_PORT\", \"8083\");\n" +
       "System.setProperty(\"AUTH0_DOMAIN\", \"dev-708nr3pf.eu.auth0.com\");\n" +
-      "String clientId = \"iUNFZUf83T5OazTjDv3gkjwfGMZ7fGT9\";\n" +
-      "String clientSecret = \"xWJN3YO0kuJ-gD19zltey9N5R1Cz0ltQJZtad-p1YQJCh6-hckl8I_hnbMbHuSQ4\";\n" +
+      "String clientId = \"YOUR_CLIENT_ID\";\n" +
+      "String clientSecret = \"YOUR_CLIENT_SECRET\";\n" +
       "App app = new App(clientId, clientSecret);\n" +
       "CommunityApi communityApi = new CommunityApi();\n" +
       "OnlineEventSubscriptionEvent onlineEventSubscriptionEvent = new OnlineEventSubscriptionEvent();\n" +
@@ -579,8 +579,8 @@ export class CommunityJavaTemplates {
     code: "\nSystem.setProperty(\"COMMUNITY_HOST\", \"localhost\");\n" +
       "System.setProperty(\"COMMUNITY_PORT\", \"8083\");\n" +
       "System.setProperty(\"AUTH0_DOMAIN\", \"dev-708nr3pf.eu.auth0.com\");\n" +
-      "String clientId = \"iUNFZUf83T5OazTjDv3gkjwfGMZ7fGT9\";\n" +
-      "String clientSecret = \"xWJN3YO0kuJ-gD19zltey9N5R1Cz0ltQJZtad-p1YQJCh6-hckl8I_hnbMbHuSQ4\";\n" +
+      "String clientId = \"YOUR_CLIENT_ID\";\n" +
+      "String clientSecret = \"YOUR_CLIENT_SECRET\";\n" +
       "App app = new App(clientId, clientSecret);\n" +
       "CommunityApi communityApi = new CommunityApi();\n" +
       "OnlineEventUnsubscriptionEvent onlineEventUnsubscriptionEvent = new OnlineEventUnsubscriptionEvent();\n" +
@@ -600,8 +600,8 @@ export class CommunityJavaTemplates {
     code: "\nSystem.setProperty(\"COMMUNITY_HOST\", \"localhost\");\n" +
       "System.setProperty(\"COMMUNITY_PORT\", \"8083\");\n" +
       "System.setProperty(\"AUTH0_DOMAIN\", \"dev-708nr3pf.eu.auth0.com\");\n" +
-      "String clientId = \"iUNFZUf83T5OazTjDv3gkjwfGMZ7fGT9\";\n" +
-      "String clientSecret = \"xWJN3YO0kuJ-gD19zltey9N5R1Cz0ltQJZtad-p1YQJCh6-hckl8I_hnbMbHuSQ4\";\n" +
+      "String clientId = \"YOUR_CLIENT_ID\";\n" +
+      "String clientSecret = \"YOUR_CLIENT_SECRET\";\n" +
       "App app = new App(clientId, clientSecret);\n" +
       "CommunityApi communityApi = new CommunityApi();\n" +
       "communityApi.onlineEvents().delete(app, \"60b7ad03c54a116f0e0ca3df\", true).getResponse();",
@@ -613,8 +613,8 @@ export class CommunityJavaTemplates {
     code: "\nSystem.setProperty(\"COMMUNITY_HOST\", \"localhost\");\n" +
       "System.setProperty(\"COMMUNITY_PORT\", \"8083\");\n" +
       "System.setProperty(\"AUTH0_DOMAIN\", \"dev-708nr3pf.eu.auth0.com\");\n" +
-      "String clientId = \"iUNFZUf83T5OazTjDv3gkjwfGMZ7fGT9\";\n" +
-      "String clientSecret = \"xWJN3YO0kuJ-gD19zltey9N5R1Cz0ltQJZtad-p1YQJCh6-hckl8I_hnbMbHuSQ4\";\n" +
+      "String clientId = \"YOUR_CLIENT_ID\";\n" +
+      "String clientSecret = \"YOUR_CLIENT_SECRET\";\n" +
       "App app = new App(clientId, clientSecret);\n" +
       "CommunityApi communityApi = new CommunityApi();\n" +
       "List<FaceToFaceEvent> faceToFaceEvents = communityApi.faceToFaceEvents().all(app).getResponse();\n" +
@@ -956,8 +956,8 @@ export class CommunityJavaTemplates {
     code: "\nSystem.setProperty(\"COMMUNITY_HOST\", \"localhost\");\n" +
       "System.setProperty(\"COMMUNITY_PORT\", \"8083\");\n" +
       "System.setProperty(\"AUTH0_DOMAIN\", \"dev-708nr3pf.eu.auth0.com\");\n" +
-      "String clientId = \"iUNFZUf83T5OazTjDv3gkjwfGMZ7fGT9\";\n" +
-      "String clientSecret = \"xWJN3YO0kuJ-gD19zltey9N5R1Cz0ltQJZtad-p1YQJCh6-hckl8I_hnbMbHuSQ4\";\n" +
+      "String clientId = \"YOUR_CLIENT_ID\";\n" +
+      "String clientSecret = \"YOUR_CLIENT_SECRET\";\n" +
       "App app = new App(clientId, clientSecret);\n" +
       "CommunityApi communityApi = new CommunityApi();\n" +
       "FaceToFaceEvent faceToFaceEvent = communityApi.faceToFaceEvents().get(app, \"1\").getResponse();\n" +
@@ -1097,8 +1097,8 @@ export class CommunityJavaTemplates {
     code: "\nSystem.setProperty(\"COMMUNITY_HOST\", \"localhost\");\n" +
       "System.setProperty(\"COMMUNITY_PORT\", \"8083\");\n" +
       "System.setProperty(\"AUTH0_DOMAIN\", \"dev-708nr3pf.eu.auth0.com\");\n" +
-      "String clientId = \"iUNFZUf83T5OazTjDv3gkjwfGMZ7fGT9\";\n" +
-      "String clientSecret = \"xWJN3YO0kuJ-gD19zltey9N5R1Cz0ltQJZtad-p1YQJCh6-hckl8I_hnbMbHuSQ4\";\n" +
+      "String clientId = \"YOUR_CLIENT_ID\";\n" +
+      "String clientSecret = \"YOUR_CLIENT_SECRET\";\n" +
       "App app = new App(clientId, clientSecret);\n" +
       "CommunityApi communityApi = new CommunityApi();\n" +
       "FaceToFaceEventCreateEvent faceToFaceEventCreateEvent = new FaceToFaceEventCreateEvent();\n" +
@@ -1116,8 +1116,8 @@ export class CommunityJavaTemplates {
     code: "\nSystem.setProperty(\"COMMUNITY_HOST\", \"localhost\");\n" +
       "System.setProperty(\"COMMUNITY_PORT\", \"8083\");\n" +
       "System.setProperty(\"AUTH0_DOMAIN\", \"dev-708nr3pf.eu.auth0.com\");\n" +
-      "String clientId = \"iUNFZUf83T5OazTjDv3gkjwfGMZ7fGT9\";\n" +
-      "String clientSecret = \"xWJN3YO0kuJ-gD19zltey9N5R1Cz0ltQJZtad-p1YQJCh6-hckl8I_hnbMbHuSQ4\";\n" +
+      "String clientId = \"YOUR_CLIENT_ID\";\n" +
+      "String clientSecret = \"YOUR_CLIENT_SECRET\";\n" +
       "App app = new App(clientId, clientSecret);\n" +
       "CommunityApi communityApi = new CommunityApi();\n" +
       "FaceToFaceEvent faceToFaceEvent = communityApi.faceToFaceEvents().get(app, \"60b7ad03c54a116f0e0ca3df\").getResponse();\n" +
@@ -1137,8 +1137,8 @@ export class CommunityJavaTemplates {
     code: "\nSystem.setProperty(\"COMMUNITY_HOST\", \"localhost\");\n" +
       "System.setProperty(\"COMMUNITY_PORT\", \"8083\");\n" +
       "System.setProperty(\"AUTH0_DOMAIN\", \"dev-708nr3pf.eu.auth0.com\");\n" +
-      "String clientId = \"iUNFZUf83T5OazTjDv3gkjwfGMZ7fGT9\";\n" +
-      "String clientSecret = \"xWJN3YO0kuJ-gD19zltey9N5R1Cz0ltQJZtad-p1YQJCh6-hckl8I_hnbMbHuSQ4\";\n" +
+      "String clientId = \"YOUR_CLIENT_ID\";\n" +
+      "String clientSecret = \"YOUR_CLIENT_SECRET\";\n" +
       "App app = new App(clientId, clientSecret);\n" +
       "CommunityApi communityApi = new CommunityApi();\n" +
       "communityApi.faceToFaceEvents().delete(app, \"60b7ad03c54a116f0e0ca3df\", false);",
@@ -1150,8 +1150,8 @@ export class CommunityJavaTemplates {
     code: "\nSystem.setProperty(\"COMMUNITY_HOST\", \"localhost\");\n" +
       "System.setProperty(\"COMMUNITY_PORT\", \"8083\");\n" +
       "System.setProperty(\"AUTH0_DOMAIN\", \"dev-708nr3pf.eu.auth0.com\");\n" +
-      "String clientId = \"iUNFZUf83T5OazTjDv3gkjwfGMZ7fGT9\";\n" +
-      "String clientSecret = \"xWJN3YO0kuJ-gD19zltey9N5R1Cz0ltQJZtad-p1YQJCh6-hckl8I_hnbMbHuSQ4\";\n" +
+      "String clientId = \"YOUR_CLIENT_ID\";\n" +
+      "String clientSecret = \"YOUR_CLIENT_SECRET\";\n" +
       "App app = new App(clientId, clientSecret);\n" +
       "CommunityApi communityApi = new CommunityApi();\n" +
       "File file = new File(\"C:\\Users\\saulo\\OneDrive\\Imágenes\\evento.jpg\");\n" +
@@ -1164,8 +1164,8 @@ export class CommunityJavaTemplates {
     code: "\nSystem.setProperty(\"COMMUNITY_HOST\", \"localhost\");\n" +
       "System.setProperty(\"COMMUNITY_PORT\", \"8083\");\n" +
       "System.setProperty(\"AUTH0_DOMAIN\", \"dev-708nr3pf.eu.auth0.com\");\n" +
-      "String clientId = \"iUNFZUf83T5OazTjDv3gkjwfGMZ7fGT9\";\n" +
-      "String clientSecret = \"xWJN3YO0kuJ-gD19zltey9N5R1Cz0ltQJZtad-p1YQJCh6-hckl8I_hnbMbHuSQ4\";\n" +
+      "String clientId = \"YOUR_CLIENT_ID\";\n" +
+      "String clientSecret = \"YOUR_CLIENT_SECRET\";\n" +
       "App app = new App(clientId, clientSecret);\n" +
       "CommunityApi communityApi = new CommunityApi();\n" +
       "FaceToFaceEvent faceToFaceEvent = communityApi.faceToFaceEvents().get(app, \"60b7ad03c54a116f0e0ca3df\").getResponse();\n" +
@@ -1185,8 +1185,8 @@ export class CommunityJavaTemplates {
     code: "\nSystem.setProperty(\"COMMUNITY_HOST\", \"localhost\");\n" +
       "System.setProperty(\"COMMUNITY_PORT\", \"8083\");\n" +
       "System.setProperty(\"AUTH0_DOMAIN\", \"dev-708nr3pf.eu.auth0.com\");\n" +
-      "String clientId = \"iUNFZUf83T5OazTjDv3gkjwfGMZ7fGT9\";\n" +
-      "String clientSecret = \"xWJN3YO0kuJ-gD19zltey9N5R1Cz0ltQJZtad-p1YQJCh6-hckl8I_hnbMbHuSQ4\";\n" +
+      "String clientId = \"YOUR_CLIENT_ID\";\n" +
+      "String clientSecret = \"YOUR_CLIENT_SECRET\";\n" +
       "App app = new App(clientId, clientSecret);\n" +
       "CommunityApi communityApi = new CommunityApi();\n" +
       "FaceToFaceEventSubscriptionEvent faceToFaceEventSubscriptionEvent = new FaceToFaceEventSubscriptionEvent();\n" +
@@ -1206,8 +1206,8 @@ export class CommunityJavaTemplates {
     code: "\nSystem.setProperty(\"COMMUNITY_HOST\", \"localhost\");\n" +
       "System.setProperty(\"COMMUNITY_PORT\", \"8083\");\n" +
       "System.setProperty(\"AUTH0_DOMAIN\", \"dev-708nr3pf.eu.auth0.com\");\n" +
-      "String clientId = \"iUNFZUf83T5OazTjDv3gkjwfGMZ7fGT9\";\n" +
-      "String clientSecret = \"xWJN3YO0kuJ-gD19zltey9N5R1Cz0ltQJZtad-p1YQJCh6-hckl8I_hnbMbHuSQ4\";\n" +
+      "String clientId = \"YOUR_CLIENT_ID\";\n" +
+      "String clientSecret = \"YOUR_CLIENT_SECRET\";\n" +
       "App app = new App(clientId, clientSecret);\n" +
       "CommunityApi communityApi = new CommunityApi();\n" +
       "FaceToFaceEventUnsubscriptionEvent faceToFaceEventUnsubscriptionEvent = new FaceToFaceEventUnsubscriptionEvent();\n" +
@@ -1227,8 +1227,8 @@ export class CommunityJavaTemplates {
     code: "\nSystem.setProperty(\"COMMUNITY_HOST\", \"localhost\");\n" +
       "System.setProperty(\"COMMUNITY_PORT\", \"8083\");\n" +
       "System.setProperty(\"AUTH0_DOMAIN\", \"dev-708nr3pf.eu.auth0.com\");\n" +
-      "String clientId = \"iUNFZUf83T5OazTjDv3gkjwfGMZ7fGT9\";\n" +
-      "String clientSecret = \"xWJN3YO0kuJ-gD19zltey9N5R1Cz0ltQJZtad-p1YQJCh6-hckl8I_hnbMbHuSQ4\";\n" +
+      "String clientId = \"YOUR_CLIENT_ID\";\n" +
+      "String clientSecret = \"YOUR_CLIENT_SECRET\";\n" +
       "App app = new App(clientId, clientSecret);\n" +
       "CommunityApi communityApi = new CommunityApi();\n" +
       "communityApi.faceToFaceEvents().delete(app, \"60b7ad03c54a116f0e0ca3df\", true);",
@@ -1240,8 +1240,8 @@ export class CommunityJavaTemplates {
     code: "\nSystem.setProperty(\"COMMUNITY_HOST\", \"localhost\");\n" +
       "System.setProperty(\"COMMUNITY_PORT\", \"8083\");\n" +
       "System.setProperty(\"AUTH0_DOMAIN\", \"dev-708nr3pf.eu.auth0.com\");\n" +
-      "String clientId = \"iUNFZUf83T5OazTjDv3gkjwfGMZ7fGT9\";\n" +
-      "String clientSecret = \"xWJN3YO0kuJ-gD19zltey9N5R1Cz0ltQJZtad-p1YQJCh6-hckl8I_hnbMbHuSQ4\";\n" +
+      "String clientId = \"YOUR_CLIENT_ID\";\n" +
+      "String clientSecret = \"YOUR_CLIENT_SECRET\";\n" +
       "App app = new App(clientId, clientSecret);\n" +
       "CommunityApi communityApi = new CommunityApi();\n" +
       "List<DirectChat> directChats = communityApi.directChats().all(app).getResponse();\n" +
@@ -1420,8 +1420,8 @@ export class CommunityJavaTemplates {
     code: "\nSystem.setProperty(\"COMMUNITY_HOST\", \"localhost\");\n" +
       "System.setProperty(\"COMMUNITY_PORT\", \"8083\");\n" +
       "System.setProperty(\"AUTH0_DOMAIN\", \"dev-708nr3pf.eu.auth0.com\");\n" +
-      "String clientId = \"iUNFZUf83T5OazTjDv3gkjwfGMZ7fGT9\";\n" +
-      "String clientSecret = \"xWJN3YO0kuJ-gD19zltey9N5R1Cz0ltQJZtad-p1YQJCh6-hckl8I_hnbMbHuSQ4\";\n" +
+      "String clientId = \"YOUR_CLIENT_ID\";\n" +
+      "String clientSecret = \"YOUR_CLIENT_SECRET\";\n" +
       "App app = new App(clientId, clientSecret);\n" +
       "CommunityApi communityApi = new CommunityApi();\n" +
       "List<DirectChat> directChats = communityApi.directChats().allWhereMemberParticipate(app).getResponse();\n" +
@@ -1600,8 +1600,8 @@ export class CommunityJavaTemplates {
     code: "\nSystem.setProperty(\"COMMUNITY_HOST\", \"localhost\");\n" +
       "System.setProperty(\"COMMUNITY_PORT\", \"8083\");\n" +
       "System.setProperty(\"AUTH0_DOMAIN\", \"dev-708nr3pf.eu.auth0.com\");\n" +
-      "String clientId = \"iUNFZUf83T5OazTjDv3gkjwfGMZ7fGT9\";\n" +
-      "String clientSecret = \"xWJN3YO0kuJ-gD19zltey9N5R1Cz0ltQJZtad-p1YQJCh6-hckl8I_hnbMbHuSQ4\";\n" +
+      "String clientId = \"YOUR_CLIENT_ID\";\n" +
+      "String clientSecret = \"YOUR_CLIENT_SECRET\";\n" +
       "App app = new App(clientId, clientSecret);\n" +
       "CommunityApi communityApi = new CommunityApi();\n" +
       "DirectChat directChats = communityApi.directChats().get(app, \"60acd05497acf93f5f69e062\").getResponse();\n" +
@@ -1711,8 +1711,8 @@ export class CommunityJavaTemplates {
     code: "\nSystem.setProperty(\"COMMUNITY_HOST\", \"localhost\");\n" +
       "System.setProperty(\"COMMUNITY_PORT\", \"8083\");\n" +
       "System.setProperty(\"AUTH0_DOMAIN\", \"dev-708nr3pf.eu.auth0.com\");\n" +
-      "String clientId = \"iUNFZUf83T5OazTjDv3gkjwfGMZ7fGT9\";\n" +
-      "String clientSecret = \"xWJN3YO0kuJ-gD19zltey9N5R1Cz0ltQJZtad-p1YQJCh6-hckl8I_hnbMbHuSQ4\";\n" +
+      "String clientId = \"YOUR_CLIENT_ID\";\n" +
+      "String clientSecret = \"YOUR_CLIENT_SECRET\";\n" +
       "App app = new App(clientId, clientSecret);\n" +
       "CommunityApi communityApi = new CommunityApi();\n" +
       "DirectChatCreateEvent directChatCreateEvent = new DirectChatCreateEvent();\n" +
@@ -1739,8 +1739,8 @@ export class CommunityJavaTemplates {
     code: "\nSystem.setProperty(\"COMMUNITY_HOST\", \"localhost\");\n" +
       "System.setProperty(\"COMMUNITY_PORT\", \"8083\");\n" +
       "System.setProperty(\"AUTH0_DOMAIN\", \"dev-708nr3pf.eu.auth0.com\");\n" +
-      "String clientId = \"iUNFZUf83T5OazTjDv3gkjwfGMZ7fGT9\";\n" +
-      "String clientSecret = \"xWJN3YO0kuJ-gD19zltey9N5R1Cz0ltQJZtad-p1YQJCh6-hckl8I_hnbMbHuSQ4\";\n" +
+      "String clientId = \"YOUR_CLIENT_ID\";\n" +
+      "String clientSecret = \"YOUR_CLIENT_SECRET\";\n" +
       "App app = new App(clientId, clientSecret);\n" +
       "CommunityApi communityApi = new CommunityApi();\n" +
       "communityApi.directChats().delete(app, \"1\");",
@@ -1752,8 +1752,8 @@ export class CommunityJavaTemplates {
     code: "\nSystem.setProperty(\"COMMUNITY_HOST\", \"localhost\");\n" +
       "System.setProperty(\"COMMUNITY_PORT\", \"8083\");\n" +
       "System.setProperty(\"AUTH0_DOMAIN\", \"dev-708nr3pf.eu.auth0.com\");\n" +
-      "String clientId = \"iUNFZUf83T5OazTjDv3gkjwfGMZ7fGT9\";\n" +
-      "String clientSecret = \"xWJN3YO0kuJ-gD19zltey9N5R1Cz0ltQJZtad-p1YQJCh6-hckl8I_hnbMbHuSQ4\";\n" +
+      "String clientId = \"YOUR_CLIENT_ID\";\n" +
+      "String clientSecret = \"YOUR_CLIENT_SECRET\";\n" +
       "App app = new App(clientId, clientSecret);\n" +
       "CommunityApi communityApi = new CommunityApi();\n" +
       "MessageAddEvent messageAddEvent = new MemberMessageAddEvent();\n" +
@@ -1769,8 +1769,8 @@ export class CommunityJavaTemplates {
     code: "\nSystem.setProperty(\"COMMUNITY_HOST\", \"localhost\");\n" +
       "System.setProperty(\"COMMUNITY_PORT\", \"8083\");\n" +
       "System.setProperty(\"AUTH0_DOMAIN\", \"dev-708nr3pf.eu.auth0.com\");\n" +
-      "String clientId = \"iUNFZUf83T5OazTjDv3gkjwfGMZ7fGT9\";\n" +
-      "String clientSecret = \"xWJN3YO0kuJ-gD19zltey9N5R1Cz0ltQJZtad-p1YQJCh6-hckl8I_hnbMbHuSQ4\";\n" +
+      "String clientId = \"YOUR_CLIENT_ID\";\n" +
+      "String clientSecret = \"YOUR_CLIENT_SECRET\";\n" +
       "App app = new App(clientId, clientSecret);\n" +
       "CommunityApi communityApi = new CommunityApi();\n" +
       "List<Message> messages = communityApi.directChats().messagesByRoomId(app, \"1\").getResponse();\n" +
@@ -1821,8 +1821,8 @@ export class CommunityJavaTemplates {
     code: "\nSystem.setProperty(\"COMMUNITY_HOST\", \"localhost\");\n" +
       "System.setProperty(\"COMMUNITY_PORT\", \"8083\");\n" +
       "System.setProperty(\"AUTH0_DOMAIN\", \"dev-708nr3pf.eu.auth0.com\");\n" +
-      "String clientId = \"iUNFZUf83T5OazTjDv3gkjwfGMZ7fGT9\";\n" +
-      "String clientSecret = \"xWJN3YO0kuJ-gD19zltey9N5R1Cz0ltQJZtad-p1YQJCh6-hckl8I_hnbMbHuSQ4\";\n" +
+      "String clientId = \"YOUR_CLIENT_ID\";\n" +
+      "String clientSecret = \"YOUR_CLIENT_SECRET\";\n" +
       "App app = new App(clientId, clientSecret);\n" +
       "CommunityApi communityApi = new CommunityApi();\n" +
       "communityApi.directChats().messageDelete(app, \"1\", \"1\");",
@@ -1834,8 +1834,8 @@ export class CommunityJavaTemplates {
     code: "\nSystem.setProperty(\"COMMUNITY_HOST\", \"localhost\");\n" +
       "System.setProperty(\"COMMUNITY_PORT\", \"8083\");\n" +
       "System.setProperty(\"AUTH0_DOMAIN\", \"dev-708nr3pf.eu.auth0.com\");\n" +
-      "String clientId = \"iUNFZUf83T5OazTjDv3gkjwfGMZ7fGT9\";\n" +
-      "String clientSecret = \"xWJN3YO0kuJ-gD19zltey9N5R1Cz0ltQJZtad-p1YQJCh6-hckl8I_hnbMbHuSQ4\";\n" +
+      "String clientId = \"YOUR_CLIENT_ID\";\n" +
+      "String clientSecret = \"YOUR_CLIENT_SECRET\";\n" +
       "App app = new App(clientId, clientSecret);\n" +
       "CommunityApi communityApi = new CommunityApi();\n" +
       "List<Document> documents = communityApi.directChats().documents(app, \"1\").getResponse();\n" +
@@ -1877,8 +1877,8 @@ export class CommunityJavaTemplates {
     code: "\nSystem.setProperty(\"COMMUNITY_HOST\", \"localhost\");\n" +
       "System.setProperty(\"COMMUNITY_PORT\", \"8083\");\n" +
       "System.setProperty(\"AUTH0_DOMAIN\", \"dev-708nr3pf.eu.auth0.com\");\n" +
-      "String clientId = \"iUNFZUf83T5OazTjDv3gkjwfGMZ7fGT9\";\n" +
-      "String clientSecret = \"xWJN3YO0kuJ-gD19zltey9N5R1Cz0ltQJZtad-p1YQJCh6-hckl8I_hnbMbHuSQ4\";\n" +
+      "String clientId = \"YOUR_CLIENT_ID\";\n" +
+      "String clientSecret = \"YOUR_CLIENT_SECRET\";\n" +
       "App app = new App(clientId, clientSecret);\n" +
       "CommunityApi communityApi = new CommunityApi();\n" +
       "List<Link> documents = communityApi.directChats().links(app, \"1\").getResponse();\n" +
@@ -1905,8 +1905,8 @@ export class CommunityJavaTemplates {
     code: "\nSystem.setProperty(\"COMMUNITY_HOST\", \"localhost\");\n" +
       "System.setProperty(\"COMMUNITY_PORT\", \"8083\");\n" +
       "System.setProperty(\"AUTH0_DOMAIN\", \"dev-708nr3pf.eu.auth0.com\");\n" +
-      "String clientId = \"iUNFZUf83T5OazTjDv3gkjwfGMZ7fGT9\";\n" +
-      "String clientSecret = \"xWJN3YO0kuJ-gD19zltey9N5R1Cz0ltQJZtad-p1YQJCh6-hckl8I_hnbMbHuSQ4\";\n" +
+      "String clientId = \"YOUR_CLIENT_ID\";\n" +
+      "String clientSecret = \"YOUR_CLIENT_SECRET\";\n" +
       "App app = new App(clientId, clientSecret);\n" +
       "CommunityApi communityApi = new CommunityApi();\n" +
       "File file = new File(\"C:\\Users\\saulo\\OneDrive\\Imágenes\\evento.jpg\");\n" +
@@ -1919,8 +1919,8 @@ export class CommunityJavaTemplates {
     code: "\nSystem.setProperty(\"COMMUNITY_HOST\", \"localhost\");\n" +
       "System.setProperty(\"COMMUNITY_PORT\", \"8083\");\n" +
       "System.setProperty(\"AUTH0_DOMAIN\", \"dev-708nr3pf.eu.auth0.com\");\n" +
-      "String clientId = \"iUNFZUf83T5OazTjDv3gkjwfGMZ7fGT9\";\n" +
-      "String clientSecret = \"xWJN3YO0kuJ-gD19zltey9N5R1Cz0ltQJZtad-p1YQJCh6-hckl8I_hnbMbHuSQ4\";\n" +
+      "String clientId = \"YOUR_CLIENT_ID\";\n" +
+      "String clientSecret = \"YOUR_CLIENT_SECRET\";\n" +
       "App app = new App(clientId, clientSecret);\n" +
       "CommunityApi communityApi = new CommunityApi();\n" +
       "List<FollowUpRoom> followUpRooms = communityApi.followUpRooms().all(app).getResponse();\n" +
@@ -2098,8 +2098,8 @@ export class CommunityJavaTemplates {
     code: "\nSystem.setProperty(\"COMMUNITY_HOST\", \"localhost\");\n" +
       "System.setProperty(\"COMMUNITY_PORT\", \"8083\");\n" +
       "System.setProperty(\"AUTH0_DOMAIN\", \"dev-708nr3pf.eu.auth0.com\");\n" +
-      "String clientId = \"iUNFZUf83T5OazTjDv3gkjwfGMZ7fGT9\";\n" +
-      "String clientSecret = \"xWJN3YO0kuJ-gD19zltey9N5R1Cz0ltQJZtad-p1YQJCh6-hckl8I_hnbMbHuSQ4\";\n" +
+      "String clientId = \"YOUR_CLIENT_ID\";\n" +
+      "String clientSecret = \"YOUR_CLIENT_SECRET\";\n" +
       "App app = new App(clientId, clientSecret);\n" +
       "CommunityApi communityApi = new CommunityApi();\n" +
       "List<FollowUpRoom> followUpRooms = communityApi.followUpRooms().allWhereMemberParticipate(app).getResponse();\n" +
@@ -2277,8 +2277,8 @@ export class CommunityJavaTemplates {
     code: "\nSystem.setProperty(\"COMMUNITY_HOST\", \"localhost\");\n" +
       "System.setProperty(\"COMMUNITY_PORT\", \"8083\");\n" +
       "System.setProperty(\"AUTH0_DOMAIN\", \"dev-708nr3pf.eu.auth0.com\");\n" +
-      "String clientId = \"iUNFZUf83T5OazTjDv3gkjwfGMZ7fGT9\";\n" +
-      "String clientSecret = \"xWJN3YO0kuJ-gD19zltey9N5R1Cz0ltQJZtad-p1YQJCh6-hckl8I_hnbMbHuSQ4\";\n" +
+      "String clientId = \"YOUR_CLIENT_ID\";\n" +
+      "String clientSecret = \"YOUR_CLIENT_SECRET\";\n" +
       "App app = new App(clientId, clientSecret);\n" +
       "CommunityApi communityApi = new CommunityApi();\n" +
       "FollowUpRoom followUpRoom = communityApi.followUpRooms().get(app, \"1\").getResponse();\n" +
@@ -2371,8 +2371,8 @@ export class CommunityJavaTemplates {
     code: "\nSystem.setProperty(\"COMMUNITY_HOST\", \"localhost\");\n" +
       "System.setProperty(\"COMMUNITY_PORT\", \"8083\");\n" +
       "System.setProperty(\"AUTH0_DOMAIN\", \"dev-708nr3pf.eu.auth0.com\");\n" +
-      "String clientId = \"iUNFZUf83T5OazTjDv3gkjwfGMZ7fGT9\";\n" +
-      "String clientSecret = \"xWJN3YO0kuJ-gD19zltey9N5R1Cz0ltQJZtad-p1YQJCh6-hckl8I_hnbMbHuSQ4\";\n" +
+      "String clientId = \"YOUR_CLIENT_ID\";\n" +
+      "String clientSecret = \"YOUR_CLIENT_SECRET\";\n" +
       "App app = new App(clientId, clientSecret);\n" +
       "CommunityApi communityApi = new CommunityApi();\n" +
       "FollowUpRoomCreateEvent followUpRoomCreateEvent = new FollowUpRoomCreateEvent();\n" +
@@ -2401,8 +2401,8 @@ export class CommunityJavaTemplates {
     code: "\nSystem.setProperty(\"COMMUNITY_HOST\", \"localhost\");\n" +
       "System.setProperty(\"COMMUNITY_PORT\", \"8083\");\n" +
       "System.setProperty(\"AUTH0_DOMAIN\", \"dev-708nr3pf.eu.auth0.com\");\n" +
-      "String clientId = \"iUNFZUf83T5OazTjDv3gkjwfGMZ7fGT9\";\n" +
-      "String clientSecret = \"xWJN3YO0kuJ-gD19zltey9N5R1Cz0ltQJZtad-p1YQJCh6-hckl8I_hnbMbHuSQ4\";\n" +
+      "String clientId = \"YOUR_CLIENT_ID\";\n" +
+      "String clientSecret = \"YOUR_CLIENT_SECRET\";\n" +
       "App app = new App(clientId, clientSecret);\n" +
       "CommunityApi communityApi = new CommunityApi();\n" +
       "FollowUpRoom followUpRoom = communityApi.followUpRooms().get(app, \"1\").getResponse();\n" +
@@ -2427,8 +2427,8 @@ export class CommunityJavaTemplates {
     code: "\nSystem.setProperty(\"COMMUNITY_HOST\", \"localhost\");\n" +
       "System.setProperty(\"COMMUNITY_PORT\", \"8083\");\n" +
       "System.setProperty(\"AUTH0_DOMAIN\", \"dev-708nr3pf.eu.auth0.com\");\n" +
-      "String clientId = \"iUNFZUf83T5OazTjDv3gkjwfGMZ7fGT9\";\n" +
-      "String clientSecret = \"xWJN3YO0kuJ-gD19zltey9N5R1Cz0ltQJZtad-p1YQJCh6-hckl8I_hnbMbHuSQ4\";\n" +
+      "String clientId = \"YOUR_CLIENT_ID\";\n" +
+      "String clientSecret = \"YOUR_CLIENT_SECRET\";\n" +
       "App app = new App(clientId, clientSecret);\n" +
       "CommunityApi communityApi = new CommunityApi();\n" +
       "FollowUpRoomAddMemberEvent followUpRoomAddMemberEvent = new FollowUpRoomAddMemberEvent();\n" +
@@ -2446,8 +2446,8 @@ export class CommunityJavaTemplates {
     code: "\nSystem.setProperty(\"COMMUNITY_HOST\", \"localhost\");\n" +
       "System.setProperty(\"COMMUNITY_PORT\", \"8083\");\n" +
       "System.setProperty(\"AUTH0_DOMAIN\", \"dev-708nr3pf.eu.auth0.com\");\n" +
-      "String clientId = \"iUNFZUf83T5OazTjDv3gkjwfGMZ7fGT9\";\n" +
-      "String clientSecret = \"xWJN3YO0kuJ-gD19zltey9N5R1Cz0ltQJZtad-p1YQJCh6-hckl8I_hnbMbHuSQ4\";\n" +
+      "String clientId = \"YOUR_CLIENT_ID\";\n" +
+      "String clientSecret = \"YOUR_CLIENT_SECRET\";\n" +
       "App app = new App(clientId, clientSecret);\n" +
       "CommunityApi communityApi = new CommunityApi();\n" +
       "FollowUpRoomLeaveMemberEvent followUpRoomLeaveMemberEvent = new FollowUpRoomLeaveMemberEvent();\n" +
@@ -2466,8 +2466,8 @@ export class CommunityJavaTemplates {
     code: "\nSystem.setProperty(\"COMMUNITY_HOST\", \"localhost\");\n" +
       "System.setProperty(\"COMMUNITY_PORT\", \"8083\");\n" +
       "System.setProperty(\"AUTH0_DOMAIN\", \"dev-708nr3pf.eu.auth0.com\");\n" +
-      "String clientId = \"iUNFZUf83T5OazTjDv3gkjwfGMZ7fGT9\";\n" +
-      "String clientSecret = \"xWJN3YO0kuJ-gD19zltey9N5R1Cz0ltQJZtad-p1YQJCh6-hckl8I_hnbMbHuSQ4\";\n" +
+      "String clientId = \"YOUR_CLIENT_ID\";\n" +
+      "String clientSecret = \"YOUR_CLIENT_SECRET\";\n" +
       "App app = new App(clientId, clientSecret);\n" +
       "CommunityApi communityApi = new CommunityApi();\n" +
       "communityApi.followUpRooms().open(app, \"1\", new FollowUpRoomOpenEvent());",
@@ -2479,8 +2479,8 @@ export class CommunityJavaTemplates {
     code: "\nSystem.setProperty(\"COMMUNITY_HOST\", \"localhost\");\n" +
       "System.setProperty(\"COMMUNITY_PORT\", \"8083\");\n" +
       "System.setProperty(\"AUTH0_DOMAIN\", \"dev-708nr3pf.eu.auth0.com\");\n" +
-      "String clientId = \"iUNFZUf83T5OazTjDv3gkjwfGMZ7fGT9\";\n" +
-      "String clientSecret = \"xWJN3YO0kuJ-gD19zltey9N5R1Cz0ltQJZtad-p1YQJCh6-hckl8I_hnbMbHuSQ4\";\n" +
+      "String clientId = \"YOUR_CLIENT_ID\";\n" +
+      "String clientSecret = \"YOUR_CLIENT_SECRET\";\n" +
       "App app = new App(clientId, clientSecret);\n" +
       "CommunityApi communityApi = new CommunityApi();\n" +
       "communityApi.followUpRooms().close(app, \"1\", new FollowUpRoomCloseEvent());",
@@ -2492,8 +2492,8 @@ export class CommunityJavaTemplates {
     code: "\nSystem.setProperty(\"COMMUNITY_HOST\", \"localhost\");\n" +
       "System.setProperty(\"COMMUNITY_PORT\", \"8083\");\n" +
       "System.setProperty(\"AUTH0_DOMAIN\", \"dev-708nr3pf.eu.auth0.com\");\n" +
-      "String clientId = \"iUNFZUf83T5OazTjDv3gkjwfGMZ7fGT9\";\n" +
-      "String clientSecret = \"xWJN3YO0kuJ-gD19zltey9N5R1Cz0ltQJZtad-p1YQJCh6-hckl8I_hnbMbHuSQ4\";\n" +
+      "String clientId = \"YOUR_CLIENT_ID\";\n" +
+      "String clientSecret = \"YOUR_CLIENT_SECRET\";\n" +
       "App app = new App(clientId, clientSecret);\n" +
       "CommunityApi communityApi = new CommunityApi();\n" +
       "communityApi.followUpRooms().delete(app, \"1\");",
@@ -2505,8 +2505,8 @@ export class CommunityJavaTemplates {
     code: "\nSystem.setProperty(\"COMMUNITY_HOST\", \"localhost\");\n" +
       "System.setProperty(\"COMMUNITY_PORT\", \"8083\");\n" +
       "System.setProperty(\"AUTH0_DOMAIN\", \"dev-708nr3pf.eu.auth0.com\");\n" +
-      "String clientId = \"iUNFZUf83T5OazTjDv3gkjwfGMZ7fGT9\";\n" +
-      "String clientSecret = \"xWJN3YO0kuJ-gD19zltey9N5R1Cz0ltQJZtad-p1YQJCh6-hckl8I_hnbMbHuSQ4\";\n" +
+      "String clientId = \"YOUR_CLIENT_ID\";\n" +
+      "String clientSecret = \"YOUR_CLIENT_SECRET\";\n" +
       "App app = new App(clientId, clientSecret);\n" +
       "CommunityApi communityApi = new CommunityApi();\n" +
       "MessageAddEvent messageAddEvent = new MemberMessageAddEvent();\n" +
@@ -2522,8 +2522,8 @@ export class CommunityJavaTemplates {
     code: "\nSystem.setProperty(\"COMMUNITY_HOST\", \"localhost\");\n" +
       "System.setProperty(\"COMMUNITY_PORT\", \"8083\");\n" +
       "System.setProperty(\"AUTH0_DOMAIN\", \"dev-708nr3pf.eu.auth0.com\");\n" +
-      "String clientId = \"iUNFZUf83T5OazTjDv3gkjwfGMZ7fGT9\";\n" +
-      "String clientSecret = \"xWJN3YO0kuJ-gD19zltey9N5R1Cz0ltQJZtad-p1YQJCh6-hckl8I_hnbMbHuSQ4\";\n" +
+      "String clientId = \"YOUR_CLIENT_ID\";\n" +
+      "String clientSecret = \"YOUR_CLIENT_SECRET\";\n" +
       "App app = new App(clientId, clientSecret);\n" +
       "CommunityApi communityApi = new CommunityApi();\n" +
       "communityApi.followUpRooms().messageDelete(app, \"1\", \"1\", false);",
@@ -2535,8 +2535,8 @@ export class CommunityJavaTemplates {
     code: "\nSystem.setProperty(\"COMMUNITY_HOST\", \"localhost\");\n" +
       "System.setProperty(\"COMMUNITY_PORT\", \"8083\");\n" +
       "System.setProperty(\"AUTH0_DOMAIN\", \"dev-708nr3pf.eu.auth0.com\");\n" +
-      "String clientId = \"iUNFZUf83T5OazTjDv3gkjwfGMZ7fGT9\";\n" +
-      "String clientSecret = \"xWJN3YO0kuJ-gD19zltey9N5R1Cz0ltQJZtad-p1YQJCh6-hckl8I_hnbMbHuSQ4\";\n" +
+      "String clientId = \"YOUR_CLIENT_ID\";\n" +
+      "String clientSecret = \"YOUR_CLIENT_SECRET\";\n" +
       "App app = new App(clientId, clientSecret);\n" +
       "CommunityApi communityApi = new CommunityApi();\n" +
       "communityApi.followUpRooms().messageDelete(app, \"1\", \"1\", true);",
@@ -2548,8 +2548,8 @@ export class CommunityJavaTemplates {
     code: "\nSystem.setProperty(\"COMMUNITY_HOST\", \"localhost\");\n" +
       "System.setProperty(\"COMMUNITY_PORT\", \"8083\");\n" +
       "System.setProperty(\"AUTH0_DOMAIN\", \"dev-708nr3pf.eu.auth0.com\");\n" +
-      "String clientId = \"iUNFZUf83T5OazTjDv3gkjwfGMZ7fGT9\";\n" +
-      "String clientSecret = \"xWJN3YO0kuJ-gD19zltey9N5R1Cz0ltQJZtad-p1YQJCh6-hckl8I_hnbMbHuSQ4\";\n" +
+      "String clientId = \"YOUR_CLIENT_ID\";\n" +
+      "String clientSecret = \"YOUR_CLIENT_SECRET\";\n" +
       "App app = new App(clientId, clientSecret);\n" +
       "CommunityApi communityApi = new CommunityApi();\n" +
       "List<Message> messages = communityApi.followUpRooms().messagesByRoomId(app, \"1\").getResponse();\n" +
@@ -2602,8 +2602,8 @@ export class CommunityJavaTemplates {
     code: "\nSystem.setProperty(\"COMMUNITY_HOST\", \"localhost\");\n" +
       "System.setProperty(\"COMMUNITY_PORT\", \"8083\");\n" +
       "System.setProperty(\"AUTH0_DOMAIN\", \"dev-708nr3pf.eu.auth0.com\");\n" +
-      "String clientId = \"iUNFZUf83T5OazTjDv3gkjwfGMZ7fGT9\";\n" +
-      "String clientSecret = \"xWJN3YO0kuJ-gD19zltey9N5R1Cz0ltQJZtad-p1YQJCh6-hckl8I_hnbMbHuSQ4\";\n" +
+      "String clientId = \"YOUR_CLIENT_ID\";\n" +
+      "String clientSecret = \"YOUR_CLIENT_SECRET\";\n" +
       "App app = new App(clientId, clientSecret);\n" +
       "CommunityApi communityApi = new CommunityApi();\n" +
       "List<Document> documents = communityApi.followUpRooms().documents(app, \"1\").getResponse();\n" +
@@ -2645,8 +2645,8 @@ export class CommunityJavaTemplates {
     code: "\nSystem.setProperty(\"COMMUNITY_HOST\", \"localhost\");\n" +
       "System.setProperty(\"COMMUNITY_PORT\", \"8083\");\n" +
       "System.setProperty(\"AUTH0_DOMAIN\", \"dev-708nr3pf.eu.auth0.com\");\n" +
-      "String clientId = \"iUNFZUf83T5OazTjDv3gkjwfGMZ7fGT9\";\n" +
-      "String clientSecret = \"xWJN3YO0kuJ-gD19zltey9N5R1Cz0ltQJZtad-p1YQJCh6-hckl8I_hnbMbHuSQ4\";\n" +
+      "String clientId = \"YOUR_CLIENT_ID\";\n" +
+      "String clientSecret = \"YOUR_CLIENT_SECRET\";\n" +
       "App app = new App(clientId, clientSecret);\n" +
       "CommunityApi communityApi = new CommunityApi();\n" +
       "List<Link> links = communityApi.followUpRooms().links(app, \"1\").getResponse();\n" +
@@ -2673,8 +2673,8 @@ export class CommunityJavaTemplates {
     code: "\nSystem.setProperty(\"COMMUNITY_HOST\", \"localhost\");\n" +
       "System.setProperty(\"COMMUNITY_PORT\", \"8083\");\n" +
       "System.setProperty(\"AUTH0_DOMAIN\", \"dev-708nr3pf.eu.auth0.com\");\n" +
-      "String clientId = \"iUNFZUf83T5OazTjDv3gkjwfGMZ7fGT9\";\n" +
-      "String clientSecret = \"xWJN3YO0kuJ-gD19zltey9N5R1Cz0ltQJZtad-p1YQJCh6-hckl8I_hnbMbHuSQ4\";\n" +
+      "String clientId = \"YOUR_CLIENT_ID\";\n" +
+      "String clientSecret = \"YOUR_CLIENT_SECRET\";\n" +
       "App app = new App(clientId, clientSecret);\n" +
       "CommunityApi communityApi = new CommunityApi();\n" +
       "File file = new File(\"C:\\Users\\saulo\\OneDrive\\Imágenes\\evento.jpg\");\n" +
@@ -2687,8 +2687,8 @@ export class CommunityJavaTemplates {
     code: "\nSystem.setProperty(\"COMMUNITY_HOST\", \"localhost\");\n" +
       "System.setProperty(\"COMMUNITY_PORT\", \"8083\");\n" +
       "System.setProperty(\"AUTH0_DOMAIN\", \"dev-708nr3pf.eu.auth0.com\");\n" +
-      "String clientId = \"iUNFZUf83T5OazTjDv3gkjwfGMZ7fGT9\";\n" +
-      "String clientSecret = \"xWJN3YO0kuJ-gD19zltey9N5R1Cz0ltQJZtad-p1YQJCh6-hckl8I_hnbMbHuSQ4\";\n" +
+      "String clientId = \"YOUR_CLIENT_ID\";\n" +
+      "String clientSecret = \"YOUR_CLIENT_SECRET\";\n" +
       "App app = new App(clientId, clientSecret);\n" +
       "CommunityApi communityApi = new CommunityApi();\n" +
       "List<PublicChannel> publicChannels = communityApi.publicChannels().all(app).getResponse();\n" +
@@ -2889,8 +2889,8 @@ export class CommunityJavaTemplates {
     code: "\nSystem.setProperty(\"COMMUNITY_HOST\", \"localhost\");\n" +
       "System.setProperty(\"COMMUNITY_PORT\", \"8083\");\n" +
       "System.setProperty(\"AUTH0_DOMAIN\", \"dev-708nr3pf.eu.auth0.com\");\n" +
-      "String clientId = \"iUNFZUf83T5OazTjDv3gkjwfGMZ7fGT9\";\n" +
-      "String clientSecret = \"xWJN3YO0kuJ-gD19zltey9N5R1Cz0ltQJZtad-p1YQJCh6-hckl8I_hnbMbHuSQ4\";\n" +
+      "String clientId = \"YOUR_CLIENT_ID\";\n" +
+      "String clientSecret = \"YOUR_CLIENT_SECRET\";\n" +
       "App app = new App(clientId, clientSecret);\n" +
       "CommunityApi communityApi = new CommunityApi();\n" +
       "PublicChannel publicChannel = communityApi.publicChannels().get(app, \"1\").getResponse();\n" +
@@ -3012,8 +3012,8 @@ export class CommunityJavaTemplates {
     code: "\nSystem.setProperty(\"COMMUNITY_HOST\", \"localhost\");\n" +
       "System.setProperty(\"COMMUNITY_PORT\", \"8083\");\n" +
       "System.setProperty(\"AUTH0_DOMAIN\", \"dev-708nr3pf.eu.auth0.com\");\n" +
-      "String clientId = \"iUNFZUf83T5OazTjDv3gkjwfGMZ7fGT9\";\n" +
-      "String clientSecret = \"xWJN3YO0kuJ-gD19zltey9N5R1Cz0ltQJZtad-p1YQJCh6-hckl8I_hnbMbHuSQ4\";\n" +
+      "String clientId = \"YOUR_CLIENT_ID\";\n" +
+      "String clientSecret = \"YOUR_CLIENT_SECRET\";\n" +
       "App app = new App(clientId, clientSecret);\n" +
       "CommunityApi communityApi = new CommunityApi();\n" +
       "PublicChannelCreateEvent publicChannelCreateEvent = new PublicChannelCreateEvent();\n" +
@@ -3041,8 +3041,8 @@ export class CommunityJavaTemplates {
     code: "\nSystem.setProperty(\"COMMUNITY_HOST\", \"localhost\");\n" +
       "System.setProperty(\"COMMUNITY_PORT\", \"8083\");\n" +
       "System.setProperty(\"AUTH0_DOMAIN\", \"dev-708nr3pf.eu.auth0.com\");\n" +
-      "String clientId = \"iUNFZUf83T5OazTjDv3gkjwfGMZ7fGT9\";\n" +
-      "String clientSecret = \"xWJN3YO0kuJ-gD19zltey9N5R1Cz0ltQJZtad-p1YQJCh6-hckl8I_hnbMbHuSQ4\";\n" +
+      "String clientId = \"YOUR_CLIENT_ID\";\n" +
+      "String clientSecret = \"YOUR_CLIENT_SECRET\";\n" +
       "App app = new App(clientId, clientSecret);\n" +
       "CommunityApi communityApi = new CommunityApi();\n" +
       "PublicChannel publicChannel = communityApi.publicChannels().get(app, \"1\").getResponse();\n" +
@@ -3068,8 +3068,8 @@ export class CommunityJavaTemplates {
     code: "\nSystem.setProperty(\"COMMUNITY_HOST\", \"localhost\");\n" +
       "System.setProperty(\"COMMUNITY_PORT\", \"8083\");\n" +
       "System.setProperty(\"AUTH0_DOMAIN\", \"dev-708nr3pf.eu.auth0.com\");\n" +
-      "String clientId = \"iUNFZUf83T5OazTjDv3gkjwfGMZ7fGT9\";\n" +
-      "String clientSecret = \"xWJN3YO0kuJ-gD19zltey9N5R1Cz0ltQJZtad-p1YQJCh6-hckl8I_hnbMbHuSQ4\";\n" +
+      "String clientId = \"YOUR_CLIENT_ID\";\n" +
+      "String clientSecret = \"YOUR_CLIENT_SECRET\";\n" +
       "App app = new App(clientId, clientSecret);\n" +
       "CommunityApi communityApi = new CommunityApi();\n" +
       "communityApi.publicChannels().delete(app, \"1\", false);",
@@ -3081,8 +3081,8 @@ export class CommunityJavaTemplates {
     code: "\nSystem.setProperty(\"COMMUNITY_HOST\", \"localhost\");\n" +
       "System.setProperty(\"COMMUNITY_PORT\", \"8083\");\n" +
       "System.setProperty(\"AUTH0_DOMAIN\", \"dev-708nr3pf.eu.auth0.com\");\n" +
-      "String clientId = \"iUNFZUf83T5OazTjDv3gkjwfGMZ7fGT9\";\n" +
-      "String clientSecret = \"xWJN3YO0kuJ-gD19zltey9N5R1Cz0ltQJZtad-p1YQJCh6-hckl8I_hnbMbHuSQ4\";\n" +
+      "String clientId = \"YOUR_CLIENT_ID\";\n" +
+      "String clientSecret = \"YOUR_CLIENT_SECRET\";\n" +
       "App app = new App(clientId, clientSecret);\n" +
       "CommunityApi communityApi = new CommunityApi();\n" +
       "PublicChannel publicChannel = communityApi.publicChannels().get(app, \"1\").getResponse();\n" +
@@ -3108,8 +3108,8 @@ export class CommunityJavaTemplates {
     code: "\nSystem.setProperty(\"COMMUNITY_HOST\", \"localhost\");\n" +
       "System.setProperty(\"COMMUNITY_PORT\", \"8083\");\n" +
       "System.setProperty(\"AUTH0_DOMAIN\", \"dev-708nr3pf.eu.auth0.com\");\n" +
-      "String clientId = \"iUNFZUf83T5OazTjDv3gkjwfGMZ7fGT9\";\n" +
-      "String clientSecret = \"xWJN3YO0kuJ-gD19zltey9N5R1Cz0ltQJZtad-p1YQJCh6-hckl8I_hnbMbHuSQ4\";\n" +
+      "String clientId = \"YOUR_CLIENT_ID\";\n" +
+      "String clientSecret = \"YOUR_CLIENT_SECRET\";\n" +
       "App app = new App(clientId, clientSecret);\n" +
       "CommunityApi communityApi = new CommunityApi();\n" +
       "communityApi.publicChannels().delete(app, \"1\", false);",
@@ -3121,8 +3121,8 @@ export class CommunityJavaTemplates {
     code: "\nSystem.setProperty(\"COMMUNITY_HOST\", \"localhost\");\n" +
       "System.setProperty(\"COMMUNITY_PORT\", \"8083\");\n" +
       "System.setProperty(\"AUTH0_DOMAIN\", \"dev-708nr3pf.eu.auth0.com\");\n" +
-      "String clientId = \"iUNFZUf83T5OazTjDv3gkjwfGMZ7fGT9\";\n" +
-      "String clientSecret = \"xWJN3YO0kuJ-gD19zltey9N5R1Cz0ltQJZtad-p1YQJCh6-hckl8I_hnbMbHuSQ4\";\n" +
+      "String clientId = \"YOUR_CLIENT_ID\";\n" +
+      "String clientSecret = \"YOUR_CLIENT_SECRET\";\n" +
       "App app = new App(clientId, clientSecret);\n" +
       "CommunityApi communityApi = new CommunityApi();\n" +
       "PublicChannelSubscribeEvent publicChannelSubscribeEvent = new PublicChannelSubscribeEvent();\n" +
@@ -3136,8 +3136,8 @@ export class CommunityJavaTemplates {
     code: "\nSystem.setProperty(\"COMMUNITY_HOST\", \"localhost\");\n" +
       "System.setProperty(\"COMMUNITY_PORT\", \"8083\");\n" +
       "System.setProperty(\"AUTH0_DOMAIN\", \"dev-708nr3pf.eu.auth0.com\");\n" +
-      "String clientId = \"iUNFZUf83T5OazTjDv3gkjwfGMZ7fGT9\";\n" +
-      "String clientSecret = \"xWJN3YO0kuJ-gD19zltey9N5R1Cz0ltQJZtad-p1YQJCh6-hckl8I_hnbMbHuSQ4\";\n" +
+      "String clientId = \"YOUR_CLIENT_ID\";\n" +
+      "String clientSecret = \"YOUR_CLIENT_SECRET\";\n" +
       "App app = new App(clientId, clientSecret);\n" +
       "CommunityApi communityApi = new CommunityApi();\n" +
       "PublicChannelUnsubscribeEvent publicChannelUnsubscribeEvent = new PublicChannelUnsubscribeEvent();\n" +
@@ -3151,8 +3151,8 @@ export class CommunityJavaTemplates {
     code: "\nSystem.setProperty(\"COMMUNITY_HOST\", \"localhost\");\n" +
       "System.setProperty(\"COMMUNITY_PORT\", \"8083\");\n" +
       "System.setProperty(\"AUTH0_DOMAIN\", \"dev-708nr3pf.eu.auth0.com\");\n" +
-      "String clientId = \"iUNFZUf83T5OazTjDv3gkjwfGMZ7fGT9\";\n" +
-      "String clientSecret = \"xWJN3YO0kuJ-gD19zltey9N5R1Cz0ltQJZtad-p1YQJCh6-hckl8I_hnbMbHuSQ4\";\n" +
+      "String clientId = \"YOUR_CLIENT_ID\";\n" +
+      "String clientSecret = \"YOUR_CLIENT_SECRET\";\n" +
       "App app = new App(clientId, clientSecret);\n" +
       "CommunityApi communityApi = new CommunityApi();\n" +
       "MessageAddEvent messageAddEvent = new MemberMessageAddEvent();\n" +
@@ -3168,8 +3168,8 @@ export class CommunityJavaTemplates {
     code: "\nSystem.setProperty(\"COMMUNITY_HOST\", \"localhost\");\n" +
       "System.setProperty(\"COMMUNITY_PORT\", \"8083\");\n" +
       "System.setProperty(\"AUTH0_DOMAIN\", \"dev-708nr3pf.eu.auth0.com\");\n" +
-      "String clientId = \"iUNFZUf83T5OazTjDv3gkjwfGMZ7fGT9\";\n" +
-      "String clientSecret = \"xWJN3YO0kuJ-gD19zltey9N5R1Cz0ltQJZtad-p1YQJCh6-hckl8I_hnbMbHuSQ4\";\n" +
+      "String clientId = \"YOUR_CLIENT_ID\";\n" +
+      "String clientSecret = \"YOUR_CLIENT_SECRET\";\n" +
       "App app = new App(clientId, clientSecret);\n" +
       "CommunityApi communityApi = new CommunityApi();\n" +
       "communityApi.publicChannels().messageDelete(app, \"1\", \"1\", false);",
@@ -3181,8 +3181,8 @@ export class CommunityJavaTemplates {
     code: "\nSystem.setProperty(\"COMMUNITY_HOST\", \"localhost\");\n" +
       "System.setProperty(\"COMMUNITY_PORT\", \"8083\");\n" +
       "System.setProperty(\"AUTH0_DOMAIN\", \"dev-708nr3pf.eu.auth0.com\");\n" +
-      "String clientId = \"iUNFZUf83T5OazTjDv3gkjwfGMZ7fGT9\";\n" +
-      "String clientSecret = \"xWJN3YO0kuJ-gD19zltey9N5R1Cz0ltQJZtad-p1YQJCh6-hckl8I_hnbMbHuSQ4\";\n" +
+      "String clientId = \"YOUR_CLIENT_ID\";\n" +
+      "String clientSecret = \"YOUR_CLIENT_SECRET\";\n" +
       "App app = new App(clientId, clientSecret);\n" +
       "CommunityApi communityApi = new CommunityApi();\n" +
       "communityApi.publicChannels().messageDelete(app, \"1\", \"1\", true);",
@@ -3194,8 +3194,8 @@ export class CommunityJavaTemplates {
     code: "\nSystem.setProperty(\"COMMUNITY_HOST\", \"localhost\");\n" +
       "System.setProperty(\"COMMUNITY_PORT\", \"8083\");\n" +
       "System.setProperty(\"AUTH0_DOMAIN\", \"dev-708nr3pf.eu.auth0.com\");\n" +
-      "String clientId = \"iUNFZUf83T5OazTjDv3gkjwfGMZ7fGT9\";\n" +
-      "String clientSecret = \"xWJN3YO0kuJ-gD19zltey9N5R1Cz0ltQJZtad-p1YQJCh6-hckl8I_hnbMbHuSQ4\";\n" +
+      "String clientId = \"YOUR_CLIENT_ID\";\n" +
+      "String clientSecret = \"YOUR_CLIENT_SECRET\";\n" +
       "App app = new App(clientId, clientSecret);\n" +
       "CommunityApi communityApi = new CommunityApi();\n" +
       "List<Message> messages = communityApi.publicChannels().messagesByRoomId(app, \"1\").getResponse();\n" +
@@ -3273,8 +3273,8 @@ export class CommunityJavaTemplates {
     code: "\nSystem.setProperty(\"COMMUNITY_HOST\", \"localhost\");\n" +
       "System.setProperty(\"COMMUNITY_PORT\", \"8083\");\n" +
       "System.setProperty(\"AUTH0_DOMAIN\", \"dev-708nr3pf.eu.auth0.com\");\n" +
-      "String clientId = \"iUNFZUf83T5OazTjDv3gkjwfGMZ7fGT9\";\n" +
-      "String clientSecret = \"xWJN3YO0kuJ-gD19zltey9N5R1Cz0ltQJZtad-p1YQJCh6-hckl8I_hnbMbHuSQ4\";\n" +
+      "String clientId = \"YOUR_CLIENT_ID\";\n" +
+      "String clientSecret = \"YOUR_CLIENT_SECRET\";\n" +
       "App app = new App(clientId, clientSecret);\n" +
       "CommunityApi communityApi = new CommunityApi();\n" +
       "List<Document> documents = communityApi.publicChannels().documents(app, \"1\").getResponse();\n" +
@@ -3316,8 +3316,8 @@ export class CommunityJavaTemplates {
     code: "\nSystem.setProperty(\"COMMUNITY_HOST\", \"localhost\");\n" +
       "System.setProperty(\"COMMUNITY_PORT\", \"8083\");\n" +
       "System.setProperty(\"AUTH0_DOMAIN\", \"dev-708nr3pf.eu.auth0.com\");\n" +
-      "String clientId = \"iUNFZUf83T5OazTjDv3gkjwfGMZ7fGT9\";\n" +
-      "String clientSecret = \"xWJN3YO0kuJ-gD19zltey9N5R1Cz0ltQJZtad-p1YQJCh6-hckl8I_hnbMbHuSQ4\";\n" +
+      "String clientId = \"YOUR_CLIENT_ID\";\n" +
+      "String clientSecret = \"YOUR_CLIENT_SECRET\";\n" +
       "App app = new App(clientId, clientSecret);\n" +
       "CommunityApi communityApi = new CommunityApi();\n" +
       "List<Link> links = communityApi.publicChannels().links(app, \"1\").getResponse();\n" +
@@ -3344,8 +3344,8 @@ export class CommunityJavaTemplates {
     code: "\nSystem.setProperty(\"COMMUNITY_HOST\", \"localhost\");\n" +
       "System.setProperty(\"COMMUNITY_PORT\", \"8083\");\n" +
       "System.setProperty(\"AUTH0_DOMAIN\", \"dev-708nr3pf.eu.auth0.com\");\n" +
-      "String clientId = \"iUNFZUf83T5OazTjDv3gkjwfGMZ7fGT9\";\n" +
-      "String clientSecret = \"xWJN3YO0kuJ-gD19zltey9N5R1Cz0ltQJZtad-p1YQJCh6-hckl8I_hnbMbHuSQ4\";\n" +
+      "String clientId = \"YOUR_CLIENT_ID\";\n" +
+      "String clientSecret = \"YOUR_CLIENT_SECRET\";\n" +
       "App app = new App(clientId, clientSecret);\n" +
       "CommunityApi communityApi = new CommunityApi();\n" +
       "File file = new File(\"C:\\Users\\saulo\\OneDrive\\Imágenes\\evento.jpg\");\n" +
@@ -3358,8 +3358,8 @@ export class CommunityJavaTemplates {
     code: "\nSystem.setProperty(\"COMMUNITY_HOST\", \"localhost\");\n" +
       "System.setProperty(\"COMMUNITY_PORT\", \"8083\");\n" +
       "System.setProperty(\"AUTH0_DOMAIN\", \"dev-708nr3pf.eu.auth0.com\");\n" +
-      "String clientId = \"iUNFZUf83T5OazTjDv3gkjwfGMZ7fGT9\";\n" +
-      "String clientSecret = \"xWJN3YO0kuJ-gD19zltey9N5R1Cz0ltQJZtad-p1YQJCh6-hckl8I_hnbMbHuSQ4\";\n" +
+      "String clientId = \"YOUR_CLIENT_ID\";\n" +
+      "String clientSecret = \"YOUR_CLIENT_SECRET\";\n" +
       "App app = new App(clientId, clientSecret);\n" +
       "CommunityApi communityApi = new CommunityApi();\n" +
       "WallPostCreateEvent wallPostCreateEvent = new WallPostCreateEvent();\n" +
@@ -3377,8 +3377,8 @@ export class CommunityJavaTemplates {
     code: "\nSystem.setProperty(\"COMMUNITY_HOST\", \"localhost\");\n" +
       "System.setProperty(\"COMMUNITY_PORT\", \"8083\");\n" +
       "System.setProperty(\"AUTH0_DOMAIN\", \"dev-708nr3pf.eu.auth0.com\");\n" +
-      "String clientId = \"iUNFZUf83T5OazTjDv3gkjwfGMZ7fGT9\";\n" +
-      "String clientSecret = \"xWJN3YO0kuJ-gD19zltey9N5R1Cz0ltQJZtad-p1YQJCh6-hckl8I_hnbMbHuSQ4\";\n" +
+      "String clientId = \"YOUR_CLIENT_ID\";\n" +
+      "String clientSecret = \"YOUR_CLIENT_SECRET\";\n" +
       "App app = new App(clientId, clientSecret);\n" +
       "CommunityApi communityApi = new CommunityApi();\n" +
       "WallPost wallPost = communityApi.wallPosts().get(app, \"1\").getResponse();\n" +
@@ -3394,8 +3394,8 @@ export class CommunityJavaTemplates {
     code: "\nSystem.setProperty(\"COMMUNITY_HOST\", \"localhost\");\n" +
       "System.setProperty(\"COMMUNITY_PORT\", \"8083\");\n" +
       "System.setProperty(\"AUTH0_DOMAIN\", \"dev-708nr3pf.eu.auth0.com\");\n" +
-      "String clientId = \"iUNFZUf83T5OazTjDv3gkjwfGMZ7fGT9\";\n" +
-      "String clientSecret = \"xWJN3YO0kuJ-gD19zltey9N5R1Cz0ltQJZtad-p1YQJCh6-hckl8I_hnbMbHuSQ4\";\n" +
+      "String clientId = \"YOUR_CLIENT_ID\";\n" +
+      "String clientSecret = \"YOUR_CLIENT_SECRET\";\n" +
       "App app = new App(clientId, clientSecret);\n" +
       "CommunityApi communityApi = new CommunityApi();\n" +
       "communityApi.wallPosts().delete(app, \"1\", false);",
@@ -3407,8 +3407,8 @@ export class CommunityJavaTemplates {
     code: "\nSystem.setProperty(\"COMMUNITY_HOST\", \"localhost\");\n" +
       "System.setProperty(\"COMMUNITY_PORT\", \"8083\");\n" +
       "System.setProperty(\"AUTH0_DOMAIN\", \"dev-708nr3pf.eu.auth0.com\");\n" +
-      "String clientId = \"iUNFZUf83T5OazTjDv3gkjwfGMZ7fGT9\";\n" +
-      "String clientSecret = \"xWJN3YO0kuJ-gD19zltey9N5R1Cz0ltQJZtad-p1YQJCh6-hckl8I_hnbMbHuSQ4\";\n" +
+      "String clientId = \"YOUR_CLIENT_ID\";\n" +
+      "String clientSecret = \"YOUR_CLIENT_SECRET\";\n" +
       "App app = new App(clientId, clientSecret);\n" +
       "CommunityApi communityApi = new CommunityApi();\n" +
       "WallPost wallPost = communityApi.wallPosts().get(app, \"1\").getResponse();\n" +
@@ -3424,8 +3424,8 @@ export class CommunityJavaTemplates {
     code: "\nSystem.setProperty(\"COMMUNITY_HOST\", \"localhost\");\n" +
       "System.setProperty(\"COMMUNITY_PORT\", \"8083\");\n" +
       "System.setProperty(\"AUTH0_DOMAIN\", \"dev-708nr3pf.eu.auth0.com\");\n" +
-      "String clientId = \"iUNFZUf83T5OazTjDv3gkjwfGMZ7fGT9\";\n" +
-      "String clientSecret = \"xWJN3YO0kuJ-gD19zltey9N5R1Cz0ltQJZtad-p1YQJCh6-hckl8I_hnbMbHuSQ4\";\n" +
+      "String clientId = \"YOUR_CLIENT_ID\";\n" +
+      "String clientSecret = \"YOUR_CLIENT_SECRET\";\n" +
       "App app = new App(clientId, clientSecret);\n" +
       "CommunityApi communityApi = new CommunityApi();\n" +
       "communityApi.wallPosts().delete(app, \"1\", true);",
@@ -3437,8 +3437,8 @@ export class CommunityJavaTemplates {
     code: "\nSystem.setProperty(\"COMMUNITY_HOST\", \"localhost\");\n" +
       "System.setProperty(\"COMMUNITY_PORT\", \"8083\");\n" +
       "System.setProperty(\"AUTH0_DOMAIN\", \"dev-708nr3pf.eu.auth0.com\");\n" +
-      "String clientId = \"iUNFZUf83T5OazTjDv3gkjwfGMZ7fGT9\";\n" +
-      "String clientSecret = \"xWJN3YO0kuJ-gD19zltey9N5R1Cz0ltQJZtad-p1YQJCh6-hckl8I_hnbMbHuSQ4\";\n" +
+      "String clientId = \"YOUR_CLIENT_ID\";\n" +
+      "String clientSecret = \"YOUR_CLIENT_SECRET\";\n" +
       "App app = new App(clientId, clientSecret);\n" +
       "CommunityApi communityApi = new CommunityApi();\n" +
       "communityApi.wallPosts().like(app, \"1\", new WallPostLikeEvent());",
@@ -3450,8 +3450,8 @@ export class CommunityJavaTemplates {
     code: "\nSystem.setProperty(\"COMMUNITY_HOST\", \"localhost\");\n" +
       "System.setProperty(\"COMMUNITY_PORT\", \"8083\");\n" +
       "System.setProperty(\"AUTH0_DOMAIN\", \"dev-708nr3pf.eu.auth0.com\");\n" +
-      "String clientId = \"iUNFZUf83T5OazTjDv3gkjwfGMZ7fGT9\";\n" +
-      "String clientSecret = \"xWJN3YO0kuJ-gD19zltey9N5R1Cz0ltQJZtad-p1YQJCh6-hckl8I_hnbMbHuSQ4\";\n" +
+      "String clientId = \"YOUR_CLIENT_ID\";\n" +
+      "String clientSecret = \"YOUR_CLIENT_SECRET\";\n" +
       "App app = new App(clientId, clientSecret);\n" +
       "CommunityApi communityApi = new CommunityApi();\n" +
       "communityApi.wallPosts().unlike(app, \"1\", new WallPostUnlikeEvent());",
@@ -3463,8 +3463,8 @@ export class CommunityJavaTemplates {
     code: "\nSystem.setProperty(\"COMMUNITY_HOST\", \"localhost\");\n" +
       "System.setProperty(\"COMMUNITY_PORT\", \"8083\");\n" +
       "System.setProperty(\"AUTH0_DOMAIN\", \"dev-708nr3pf.eu.auth0.com\");\n" +
-      "String clientId = \"iUNFZUf83T5OazTjDv3gkjwfGMZ7fGT9\";\n" +
-      "String clientSecret = \"xWJN3YO0kuJ-gD19zltey9N5R1Cz0ltQJZtad-p1YQJCh6-hckl8I_hnbMbHuSQ4\";\n" +
+      "String clientId = \"YOUR_CLIENT_ID\";\n" +
+      "String clientSecret = \"YOUR_CLIENT_SECRET\";\n" +
       "App app = new App(clientId, clientSecret);\n" +
       "CommunityApi communityApi = new CommunityApi();\n" +
       "Comment comment = new Comment();\n" +
@@ -3483,8 +3483,8 @@ export class CommunityJavaTemplates {
     code: "\nSystem.setProperty(\"COMMUNITY_HOST\", \"localhost\");\n" +
       "System.setProperty(\"COMMUNITY_PORT\", \"8083\");\n" +
       "System.setProperty(\"AUTH0_DOMAIN\", \"dev-708nr3pf.eu.auth0.com\");\n" +
-      "String clientId = \"iUNFZUf83T5OazTjDv3gkjwfGMZ7fGT9\";\n" +
-      "String clientSecret = \"xWJN3YO0kuJ-gD19zltey9N5R1Cz0ltQJZtad-p1YQJCh6-hckl8I_hnbMbHuSQ4\";\n" +
+      "String clientId = \"YOUR_CLIENT_ID\";\n" +
+      "String clientSecret = \"YOUR_CLIENT_SECRET\";\n" +
       "App app = new App(clientId, clientSecret);\n" +
       "CommunityApi communityApi = new CommunityApi();\n" +
       "communityApi.wallPosts().commentLike(app, \"1\", \"1\", new WallPostCommentLikeEvent());",
@@ -3496,8 +3496,8 @@ export class CommunityJavaTemplates {
     code: "\nSystem.setProperty(\"COMMUNITY_HOST\", \"localhost\");\n" +
       "System.setProperty(\"COMMUNITY_PORT\", \"8083\");\n" +
       "System.setProperty(\"AUTH0_DOMAIN\", \"dev-708nr3pf.eu.auth0.com\");\n" +
-      "String clientId = \"iUNFZUf83T5OazTjDv3gkjwfGMZ7fGT9\";\n" +
-      "String clientSecret = \"xWJN3YO0kuJ-gD19zltey9N5R1Cz0ltQJZtad-p1YQJCh6-hckl8I_hnbMbHuSQ4\";\n" +
+      "String clientId = \"YOUR_CLIENT_ID\";\n" +
+      "String clientSecret = \"YOUR_CLIENT_SECRET\";\n" +
       "App app = new App(clientId, clientSecret);\n" +
       "CommunityApi communityApi = new CommunityApi();\n" +
       "communityApi.wallPosts().commentUnlike(app, \"1\", \"1\", new WallPostCommentUnlikeEvent());",
@@ -3509,8 +3509,8 @@ export class CommunityJavaTemplates {
     code: "\nSystem.setProperty(\"COMMUNITY_HOST\", \"localhost\");\n" +
       "System.setProperty(\"COMMUNITY_PORT\", \"8083\");\n" +
       "System.setProperty(\"AUTH0_DOMAIN\", \"dev-708nr3pf.eu.auth0.com\");\n" +
-      "String clientId = \"iUNFZUf83T5OazTjDv3gkjwfGMZ7fGT9\";\n" +
-      "String clientSecret = \"xWJN3YO0kuJ-gD19zltey9N5R1Cz0ltQJZtad-p1YQJCh6-hckl8I_hnbMbHuSQ4\";\n" +
+      "String clientId = \"YOUR_CLIENT_ID\";\n" +
+      "String clientSecret = \"YOUR_CLIENT_SECRET\";\n" +
       "App app = new App(clientId, clientSecret);\n" +
       "CommunityApi communityApi = new CommunityApi();\n" +
       "WallPost wallPost = communityApi.wallPosts().get(app, \"1\").getResponse();\n" +
@@ -3693,8 +3693,8 @@ export class CommunityJavaTemplates {
     code: "\nSystem.setProperty(\"COMMUNITY_HOST\", \"localhost\");\n" +
       "System.setProperty(\"COMMUNITY_PORT\", \"8083\");\n" +
       "System.setProperty(\"AUTH0_DOMAIN\", \"dev-708nr3pf.eu.auth0.com\");\n" +
-      "String clientId = \"iUNFZUf83T5OazTjDv3gkjwfGMZ7fGT9\";\n" +
-      "String clientSecret = \"xWJN3YO0kuJ-gD19zltey9N5R1Cz0ltQJZtad-p1YQJCh6-hckl8I_hnbMbHuSQ4\";\n" +
+      "String clientId = \"YOUR_CLIENT_ID\";\n" +
+      "String clientSecret = \"YOUR_CLIENT_SECRET\";\n" +
       "App app = new App(clientId, clientSecret);\n" +
       "CommunityApi communityApi = new CommunityApi();\n" +
       "List<WallPost> wallposts = communityApi.wallPosts().paged(app).getResponse();\n" +
@@ -4139,8 +4139,8 @@ export class CommunityJavaTemplates {
     code: "\nSystem.setProperty(\"COMMUNITY_HOST\", \"localhost\");\n" +
       "System.setProperty(\"COMMUNITY_PORT\", \"8083\");\n" +
       "System.setProperty(\"AUTH0_DOMAIN\", \"dev-708nr3pf.eu.auth0.com\");\n" +
-      "String clientId = \"iUNFZUf83T5OazTjDv3gkjwfGMZ7fGT9\";\n" +
-      "String clientSecret = \"xWJN3YO0kuJ-gD19zltey9N5R1Cz0ltQJZtad-p1YQJCh6-hckl8I_hnbMbHuSQ4\";\n" +
+      "String clientId = \"YOUR_CLIENT_ID\";\n" +
+      "String clientSecret = \"YOUR_CLIENT_SECRET\";\n" +
       "App app = new App(clientId, clientSecret);\n" +
       "CommunityApi communityApi = new CommunityApi();\n" +
       "File file = new File(\"C:\\Users\\saulo\\OneDrive\\Imágenes\\evento.jpg\");\n" +
@@ -4153,8 +4153,8 @@ export class CommunityJavaTemplates {
     code: "\nSystem.setProperty(\"COMMUNITY_HOST\", \"localhost\");\n" +
       "System.setProperty(\"COMMUNITY_PORT\", \"8083\");\n" +
       "System.setProperty(\"AUTH0_DOMAIN\", \"dev-708nr3pf.eu.auth0.com\");\n" +
-      "String clientId = \"iUNFZUf83T5OazTjDv3gkjwfGMZ7fGT9\";\n" +
-      "String clientSecret = \"xWJN3YO0kuJ-gD19zltey9N5R1Cz0ltQJZtad-p1YQJCh6-hckl8I_hnbMbHuSQ4\";\n" +
+      "String clientId = \"YOUR_CLIENT_ID\";\n" +
+      "String clientSecret = \"YOUR_CLIENT_SECRET\";\n" +
       "App app = new App(clientId, clientSecret);\n" +
       "CommunityApi communityApi = new CommunityApi();\n" +
       "List<Actor> actors = communityApi.actors().all(app).getResponse();\n" +
@@ -4418,8 +4418,8 @@ export class CommunityJavaTemplates {
     code: "\nSystem.setProperty(\"COMMUNITY_HOST\", \"localhost\");\n" +
       "System.setProperty(\"COMMUNITY_PORT\", \"8083\");\n" +
       "System.setProperty(\"AUTH0_DOMAIN\", \"dev-708nr3pf.eu.auth0.com\");\n" +
-      "String clientId = \"iUNFZUf83T5OazTjDv3gkjwfGMZ7fGT9\";\n" +
-      "String clientSecret = \"xWJN3YO0kuJ-gD19zltey9N5R1Cz0ltQJZtad-p1YQJCh6-hckl8I_hnbMbHuSQ4\";\n" +
+      "String clientId = \"YOUR_CLIENT_ID\";\n" +
+      "String clientSecret = \"YOUR_CLIENT_SECRET\";\n" +
       "App app = new App(clientId, clientSecret);\n" +
       "CommunityApi communityApi = new CommunityApi();\n" +
       "File file = new File(\"C:\\Users\\saulo\\Downloads\\test.csv\");\n" +
@@ -4432,8 +4432,8 @@ export class CommunityJavaTemplates {
     code: "\nSystem.setProperty(\"COMMUNITY_HOST\", \"localhost\");\n" +
       "System.setProperty(\"COMMUNITY_PORT\", \"8083\");\n" +
       "System.setProperty(\"AUTH0_DOMAIN\", \"dev-708nr3pf.eu.auth0.com\");\n" +
-      "String clientId = \"iUNFZUf83T5OazTjDv3gkjwfGMZ7fGT9\";\n" +
-      "String clientSecret = \"xWJN3YO0kuJ-gD19zltey9N5R1Cz0ltQJZtad-p1YQJCh6-hckl8I_hnbMbHuSQ4\";\n" +
+      "String clientId = \"YOUR_CLIENT_ID\";\n" +
+      "String clientSecret = \"YOUR_CLIENT_SECRET\";\n" +
       "App app = new App(clientId, clientSecret);\n" +
       "CommunityApi communityApi = new CommunityApi();\n" +
       "List<Actor> actors = communityApi.actors().listByNameAndState(app, \"Iñigo\", State.ACCEPTED).getResponse();\n" +
@@ -4663,8 +4663,8 @@ export class CommunityJavaTemplates {
     code: "\nSystem.setProperty(\"COMMUNITY_HOST\", \"localhost\");\n" +
       "System.setProperty(\"COMMUNITY_PORT\", \"8083\");\n" +
       "System.setProperty(\"AUTH0_DOMAIN\", \"dev-708nr3pf.eu.auth0.com\");\n" +
-      "String clientId = \"iUNFZUf83T5OazTjDv3gkjwfGMZ7fGT9\";\n" +
-      "String clientSecret = \"xWJN3YO0kuJ-gD19zltey9N5R1Cz0ltQJZtad-p1YQJCh6-hckl8I_hnbMbHuSQ4\";\n" +
+      "String clientId = \"YOUR_CLIENT_ID\";\n" +
+      "String clientSecret = \"YOUR_CLIENT_SECRET\";\n" +
       "App app = new App(clientId, clientSecret);\n" +
       "CommunityApi communityApi = new CommunityApi();\n" +
       "List<String> types = new ArrayList<>();\n" +
@@ -4860,8 +4860,8 @@ export class CommunityJavaTemplates {
     code: "\nSystem.setProperty(\"COMMUNITY_HOST\", \"localhost\");\n" +
       "System.setProperty(\"COMMUNITY_PORT\", \"8083\");\n" +
       "System.setProperty(\"AUTH0_DOMAIN\", \"dev-708nr3pf.eu.auth0.com\");\n" +
-      "String clientId = \"iUNFZUf83T5OazTjDv3gkjwfGMZ7fGT9\";\n" +
-      "String clientSecret = \"xWJN3YO0kuJ-gD19zltey9N5R1Cz0ltQJZtad-p1YQJCh6-hckl8I_hnbMbHuSQ4\";\n" +
+      "String clientId = \"YOUR_CLIENT_ID\";\n" +
+      "String clientSecret = \"YOUR_CLIENT_SECRET\";\n" +
       "App app = new App(clientId, clientSecret);\n" +
       "CommunityApi communityApi = new CommunityApi();\n" +
       "List<Actor> actors = communityApi.actors().listByState(app, State.REJECTED).getResponse();\n" +
@@ -5157,8 +5157,8 @@ export class CommunityJavaTemplates {
     code: "\nSystem.setProperty(\"COMMUNITY_HOST\", \"localhost\");\n" +
       "System.setProperty(\"COMMUNITY_PORT\", \"8083\");\n" +
       "System.setProperty(\"AUTH0_DOMAIN\", \"dev-708nr3pf.eu.auth0.com\");\n" +
-      "String clientId = \"iUNFZUf83T5OazTjDv3gkjwfGMZ7fGT9\";\n" +
-      "String clientSecret = \"xWJN3YO0kuJ-gD19zltey9N5R1Cz0ltQJZtad-p1YQJCh6-hckl8I_hnbMbHuSQ4\";\n" +
+      "String clientId = \"YOUR_CLIENT_ID\";\n" +
+      "String clientSecret = \"YOUR_CLIENT_SECRET\";\n" +
       "App app = new App(clientId, clientSecret);\n" +
       "CommunityApi communityApi = new CommunityApi();\n" +
       "List<Actor> actors = communityApi.actors().listByMember(app, \"1\").getResponse();\n" +
@@ -5484,8 +5484,8 @@ export class CommunityJavaTemplates {
     code: "\nSystem.setProperty(\"COMMUNITY_HOST\", \"localhost\");\n" +
       "System.setProperty(\"COMMUNITY_PORT\", \"8083\");\n" +
       "System.setProperty(\"AUTH0_DOMAIN\", \"dev-708nr3pf.eu.auth0.com\");\n" +
-      "String clientId = \"iUNFZUf83T5OazTjDv3gkjwfGMZ7fGT9\";\n" +
-      "String clientSecret = \"xWJN3YO0kuJ-gD19zltey9N5R1Cz0ltQJZtad-p1YQJCh6-hckl8I_hnbMbHuSQ4\";\n" +
+      "String clientId = \"YOUR_CLIENT_ID\";\n" +
+      "String clientSecret = \"YOUR_CLIENT_SECRET\";\n" +
       "App app = new App(clientId, clientSecret);\n" +
       "CommunityApi communityApi = new CommunityApi();\n" +
       "Actor actor = communityApi.actors().get(app, \"1\").getResponse();\n" +
@@ -5618,8 +5618,8 @@ export class CommunityJavaTemplates {
     code: "\nSystem.setProperty(\"COMMUNITY_HOST\", \"localhost\");\n" +
       "System.setProperty(\"COMMUNITY_PORT\", \"8083\");\n" +
       "System.setProperty(\"AUTH0_DOMAIN\", \"dev-708nr3pf.eu.auth0.com\");\n" +
-      "String clientId = \"iUNFZUf83T5OazTjDv3gkjwfGMZ7fGT9\";\n" +
-      "String clientSecret = \"xWJN3YO0kuJ-gD19zltey9N5R1Cz0ltQJZtad-p1YQJCh6-hckl8I_hnbMbHuSQ4\";\n" +
+      "String clientId = \"YOUR_CLIENT_ID\";\n" +
+      "String clientSecret = \"YOUR_CLIENT_SECRET\";\n" +
       "App app = new App(clientId, clientSecret);\n" +
       "CommunityApi communityApi = new CommunityApi();\n" +
       "TalentCreateEvent actorCreateEvent = new TalentCreateEvent();\n" +
@@ -5650,8 +5650,8 @@ export class CommunityJavaTemplates {
     code: "\nSystem.setProperty(\"COMMUNITY_HOST\", \"localhost\");\n" +
       "System.setProperty(\"COMMUNITY_PORT\", \"8083\");\n" +
       "System.setProperty(\"AUTH0_DOMAIN\", \"dev-708nr3pf.eu.auth0.com\");\n" +
-      "String clientId = \"iUNFZUf83T5OazTjDv3gkjwfGMZ7fGT9\";\n" +
-      "String clientSecret = \"xWJN3YO0kuJ-gD19zltey9N5R1Cz0ltQJZtad-p1YQJCh6-hckl8I_hnbMbHuSQ4\";\n" +
+      "String clientId = \"YOUR_CLIENT_ID\";\n" +
+      "String clientSecret = \"YOUR_CLIENT_SECRET\";\n" +
       "App app = new App(clientId, clientSecret);\n" +
       "CommunityApi communityApi = new CommunityApi();\n" +
       "Actor actor = communityApi.actors().get(app, \"1\").getResponse();\n" +
@@ -5683,8 +5683,8 @@ export class CommunityJavaTemplates {
     code: "\nSystem.setProperty(\"COMMUNITY_HOST\", \"localhost\");\n" +
       "System.setProperty(\"COMMUNITY_PORT\", \"8083\");\n" +
       "System.setProperty(\"AUTH0_DOMAIN\", \"dev-708nr3pf.eu.auth0.com\");\n" +
-      "String clientId = \"iUNFZUf83T5OazTjDv3gkjwfGMZ7fGT9\";\n" +
-      "String clientSecret = \"xWJN3YO0kuJ-gD19zltey9N5R1Cz0ltQJZtad-p1YQJCh6-hckl8I_hnbMbHuSQ4\";\n" +
+      "String clientId = \"YOUR_CLIENT_ID\";\n" +
+      "String clientSecret = \"YOUR_CLIENT_SECRET\";\n" +
       "App app = new App(clientId, clientSecret);\n" +
       "CommunityApi communityApi = new CommunityApi();\n" +
       "communityApi.actors().accept(app, \"1\", new ActorAcceptEvent());",
@@ -5696,8 +5696,8 @@ export class CommunityJavaTemplates {
     code: "\nSystem.setProperty(\"COMMUNITY_HOST\", \"localhost\");\n" +
       "System.setProperty(\"COMMUNITY_PORT\", \"8083\");\n" +
       "System.setProperty(\"AUTH0_DOMAIN\", \"dev-708nr3pf.eu.auth0.com\");\n" +
-      "String clientId = \"iUNFZUf83T5OazTjDv3gkjwfGMZ7fGT9\";\n" +
-      "String clientSecret = \"xWJN3YO0kuJ-gD19zltey9N5R1Cz0ltQJZtad-p1YQJCh6-hckl8I_hnbMbHuSQ4\";\n" +
+      "String clientId = \"YOUR_CLIENT_ID\";\n" +
+      "String clientSecret = \"YOUR_CLIENT_SECRET\";\n" +
       "App app = new App(clientId, clientSecret);\n" +
       "CommunityApi communityApi = new CommunityApi();\n" +
       "communityApi.actors().reject(app, \"1\", new ActorRejectEvent());",
@@ -5709,8 +5709,8 @@ export class CommunityJavaTemplates {
     code: "\nSystem.setProperty(\"COMMUNITY_HOST\", \"localhost\");\n" +
       "System.setProperty(\"COMMUNITY_PORT\", \"8083\");\n" +
       "System.setProperty(\"AUTH0_DOMAIN\", \"dev-708nr3pf.eu.auth0.com\");\n" +
-      "String clientId = \"iUNFZUf83T5OazTjDv3gkjwfGMZ7fGT9\";\n" +
-      "String clientSecret = \"xWJN3YO0kuJ-gD19zltey9N5R1Cz0ltQJZtad-p1YQJCh6-hckl8I_hnbMbHuSQ4\";\n" +
+      "String clientId = \"YOUR_CLIENT_ID\";\n" +
+      "String clientSecret = \"YOUR_CLIENT_SECRET\";\n" +
       "App app = new App(clientId, clientSecret);\n" +
       "CommunityApi communityApi = new CommunityApi();\n" +
       "communityApi.actors().delete(app, \"1\");",
@@ -5722,8 +5722,8 @@ export class CommunityJavaTemplates {
     code: "\nSystem.setProperty(\"COMMUNITY_HOST\", \"localhost\");\n" +
       "System.setProperty(\"COMMUNITY_PORT\", \"8083\");\n" +
       "System.setProperty(\"AUTH0_DOMAIN\", \"dev-708nr3pf.eu.auth0.com\");\n" +
-      "String clientId = \"iUNFZUf83T5OazTjDv3gkjwfGMZ7fGT9\";\n" +
-      "String clientSecret = \"xWJN3YO0kuJ-gD19zltey9N5R1Cz0ltQJZtad-p1YQJCh6-hckl8I_hnbMbHuSQ4\";\n" +
+      "String clientId = \"YOUR_CLIENT_ID\";\n" +
+      "String clientSecret = \"YOUR_CLIENT_SECRET\";\n" +
       "App app = new App(clientId, clientSecret);\n" +
       "CommunityApi communityApi = new CommunityApi();\n" +
       "File file = new File(\"C:\\Users\\saulo\\OneDrive\\Imágenes\\evento.jpg\");\n" +
@@ -5736,8 +5736,8 @@ export class CommunityJavaTemplates {
     code: "\nSystem.setProperty(\"COMMUNITY_HOST\", \"localhost\");\n" +
       "System.setProperty(\"COMMUNITY_PORT\", \"8083\");\n" +
       "System.setProperty(\"AUTH0_DOMAIN\", \"dev-708nr3pf.eu.auth0.com\");\n" +
-      "String clientId = \"iUNFZUf83T5OazTjDv3gkjwfGMZ7fGT9\";\n" +
-      "String clientSecret = \"xWJN3YO0kuJ-gD19zltey9N5R1Cz0ltQJZtad-p1YQJCh6-hckl8I_hnbMbHuSQ4\";\n" +
+      "String clientId = \"YOUR_CLIENT_ID\";\n" +
+      "String clientSecret = \"YOUR_CLIENT_SECRET\";\n" +
       "App app = new App(clientId, clientSecret);\n" +
       "CommunityApi communityApi = new CommunityApi();\n" +
       "File file = new File(\"C:\\Users\\saulo\\OneDrive\\Imágenes\\evento.jpg\");\n" +
@@ -5750,8 +5750,8 @@ export class CommunityJavaTemplates {
     code: "\nSystem.setProperty(\"COMMUNITY_HOST\", \"localhost\");\n" +
       "System.setProperty(\"COMMUNITY_PORT\", \"8083\");\n" +
       "System.setProperty(\"AUTH0_DOMAIN\", \"dev-708nr3pf.eu.auth0.com\");\n" +
-      "String clientId = \"iUNFZUf83T5OazTjDv3gkjwfGMZ7fGT9\";\n" +
-      "String clientSecret = \"xWJN3YO0kuJ-gD19zltey9N5R1Cz0ltQJZtad-p1YQJCh6-hckl8I_hnbMbHuSQ4\";\n" +
+      "String clientId = \"YOUR_CLIENT_ID\";\n" +
+      "String clientSecret = \"YOUR_CLIENT_SECRET\";\n" +
       "App app = new App(clientId, clientSecret);\n" +
       "CommunityApi communityApi = new CommunityApi();\n" +
       "File file = new File(\"C:\\Users\\saulo\\OneDrive\\Imágenes\\evento.jpg\");\n" +
@@ -5764,8 +5764,8 @@ export class CommunityJavaTemplates {
     code: "\nSystem.setProperty(\"COMMUNITY_HOST\", \"localhost\");\n" +
       "System.setProperty(\"COMMUNITY_PORT\", \"8083\");\n" +
       "System.setProperty(\"AUTH0_DOMAIN\", \"dev-708nr3pf.eu.auth0.com\");\n" +
-      "String clientId = \"iUNFZUf83T5OazTjDv3gkjwfGMZ7fGT9\";\n" +
-      "String clientSecret = \"xWJN3YO0kuJ-gD19zltey9N5R1Cz0ltQJZtad-p1YQJCh6-hckl8I_hnbMbHuSQ4\";\n" +
+      "String clientId = \"YOUR_CLIENT_ID\";\n" +
+      "String clientSecret = \"YOUR_CLIENT_SECRET\";\n" +
       "App app = new App(clientId, clientSecret);\n" +
       "CommunityApi communityApi = new CommunityApi();\n" +
       "MemberSetFcmTokenEvent memberSetFcmTokenEvent = new MemberSetFcmTokenEvent();\n" +
@@ -5783,8 +5783,8 @@ export class CommunityJavaTemplates {
     code: "\nSystem.setProperty(\"COMMUNITY_HOST\", \"localhost\");\n" +
       "System.setProperty(\"COMMUNITY_PORT\", \"8083\");\n" +
       "System.setProperty(\"AUTH0_DOMAIN\", \"dev-708nr3pf.eu.auth0.com\");\n" +
-      "String clientId = \"iUNFZUf83T5OazTjDv3gkjwfGMZ7fGT9\";\n" +
-      "String clientSecret = \"xWJN3YO0kuJ-gD19zltey9N5R1Cz0ltQJZtad-p1YQJCh6-hckl8I_hnbMbHuSQ4\";\n" +
+      "String clientId = \"YOUR_CLIENT_ID\";\n" +
+      "String clientSecret = \"YOUR_CLIENT_SECRET\";\n" +
       "App app = new App(clientId, clientSecret);\n" +
       "CommunityApi communityApi = new CommunityApi();\n" +
       "communityApi.members().loggedIn(app, \"1\");",
@@ -6022,11 +6022,11 @@ export class CommunityJavaTemplates {
     code: "\nSystem.setProperty(\"COMMUNITY_HOST\", \"localhost\");\n" +
       "System.setProperty(\"COMMUNITY_PORT\", \"8083\");\n" +
       "System.setProperty(\"AUTH0_DOMAIN\", \"dev-708nr3pf.eu.auth0.com\");\n" +
-      "String clientId = \"iUNFZUf83T5OazTjDv3gkjwfGMZ7fGT9\";\n" +
-      "String clientSecret = \"xWJN3YO0kuJ-gD19zltey9N5R1Cz0ltQJZtad-p1YQJCh6-hckl8I_hnbMbHuSQ4\";\n" +
+      "String clientId = \"YOUR_CLIENT_ID\";\n" +
+      "String clientSecret = \"YOUR_CLIENT_SECRET\";\n" +
       "App app = new App(clientId, clientSecret);\n" +
       "CommunityApi communityApi = new CommunityApi();\n" +
-      "List<Member> members = communityApi.members().all(app).getResponse();\n" +
+      "List<Member> members = communityApi.members().listByIds(app, new ArrayList<String>()).getResponse();\n" +
       "JSONArray jsonObject = new JSONArray(members);\n" +
       "System.out.println(jsonObject);",
     response: "\n[\n" +
@@ -6185,8 +6185,8 @@ export class CommunityJavaTemplates {
     code: "\nSystem.setProperty(\"COMMUNITY_HOST\", \"localhost\");\n" +
       "System.setProperty(\"COMMUNITY_PORT\", \"8083\");\n" +
       "System.setProperty(\"AUTH0_DOMAIN\", \"dev-708nr3pf.eu.auth0.com\");\n" +
-      "String clientId = \"iUNFZUf83T5OazTjDv3gkjwfGMZ7fGT9\";\n" +
-      "String clientSecret = \"xWJN3YO0kuJ-gD19zltey9N5R1Cz0ltQJZtad-p1YQJCh6-hckl8I_hnbMbHuSQ4\";\n" +
+      "String clientId = \"YOUR_CLIENT_ID\";\n" +
+      "String clientSecret = \"YOUR_CLIENT_SECRET\";\n" +
       "App app = new App(clientId, clientSecret);\n" +
       "CommunityApi communityApi = new CommunityApi();\n" +
       "Member member = communityApi.members().member(app, \"2\").getResponse();\n" +
@@ -6273,8 +6273,8 @@ export class CommunityJavaTemplates {
     code: "\nSystem.setProperty(\"COMMUNITY_HOST\", \"localhost\");\n" +
       "System.setProperty(\"COMMUNITY_PORT\", \"8083\");\n" +
       "System.setProperty(\"AUTH0_DOMAIN\", \"dev-708nr3pf.eu.auth0.com\");\n" +
-      "String clientId = \"iUNFZUf83T5OazTjDv3gkjwfGMZ7fGT9\";\n" +
-      "String clientSecret = \"xWJN3YO0kuJ-gD19zltey9N5R1Cz0ltQJZtad-p1YQJCh6-hckl8I_hnbMbHuSQ4\";\n" +
+      "String clientId = \"YOUR_CLIENT_ID\";\n" +
+      "String clientSecret = \"YOUR_CLIENT_SECRET\";\n" +
       "App app = new App(clientId, clientSecret);\n" +
       "CommunityApi communityApi = new CommunityApi();\n" +
       "byte[] marker = communityApi.members().marker(app, \"1\").getResponse();",
@@ -6286,8 +6286,8 @@ export class CommunityJavaTemplates {
     code: "\nSystem.setProperty(\"COMMUNITY_HOST\", \"localhost\");\n" +
       "System.setProperty(\"COMMUNITY_PORT\", \"8083\");\n" +
       "System.setProperty(\"AUTH0_DOMAIN\", \"dev-708nr3pf.eu.auth0.com\");\n" +
-      "String clientId = \"iUNFZUf83T5OazTjDv3gkjwfGMZ7fGT9\";\n" +
-      "String clientSecret = \"xWJN3YO0kuJ-gD19zltey9N5R1Cz0ltQJZtad-p1YQJCh6-hckl8I_hnbMbHuSQ4\";\n" +
+      "String clientId = \"YOUR_CLIENT_ID\";\n" +
+      "String clientSecret = \"YOUR_CLIENT_SECRET\";\n" +
       "App app = new App(clientId, clientSecret);\n" +
       "CommunityApi communityApi = new CommunityApi();\n" +
       "File file = new File(\"C:\\\\Users\\\\saulo\\\\OneDrive\\\\Imágenes\\\\evento.jpg\");\n" +
@@ -6300,8 +6300,8 @@ export class CommunityJavaTemplates {
     code: "\nSystem.setProperty(\"COMMUNITY_HOST\", \"localhost\");\n" +
       "System.setProperty(\"COMMUNITY_PORT\", \"8083\");\n" +
       "System.setProperty(\"AUTH0_DOMAIN\", \"dev-708nr3pf.eu.auth0.com\");\n" +
-      "String clientId = \"iUNFZUf83T5OazTjDv3gkjwfGMZ7fGT9\";\n" +
-      "String clientSecret = \"xWJN3YO0kuJ-gD19zltey9N5R1Cz0ltQJZtad-p1YQJCh6-hckl8I_hnbMbHuSQ4\";\n" +
+      "String clientId = \"YOUR_CLIENT_ID\";\n" +
+      "String clientSecret = \"YOUR_CLIENT_SECRET\";\n" +
       "App app = new App(clientId, clientSecret);\n" +
       "CommunityApi communityApi = new CommunityApi();\n" +
       "File file = new File(\"C:\\Users\\saulo\\OneDrive\\Imágenes\\evento.jpg\");\n" +
@@ -6314,8 +6314,8 @@ export class CommunityJavaTemplates {
     code: "\nSystem.setProperty(\"COMMUNITY_HOST\", \"localhost\");\n" +
       "System.setProperty(\"COMMUNITY_PORT\", \"8083\");\n" +
       "System.setProperty(\"AUTH0_DOMAIN\", \"dev-708nr3pf.eu.auth0.com\");\n" +
-      "String clientId = \"iUNFZUf83T5OazTjDv3gkjwfGMZ7fGT9\";\n" +
-      "String clientSecret = \"xWJN3YO0kuJ-gD19zltey9N5R1Cz0ltQJZtad-p1YQJCh6-hckl8I_hnbMbHuSQ4\";\n" +
+      "String clientId = \"YOUR_CLIENT_ID\";\n" +
+      "String clientSecret = \"YOUR_CLIENT_SECRET\";\n" +
       "App app = new App(clientId, clientSecret);\n" +
       "CommunityApi communityApi = new CommunityApi();\n" +
       "Member member = communityApi.members().member(app, \"1\").getResponse();\n" +
@@ -6334,8 +6334,8 @@ export class CommunityJavaTemplates {
     code: "\nSystem.setProperty(\"COMMUNITY_HOST\", \"localhost\");\n" +
       "System.setProperty(\"COMMUNITY_PORT\", \"8083\");\n" +
       "System.setProperty(\"AUTH0_DOMAIN\", \"dev-708nr3pf.eu.auth0.com\");\n" +
-      "String clientId = \"iUNFZUf83T5OazTjDv3gkjwfGMZ7fGT9\";\n" +
-      "String clientSecret = \"xWJN3YO0kuJ-gD19zltey9N5R1Cz0ltQJZtad-p1YQJCh6-hckl8I_hnbMbHuSQ4\";\n" +
+      "String clientId = \"YOUR_CLIENT_ID\";\n" +
+      "String clientSecret = \"YOUR_CLIENT_SECRET\";\n" +
       "App app = new App(clientId, clientSecret);\n" +
       "CommunityApi communityApi = new CommunityApi();\n" +
       "communityApi.members().delete(app, \"1\");",
@@ -6347,8 +6347,8 @@ export class CommunityJavaTemplates {
     code: "\nSystem.setProperty(\"COMMUNITY_HOST\", \"localhost\");\n" +
       "System.setProperty(\"COMMUNITY_PORT\", \"8083\");\n" +
       "System.setProperty(\"AUTH0_DOMAIN\", \"dev-708nr3pf.eu.auth0.com\");\n" +
-      "String clientId = \"iUNFZUf83T5OazTjDv3gkjwfGMZ7fGT9\";\n" +
-      "String clientSecret = \"xWJN3YO0kuJ-gD19zltey9N5R1Cz0ltQJZtad-p1YQJCh6-hckl8I_hnbMbHuSQ4\";\n" +
+      "String clientId = \"YOUR_CLIENT_ID\";\n" +
+      "String clientSecret = \"YOUR_CLIENT_SECRET\";\n" +
       "App app = new App(clientId, clientSecret);\n" +
       "CommunityApi communityApi = new CommunityApi();\n" +
       "MemberEducationCreateEvent memberEducationCreateEvent = new MemberEducationCreateEvent();\n" +
@@ -6369,8 +6369,8 @@ export class CommunityJavaTemplates {
     code: "\nSystem.setProperty(\"COMMUNITY_HOST\", \"localhost\");\n" +
       "System.setProperty(\"COMMUNITY_PORT\", \"8083\");\n" +
       "System.setProperty(\"AUTH0_DOMAIN\", \"dev-708nr3pf.eu.auth0.com\");\n" +
-      "String clientId = \"iUNFZUf83T5OazTjDv3gkjwfGMZ7fGT9\";\n" +
-      "String clientSecret = \"xWJN3YO0kuJ-gD19zltey9N5R1Cz0ltQJZtad-p1YQJCh6-hckl8I_hnbMbHuSQ4\";\n" +
+      "String clientId = \"YOUR_CLIENT_ID\";\n" +
+      "String clientSecret = \"YOUR_CLIENT_SECRET\";\n" +
       "App app = new App(clientId, clientSecret);\n" +
       "CommunityApi communityApi = new CommunityApi();\n" +
       "Member member = communityApi.members().member(app, \"1\").getResponse();\n" +
@@ -6396,8 +6396,8 @@ export class CommunityJavaTemplates {
     code: "\nSystem.setProperty(\"COMMUNITY_HOST\", \"localhost\");\n" +
       "System.setProperty(\"COMMUNITY_PORT\", \"8083\");\n" +
       "System.setProperty(\"AUTH0_DOMAIN\", \"dev-708nr3pf.eu.auth0.com\");\n" +
-      "String clientId = \"iUNFZUf83T5OazTjDv3gkjwfGMZ7fGT9\";\n" +
-      "String clientSecret = \"xWJN3YO0kuJ-gD19zltey9N5R1Cz0ltQJZtad-p1YQJCh6-hckl8I_hnbMbHuSQ4\";\n" +
+      "String clientId = \"YOUR_CLIENT_ID\";\n" +
+      "String clientSecret = \"YOUR_CLIENT_SECRET\";\n" +
       "App app = new App(clientId, clientSecret);\n" +
       "CommunityApi communityApi = new CommunityApi();\n" +
       "communityApi.members().educationDelete(app, \"1\");",
@@ -6409,8 +6409,8 @@ export class CommunityJavaTemplates {
     code: "\nSystem.setProperty(\"COMMUNITY_HOST\", \"localhost\");\n" +
       "System.setProperty(\"COMMUNITY_PORT\", \"8083\");\n" +
       "System.setProperty(\"AUTH0_DOMAIN\", \"dev-708nr3pf.eu.auth0.com\");\n" +
-      "String clientId = \"iUNFZUf83T5OazTjDv3gkjwfGMZ7fGT9\";\n" +
-      "String clientSecret = \"xWJN3YO0kuJ-gD19zltey9N5R1Cz0ltQJZtad-p1YQJCh6-hckl8I_hnbMbHuSQ4\";\n" +
+      "String clientId = \"YOUR_CLIENT_ID\";\n" +
+      "String clientSecret = \"YOUR_CLIENT_SECRET\";\n" +
       "App app = new App(clientId, clientSecret);\n" +
       "CommunityApi communityApi = new CommunityApi();\n" +
       "MemberExperienceCreateEvent memberExperienceCreateEvent = new MemberExperienceCreateEvent();\n" +
@@ -6430,8 +6430,8 @@ export class CommunityJavaTemplates {
     code: "\nSystem.setProperty(\"COMMUNITY_HOST\", \"localhost\");\n" +
       "System.setProperty(\"COMMUNITY_PORT\", \"8083\");\n" +
       "System.setProperty(\"AUTH0_DOMAIN\", \"dev-708nr3pf.eu.auth0.com\");\n" +
-      "String clientId = \"iUNFZUf83T5OazTjDv3gkjwfGMZ7fGT9\";\n" +
-      "String clientSecret = \"xWJN3YO0kuJ-gD19zltey9N5R1Cz0ltQJZtad-p1YQJCh6-hckl8I_hnbMbHuSQ4\";\n" +
+      "String clientId = \"YOUR_CLIENT_ID\";\n" +
+      "String clientSecret = \"YOUR_CLIENT_SECRET\";\n" +
       "App app = new App(clientId, clientSecret);\n" +
       "CommunityApi communityApi = new CommunityApi();\n" +
       "Member member = communityApi.members().member(app, \"1\").getResponse();\n" +
@@ -6456,8 +6456,8 @@ export class CommunityJavaTemplates {
     code: "\nSystem.setProperty(\"COMMUNITY_HOST\", \"localhost\");\n" +
       "System.setProperty(\"COMMUNITY_PORT\", \"8083\");\n" +
       "System.setProperty(\"AUTH0_DOMAIN\", \"dev-708nr3pf.eu.auth0.com\");\n" +
-      "String clientId = \"iUNFZUf83T5OazTjDv3gkjwfGMZ7fGT9\";\n" +
-      "String clientSecret = \"xWJN3YO0kuJ-gD19zltey9N5R1Cz0ltQJZtad-p1YQJCh6-hckl8I_hnbMbHuSQ4\";\n" +
+      "String clientId = \"YOUR_CLIENT_ID\";\n" +
+      "String clientSecret = \"YOUR_CLIENT_SECRET\";\n" +
       "App app = new App(clientId, clientSecret);\n" +
       "CommunityApi communityApi = new CommunityApi();\n" +
       "communityApi.members().experienceDelete(app, \"1\");",
@@ -6469,8 +6469,8 @@ export class CommunityJavaTemplates {
     code: "\nSystem.setProperty(\"COMMUNITY_HOST\", \"localhost\");\n" +
       "System.setProperty(\"COMMUNITY_PORT\", \"8083\");\n" +
       "System.setProperty(\"AUTH0_DOMAIN\", \"dev-708nr3pf.eu.auth0.com\");\n" +
-      "String clientId = \"iUNFZUf83T5OazTjDv3gkjwfGMZ7fGT9\";\n" +
-      "String clientSecret = \"xWJN3YO0kuJ-gD19zltey9N5R1Cz0ltQJZtad-p1YQJCh6-hckl8I_hnbMbHuSQ4\";\n" +
+      "String clientId = \"YOUR_CLIENT_ID\";\n" +
+      "String clientSecret = \"YOUR_CLIENT_SECRET\";\n" +
       "App app = new App(clientId, clientSecret);\n" +
       "CommunityApi communityApi = new CommunityApi();\n" +
       "List<Project> projects = communityApi.projects().listByActor(app, \"1\").getResponse();\n" +
@@ -6893,8 +6893,8 @@ export class CommunityJavaTemplates {
     code: "\nSystem.setProperty(\"COMMUNITY_HOST\", \"localhost\");\n" +
       "System.setProperty(\"COMMUNITY_PORT\", \"8083\");\n" +
       "System.setProperty(\"AUTH0_DOMAIN\", \"dev-708nr3pf.eu.auth0.com\");\n" +
-      "String clientId = \"iUNFZUf83T5OazTjDv3gkjwfGMZ7fGT9\";\n" +
-      "String clientSecret = \"xWJN3YO0kuJ-gD19zltey9N5R1Cz0ltQJZtad-p1YQJCh6-hckl8I_hnbMbHuSQ4\";\n" +
+      "String clientId = \"YOUR_CLIENT_ID\";\n" +
+      "String clientSecret = \"YOUR_CLIENT_SECRET\";\n" +
       "App app = new App(clientId, clientSecret);\n" +
       "CommunityApi communityApi = new CommunityApi();\n" +
       "Project project = communityApi.projects().get(app, \"1\").getResponse();\n" +
@@ -7144,8 +7144,8 @@ export class CommunityJavaTemplates {
     code: "\nSystem.setProperty(\"COMMUNITY_HOST\", \"localhost\");\n" +
       "System.setProperty(\"COMMUNITY_PORT\", \"8083\");\n" +
       "System.setProperty(\"AUTH0_DOMAIN\", \"dev-708nr3pf.eu.auth0.com\");\n" +
-      "String clientId = \"iUNFZUf83T5OazTjDv3gkjwfGMZ7fGT9\";\n" +
-      "String clientSecret = \"xWJN3YO0kuJ-gD19zltey9N5R1Cz0ltQJZtad-p1YQJCh6-hckl8I_hnbMbHuSQ4\";\n" +
+      "String clientId = \"YOUR_CLIENT_ID\";\n" +
+      "String clientSecret = \"YOUR_CLIENT_SECRET\";\n" +
       "App app = new App(clientId, clientSecret);\n" +
       "CommunityApi communityApi = new CommunityApi();\n" +
       "ProjectCreateEvent projectCreateEvent = new ProjectCreateEvent();\n" +
@@ -7170,8 +7170,8 @@ export class CommunityJavaTemplates {
     code: "\nSystem.setProperty(\"COMMUNITY_HOST\", \"localhost\");\n" +
       "System.setProperty(\"COMMUNITY_PORT\", \"8083\");\n" +
       "System.setProperty(\"AUTH0_DOMAIN\", \"dev-708nr3pf.eu.auth0.com\");\n" +
-      "String clientId = \"iUNFZUf83T5OazTjDv3gkjwfGMZ7fGT9\";\n" +
-      "String clientSecret = \"xWJN3YO0kuJ-gD19zltey9N5R1Cz0ltQJZtad-p1YQJCh6-hckl8I_hnbMbHuSQ4\";\n" +
+      "String clientId = \"YOUR_CLIENT_ID\";\n" +
+      "String clientSecret = \"YOUR_CLIENT_SECRET\";\n" +
       "App app = new App(clientId, clientSecret);\n" +
       "CommunityApi communityApi = new CommunityApi();\n" +
       "Project project = communityApi.projects().get(app, \"1\").getResponse();\n" +
@@ -7199,8 +7199,8 @@ export class CommunityJavaTemplates {
     code: "\nSystem.setProperty(\"COMMUNITY_HOST\", \"localhost\");\n" +
       "System.setProperty(\"COMMUNITY_PORT\", \"8083\");\n" +
       "System.setProperty(\"AUTH0_DOMAIN\", \"dev-708nr3pf.eu.auth0.com\");\n" +
-      "String clientId = \"iUNFZUf83T5OazTjDv3gkjwfGMZ7fGT9\";\n" +
-      "String clientSecret = \"xWJN3YO0kuJ-gD19zltey9N5R1Cz0ltQJZtad-p1YQJCh6-hckl8I_hnbMbHuSQ4\";\n" +
+      "String clientId = \"YOUR_CLIENT_ID\";\n" +
+      "String clientSecret = \"YOUR_CLIENT_SECRET\";\n" +
       "App app = new App(clientId, clientSecret);\n" +
       "CommunityApi communityApi = new CommunityApi();\n" +
       "communityApi.projects().delete(app, \"1\");",
@@ -7212,8 +7212,8 @@ export class CommunityJavaTemplates {
     code: "\nSystem.setProperty(\"COMMUNITY_HOST\", \"localhost\");\n" +
       "System.setProperty(\"COMMUNITY_PORT\", \"8083\");\n" +
       "System.setProperty(\"AUTH0_DOMAIN\", \"dev-708nr3pf.eu.auth0.com\");\n" +
-      "String clientId = \"iUNFZUf83T5OazTjDv3gkjwfGMZ7fGT9\";\n" +
-      "String clientSecret = \"xWJN3YO0kuJ-gD19zltey9N5R1Cz0ltQJZtad-p1YQJCh6-hckl8I_hnbMbHuSQ4\";\n" +
+      "String clientId = \"YOUR_CLIENT_ID\";\n" +
+      "String clientSecret = \"YOUR_CLIENT_SECRET\";\n" +
       "App app = new App(clientId, clientSecret);\n" +
       "CommunityApi communityApi = new CommunityApi();\n" +
       "File file = new File(\"C:\\\\Users\\\\saulo\\\\OneDrive\\\\Imágenes\\\\evento.jpg\");\n" +
