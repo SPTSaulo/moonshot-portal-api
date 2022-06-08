@@ -14,6 +14,7 @@
   <li>
     <a (click)="displayModulesNavbar = !displayModulesNavbar; displayEntitiesNavbar = false" [routerLink]="['/code-examples', 'core']" [ngClass]="{'active-link': displayModulesNavbar}">Code Examples</a>
   </li>
+
 </ul>
 <ul class="main-list modules-list" *ngIf="displayModulesNavbar">
   <li>
