@@ -1,5 +1,6 @@
 export enum Module {
   COMMUNITY = 'community',
   FEDERATION = 'federation',
-  CORE = 'core'
+  CORE = 'core',
+  DATAHUB = 'datahub'
 }

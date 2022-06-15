@@ -21,13 +21,13 @@ export class CommunityJavascriptTemplates {
       "  .then(data => console.log(JSON.stringify(data)));",
     response: "\n[\n" +
       "   {\n" +
-      "      \"id\":\"4\",\n" +
+      "      \"id\":\"61445159784bca6ef764c6df\",\n" +
       "      \"title\":\"Evento para conocernos\",\n" +
       "      \"timestamp\":1414281600,\n" +
       "      \"description\":\"Evento para mejorar el ambiente laboral y las relaciones con el resto de personas del ecosistema\",\n" +
       "      \"imageUrl\":null,\n" +
       "      \"ownerMember\":{\n" +
-      "         \"id\":\"3\",\n" +
+      "         \"id\":\"61445159784bca6ef764c6df\",\n" +
       "         \"state\":\"ACCEPTED\",\n" +
       "         \"name\":\"Jeremy\",\n" +
       "         \"lastname\":\"Trujillo\",\n" +
@@ -52,7 +52,7 @@ export class CommunityJavascriptTemplates {
       "         ],\n" +
       "         \"experiences\":[\n" +
       "            {\n" +
-      "               \"id\":\"3\",\n" +
+      "               \"id\":\"61445159784bca6ef764c6df\",\n" +
       "               \"title\":\"Prácticas universitarias en Moonshot Innovation\",\n" +
       "               \"type\":\"APPRENTICESHIP\",\n" +
       "               \"company\":\"Moonshot Innovation\",\n" +
@@ -68,7 +68,7 @@ export class CommunityJavascriptTemplates {
       "         ],\n" +
       "         \"educations\":[\n" +
       "            {\n" +
-      "               \"id\":\"3\",\n" +
+      "               \"id\":\"61445159784bca6ef764c6df\",\n" +
       "               \"school\":\"Universidad de Las Palmas de Gran Canaria\",\n" +
       "               \"degree\":\"Ingeniería informática\",\n" +
       "               \"fieldOfStudy\":\"Ingeniería de software\",\n" +
@@ -87,7 +87,7 @@ export class CommunityJavascriptTemplates {
       "      \"url\":\"https://moonshot.ceo/conocernos\",\n" +
       "      \"participants\":[\n" +
       "         {\n" +
-      "            \"id\":\"1\",\n" +
+      "            \"id\":\"60acae8e2f799d228a4d4a85\",\n" +
       "            \"state\":\"ACCEPTED\",\n" +
       "            \"name\":\"Iñigo\",\n" +
       "            \"lastname\":\"Aramburu\",\n" +
@@ -112,7 +112,7 @@ export class CommunityJavascriptTemplates {
       "            ],\n" +
       "            \"experiences\":[\n" +
       "               {\n" +
-      "                  \"id\":\"1\",\n" +
+      "                  \"id\":\"60acae8e2f799d228a4d4a85\",\n" +
       "                  \"title\":\"Back-end developer en Moonshot Innovation\",\n" +
       "                  \"type\":\"FULL_TIME\",\n" +
       "                  \"company\":\"Moonshot Innovation\",\n" +
@@ -128,7 +128,7 @@ export class CommunityJavascriptTemplates {
       "            ],\n" +
       "            \"educations\":[\n" +
       "               {\n" +
-      "                  \"id\":\"1\",\n" +
+      "                  \"id\":\"60acae8e2f799d228a4d4a85\",\n" +
       "                  \"school\":\"Universidad del País Vasco\",\n" +
       "                  \"degree\":\"Ingeniería informática\",\n" +
       "                  \"fieldOfStudy\":\"Ingeniería de software\",\n" +
@@ -143,7 +143,7 @@ export class CommunityJavascriptTemplates {
       "                  \"description\":\"Estudios universitarios realizados en la Universidad del País Vasco\"\n" +
       "               },\n" +
       "               {\n" +
-      "                  \"id\":\"15\",\n" +
+      "                  \"id\":\"61445159784bca6ef764c6df\",\n" +
       "                  \"school\":\"Universidad del País Vasco\",\n" +
       "                  \"degree\":\"Master en desarrollo web\",\n" +
       "                  \"fieldOfStudy\":\"Desarrollo web\",\n" +
@@ -160,7 +160,7 @@ export class CommunityJavascriptTemplates {
       "            ]\n" +
       "         },\n" +
       "         {\n" +
-      "            \"id\":\"6\",\n" +
+      "            \"id\":\"61445159784bca6ef764c6df\",\n" +
       "            \"state\":\"ACCEPTED\",\n" +
       "            \"name\":\"David\",\n" +
       "            \"lastname\":\"Suriol\",\n" +
@@ -196,7 +196,7 @@ export class CommunityJavascriptTemplates {
       "            ],\n" +
       "            \"experiences\":[\n" +
       "               {\n" +
-      "                  \"id\":\"4\",\n" +
+      "                  \"id\":\"61445159784bca6ef764c6df\",\n" +
       "                  \"title\":\"Fundador y CEO de Moonshot Innovation\",\n" +
       "                  \"type\":\"SELF_EMPLOYED\",\n" +
       "                  \"company\":\"Moonshot Innovation\",\n" +
@@ -212,7 +212,7 @@ export class CommunityJavascriptTemplates {
       "            ],\n" +
       "            \"educations\":[\n" +
       "               {\n" +
-      "                  \"id\":\"5\",\n" +
+      "                  \"id\":\"61445159784bca6ef764c6df\",\n" +
       "                  \"school\":\"Universidad Complutense de Madrid\",\n" +
       "                  \"degree\":\"Administración y dirección de empresas\",\n" +
       "                  \"fieldOfStudy\":\"Innovación\",\n" +
@@ -234,20 +234,20 @@ export class CommunityJavascriptTemplates {
   }
 
   public static online_events_id_get: EndpointTemplate = {
-    name: "online-event/:id",
-    code: "\nconst url = 'https://dev.moonshot.ceo/api/community/online-event/4';\n" +
+    name: "online-events/:id",
+    code: "\nconst url = 'https://dev.moonshot.ceo/api/community/online-events/4';\n" +
       "\n" +
       "fetch(url)\n" +
       "  .then(response => response.json())\n" +
       "  .then(data => console.log(JSON.stringify(data)));",
     response: "\n{\n" +
-      "        \"id\": \"4\",\n" +
+      "        \"id\": \"61445159784bca6ef764c6df\",\n" +
       "        \"title\": \"Evento para conocernos\",\n" +
       "        \"timestamp\": 1414281600,\n" +
       "        \"description\": \"Evento para mejorar el ambiente laboral y las relaciones con el resto de personas del ecosistema\",\n" +
       "        \"imageUrl\": null,\n" +
       "        \"ownerMember\": {\n" +
-      "            \"id\": \"3\",\n" +
+      "            \"id\": \"61445159784bca6ef764c6df\",\n" +
       "            \"state\": \"ACCEPTED\",\n" +
       "            \"name\": \"Jeremy\",\n" +
       "            \"lastname\": \"Trujillo\",\n" +
@@ -272,7 +272,7 @@ export class CommunityJavascriptTemplates {
       "            ],\n" +
       "            \"experiences\": [\n" +
       "                {\n" +
-      "                    \"id\": \"3\",\n" +
+      "                    \"id\": \"61445159784bca6ef764c6df\",\n" +
       "                    \"title\": \"Prácticas universitarias en Moonshot Innovation\",\n" +
       "                    \"type\": \"APPRENTICESHIP\",\n" +
       "                    \"company\": \"Moonshot Innovation\",\n" +
@@ -288,7 +288,7 @@ export class CommunityJavascriptTemplates {
       "            ],\n" +
       "            \"educations\": [\n" +
       "                {\n" +
-      "                    \"id\": \"3\",\n" +
+      "                    \"id\": \"61445159784bca6ef764c6df\",\n" +
       "                    \"school\": \"Universidad de Las Palmas de Gran Canaria\",\n" +
       "                    \"degree\": \"Ingeniería informática\",\n" +
       "                    \"fieldOfStudy\": \"Ingeniería de software\",\n" +
@@ -307,7 +307,7 @@ export class CommunityJavascriptTemplates {
       "        \"url\": \"https://moonshot.ceo/conocernos\",\n" +
       "        \"participants\": [\n" +
       "            {\n" +
-      "                \"id\": \"1\",\n" +
+      "                \"id\": \"60acae8e2f799d228a4d4a85\",\n" +
       "                \"state\": \"ACCEPTED\",\n" +
       "                \"name\": \"Iñigo\",\n" +
       "                \"lastname\": \"Aramburu\",\n" +
@@ -332,7 +332,7 @@ export class CommunityJavascriptTemplates {
       "                ],\n" +
       "                \"experiences\": [\n" +
       "                    {\n" +
-      "                        \"id\": \"1\",\n" +
+      "                        \"id\": \"60acae8e2f799d228a4d4a85\",\n" +
       "                        \"title\": \"Back-end developer en Moonshot Innovation\",\n" +
       "                        \"type\": \"FULL_TIME\",\n" +
       "                        \"company\": \"Moonshot Innovation\",\n" +
@@ -348,7 +348,7 @@ export class CommunityJavascriptTemplates {
       "                ],\n" +
       "                \"educations\": [\n" +
       "                    {\n" +
-      "                        \"id\": \"1\",\n" +
+      "                        \"id\": \"60acae8e2f799d228a4d4a85\",\n" +
       "                        \"school\": \"Universidad del País Vasco\",\n" +
       "                        \"degree\": \"Ingeniería informática\",\n" +
       "                        \"fieldOfStudy\": \"Ingeniería de software\",\n" +
@@ -363,7 +363,7 @@ export class CommunityJavascriptTemplates {
       "                        \"description\": \"Estudios universitarios realizados en la Universidad del País Vasco\"\n" +
       "                    },\n" +
       "                    {\n" +
-      "                        \"id\": \"15\",\n" +
+      "                        \"id\": \"61445159784bca6ef764c6df\",\n" +
       "                        \"school\": \"Universidad del País Vasco\",\n" +
       "                        \"degree\": \"Master en desarrollo web\",\n" +
       "                        \"fieldOfStudy\": \"Desarrollo web\",\n" +
@@ -380,7 +380,7 @@ export class CommunityJavascriptTemplates {
       "                ]\n" +
       "            },\n" +
       "            {\n" +
-      "                \"id\": \"6\",\n" +
+      "                \"id\": \"61445159784bca6ef764c6df\",\n" +
       "                \"state\": \"ACCEPTED\",\n" +
       "                \"name\": \"David\",\n" +
       "                \"lastname\": \"Suriol\",\n" +
@@ -416,7 +416,7 @@ export class CommunityJavascriptTemplates {
       "                ],\n" +
       "                \"experiences\": [\n" +
       "                    {\n" +
-      "                        \"id\": \"4\",\n" +
+      "                        \"id\": \"61445159784bca6ef764c6df\",\n" +
       "                        \"title\": \"Fundador y CEO de Moonshot Innovation\",\n" +
       "                        \"type\": \"SELF_EMPLOYED\",\n" +
       "                        \"company\": \"Moonshot Innovation\",\n" +
@@ -432,7 +432,7 @@ export class CommunityJavascriptTemplates {
       "                ],\n" +
       "                \"educations\": [\n" +
       "                    {\n" +
-      "                        \"id\": \"5\",\n" +
+      "                        \"id\": \"61445159784bca6ef764c6df\",\n" +
       "                        \"school\": \"Universidad Complutense de Madrid\",\n" +
       "                        \"degree\": \"Administración y dirección de empresas\",\n" +
       "                        \"fieldOfStudy\": \"Innovación\",\n" +
@@ -453,16 +453,16 @@ export class CommunityJavascriptTemplates {
   }
 
   public static online_event_post: EndpointTemplate = {
-    name: "online-event",
-    code: "\nconst url = 'https://dev.moonshot.ceo/api/community/online-event';\n" +
+    name: "online-events",
+    code: "\nconst url = 'https://dev.moonshot.ceo/api/community/online-events';\n" +
       "\n" +
       "const body = {\n" +
-      "  id: \"4\",\n" +
+      "  id: \"61445159784bca6ef764c6df\",\n" +
       "  title: \"Evento para conocernos\",\n" +
       "  timestamp: 1414281600,\n" +
       "  description: \"Evento para mejorar el ambiente laboral y las relaciones con el resto de personas del ecosistema\",\n" +
       "  imageUrl: \"https://moonshot.ceo/image1.jpg\",\n" +
-      "  memberId: \"3\",\n" +
+      "  memberId: \"61445159784bca6ef764c6df\",\n" +
       "  url: \"https://moonshot.ceo/conocernos\",\n" +
       "}\n" +
       "\n" +
@@ -475,17 +475,31 @@ export class CommunityJavascriptTemplates {
     response: null
   }
 
-  public static online_event_put: EndpointTemplate = {
-    name: "online-event",
-    code: "\nconst url = 'https://dev.moonshot.ceo/api/community/online-event';\n" +
+  public static online_event_upload_post: EndpointTemplate = {
+    name: "online-events/upload",
+    code: "\nconst formData = new FormData();\n" +
+      "const url = 'https://dev.moonshot.ceo/api/community/online-events/upload'\n" +
+      "     \n" +
+      "formData.append(\"file\", 'YOUR_FILE');\n" +
+      "\n" +
+      "fetch(url, {\n" +
+      "  method: 'POST',\n" +
+      "  body: formData\n" +
+      "})\n" +
+      "  .then(path => console.log(path))",
+    response: "\nhttps://localhost/drive/events/images/61eaffcdad2bd12319fd4eba.png"
+  }
+
+  public static online_event_id_put: EndpointTemplate = {
+    name: "online-events/:id",
+    code: "\nconst url = 'https://dev.moonshot.ceo/api/community/online-events/1';\n" +
       "\n" +
       "const body = {\n" +
-      "  id: \"4\",\n" +
       "  title: \"Evento para conocernos\",\n" +
       "  timestamp: 1414281600,\n" +
       "  description: \"Evento para mejorar el ambiente laboral y las relaciones con el resto de personas del ecosistema\",\n" +
       "  imageUrl: \"https://moonshot.ceo/image1.jpg\",\n" +
-      "  modifierId: \"3\",\n" +
+      "  modifierId: \"61445159784bca6ef764c6df\",\n" +
       "  url: \"https://moonshot.ceo/conocernos\",\n" +
       "}\n" +
       "\n" +
@@ -499,8 +513,8 @@ export class CommunityJavascriptTemplates {
   }
 
   public static online_event_id_delete: EndpointTemplate = {
-    name: "online-event/:id",
-    code: "\nconst url = 'https://dev.moonshot.ceo/api/community/online-event/4';\n" +
+    name: "online-events/:id",
+    code: "\nconst url = 'https://dev.moonshot.ceo/api/community/online-events/4';\n" +
       "\n" +
       "fetch(url, {\n" +
       "  method: 'DELETE'\n" +
@@ -510,17 +524,16 @@ export class CommunityJavascriptTemplates {
     response: null
   }
 
-  public static online_event_admin_put: EndpointTemplate = {
-    name: "online-event/admin",
-    code: "\nconst url = 'https://dev.moonshot.ceo/api/community/online-event/admin';\n" +
+  public static online_event_id_admin_put: EndpointTemplate = {
+    name: "online-events/:id/admin",
+    code: "\nconst url = 'https://dev.moonshot.ceo/api/community/online-events/1/admin';\n" +
       "\n" +
       "const body = {\n" +
-      "  id: \"4\",\n" +
       "  title: \"Evento para conocernos\",\n" +
       "  timestamp: 1414281600,\n" +
       "  description: \"Evento para mejorar el ambiente laboral y las relaciones con el resto de personas del ecosistema\",\n" +
       "  imageUrl: \"https://moonshot.ceo/image1.jpg\",\n" +
-      "  modifierId: \"3\",\n" +
+      "  modifierId: \"61445159784bca6ef764c6df\",\n" +
       "  url: \"https://moonshot.ceo/conocernos\",\n" +
       "}\n" +
       "\n" +
@@ -533,15 +546,14 @@ export class CommunityJavascriptTemplates {
     response: null
   }
 
-  public static online_event_subscription_put: EndpointTemplate = {
-    name: "online-event/subscription",
-    code: "\nconst url = 'https://dev.moonshot.ceo/api/community/online-event/subscription';\n" +
+  public static online_event_id_subscription_put: EndpointTemplate = {
+    name: "online-events/:id/subscription",
+    code: "\nconst url = 'https://dev.moonshot.ceo/api/community/online-events/1/subscription';\n" +
       "\n" +
       "const body = {\n" +
-      "   \"id\":\"1\",\n" +
       "   \"participants\":[\n" +
       "      {\n" +
-      "         \"id\":\"1\",\n" +
+      "         \"id\":\"60acae8e2f799d228a4d4a85\",\n" +
       "         \"state\":\"ACCEPTED\",\n" +
       "         \"name\":\"Jeremy\",\n" +
       "         \"lastname\":\"Trujillo Sánchez\",\n" +
@@ -577,15 +589,14 @@ export class CommunityJavascriptTemplates {
     response: null
   }
 
-  public static online_event_unsubscription_put: EndpointTemplate = {
-    name: "online-event/unsubscription",
-    code: "\nconst url = 'https://dev.moonshot.ceo/api/community/online-event/unsubscription';\n" +
+  public static online_event_id_unsubscription_put: EndpointTemplate = {
+    name: "online-events/:id/unsubscription",
+    code: "\nconst url = 'https://dev.moonshot.ceo/api/community/online-events/1/unsubscription';\n" +
       "\n" +
       "const body = {\n" +
-      "   \"id\":\"1\",\n" +
       "   \"participants\":[\n" +
       "      {\n" +
-      "         \"id\":\"1\",\n" +
+      "         \"id\":\"60acae8e2f799d228a4d4a85\",\n" +
       "         \"state\":\"ACCEPTED\",\n" +
       "         \"name\":\"Jeremy\",\n" +
       "         \"lastname\":\"Trujillo Sánchez\",\n" +
@@ -622,8 +633,8 @@ export class CommunityJavascriptTemplates {
   }
 
   public static online_event_id_admin_delete: EndpointTemplate = {
-    name: "online-event/:id/admin",
-    code: "\nconst url = 'https://dev.moonshot.ceo/api/community/online-event/4/admin';\n" +
+    name: "online-events/:id/admin",
+    code: "\nconst url = 'https://dev.moonshot.ceo/api/community/online-events/4/admin';\n" +
       "\n" +
       "fetch(url, {\n" +
       "  method: 'DELETE',\n" +
@@ -642,13 +653,13 @@ export class CommunityJavascriptTemplates {
       "  .then(data => console.log(JSON.stringify(data)));",
     response: "\n[\n" +
       "   {\n" +
-      "      \"id\":\"1\",\n" +
+      "      \"id\":\"61445159784bca6ef764c6df\",\n" +
       "      \"title\":\"Reunion horarios Enero\",\n" +
       "      \"timestamp\":1546387200,\n" +
       "      \"description\":\"Reunion para definir los horarios de la empresa en el mes de Enero\",\n" +
       "      \"imageUrl\":null,\n" +
       "      \"ownerMember\":{\n" +
-      "         \"id\":\"4\",\n" +
+      "         \"id\":\"61445159784bca6ef764c6df\",\n" +
       "         \"state\":\"ACCEPTED\",\n" +
       "         \"name\":\"Saulo\",\n" +
       "         \"lastname\":\"Santana\",\n" +
@@ -674,7 +685,7 @@ export class CommunityJavascriptTemplates {
       "         ],\n" +
       "         \"experiences\":[\n" +
       "            {\n" +
-      "               \"id\":\"3\",\n" +
+      "               \"id\":\"61445159784bca6ef764c6df\",\n" +
       "               \"title\":\"Prácticas universitarias en Moonshot Innovation\",\n" +
       "               \"type\":\"APPRENTICESHIP\",\n" +
       "               \"company\":\"Moonshot Innovation\",\n" +
@@ -690,7 +701,7 @@ export class CommunityJavascriptTemplates {
       "         ],\n" +
       "         \"educations\":[\n" +
       "            {\n" +
-      "               \"id\":\"3\",\n" +
+      "               \"id\":\"61445159784bca6ef764c6df\",\n" +
       "               \"school\":\"Universidad de Las Palmas de Gran Canaria\",\n" +
       "               \"degree\":\"Ingeniería informática\",\n" +
       "               \"fieldOfStudy\":\"Ingeniería de software\",\n" +
@@ -709,7 +720,7 @@ export class CommunityJavascriptTemplates {
       "      \"direction\":\"Aclarar la reparticion de horarios\",\n" +
       "      \"participants\":[\n" +
       "         {\n" +
-      "            \"id\":\"3\",\n" +
+      "            \"id\":\"61445159784bca6ef764c6df\",\n" +
       "            \"state\":\"ACCEPTED\",\n" +
       "            \"name\":\"Jeremy\",\n" +
       "            \"lastname\":\"Trujillo\",\n" +
@@ -734,7 +745,7 @@ export class CommunityJavascriptTemplates {
       "            ],\n" +
       "            \"experiences\":[\n" +
       "               {\n" +
-      "                  \"id\":\"3\",\n" +
+      "                  \"id\":\"61445159784bca6ef764c6df\",\n" +
       "                  \"title\":\"Prácticas universitarias en Moonshot Innovation\",\n" +
       "                  \"type\":\"APPRENTICESHIP\",\n" +
       "                  \"company\":\"Moonshot Innovation\",\n" +
@@ -750,7 +761,7 @@ export class CommunityJavascriptTemplates {
       "            ],\n" +
       "            \"educations\":[\n" +
       "               {\n" +
-      "                  \"id\":\"3\",\n" +
+      "                  \"id\":\"61445159784bca6ef764c6df\",\n" +
       "                  \"school\":\"Universidad de Las Palmas de Gran Canaria\",\n" +
       "                  \"degree\":\"Ingeniería informática\",\n" +
       "                  \"fieldOfStudy\":\"Ingeniería de software\",\n" +
@@ -769,13 +780,13 @@ export class CommunityJavascriptTemplates {
       "      ]\n" +
       "   },\n" +
       "   {\n" +
-      "      \"id\":\"2\",\n" +
+      "      \"id\":\"61445159784bca6ef764c6df\",\n" +
       "      \"title\":\"Reunion despliegue back-end\",\n" +
       "      \"timestamp\":1542844800,\n" +
       "      \"description\":\"Reunion para desplegar la nueva version de nuestro producto\",\n" +
       "      \"imageUrl\":null,\n" +
       "      \"ownerMember\":{\n" +
-      "         \"id\":\"1\",\n" +
+      "         \"id\":\"61445159784bca6ef764c6df\",\n" +
       "         \"state\":\"ACCEPTED\",\n" +
       "         \"name\":\"Iñigo\",\n" +
       "         \"lastname\":\"Aramburu\",\n" +
@@ -800,7 +811,7 @@ export class CommunityJavascriptTemplates {
       "         ],\n" +
       "         \"experiences\":[\n" +
       "            {\n" +
-      "               \"id\":\"1\",\n" +
+      "               \"id\":\"61445159784bca6ef764c6df\",\n" +
       "               \"title\":\"Back-end developer en Moonshot Innovation\",\n" +
       "               \"type\":\"FULL_TIME\",\n" +
       "               \"company\":\"Moonshot Innovation\",\n" +
@@ -816,7 +827,7 @@ export class CommunityJavascriptTemplates {
       "         ],\n" +
       "         \"educations\":[\n" +
       "            {\n" +
-      "               \"id\":\"1\",\n" +
+      "               \"id\":\"61445159784bca6ef764c6df\",\n" +
       "               \"school\":\"Universidad del País Vasco\",\n" +
       "               \"degree\":\"Ingeniería informática\",\n" +
       "               \"fieldOfStudy\":\"Ingeniería de software\",\n" +
@@ -831,7 +842,7 @@ export class CommunityJavascriptTemplates {
       "               \"description\":\"Estudios universitarios realizados en la Universidad del País Vasco\"\n" +
       "            },\n" +
       "            {\n" +
-      "               \"id\":\"15\",\n" +
+      "               \"id\":\"61445159784bca6ef764c6df\",\n" +
       "               \"school\":\"Universidad del País Vasco\",\n" +
       "               \"degree\":\"Master en desarrollo web\",\n" +
       "               \"fieldOfStudy\":\"Desarrollo web\",\n" +
@@ -850,7 +861,7 @@ export class CommunityJavascriptTemplates {
       "      \"direction\":\"Terminar la version y ponerla a la vista de los clientes\",\n" +
       "      \"participants\":[\n" +
       "         {\n" +
-      "            \"id\":\"3\",\n" +
+      "            \"id\":\"61445159784bca6ef764c6df\",\n" +
       "            \"state\":\"ACCEPTED\",\n" +
       "            \"name\":\"Jeremy\",\n" +
       "            \"lastname\":\"Trujillo\",\n" +
@@ -875,7 +886,7 @@ export class CommunityJavascriptTemplates {
       "            ],\n" +
       "            \"experiences\":[\n" +
       "               {\n" +
-      "                  \"id\":\"3\",\n" +
+      "                  \"id\":\"61445159784bca6ef764c6df\",\n" +
       "                  \"title\":\"Prácticas universitarias en Moonshot Innovation\",\n" +
       "                  \"type\":\"APPRENTICESHIP\",\n" +
       "                  \"company\":\"Moonshot Innovation\",\n" +
@@ -891,7 +902,7 @@ export class CommunityJavascriptTemplates {
       "            ],\n" +
       "            \"educations\":[\n" +
       "               {\n" +
-      "                  \"id\":\"3\",\n" +
+      "                  \"id\":\"61445159784bca6ef764c6df\",\n" +
       "                  \"school\":\"Universidad de Las Palmas de Gran Canaria\",\n" +
       "                  \"degree\":\"Ingeniería informática\",\n" +
       "                  \"fieldOfStudy\":\"Ingeniería de software\",\n" +
@@ -908,7 +919,7 @@ export class CommunityJavascriptTemplates {
       "            ]\n" +
       "         },\n" +
       "         {\n" +
-      "            \"id\":\"4\",\n" +
+      "            \"id\":\"61445159784bca6ef764c6df\",\n" +
       "            \"state\":\"ACCEPTED\",\n" +
       "            \"name\":\"Saulo\",\n" +
       "            \"lastname\":\"Santana\",\n" +
@@ -934,7 +945,7 @@ export class CommunityJavascriptTemplates {
       "            ],\n" +
       "            \"experiences\":[\n" +
       "               {\n" +
-      "                  \"id\":\"3\",\n" +
+      "                  \"id\":\"61445159784bca6ef764c6df\",\n" +
       "                  \"title\":\"Prácticas universitarias en Moonshot Innovation\",\n" +
       "                  \"type\":\"APPRENTICESHIP\",\n" +
       "                  \"company\":\"Moonshot Innovation\",\n" +
@@ -950,7 +961,7 @@ export class CommunityJavascriptTemplates {
       "            ],\n" +
       "            \"educations\":[\n" +
       "               {\n" +
-      "                  \"id\":\"3\",\n" +
+      "                  \"id\":\"61445159784bca6ef764c6df\",\n" +
       "                  \"school\":\"Universidad de Las Palmas de Gran Canaria\",\n" +
       "                  \"degree\":\"Ingeniería informática\",\n" +
       "                  \"fieldOfStudy\":\"Ingeniería de software\",\n" +
@@ -972,20 +983,20 @@ export class CommunityJavascriptTemplates {
   }
 
   public static face_to_face_event_id_get: EndpointTemplate = {
-    name: "face-to-face-event/:id",
-    code: "\nconst url = 'https://dev.moonshot.ceo/api/community/face-to-face-event/1';\n" +
+    name: "face-to-face-events/:id",
+    code: "\nconst url = 'https://dev.moonshot.ceo/api/community/face-to-face-events/1';\n" +
       "\n" +
       "fetch(url)\n" +
       "  .then(response => response.json())\n" +
       "  .then(data => console.log(JSON.stringify(data)));",
     response: "\n{\n" +
-      "        \"id\": \"1\",\n" +
+      "        \"id\": \"61445159784bca6ef764c6df\",\n" +
       "        \"title\": \"Reunion horarios Enero\",\n" +
       "        \"timestamp\": 1546387200,\n" +
       "        \"description\": \"Reunion para definir los horarios de la empresa en el mes de Enero\",\n" +
       "        \"imageUrl\": null,\n" +
       "        \"ownerMember\": {\n" +
-      "            \"id\": \"4\",\n" +
+      "            \"id\": \"61445159784bca6ef764c6df\",\n" +
       "            \"state\": \"ACCEPTED\",\n" +
       "            \"name\": \"Saulo\",\n" +
       "            \"lastname\": \"Santana\",\n" +
@@ -1011,7 +1022,7 @@ export class CommunityJavascriptTemplates {
       "            ],\n" +
       "            \"experiences\": [\n" +
       "                {\n" +
-      "                    \"id\": \"3\",\n" +
+      "                    \"id\": \"61445159784bca6ef764c6df\",\n" +
       "                    \"title\": \"Prácticas universitarias en Moonshot Innovation\",\n" +
       "                    \"type\": \"APPRENTICESHIP\",\n" +
       "                    \"company\": \"Moonshot Innovation\",\n" +
@@ -1027,7 +1038,7 @@ export class CommunityJavascriptTemplates {
       "            ],\n" +
       "            \"educations\": [\n" +
       "                {\n" +
-      "                    \"id\": \"3\",\n" +
+      "                    \"id\": \"61445159784bca6ef764c6df\",\n" +
       "                    \"school\": \"Universidad de Las Palmas de Gran Canaria\",\n" +
       "                    \"degree\": \"Ingeniería informática\",\n" +
       "                    \"fieldOfStudy\": \"Ingeniería de software\",\n" +
@@ -1046,7 +1057,7 @@ export class CommunityJavascriptTemplates {
       "        \"direction\": \"Aclarar la reparticion de horarios\",\n" +
       "        \"participants\": [\n" +
       "            {\n" +
-      "                \"id\": \"3\",\n" +
+      "                \"id\": \"61445159784bca6ef764c6df\",\n" +
       "                \"state\": \"ACCEPTED\",\n" +
       "                \"name\": \"Jeremy\",\n" +
       "                \"lastname\": \"Trujillo\",\n" +
@@ -1071,7 +1082,7 @@ export class CommunityJavascriptTemplates {
       "                ],\n" +
       "                \"experiences\": [\n" +
       "                    {\n" +
-      "                        \"id\": \"3\",\n" +
+      "                        \"id\": \"61445159784bca6ef764c6df\",\n" +
       "                        \"title\": \"Prácticas universitarias en Moonshot Innovation\",\n" +
       "                        \"type\": \"APPRENTICESHIP\",\n" +
       "                        \"company\": \"Moonshot Innovation\",\n" +
@@ -1087,7 +1098,7 @@ export class CommunityJavascriptTemplates {
       "                ],\n" +
       "                \"educations\": [\n" +
       "                    {\n" +
-      "                        \"id\": \"3\",\n" +
+      "                        \"id\": \"61445159784bca6ef764c6df\",\n" +
       "                        \"school\": \"Universidad de Las Palmas de Gran Canaria\",\n" +
       "                        \"degree\": \"Ingeniería informática\",\n" +
       "                        \"fieldOfStudy\": \"Ingeniería de software\",\n" +
@@ -1108,16 +1119,16 @@ export class CommunityJavascriptTemplates {
   }
 
   public static face_to_face_event_post: EndpointTemplate = {
-    name: "face-to-face-event",
-    code: "\nconst url = 'https://dev.moonshot.ceo/api/community/face-to-face-event';\n" +
+    name: "face-to-face-events",
+    code: "\nconst url = 'https://dev.moonshot.ceo/api/community/face-to-face-events';\n" +
       "\n" +
       "const body = {\n" +
-      " \"id\":\"1\",\n" +
+      " \"id\":\"61445159784bca6ef764c6df\",\n" +
       " \"title\":\"Reunion horarios Enero\",\n" +
       " \"timestamp\":1546387200,\n" +
       " \"description\":\"Reunion para definir los horarios de la empresa en el mes de Enero\",\n" +
       " \"imageUrl\":null,\n" +
-      " \"memberId\":\"4\",\n" +
+      " \"memberId\":\"61445159784bca6ef764c6df\",\n" +
       " \"direction\":\"Aclarar la reparticion de horarios\"\n" +
       "}\n" +
       "\n" +
@@ -1130,17 +1141,16 @@ export class CommunityJavascriptTemplates {
     response: null
   }
 
-  public static face_to_face_event_put: EndpointTemplate = {
-    name: "face-to-face-event",
-    code: "\nconst url = 'https://dev.moonshot.ceo/api/community/face-to-face-event';\n" +
+  public static face_to_face_event_id_put: EndpointTemplate = {
+    name: "face-to-face-events/:id",
+    code: "\nconst url = 'https://dev.moonshot.ceo/api/community/face-to-face-events/1';\n" +
       "\n" +
       "const body = {\n" +
-      " \"id\":\"1\",\n" +
       " \"title\":\"Reunion horarios Enero\",\n" +
       " \"timestamp\":1546387200,\n" +
       " \"description\":\"Reunion para definir los horarios de la empresa en el mes de Enero\",\n" +
       " \"imageUrl\":null,\n" +
-      " \"modifierId\":\"4\",\n" +
+      " \"modifierId\":\"61445159784bca6ef764c6df\",\n" +
       " \"direction\":\"Aclarar la reparticion de horarios\"\n" +
       "}\n" +
       "\n" +
@@ -1154,8 +1164,8 @@ export class CommunityJavascriptTemplates {
   }
 
   public static face_to_face_event_id_delete: EndpointTemplate = {
-    name: "face-to-face-event/:id",
-    code: "\nconst url = 'https://dev.moonshot.ceo/api/community/face-to-face-event/1';\n" +
+    name: "face-to-face-events/:id",
+    code: "\nconst url = 'https://dev.moonshot.ceo/api/community/face-to-face-events/1';\n" +
       "\n" +
       "fetch(url, {\n" +
       "  method: 'DELETE',\n" +
@@ -1165,17 +1175,31 @@ export class CommunityJavascriptTemplates {
     response: null
   }
 
-  public static face_to_face_event_admin_put: EndpointTemplate = {
-    name: "face-to-face-event/admin",
-    code: "\nconst url = 'https://dev.moonshot.ceo/api/community/face-to-face-event/admin';\n" +
+  public static face_to_face_event_upload_post: EndpointTemplate = {
+    name: "face-to-face-events/upload",
+    code: "\nconst formData = new FormData();\n" +
+      "const url = 'https://dev.moonshot.ceo/api/community/face-to-face-events/upload'\n" +
+      "     \n" +
+      "formData.append(\"file\", 'YOUR_FILE');\n" +
+      "\n" +
+      "fetch(url, {\n" +
+      "  method: 'POST',\n" +
+      "  body: formData\n" +
+      "})\n" +
+      "  .then(path => console.log(path))",
+    response: "\nhttps://localhost/drive/events/images/61eaffcdad2bd12319fd4eba.png"
+  }
+
+  public static face_to_face_event_id_admin_put: EndpointTemplate = {
+    name: "face-to-face-events/admin",
+    code: "\nconst url = 'https://dev.moonshot.ceo/api/community/face-to-face-events/1/admin';\n" +
       "\n" +
       "const body = {\n" +
-      " \"id\":\"1\",\n" +
       " \"title\":\"Reunion horarios Enero\",\n" +
       " \"timestamp\":1546387200,\n" +
       " \"description\":\"Reunion para definir los horarios de la empresa en el mes de Enero\",\n" +
       " \"imageUrl\":null,\n" +
-      " \"modifierId\":\"4\",\n" +
+      " \"modifierId\":\"61445159784bca6ef764c6df\",\n" +
       " \"direction\":\"Aclarar la reparticion de horarios\"\n" +
       "}\n" +
       "\n" +
@@ -1188,15 +1212,14 @@ export class CommunityJavascriptTemplates {
     response: null
   }
 
-  public static face_to_face_event_subscription_put: EndpointTemplate = {
-    name: "face-to-face-event/subscription",
-    code: "\nconst url = 'https://dev.moonshot.ceo/api/community/face-to-face-event/subscription';\n" +
+  public static face_to_face_event_id_subscription_put: EndpointTemplate = {
+    name: "face-to-face-events/:id/subscription",
+    code: "\nconst url = 'https://dev.moonshot.ceo/api/community/face-to-face-events/1/subscription';\n" +
       "\n" +
       "const body = {\n" +
-      "   \"id\":\"1\",\n" +
       "   \"participants\":[\n" +
       "      {\n" +
-      "         \"id\":\"1\",\n" +
+      "         \"id\":\"61445159784bca6ef764c6df\",\n" +
       "         \"state\":\"ACCEPTED\",\n" +
       "         \"name\":\"Jeremy\",\n" +
       "         \"lastname\":\"Trujillo Sánchez\",\n" +
@@ -1232,15 +1255,14 @@ export class CommunityJavascriptTemplates {
     response: null
   }
 
-  public static face_to_face_event_unsubscription_put: EndpointTemplate = {
-    name: "face-to-face-event/unsubscription",
-    code: "\nconst url = 'https://dev.moonshot.ceo/api/community/face-to-face-event/unsubscription';\n" +
+  public static face_to_face_event_id_unsubscription_put: EndpointTemplate = {
+    name: "face-to-face-events/:id/unsubscription",
+    code: "\nconst url = 'https://dev.moonshot.ceo/api/community/face-to-face-events/1/unsubscription';\n" +
       "\n" +
       "const body = {\n" +
-      "   \"id\":\"1\",\n" +
       "   \"participants\":[\n" +
       "      {\n" +
-      "         \"id\":\"1\",\n" +
+      "         \"id\":\"61445159784bca6ef764c6df\",\n" +
       "         \"state\":\"ACCEPTED\",\n" +
       "         \"name\":\"Jeremy\",\n" +
       "         \"lastname\":\"Trujillo Sánchez\",\n" +
@@ -1277,8 +1299,8 @@ export class CommunityJavascriptTemplates {
   }
 
   public static face_to_face_event_id_admin_delete: EndpointTemplate = {
-    name: "face-to-face-event/:id/admin",
-    code: "\nconst url = 'https://dev.moonshot.ceo/api/community/face-to-face-event/4/admin';\n" +
+    name: "face-to-face-events/:id/admin",
+    code: "\nconst url = 'https://dev.moonshot.ceo/api/community/face-to-face-events/4/admin';\n" +
       "\n" +
       "fetch(url, {\n" +
       "  method: 'DELETE'\n" +
@@ -1297,29 +1319,29 @@ export class CommunityJavascriptTemplates {
       "  .then(data => console.log(JSON.stringify(data)));",
     response: "\n[\n" +
       "   {\n" +
-      "      \"id\":\"1\",\n" +
+      "      \"id\":\"61445159784bca6ef764c6df\",\n" +
       "      \"link\":\"https://moonshot.ceo/archivoTrabajo.pdf\",\n" +
       "      \"category\":\"PDF\",\n" +
-      "      \"roomId\":\"1\",\n" +
-      "      \"memberId\":\"2\",\n" +
+      "      \"roomId\":\"61445159784bca6ef764c6df\",\n" +
+      "      \"memberId\":\"61445159784bca6ef764c6df\",\n" +
       "      \"filename\":\"archivoTrabajo\",\n" +
       "      \"createdAt\":1621412130000\n" +
       "   },\n" +
       "   {\n" +
-      "      \"id\":\"2\",\n" +
+      "      \"id\":\"61445159784bca6ef764c6df\",\n" +
       "      \"link\":\"https://moonshot.ceo/planosPrimeraPlanta.pdf\",\n" +
       "      \"category\":\"PDF\",\n" +
-      "      \"roomId\":\"3\",\n" +
-      "      \"memberId\":\"5\",\n" +
+      "      \"roomId\":\"61445159784bca6ef764c6df\",\n" +
+      "      \"memberId\":\"61445159784bca6ef764c6df\",\n" +
       "      \"filename\":\"planosPrimeraPlanta\",\n" +
       "      \"createdAt\":1621415730000\n" +
       "   },\n" +
       "   {\n" +
-      "      \"id\":\"3\",\n" +
+      "      \"id\":\"61445159784bca6ef764c6df\",\n" +
       "      \"link\":\"https://moonshot.ceo/planosSegundaPlanta.image\",\n" +
       "      \"category\":\"IMAGE\",\n" +
-      "      \"roomId\":\"3\",\n" +
-      "      \"memberId\":\"6\",\n" +
+      "      \"roomId\":\"61445159784bca6ef764c6df\",\n" +
+      "      \"memberId\":\"61445159784bca6ef764c6df\",\n" +
       "      \"filename\":\"planosSegundaPlanta\",\n" +
       "      \"createdAt\":1621419330000\n" +
       "   }\n" +
@@ -1335,15 +1357,15 @@ export class CommunityJavascriptTemplates {
       "  .then(data => console.log(JSON.stringify(data)));",
     response: "\n[\n" +
       "   {\n" +
-      "      \"id\":\"1\",\n" +
+      "      \"id\":\"61445159784bca6ef764c6df\",\n" +
       "      \"url\":\"https://dev.moonshot.ceo/documento1.pdf\",\n" +
-      "      \"roomId\":\"2\",\n" +
+      "      \"roomId\":\"61445159784bca6ef764c6df\",\n" +
       "      \"createdAt\":1637417185\n" +
       "   },\n" +
       "   {\n" +
-      "      \"id\":\"2\",\n" +
+      "      \"id\":\"61445159784bca6ef764c6df\",\n" +
       "      \"url\":\"https://dev.moonshot.ceo/documento2.pdf\",\n" +
-      "      \"roomId\":\"7\",\n" +
+      "      \"roomId\":\"61445159784bca6ef764c6df\",\n" +
       "      \"createdAt\":1637417190\n" +
       "   }\n" +
       "]"
@@ -1358,9 +1380,9 @@ export class CommunityJavascriptTemplates {
       "  .then(data => console.log(JSON.stringify(data)));",
     response: "\n[\n" +
       "   {\n" +
-      "      \"id\":\"3\",\n" +
+      "      \"id\":\"61445159784bca6ef764c6df\",\n" +
       "      \"ownerMember\":{\n" +
-      "         \"id\":\"7\",\n" +
+      "         \"id\":\"61445159784bca6ef764c6df\",\n" +
       "         \"state\":\"ACCEPTED\",\n" +
       "         \"name\":\"Jorge\",\n" +
       "         \"lastname\":\"Perez\",\n" +
@@ -1390,7 +1412,7 @@ export class CommunityJavascriptTemplates {
       "         ],\n" +
       "         \"experiences\":[\n" +
       "            {\n" +
-      "               \"id\":\"5\",\n" +
+      "               \"id\":\"61445159784bca6ef764c6df\",\n" +
       "               \"title\":\"Reponedor en Mercadona\",\n" +
       "               \"type\":\"PART_TIME\",\n" +
       "               \"company\":\"Mercadona\",\n" +
@@ -1406,7 +1428,7 @@ export class CommunityJavascriptTemplates {
       "         ],\n" +
       "         \"educations\":[\n" +
       "            {\n" +
-      "               \"id\":\"6\",\n" +
+      "               \"id\":\"61445159784bca6ef764c6df\",\n" +
       "               \"school\":\"Universidad de Venezuela\",\n" +
       "               \"degree\":\"Derecho\",\n" +
       "               \"fieldOfStudy\":\"Derecho mercantil\",\n" +
@@ -1421,7 +1443,7 @@ export class CommunityJavascriptTemplates {
       "               \"description\":null\n" +
       "            },\n" +
       "            {\n" +
-      "               \"id\":\"14\",\n" +
+      "               \"id\":\"61445159784bca6ef764c6df\",\n" +
       "               \"school\":\"Universidad de Venezuela\",\n" +
       "               \"degree\":\"Master en Derecho\",\n" +
       "               \"fieldOfStudy\":\"Derecho en el Ejercicio de la Abogacía\",\n" +
@@ -1439,20 +1461,20 @@ export class CommunityJavascriptTemplates {
       "      },\n" +
       "      \"participants\":[\n" +
       "         {\n" +
-      "            \"memberId\":\"9\",\n" +
+      "            \"memberId\":\"61445159784bca6ef764c6df\",\n" +
       "            \"state\":\"ACTIVE\"\n" +
       "         },\n" +
       "         {\n" +
-      "            \"memberId\":\"8\",\n" +
+      "            \"memberId\":\"61445159784bca6ef764c6df\",\n" +
       "            \"state\":\"ACTIVE\"\n" +
       "         }\n" +
       "      ],\n" +
       "      \"createdAt\":1621419330000\n" +
       "   },\n" +
       "   {\n" +
-      "      \"id\":\"4\",\n" +
+      "      \"id\":\"61445159784bca6ef764c6df\",\n" +
       "      \"ownerMember\":{\n" +
-      "         \"id\":\"3\",\n" +
+      "         \"id\":\"61445159784bca6ef764c6df\",\n" +
       "         \"state\":\"ACCEPTED\",\n" +
       "         \"name\":\"Jeremy\",\n" +
       "         \"lastname\":\"Trujillo\",\n" +
@@ -1477,7 +1499,7 @@ export class CommunityJavascriptTemplates {
       "         ],\n" +
       "         \"experiences\":[\n" +
       "            {\n" +
-      "               \"id\":\"3\",\n" +
+      "               \"id\":\"61445159784bca6ef764c6df\",\n" +
       "               \"title\":\"Prácticas universitarias en Moonshot Innovation\",\n" +
       "               \"type\":\"APPRENTICESHIP\",\n" +
       "               \"company\":\"Moonshot Innovation\",\n" +
@@ -1493,7 +1515,7 @@ export class CommunityJavascriptTemplates {
       "         ],\n" +
       "         \"educations\":[\n" +
       "            {\n" +
-      "               \"id\":\"3\",\n" +
+      "               \"id\":\"61445159784bca6ef764c6df\",\n" +
       "               \"school\":\"Universidad de Las Palmas de Gran Canaria\",\n" +
       "               \"degree\":\"Ingeniería informática\",\n" +
       "               \"fieldOfStudy\":\"Ingeniería de software\",\n" +
@@ -1511,11 +1533,11 @@ export class CommunityJavascriptTemplates {
       "      },\n" +
       "      \"participants\":[\n" +
       "         {\n" +
-      "            \"memberId\":\"7\",\n" +
+      "            \"memberId\":\"61445159784bca6ef764c6df\",\n" +
       "            \"state\":\"ACTIVE\"\n" +
       "         },\n" +
       "         {\n" +
-      "            \"memberId\":\"1\",\n" +
+      "            \"memberId\":\"61445159784bca6ef764c6df\",\n" +
       "            \"state\":\"ACTIVE\"\n" +
       "         }\n" +
       "      ],\n" +
@@ -1524,18 +1546,18 @@ export class CommunityJavascriptTemplates {
       "]"
   }
 
-  public static direct_chats_all_get: EndpointTemplate = {
-    name: "direct-chats/all",
-    code: "\nconst url = 'https://dev.moonshot.ceo/api/community/direct-chats/all';\n" +
+  public static direct_chats_all_member_participate_get: EndpointTemplate = {
+    name: "direct-chats/all/member-participate",
+    code: "\nconst url = 'https://dev.moonshot.ceo/api/community/direct-chats/all/member-participate';\n" +
       "\n" +
       "fetch(url)\n" +
       "  .then(response => response.json())\n" +
       "  .then(data => console.log(JSON.stringify(data)));",
     response: "\n[\n" +
       "   {\n" +
-      "      \"id\":\"3\",\n" +
+      "      \"id\":\"61445159784bca6ef764c6df\",\n" +
       "      \"ownerMember\":{\n" +
-      "         \"id\":\"7\",\n" +
+      "         \"id\":\"61445159784bca6ef764c6df\",\n" +
       "         \"state\":\"ACCEPTED\",\n" +
       "         \"name\":\"Jorge\",\n" +
       "         \"lastname\":\"Perez\",\n" +
@@ -1565,7 +1587,7 @@ export class CommunityJavascriptTemplates {
       "         ],\n" +
       "         \"experiences\":[\n" +
       "            {\n" +
-      "               \"id\":\"5\",\n" +
+      "               \"id\":\"61445159784bca6ef764c6df\",\n" +
       "               \"title\":\"Reponedor en Mercadona\",\n" +
       "               \"type\":\"PART_TIME\",\n" +
       "               \"company\":\"Mercadona\",\n" +
@@ -1581,7 +1603,7 @@ export class CommunityJavascriptTemplates {
       "         ],\n" +
       "         \"educations\":[\n" +
       "            {\n" +
-      "               \"id\":\"6\",\n" +
+      "               \"id\":\"61445159784bca6ef764c6df\",\n" +
       "               \"school\":\"Universidad de Venezuela\",\n" +
       "               \"degree\":\"Derecho\",\n" +
       "               \"fieldOfStudy\":\"Derecho mercantil\",\n" +
@@ -1596,7 +1618,7 @@ export class CommunityJavascriptTemplates {
       "               \"description\":null\n" +
       "            },\n" +
       "            {\n" +
-      "               \"id\":\"14\",\n" +
+      "               \"id\":\"61445159784bca6ef764c6df\",\n" +
       "               \"school\":\"Universidad de Venezuela\",\n" +
       "               \"degree\":\"Master en Derecho\",\n" +
       "               \"fieldOfStudy\":\"Derecho en el Ejercicio de la Abogacía\",\n" +
@@ -1614,20 +1636,20 @@ export class CommunityJavascriptTemplates {
       "      },\n" +
       "      \"participants\":[\n" +
       "         {\n" +
-      "            \"memberId\":\"9\",\n" +
+      "            \"memberId\":\"61445159784bca6ef764c6df\",\n" +
       "            \"state\":\"ACTIVE\"\n" +
       "         },\n" +
       "         {\n" +
-      "            \"memberId\":\"8\",\n" +
+      "            \"memberId\":\"61445159784bca6ef764c6df\",\n" +
       "            \"state\":\"ACTIVE\"\n" +
       "         }\n" +
       "      ],\n" +
       "      \"createdAt\":1621419330000\n" +
       "   },\n" +
       "   {\n" +
-      "      \"id\":\"4\",\n" +
+      "      \"id\":\"61445159784bca6ef764c6df\",\n" +
       "      \"ownerMember\":{\n" +
-      "         \"id\":\"3\",\n" +
+      "         \"id\":\"61445159784bca6ef764c6df\",\n" +
       "         \"state\":\"ACCEPTED\",\n" +
       "         \"name\":\"Jeremy\",\n" +
       "         \"lastname\":\"Trujillo\",\n" +
@@ -1652,7 +1674,7 @@ export class CommunityJavascriptTemplates {
       "         ],\n" +
       "         \"experiences\":[\n" +
       "            {\n" +
-      "               \"id\":\"3\",\n" +
+      "               \"id\":\"61445159784bca6ef764c6df\",\n" +
       "               \"title\":\"Prácticas universitarias en Moonshot Innovation\",\n" +
       "               \"type\":\"APPRENTICESHIP\",\n" +
       "               \"company\":\"Moonshot Innovation\",\n" +
@@ -1668,7 +1690,7 @@ export class CommunityJavascriptTemplates {
       "         ],\n" +
       "         \"educations\":[\n" +
       "            {\n" +
-      "               \"id\":\"3\",\n" +
+      "               \"id\":\"61445159784bca6ef764c6df\",\n" +
       "               \"school\":\"Universidad de Las Palmas de Gran Canaria\",\n" +
       "               \"degree\":\"Ingeniería informática\",\n" +
       "               \"fieldOfStudy\":\"Ingeniería de software\",\n" +
@@ -1686,11 +1708,11 @@ export class CommunityJavascriptTemplates {
       "      },\n" +
       "      \"participants\":[\n" +
       "         {\n" +
-      "            \"memberId\":\"7\",\n" +
+      "            \"memberId\":\"61445159784bca6ef764c6df\",\n" +
       "            \"state\":\"ACTIVE\"\n" +
       "         },\n" +
       "         {\n" +
-      "            \"memberId\":\"1\",\n" +
+      "            \"memberId\":\"61445159784bca6ef764c6df\",\n" +
       "            \"state\":\"ACTIVE\"\n" +
       "         }\n" +
       "      ],\n" +
@@ -1700,16 +1722,16 @@ export class CommunityJavascriptTemplates {
   }
 
   public static direct_chat_id_get: EndpointTemplate = {
-    name: "direct-chat/:id",
-    code: "\nconst url = 'https://dev.moonshot.ceo/api/community/direct-chat/1';\n" +
+    name: "direct-chats/:id",
+    code: "\nconst url = 'https://dev.moonshot.ceo/api/community/direct-chats/1';\n" +
       "\n" +
       "fetch(url)\n" +
       "  .then(response => response.json())\n" +
       "  .then(data => console.log(JSON.stringify(data)));",
     response: "\n{\n" +
-      "        \"id\": \"1\",\n" +
+      "        \"id\": \"61445159784bca6ef764c6df\",\n" +
       "        \"ownerMember\": {\n" +
-      "            \"id\": \"1\",\n" +
+      "            \"id\": \"61445159784bca6ef764c6df\",\n" +
       "            \"state\": \"ACCEPTED\",\n" +
       "            \"name\": \"Iñigo\",\n" +
       "            \"lastname\": \"Aramburu\",\n" +
@@ -1734,7 +1756,7 @@ export class CommunityJavascriptTemplates {
       "            ],\n" +
       "            \"experiences\": [\n" +
       "                {\n" +
-      "                    \"id\": \"1\",\n" +
+      "                    \"id\": \"61445159784bca6ef764c6df\",\n" +
       "                    \"title\": \"Back-end developer en Moonshot Innovation\",\n" +
       "                    \"type\": \"FULL_TIME\",\n" +
       "                    \"company\": \"Moonshot Innovation\",\n" +
@@ -1750,7 +1772,7 @@ export class CommunityJavascriptTemplates {
       "            ],\n" +
       "            \"educations\": [\n" +
       "                {\n" +
-      "                    \"id\": \"1\",\n" +
+      "                    \"id\": \"61445159784bca6ef764c6df\",\n" +
       "                    \"school\": \"Universidad del País Vasco\",\n" +
       "                    \"degree\": \"Ingeniería informática\",\n" +
       "                    \"fieldOfStudy\": \"Ingeniería de software\",\n" +
@@ -1765,7 +1787,7 @@ export class CommunityJavascriptTemplates {
       "                    \"description\": \"Estudios universitarios realizados en la Universidad del País Vasco\"\n" +
       "                },\n" +
       "                {\n" +
-      "                    \"id\": \"15\",\n" +
+      "                    \"id\": \"61445159784bca6ef764c6df\",\n" +
       "                    \"school\": \"Universidad del País Vasco\",\n" +
       "                    \"degree\": \"Master en desarrollo web\",\n" +
       "                    \"fieldOfStudy\": \"Desarrollo web\",\n" +
@@ -1783,11 +1805,11 @@ export class CommunityJavascriptTemplates {
       "        },\n" +
       "        \"participants\": [\n" +
       "            {\n" +
-      "                \"memberId\": \"8\",\n" +
+      "                \"memberId\": \"61445159784bca6ef764c6df\",\n" +
       "                \"state\": \"ACTIVE\"\n" +
       "            },\n" +
       "            {\n" +
-      "                \"memberId\": \"2\",\n" +
+      "                \"memberId\": \"61445159784bca6ef764c6df\",\n" +
       "                \"state\": \"INACTIVE\"\n" +
       "            }\n" +
       "        ],\n" +
@@ -1806,19 +1828,19 @@ export class CommunityJavascriptTemplates {
   }
 
   public static direct_chat_post: EndpointTemplate = {
-    name: "direct-chat",
-    code: "\nconst url = 'https://dev.moonshot.ceo/api/community/direct-chat';\n" +
+    name: "direct-chats",
+    code: "\nconst url = 'https://dev.moonshot.ceo/api/community/direct-chats';\n" +
       "\n" +
       "const body = {\n" +
-      "  \"id\": \"1\",\n" +
-      "  \"ownerMemberId\": \"1\",\n" +
+      "  \"id\": \"61445159784bca6ef764c6df\",\n" +
+      "  \"ownerMemberId\": \"61445159784bca6ef764c6df\",\n" +
       "  \"participants\": [\n" +
       "      {\n" +
-      "          \"memberId\": \"8\",\n" +
+      "          \"memberId\": \"61445159784bca6ef764c6df\",\n" +
       "          \"state\": \"ACTIVE\"\n" +
       "      },\n" +
       "      {\n" +
-      "          \"memberId\": \"2\",\n" +
+      "          \"memberId\": \"61445159784bca6ef764c6df\",\n" +
       "          \"state\": \"INACTIVE\"\n" +
       "      }\n" +
       "  ],\n" +
@@ -1845,8 +1867,8 @@ export class CommunityJavascriptTemplates {
   }
 
   public static direct_chat_id_delete: EndpointTemplate = {
-    name: "direct-chat/:id",
-    code: "\nconst url = 'https://dev.moonshot.ceo/api/community/direct-chat/4';\n" +
+    name: "direct-chats/:id",
+    code: "\nconst url = 'https://dev.moonshot.ceo/api/community/direct-chats/4';\n" +
       "\n" +
       "fetch(url, {\n" +
       "  method: 'DELETE',\n" +
@@ -1856,37 +1878,36 @@ export class CommunityJavascriptTemplates {
     response: null
   }
 
-  public static direct_chat_message_post: EndpointTemplate = {
-    name: "direct-chat/message",
-    code: "\nconst url = 'https://dev.moonshot.ceo/api/community/direct-chat/message';\n" +
+  public static direct_chat_id_message_post: EndpointTemplate = {
+    name: "direct-chats/:id/messages",
+    code: "\nconst url = 'https://dev.moonshot.ceo/api/community/direct-chats/1/messages';\n" +
       "\n" +
       "const body = {\n" +
-      "   \"id\":\"2\",\n" +
-      "   \"roomId\":\"1\",\n" +
-      "   \"authorMemberId\":\"2\",\n" +
+      "   \"roomId\":\"61445159784bca6ef764c6df\",\n" +
+      "   \"authorMemberId\":\"61445159784bca6ef764c6df\",\n" +
       "   \"content\":\"Sí, claro.\",\n" +
       "   \"documents\":[\n" +
       "      {\n" +
-      "         \"id\":\"1\",\n" +
+      "         \"id\":\"61445159784bca6ef764c6df\",\n" +
       "         \"link\":\"https://moonshot.ceo/archivoTrabajo.pdf\",\n" +
       "         \"category\":\"PDF\",\n" +
-      "         \"roomId\":\"1\",\n" +
-      "         \"memberId\":\"2\",\n" +
+      "         \"roomId\":\"61445159784bca6ef764c6df\",\n" +
+      "         \"memberId\":\"61445159784bca6ef764c6df\",\n" +
       "         \"filename\":\"archivoTrabajo\",\n" +
       "         \"createdAt\":1621412130000\n" +
       "      }\n" +
       "   ],\n" +
       "   \"links\":[\n" +
       "      {\n" +
-      "         \"id\":\"1\",\n" +
+      "         \"id\":\"61445159784bca6ef764c6df\",\n" +
       "         \"url\":\"https://dev.moonshot.ceo/documento1.pdf\",\n" +
-      "         \"roomId\":\"2\",\n" +
+      "         \"roomId\":\"61445159784bca6ef764c6df\",\n" +
       "         \"createdAt\":1637417185\n" +
       "      },\n" +
       "      {\n" +
-      "         \"id\":\"2\",\n" +
+      "         \"id\":\"61445159784bca6ef764c6df\",\n" +
       "         \"url\":\"https://dev.moonshot.ceo/documento2.pdf\",\n" +
-      "         \"roomId\":\"7\",\n" +
+      "         \"roomId\":\"61445159784bca6ef764c6df\",\n" +
       "         \"createdAt\":1637417190\n" +
       "      }\n" +
       "   ],\n" +
@@ -1902,18 +1923,18 @@ export class CommunityJavascriptTemplates {
     response: null
   }
 
-  public static direct_chat_messages_room_id_get: EndpointTemplate = {
-    name: "direct-chat/message/:room_id",
-    code: "\nconst url = 'https://dev.moonshot.ceo/api/community/direct-chat/messages/1';\n" +
+  public static direct_chat_id_messages_get: EndpointTemplate = {
+    name: "direct-chats/:id/messages",
+    code: "\nconst url = 'https://dev.moonshot.ceo/api/community/direct-chats/1/messages';\n" +
       "\n" +
       "fetch(url)\n" +
       "  .then(response => response.json())\n" +
       "  .then(data => console.log(JSON.stringify(data)));",
     response: "\n[\n" +
       "   {\n" +
-      "      \"id\":\"1\",\n" +
-      "      \"roomId\":\"1\",\n" +
-      "      \"authorMemberId\":\"1\",\n" +
+      "      \"id\":\"61445159784bca6ef764c6df\",\n" +
+      "      \"roomId\":\"61445159784bca6ef764c6df\",\n" +
+      "      \"authorMemberId\":\"61445159784bca6ef764c6df\",\n" +
       "      \"content\":\"Hola, ¿Me podrías pasar el archivo?\",\n" +
       "      \"documents\":[\n" +
       "         \n" +
@@ -1921,17 +1942,17 @@ export class CommunityJavascriptTemplates {
       "      \"createdAt\":1621412130000\n" +
       "   },\n" +
       "   {\n" +
-      "      \"id\":\"2\",\n" +
-      "      \"roomId\":\"1\",\n" +
-      "      \"authorMemberId\":\"2\",\n" +
+      "      \"id\":\"61445159784bca6ef764c6df\",\n" +
+      "      \"roomId\":\"61445159784bca6ef764c6df\",\n" +
+      "      \"authorMemberId\":\"61445159784bca6ef764c6df\",\n" +
       "      \"content\":\"Sí, claro.\",\n" +
       "      \"documents\":[\n" +
       "         {\n" +
-      "            \"id\":\"1\",\n" +
+      "            \"id\":\"61445159784bca6ef764c6df\",\n" +
       "            \"link\":\"https://moonshot.ceo/archivoTrabajo.pdf\",\n" +
       "            \"category\":\"PDF\",\n" +
-      "            \"roomId\":\"1\",\n" +
-      "            \"memberId\":\"2\",\n" +
+      "            \"roomId\":\"61445159784bca6ef764c6df\",\n" +
+      "            \"memberId\":\"61445159784bca6ef764c6df\",\n" +
       "            \"filename\":\"archivoTrabajo\",\n" +
       "            \"createdAt\":1621412130000\n" +
       "         }\n" +
@@ -1939,9 +1960,9 @@ export class CommunityJavascriptTemplates {
       "      \"createdAt\":1621415730000\n" +
       "   },\n" +
       "   {\n" +
-      "      \"id\":\"3\",\n" +
-      "      \"roomId\":\"1\",\n" +
-      "      \"authorMemberId\":\"3\",\n" +
+      "      \"id\":\"61445159784bca6ef764c6df\",\n" +
+      "      \"roomId\":\"61445159784bca6ef764c6df\",\n" +
+      "      \"authorMemberId\":\"61445159784bca6ef764c6df\",\n" +
       "      \"content\":\"Yo salgo en breve de trabajar por si te quieres tomar un cafe\",\n" +
       "      \"documents\":[],\n" +
       "      \"createdAt\":1621419330000\n" +
@@ -1949,9 +1970,9 @@ export class CommunityJavascriptTemplates {
       "]"
   }
 
-  public static direct_chat_message_id_delete: EndpointTemplate = {
-    name: "direct-chat/message/:id",
-    code: "\nconst url = 'https://dev.moonshot.ceo/api/community/direct-chat/message/1';\n" +
+  public static direct_chat_id_message_id_delete: EndpointTemplate = {
+    name: "direct-chats/:id/messages/:message_id",
+    code: "\nconst url = 'https://dev.moonshot.ceo/api/community/direct-chats/1/messages/1';\n" +
       "\n" +
       "fetch(url, {\n" +
       "  method: 'DELETE',\n" +
@@ -1959,6 +1980,82 @@ export class CommunityJavascriptTemplates {
       "  .then(response => response.json())\n" +
       "  .then(data => console.log(JSON.stringify(data)));",
     response: null
+  }
+
+  public static direct_chat_id_documents_get: EndpointTemplate = {
+    name: "direct-chats/:id/documents",
+    code: "\nconst url = 'https://dev.moonshot.ceo/api/community/direct-chats/1/documents';\n" +
+      "\n" +
+      "fetch(url)\n" +
+      "  .then(response => response.json())\n" +
+      "  .then(data => console.log(JSON.stringify(data)));",
+    response: "\n[\n" +
+      "   {\n" +
+      "      \"id\":\"61445159784bca6ef764c6df\",\n" +
+      "      \"link\":\"https://moonshot.ceo/archivoTrabajo.pdf\",\n" +
+      "      \"category\":\"PDF\",\n" +
+      "      \"roomId\":\"61445159784bca6ef764c6df\",\n" +
+      "      \"memberId\":\"61445159784bca6ef764c6df\",\n" +
+      "      \"filename\":\"archivoTrabajo\",\n" +
+      "      \"createdAt\":1621412130000\n" +
+      "   },\n" +
+      "   {\n" +
+      "      \"id\":\"61445159784bca6ef764c6df\",\n" +
+      "      \"link\":\"https://moonshot.ceo/planosPrimeraPlanta.pdf\",\n" +
+      "      \"category\":\"PDF\",\n" +
+      "      \"roomId\":\"61445159784bca6ef764c6df\",\n" +
+      "      \"memberId\":\"61445159784bca6ef764c6df\",\n" +
+      "      \"filename\":\"planosPrimeraPlanta\",\n" +
+      "      \"createdAt\":1621415730000\n" +
+      "   },\n" +
+      "   {\n" +
+      "      \"id\":\"61445159784bca6ef764c6df\",\n" +
+      "      \"link\":\"https://moonshot.ceo/planosSegundaPlanta.image\",\n" +
+      "      \"category\":\"IMAGE\",\n" +
+      "      \"roomId\":\"61445159784bca6ef764c6df\",\n" +
+      "      \"memberId\":\"61445159784bca6ef764c6df\",\n" +
+      "      \"filename\":\"planosSegundaPlanta\",\n" +
+      "      \"createdAt\":1621419330000\n" +
+      "   }\n" +
+      "]"
+  }
+
+  public static direct_chat_id_links_get: EndpointTemplate = {
+    name: "direct-chats/:id/links",
+    code: "\nconst url = 'https://dev.moonshot.ceo/api/community/direct-chats/1/links';\n" +
+      "\n" +
+      "fetch(url)\n" +
+      "  .then(response => response.json())\n" +
+      "  .then(data => console.log(JSON.stringify(data)));",
+    response: "\n[\n" +
+      "   {\n" +
+      "      \"id\":\"61445159784bca6ef764c6df\",\n" +
+      "      \"url\":\"https://dev.moonshot.ceo/documento1.pdf\",\n" +
+      "      \"roomId\":\"61445159784bca6ef764c6df\",\n" +
+      "      \"createdAt\":1637417185\n" +
+      "   },\n" +
+      "   {\n" +
+      "      \"id\":\"61445159784bca6ef764c6df\",\n" +
+      "      \"url\":\"https://dev.moonshot.ceo/documento2.pdf\",\n" +
+      "      \"roomId\":\"61445159784bca6ef764c6df\",\n" +
+      "      \"createdAt\":1637417190\n" +
+      "   }\n" +
+      "]"
+  }
+
+  public static direct_chat_id_upload_put: EndpointTemplate = {
+    name: "direct-chats/:id/upload",
+    code: "\nconst formData = new FormData();\n" +
+      "const url = 'https://dev.moonshot.ceo/api/community/direct-chats/1/upload'\n" +
+      "     \n" +
+      "formData.append(\"file\", 'YOUR_FILE');\n" +
+      "\n" +
+      "fetch(url, {\n" +
+      "  method: 'PUT',\n" +
+      "  body: formData\n" +
+      "})\n" +
+      "  .then(path => console.log(path))",
+    response: "\nhttps://localhost/drive/direct-chats/files/1/61eaffcdad2bd12319fd4eba.png"
   }
 
   public static follow_up_rooms_get: EndpointTemplate = {
@@ -1970,9 +2067,9 @@ export class CommunityJavascriptTemplates {
       "  .then(data => console.log(JSON.stringify(data)));",
     response: "\n[\n" +
       "   {\n" +
-      "      \"id\":\"1\",\n" +
+      "      \"id\":\"61445159784bca6ef764c6df\",\n" +
       "      \"ownerMember\":{\n" +
-      "         \"id\":\"5\",\n" +
+      "         \"id\":\"61445159784bca6ef764c6df\",\n" +
       "         \"state\":\"ACCEPTED\",\n" +
       "         \"name\":\"Victor\",\n" +
       "         \"lastname\":\"Ceballos\",\n" +
@@ -2004,7 +2101,7 @@ export class CommunityJavascriptTemplates {
       "         \"experiences\":null,\n" +
       "         \"educations\":[\n" +
       "            {\n" +
-      "               \"id\":\"4\",\n" +
+      "               \"id\":\"61445159784bca6ef764c6df\",\n" +
       "               \"school\":\"Universidad de Las Palmas de Gran Canaria\",\n" +
       "               \"degree\":\"Ingeniería industrial\",\n" +
       "               \"fieldOfStudy\":\"Diseño de instalaciones\",\n" +
@@ -2024,15 +2121,15 @@ export class CommunityJavascriptTemplates {
       "      \"description\":\"Reunion para hablar de los objetivos a futuro\",\n" +
       "      \"participants\":[\n" +
       "         {\n" +
-      "            \"memberId\":\"5\",\n" +
+      "            \"memberId\":\"61445159784bca6ef764c6df\",\n" +
       "            \"state\":\"ACTIVE\"\n" +
       "         },\n" +
       "         {\n" +
-      "            \"memberId\":\"9\",\n" +
+      "            \"memberId\":\"61445159784bca6ef764c6df\",\n" +
       "            \"state\":\"ACTIVE\"\n" +
       "         },\n" +
       "         {\n" +
-      "            \"memberId\":\"2\",\n" +
+      "            \"memberId\":\"61445159784bca6ef764c6df\",\n" +
       "            \"state\":\"INACTIVE\"\n" +
       "         }\n" +
       "      ],\n" +
@@ -2050,9 +2147,9 @@ export class CommunityJavascriptTemplates {
       "      ]\n" +
       "   },\n" +
       "   {\n" +
-      "      \"id\":\"2\",\n" +
+      "      \"id\":\"61445159784bca6ef764c6df\",\n" +
       "      \"ownerMember\":{\n" +
-      "         \"id\":\"3\",\n" +
+      "         \"id\":\"61445159784bca6ef764c6df\",\n" +
       "         \"state\":\"ACCEPTED\",\n" +
       "         \"name\":\"Jeremy\",\n" +
       "         \"lastname\":\"Trujillo\",\n" +
@@ -2077,7 +2174,7 @@ export class CommunityJavascriptTemplates {
       "         ],\n" +
       "         \"experiences\":[\n" +
       "            {\n" +
-      "               \"id\":\"3\",\n" +
+      "               \"id\":\"61445159784bca6ef764c6df\",\n" +
       "               \"title\":\"Prácticas universitarias en Moonshot Innovation\",\n" +
       "               \"type\":\"APPRENTICESHIP\",\n" +
       "               \"company\":\"Moonshot Innovation\",\n" +
@@ -2093,7 +2190,7 @@ export class CommunityJavascriptTemplates {
       "         ],\n" +
       "         \"educations\":[\n" +
       "            {\n" +
-      "               \"id\":\"3\",\n" +
+      "               \"id\":\"61445159784bca6ef764c6df\",\n" +
       "               \"school\":\"Universidad de Las Palmas de Gran Canaria\",\n" +
       "               \"degree\":\"Ingeniería informática\",\n" +
       "               \"fieldOfStudy\":\"Ingeniería de software\",\n" +
@@ -2113,19 +2210,19 @@ export class CommunityJavascriptTemplates {
       "      \"description\":\"Frente al problema sucedido esta mañana debemos tomar decisiones\",\n" +
       "      \"participants\":[\n" +
       "         {\n" +
-      "            \"memberId\":\"3\",\n" +
+      "            \"memberId\":\"61445159784bca6ef764c6df\",\n" +
       "            \"state\":\"INACTIVE\"\n" +
       "         },\n" +
       "         {\n" +
-      "            \"memberId\":\"6\",\n" +
+      "            \"memberId\":\"61445159784bca6ef764c6df\",\n" +
       "            \"state\":\"ACTIVE\"\n" +
       "         },\n" +
       "         {\n" +
-      "            \"memberId\":\"7\",\n" +
+      "            \"memberId\":\"61445159784bca6ef764c6df\",\n" +
       "            \"state\":\"ACTIVE\"\n" +
       "         },\n" +
       "         {\n" +
-      "            \"memberId\":\"5\",\n" +
+      "            \"memberId\":\"61445159784bca6ef764c6df\",\n" +
       "            \"state\":\"ACTIVE\"\n" +
       "         }\n" +
       "      ],\n" +
@@ -2135,18 +2232,18 @@ export class CommunityJavascriptTemplates {
       "]"
   }
 
-  public static follow_up_rooms_all_get: EndpointTemplate = {
-    name: "follow-up-rooms/all",
-    code: "\nconst url = 'https://dev.moonshot.ceo/api/community/follow-up-rooms/all';\n" +
+  public static follow_up_rooms_all_member_participate_get: EndpointTemplate = {
+    name: "follow-up-rooms/all/member-participate",
+    code: "\nconst url = 'https://dev.moonshot.ceo/api/community/follow-up-rooms/all/member-participate';\n" +
       "\n" +
       "fetch(url)\n" +
       "  .then(response => response.json())\n" +
       "  .then(data => console.log(JSON.stringify(data)));",
     response: "\n[\n" +
       "   {\n" +
-      "      \"id\":\"1\",\n" +
+      "      \"id\":\"61445159784bca6ef764c6df\",\n" +
       "      \"ownerMember\":{\n" +
-      "         \"id\":\"5\",\n" +
+      "         \"id\":\"61445159784bca6ef764c6df\",\n" +
       "         \"state\":\"ACCEPTED\",\n" +
       "         \"name\":\"Victor\",\n" +
       "         \"lastname\":\"Ceballos\",\n" +
@@ -2178,7 +2275,7 @@ export class CommunityJavascriptTemplates {
       "         \"experiences\":null,\n" +
       "         \"educations\":[\n" +
       "            {\n" +
-      "               \"id\":\"4\",\n" +
+      "               \"id\":\"61445159784bca6ef764c6df\",\n" +
       "               \"school\":\"Universidad de Las Palmas de Gran Canaria\",\n" +
       "               \"degree\":\"Ingeniería industrial\",\n" +
       "               \"fieldOfStudy\":\"Diseño de instalaciones\",\n" +
@@ -2198,15 +2295,15 @@ export class CommunityJavascriptTemplates {
       "      \"description\":\"Reunion para hablar de los objetivos a futuro\",\n" +
       "      \"participants\":[\n" +
       "         {\n" +
-      "            \"memberId\":\"5\",\n" +
+      "            \"memberId\":\"61445159784bca6ef764c6df\",\n" +
       "            \"state\":\"ACTIVE\"\n" +
       "         },\n" +
       "         {\n" +
-      "            \"memberId\":\"9\",\n" +
+      "            \"memberId\":\"61445159784bca6ef764c6df\",\n" +
       "            \"state\":\"ACTIVE\"\n" +
       "         },\n" +
       "         {\n" +
-      "            \"memberId\":\"2\",\n" +
+      "            \"memberId\":\"61445159784bca6ef764c6df\",\n" +
       "            \"state\":\"INACTIVE\"\n" +
       "         }\n" +
       "      ],\n" +
@@ -2224,9 +2321,9 @@ export class CommunityJavascriptTemplates {
       "      ]\n" +
       "   },\n" +
       "   {\n" +
-      "      \"id\":\"2\",\n" +
+      "      \"id\":\"61445159784bca6ef764c6df\",\n" +
       "      \"ownerMember\":{\n" +
-      "         \"id\":\"3\",\n" +
+      "         \"id\":\"61445159784bca6ef764c6df\",\n" +
       "         \"state\":\"ACCEPTED\",\n" +
       "         \"name\":\"Jeremy\",\n" +
       "         \"lastname\":\"Trujillo\",\n" +
@@ -2251,7 +2348,7 @@ export class CommunityJavascriptTemplates {
       "         ],\n" +
       "         \"experiences\":[\n" +
       "            {\n" +
-      "               \"id\":\"3\",\n" +
+      "               \"id\":\"61445159784bca6ef764c6df\",\n" +
       "               \"title\":\"Prácticas universitarias en Moonshot Innovation\",\n" +
       "               \"type\":\"APPRENTICESHIP\",\n" +
       "               \"company\":\"Moonshot Innovation\",\n" +
@@ -2267,7 +2364,7 @@ export class CommunityJavascriptTemplates {
       "         ],\n" +
       "         \"educations\":[\n" +
       "            {\n" +
-      "               \"id\":\"3\",\n" +
+      "               \"id\":\"61445159784bca6ef764c6df\",\n" +
       "               \"school\":\"Universidad de Las Palmas de Gran Canaria\",\n" +
       "               \"degree\":\"Ingeniería informática\",\n" +
       "               \"fieldOfStudy\":\"Ingeniería de software\",\n" +
@@ -2287,19 +2384,19 @@ export class CommunityJavascriptTemplates {
       "      \"description\":\"Frente al problema sucedido esta mañana debemos tomar decisiones\",\n" +
       "      \"participants\":[\n" +
       "         {\n" +
-      "            \"memberId\":\"3\",\n" +
+      "            \"memberId\":\"61445159784bca6ef764c6df\",\n" +
       "            \"state\":\"INACTIVE\"\n" +
       "         },\n" +
       "         {\n" +
-      "            \"memberId\":\"6\",\n" +
+      "            \"memberId\":\"61445159784bca6ef764c6df\",\n" +
       "            \"state\":\"ACTIVE\"\n" +
       "         },\n" +
       "         {\n" +
-      "            \"memberId\":\"7\",\n" +
+      "            \"memberId\":\"61445159784bca6ef764c6df\",\n" +
       "            \"state\":\"ACTIVE\"\n" +
       "         },\n" +
       "         {\n" +
-      "            \"memberId\":\"5\",\n" +
+      "            \"memberId\":\"61445159784bca6ef764c6df\",\n" +
       "            \"state\":\"ACTIVE\"\n" +
       "         }\n" +
       "      ],\n" +
@@ -2311,15 +2408,15 @@ export class CommunityJavascriptTemplates {
 
   public static follow_up_room_id_get: EndpointTemplate = {
     name: "follow-up-rooms/:id",
-    code: "\nconst url = 'https://dev.moonshot.ceo/api/community/follow-up-room/1';\n" +
+    code: "\nconst url = 'https://dev.moonshot.ceo/api/community/follow-up-rooms/1';\n" +
       "\n" +
       "fetch(url)\n" +
       "  .then(response => response.json())\n" +
       "  .then(data => console.log(JSON.stringify(data)));",
     response: "\n{\n" +
-      "      \"id\":\"1\",\n" +
+      "      \"id\":\"61445159784bca6ef764c6df\",\n" +
       "      \"ownerMember\":{\n" +
-      "         \"id\":\"5\",\n" +
+      "         \"id\":\"61445159784bca6ef764c6df\",\n" +
       "         \"state\":\"ACCEPTED\",\n" +
       "         \"name\":\"Victor\",\n" +
       "         \"lastname\":\"Ceballos\",\n" +
@@ -2351,7 +2448,7 @@ export class CommunityJavascriptTemplates {
       "         \"experiences\":null,\n" +
       "         \"educations\":[\n" +
       "            {\n" +
-      "               \"id\":\"4\",\n" +
+      "               \"id\":\"61445159784bca6ef764c6df\",\n" +
       "               \"school\":\"Universidad de Las Palmas de Gran Canaria\",\n" +
       "               \"degree\":\"Ingeniería industrial\",\n" +
       "               \"fieldOfStudy\":\"Diseño de instalaciones\",\n" +
@@ -2371,15 +2468,15 @@ export class CommunityJavascriptTemplates {
       "      \"description\":\"Reunion para hablar de los objetivos a futuro\",\n" +
       "      \"participants\":[\n" +
       "         {\n" +
-      "            \"memberId\":\"5\",\n" +
+      "            \"memberId\":\"61445159784bca6ef764c6df\",\n" +
       "            \"state\":\"ACTIVE\"\n" +
       "         },\n" +
       "         {\n" +
-      "            \"memberId\":\"9\",\n" +
+      "            \"memberId\":\"61445159784bca6ef764c6df\",\n" +
       "            \"state\":\"ACTIVE\"\n" +
       "         },\n" +
       "         {\n" +
-      "            \"memberId\":\"2\",\n" +
+      "            \"memberId\":\"61445159784bca6ef764c6df\",\n" +
       "            \"state\":\"INACTIVE\"\n" +
       "         }\n" +
       "      ],\n" +
@@ -2399,25 +2496,25 @@ export class CommunityJavascriptTemplates {
   }
 
   public static follow_up_room_post: EndpointTemplate = {
-    name: "follow-up-room",
-    code: "\nconst url = 'https://dev.moonshot.ceo/api/community/follow-up-room';\n" +
+    name: "follow-up-rooms",
+    code: "\nconst url = 'https://dev.moonshot.ceo/api/community/follow-up-rooms';\n" +
       "\n" +
       "const body = {\n" +
-      "  \"id\": \"1\",\n" +
-      "  \"ownerMemberId\": \"5\",\n" +
+      "  \"id\": \"61445159784bca6ef764c6df\",\n" +
+      "  \"ownerMemberId\": \"61445159784bca6ef764c6df\",\n" +
       "  \"title\": \"Reunion general\",\n" +
       "  \"description\": \"Reunion para hablar de los objetivos a futuro\",\n" +
       "  \"participants\": [\n" +
       "      {\n" +
-      "          \"memberId\": \"5\",\n" +
+      "          \"memberId\": \"61445159784bca6ef764c6df\",\n" +
       "          \"state\": \"ACTIVE\"\n" +
       "      },\n" +
       "      {\n" +
-      "          \"memberId\": \"9\",\n" +
+      "          \"memberId\": \"61445159784bca6ef764c6df\",\n" +
       "          \"state\": \"ACTIVE\"\n" +
       "      },\n" +
       "      {\n" +
-      "          \"memberId\": \"2\",\n" +
+      "          \"memberId\": \"61445159784bca6ef764c6df\",\n" +
       "          \"state\": \"INACTIVE\"\n" +
       "      }\n" +
       "  ],\n" +
@@ -2444,25 +2541,24 @@ export class CommunityJavascriptTemplates {
     response: null
   }
 
-  public static follow_up_room_put: EndpointTemplate = {
-    name: "follow-up-room",
-    code: "\nconst url = 'https://dev.moonshot.ceo/api/community/follow-up-room';\n" +
+  public static follow_up_room_id_put: EndpointTemplate = {
+    name: "follow-up-rooms/:id",
+    code: "\nconst url = 'https://dev.moonshot.ceo/api/community/follow-up-room/1';\n" +
       "\n" +
       "const body = {\n" +
-      "  \"id\": \"1\",\n" +
       "  \"title\": \"Reunion general\",\n" +
       "  \"description\": \"Reunion para hablar de los objetivos a futuro\",\n" +
       "  \"participants\": [\n" +
       "      {\n" +
-      "          \"memberId\": \"5\",\n" +
+      "          \"memberId\": \"61445159784bca6ef764c6df\",\n" +
       "          \"state\": \"ACTIVE\"\n" +
       "      },\n" +
       "      {\n" +
-      "          \"memberId\": \"9\",\n" +
+      "          \"memberId\": \"61445159784bca6ef764c6df\",\n" +
       "          \"state\": \"ACTIVE\"\n" +
       "      },\n" +
       "      {\n" +
-      "          \"memberId\": \"2\",\n" +
+      "          \"memberId\": \"61445159784bca6ef764c6df\",\n" +
       "          \"state\": \"INACTIVE\"\n" +
       "      }\n" +
       "  ],\n" +
@@ -2487,14 +2583,13 @@ export class CommunityJavascriptTemplates {
     response: null
   }
 
-  public static follow_up_room_add_member_put: EndpointTemplate = {
-    name: "follow-up-rooms/add-member",
-    code: "\nconst url = 'https://dev.moonshot.ceo/api/community/follow-up-room/add-member';\n" +
+  public static follow_up_room_id_members_add_put: EndpointTemplate = {
+    name: "follow-up-rooms/:id/members/add",
+    code: "\nconst url = 'https://dev.moonshot.ceo/api/community/follow-up-rooms/1/members/add';\n" +
       "\n" +
       "const body = {\n" +
-      "  \"id\": \"1\",\n" +
       "  \"memberIds\": [\n" +
-      "    \"1\", \"2\", \"3\"\n" +
+      "    \"61445159784bca6ef764c6df\", \"61445159784bca6ef764c6df\", \"61445159784bca6ef764c6df\"\n" +
       "  ]\n" +
       "}\n" +
       "\n" +
@@ -2507,17 +2602,16 @@ export class CommunityJavascriptTemplates {
     response: null
   }
 
-  public static follow_up_room_leave_member_put: EndpointTemplate = {
-    name: "follow-up-rooms/leave-member",
-    code: "\nconst url = 'https://dev.moonshot.ceo/api/community/follow-up-room/leave-member';\n" +
+  public static follow_up_room_id_members_leave_put: EndpointTemplate = {
+    name: "follow-up-rooms/:id/members/leave",
+    code: "\nconst url = 'https://dev.moonshot.ceo/api/community/follow-up-rooms/1/members/leave';\n" +
       "\n" +
       "const body = {\n" +
-      "   \"id\":\"1\",\n" +
       "   \"leaveMemberId\":[\n" +
-      "      \"1\",\n" +
-      "      \"2\"\n" +
+      "      \"61445159784bca6ef764c6df\",\n" +
+      "      \"61445159784bca6ef764c6df\"\n" +
       "   ],\n" +
-      "   \"newOwnerMemberId\":\"4\"\n" +
+      "   \"newOwnerMemberId\":\"61445159784bca6ef764c6df\"\n" +
       "}\n" +
       "\n" +
       "fetch(url, {\n" +
@@ -2529,34 +2623,24 @@ export class CommunityJavascriptTemplates {
     response: null
   }
 
-  public static follow_up_room_open_put: EndpointTemplate = {
-    name: "follow-up-room/open",
-    code: "\nconst url = 'https://dev.moonshot.ceo/api/community/follow-up-room/open';\n" +
-      "\n" +
-      "const body = {\n" +
-      "   \"id\":\"1\"\n" +
-      "}\n" +
+  public static follow_up_room_id_open_put: EndpointTemplate = {
+    name: "follow-up-rooms/:id/open",
+    code: "\nconst url = 'https://dev.moonshot.ceo/api/community/follow-up-rooms/1/open';\n" +
       "\n" +
       "fetch(url, {\n" +
-      "  method: 'PUT',\n" +
-      "  body: JSON.stringify(body)\n" +
+      "  method: 'PUT'\n" +
       "})\n" +
       "  .then(response => response.json())\n" +
       "  .then(data => console.log(JSON.stringify(data)));",
     response: null
   }
 
-  public static follow_up_room_close_put: EndpointTemplate = {
-    name: "follow-up-room/close",
-    code: "\nconst url = 'https://dev.moonshot.ceo/api/community/follow-up-room/close';\n" +
-      "\n" +
-      "const body = {\n" +
-      "   \"id\":\"1\"\n" +
-      "}\n" +
+  public static follow_up_room_id_close_put: EndpointTemplate = {
+    name: "follow-up-rooms/:id/close",
+    code: "\nconst url = 'https://dev.moonshot.ceo/api/community/follow-up-rooms/1/close';\n" +
       "\n" +
       "fetch(url, {\n" +
-      "  method: 'PUT',\n" +
-      "  body: JSON.stringify(body)\n" +
+      "  method: 'PUT'\n" +
       "})\n" +
       "  .then(response => response.json())\n" +
       "  .then(data => console.log(JSON.stringify(data)));",
@@ -2564,8 +2648,8 @@ export class CommunityJavascriptTemplates {
   }
 
   public static follow_up_room_id_delete: EndpointTemplate = {
-    name: "follow-up-room/:id",
-    code: "\nconst url = 'https://dev.moonshot.ceo/api/community/follow-up-room/1';\n" +
+    name: "follow-up-rooms/:id",
+    code: "\nconst url = 'https://dev.moonshot.ceo/api/community/follow-up-rooms/1';\n" +
       "\n" +
       "fetch(url, {\n" +
       "  method: 'DELETE'\n" +
@@ -2575,37 +2659,34 @@ export class CommunityJavascriptTemplates {
     response: null
   }
 
-  public static follow_up_room_message_post: EndpointTemplate = {
-    name: "follow-up-room/message",
-    code: "\nconst url = 'https://dev.moonshot.ceo/api/community/follow-up-room/message';\n" +
+  public static follow_up_room_id_message_post: EndpointTemplate = {
+    name: "follow-up-rooms/:id/messages",
+    code: "\nconst url = 'https://dev.moonshot.ceo/api/community/follow-up-rooms/1/messages';\n" +
       "\n" +
       "const body = {\n" +
-      "   \"id\":\"2\",\n" +
-      "   \"roomId\":\"1\",\n" +
-      "   \"authorMemberId\":\"2\",\n" +
       "   \"content\":\"Sí, claro.\",\n" +
       "   \"documents\":[\n" +
       "      {\n" +
-      "         \"id\":\"1\",\n" +
+      "         \"id\":\"61445159784bca6ef764c6df\",\n" +
       "         \"link\":\"https://moonshot.ceo/archivoTrabajo.pdf\",\n" +
       "         \"category\":\"PDF\",\n" +
-      "         \"roomId\":\"1\",\n" +
-      "         \"memberId\":\"2\",\n" +
+      "         \"roomId\":\"61445159784bca6ef764c6df\",\n" +
+      "         \"memberId\":\"61445159784bca6ef764c6df\",\n" +
       "         \"filename\":\"archivoTrabajo\",\n" +
       "         \"createdAt\":1621412130000\n" +
       "      }\n" +
       "   ],\n" +
       "   \"links\":[\n" +
       "      {\n" +
-      "         \"id\":\"1\",\n" +
+      "         \"id\":\"61445159784bca6ef764c6df\",\n" +
       "         \"url\":\"https://dev.moonshot.ceo/documento1.pdf\",\n" +
-      "         \"roomId\":\"2\",\n" +
+      "         \"roomId\":\"61445159784bca6ef764c6df\",\n" +
       "         \"createdAt\":1637417185\n" +
       "      },\n" +
       "      {\n" +
-      "         \"id\":\"2\",\n" +
+      "         \"id\":\"61445159784bca6ef764c6df\",\n" +
       "         \"url\":\"https://dev.moonshot.ceo/documento2.pdf\",\n" +
-      "         \"roomId\":\"7\",\n" +
+      "         \"roomId\":\"61445159784bca6ef764c6df\",\n" +
       "         \"createdAt\":1637417190\n" +
       "      }\n" +
       "   ],\n" +
@@ -2621,9 +2702,9 @@ export class CommunityJavascriptTemplates {
     response: null
   }
 
-  public static follow_up_room_message_id_delete: EndpointTemplate = {
-    name: "follow-up-room/message/:id",
-    code: "\nconst url = 'https://dev.moonshot.ceo/api/community/follow-up-room/message/1';\n" +
+  public static follow_up_room_id_message_id_delete: EndpointTemplate = {
+    name: "follow-up-rooms/:id/messages/:message_id",
+    code: "\nconst url = 'https://dev.moonshot.ceo/api/community/follow-up-rooms/1/messages/1';\n" +
       "\n" +
       "fetch(url, {\n" +
       "  method: 'DELETE'\n" +
@@ -2634,8 +2715,8 @@ export class CommunityJavascriptTemplates {
   }
 
   public static follow_up_room_message_id_admin_delete: EndpointTemplate = {
-    name: "follow-up-room/message/:id/admin",
-    code: "\nconst url = 'https://dev.moonshot.ceo/api/community/follow-up-room/message/1/admin';\n" +
+    name: "follow-up-rooms/_id/messages/:message_id/admin",
+    code: "\nconst url = 'https://dev.moonshot.ceo/api/community/follow-up-rooms/1/messages/1/admin';\n" +
       "\n" +
       "fetch(url, {\n" +
       "  method: 'DELETE'\n" +
@@ -2645,18 +2726,18 @@ export class CommunityJavascriptTemplates {
     response: null
   }
 
-  public static follow_up_room_messages_room_id_get: EndpointTemplate = {
-    name: "follow-up-room/messages/:room_id",
-    code: "\nconst url = 'https://dev.moonshot.ceo/api/community/follow-up-room/messages/1';\n" +
+  public static follow_up_room_id_message_get: EndpointTemplate = {
+    name: "follow-up-rooms/:id/messages",
+    code: "\nconst url = 'https://dev.moonshot.ceo/api/community/follow-up-rooms/1/messages';\n" +
       "\n" +
       "fetch(url)\n" +
       "  .then(response => response.json())\n" +
       "  .then(data => console.log(JSON.stringify(data)));",
     response: "\n[\n" +
       "   {\n" +
-      "      \"id\":\"1\",\n" +
-      "      \"roomId\":\"1\",\n" +
-      "      \"authorMemberId\":\"1\",\n" +
+      "      \"id\":\"61445159784bca6ef764c6df\",\n" +
+      "      \"roomId\":\"61445159784bca6ef764c6df\",\n" +
+      "      \"authorMemberId\":\"61445159784bca6ef764c6df\",\n" +
       "      \"content\":\"Hola, ¿Me podrías pasar el archivo?\",\n" +
       "      \"documents\":[\n" +
       "         \n" +
@@ -2664,17 +2745,17 @@ export class CommunityJavascriptTemplates {
       "      \"createdAt\":1621412130000\n" +
       "   },\n" +
       "   {\n" +
-      "      \"id\":\"2\",\n" +
-      "      \"roomId\":\"1\",\n" +
-      "      \"authorMemberId\":\"2\",\n" +
+      "      \"id\":\"61445159784bca6ef764c6df\",\n" +
+      "      \"roomId\":\"61445159784bca6ef764c6df\",\n" +
+      "      \"authorMemberId\":\"61445159784bca6ef764c6df\",\n" +
       "      \"content\":\"Sí, claro.\",\n" +
       "      \"documents\":[\n" +
       "         {\n" +
-      "            \"id\":\"1\",\n" +
+      "            \"id\":\"61445159784bca6ef764c6df\",\n" +
       "            \"link\":\"https://moonshot.ceo/archivoTrabajo.pdf\",\n" +
       "            \"category\":\"PDF\",\n" +
-      "            \"roomId\":\"1\",\n" +
-      "            \"memberId\":\"2\",\n" +
+      "            \"roomId\":\"61445159784bca6ef764c6df\",\n" +
+      "            \"memberId\":\"61445159784bca6ef764c6df\",\n" +
       "            \"filename\":\"archivoTrabajo\",\n" +
       "            \"createdAt\":1621412130000\n" +
       "         }\n" +
@@ -2682,9 +2763,9 @@ export class CommunityJavascriptTemplates {
       "      \"createdAt\":1621415730000\n" +
       "   },\n" +
       "   {\n" +
-      "      \"id\":\"3\",\n" +
-      "      \"roomId\":\"2\",\n" +
-      "      \"authorMemberId\":\"3\",\n" +
+      "      \"id\":\"61445159784bca6ef764c6df\",\n" +
+      "      \"roomId\":\"61445159784bca6ef764c6df\",\n" +
+      "      \"authorMemberId\":\"61445159784bca6ef764c6df\",\n" +
       "      \"content\":\"Yo salgo en breve de trabajar por si te quieres tomar un cafe\",\n" +
       "      \"documents\":[\n" +
       "         \n" +
@@ -2692,6 +2773,82 @@ export class CommunityJavascriptTemplates {
       "      \"createdAt\":1621419330000\n" +
       "   }\n" +
       "]"
+  }
+
+  public static follow_up_room_id_documents_get: EndpointTemplate = {
+    name: "follow-up-rooms/:id/documents",
+    code: "\nconst url = 'https://dev.moonshot.ceo/api/community/follow-up-rooms/1/documents';\n" +
+      "\n" +
+      "fetch(url)\n" +
+      "  .then(response => response.json())\n" +
+      "  .then(data => console.log(JSON.stringify(data)));",
+    response: "\n[\n" +
+      "   {\n" +
+      "      \"id\":\"61445159784bca6ef764c6df\",\n" +
+      "      \"link\":\"https://moonshot.ceo/archivoTrabajo.pdf\",\n" +
+      "      \"category\":\"PDF\",\n" +
+      "      \"roomId\":\"61445159784bca6ef764c6df\",\n" +
+      "      \"memberId\":\"61445159784bca6ef764c6df\",\n" +
+      "      \"filename\":\"archivoTrabajo\",\n" +
+      "      \"createdAt\":1621412130000\n" +
+      "   },\n" +
+      "   {\n" +
+      "      \"id\":\"61445159784bca6ef764c6df\",\n" +
+      "      \"link\":\"https://moonshot.ceo/planosPrimeraPlanta.pdf\",\n" +
+      "      \"category\":\"PDF\",\n" +
+      "      \"roomId\":\"61445159784bca6ef764c6df\",\n" +
+      "      \"memberId\":\"61445159784bca6ef764c6df\",\n" +
+      "      \"filename\":\"planosPrimeraPlanta\",\n" +
+      "      \"createdAt\":1621415730000\n" +
+      "   },\n" +
+      "   {\n" +
+      "      \"id\":\"61445159784bca6ef764c6df\",\n" +
+      "      \"link\":\"https://moonshot.ceo/planosSegundaPlanta.image\",\n" +
+      "      \"category\":\"IMAGE\",\n" +
+      "      \"roomId\":\"61445159784bca6ef764c6df\",\n" +
+      "      \"memberId\":\"61445159784bca6ef764c6df\",\n" +
+      "      \"filename\":\"planosSegundaPlanta\",\n" +
+      "      \"createdAt\":1621419330000\n" +
+      "   }\n" +
+      "]"
+  }
+
+  public static follow_up_room_id_links_get: EndpointTemplate = {
+    name: "follow-up-rooms/:id/links",
+    code: "\nconst url = 'https://dev.moonshot.ceo/api/community/follow-up-rooms/1/links';\n" +
+      "\n" +
+      "fetch(url)\n" +
+      "  .then(response => response.json())\n" +
+      "  .then(data => console.log(JSON.stringify(data)));",
+    response: "\n[\n" +
+      "   {\n" +
+      "      \"id\":\"61445159784bca6ef764c6df\",\n" +
+      "      \"url\":\"https://dev.moonshot.ceo/documento1.pdf\",\n" +
+      "      \"roomId\":\"61445159784bca6ef764c6df\",\n" +
+      "      \"createdAt\":1637417185\n" +
+      "   },\n" +
+      "   {\n" +
+      "      \"id\":\"61445159784bca6ef764c6df\",\n" +
+      "      \"url\":\"https://dev.moonshot.ceo/documento2.pdf\",\n" +
+      "      \"roomId\":\"61445159784bca6ef764c6df\",\n" +
+      "      \"createdAt\":1637417190\n" +
+      "   }\n" +
+      "]"
+  }
+
+  public static follow_up_room_id_upload_put: EndpointTemplate = {
+    name: "follow-up-rooms/:id/upload",
+    code: "\nconst formData = new FormData();\n" +
+      "const url = 'https://dev.moonshot.ceo/api/community/follow-up-rooms/1/upload'\n" +
+      "     \n" +
+      "formData.append(\"file\", 'YOUR_FILE');\n" +
+      "\n" +
+      "fetch(url, {\n" +
+      "  method: 'PUT',\n" +
+      "  body: formData\n" +
+      "})\n" +
+      "  .then(path => console.log(path))",
+    response: "\nhttps://localhost/drive/follow-up-rooms/files/1/61eaffcdad2bd12319fd4eba.png"
   }
 
   public static public_channels_get: EndpointTemplate = {
@@ -2703,9 +2860,9 @@ export class CommunityJavascriptTemplates {
       "  .then(data => console.log(JSON.stringify(data)));",
     response: "\n[\n" +
       "   {\n" +
-      "      \"id\":\"1\",\n" +
+      "      \"id\":\"61445159784bca6ef764c6df\",\n" +
       "      \"ownerMember\":{\n" +
-      "         \"id\":\"8\",\n" +
+      "         \"id\":\"61445159784bca6ef764c6df\",\n" +
       "         \"state\":\"ACCEPTED\",\n" +
       "         \"name\":\"Marcos\",\n" +
       "         \"lastname\":\"Fernandez\",\n" +
@@ -2737,7 +2894,7 @@ export class CommunityJavascriptTemplates {
       "         ],\n" +
       "         \"experiences\":[\n" +
       "            {\n" +
-      "               \"id\":\"6\",\n" +
+      "               \"id\":\"61445159784bca6ef764c6df\",\n" +
       "               \"title\":\"Colaboración para crear la vacuna Pfizer\",\n" +
       "               \"type\":\"FULL_TIME\",\n" +
       "               \"company\":\"Novartis\",\n" +
@@ -2751,7 +2908,7 @@ export class CommunityJavascriptTemplates {
       "               \"description\":\"Colaborador de la vacuna Pfizer contra el COVID-19\"\n" +
       "            },\n" +
       "            {\n" +
-      "               \"id\":\"7\",\n" +
+      "               \"id\":\"61445159784bca6ef764c6df\",\n" +
       "               \"title\":\"Colaboración para crear la vacuna de la gripe A\",\n" +
       "               \"type\":\"INTERIM\",\n" +
       "               \"company\":\"Novartis\",\n" +
@@ -2767,7 +2924,7 @@ export class CommunityJavascriptTemplates {
       "         ],\n" +
       "         \"educations\":[\n" +
       "            {\n" +
-      "               \"id\":\"7\",\n" +
+      "               \"id\":\"61445159784bca6ef764c6df\",\n" +
       "               \"school\":\"Universidad de Tokio\",\n" +
       "               \"degree\":\"Farmaceutica\",\n" +
       "               \"fieldOfStudy\":\"Pandemias\",\n" +
@@ -2787,15 +2944,15 @@ export class CommunityJavascriptTemplates {
       "      \"description\":\"Canal para compartir conocimientos de diversos temas\",\n" +
       "      \"participants\":[\n" +
       "         {\n" +
-      "            \"memberId\":\"3\",\n" +
+      "            \"memberId\":\"61445159784bca6ef764c6df\",\n" +
       "            \"state\":\"INACTIVE\"\n" +
       "         },\n" +
       "         {\n" +
-      "            \"memberId\":\"6\",\n" +
+      "            \"memberId\":\"61445159784bca6ef764c6df\",\n" +
       "            \"state\":\"ACTIVE\"\n" +
       "         },\n" +
       "         {\n" +
-      "            \"memberId\":\"8\",\n" +
+      "            \"memberId\":\"61445159784bca6ef764c6df\",\n" +
       "            \"state\":\"ACTIVE\"\n" +
       "         }\n" +
       "      ],\n" +
@@ -2812,9 +2969,9 @@ export class CommunityJavascriptTemplates {
       "      ]\n" +
       "   },\n" +
       "   {\n" +
-      "      \"id\":\"2\",\n" +
+      "      \"id\":\"61445159784bca6ef764c6df\",\n" +
       "      \"ownerMember\":{\n" +
-      "         \"id\":\"9\",\n" +
+      "         \"id\":\"61445159784bca6ef764c6df\",\n" +
       "         \"state\":\"ACCEPTED\",\n" +
       "         \"name\":\"Raúl\",\n" +
       "         \"lastname\":\"López\",\n" +
@@ -2854,7 +3011,7 @@ export class CommunityJavascriptTemplates {
       "         ],\n" +
       "         \"experiences\":[\n" +
       "            {\n" +
-      "               \"id\":\"8\",\n" +
+      "               \"id\":\"61445159784bca6ef764c6df\",\n" +
       "               \"title\":\"Distribuidor de la vacuna Pfizer\",\n" +
       "               \"type\":\"FREELANCE\",\n" +
       "               \"company\":\"Distribuciones Raul S.L\",\n" +
@@ -2874,15 +3031,15 @@ export class CommunityJavascriptTemplates {
       "      \"description\":\"Aqui todos los participantes estaran muteados y sirve para sentirse acompañado en el trabajo online\",\n" +
       "      \"participants\":[\n" +
       "         {\n" +
-      "            \"memberId\":\"9\",\n" +
+      "            \"memberId\":\"61445159784bca6ef764c6df\",\n" +
       "            \"state\":\"ACTIVE\"\n" +
       "         },\n" +
       "         {\n" +
-      "            \"memberId\":\"1\",\n" +
+      "            \"memberId\":\"61445159784bca6ef764c6df\",\n" +
       "            \"state\":\"ACTIVE\"\n" +
       "         },\n" +
       "         {\n" +
-      "            \"memberId\":\"2\",\n" +
+      "            \"memberId\":\"61445159784bca6ef764c6df\",\n" +
       "            \"state\":\"INACTIVE\"\n" +
       "         }\n" +
       "      ],\n" +
@@ -2892,16 +3049,16 @@ export class CommunityJavascriptTemplates {
   }
 
   public static public_channel_id_get: EndpointTemplate = {
-    name: "public-channel/:id",
-    code: "\nconst url = 'https://dev.moonshot.ceo/api/community/public-channel/1';\n" +
+    name: "public-channels/:id_get",
+    code: "\nconst url = 'https://dev.moonshot.ceo/api/community/public-channels/1';\n" +
       "\n" +
       "fetch(url)\n" +
       "  .then(response => response.json())\n" +
       "  .then(data => console.log(JSON.stringify(data)));",
     response: "\n{\n" +
-      "   \"id\":\"1\",\n" +
+      "   \"id\":\"61445159784bca6ef764c6df\",\n" +
       "   \"ownerMember\":{\n" +
-      "      \"id\":\"8\",\n" +
+      "      \"id\":\"61445159784bca6ef764c6df\",\n" +
       "      \"state\":\"ACCEPTED\",\n" +
       "      \"name\":\"Marcos\",\n" +
       "      \"lastname\":\"Fernandez\",\n" +
@@ -2933,7 +3090,7 @@ export class CommunityJavascriptTemplates {
       "      ],\n" +
       "      \"experiences\":[\n" +
       "         {\n" +
-      "            \"id\":\"6\",\n" +
+      "            \"id\":\"61445159784bca6ef764c6df\",\n" +
       "            \"title\":\"Colaboración para crear la vacuna Pfizer\",\n" +
       "            \"type\":\"FULL_TIME\",\n" +
       "            \"company\":\"Novartis\",\n" +
@@ -2947,7 +3104,7 @@ export class CommunityJavascriptTemplates {
       "            \"description\":\"Colaborador de la vacuna Pfizer contra el COVID-19\"\n" +
       "         },\n" +
       "         {\n" +
-      "            \"id\":\"7\",\n" +
+      "            \"id\":\"61445159784bca6ef764c6df\",\n" +
       "            \"title\":\"Colaboración para crear la vacuna de la gripe A\",\n" +
       "            \"type\":\"INTERIM\",\n" +
       "            \"company\":\"Novartis\",\n" +
@@ -2963,7 +3120,7 @@ export class CommunityJavascriptTemplates {
       "      ],\n" +
       "      \"educations\":[\n" +
       "         {\n" +
-      "            \"id\":\"7\",\n" +
+      "            \"id\":\"61445159784bca6ef764c6df\",\n" +
       "            \"school\":\"Universidad de Tokio\",\n" +
       "            \"degree\":\"Farmaceutica\",\n" +
       "            \"fieldOfStudy\":\"Pandemias\",\n" +
@@ -2983,15 +3140,15 @@ export class CommunityJavascriptTemplates {
       "   \"description\":\"Canal para compartir conocimientos de diversos temas\",\n" +
       "   \"participants\":[\n" +
       "      {\n" +
-      "         \"memberId\":\"3\",\n" +
+      "         \"memberId\":\"61445159784bca6ef764c6df\",\n" +
       "         \"state\":\"INACTIVE\"\n" +
       "      },\n" +
       "      {\n" +
-      "         \"memberId\":\"6\",\n" +
+      "         \"memberId\":\"61445159784bca6ef764c6df\",\n" +
       "         \"state\":\"ACTIVE\"\n" +
       "      },\n" +
       "      {\n" +
-      "         \"memberId\":\"8\",\n" +
+      "         \"memberId\":\"61445159784bca6ef764c6df\",\n" +
       "         \"state\":\"ACTIVE\"\n" +
       "      }\n" +
       "   ],\n" +
@@ -3010,25 +3167,25 @@ export class CommunityJavascriptTemplates {
   }
 
   public static public_channel_post: EndpointTemplate = {
-    name: "public-channel",
-    code: "\nconst url = 'https://dev.moonshot.ceo/api/community/public-channel';\n" +
+    name: "public-channels",
+    code: "\nconst url = 'https://dev.moonshot.ceo/api/community/public-channels';\n" +
       "\n" +
       "const body = {\n" +
-      "   \"id\":\"1\",\n" +
-      "   \"ownerMemberId\":\"8\",\n" +
+      "   \"id\":\"61445159784bca6ef764c6df\",\n" +
+      "   \"ownerMemberId\":\"61445159784bca6ef764c6df\",\n" +
       "   \"title\":\"Canal compartir conocimientos\",\n" +
       "   \"description\":\"Canal para compartir conocimientos de diversos temas\",\n" +
       "   \"participants\":[\n" +
       "      {\n" +
-      "         \"memberId\":\"3\",\n" +
+      "         \"memberId\":\"61445159784bca6ef764c6df\",\n" +
       "         \"state\":\"INACTIVE\"\n" +
       "      },\n" +
       "      {\n" +
-      "         \"memberId\":\"6\",\n" +
+      "         \"memberId\":\"61445159784bca6ef764c6df\",\n" +
       "         \"state\":\"ACTIVE\"\n" +
       "      },\n" +
       "      {\n" +
-      "         \"memberId\":\"8\",\n" +
+      "         \"memberId\":\"61445159784bca6ef764c6df\",\n" +
       "         \"state\":\"ACTIVE\"\n" +
       "      }\n" +
       "   ],\n" +
@@ -3054,26 +3211,25 @@ export class CommunityJavascriptTemplates {
     response: null
   }
 
-  public static public_channel_put: EndpointTemplate = {
-    name: "public-channel",
-    code: "\nconst url = 'https://dev.moonshot.ceo/api/community/public-channel';\n" +
+  public static public_channel_id_put: EndpointTemplate = {
+    name: "public-channels/:id",
+    code: "\nconst url = 'https://dev.moonshot.ceo/api/community/public-channels/1';\n" +
       "\n" +
       "const body = {\n" +
-      "   \"id\":\"1\",\n" +
-      "   \"ownerMemberId\":\"8\",\n" +
+      "   \"ownerMemberId\":\"61445159784bca6ef764c6df\",\n" +
       "   \"title\":\"Canal compartir conocimientos\",\n" +
       "   \"description\":\"Canal para compartir conocimientos de diversos temas\",\n" +
       "   \"participants\":[\n" +
       "      {\n" +
-      "         \"memberId\":\"3\",\n" +
+      "         \"memberId\":\"61445159784bca6ef764c6df\",\n" +
       "         \"state\":\"INACTIVE\"\n" +
       "      },\n" +
       "      {\n" +
-      "         \"memberId\":\"6\",\n" +
+      "         \"memberId\":\"61445159784bca6ef764c6df\",\n" +
       "         \"state\":\"ACTIVE\"\n" +
       "      },\n" +
       "      {\n" +
-      "         \"memberId\":\"8\",\n" +
+      "         \"memberId\":\"61445159784bca6ef764c6df\",\n" +
       "         \"state\":\"ACTIVE\"\n" +
       "      }\n" +
       "   ],\n" +
@@ -3099,8 +3255,8 @@ export class CommunityJavascriptTemplates {
   }
 
   public static public_channel_id_delete: EndpointTemplate = {
-    name: "public-channel/:id",
-    code: "\nconst url = 'https://dev.moonshot.ceo/api/community/public-channel/1';\n" +
+    name: "public-channels/:id",
+    code: "\nconst url = 'https://dev.moonshot.ceo/api/community/public-channels/1';\n" +
       "\n" +
       "fetch(url, {\n" +
       "  method: 'DELETE'\n" +
@@ -3110,26 +3266,25 @@ export class CommunityJavascriptTemplates {
     response: null
   }
 
-  public static public_channel_admin_put: EndpointTemplate = {
-    name: "public-channel/admin",
-    code: "\nconst url = 'https://dev.moonshot.ceo/api/community/public-channel/admin';\n" +
+  public static public_channel_id_admin_put: EndpointTemplate = {
+    name: "public-channels/:id/admin",
+    code: "\nconst url = 'https://dev.moonshot.ceo/api/community/public-channels/1/admin';\n" +
       "\n" +
       "const body = {\n" +
-      "   \"id\":\"1\",\n" +
-      "   \"ownerMemberId\":\"8\",\n" +
+      "   \"ownerMemberId\":\"61445159784bca6ef764c6df\",\n" +
       "   \"title\":\"Canal compartir conocimientos\",\n" +
       "   \"description\":\"Canal para compartir conocimientos de diversos temas\",\n" +
       "   \"participants\":[\n" +
       "      {\n" +
-      "         \"memberId\":\"3\",\n" +
+      "         \"memberId\":\"61445159784bca6ef764c6df\",\n" +
       "         \"state\":\"INACTIVE\"\n" +
       "      },\n" +
       "      {\n" +
-      "         \"memberId\":\"6\",\n" +
+      "         \"memberId\":\"61445159784bca6ef764c6df\",\n" +
       "         \"state\":\"ACTIVE\"\n" +
       "      },\n" +
       "      {\n" +
-      "         \"memberId\":\"8\",\n" +
+      "         \"memberId\":\"61445159784bca6ef764c6df\",\n" +
       "         \"state\":\"ACTIVE\"\n" +
       "      }\n" +
       "   ],\n" +
@@ -3155,8 +3310,8 @@ export class CommunityJavascriptTemplates {
   }
 
   public static public_channel_id_admin_delete: EndpointTemplate = {
-    name: "public-channel/:id/admin",
-    code: "\nconst url = 'https://dev.moonshot.ceo/api/community/public-channel/1/admin';\n" +
+    name: "public-channels/:id/admin",
+    code: "\nconst url = 'https://dev.moonshot.ceo/api/community/public-channels/1/admin';\n" +
       "\n" +
       "fetch(url, {\n" +
       "  method: 'DELETE'\n" +
@@ -3167,12 +3322,11 @@ export class CommunityJavascriptTemplates {
   }
 
   public static public_channel_subscribe_put: EndpointTemplate = {
-    name: "public-channel/subscribe",
-    code: "\nconst url = 'https://dev.moonshot.ceo/api/community/public-channel/subscribe';\n" +
+    name: "public-channels/:id/subscribe",
+    code: "\nconst url = 'https://dev.moonshot.ceo/api/community/public-channels/1/subscribe';\n" +
       "\n" +
       "const body = {\n" +
-      "  \"id\":\"1\",\n" +
-      "  \"memberId\":\"2\"\n}\n" +
+      "  \"memberId\":\"61445159784bca6ef764c6df\"\n}\n" +
       "\n" +
       "fetch(url, {\n" +
       "  method: 'PUT',\n" +
@@ -3184,13 +3338,12 @@ export class CommunityJavascriptTemplates {
   }
 
   public static public_channel_unsubscribe_put: EndpointTemplate = {
-    name: "public-channel/unsubscribe",
-    code: "\nconst url = 'https://dev.moonshot.ceo/api/community/public-channel/unsubscribe';\n" +
+    name: "public-channels/:id/unsubscribe",
+    code: "\nconst url = 'https://dev.moonshot.ceo/api/community/public-channels/1/unsubscribe';\n" +
       "\n" +
       "const body = {\n" +
-      "  \"id\":\"1\",\n" +
-      "  \"memberId\":\"2\",\n" +
-      "  \"newOwnerMemberId\": \"5\"\n}\n" +
+      "  \"memberId\":\"61445159784bca6ef764c6df\",\n" +
+      "  \"newOwnerMemberId\": \"61445159784bca6ef764c6df\"\n}\n" +
       "\n" +
       "fetch(url, {\n" +
       "  method: 'PUT',\n" +
@@ -3202,40 +3355,36 @@ export class CommunityJavascriptTemplates {
   }
 
   public static public_channel_message_post: EndpointTemplate = {
-    name: "public-channel/message",
-    code: "\nconst url = 'https://dev.moonshot.ceo/api/community/public-channel/message';\n" +
+    name: "public-channels/:id/messages",
+    code: "\nconst url = 'https://dev.moonshot.ceo/api/community/public-channels/1/messages';\n" +
       "\n" +
       "const body = {\n" +
-      "   \"id\":\"2\",\n" +
-      "   \"roomId\":\"1\",\n" +
-      "   \"authorMemberId\":\"2\",\n" +
       "   \"content\":\"Sí, claro.\",\n" +
       "   \"documents\":[\n" +
       "      {\n" +
-      "         \"id\":\"1\",\n" +
+      "         \"id\":\"61445159784bca6ef764c6df\",\n" +
       "         \"link\":\"https://moonshot.ceo/archivoTrabajo.pdf\",\n" +
       "         \"category\":\"PDF\",\n" +
-      "         \"roomId\":\"1\",\n" +
-      "         \"memberId\":\"2\",\n" +
+      "         \"roomId\":\"61445159784bca6ef764c6df\",\n" +
+      "         \"memberId\":\"61445159784bca6ef764c6df\",\n" +
       "         \"filename\":\"archivoTrabajo\",\n" +
       "         \"createdAt\":1621412130000\n" +
       "      }\n" +
       "   ],\n" +
       "   \"links\":[\n" +
       "      {\n" +
-      "         \"id\":\"1\",\n" +
+      "         \"id\":\"61445159784bca6ef764c6df\",\n" +
       "         \"url\":\"https://dev.moonshot.ceo/documento1.pdf\",\n" +
-      "         \"roomId\":\"2\",\n" +
+      "         \"roomId\":\"61445159784bca6ef764c6df\",\n" +
       "         \"createdAt\":1637417185\n" +
       "      },\n" +
       "      {\n" +
-      "         \"id\":\"2\",\n" +
+      "         \"id\":\"61445159784bca6ef764c6df\",\n" +
       "         \"url\":\"https://dev.moonshot.ceo/documento2.pdf\",\n" +
-      "         \"roomId\":\"7\",\n" +
+      "         \"roomId\":\"61445159784bca6ef764c6df\",\n" +
       "         \"createdAt\":1637417190\n" +
       "      }\n" +
       "   ],\n" +
-      "   \"createdAt\":1621415730000\n" +
       "}\n" +
       "\n" +
       "fetch(url, {\n" +
@@ -3248,8 +3397,8 @@ export class CommunityJavascriptTemplates {
   }
 
   public static public_channel_message_id_delete: EndpointTemplate = {
-    name: "public-channel/message/:id",
-    code: "\nconst url = 'https://dev.moonshot.ceo/api/community/public-channel/message/1';\n" +
+    name: "public-channels/:id/messages/:message_id",
+    code: "\nconst url = 'https://dev.moonshot.ceo/api/community/public-channels/1/messages/1';\n" +
       "\n" +
       "fetch(url, {\n" +
       "  method: 'DELETE'\n" +
@@ -3260,8 +3409,8 @@ export class CommunityJavascriptTemplates {
   }
 
   public static public_channel_message_id_admin_delete: EndpointTemplate = {
-    name: "public-channel/message/:id/admin",
-    code: "\nconst url = 'https://dev.moonshot.ceo/api/community/public-channel/message/1/admin';\n" +
+    name: "public-channels/:id/messages/:message_id/admin",
+    code: "\nconst url = 'https://dev.moonshot.ceo/api/community/public-channels/1/messages/1/admin';\n" +
       "\n" +
       "fetch(url, {\n" +
       "  method: 'DELETE'\n" +
@@ -3271,26 +3420,26 @@ export class CommunityJavascriptTemplates {
     response: null
   }
 
-  public static public_channel_messages_room_id_get: EndpointTemplate = {
-    name: "public-channel/messages/:room_id",
-    code: "\nconst url = 'https://dev.moonshot.ceo/api/community/public-channel/messages/3';\n" +
+  public static public_channel_id_messages_get: EndpointTemplate = {
+    name: "public-channels/:id/messages",
+    code: "\nconst url = 'https://dev.moonshot.ceo/api/community/public-channels/3/messages';\n" +
       "\n" +
       "fetch(url)\n" +
       "  .then(response => response.json())\n" +
       "  .then(data => console.log(JSON.stringify(data)));",
     response: "\n[\n" +
       "  {\n" +
-      "    \"id\": \"5\",\n" +
-      "    \"roomId\": \"3\",\n" +
-      "    \"authorMemberId\": \"5\",\n" +
+      "    \"id\": \"61445159784bca6ef764c6df\",\n" +
+      "    \"roomId\": \"61445159784bca6ef764c6df\",\n" +
+      "    \"authorMemberId\": \"61445159784bca6ef764c6df\",\n" +
       "    \"content\": \"Yo te envio estos planos de la primera planta, tu enviame los de la segunda planta\",\n" +
       "    \"documents\": [\n" +
       "      {\n" +
-      "        \"id\": \"2\",\n" +
+      "        \"id\": \"61445159784bca6ef764c6df\",\n" +
       "        \"link\": \"https://moonshot.ceo/planosPrimeraPlanta.pdf\",\n" +
       "        \"category\": \"PDF\",\n" +
-      "        \"roomId\": \"3\",\n" +
-      "        \"memberId\": \"5\",\n" +
+      "        \"roomId\": \"61445159784bca6ef764c6df\",\n" +
+      "        \"memberId\": \"61445159784bca6ef764c6df\",\n" +
       "        \"filename\": \"planosPrimeraPlanta\",\n" +
       "        \"createdAt\": 1621415730000\n" +
       "      }\n" +
@@ -3298,17 +3447,17 @@ export class CommunityJavascriptTemplates {
       "    \"createdAt\": 1621426530000\n" +
       "  },\n" +
       "  {\n" +
-      "    \"id\": \"6\",\n" +
-      "    \"roomId\": \"3\",\n" +
-      "    \"authorMemberId\": \"6\",\n" +
+      "    \"id\": \"61445159784bca6ef764c6df\",\n" +
+      "    \"roomId\": \"61445159784bca6ef764c6df\",\n" +
+      "    \"authorMemberId\": \"61445159784bca6ef764c6df\",\n" +
       "    \"content\": \"Okey, ahí te van.\",\n" +
       "    \"documents\": [\n" +
       "      {\n" +
-      "        \"id\": \"3\",\n" +
+      "        \"id\": \"61445159784bca6ef764c6df\",\n" +
       "        \"link\": \"https://moonshot.ceo/planosSegundaPlanta.image\",\n" +
       "        \"category\": \"IMAGE\",\n" +
-      "        \"roomId\": \"3\",\n" +
-      "        \"memberId\": \"6\",\n" +
+      "        \"roomId\": \"61445159784bca6ef764c6df\",\n" +
+      "        \"memberId\": \"61445159784bca6ef764c6df\",\n" +
       "        \"filename\": \"planosSegundaPlanta\",\n" +
       "        \"createdAt\": 1621419330000\n" +
       "      }\n" +
@@ -3316,26 +3465,26 @@ export class CommunityJavascriptTemplates {
       "    \"createdAt\": 1621430130000\n" +
       "  },\n" +
       "  {\n" +
-      "    \"id\": \"7\",\n" +
-      "    \"roomId\": \"3\",\n" +
-      "    \"authorMemberId\": \"1\",\n" +
+      "    \"id\": \"61445159784bca6ef764c6df\",\n" +
+      "    \"roomId\": \"61445159784bca6ef764c6df\",\n" +
+      "    \"authorMemberId\": \"61445159784bca6ef764c6df\",\n" +
       "    \"content\": \"Aqui acaba la reunion de hoy\",\n" +
       "    \"documents\": [\n" +
       "    ],\n" +
       "    \"createdAt\": 1621433730000\n" +
       "  },\n" +
       "  {\n" +
-      "    \"id\": \"8\",\n" +
-      "    \"roomId\": \"3\",\n" +
-      "    \"authorMemberId\": \"2\",\n" +
+      "    \"id\": \"61445159784bca6ef764c6df\",\n" +
+      "    \"roomId\": \"61445159784bca6ef764c6df\",\n" +
+      "    \"authorMemberId\": \"61445159784bca6ef764c6df\",\n" +
       "    \"content\": \"Gracias por convocarla, inserto un esquema que he realizado del contenido.\",\n" +
       "    \"documents\": [\n" +
       "      {\n" +
-      "        \"id\": \"4\",\n" +
+      "        \"id\": \"61445159784bca6ef764c6df\",\n" +
       "        \"link\": \"https://moonshot.ceo/esquema.jpg\",\n" +
       "        \"category\": \"IMAGE\",\n" +
-      "        \"roomId\": \"3\",\n" +
-      "        \"memberId\": \"2\",\n" +
+      "        \"roomId\": \"61445159784bca6ef764c6df\",\n" +
+      "        \"memberId\": \"61445159784bca6ef764c6df\",\n" +
       "        \"filename\": \"esquema\",\n" +
       "        \"createdAt\": 1621422930000\n" +
       "      }\n" +
@@ -3345,12 +3494,88 @@ export class CommunityJavascriptTemplates {
       "]"
   }
 
+  public static public_channel_id_documents_get: EndpointTemplate = {
+    name: "public-channels/:id/documents",
+    code: "\nconst url = 'https://dev.moonshot.ceo/api/community/public-channels/1/documents';\n" +
+      "\n" +
+      "fetch(url)\n" +
+      "  .then(response => response.json())\n" +
+      "  .then(data => console.log(JSON.stringify(data)));",
+    response: "\n[\n" +
+      "   {\n" +
+      "      \"id\":\"61445159784bca6ef764c6df\",\n" +
+      "      \"link\":\"https://moonshot.ceo/archivoTrabajo.pdf\",\n" +
+      "      \"category\":\"PDF\",\n" +
+      "      \"roomId\":\"61445159784bca6ef764c6df\",\n" +
+      "      \"memberId\":\"61445159784bca6ef764c6df\",\n" +
+      "      \"filename\":\"archivoTrabajo\",\n" +
+      "      \"createdAt\":1621412130000\n" +
+      "   },\n" +
+      "   {\n" +
+      "      \"id\":\"61445159784bca6ef764c6df\",\n" +
+      "      \"link\":\"https://moonshot.ceo/planosPrimeraPlanta.pdf\",\n" +
+      "      \"category\":\"PDF\",\n" +
+      "      \"roomId\":\"61445159784bca6ef764c6df\",\n" +
+      "      \"memberId\":\"61445159784bca6ef764c6df\",\n" +
+      "      \"filename\":\"planosPrimeraPlanta\",\n" +
+      "      \"createdAt\":1621415730000\n" +
+      "   },\n" +
+      "   {\n" +
+      "      \"id\":\"61445159784bca6ef764c6df\",\n" +
+      "      \"link\":\"https://moonshot.ceo/planosSegundaPlanta.image\",\n" +
+      "      \"category\":\"IMAGE\",\n" +
+      "      \"roomId\":\"61445159784bca6ef764c6df\",\n" +
+      "      \"memberId\":\"61445159784bca6ef764c6df\",\n" +
+      "      \"filename\":\"planosSegundaPlanta\",\n" +
+      "      \"createdAt\":1621419330000\n" +
+      "   }\n" +
+      "]"
+  }
+
+  public static public_channel_id_links_get: EndpointTemplate = {
+    name: "public-channels/:id/links",
+    code: "\nconst url = 'https://dev.moonshot.ceo/api/community/public-channels/1/links';\n" +
+      "\n" +
+      "fetch(url)\n" +
+      "  .then(response => response.json())\n" +
+      "  .then(data => console.log(JSON.stringify(data)));",
+    response: "\n[\n" +
+      "   {\n" +
+      "      \"id\":\"61445159784bca6ef764c6df\",\n" +
+      "      \"url\":\"https://dev.moonshot.ceo/documento1.pdf\",\n" +
+      "      \"roomId\":\"61445159784bca6ef764c6df\",\n" +
+      "      \"createdAt\":1637417185\n" +
+      "   },\n" +
+      "   {\n" +
+      "      \"id\":\"61445159784bca6ef764c6df\",\n" +
+      "      \"url\":\"https://dev.moonshot.ceo/documento2.pdf\",\n" +
+      "      \"roomId\":\"61445159784bca6ef764c6df\",\n" +
+      "      \"createdAt\":1637417190\n" +
+      "   }\n" +
+      "]"
+  }
+
+  public static public_channel_id_upload_put: EndpointTemplate = {
+    name: "public-channels/:id/upload",
+    code: "\nconst formData = new FormData();\n" +
+      "const url = 'https://dev.moonshot.ceo/api/community/public-channels/1/upload'\n" +
+      "     \n" +
+      "formData.append(\"file\", 'YOUR_FILE');\n" +
+      "\n" +
+      "fetch(url, {\n" +
+      "  method: 'PUT',\n" +
+      "  body: formData\n" +
+      "})\n" +
+      "  .then(path => console.log(path))",
+    response: "\nhttps://localhost/drive/public-channels/files/1/61eaffcdad2bd12319fd4eba.png"
+  }
+
   public static wall_post_post: EndpointTemplate = {
-    name: "wall-post",
-    code: "\nconst url = 'https://dev.moonshot.ceo/api/community/wall-post';\n" +
+    name: "wall-posts",
+    code: "\nconst url = 'https://dev.moonshot.ceo/api/community/wall-posts';\n" +
       "\n" +
       "const body = {\n" +
-      " \"id\":\"1\",\n" +
+      " \"id\":\"61445159784bca6ef764c6df\",\n" +
       " \"content\":\"Publicación de la subida de impuestos en Canarias\",\n" +
       " \"attachments\":[\n" +
       "  {\n" +
@@ -3360,10 +3585,10 @@ export class CommunityJavascriptTemplates {
       " ],\n" +
       " \"comments\":[\n" +
       "  {\n" +
-      "   \"id\":\"1\",\n" +
+      "   \"id\":\"61445159784bca6ef764c6df\",\n" +
       "   \"content\":\"Pues a mi me parece muy mal, los subieron el otro día\",\n" +
       "   \"authorMember\":{\n" +
-      "      \"id\":\"7\",\n" +
+      "      \"id\":\"61445159784bca6ef764c6df\",\n" +
       "      \"state\":\"ACCEPTED\",\n" +
       "      \"name\":\"Jorge\",\n" +
       "      \"lastname\":\"Perez\",\n" +
@@ -3393,7 +3618,7 @@ export class CommunityJavascriptTemplates {
       "      ],\n" +
       "      \"experiences\":[\n" +
       "       {\n" +
-      "        \"id\":\"5\",\n" +
+      "        \"id\":\"61445159784bca6ef764c6df\",\n" +
       "        \"title\":\"Reponedor en Mercadona\",\n" +
       "        \"type\":\"PART_TIME\",\n" +
       "        \"company\":\"Mercadona\",\n" +
@@ -3409,7 +3634,7 @@ export class CommunityJavascriptTemplates {
       "      ],\n" +
       "      \"educations\":[\n" +
       "       {\n" +
-      "          \"id\":\"6\",\n" +
+      "          \"id\":\"61445159784bca6ef764c6df\",\n" +
       "          \"school\":\"Universidad de Venezuela\",\n" +
       "          \"degree\":\"Derecho\",\n" +
       "          \"fieldOfStudy\":\"Derecho mercantil\",\n" +
@@ -3424,7 +3649,7 @@ export class CommunityJavascriptTemplates {
       "          \"description\":null\n" +
       "       },\n" +
       "       {\n" +
-      "        \"id\":\"14\",\n" +
+      "        \"id\":\"61445159784bca6ef764c6df\",\n" +
       "        \"school\":\"Universidad de Venezuela\",\n" +
       "        \"degree\":\"Master en Derecho\",\n" +
       "        \"fieldOfStudy\":\"Derecho en el Ejercicio de la Abogacía\",\n" +
@@ -3441,19 +3666,19 @@ export class CommunityJavascriptTemplates {
       "    ]\n" +
       "   },\n" +
       "   \"likes\":[\n" +
-      "      \"9\",\n" +
-      "      \"10\",\n" +
-      "      \"3\"\n" +
+      "      \"61445159784bca6ef764c6df\",\n" +
+      "      \"61445159784bca6ef764c6df\",\n" +
+      "      \"61445159784bca6ef764c6df\"\n" +
       "   ],\n" +
       "   \"createdAt\":1620259200000\n" +
       "  }\n" +
       " ],\n" +
       " \"likes\":[\n" +
-      "    \"9\",\n" +
-      "    \"3\",\n" +
-      "    \"10\"\n" +
+      "    \"61445159784bca6ef764c6df\",\n" +
+      "    \"61445159784bca6ef764c6df\",\n" +
+      "    \"61445159784bca6ef764c6df\"\n" +
       " ],\n" +
-      " \"ownerMemberId\":\"16\",\n" +
+      " \"ownerMemberId\":\"61445159784bca6ef764c6df\",\n" +
       " \"createdAt\":1620172800000\n" +
       "}\n" +
       "\n" +
@@ -3466,12 +3691,11 @@ export class CommunityJavascriptTemplates {
     response: null
   }
 
-  public static wall_post_put: EndpointTemplate = {
-    name: "wall-post",
-    code: "\nconst url = 'https://dev.moonshot.ceo/api/community/wall-post';\n" +
+  public static wall_post_id_put: EndpointTemplate = {
+    name: "wall-posts/:id",
+    code: "\nconst url = 'https://dev.moonshot.ceo/api/community/wall-posts/1';\n" +
       "\n" +
       "const body = {\n" +
-      "   \"id\":\"1\",\n" +
       "   \"content\":\"https://www.elsur.cl/impresa/2021/04/03/full/cuerpo-principal/10/\",\n" +
       "   \"attachments\":[\n" +
       "      {\n" +
@@ -3491,8 +3715,8 @@ export class CommunityJavascriptTemplates {
   }
 
   public static wall_post_id_delete: EndpointTemplate = {
-    name: "wall-post/:id",
-    code: "\nconst url = 'https://dev.moonshot.ceo/api/community/wall-post/1';\n" +
+    name: "wall-posts/:id",
+    code: "\nconst url = 'https://dev.moonshot.ceo/api/community/wall-posts/1';\n" +
       "\n" +
       "fetch(url, {\n" +
       "  method: 'DELETE'\n" +
@@ -3502,12 +3726,11 @@ export class CommunityJavascriptTemplates {
     response: null
   }
 
-  public static wall_post_admin_put: EndpointTemplate = {
-    name: "wall-post/admin",
-    code: "\nconst url = 'https://dev.moonshot.ceo/api/community/wall-post/admin';\n" +
+  public static wall_post_id_admin_put: EndpointTemplate = {
+    name: "wall-posts/:id/admin",
+    code: "\nconst url = 'https://dev.moonshot.ceo/api/community/wall-posts/1/admin';\n" +
       "\n" +
       "const body = {\n" +
-      "   \"id\":\"1\",\n" +
       "   \"content\":\"https://www.elsur.cl/impresa/2021/04/03/full/cuerpo-principal/10/\",\n" +
       "   \"attachments\":[\n" +
       "      {\n" +
@@ -3527,8 +3750,8 @@ export class CommunityJavascriptTemplates {
   }
 
   public static wall_post_id_admin_delete: EndpointTemplate = {
-    name: "wall-post/:id/admin",
-    code: "\nconst url = 'https://dev.moonshot.ceo/api/community/wall-post/1/admin';\n" +
+    name: "wall-posts/:id/admin",
+    code: "\nconst url = 'https://dev.moonshot.ceo/api/community/wall-posts/1/admin';\n" +
       "\n" +
       "fetch(url, {\n" +
       "  method: 'DELETE'\n" +
@@ -3538,52 +3761,40 @@ export class CommunityJavascriptTemplates {
     response: null
   }
 
-  public static wall_post_like_put: EndpointTemplate = {
-    name: "wall-post/like",
-    code: "\nconst url = 'https://dev.moonshot.ceo/api/community/wall-post/like';\n" +
-      "\n" +
-      "const body = {\n" +
-      "   \"id\":\"1\",\n" +
-      "   \"memberId\":\"5\"\n" +
-      "}\n" +
+  public static wall_post_id_like_put: EndpointTemplate = {
+    name: "wall-posts/:id/like",
+    code: "\nconst url = 'https://dev.moonshot.ceo/api/community/wall-posts/1/like';\n" +
       "\n" +
       "fetch(url, {\n" +
-      "  method: 'PUT',\n" +
-      "  body: JSON.stringify(body)\n" +
-      "})\n" +
-      "  .then(response => response.json())\n" +
-      "  .then(data => console.log(JSON.stringify(data)));",
-    response: null
-  }
-  public static wall_post_unlike_put: EndpointTemplate = {
-    name: "wall-post/unlike",
-    code: "\nconst url = 'https://dev.moonshot.ceo/api/community/wall-post/unlike';\n" +
-      "\n" +
-      "const body = {\n" +
-      "   \"id\":\"1\",\n" +
-      "   \"memberId\":\"5\"\n" +
-      "}\n" +
-      "\n" +
-      "fetch(url, {\n" +
-      "  method: 'PUT',\n" +
-      "  body: JSON.stringify(body)\n" +
+      "  method: 'PUT'\n" +
       "})\n" +
       "  .then(response => response.json())\n" +
       "  .then(data => console.log(JSON.stringify(data)));",
     response: null
   }
 
-  public static wall_post_comment_post: EndpointTemplate = {
-    name: "wall-post/comment",
-    code: "\nconst url = 'https://dev.moonshot.ceo/api/community/wall-post/comment';\n" +
+  public static wall_post_id_unlike_put: EndpointTemplate = {
+    name: "wall-posts/:id/unlike",
+    code: "\nconst url = 'https://dev.moonshot.ceo/api/community/wall-posts/1/unlike';\n" +
+      "\n" +
+      "fetch(url, {\n" +
+      "  method: 'PUT'\n" +
+      "})\n" +
+      "  .then(response => response.json())\n" +
+      "  .then(data => console.log(JSON.stringify(data)));",
+    response: null
+  }
+
+  public static wall_post_id_comment_post: EndpointTemplate = {
+    name: "wall-posts/:id/comments",
+    code: "\nconst url = 'https://dev.moonshot.ceo/api/community/wall-posts/1/comments';\n" +
       "\n" +
       "const body = {\n" +
-      "   \"id\":\"1\",\n" +
       "   \"comment\":{\n" +
-      "      \"id\":\"4\",\n" +
+      "      \"id\":\"61445159784bca6ef764c6df\",\n" +
       "      \"content\":\"test\",\n" +
       "      \"authorMember\":{\n" +
-      "         \"id\":\"1\",\n" +
+      "         \"id\":\"61445159784bca6ef764c6df\",\n" +
       "         \"state\":\"ACCEPTED\",\n" +
       "         \"name\":\"Iñigo\",\n" +
       "         \"lastname\":\"Aramburu\",\n" +
@@ -3622,38 +3833,24 @@ export class CommunityJavascriptTemplates {
     response: null
   }
 
-  public static wall_post_comment_like_put: EndpointTemplate = {
-    name: "wall-post/comment/like",
-    code: "\nconst url = 'https://dev.moonshot.ceo/api/community/wall-post/comment/like';\n" +
-      "\n" +
-      "const body = {\n" +
-      " \"id\":\"1\",\n" +
-      " \"memberId\":\"5\",\n" +
-      " \"commentId\":\"9\"\n" +
-      "}\n" +
+  public static wall_post_id_comment_id_like_put: EndpointTemplate = {
+    name: "wall-posts/:id/comments/:comment_id/like",
+    code: "\nconst url = 'https://dev.moonshot.ceo/api/community/wall-posts/1/comments/1/like';\n" +
       "\n" +
       "fetch(url, {\n" +
-      "  method: 'PUT',\n" +
-      "  body: JSON.stringify(body)\n" +
+      "  method: 'PUT'\n" +
       "})\n" +
       "  .then(response => response.json())\n" +
       "  .then(data => console.log(JSON.stringify(data)));",
     response: null
   }
 
-  public static wall_post_comment_unlike_put: EndpointTemplate = {
-    name: "wall-post/comment/unlike",
-    code: "\nconst url = 'https://dev.moonshot.ceo/api/community/wall-post/comment/unlike';\n" +
-      "\n" +
-      "const body = {\n" +
-      " \"id\":\"1\",\n" +
-      " \"memberId\":\"5\",\n" +
-      " \"commentId\":\"9\"\n" +
-      "}\n" +
+  public static wall_post_id_comment_id_unlike_put: EndpointTemplate = {
+    name: "wall-posts/:id/comments/:comment_id/unlike",
+    code: "\nconst url = 'https://dev.moonshot.ceo/api/community/wall-posts/1/comments/1/unlike';\n" +
       "\n" +
       "fetch(url, {\n" +
-      "  method: 'PUT',\n" +
-      "  body: JSON.stringify(body)\n" +
+      "  method: 'PUT'\n" +
       "})\n" +
       "  .then(response => response.json())\n" +
       "  .then(data => console.log(JSON.stringify(data)));",
@@ -3661,14 +3858,14 @@ export class CommunityJavascriptTemplates {
   }
 
   public static wall_post_id_get: EndpointTemplate = {
-    name: "wall-post/:id",
-    code: "\nconst url = 'https://dev.moonshot.ceo/api/community/wall-post/1';\n" +
+    name: "wall-posts/:id",
+    code: "\nconst url = 'https://dev.moonshot.ceo/api/community/wall-posts/1';\n" +
       "\n" +
       "fetch(url)\n" +
       "  .then(response => response.json())\n" +
       "  .then(data => console.log(JSON.stringify(data)));",
     response: "\n{\n" +
-      "        \"id\": \"1\",\n" +
+      "        \"id\": \"61445159784bca6ef764c6df\",\n" +
       "        \"content\": \"Publicación de la subida de impuestos en Canarias\",\n" +
       "        \"hashtags\": [\n" +
       "            \"#subidaImpuestos\",\n" +
@@ -3682,10 +3879,10 @@ export class CommunityJavascriptTemplates {
       "        ],\n" +
       "        \"comments\": [\n" +
       "            {\n" +
-      "                \"id\": \"1\",\n" +
+      "                \"id\": \"61445159784bca6ef764c6df\",\n" +
       "                \"content\": \"Pues a mi me parece muy mal, los subieron el otro día\",\n" +
       "                \"authorMember\": {\n" +
-      "                    \"id\": \"7\",\n" +
+      "                    \"id\": \"61445159784bca6ef764c6df\",\n" +
       "                    \"state\": \"ACCEPTED\",\n" +
       "                    \"name\": \"Jorge\",\n" +
       "                    \"lastname\": \"Perez\",\n" +
@@ -3715,7 +3912,7 @@ export class CommunityJavascriptTemplates {
       "                    ],\n" +
       "                    \"experiences\": [\n" +
       "                        {\n" +
-      "                            \"id\": \"5\",\n" +
+      "                            \"id\": \"61445159784bca6ef764c6df\",\n" +
       "                            \"title\": \"Reponedor en Mercadona\",\n" +
       "                            \"type\": \"PART_TIME\",\n" +
       "                            \"company\": \"Mercadona\",\n" +
@@ -3731,7 +3928,7 @@ export class CommunityJavascriptTemplates {
       "                    ],\n" +
       "                    \"educations\": [\n" +
       "                        {\n" +
-      "                            \"id\": \"6\",\n" +
+      "                            \"id\": \"61445159784bca6ef764c6df\",\n" +
       "                            \"school\": \"Universidad de Venezuela\",\n" +
       "                            \"degree\": \"Derecho\",\n" +
       "                            \"fieldOfStudy\": \"Derecho mercantil\",\n" +
@@ -3746,7 +3943,7 @@ export class CommunityJavascriptTemplates {
       "                            \"description\": null\n" +
       "                        },\n" +
       "                        {\n" +
-      "                            \"id\": \"14\",\n" +
+      "                            \"id\": \"61445159784bca6ef764c6df\",\n" +
       "                            \"school\": \"Universidad de Venezuela\",\n" +
       "                            \"degree\": \"Master en Derecho\",\n" +
       "                            \"fieldOfStudy\": \"Derecho en el Ejercicio de la Abogacía\",\n" +
@@ -3763,20 +3960,20 @@ export class CommunityJavascriptTemplates {
       "                    ]\n" +
       "                },\n" +
       "                \"likes\": [\n" +
-      "                    \"9\",\n" +
-      "                    \"10\",\n" +
-      "                    \"3\"\n" +
+      "                    \"61445159784bca6ef764c6df\",\n" +
+      "                    \"61445159784bca6ef764c6df\",\n" +
+      "                    \"61445159784bca6ef764c6df\"\n" +
       "                ],\n" +
       "                \"createdAt\": 1620259200000\n" +
       "            }\n" +
       "        ],\n" +
       "        \"likes\": [\n" +
-      "            \"9\",\n" +
-      "            \"3\",\n" +
-      "            \"10\"\n" +
+      "            \"61445159784bca6ef764c6df\",\n" +
+      "            \"61445159784bca6ef764c6df\",\n" +
+      "            \"61445159784bca6ef764c6df\"\n" +
       "        ],\n" +
       "        \"ownerMember\": {\n" +
-      "            \"id\": \"16\",\n" +
+      "            \"id\": \"61445159784bca6ef764c6df\",\n" +
       "            \"state\": \"REJECTED\",\n" +
       "            \"name\": \"Nestor\",\n" +
       "            \"lastname\": \"Rodriguez\",\n" +
@@ -3803,7 +4000,7 @@ export class CommunityJavascriptTemplates {
       "            ],\n" +
       "            \"experiences\": [\n" +
       "                {\n" +
-      "                    \"id\": \"14\",\n" +
+      "                    \"id\": \"61445159784bca6ef764c6df\",\n" +
       "                    \"title\": \"Ingenierio informático realizando trabajos de ciberseguridad\",\n" +
       "                    \"type\": \"FULL_TIME\",\n" +
       "                    \"company\": \"Movistar\",\n" +
@@ -3819,7 +4016,7 @@ export class CommunityJavascriptTemplates {
       "            ],\n" +
       "            \"educations\": [\n" +
       "                {\n" +
-      "                    \"id\": \"12\",\n" +
+      "                    \"id\": \"61445159784bca6ef764c6df\",\n" +
       "                    \"school\": \"Universidad de la Laguna\",\n" +
       "                    \"degree\": \"Ingeniería informática\",\n" +
       "                    \"fieldOfStudy\": \"Ciberseguridad\",\n" +
@@ -3848,7 +4045,7 @@ export class CommunityJavascriptTemplates {
       "  .then(data => console.log(JSON.stringify(data)));",
     response: "\n[\n" +
       "   {\n" +
-      "      \"id\":\"1\",\n" +
+      "      \"id\":\"61445159784bca6ef764c6df\",\n" +
       "      \"content\":\"Publicación de la subida de impuestos en Canarias\",\n" +
       "      \"hashtags\":[\n" +
       "         \"#subidaImpuestos\",\n" +
@@ -3862,10 +4059,10 @@ export class CommunityJavascriptTemplates {
       "      ],\n" +
       "      \"comments\":[\n" +
       "         {\n" +
-      "            \"id\":\"1\",\n" +
+      "            \"id\":\"61445159784bca6ef764c6df\",\n" +
       "            \"content\":\"Pues a mi me parece muy mal, los subieron el otro día\",\n" +
       "            \"authorMember\":{\n" +
-      "               \"id\":\"7\",\n" +
+      "               \"id\":\"61445159784bca6ef764c6df\",\n" +
       "               \"state\":\"ACCEPTED\",\n" +
       "               \"name\":\"Jorge\",\n" +
       "               \"lastname\":\"Perez\",\n" +
@@ -3895,7 +4092,7 @@ export class CommunityJavascriptTemplates {
       "               ],\n" +
       "               \"experiences\":[\n" +
       "                  {\n" +
-      "                     \"id\":\"5\",\n" +
+      "                     \"id\":\"61445159784bca6ef764c6df\",\n" +
       "                     \"title\":\"Reponedor en Mercadona\",\n" +
       "                     \"type\":\"PART_TIME\",\n" +
       "                     \"company\":\"Mercadona\",\n" +
@@ -3911,7 +4108,7 @@ export class CommunityJavascriptTemplates {
       "               ],\n" +
       "               \"educations\":[\n" +
       "                  {\n" +
-      "                     \"id\":\"6\",\n" +
+      "                     \"id\":\"61445159784bca6ef764c6df\",\n" +
       "                     \"school\":\"Universidad de Venezuela\",\n" +
       "                     \"degree\":\"Derecho\",\n" +
       "                     \"fieldOfStudy\":\"Derecho mercantil\",\n" +
@@ -3926,7 +4123,7 @@ export class CommunityJavascriptTemplates {
       "                     \"description\":null\n" +
       "                  },\n" +
       "                  {\n" +
-      "                     \"id\":\"14\",\n" +
+      "                     \"id\":\"61445159784bca6ef764c6df\",\n" +
       "                     \"school\":\"Universidad de Venezuela\",\n" +
       "                     \"degree\":\"Master en Derecho\",\n" +
       "                     \"fieldOfStudy\":\"Derecho en el Ejercicio de la Abogacía\",\n" +
@@ -3943,20 +4140,20 @@ export class CommunityJavascriptTemplates {
       "               ]\n" +
       "            },\n" +
       "            \"likes\":[\n" +
-      "               \"9\",\n" +
-      "               \"10\",\n" +
-      "               \"3\"\n" +
+      "               \"61445159784bca6ef764c6df\",\n" +
+      "               \"61445159784bca6ef764c6df\",\n" +
+      "               \"61445159784bca6ef764c6df\"\n" +
       "            ],\n" +
       "            \"createdAt\":1620259200000\n" +
       "         }\n" +
       "      ],\n" +
       "      \"likes\":[\n" +
-      "         \"9\",\n" +
-      "         \"3\",\n" +
-      "         \"10\"\n" +
+      "         \"61445159784bca6ef764c6df\",\n" +
+      "         \"61445159784bca6ef764c6df\",\n" +
+      "         \"61445159784bca6ef764c6df\"\n" +
       "      ],\n" +
       "      \"ownerMember\":{\n" +
-      "         \"id\":\"16\",\n" +
+      "         \"id\":\"61445159784bca6ef764c6df\",\n" +
       "         \"state\":\"REJECTED\",\n" +
       "         \"name\":\"Nestor\",\n" +
       "         \"lastname\":\"Rodriguez\",\n" +
@@ -3983,7 +4180,7 @@ export class CommunityJavascriptTemplates {
       "         ],\n" +
       "         \"experiences\":[\n" +
       "            {\n" +
-      "               \"id\":\"14\",\n" +
+      "               \"id\":\"61445159784bca6ef764c6df\",\n" +
       "               \"title\":\"Ingenierio informático realizando trabajos de ciberseguridad\",\n" +
       "               \"type\":\"FULL_TIME\",\n" +
       "               \"company\":\"Movistar\",\n" +
@@ -3999,7 +4196,7 @@ export class CommunityJavascriptTemplates {
       "         ],\n" +
       "         \"educations\":[\n" +
       "            {\n" +
-      "               \"id\":\"12\",\n" +
+      "               \"id\":\"61445159784bca6ef764c6df\",\n" +
       "               \"school\":\"Universidad de la Laguna\",\n" +
       "               \"degree\":\"Ingeniería informática\",\n" +
       "               \"fieldOfStudy\":\"Ciberseguridad\",\n" +
@@ -4018,7 +4215,7 @@ export class CommunityJavascriptTemplates {
       "      \"createdAt\":1620172800000\n" +
       "   },\n" +
       "   {\n" +
-      "      \"id\":\"2\",\n" +
+      "      \"id\":\"61445159784bca6ef764c6df\",\n" +
       "      \"content\":\"Las elecciones en Madrid se han celebrado el 4/5/2020. ¿Estáis contentos con los resultados?\",\n" +
       "      \"hashtags\":[\n" +
       "         \n" +
@@ -4031,10 +4228,10 @@ export class CommunityJavascriptTemplates {
       "      ],\n" +
       "      \"comments\":[\n" +
       "         {\n" +
-      "            \"id\":\"2\",\n" +
+      "            \"id\":\"61445159784bca6ef764c6df\",\n" +
       "            \"content\":\"Pues yo estoy muy contento.\",\n" +
       "            \"authorMember\":{\n" +
-      "               \"id\":\"8\",\n" +
+      "               \"id\":\"61445159784bca6ef764c6df\",\n" +
       "               \"state\":\"ACCEPTED\",\n" +
       "               \"name\":\"Marcos\",\n" +
       "               \"lastname\":\"Fernandez\",\n" +
@@ -4066,7 +4263,7 @@ export class CommunityJavascriptTemplates {
       "               ],\n" +
       "               \"experiences\":[\n" +
       "                  {\n" +
-      "                     \"id\":\"6\",\n" +
+      "                     \"id\":\"61445159784bca6ef764c6df\",\n" +
       "                     \"title\":\"Colaboración para crear la vacuna Pfizer\",\n" +
       "                     \"type\":\"FULL_TIME\",\n" +
       "                     \"company\":\"Novartis\",\n" +
@@ -4080,7 +4277,7 @@ export class CommunityJavascriptTemplates {
       "                     \"description\":\"Colaborador de la vacuna Pfizer contra el COVID-19\"\n" +
       "                  },\n" +
       "                  {\n" +
-      "                     \"id\":\"7\",\n" +
+      "                     \"id\":\"61445159784bca6ef764c6df\",\n" +
       "                     \"title\":\"Colaboración para crear la vacuna de la gripe A\",\n" +
       "                     \"type\":\"INTERIM\",\n" +
       "                     \"company\":\"Novartis\",\n" +
@@ -4096,7 +4293,7 @@ export class CommunityJavascriptTemplates {
       "               ],\n" +
       "               \"educations\":[\n" +
       "                  {\n" +
-      "                     \"id\":\"7\",\n" +
+      "                     \"id\":\"61445159784bca6ef764c6df\",\n" +
       "                     \"school\":\"Universidad de Tokio\",\n" +
       "                     \"degree\":\"Farmaceutica\",\n" +
       "                     \"fieldOfStudy\":\"Pandemias\",\n" +
@@ -4113,16 +4310,16 @@ export class CommunityJavascriptTemplates {
       "               ]\n" +
       "            },\n" +
       "            \"likes\":[\n" +
-      "               \"1\",\n" +
-      "               \"7\"\n" +
+      "               \"61445159784bca6ef764c6df\",\n" +
+      "               \"61445159784bca6ef764c6df\"\n" +
       "            ],\n" +
       "            \"createdAt\":1620345600000\n" +
       "         },\n" +
       "         {\n" +
-      "            \"id\":\"3\",\n" +
+      "            \"id\":\"61445159784bca6ef764c6df\",\n" +
       "            \"content\":\"Pues yo pense que no ganarían estos. No me quedo conforme.\",\n" +
       "            \"authorMember\":{\n" +
-      "               \"id\":\"12\",\n" +
+      "               \"id\":\"61445159784bca6ef764c6df\",\n" +
       "               \"state\":\"ACCEPTED\",\n" +
       "               \"name\":\"Cristina\",\n" +
       "               \"lastname\":\"Valdemoro\",\n" +
@@ -4157,7 +4354,7 @@ export class CommunityJavascriptTemplates {
       "               ],\n" +
       "               \"experiences\":[\n" +
       "                  {\n" +
-      "                     \"id\":\"12\",\n" +
+      "                     \"id\":\"61445159784bca6ef764c6df\",\n" +
       "                     \"title\":\"Voluntariado de Unicef en Colombia\",\n" +
       "                     \"type\":\"WORK_AND_SERVICE_CONTRACT\",\n" +
       "                     \"company\":\"Unicef\",\n" +
@@ -4173,7 +4370,7 @@ export class CommunityJavascriptTemplates {
       "               ],\n" +
       "               \"educations\":[\n" +
       "                  {\n" +
-      "                     \"id\":\"9\",\n" +
+      "                     \"id\":\"61445159784bca6ef764c6df\",\n" +
       "                     \"school\":\"Universidad de Barcelona\",\n" +
       "                     \"degree\":\"Recursos Humanos y Relaciones Laborales\",\n" +
       "                     \"fieldOfStudy\":\"Coaching a empresas\",\n" +
@@ -4190,18 +4387,18 @@ export class CommunityJavascriptTemplates {
       "               ]\n" +
       "            },\n" +
       "            \"likes\":[\n" +
-      "               \"13\",\n" +
-      "               \"9\"\n" +
+      "               \"61445159784bca6ef764c6df\",\n" +
+      "               \"61445159784bca6ef764c6df\"\n" +
       "            ],\n" +
       "            \"createdAt\":1620345600000\n" +
       "         }\n" +
       "      ],\n" +
       "      \"likes\":[\n" +
-      "         \"9\",\n" +
-      "         \"7\"\n" +
+      "         \"61445159784bca6ef764c6df\",\n" +
+      "         \"61445159784bca6ef764c6df\"\n" +
       "      ],\n" +
       "      \"ownerMember\":{\n" +
-      "         \"id\":\"15\",\n" +
+      "         \"id\":\"61445159784bca6ef764c6df\",\n" +
       "         \"state\":\"PENDING\",\n" +
       "         \"name\":\"Roberto\",\n" +
       "         \"lastname\":\"Torres\",\n" +
@@ -4228,7 +4425,7 @@ export class CommunityJavascriptTemplates {
       "         ],\n" +
       "         \"experiences\":[\n" +
       "            {\n" +
-      "               \"id\":\"14\",\n" +
+      "               \"id\":\"61445159784bca6ef764c6df\",\n" +
       "               \"title\":\"Ingenierio informático realizando trabajos de ciberseguridad\",\n" +
       "               \"type\":\"FULL_TIME\",\n" +
       "               \"company\":\"Movistar\",\n" +
@@ -4244,7 +4441,7 @@ export class CommunityJavascriptTemplates {
       "         ],\n" +
       "         \"educations\":[\n" +
       "            {\n" +
-      "               \"id\":\"12\",\n" +
+      "               \"id\":\"61445159784bca6ef764c6df\",\n" +
       "               \"school\":\"Universidad de la Laguna\",\n" +
       "               \"degree\":\"Ingeniería informática\",\n" +
       "               \"fieldOfStudy\":\"Ciberseguridad\",\n" +
@@ -4259,7 +4456,7 @@ export class CommunityJavascriptTemplates {
       "               \"description\":\"Estudiante de la Universidad de La Laguna, en la facultad de ingeniería informática\"\n" +
       "            },\n" +
       "            {\n" +
-      "               \"id\":\"13\",\n" +
+      "               \"id\":\"61445159784bca6ef764c6df\",\n" +
       "               \"school\":\"Universidad de Cataluña\",\n" +
       "               \"degree\":\"Master en Ciberseguridad\",\n" +
       "               \"fieldOfStudy\":\"Encriptado\",\n" +
@@ -4280,6 +4477,21 @@ export class CommunityJavascriptTemplates {
       "]"
   }
 
+  public static wall_post_upload_post: EndpointTemplate = {
+    name: "wall-posts/upload",
+    code: "\nconst formData = new FormData();\n" +
+      "const url = 'https://dev.moonshot.ceo/api/community/wall-posts/upload'\n" +
+      "     \n" +
+      "formData.append(\"file\", 'YOUR_FILE');\n" +
+      "\n" +
+      "fetch(url, {\n" +
+      "  method: 'POST',\n" +
+      "  body: formData\n" +
+      "})\n" +
+      "  .then(path => console.log(path))",
+    response: "\nhttps://localhost/drive/posts/files/61eaffcdad2bd12319fd4eba.png"
+  }
+
   public static actors_get: EndpointTemplate = {
     name: "actors",
     code: "\nconst url = 'https://dev.moonshot.ceo/api/community/actors';\n" +
@@ -4289,11 +4501,11 @@ export class CommunityJavascriptTemplates {
       "  .then(data => console.log(JSON.stringify(data)));",
     response: "\n[\n" +
       "   {\n" +
-      "      \"id\":\"1\",\n" +
+      "      \"id\":\"61445159784bca6ef764c6df\",\n" +
       "      \"type\":\"EXPERT\",\n" +
       "      \"state\":\"ACCEPTED\",\n" +
       "      \"ownerMember\":{\n" +
-      "         \"id\":\"1\",\n" +
+      "         \"id\":\"61445159784bca6ef764c6df\",\n" +
       "         \"state\":\"ACCEPTED\",\n" +
       "         \"name\":\"Iñigo\",\n" +
       "         \"lastname\":\"Aramburu\",\n" +
@@ -4318,7 +4530,7 @@ export class CommunityJavascriptTemplates {
       "         ],\n" +
       "         \"experiences\":[\n" +
       "            {\n" +
-      "               \"id\":\"1\",\n" +
+      "               \"id\":\"61445159784bca6ef764c6df\",\n" +
       "               \"title\":\"Back-end developer en Moonshot Innovation\",\n" +
       "               \"type\":\"FULL_TIME\",\n" +
       "               \"company\":\"Moonshot Innovation\",\n" +
@@ -4334,7 +4546,7 @@ export class CommunityJavascriptTemplates {
       "         ],\n" +
       "         \"educations\":[\n" +
       "            {\n" +
-      "               \"id\":\"1\",\n" +
+      "               \"id\":\"61445159784bca6ef764c6df\",\n" +
       "               \"school\":\"Universidad del País Vasco\",\n" +
       "               \"degree\":\"Ingeniería informática\",\n" +
       "               \"fieldOfStudy\":\"Ingeniería de software\",\n" +
@@ -4349,7 +4561,7 @@ export class CommunityJavascriptTemplates {
       "               \"description\":\"Estudios universitarios realizados en la Universidad del País Vasco\"\n" +
       "            },\n" +
       "            {\n" +
-      "               \"id\":\"15\",\n" +
+      "               \"id\":\"61445159784bca6ef764c6df\",\n" +
       "               \"school\":\"Universidad del País Vasco\",\n" +
       "               \"degree\":\"Master en desarrollo web\",\n" +
       "               \"fieldOfStudy\":\"Desarrollo web\",\n" +
@@ -4413,11 +4625,11 @@ export class CommunityJavascriptTemplates {
       "      }\n" +
       "   },\n" +
       "   {\n" +
-      "      \"id\":\"2\",\n" +
+      "      \"id\":\"61445159784bca6ef764c6df\",\n" +
       "      \"type\":\"MENTOR\",\n" +
       "      \"state\":\"ACCEPTED\",\n" +
       "      \"ownerMember\":{\n" +
-      "         \"id\":\"2\",\n" +
+      "         \"id\":\"61445159784bca6ef764c6df\",\n" +
       "         \"state\":\"ACCEPTED\",\n" +
       "         \"name\":\"Jose Juan\",\n" +
       "         \"lastname\":\"Hernández\",\n" +
@@ -4442,7 +4654,7 @@ export class CommunityJavascriptTemplates {
       "         ],\n" +
       "         \"experiences\":[\n" +
       "            {\n" +
-      "               \"id\":\"1\",\n" +
+      "               \"id\":\"61445159784bca6ef764c6df\",\n" +
       "               \"title\":\"Back-end developer en Moonshot Innovation\",\n" +
       "               \"type\":\"FULL_TIME\",\n" +
       "               \"company\":\"Moonshot Innovation\",\n" +
@@ -4456,7 +4668,7 @@ export class CommunityJavascriptTemplates {
       "               \"description\":\"Scrum manager en Moonshot Innovation, trabajando en el equipo de back-end\"\n" +
       "            },\n" +
       "            {\n" +
-      "               \"id\":\"2\",\n" +
+      "               \"id\":\"61445159784bca6ef764c6df\",\n" +
       "               \"title\":\"Profesor en la facultad de Ingenería informatica\",\n" +
       "               \"type\":\"OFFICIAL\",\n" +
       "               \"company\":\"Universidad de Las Palmas de Gran Canaria\",\n" +
@@ -4472,7 +4684,7 @@ export class CommunityJavascriptTemplates {
       "         ],\n" +
       "         \"educations\":[\n" +
       "            {\n" +
-      "               \"id\":\"2\",\n" +
+      "               \"id\":\"61445159784bca6ef764c6df\",\n" +
       "               \"school\":\"Universidad de Las Palmas de Gran Canaria\",\n" +
       "               \"degree\":\"Ingeniería en telecomunicaciones\",\n" +
       "               \"fieldOfStudy\":\"Big data\",\n" +
@@ -4569,8 +4781,8 @@ export class CommunityJavascriptTemplates {
   }
 
   public static actors_by_name_and_state_get: EndpointTemplate = {
-    name: "actors/by-name-and-state",
-    code: "\nconst url = 'https://dev.moonshot.ceo/api/community/actors/by-name-and-state?name=Iñigo&&state=ACTIVE';\n" +
+    name: "actors/by/name-and-state",
+    code: "\nconst url = 'https://dev.moonshot.ceo/api/community/actors/by/name-and-state?name=Iñigo&&state=ACTIVE';\n" +
       "\n" +
       "fetch(url)\n" +
       "  .then(response => response.json())\n" +
@@ -4795,8 +5007,8 @@ export class CommunityJavascriptTemplates {
   }
 
   public static actors_by_type_get: EndpointTemplate = {
-    name: "actors/by-type",
-    code: "\nconst url = 'https://dev.moonshot.ceo/api/community/actors/by-type?types=STARTUP,COMPANY';\n" +
+    name: "actors/by/types",
+    code: "\nconst url = 'https://dev.moonshot.ceo/api/community/actors/by/types?types=STARTUP,COMPANY';\n" +
       "\n" +
       "fetch(url)\n" +
       "  .then(response => response.json())\n" +
@@ -4983,19 +5195,19 @@ export class CommunityJavascriptTemplates {
   }
 
   public static actors_by_state_get: EndpointTemplate = {
-    name: "actors/by-state",
-    code: "\nconst url = 'https://dev.moonshot.ceo/api/community/actors/by-state?state=REJECTED';\n" +
+    name: "actors/by/state",
+    code: "\nconst url = 'https://dev.moonshot.ceo/api/community/actors/by/state?state=REJECTED';\n" +
       "\n" +
       "fetch(url)\n" +
       "  .then(response => response.json())\n" +
       "  .then(data => console.log(JSON.stringify(data)));",
     response: "\n[\n" +
       "   {\n" +
-      "      \"id\":\"13\",\n" +
+      "      \"id\":\"61445159784bca6ef764c6df\",\n" +
       "      \"type\":\"HUB\",\n" +
       "      \"state\":\"REJECTED\",\n" +
       "      \"ownerMember\":{\n" +
-      "         \"id\":\"16\",\n" +
+      "         \"id\":\"61445159784bca6ef764c6df\",\n" +
       "         \"state\":\"REJECTED\",\n" +
       "         \"name\":\"Nestor\",\n" +
       "         \"lastname\":\"Rodriguez\",\n" +
@@ -5020,7 +5232,7 @@ export class CommunityJavascriptTemplates {
       "         ],\n" +
       "         \"experiences\":[\n" +
       "            {\n" +
-      "               \"id\":\"14\",\n" +
+      "               \"id\":\"61445159784bca6ef764c6df\",\n" +
       "               \"title\":\"Ingenierio informático realizando trabajos de ciberseguridad\",\n" +
       "               \"type\":\"FULL_TIME\",\n" +
       "               \"company\":\"Movistar\",\n" +
@@ -5036,7 +5248,7 @@ export class CommunityJavascriptTemplates {
       "         ],\n" +
       "         \"educations\":[\n" +
       "            {\n" +
-      "               \"id\":\"12\",\n" +
+      "               \"id\":\"61445159784bca6ef764c6df\",\n" +
       "               \"school\":\"Universidad de la Laguna\",\n" +
       "               \"degree\":\"Ingeniería informática\",\n" +
       "               \"fieldOfStudy\":\"Ciberseguridad\",\n" +
@@ -5067,7 +5279,7 @@ export class CommunityJavascriptTemplates {
       "      ],\n" +
       "      \"members\":[\n" +
       "         {\n" +
-      "            \"id\":\"14\",\n" +
+      "            \"id\":\"61445159784bca6ef764c6df\",\n" +
       "            \"state\":\"ACCEPTED\",\n" +
       "            \"name\":\"Fernando\",\n" +
       "            \"lastname\":\"Oliveiro\",\n" +
@@ -5093,7 +5305,7 @@ export class CommunityJavascriptTemplates {
       "            ],\n" +
       "            \"experiences\":[\n" +
       "               {\n" +
-      "                  \"id\":\"13\",\n" +
+      "                  \"id\":\"61445159784bca6ef764c6df\",\n" +
       "                  \"title\":\"Profesor en la Universidad de Hardvard\",\n" +
       "                  \"type\":\"OFFICIAL\",\n" +
       "                  \"company\":\"Universidad de Hardvard\",\n" +
@@ -5107,7 +5319,7 @@ export class CommunityJavascriptTemplates {
       "                  \"description\":\"Profesor de Ingenieria Informática en la universidad de Hardvard\"\n" +
       "               },\n" +
       "               {\n" +
-      "                  \"id\":\"15\",\n" +
+      "                  \"id\":\"61445159784bca6ef764c6df\",\n" +
       "                  \"title\":\"Investigador a tiempo parcial para la universidad de Hardvard\",\n" +
       "                  \"type\":\"PART_TIME\",\n" +
       "                  \"company\":\"Universidad de Hardvard\",\n" +
@@ -5123,7 +5335,7 @@ export class CommunityJavascriptTemplates {
       "            ],\n" +
       "            \"educations\":[\n" +
       "               {\n" +
-      "                  \"id\":\"11\",\n" +
+      "                  \"id\":\"61445159784bca6ef764c6df\",\n" +
       "                  \"school\":\"Universidad de Brasil\",\n" +
       "                  \"degree\":\"Matemáticas\",\n" +
       "                  \"fieldOfStudy\":\"Matemáticas computacionales\",\n" +
@@ -5140,7 +5352,7 @@ export class CommunityJavascriptTemplates {
       "            ]\n" +
       "         },\n" +
       "         {\n" +
-      "            \"id\":\"15\",\n" +
+      "            \"id\":\"61445159784bca6ef764c6df\",\n" +
       "            \"state\":\"PENDING\",\n" +
       "            \"name\":\"Roberto\",\n" +
       "            \"lastname\":\"Torres\",\n" +
@@ -5165,7 +5377,7 @@ export class CommunityJavascriptTemplates {
       "            ],\n" +
       "            \"experiences\":[\n" +
       "               {\n" +
-      "                  \"id\":\"14\",\n" +
+      "                  \"id\":\"61445159784bca6ef764c6df\",\n" +
       "                  \"title\":\"Ingenierio informático realizando trabajos de ciberseguridad\",\n" +
       "                  \"type\":\"FULL_TIME\",\n" +
       "                  \"company\":\"Movistar\",\n" +
@@ -5181,7 +5393,7 @@ export class CommunityJavascriptTemplates {
       "            ],\n" +
       "            \"educations\":[\n" +
       "               {\n" +
-      "                  \"id\":\"12\",\n" +
+      "                  \"id\":\"61445159784bca6ef764c6df\",\n" +
       "                  \"school\":\"Universidad de la Laguna\",\n" +
       "                  \"degree\":\"Ingeniería informática\",\n" +
       "                  \"fieldOfStudy\":\"Ciberseguridad\",\n" +
@@ -5196,7 +5408,7 @@ export class CommunityJavascriptTemplates {
       "                  \"description\":\"Estudiante de la Universidad de La Laguna, en la facultad de ingeniería informática\"\n" +
       "               },\n" +
       "               {\n" +
-      "                  \"id\":\"13\",\n" +
+      "                  \"id\":\"61445159784bca6ef764c6df\",\n" +
       "                  \"school\":\"Universidad de Cataluña\",\n" +
       "                  \"degree\":\"Master en Ciberseguridad\",\n" +
       "                  \"fieldOfStudy\":\"Encriptado\",\n" +
@@ -5275,8 +5487,8 @@ export class CommunityJavascriptTemplates {
   }
 
   public static actors_by_member_get: EndpointTemplate = {
-    name: "actors/by-member",
-    code: "\nconst url = 'https://dev.moonshot.ceo/api/community/actors/by-member?ownerMemberId=60accfeb97acf93f5f69e05d';\n" +
+    name: "actors/by/member",
+    code: "\nconst url = 'https://dev.moonshot.ceo/api/community/actors/by/member?ownerMemberId=60accfeb97acf93f5f69e05d';\n" +
       "\n" +
       "fetch(url)\n" +
       "  .then(response => response.json())\n" +
@@ -5597,8 +5809,8 @@ export class CommunityJavascriptTemplates {
   }
 
   public static actor_id_get: EndpointTemplate = {
-    name: "actor/:id",
-    code: "\nconst url = 'https://dev.moonshot.ceo/api/community/actor/60accfec97acf93f5f69e05f';\n" +
+    name: "actors/:id",
+    code: "\nconst url = 'https://dev.moonshot.ceo/api/community/actors/60accfec97acf93f5f69e05f';\n" +
       "\n" +
       "fetch(url)\n" +
       "  .then(response => response.json())\n" +
@@ -5726,15 +5938,15 @@ export class CommunityJavascriptTemplates {
   }
 
   public static actor_post: EndpointTemplate = {
-    name: "actor",
-    code: "\nconst url = 'https://dev.moonshot.ceo/api/community/actor';\n" +
+    name: "actors",
+    code: "\nconst url = 'https://dev.moonshot.ceo/api/community/actors';\n" +
       "\n" +
       "const body = {\n" +
-      "        \"id\": \"1\",\n" +
+      "        \"id\": \"61445159784bca6ef764c6df\",\n" +
       "        \"type\": \"EXPERT\",\n" +
       "        \"state\": \"ACCEPTED\",\n" +
       "        \"ownerMember\": {\n" +
-      "            \"id\": \"1\",\n" +
+      "            \"id\": \"61445159784bca6ef764c6df\",\n" +
       "            \"state\": \"ACCEPTED\",\n" +
       "            \"name\": \"Iñigo\",\n" +
       "            \"lastname\": \"Aramburu\",\n" +
@@ -5759,7 +5971,7 @@ export class CommunityJavascriptTemplates {
       "            ],\n" +
       "            \"experiences\": [\n" +
       "                {\n" +
-      "                    \"id\": \"1\",\n" +
+      "                    \"id\": \"61445159784bca6ef764c6df\",\n" +
       "                    \"title\": \"Back-end developer en Moonshot Innovation\",\n" +
       "                    \"type\": \"FULL_TIME\",\n" +
       "                    \"company\": \"Moonshot Innovation\",\n" +
@@ -5775,7 +5987,7 @@ export class CommunityJavascriptTemplates {
       "            ],\n" +
       "            \"educations\": [\n" +
       "                {\n" +
-      "                    \"id\": \"1\",\n" +
+      "                    \"id\": \"61445159784bca6ef764c6df\",\n" +
       "                    \"school\": \"Universidad del País Vasco\",\n" +
       "                    \"degree\": \"Ingeniería informática\",\n" +
       "                    \"fieldOfStudy\": \"Ingeniería de software\",\n" +
@@ -5790,7 +6002,7 @@ export class CommunityJavascriptTemplates {
       "                    \"description\": \"Estudios universitarios realizados en la Universidad del País Vasco\"\n" +
       "                },\n" +
       "                {\n" +
-      "                    \"id\": \"15\",\n" +
+      "                    \"id\": \"61445159784bca6ef764c6df\",\n" +
       "                    \"school\": \"Universidad del País Vasco\",\n" +
       "                    \"degree\": \"Master en desarrollo web\",\n" +
       "                    \"fieldOfStudy\": \"Desarrollo web\",\n" +
@@ -5847,7 +6059,7 @@ export class CommunityJavascriptTemplates {
       "            \"deepTechs\": [\n" +
       "            ]\n" +
       "        },\n" +
-      "        \"verificationToken\": \"1\"\n" +
+      "        \"verificationToken\": \"61445159784bca6ef764c6df\"\n" +
       "    }\n" +
       "\n" +
       "fetch(url, {\n" +
@@ -5859,12 +6071,11 @@ export class CommunityJavascriptTemplates {
     response: null
   }
 
-  public static actor_put: EndpointTemplate = {
-    name: "actor",
-    code: "\nconst url = 'https://dev.moonshot.ceo/api/community/actor';\n" +
+  public static actor_id_put: EndpointTemplate = {
+    name: "actors/:id",
+    code: "\nconst url = 'https://dev.moonshot.ceo/api/community/actors/1';\n" +
       "\n" +
       "const body = {\n" +
-      "   \"id\":\"60c22873f67cf3231da80ded\",\n" +
       "   \"type\":\"MENTOR\",\n" +
       "   \"name\":\"David\",\n" +
       "   \"city\":\"Madrid\",\n" +
@@ -5959,35 +6170,24 @@ export class CommunityJavascriptTemplates {
     response: null
   }
 
-  public static actor_accept_put: EndpointTemplate = {
-    name: "actor/accept",
-    code: "\nconst url = 'https://dev.moonshot.ceo/api/community/actor/accept';\n" +
-      "\n" +
-      "const body = {\n" +
-      "   \"id\":\"1\"\n" +
-      "}\n" +
+  public static actor_id_accept_put: EndpointTemplate = {
+    name: "actors/:id/accept",
+    code: "\nconst url = 'https://dev.moonshot.ceo/api/community/actors/1/accept';\n" +
       "\n" +
       "fetch(url, {\n" +
-      "  method: 'PUT',\n" +
-      "  body: JSON.stringify(body)\n" +
+      "  method: 'PUT'\n" +
       "})\n" +
       "  .then(response => response.json())\n" +
       "  .then(data => console.log(JSON.stringify(data)));",
     response: null
   }
 
-  public static actor_reject_put: EndpointTemplate = {
-    name: "actor/reject",
-    code: "\nconst url = 'https://dev.moonshot.ceo/api/community/actor/reject';\n" +
-      "\n" +
-      "const body = {\n" +
-      "   \"id\":\"1\",\n" +
-      "   \"reason\": \"Is a fake profile\"\n" +
-      "}\n" +
+  public static actor_id_reject_put: EndpointTemplate = {
+    name: "actors/:id/reject",
+    code: "\nconst url = 'https://dev.moonshot.ceo/api/community/actors/1/reject';\n" +
       "\n" +
       "fetch(url, {\n" +
-      "  method: 'PUT',\n" +
-      "  body: JSON.stringify(body)\n" +
+      "  method: 'PUT'\n" +
       "})\n" +
       "  .then(response => response.json())\n" +
       "  .then(data => console.log(JSON.stringify(data)));",
@@ -5995,8 +6195,8 @@ export class CommunityJavascriptTemplates {
   }
 
   public static actor_id_delete: EndpointTemplate = {
-    name: "actor/:id",
-    code: "\nconst url = 'https://dev.moonshot.ceo/api/community/actor/1';\n" +
+    name: "actors/:id",
+    code: "\nconst url = 'https://dev.moonshot.ceo/api/community/actors/1';\n" +
       "\n" +
       "fetch(url, {\n" +
       "  method: 'DELETE'\n" +
@@ -6006,9 +6206,54 @@ export class CommunityJavascriptTemplates {
     response: null
   }
 
-  public static fcm_token_put: EndpointTemplate = {
-    name: "fcmToken",
-    code: "\nconst url = 'https://dev.moonshot.ceo/api/community/fcmToken';\n" +
+  public static actor_upload_original_post: EndpointTemplate = {
+    name: 'actors/upload/original',
+    code: "\nconst formData = new FormData();\n" +
+      "const url = 'https://dev.moonshot.ceo/api/community/actors/upload/original'\n" +
+      "\n" +
+      "formData.append(\"file\", 'YOUR_FILE');\n" +
+      "\n" +
+      "fetch(url, {\n" +
+      "  method: 'POST',\n" +
+      "  body: formData\n" +
+      "})\n" +
+      "  .then(path => console.log(path))",
+    response: "\nhttps://localhost/drive/actors/profile/original/61eaffcdad2bd12319fd4eba.png"
+  }
+
+  public static actor_upload_thumbnail_post: EndpointTemplate = {
+    name: 'actors/upload/thumbnail',
+    code: "\nconst formData = new FormData();\n" +
+      "const url = 'https://dev.moonshot.ceo/api/community/actors/upload/thumbnail'\n" +
+      "\n" +
+      "formData.append(\"file\", 'YOUR_FILE');\n" +
+      "\n" +
+      "fetch(url, {\n" +
+      "  method: 'POST',\n" +
+      "  body: formData\n" +
+      "})\n" +
+      "  .then(path => console.log(path))",
+    response: "\nhttps://localhost/drive/actors/profile/thumbnail/61eaffcdad2bd12319fd4eba.png"
+  }
+
+  public static actor_id_upload_media_put: EndpointTemplate = {
+    name: 'actors/:id/upload/media',
+    code: "\nconst formData = new FormData();\n" +
+      "const url = 'https://dev.moonshot.ceo/api/community/actors/1/upload/media'\n" +
+      "\n" +
+      "formData.append(\"file\", 'YOUR_FILE');\n" +
+      "\n" +
+      "fetch(url, {\n" +
+      "  method: 'PUT',\n" +
+      "  body: formData\n" +
+      "})\n" +
+      "  .then(path => console.log(path))",
+    response: "\nhttps://localhost/drive/actors/media/1/61eaffcdad2bd12319fd4eba.png"
+  }
+
+  public static member_fcm_token_put: EndpointTemplate = {
+    name: "members/fcm-token",
+    code: "\nconst url = 'https://dev.moonshot.ceo/api/community/members/fcm-token';\n" +
       "\n" +
       "const body = {\n" +
       "  \"memberId\": \"60acae8e2f799d228a4d4a85\",\n" +
@@ -6031,8 +6276,8 @@ export class CommunityJavascriptTemplates {
   }
 
   public static member_logged_in_get: EndpointTemplate = {
-    name: "member/logged-in",
-    code: "\nconst url = 'https://dev.moonshot.ceo/api/community/member/logged-in';\n" +
+    name: "members/logged-in",
+    code: "\nconst url = 'https://dev.moonshot.ceo/api/community/members/logged-in';\n" +
       "\n" +
       "fetch(url)\n" +
       "  .then(response => response.json())\n" +
@@ -6275,7 +6520,7 @@ export class CommunityJavascriptTemplates {
       "  .then(data => console.log(JSON.stringify(data)));",
     response: "\n[\n" +
       "   {\n" +
-      "      \"id\":\"1\",\n" +
+      "      \"id\":\"61445159784bca6ef764c6df\",\n" +
       "      \"state\":\"ACCEPTED\",\n" +
       "      \"name\":\"Iñigo\",\n" +
       "      \"lastname\":\"Aramburu\",\n" +
@@ -6300,7 +6545,7 @@ export class CommunityJavascriptTemplates {
       "      ],\n" +
       "      \"experiences\":[\n" +
       "         {\n" +
-      "            \"id\":\"1\",\n" +
+      "            \"id\":\"61445159784bca6ef764c6df\",\n" +
       "            \"title\":\"Back-end developer en Moonshot Innovation\",\n" +
       "            \"type\":\"FULL_TIME\",\n" +
       "            \"company\":\"Moonshot Innovation\",\n" +
@@ -6316,7 +6561,7 @@ export class CommunityJavascriptTemplates {
       "      ],\n" +
       "      \"educations\":[\n" +
       "         {\n" +
-      "            \"id\":\"1\",\n" +
+      "            \"id\":\"61445159784bca6ef764c6df\",\n" +
       "            \"school\":\"Universidad del País Vasco\",\n" +
       "            \"degree\":\"Ingeniería informática\",\n" +
       "            \"fieldOfStudy\":\"Ingeniería de software\",\n" +
@@ -6331,7 +6576,7 @@ export class CommunityJavascriptTemplates {
       "            \"description\":\"Estudios universitarios realizados en la Universidad del País Vasco\"\n" +
       "         },\n" +
       "         {\n" +
-      "            \"id\":\"15\",\n" +
+      "            \"id\":\"61445159784bca6ef764c6df\",\n" +
       "            \"school\":\"Universidad del País Vasco\",\n" +
       "            \"degree\":\"Master en desarrollo web\",\n" +
       "            \"fieldOfStudy\":\"Desarrollo web\",\n" +
@@ -6348,7 +6593,7 @@ export class CommunityJavascriptTemplates {
       "      ]\n" +
       "   },\n" +
       "   {\n" +
-      "      \"id\":\"2\",\n" +
+      "      \"id\":\"61445159784bca6ef764c6df\",\n" +
       "      \"state\":\"ACCEPTED\",\n" +
       "      \"name\":\"Jose Juan\",\n" +
       "      \"lastname\":\"Hernández\",\n" +
@@ -6375,7 +6620,7 @@ export class CommunityJavascriptTemplates {
       "      ],\n" +
       "      \"experiences\":[\n" +
       "         {\n" +
-      "            \"id\":\"1\",\n" +
+      "            \"id\":\"61445159784bca6ef764c6df\",\n" +
       "            \"title\":\"Back-end developer en Moonshot Innovation\",\n" +
       "            \"type\":\"FULL_TIME\",\n" +
       "            \"company\":\"Moonshot Innovation\",\n" +
@@ -6389,7 +6634,7 @@ export class CommunityJavascriptTemplates {
       "            \"description\":\"Scrum manager en Moonshot Innovation, trabajando en el equipo de back-end\"\n" +
       "         },\n" +
       "         {\n" +
-      "            \"id\":\"2\",\n" +
+      "            \"id\":\"61445159784bca6ef764c6df\",\n" +
       "            \"title\":\"Profesor en la facultad de Ingenería informatica\",\n" +
       "            \"type\":\"OFFICIAL\",\n" +
       "            \"company\":\"Universidad de Las Palmas de Gran Canaria\",\n" +
@@ -6405,7 +6650,7 @@ export class CommunityJavascriptTemplates {
       "      ],\n" +
       "      \"educations\":[\n" +
       "         {\n" +
-      "            \"id\":\"2\",\n" +
+      "            \"id\":\"61445159784bca6ef764c6df\",\n" +
       "            \"school\":\"Universidad de Las Palmas de Gran Canaria\",\n" +
       "            \"degree\":\"Ingeniería en telecomunicaciones\",\n" +
       "            \"fieldOfStudy\":\"Big data\",\n" +
@@ -6425,14 +6670,14 @@ export class CommunityJavascriptTemplates {
   }
 
   public static member_id_get: EndpointTemplate = {
-    name: "member/:id",
-    code: "\nconst url = 'https://dev.moonshot.ceo/api/community/member/2';\n" +
+    name: "members/:id",
+    code: "\nconst url = 'https://dev.moonshot.ceo/api/community/members/2';\n" +
       "\n" +
       "fetch(url)\n" +
       "  .then(response => response.json())\n" +
       "  .then(data => console.log(JSON.stringify(data)));",
     response: "\n{\n" +
-      "        \"id\": \"2\",\n" +
+      "        \"id\": \"61445159784bca6ef764c6df\",\n" +
       "        \"state\": \"ACCEPTED\",\n" +
       "        \"name\": \"Jose Juan\",\n" +
       "        \"lastname\": \"Hernández\",\n" +
@@ -6459,7 +6704,7 @@ export class CommunityJavascriptTemplates {
       "        ],\n" +
       "        \"experiences\": [\n" +
       "            {\n" +
-      "                \"id\": \"1\",\n" +
+      "                \"id\": \"61445159784bca6ef764c6df\",\n" +
       "                \"title\": \"Back-end developer en Moonshot Innovation\",\n" +
       "                \"type\": \"FULL_TIME\",\n" +
       "                \"company\": \"Moonshot Innovation\",\n" +
@@ -6473,7 +6718,7 @@ export class CommunityJavascriptTemplates {
       "                \"description\": \"Scrum manager en Moonshot Innovation, trabajando en el equipo de back-end\"\n" +
       "            },\n" +
       "            {\n" +
-      "                \"id\": \"2\",\n" +
+      "                \"id\": \"61445159784bca6ef764c6df\",\n" +
       "                \"title\": \"Profesor en la facultad de Ingenería informatica\",\n" +
       "                \"type\": \"OFFICIAL\",\n" +
       "                \"company\": \"Universidad de Las Palmas de Gran Canaria\",\n" +
@@ -6489,7 +6734,7 @@ export class CommunityJavascriptTemplates {
       "        ],\n" +
       "        \"educations\": [\n" +
       "            {\n" +
-      "                \"id\": \"2\",\n" +
+      "                \"id\": \"61445159784bca6ef764c6df\",\n" +
       "                \"school\": \"Universidad de Las Palmas de Gran Canaria\",\n" +
       "                \"degree\": \"Ingeniería en telecomunicaciones\",\n" +
       "                \"fieldOfStudy\": \"Big data\",\n" +
@@ -6508,8 +6753,8 @@ export class CommunityJavascriptTemplates {
   }
 
   public static member_id_marker_get: EndpointTemplate = {
-    name: "member/:id/marker",
-    code: "\nconst url = 'https://dev.moonshot.ceo/api/community/member/2/marker';\n" +
+    name: "members/:id/marker",
+    code: "\nconst url = 'https://dev.moonshot.ceo/api/community/members/2/marker';\n" +
       "\n" +
       "fetch(url)\n" +
       "  .then(response => response.json())\n" +
@@ -6517,12 +6762,41 @@ export class CommunityJavascriptTemplates {
     response: "This endpoint download a svg file"
   }
 
-  public static member_put: EndpointTemplate = {
-    name: "member",
-    code: "\nconst url = 'https://dev.moonshot.ceo/api/community/member';\n" +
+  public static member_upload_original_post: EndpointTemplate = {
+    name: "members/upload/original",
+    code: "\nconst formData = new FormData();\n" +
+      "const url = 'https://dev.moonshot.ceo/api/community/members/upload/original'\n" +
+      "\n" +
+      "formData.append(\"file\", 'YOUR_FILE');\n" +
+      "\n" +
+      "fetch(url, {\n" +
+      "  method: 'POST',\n" +
+      "  body: formData\n" +
+      "})\n" +
+      "  .then(path => console.log(path))",
+    response: "\nhttps://localhost/drive/members/profile/original/61eaffcdad2bd12319fd4eba.png"
+  }
+
+  public static member_upload_thumbnail_post: EndpointTemplate = {
+    name: "members/upload/thumbnail",
+    code: "\nconst formData = new FormData();\n" +
+      "const url = 'https://dev.moonshot.ceo/api/community/members/upload/thumbnail'\n" +
+      "\n" +
+      "formData.append(\"file\", 'YOUR_FILE');\n" +
+      "\n" +
+      "fetch(url, {\n" +
+      "  method: 'POST',\n" +
+      "  body: formData\n" +
+      "})\n" +
+      "  .then(path => console.log(path))",
+    response: "\nhttps://localhost/drive/members/profile/thumbnail/61eaffcdad2bd12319fd4eba.png"
+  }
+
+  public static member_id_put: EndpointTemplate = {
+    name: "members/:id",
+    code: "\nconst url = 'https://dev.moonshot.ceo/api/community/members/1';\n" +
       "\n" +
       "const body = {\n" +
-      "   \"id\":\"1\",\n" +
       "   \"state\":\"ACCEPTED\",\n" +
       "   \"name\":\"Iñigo\",\n" +
       "   \"lastname\":\"Aramburu\",\n" +
@@ -6550,8 +6824,8 @@ export class CommunityJavascriptTemplates {
   }
 
   public static member_id_delete: EndpointTemplate = {
-    name: "member/:id",
-    code: "\nconst url = 'https://dev.moonshot.ceo/api/community/member/1';\n" +
+    name: "members/:id",
+    code: "\nconst url = 'https://dev.moonshot.ceo/api/community/members/1';\n" +
       "\n" +
       "fetch(url, {\n" +
       "  method: 'DELETE'\n" +
@@ -6562,8 +6836,8 @@ export class CommunityJavascriptTemplates {
   }
 
   public static education_post: EndpointTemplate = {
-    name: "education",
-    code: "\nconst url = 'https://dev.moonshot.ceo/api/community/education';\n" +
+    name: "members/education",
+    code: "\nconst url = 'https://dev.moonshot.ceo/api/community/members/education';\n" +
       "\n" +
       "const body = {\n" +
       "   \"school\":\"Universidad de Las Palmas de Gran Canaria\",\n" +
@@ -6605,9 +6879,9 @@ export class CommunityJavascriptTemplates {
     response: null
   }
 
-  public static education_put: EndpointTemplate = {
-    name: "education",
-    code: "\nconst url = 'https://dev.moonshot.ceo/api/community/education';\n" +
+  public static education_id_put: EndpointTemplate = {
+    name: "members/education/:education_id",
+    code: "\nconst url = 'https://dev.moonshot.ceo/api/community/members/education/1';\n" +
       "\n" +
       "const body = {\n" +
       "   \"school\":\"Universidad de Las Palmas de Gran Canaria\",\n" +
@@ -6650,7 +6924,7 @@ export class CommunityJavascriptTemplates {
   }
 
   public static education_id_delete: EndpointTemplate = {
-    name: "education/:id",
+    name: "members/education/:education_id",
     code: "\nconst url = 'https://dev.moonshot.ceo/api/community/education/1';\n" +
       "\n" +
       "fetch(url, {\n" +
@@ -6662,8 +6936,8 @@ export class CommunityJavascriptTemplates {
   }
 
   public static experience_post: EndpointTemplate = {
-    name: "experience",
-    code: "\nconst url = 'https://dev.moonshot.ceo/api/community/experience';\n" +
+    name: "members/experience",
+    code: "\nconst url = 'https://dev.moonshot.ceo/api/community/members/experience';\n" +
       "\n" +
       "const body = {\n" +
       "   \"title\":\"Desarrollador de software\",\n" +
@@ -6696,9 +6970,9 @@ export class CommunityJavascriptTemplates {
     response: null
   }
 
-  public static experience_put: EndpointTemplate = {
-    name: "experience",
-    code: "\nconst url = 'https://dev.moonshot.ceo/api/community/experience';\n" +
+  public static experience_id_put: EndpointTemplate = {
+    name: "/members/experience/:experience_id",
+    code: "\nconst url = 'https://dev.moonshot.ceo/api/community/members/experience/1';\n" +
       "\n" +
       "const body = {\n" +
       "   \"title\":\"Desarrollador de software\",\n" +
@@ -6732,8 +7006,8 @@ export class CommunityJavascriptTemplates {
   }
 
   public static experience_id_delete: EndpointTemplate = {
-    name: "experience/:id",
-    code: "\nconst url = 'https://dev.moonshot.ceo/api/community/experience/1';\n" +
+    name: "members/experience/:experience_id",
+    code: "\nconst url = 'https://dev.moonshot.ceo/api/community/members/experience/1';\n" +
       "\n" +
       "fetch(url, {\n" +
       "  method: 'DELETE'\n" +
@@ -6743,17 +7017,17 @@ export class CommunityJavascriptTemplates {
     response: null
   }
 
-  public static projects_get: EndpointTemplate = {
-    name: "projects",
-    code: "\nconst url = 'https://dev.moonshot.ceo/api/community/projects';\n" +
+  public static projects_by_actor_get: EndpointTemplate = {
+    name: "projects/by/actor",
+    code: "\nconst url = 'https://dev.moonshot.ceo/api/community/projects/by/actor?actorId=1';\n" +
       "\n" +
       "fetch(url)\n" +
       "  .then(response => response.json())\n" +
       "  .then(data => console.log(JSON.stringify(data)));",
     response: "\n[\n" +
       "   {\n" +
-      "      \"id\":\"1\",\n" +
-      "      \"actorId\":\"1\",\n" +
+      "      \"id\":\"61445159784bca6ef764c6df\",\n" +
+      "      \"actorId\":\"61445159784bca6ef764c6df\",\n" +
       "      \"name\":\"Patents\",\n" +
       "      \"description\":\"Patents\",\n" +
       "      \"trlStage\":\"BASIC_PRINCIPLES_OBSERVED\",\n" +
@@ -6763,7 +7037,7 @@ export class CommunityJavascriptTemplates {
       "      ],\n" +
       "      \"protectionMethod\":\"PATENTS\",\n" +
       "      \"projectManager\":{\n" +
-      "         \"id\":\"1\",\n" +
+      "         \"id\":\"61445159784bca6ef764c6df\",\n" +
       "         \"state\":\"ACCEPTED\",\n" +
       "         \"name\":\"Iñigo\",\n" +
       "         \"lastname\":\"Aramburu\",\n" +
@@ -6788,7 +7062,7 @@ export class CommunityJavascriptTemplates {
       "         ],\n" +
       "         \"experiences\":[\n" +
       "            {\n" +
-      "               \"id\":\"1\",\n" +
+      "               \"id\":\"61445159784bca6ef764c6df\",\n" +
       "               \"title\":\"Back-end developer en Moonshot Innovation\",\n" +
       "               \"type\":\"FULL_TIME\",\n" +
       "               \"company\":\"Moonshot Innovation\",\n" +
@@ -6804,7 +7078,7 @@ export class CommunityJavascriptTemplates {
       "         ],\n" +
       "         \"educations\":[\n" +
       "            {\n" +
-      "               \"id\":\"1\",\n" +
+      "               \"id\":\"61445159784bca6ef764c6df\",\n" +
       "               \"school\":\"Universidad del País Vasco\",\n" +
       "               \"degree\":\"Ingeniería informática\",\n" +
       "               \"fieldOfStudy\":\"Ingeniería de software\",\n" +
@@ -6819,7 +7093,7 @@ export class CommunityJavascriptTemplates {
       "               \"description\":\"Estudios universitarios realizados en la Universidad del País Vasco\"\n" +
       "            },\n" +
       "            {\n" +
-      "               \"id\":\"15\",\n" +
+      "               \"id\":\"61445159784bca6ef764c6df\",\n" +
       "               \"school\":\"Universidad del País Vasco\",\n" +
       "               \"degree\":\"Master en desarrollo web\",\n" +
       "               \"fieldOfStudy\":\"Desarrollo web\",\n" +
@@ -6837,7 +7111,7 @@ export class CommunityJavascriptTemplates {
       "      },\n" +
       "      \"teamMembers\":[\n" +
       "         {\n" +
-      "            \"id\":\"2\",\n" +
+      "            \"id\":\"61445159784bca6ef764c6df\",\n" +
       "            \"state\":\"ACCEPTED\",\n" +
       "            \"name\":\"Jose Juan\",\n" +
       "            \"lastname\":\"Hernández\",\n" +
@@ -6864,7 +7138,7 @@ export class CommunityJavascriptTemplates {
       "            ],\n" +
       "            \"experiences\":[\n" +
       "               {\n" +
-      "                  \"id\":\"1\",\n" +
+      "                  \"id\":\"61445159784bca6ef764c6df\",\n" +
       "                  \"title\":\"Back-end developer en Moonshot Innovation\",\n" +
       "                  \"type\":\"FULL_TIME\",\n" +
       "                  \"company\":\"Moonshot Innovation\",\n" +
@@ -6878,7 +7152,7 @@ export class CommunityJavascriptTemplates {
       "                  \"description\":\"Scrum manager en Moonshot Innovation, trabajando en el equipo de back-end\"\n" +
       "               },\n" +
       "               {\n" +
-      "                  \"id\":\"2\",\n" +
+      "                  \"id\":\"61445159784bca6ef764c6df\",\n" +
       "                  \"title\":\"Profesor en la facultad de Ingenería informatica\",\n" +
       "                  \"type\":\"OFFICIAL\",\n" +
       "                  \"company\":\"Universidad de Las Palmas de Gran Canaria\",\n" +
@@ -6894,7 +7168,7 @@ export class CommunityJavascriptTemplates {
       "            ],\n" +
       "            \"educations\":[\n" +
       "               {\n" +
-      "                  \"id\":\"2\",\n" +
+      "                  \"id\":\"61445159784bca6ef764c6df\",\n" +
       "                  \"school\":\"Universidad de Las Palmas de Gran Canaria\",\n" +
       "                  \"degree\":\"Ingeniería en telecomunicaciones\",\n" +
       "                  \"fieldOfStudy\":\"Big data\",\n" +
@@ -6911,7 +7185,7 @@ export class CommunityJavascriptTemplates {
       "            ]\n" +
       "         },\n" +
       "         {\n" +
-      "            \"id\":\"3\",\n" +
+      "            \"id\":\"61445159784bca6ef764c6df\",\n" +
       "            \"state\":\"ACCEPTED\",\n" +
       "            \"name\":\"Jeremy\",\n" +
       "            \"lastname\":\"Trujillo\",\n" +
@@ -6936,7 +7210,7 @@ export class CommunityJavascriptTemplates {
       "            ],\n" +
       "            \"experiences\":[\n" +
       "               {\n" +
-      "                  \"id\":\"3\",\n" +
+      "                  \"id\":\"61445159784bca6ef764c6df\",\n" +
       "                  \"title\":\"Prácticas universitarias en Moonshot Innovation\",\n" +
       "                  \"type\":\"APPRENTICESHIP\",\n" +
       "                  \"company\":\"Moonshot Innovation\",\n" +
@@ -6952,7 +7226,7 @@ export class CommunityJavascriptTemplates {
       "            ],\n" +
       "            \"educations\":[\n" +
       "               {\n" +
-      "                  \"id\":\"3\",\n" +
+      "                  \"id\":\"61445159784bca6ef764c6df\",\n" +
       "                  \"school\":\"Universidad de Las Palmas de Gran Canaria\",\n" +
       "                  \"degree\":\"Ingeniería informática\",\n" +
       "                  \"fieldOfStudy\":\"Ingeniería de software\",\n" +
@@ -6989,8 +7263,8 @@ export class CommunityJavascriptTemplates {
       "      ]\n" +
       "   },\n" +
       "   {\n" +
-      "      \"id\":\"2\",\n" +
-      "      \"actorId\":\"1\",\n" +
+      "      \"id\":\"61445159784bca6ef764c6df\",\n" +
+      "      \"actorId\":\"61445159784bca6ef764c6df\",\n" +
       "      \"name\":\"Trade secret\",\n" +
       "      \"description\":\"Trade secret\",\n" +
       "      \"trlStage\":\"TECHNOLOGY_CONCEPT_FORMULATED\",\n" +
@@ -6999,7 +7273,7 @@ export class CommunityJavascriptTemplates {
       "      ],\n" +
       "      \"protectionMethod\":\"TRADE_SECRETS\",\n" +
       "      \"projectManager\":{\n" +
-      "         \"id\":\"4\",\n" +
+      "         \"id\":\"61445159784bca6ef764c6df\",\n" +
       "         \"state\":\"ACCEPTED\",\n" +
       "         \"name\":\"Saulo\",\n" +
       "         \"lastname\":\"Santana\",\n" +
@@ -7025,7 +7299,7 @@ export class CommunityJavascriptTemplates {
       "         ],\n" +
       "         \"experiences\":[\n" +
       "            {\n" +
-      "               \"id\":\"3\",\n" +
+      "               \"id\":\"61445159784bca6ef764c6df\",\n" +
       "               \"title\":\"Prácticas universitarias en Moonshot Innovation\",\n" +
       "               \"type\":\"APPRENTICESHIP\",\n" +
       "               \"company\":\"Moonshot Innovation\",\n" +
@@ -7041,7 +7315,7 @@ export class CommunityJavascriptTemplates {
       "         ],\n" +
       "         \"educations\":[\n" +
       "            {\n" +
-      "               \"id\":\"3\",\n" +
+      "               \"id\":\"61445159784bca6ef764c6df\",\n" +
       "               \"school\":\"Universidad de Las Palmas de Gran Canaria\",\n" +
       "               \"degree\":\"Ingeniería informática\",\n" +
       "               \"fieldOfStudy\":\"Ingeniería de software\",\n" +
@@ -7059,7 +7333,7 @@ export class CommunityJavascriptTemplates {
       "      },\n" +
       "      \"teamMembers\":[\n" +
       "         {\n" +
-      "            \"id\":\"8\",\n" +
+      "            \"id\":\"61445159784bca6ef764c6df\",\n" +
       "            \"state\":\"ACCEPTED\",\n" +
       "            \"name\":\"Marcos\",\n" +
       "            \"lastname\":\"Fernandez\",\n" +
@@ -7091,7 +7365,7 @@ export class CommunityJavascriptTemplates {
       "            ],\n" +
       "            \"experiences\":[\n" +
       "               {\n" +
-      "                  \"id\":\"6\",\n" +
+      "                  \"id\":\"61445159784bca6ef764c6df\",\n" +
       "                  \"title\":\"Colaboración para crear la vacuna Pfizer\",\n" +
       "                  \"type\":\"FULL_TIME\",\n" +
       "                  \"company\":\"Novartis\",\n" +
@@ -7105,7 +7379,7 @@ export class CommunityJavascriptTemplates {
       "                  \"description\":\"Colaborador de la vacuna Pfizer contra el COVID-19\"\n" +
       "               },\n" +
       "               {\n" +
-      "                  \"id\":\"7\",\n" +
+      "                  \"id\":\"61445159784bca6ef764c6df\",\n" +
       "                  \"title\":\"Colaboración para crear la vacuna de la gripe A\",\n" +
       "                  \"type\":\"INTERIM\",\n" +
       "                  \"company\":\"Novartis\",\n" +
@@ -7121,7 +7395,7 @@ export class CommunityJavascriptTemplates {
       "            ],\n" +
       "            \"educations\":[\n" +
       "               {\n" +
-      "                  \"id\":\"7\",\n" +
+      "                  \"id\":\"61445159784bca6ef764c6df\",\n" +
       "                  \"school\":\"Universidad de Tokio\",\n" +
       "                  \"degree\":\"Farmaceutica\",\n" +
       "                  \"fieldOfStudy\":\"Pandemias\",\n" +
@@ -7163,15 +7437,15 @@ export class CommunityJavascriptTemplates {
   }
 
   public static project_id_get: EndpointTemplate = {
-    name: "project/:id",
-    code: "\nconst url = 'https://dev.moonshot.ceo/api/community/project/1';\n" +
+    name: "projects/:id",
+    code: "\nconst url = 'https://dev.moonshot.ceo/api/community/projects/1';\n" +
       "\n" +
       "fetch(url)\n" +
       "  .then(response => response.json())\n" +
       "  .then(data => console.log(JSON.stringify(data)));",
     response: "\n{\n" +
-      "   \"id\":\"1\",\n" +
-      "   \"actorId\":\"1\",\n" +
+      "   \"id\":\"61445159784bca6ef764c6df\",\n" +
+      "   \"actorId\":\"61445159784bca6ef764c6df\",\n" +
       "   \"name\":\"Patents\",\n" +
       "   \"description\":\"Patents\",\n" +
       "   \"trlStage\":\"BASIC_PRINCIPLES_OBSERVED\",\n" +
@@ -7181,7 +7455,7 @@ export class CommunityJavascriptTemplates {
       "   ],\n" +
       "   \"protectionMethod\":\"PATENTS\",\n" +
       "   \"projectManager\":{\n" +
-      "      \"id\":\"1\",\n" +
+      "      \"id\":\"61445159784bca6ef764c6df\",\n" +
       "      \"state\":\"ACCEPTED\",\n" +
       "      \"name\":\"Iñigo\",\n" +
       "      \"lastname\":\"Aramburu\",\n" +
@@ -7206,7 +7480,7 @@ export class CommunityJavascriptTemplates {
       "      ],\n" +
       "      \"experiences\":[\n" +
       "         {\n" +
-      "            \"id\":\"1\",\n" +
+      "            \"id\":\"61445159784bca6ef764c6df\",\n" +
       "            \"title\":\"Back-end developer en Moonshot Innovation\",\n" +
       "            \"type\":\"FULL_TIME\",\n" +
       "            \"company\":\"Moonshot Innovation\",\n" +
@@ -7222,7 +7496,7 @@ export class CommunityJavascriptTemplates {
       "      ],\n" +
       "      \"educations\":[\n" +
       "         {\n" +
-      "            \"id\":\"1\",\n" +
+      "            \"id\":\"61445159784bca6ef764c6df\",\n" +
       "            \"school\":\"Universidad del País Vasco\",\n" +
       "            \"degree\":\"Ingeniería informática\",\n" +
       "            \"fieldOfStudy\":\"Ingeniería de software\",\n" +
@@ -7237,7 +7511,7 @@ export class CommunityJavascriptTemplates {
       "            \"description\":\"Estudios universitarios realizados en la Universidad del País Vasco\"\n" +
       "         },\n" +
       "         {\n" +
-      "            \"id\":\"15\",\n" +
+      "            \"id\":\"61445159784bca6ef764c6df\",\n" +
       "            \"school\":\"Universidad del País Vasco\",\n" +
       "            \"degree\":\"Master en desarrollo web\",\n" +
       "            \"fieldOfStudy\":\"Desarrollo web\",\n" +
@@ -7255,7 +7529,7 @@ export class CommunityJavascriptTemplates {
       "   },\n" +
       "   \"teamMembers\":[\n" +
       "      {\n" +
-      "         \"id\":\"2\",\n" +
+      "         \"id\":\"61445159784bca6ef764c6df\",\n" +
       "         \"state\":\"ACCEPTED\",\n" +
       "         \"name\":\"Jose Juan\",\n" +
       "         \"lastname\":\"Hernández\",\n" +
@@ -7282,7 +7556,7 @@ export class CommunityJavascriptTemplates {
       "         ],\n" +
       "         \"experiences\":[\n" +
       "            {\n" +
-      "               \"id\":\"1\",\n" +
+      "               \"id\":\"61445159784bca6ef764c6df\",\n" +
       "               \"title\":\"Back-end developer en Moonshot Innovation\",\n" +
       "               \"type\":\"FULL_TIME\",\n" +
       "               \"company\":\"Moonshot Innovation\",\n" +
@@ -7296,7 +7570,7 @@ export class CommunityJavascriptTemplates {
       "               \"description\":\"Scrum manager en Moonshot Innovation, trabajando en el equipo de back-end\"\n" +
       "            },\n" +
       "            {\n" +
-      "               \"id\":\"2\",\n" +
+      "               \"id\":\"61445159784bca6ef764c6df\",\n" +
       "               \"title\":\"Profesor en la facultad de Ingenería informatica\",\n" +
       "               \"type\":\"OFFICIAL\",\n" +
       "               \"company\":\"Universidad de Las Palmas de Gran Canaria\",\n" +
@@ -7312,7 +7586,7 @@ export class CommunityJavascriptTemplates {
       "         ],\n" +
       "         \"educations\":[\n" +
       "            {\n" +
-      "               \"id\":\"2\",\n" +
+      "               \"id\":\"61445159784bca6ef764c6df\",\n" +
       "               \"school\":\"Universidad de Las Palmas de Gran Canaria\",\n" +
       "               \"degree\":\"Ingeniería en telecomunicaciones\",\n" +
       "               \"fieldOfStudy\":\"Big data\",\n" +
@@ -7329,7 +7603,7 @@ export class CommunityJavascriptTemplates {
       "         ]\n" +
       "      },\n" +
       "      {\n" +
-      "         \"id\":\"3\",\n" +
+      "         \"id\":\"61445159784bca6ef764c6df\",\n" +
       "         \"state\":\"ACCEPTED\",\n" +
       "         \"name\":\"Jeremy\",\n" +
       "         \"lastname\":\"Trujillo\",\n" +
@@ -7354,7 +7628,7 @@ export class CommunityJavascriptTemplates {
       "         ],\n" +
       "         \"experiences\":[\n" +
       "            {\n" +
-      "               \"id\":\"3\",\n" +
+      "               \"id\":\"61445159784bca6ef764c6df\",\n" +
       "               \"title\":\"Prácticas universitarias en Moonshot Innovation\",\n" +
       "               \"type\":\"APPRENTICESHIP\",\n" +
       "               \"company\":\"Moonshot Innovation\",\n" +
@@ -7370,7 +7644,7 @@ export class CommunityJavascriptTemplates {
       "         ],\n" +
       "         \"educations\":[\n" +
       "            {\n" +
-      "               \"id\":\"3\",\n" +
+      "               \"id\":\"61445159784bca6ef764c6df\",\n" +
       "               \"school\":\"Universidad de Las Palmas de Gran Canaria\",\n" +
       "               \"degree\":\"Ingeniería informática\",\n" +
       "               \"fieldOfStudy\":\"Ingeniería de software\",\n" +
@@ -7409,12 +7683,12 @@ export class CommunityJavascriptTemplates {
   }
 
   public static project_post: EndpointTemplate = {
-    name: "project",
-    code: "\nconst url = 'https://dev.moonshot.ceo/api/community/project';\n" +
+    name: "projects",
+    code: "\nconst url = 'https://dev.moonshot.ceo/api/community/projects';\n" +
       "\n" +
       "const body = {\n" +
-      "   \"id\":\"1\",\n" +
-      "   \"actorId\":\"1\",\n" +
+      "   \"id\":\"61445159784bca6ef764c6df\",\n" +
+      "   \"actorId\":\"61445159784bca6ef764c6df\",\n" +
       "   \"name\":\"Patents\",\n" +
       "   \"description\":\"Patents\",\n" +
       "   \"trlStage\":\"BASIC_PRINCIPLES_OBSERVED\",\n" +
@@ -7423,10 +7697,10 @@ export class CommunityJavascriptTemplates {
       "      \"www.youtube.com/gwqm92ms\"\n" +
       "   ],\n" +
       "   \"protectionMethod\":\"PATENTS\",\n" +
-      "   \"projectManagerId\":\"1\",\n" +
+      "   \"projectManagerId\":\"61445159784bca6ef764c6df\",\n" +
       "   \"teamMembersId\":[\n" +
-      "      \"2\",\n" +
-      "      \"3\"\n" +
+      "      \"61445159784bca6ef764c6df\",\n" +
+      "      \"61445159784bca6ef764c6df\"\n" +
       "   ],\n" +
       "   \"socialNetworks\":[\n" +
       "      \"www.twitter.com/Patents\",\n" +
@@ -7457,13 +7731,12 @@ export class CommunityJavascriptTemplates {
     response: null
   }
 
-  public static project_put: EndpointTemplate = {
-    name: "project",
-    code: "\nconst url = 'https://dev.moonshot.ceo/api/community/project';\n" +
+  public static project_id_put: EndpointTemplate = {
+    name: "projects/:id",
+    code: "\nconst url = 'https://dev.moonshot.ceo/api/community/projects/1';\n" +
       "\n" +
       "const body = {\n" +
-      "   \"id\":\"1\",\n" +
-      "   \"actorId\":\"1\",\n" +
+      "   \"actorId\":\"61445159784bca6ef764c6df\",\n" +
       "   \"name\":\"Patents\",\n" +
       "   \"description\":\"Patents\",\n" +
       "   \"trlStage\":\"BASIC_PRINCIPLES_OBSERVED\",\n" +
@@ -7472,10 +7745,10 @@ export class CommunityJavascriptTemplates {
       "      \"www.youtube.com/gwqm92ms\"\n" +
       "   ],\n" +
       "   \"protectionMethod\":\"PATENTS\",\n" +
-      "   \"projectManagerId\":\"1\",\n" +
+      "   \"projectManagerId\":\"61445159784bca6ef764c6df\",\n" +
       "   \"teamMembersId\":[\n" +
-      "      \"2\",\n" +
-      "      \"3\"\n" +
+      "      \"61445159784bca6ef764c6df\",\n" +
+      "      \"61445159784bca6ef764c6df\"\n" +
       "   ],\n" +
       "   \"socialNetworks\":[\n" +
       "      \"www.twitter.com/Patents\",\n" +
@@ -7507,8 +7780,8 @@ export class CommunityJavascriptTemplates {
   }
 
   public static project_id_delete: EndpointTemplate = {
-    name: "project/:id",
-    code: "\nconst url = 'https://dev.moonshot.ceo/api/community/project/1';\n" +
+    name: "projects/:id",
+    code: "\nconst url = 'https://dev.moonshot.ceo/api/community/projects/1';\n" +
       "\n" +
       "fetch(url, {\n" +
       "  method: 'DELETE'\n" +
@@ -7516,5 +7789,20 @@ export class CommunityJavascriptTemplates {
       "  .then(response => response.json())\n" +
       "  .then(data => console.log(JSON.stringify(data)));",
     response: null
+  }
+
+  public static project_id_upload_media_put: EndpointTemplate = {
+    name: "projects/:id/upload/media",
+    code: "\nconst formData = new FormData();\n" +
+      "const url = 'https://dev.moonshot.ceo/api/community/projects/1/upload/media'\n" +
+      "\n" +
+      "formData.append(\"file\", 'YOUR_FILE');\n" +
+      "\n" +
+      "fetch(url, {\n" +
+      "  method: 'PUT',\n" +
+      "  body: formData\n" +
+      "})\n" +
+      "  .then(path => console.log(path))",
+    response: "\nhttps://localhost/drive/projects/media/1/61eaffcdad2bd12319fd4eba.png"
   }
 }

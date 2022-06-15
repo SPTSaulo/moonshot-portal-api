@@ -1,7 +1,9 @@
-import {EventTemplates} from '../../templates/events/EventTemplates';
-import {ObjectType} from '../model/ObjectType';
-import {EventTemplate} from '../model/EventTemplate';
-import {ObjectTypeTemplate} from '../model/ObjectTypeTemplate';
+import { EventTemplates } from '../../templates/events/EventTemplates';
+import { ObjectType } from '../model/ObjectType';
+import { EventTemplate } from '../model/EventTemplate';
+import { ObjectTypeTemplate } from '../model/ObjectTypeTemplate';
+import { Entity } from '../model/Entity';
+import { Subject } from 'rxjs';
 
 export class EventTemplateReaderService {
 
@@ -11,6 +13,7 @@ export class EventTemplateReaderService {
     EventTemplates.OnlineEventSubscriptionEvent,
     EventTemplates.OnlineEventUnsubscriptionEvent,
     EventTemplates.OnlineEventDeleteEvent,
+    EventTemplates.FaceToFaceEventCreateEvent,
     EventTemplates.FaceToFaceEventUpdateEvent,
     EventTemplates.FaceToFaceEventSubscriptionEvent,
     EventTemplates.FaceToFaceEventUnsubscriptionEvent,
@@ -47,6 +50,8 @@ export class EventTemplateReaderService {
     EventTemplates.ActorUpdateEvent,
     EventTemplates.ActorAddNewMemberEvent,
     EventTemplates.ActorDeleteEvent,
+    EventTemplates.ActorAcceptEvent,
+    EventTemplates.ActorRejectEvent,
     EventTemplates.MemberUpdateEvent,
     EventTemplates.MemberDeleteEvent,
     EventTemplates.MemberCreateEducationEvent,
@@ -77,8 +82,7 @@ export class EventTemplateReaderService {
     EventTemplates.NotificationCreateEvent,
     EventTemplates.NotificationUpdateEvent,
     EventTemplates.NotificationDeleteEvent,
-    EventTemplates.SettingCreateEvent,
-    EventTemplates.SettingUpdateEvent
+    EventTemplates.SettingSaveEvent
   ]
 
   private objectTypesTemplates: ObjectTypeTemplate[] = [
@@ -167,6 +171,8 @@ export class EventTemplateReaderService {
   ]
 
   private objectTypeStringFormat: string[] = this.modelReferences.map(objectType => objectType.toString())
+
+  public rechargeTemplates = new Subject<Entity>();
 
   public getEventTemplates() {
     return this.eventTemplates
@@ -260,4 +266,23 @@ export class EventTemplateReaderService {
       default: return "null"
     }
   }
+
+  public getEntities(): Entity[] {
+    const entities: Entity[] = []
+    this.eventTemplates.forEach(template => {
+      if (!entities.includes(template.entity)) {
+        entities.push(template.entity);
+      }
+    });
+    return entities;
+  }
+
+  public getEventTemplatesByEntity(entity: Entity) {
+    return this.eventTemplates.filter(templates => templates.entity === entity);
+  }
+
+  public recharge(entity: Entity) {
+    this.rechargeTemplates.next(entity)
+  }
+
 }

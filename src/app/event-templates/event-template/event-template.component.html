@@ -16,7 +16,7 @@
     </div>
   </div>
   <div class="template-body">
-      <pre *ngIf="active === 'example'">
+      <pre *ngIf="active === 'example'" class="template-overflow">
         <span>{{ eventTemplateService.parseObjectToString(template.example) }}</span>
       </pre>
       <div *ngIf="active === 'schema'">
@@ -35,8 +35,6 @@
       </div>
   </div>
 </div>
-
-
 
 <div class="template" *ngIf="template.options">
   <div class="template-header" [id]="'template-' + template.name">

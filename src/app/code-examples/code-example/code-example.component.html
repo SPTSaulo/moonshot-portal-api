@@ -3,6 +3,7 @@
     <div class="endpoint-header">
       <h3 class="endpoint-title">{{ template.name }}</h3>
       <h3 class="endpoint-method">{{ endpoint.method | uppercase }}</h3>
+      <button #copy_button class="endpoint-copy-button" (click)="copyCode()">Copy code</button>
       <select class="endpoint-language" [(ngModel)]="selectedLanguage" (change)="changeTemplate()">
         <option *ngFor="let language of languages" [value]="language">{{ language }}</option>
       </select>
@@ -10,7 +11,7 @@
     <div class="endpoint-body">
       <div class="endpoint-code">
         <h4 class="endpoint-body-title">Code</h4>
-        <pre>
+        <pre #code class="endpoint-overflow">
             <span>{{ template.code }}</span>
         </pre>
       </div>
@@ -21,7 +22,7 @@
                 (click)="hideResponse = !hideResponse">
           {{ !hideResponse ? '(hide)' : '(show)' }}
         </button>
-        <pre *ngIf="template.response && !hideResponse">
+        <pre class="endpoint-overflow" *ngIf="template.response && !hideResponse">
           <code>{{ template.response }}</code>
         </pre>
         <span *ngIf="!template.response"><br>No response</span>

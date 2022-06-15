@@ -28,6 +28,17 @@
   color: #919191;
 }
 
+.endpoint-copy-button {
+  border: none;
+  background-color: #f1f2f3;
+  color: #919191;
+  font-size: 14px;
+}
+
+.endpoint-copy-button:hover {
+  cursor: pointer;
+}
+
 .endpoint-language {
   display: flex;
   align-self: flex-end;
@@ -53,6 +64,10 @@
   text-decoration: underline;
   cursor: pointer;
   color: #707070;
+}
+
+.endpoint-overflow {
+  overflow: auto;
 }
 
 select {

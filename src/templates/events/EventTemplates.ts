@@ -238,7 +238,7 @@ export class EventTemplates {
       "id": ObjectType.STRING
     },
     example: {
-      "id": "1"
+      "id": "61445159784bca6ef764c6df"
     },
     entity: Entity.ONLINE_EVENT
   }
@@ -475,7 +475,7 @@ export class EventTemplates {
       "id": ObjectType.STRING
     },
     example: {
-      "id": "1"
+      "id": "61445159784bca6ef764c6df"
     },
     entity: Entity.FACE_TO_FACE_EVENT
   }
@@ -511,7 +511,7 @@ export class EventTemplates {
       "id": ObjectType.STRING
     },
     example: {
-      "id": "1"
+      "id": "61445159784bca6ef764c6df"
     },
     entity: Entity.DIRECT_CHAT
   }
@@ -547,7 +547,7 @@ export class EventTemplates {
       "id": ObjectType.STRING
     },
     example: {
-      "id": "1"
+      "id": "61445159784bca6ef764c6df"
     },
     entity: Entity.DIRECT_CHAT
   }
@@ -675,7 +675,7 @@ export class EventTemplates {
       "id": ObjectType.STRING
     },
     example: {
-      "id": "1"
+      "id": "61445159784bca6ef764c6df"
     },
     entity: Entity.FOLLOW_UP_ROOM
   }
@@ -711,7 +711,7 @@ export class EventTemplates {
       "id": ObjectType.STRING
     },
     example: {
-      "id": "1"
+      "id": "61445159784bca6ef764c6df"
     },
     entity: Entity.FOLLOW_UP_ROOM
   }
@@ -784,7 +784,7 @@ export class EventTemplates {
       "id": ObjectType.STRING
     },
     example: {
-      "id": "1"
+      "id": "61445159784bca6ef764c6df"
     },
     entity: Entity.PUBLIC_CHANNEL
   }
@@ -848,7 +848,7 @@ export class EventTemplates {
       "id": ObjectType.STRING
     },
     example: {
-      "id": "1"
+      "id": "61445159784bca6ef764c6df"
     },
     entity: Entity.PUBLIC_CHANNEL
   }
@@ -991,7 +991,7 @@ export class EventTemplates {
       "id": ObjectType.STRING
     },
     example: {
-      "id": "1"
+      "id": "61445159784bca6ef764c6df"
     },
     entity: Entity.WALL_POST
   }
@@ -1531,7 +1531,7 @@ export class EventTemplates {
       "id": ObjectType.STRING
     },
     example: {
-      "id": "1"
+      "id": "61445159784bca6ef764c6df"
     },
     entity: Entity.ACTOR
   }
@@ -1611,7 +1611,7 @@ export class EventTemplates {
       "id": ObjectType.STRING
     },
     example: {
-      "id": "1"
+      "id": "61445159784bca6ef764c6df"
     },
     entity: Entity.MEMBER
   }
@@ -1696,7 +1696,7 @@ export class EventTemplates {
       "id": ObjectType.STRING
     },
     example: {
-      "id": "1"
+      "id": "61445159784bca6ef764c6df"
     },
     entity: Entity.MEMBER
   }
@@ -1773,7 +1773,7 @@ export class EventTemplates {
       "id": ObjectType.STRING
     },
     example: {
-      "id": "1"
+      "id": "61445159784bca6ef764c6df"
     },
     entity: Entity.MEMBER
   }
@@ -1903,7 +1903,7 @@ export class EventTemplates {
       "id": ObjectType.STRING
     },
     example: {
-      "id": "1"
+      "id": "61445159784bca6ef764c6df"
     },
     entity: Entity.PROJECT
   }
@@ -2156,27 +2156,31 @@ export class EventTemplates {
       "reason": ObjectType.STRING,
       "notification": ObjectType.BOOLEAN,
       "createdAt": ObjectType.NUMBER,
-      "lastEmail": ObjectType.NUMBER
+      "senderId": ObjectType.STRING,
+      "sentOn": ObjectType.NUMBER
     },
     example: {
       "email": "example1@gmail.com",
       "reason": "Access denied",
       "notification": true,
       "createdAt": 1639590502463,
-      "lastEmail": 1639590502463
+      "senderId": "60acae8e2f799d228a4d4a85",
+      "sentOn": 1639590502463
     },
-    entity: Entity.ECOSYSTEM
+    entity: Entity.INVITATION
   }
 
   public static InvitationUpdateEvent: EventTemplate = {
     name: "INVITATION_UPDATE_EVENT",
     schema: {
       "id": ObjectType.STRING,
-      "lastEmail": ObjectType.NUMBER
+      "senderId": ObjectType.STRING,
+      "sentOn": ObjectType.NUMBER
     },
     example: {
       "id": "61445159784bca6ef764c6df",
-      "lastEmail": 1639590502463
+      "senderId": "60acae8e2f799d228a4d4a85",
+      "sentOn": 1639590502463
     },
     entity: Entity.INVITATION
   }
@@ -2187,7 +2191,7 @@ export class EventTemplates {
       "id": ObjectType.STRING
     },
     example: {
-      "id": "1"
+      "id": "61445159784bca6ef764c6df"
     },
     entity: Entity.INVITATION
   }
@@ -2252,11 +2256,15 @@ export class EventTemplates {
     name: "USER_VERIFY_EVENT",
     schema: {
       "token": ObjectType.STRING,
-      "email": ObjectType.STRING
+      "email": ObjectType.STRING,
+      "password": ObjectType.STRING,
+      "repeatPassword": ObjectType.STRING
     },
     example: {
       "token": "eyJhbGciOiJSUzI1NiIsIn",
-      "email": "example1@gmail.com"
+      "email": "example1@gmail.com",
+      "password": "hola123",
+      "repeatPassword": "hola123"
     },
     entity: Entity.USER
   }
@@ -2451,33 +2459,13 @@ export class EventTemplates {
       "id": ObjectType.STRING
     },
     example: {
-      "id": "1"
+      "id": "61445159784bca6ef764c6df"
     },
     entity: Entity.NOTIFICATION
   }
 
-  public static SettingCreateEvent: EventTemplate = {
-    name: "SETTING_CREATE_EVENT",
-    schema: {
-      "banner": ObjectType.IMAGE
-    },
-    example: {
-      "banner": {
-        "original": "https://moonshot-innovation.s3.eu-central-1.amazonaws.com/60aca5fa0565c3210a322662/image/f306ce3b-4db9-4529-9bde-fdb133bbef1f.png",
-        "thumbnail": "https://moonshot-innovation.s3.eu-central-1.amazonaws.com/60aca5fa0565c3210a322662/image/f306ce3b-4db9-4529-9bde-fdb133bbef1f.png",
-        "crop": {
-          "x": 100,
-          "y": 20,
-          "width": 1750,
-          "height": 500
-        }
-      }
-    },
-    entity: Entity.SETTING
-  }
-
-  public static SettingUpdateEvent: EventTemplate = {
-    name: "SETTING_UPDATE_EVENT",
+  public static SettingSaveEvent: EventTemplate = {
+    name: "SETTING_SAVE_EVENT",
     schema: {
       "id": ObjectType.STRING,
       "banner": ObjectType.IMAGE

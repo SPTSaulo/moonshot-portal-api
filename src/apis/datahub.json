@@ -1,0 +1,58 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "Datahub API",
+    "description": "Moonshot Datahub API",
+    "contact": {
+      "email": "saulosantanab@gmail.com"
+    },
+    "version": "1.0.0"
+  },
+  "servers": [
+    {
+      "url": "https://dev.moonshot.ceo/api/datahub"
+    }
+  ],
+  "tags": [
+    {
+      "name": "Version",
+      "description": "Endpoint that return Datahub last version"
+    }
+  ],
+  "paths": {
+    "/version": {
+      "get": {
+        "tags": [
+          "Version"
+        ],
+        "summary": "API version",
+        "description": "Return the latest version of the API\n",
+        "operationId": "apiVersion",
+        "responses": {
+          "200": {
+            "description": "API Version",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "string",
+                  "example": "1.0.25.r6-RC1"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Cannot verify the certificate"
+          }
+        },
+        "externalDocs": {
+          "description": "Code Example",
+          "url": "http://localhost:4200/code-examples/datahub#version_get"
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+    }
+  }
+}

@@ -10,7 +10,7 @@ export class FederationPythonTemplates {
       "\n" +
       "response = reqs.get(URL)\n" +
       "print(response.text)",
-    response: "\n"
+    response: "\n\"2.0.2.r15-RC1\""
   }
 
   public static login_post: EndpointTemplate = {
@@ -91,9 +91,9 @@ export class FederationPythonTemplates {
       "response = reqs.get(URL)\n" +
       "print(response.text)",
     response: "\n{\n" +
-      "    \"id\": \"1\",\n" +
+      "    \"id\": \"60acae8e2f799d228a4d4a85\",\n" +
       "    \"email\": \"usuario1@gmail.com\",\n" +
-      "    \"memberId\": \"1\",\n" +
+      "    \"memberId\": \"60acae8e2f799d228a4d4a85\",\n" +
       "    \"roles\": [\n" +
       "        \"USER\",\n" +
       "        \"DEV:ECOSYSTEM_MANAGER\"\n" +
@@ -122,7 +122,7 @@ export class FederationPythonTemplates {
   }
 
   public static user_by_email_get: EndpointTemplate = {
-    name: "user/by/email",
+    name: "users/by/email",
     code: "\nimport requests as reqs\n" +
       "\n" +
       "URL = \"https://dev.moonshot.ceo/api/federation/user/by/email?email=usuario1@gmail.com\"\n" +
@@ -130,9 +130,9 @@ export class FederationPythonTemplates {
       "response = reqs.get(URL)\n" +
       "print(response.text)",
     response: "\n{\n" +
-      "    \"id\": \"1\",\n" +
+      "    \"id\": \"60acae8e2f799d228a4d4a85\",\n" +
       "    \"email\": \"usuario1@gmail.com\",\n" +
-      "    \"memberId\": \"2\",\n" +
+      "    \"memberId\": \"61445159784bca6ef764c6df\",\n" +
       "    \"roles\": [\n" +
       "        \"USER\",\n" +
       "        \"DEV:ECOSYSTEM_MANAGER\"\n" +
@@ -170,9 +170,9 @@ export class FederationPythonTemplates {
       "print(response.text)",
     response: "\n[\n" +
       "    {\n" +
-      "        \"id\": \"1\",\n" +
+      "        \"id\": \"60acae8e2f799d228a4d4a85\",\n" +
       "        \"email\": \"usuario1@gmail.com\",\n" +
-      "        \"memberId\": \"1\",\n" +
+      "        \"memberId\": \"60acae8e2f799d228a4d4a85\",\n" +
       "        \"roles\": [\n" +
       "            \"DEV:ECOSYSTEM_USER\",\n" +
       "            \"DEV:ECOSYSTEM_MANAGER\"\n" +
@@ -199,9 +199,9 @@ export class FederationPythonTemplates {
       "        ]\n" +
       "    },\n" +
       "    {\n" +
-      "        \"id\": \"2\",\n" +
+      "        \"id\": \"61445159784bca6ef764c6df\",\n" +
       "        \"email\": \"usuario2@gmail.com\",\n" +
-      "        \"memberId\": \"2\",\n" +
+      "        \"memberId\": \"61445159784bca6ef764c6df\",\n" +
       "        \"roles\": [\n" +
       "            \"DEV:ECOSYSTEM_USER\"\n" +
       "        ],\n" +
@@ -235,9 +235,9 @@ export class FederationPythonTemplates {
       "print(response.text)",
     response: "\n[\n" +
       "    {\n" +
-      "        \"id\": \"1\",\n" +
+      "        \"id\": \"60acae8e2f799d228a4d4a85\",\n" +
       "        \"email\": \"usuario1@gmail.com\",\n" +
-      "        \"memberId\": \"1\",\n" +
+      "        \"memberId\": \"60acae8e2f799d228a4d4a85\",\n" +
       "        \"roles\": [\n" +
       "            \"USER\",\n" +
       "            \"DEV:ECOSYSTEM_MANAGER\"\n" +
@@ -264,9 +264,9 @@ export class FederationPythonTemplates {
       "        ]\n" +
       "    },\n" +
       "    {\n" +
-      "        \"id\": \"2\",\n" +
+      "        \"id\": \"61445159784bca6ef764c6df\",\n" +
       "        \"email\": \"usuario2@gmail.com\",\n" +
-      "        \"memberId\": \"2\",\n" +
+      "        \"memberId\": \"61445159784bca6ef764c6df\",\n" +
       "        \"roles\": [\n" +
       "            \"DEV:ECOSYSTEM_USER\"\n" +
       "        ],\n" +
@@ -300,9 +300,9 @@ export class FederationPythonTemplates {
       "print(response.text)",
     response: "\n[\n" +
       "    {\n" +
-      "        \"id\": \"1\",\n" +
+      "        \"id\": \"60acae8e2f799d228a4d4a85\",\n" +
       "        \"email\": \"usuario1@gmail.com\",\n" +
-      "        \"memberId\": \"1\",\n" +
+      "        \"memberId\": \"60acae8e2f799d228a4d4a85\",\n" +
       "        \"roles\": [\n" +
       "            \"USER\",\n" +
       "            \"DEV:ECOSYSTEM_MANAGER\"\n" +
@@ -329,9 +329,9 @@ export class FederationPythonTemplates {
       "        ]\n" +
       "    },\n" +
       "    {\n" +
-      "        \"id\": \"2\",\n" +
+      "        \"id\": \"61445159784bca6ef764c6df\",\n" +
       "        \"email\": \"usuario2@gmail.com\",\n" +
-      "        \"memberId\": \"2\",\n" +
+      "        \"memberId\": \"61445159784bca6ef764c6df\",\n" +
       "        \"roles\": [\n" +
       "            \"DEV:ECOSYSTEM_USER\"\n" +
       "        ],\n" +
@@ -359,7 +359,7 @@ export class FederationPythonTemplates {
     name:"users/perms" ,
     code: "\nimport requests as reqs\n" +
       "\n" +
-      "URL = \"https://dev.moonshot.ceo/api/federation/users/perms?id=1\"\n" +
+      "URL = \"https://dev.moonshot.ceo/api/federation/users/1/perms\"\n" +
       "\n" +
       "response = reqs.get(URL)\n" +
       "print(response.text)",
@@ -389,10 +389,9 @@ export class FederationPythonTemplates {
     name: "users/perms",
     code: "\nimport requests as reqs\n" +
       "\n" +
-      "URL = \"https://dev.moonshot.ceo/api/federation/users/perms?id=1\"\n" +
+      "URL = \"https://dev.moonshot.ceo/api/federation/users/1/perms\"\n" +
       "\n" +
       "BODY = {\n" +
-      "  \"id\": \"1\",\n" +
       "  \"perms\": [\n" +
       "    \"DEV:WALL_POST_CREATE\"\n" +
       "  ]\n" +
@@ -404,7 +403,7 @@ export class FederationPythonTemplates {
   }
 
   public static user_verify_put: EndpointTemplate = {
-    name: "user/verify",
+    name: "users/verify",
     code: "\nimport requests as reqs\n" +
       "\n" +
       "URL = \"https://dev.moonshot.ceo/api/federation/user/verify\"\n" +
@@ -422,7 +421,7 @@ export class FederationPythonTemplates {
   }
 
   public static user_verify_resend_put: EndpointTemplate = {
-    name: "user/verify/re-send",
+    name: "users/verify/re-send",
     code: "\nimport requests as reqs\n" +
       "\n" +
       "URL = \"https://dev.moonshot.ceo/api/federation/user/verify/re-send\"\n" +
@@ -437,7 +436,7 @@ export class FederationPythonTemplates {
   }
 
   public static password_last_modification_get: EndpointTemplate = {
-    name: "password/last-modification",
+    name: "passwords/last-modification",
     code: "\nimport requests as reqs\n" +
       "\n" +
       "URL = \"https://dev.moonshot.ceo/api/federation/password/last-modification?email=example1@gmail.com\"\n" +
@@ -448,13 +447,13 @@ export class FederationPythonTemplates {
   }
 
   public static password_request_post: EndpointTemplate = {
-    name: "password/request",
+    name: "passwords/request",
     code: "\nimport requests as reqs\n" +
       "\n" +
       "URL = \"https://dev.moonshot.ceo/api/federation/password/request\"\n" +
       "\n" +
       "BODY = {\n" +
-      "  \"id\": \"1\",\n" +
+      "  \"id\": \"60acae8e2f799d228a4d4a85\",\n" +
       "  \"token\": \"50946306-47f9-11ec-81d3-0242ac130003\",\n" +
       "  \"email\": \"usuario1@gmail.com\"\n" +
       "}\n" +
@@ -465,7 +464,7 @@ export class FederationPythonTemplates {
   }
 
   public static password_recover_post: EndpointTemplate = {
-    name: "password/recover",
+    name: "passwords/recover",
     code: "\nimport requests as reqs\n" +
       "\n" +
       "URL = \"https://dev.moonshot.ceo/api/federation/password/recover\"\n" +
@@ -482,7 +481,7 @@ export class FederationPythonTemplates {
   }
 
   public static password_change_put: EndpointTemplate = {
-    name: "password/change",
+    name: "passwords/change",
     code: "\nimport requests as reqs\n" +
       "\n" +
       "URL = \"https://dev.moonshot.ceo/api/federation/password/change\"\n" +
