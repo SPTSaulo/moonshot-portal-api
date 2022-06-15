@@ -30,13 +30,13 @@ export class CommunityJavaTemplates {
       "System.out.println(jsonArray);",
     response: "\n[\n" +
       "   {\n" +
-      "      \"id\":\"4\",\n" +
+      "      \"id\":\"61445159784bca6ef764c6df\",\n" +
       "      \"title\":\"Evento para conocernos\",\n" +
       "      \"timestamp\":1414281600,\n" +
       "      \"description\":\"Evento para mejorar el ambiente laboral y las relaciones con el resto de personas del ecosistema\",\n" +
       "      \"imageUrl\":null,\n" +
       "      \"ownerMember\":{\n" +
-      " \"id\":\"3\",\n" +
+      " \"id\":\"61445159784bca6ef764c6df\",\n" +
       " \"state\":\"ACCEPTED\",\n" +
       " \"name\":\"Jeremy\",\n" +
       " \"lastname\":\"Trujillo\",\n" +
@@ -61,7 +61,7 @@ export class CommunityJavaTemplates {
       " ],\n" +
       " \"experiences\":[\n" +
       "    {\n" +
-      "       \"id\":\"3\",\n" +
+      "       \"id\":\"61445159784bca6ef764c6df\",\n" +
       "       \"title\":\"Prácticas universitarias en Moonshot Innovation\",\n" +
       "       \"type\":\"APPRENTICESHIP\",\n" +
       "       \"company\":\"Moonshot Innovation\",\n" +
@@ -77,7 +77,7 @@ export class CommunityJavaTemplates {
       " ],\n" +
       " \"educations\":[\n" +
       "    {\n" +
-      "       \"id\":\"3\",\n" +
+      "       \"id\":\"61445159784bca6ef764c6df\",\n" +
       "       \"school\":\"Universidad de Las Palmas de Gran Canaria\",\n" +
       "       \"degree\":\"Ingeniería informática\",\n" +
       "       \"fieldOfStudy\":\"Ingeniería de software\",\n" +
@@ -96,7 +96,7 @@ export class CommunityJavaTemplates {
       "      \"url\":\"https://moonshot.ceo/conocernos\",\n" +
       "      \"participants\":[\n" +
       " {\n" +
-      "    \"id\":\"1\",\n" +
+      "    \"id\":\"60acae8e2f799d228a4d4a85\",\n" +
       "    \"state\":\"ACCEPTED\",\n" +
       "    \"name\":\"Iñigo\",\n" +
       "    \"lastname\":\"Aramburu\",\n" +
@@ -121,7 +121,7 @@ export class CommunityJavaTemplates {
       "    ],\n" +
       "    \"experiences\":[\n" +
       "       {\n" +
-      "  \"id\":\"1\",\n" +
+      "  \"id\":\"60acae8e2f799d228a4d4a85\",\n" +
       "  \"title\":\"Back-end developer en Moonshot Innovation\",\n" +
       "  \"type\":\"FULL_TIME\",\n" +
       "  \"company\":\"Moonshot Innovation\",\n" +
@@ -137,7 +137,7 @@ export class CommunityJavaTemplates {
       "    ],\n" +
       "    \"educations\":[\n" +
       "       {\n" +
-      "  \"id\":\"1\",\n" +
+      "  \"id\":\"60acae8e2f799d228a4d4a85\",\n" +
       "  \"school\":\"Universidad del País Vasco\",\n" +
       "  \"degree\":\"Ingeniería informática\",\n" +
       "  \"fieldOfStudy\":\"Ingeniería de software\",\n" +
@@ -152,7 +152,7 @@ export class CommunityJavaTemplates {
       "  \"description\":\"Estudios universitarios realizados en la Universidad del País Vasco\"\n" +
       "       },\n" +
       "       {\n" +
-      "  \"id\":\"15\",\n" +
+      "  \"id\":\"61445159784bca6ef764c6df\",\n" +
       "  \"school\":\"Universidad del País Vasco\",\n" +
       "  \"degree\":\"Master en desarrollo web\",\n" +
       "  \"fieldOfStudy\":\"Desarrollo web\",\n" +
@@ -169,7 +169,7 @@ export class CommunityJavaTemplates {
       "    ]\n" +
       " },\n" +
       " {\n" +
-      "    \"id\":\"6\",\n" +
+      "    \"id\":\"61445159784bca6ef764c6df\",\n" +
       "    \"state\":\"ACCEPTED\",\n" +
       "    \"name\":\"David\",\n" +
       "    \"lastname\":\"Suriol\",\n" +
@@ -205,7 +205,7 @@ export class CommunityJavaTemplates {
       "    ],\n" +
       "    \"experiences\":[\n" +
       "       {\n" +
-      "  \"id\":\"4\",\n" +
+      "  \"id\":\"61445159784bca6ef764c6df\",\n" +
       "  \"title\":\"Fundador y CEO de Moonshot Innovation\",\n" +
       "  \"type\":\"SELF_EMPLOYED\",\n" +
       "  \"company\":\"Moonshot Innovation\",\n" +
@@ -221,7 +221,7 @@ export class CommunityJavaTemplates {
       "    ],\n" +
       "    \"educations\":[\n" +
       "       {\n" +
-      "  \"id\":\"5\",\n" +
+      "  \"id\":\"61445159784bca6ef764c6df\",\n" +
       "  \"school\":\"Universidad Complutense de Madrid\",\n" +
       "  \"degree\":\"Administración y dirección de empresas\",\n" +
       "  \"fieldOfStudy\":\"Innovación\",\n" +
@@ -255,13 +255,13 @@ export class CommunityJavaTemplates {
       "JSONObject jsonObject = new JSONObject(onlineEvent);\n" +
       "System.out.println(jsonObject);",
     response: "\n{\n" +
-      "\"id\": \"4\",\n" +
+      "\"id\": \"61445159784bca6ef764c6df\",\n" +
       "\"title\": \"Evento para conocernos\",\n" +
       "\"timestamp\": 1414281600,\n" +
       "\"description\": \"Evento para mejorar el ambiente laboral y las relaciones con el resto de personas del ecosistema\",\n" +
       "\"imageUrl\": null,\n" +
       "\"ownerMember\": {\n" +
-      "    \"id\": \"3\",\n" +
+      "    \"id\": \"61445159784bca6ef764c6df\",\n" +
       "    \"state\": \"ACCEPTED\",\n" +
       "    \"name\": \"Jeremy\",\n" +
       "    \"lastname\": \"Trujillo\",\n" +
@@ -286,7 +286,7 @@ export class CommunityJavaTemplates {
       "    ],\n" +
       "    \"experiences\": [\n" +
       "{\n" +
-      "    \"id\": \"3\",\n" +
+      "    \"id\": \"61445159784bca6ef764c6df\",\n" +
       "    \"title\": \"Prácticas universitarias en Moonshot Innovation\",\n" +
       "    \"type\": \"APPRENTICESHIP\",\n" +
       "    \"company\": \"Moonshot Innovation\",\n" +
@@ -302,7 +302,7 @@ export class CommunityJavaTemplates {
       "    ],\n" +
       "    \"educations\": [\n" +
       "{\n" +
-      "    \"id\": \"3\",\n" +
+      "    \"id\": \"61445159784bca6ef764c6df\",\n" +
       "    \"school\": \"Universidad de Las Palmas de Gran Canaria\",\n" +
       "    \"degree\": \"Ingeniería informática\",\n" +
       "    \"fieldOfStudy\": \"Ingeniería de software\",\n" +
@@ -321,7 +321,7 @@ export class CommunityJavaTemplates {
       "\"url\": \"https://moonshot.ceo/conocernos\",\n" +
       "\"participants\": [\n" +
       "    {\n" +
-      "\"id\": \"1\",\n" +
+      "\"id\": \"60acae8e2f799d228a4d4a85\",\n" +
       "\"state\": \"ACCEPTED\",\n" +
       "\"name\": \"Iñigo\",\n" +
       "\"lastname\": \"Aramburu\",\n" +
@@ -346,7 +346,7 @@ export class CommunityJavaTemplates {
       "],\n" +
       "\"experiences\": [\n" +
       "    {\n" +
-      "\"id\": \"1\",\n" +
+      "\"id\": \"60acae8e2f799d228a4d4a85\",\n" +
       "\"title\": \"Back-end developer en Moonshot Innovation\",\n" +
       "\"type\": \"FULL_TIME\",\n" +
       "\"company\": \"Moonshot Innovation\",\n" +
@@ -362,7 +362,7 @@ export class CommunityJavaTemplates {
       "],\n" +
       "\"educations\": [\n" +
       "    {\n" +
-      "\"id\": \"1\",\n" +
+      "\"id\": \"60acae8e2f799d228a4d4a85\",\n" +
       "\"school\": \"Universidad del País Vasco\",\n" +
       "\"degree\": \"Ingeniería informática\",\n" +
       "\"fieldOfStudy\": \"Ingeniería de software\",\n" +
@@ -377,7 +377,7 @@ export class CommunityJavaTemplates {
       "\"description\": \"Estudios universitarios realizados en la Universidad del País Vasco\"\n" +
       "    },\n" +
       "    {\n" +
-      "\"id\": \"15\",\n" +
+      "\"id\": \"61445159784bca6ef764c6df\",\n" +
       "\"school\": \"Universidad del País Vasco\",\n" +
       "\"degree\": \"Master en desarrollo web\",\n" +
       "\"fieldOfStudy\": \"Desarrollo web\",\n" +
@@ -394,7 +394,7 @@ export class CommunityJavaTemplates {
       "]\n" +
       "    },\n" +
       "    {\n" +
-      "\"id\": \"6\",\n" +
+      "\"id\": \"61445159784bca6ef764c6df\",\n" +
       "\"state\": \"ACCEPTED\",\n" +
       "\"name\": \"David\",\n" +
       "\"lastname\": \"Suriol\",\n" +
@@ -430,7 +430,7 @@ export class CommunityJavaTemplates {
       "],\n" +
       "\"experiences\": [\n" +
       "    {\n" +
-      "\"id\": \"4\",\n" +
+      "\"id\": \"61445159784bca6ef764c6df\",\n" +
       "\"title\": \"Fundador y CEO de Moonshot Innovation\",\n" +
       "\"type\": \"SELF_EMPLOYED\",\n" +
       "\"company\": \"Moonshot Innovation\",\n" +
@@ -446,7 +446,7 @@ export class CommunityJavaTemplates {
       "],\n" +
       "\"educations\": [\n" +
       "    {\n" +
-      "\"id\": \"5\",\n" +
+      "\"id\": \"61445159784bca6ef764c6df\",\n" +
       "\"school\": \"Universidad Complutense de Madrid\",\n" +
       "\"degree\": \"Administración y dirección de empresas\",\n" +
       "\"fieldOfStudy\": \"Innovación\",\n" +
@@ -568,7 +568,7 @@ export class CommunityJavaTemplates {
       "Member member2 = communityApi.members().member(app, \"60accfeb97acf93f5f69e05d\").getResponse();\n" +
       "members.add(member1);\n" +
       "members.add(member2);\n" +
-      "onlineEventSubscriptionEvent.setId(\"1\");\n" +
+      "onlineEventSubscriptionEvent.setId(\"60acae8e2f799d228a4d4a85\");\n" +
       "onlineEventSubscriptionEvent.setParticipants(members);\n" +
       "communityApi.onlineEvents().subscription(app, onlineEventSubscriptionEvent).getResponse();",
     response: null
@@ -589,7 +589,7 @@ export class CommunityJavaTemplates {
       "Member member2 = communityApi.members().member(app, \"60accfeb97acf93f5f69e05d\").getResponse();\n" +
       "members.add(member1);\n" +
       "members.add(member2);\n" +
-      "onlineEventUnsubscriptionEvent.setId(\"1\");\n" +
+      "onlineEventUnsubscriptionEvent.setId(\"60acae8e2f799d228a4d4a85\");\n" +
       "onlineEventUnsubscriptionEvent.setParticipants(members);\n" +
       "communityApi.onlineEvents().unsubscription(app, onlineEventUnsubscriptionEvent).getResponse();",
     response: null
@@ -622,13 +622,13 @@ export class CommunityJavaTemplates {
       "System.out.println(jsonObject);",
     response: "\n[\n" +
       "   {\n" +
-      "      \"id\":\"1\",\n" +
+      "      \"id\":\"60acae8e2f799d228a4d4a85\",\n" +
       "      \"title\":\"Reunion horarios Enero\",\n" +
       "      \"timestamp\":1546387200,\n" +
       "      \"description\":\"Reunion para definir los horarios de la empresa en el mes de Enero\",\n" +
       "      \"imageUrl\":null,\n" +
       "      \"ownerMember\":{\n" +
-      " \"id\":\"4\",\n" +
+      " \"id\":\"61445159784bca6ef764c6df\",\n" +
       " \"state\":\"ACCEPTED\",\n" +
       " \"name\":\"Saulo\",\n" +
       " \"lastname\":\"Santana\",\n" +
@@ -654,7 +654,7 @@ export class CommunityJavaTemplates {
       " ],\n" +
       " \"experiences\":[\n" +
       "    {\n" +
-      "       \"id\":\"3\",\n" +
+      "       \"id\":\"61445159784bca6ef764c6df\",\n" +
       "       \"title\":\"Prácticas universitarias en Moonshot Innovation\",\n" +
       "       \"type\":\"APPRENTICESHIP\",\n" +
       "       \"company\":\"Moonshot Innovation\",\n" +
@@ -670,7 +670,7 @@ export class CommunityJavaTemplates {
       " ],\n" +
       " \"educations\":[\n" +
       "    {\n" +
-      "       \"id\":\"3\",\n" +
+      "       \"id\":\"61445159784bca6ef764c6df\",\n" +
       "       \"school\":\"Universidad de Las Palmas de Gran Canaria\",\n" +
       "       \"degree\":\"Ingeniería informática\",\n" +
       "       \"fieldOfStudy\":\"Ingeniería de software\",\n" +
@@ -689,7 +689,7 @@ export class CommunityJavaTemplates {
       "      \"direction\":\"Aclarar la reparticion de horarios\",\n" +
       "      \"participants\":[\n" +
       " {\n" +
-      "    \"id\":\"3\",\n" +
+      "    \"id\":\"61445159784bca6ef764c6df\",\n" +
       "    \"state\":\"ACCEPTED\",\n" +
       "    \"name\":\"Jeremy\",\n" +
       "    \"lastname\":\"Trujillo\",\n" +
@@ -714,7 +714,7 @@ export class CommunityJavaTemplates {
       "    ],\n" +
       "    \"experiences\":[\n" +
       "       {\n" +
-      "  \"id\":\"3\",\n" +
+      "  \"id\":\"61445159784bca6ef764c6df\",\n" +
       "  \"title\":\"Prácticas universitarias en Moonshot Innovation\",\n" +
       "  \"type\":\"APPRENTICESHIP\",\n" +
       "  \"company\":\"Moonshot Innovation\",\n" +
@@ -730,7 +730,7 @@ export class CommunityJavaTemplates {
       "    ],\n" +
       "    \"educations\":[\n" +
       "       {\n" +
-      "  \"id\":\"3\",\n" +
+      "  \"id\":\"61445159784bca6ef764c6df\",\n" +
       "  \"school\":\"Universidad de Las Palmas de Gran Canaria\",\n" +
       "  \"degree\":\"Ingeniería informática\",\n" +
       "  \"fieldOfStudy\":\"Ingeniería de software\",\n" +
@@ -749,13 +749,13 @@ export class CommunityJavaTemplates {
       "      ]\n" +
       "   },\n" +
       "   {\n" +
-      "      \"id\":\"2\",\n" +
+      "      \"id\":\"61445159784bca6ef764c6df\",\n" +
       "      \"title\":\"Reunion despliegue back-end\",\n" +
       "      \"timestamp\":1542844800,\n" +
       "      \"description\":\"Reunion para desplegar la nueva version de nuestro producto\",\n" +
       "      \"imageUrl\":null,\n" +
       "      \"ownerMember\":{\n" +
-      " \"id\":\"1\",\n" +
+      " \"id\":\"60acae8e2f799d228a4d4a85\",\n" +
       " \"state\":\"ACCEPTED\",\n" +
       " \"name\":\"Iñigo\",\n" +
       " \"lastname\":\"Aramburu\",\n" +
@@ -780,7 +780,7 @@ export class CommunityJavaTemplates {
       " ],\n" +
       " \"experiences\":[\n" +
       "    {\n" +
-      "       \"id\":\"1\",\n" +
+      "       \"id\":\"60acae8e2f799d228a4d4a85\",\n" +
       "       \"title\":\"Back-end developer en Moonshot Innovation\",\n" +
       "       \"type\":\"FULL_TIME\",\n" +
       "       \"company\":\"Moonshot Innovation\",\n" +
@@ -796,7 +796,7 @@ export class CommunityJavaTemplates {
       " ],\n" +
       " \"educations\":[\n" +
       "    {\n" +
-      "       \"id\":\"1\",\n" +
+      "       \"id\":\"60acae8e2f799d228a4d4a85\",\n" +
       "       \"school\":\"Universidad del País Vasco\",\n" +
       "       \"degree\":\"Ingeniería informática\",\n" +
       "       \"fieldOfStudy\":\"Ingeniería de software\",\n" +
@@ -811,7 +811,7 @@ export class CommunityJavaTemplates {
       "       \"description\":\"Estudios universitarios realizados en la Universidad del País Vasco\"\n" +
       "    },\n" +
       "    {\n" +
-      "       \"id\":\"15\",\n" +
+      "       \"id\":\"61445159784bca6ef764c6df\",\n" +
       "       \"school\":\"Universidad del País Vasco\",\n" +
       "       \"degree\":\"Master en desarrollo web\",\n" +
       "       \"fieldOfStudy\":\"Desarrollo web\",\n" +
@@ -830,7 +830,7 @@ export class CommunityJavaTemplates {
       "      \"direction\":\"Terminar la version y ponerla a la vista de los clientes\",\n" +
       "      \"participants\":[\n" +
       " {\n" +
-      "    \"id\":\"3\",\n" +
+      "    \"id\":\"61445159784bca6ef764c6df\",\n" +
       "    \"state\":\"ACCEPTED\",\n" +
       "    \"name\":\"Jeremy\",\n" +
       "    \"lastname\":\"Trujillo\",\n" +
@@ -855,7 +855,7 @@ export class CommunityJavaTemplates {
       "    ],\n" +
       "    \"experiences\":[\n" +
       "       {\n" +
-      "  \"id\":\"3\",\n" +
+      "  \"id\":\"61445159784bca6ef764c6df\",\n" +
       "  \"title\":\"Prácticas universitarias en Moonshot Innovation\",\n" +
       "  \"type\":\"APPRENTICESHIP\",\n" +
       "  \"company\":\"Moonshot Innovation\",\n" +
@@ -871,7 +871,7 @@ export class CommunityJavaTemplates {
       "    ],\n" +
       "    \"educations\":[\n" +
       "       {\n" +
-      "  \"id\":\"3\",\n" +
+      "  \"id\":\"61445159784bca6ef764c6df\",\n" +
       "  \"school\":\"Universidad de Las Palmas de Gran Canaria\",\n" +
       "  \"degree\":\"Ingeniería informática\",\n" +
       "  \"fieldOfStudy\":\"Ingeniería de software\",\n" +
@@ -888,7 +888,7 @@ export class CommunityJavaTemplates {
       "    ]\n" +
       " },\n" +
       " {\n" +
-      "    \"id\":\"4\",\n" +
+      "    \"id\":\"61445159784bca6ef764c6df\",\n" +
       "    \"state\":\"ACCEPTED\",\n" +
       "    \"name\":\"Saulo\",\n" +
       "    \"lastname\":\"Santana\",\n" +
@@ -914,7 +914,7 @@ export class CommunityJavaTemplates {
       "    ],\n" +
       "    \"experiences\":[\n" +
       "       {\n" +
-      "  \"id\":\"3\",\n" +
+      "  \"id\":\"61445159784bca6ef764c6df\",\n" +
       "  \"title\":\"Prácticas universitarias en Moonshot Innovation\",\n" +
       "  \"type\":\"APPRENTICESHIP\",\n" +
       "  \"company\":\"Moonshot Innovation\",\n" +
@@ -930,7 +930,7 @@ export class CommunityJavaTemplates {
       "    ],\n" +
       "    \"educations\":[\n" +
       "       {\n" +
-      "  \"id\":\"3\",\n" +
+      "  \"id\":\"61445159784bca6ef764c6df\",\n" +
       "  \"school\":\"Universidad de Las Palmas de Gran Canaria\",\n" +
       "  \"degree\":\"Ingeniería informática\",\n" +
       "  \"fieldOfStudy\":\"Ingeniería de software\",\n" +
@@ -960,17 +960,17 @@ export class CommunityJavaTemplates {
       "String clientSecret = \"YOUR_CLIENT_SECRET\";\n" +
       "App app = new App(clientId, clientSecret);\n" +
       "CommunityApi communityApi = new CommunityApi();\n" +
-      "FaceToFaceEvent faceToFaceEvent = communityApi.faceToFaceEvents().get(app, \"1\").getResponse();\n" +
+      "FaceToFaceEvent faceToFaceEvent = communityApi.faceToFaceEvents().get(app, \"60acae8e2f799d228a4d4a85\").getResponse();\n" +
       "JSONObject jsonObject = new JSONObject(faceToFaceEvent);\n" +
       "System.out.println(jsonObject);",
     response: "\n{\n" +
-      "\"id\": \"1\",\n" +
+      "\"id\": \"60acae8e2f799d228a4d4a85\",\n" +
       "\"title\": \"Reunion horarios Enero\",\n" +
       "\"timestamp\": 1546387200,\n" +
       "\"description\": \"Reunion para definir los horarios de la empresa en el mes de Enero\",\n" +
       "\"imageUrl\": null,\n" +
       "\"ownerMember\": {\n" +
-      "    \"id\": \"4\",\n" +
+      "    \"id\": \"61445159784bca6ef764c6df\",\n" +
       "    \"state\": \"ACCEPTED\",\n" +
       "    \"name\": \"Saulo\",\n" +
       "    \"lastname\": \"Santana\",\n" +
@@ -996,7 +996,7 @@ export class CommunityJavaTemplates {
       "    ],\n" +
       "    \"experiences\": [\n" +
       "{\n" +
-      "    \"id\": \"3\",\n" +
+      "    \"id\": \"61445159784bca6ef764c6df\",\n" +
       "    \"title\": \"Prácticas universitarias en Moonshot Innovation\",\n" +
       "    \"type\": \"APPRENTICESHIP\",\n" +
       "    \"company\": \"Moonshot Innovation\",\n" +
@@ -1012,7 +1012,7 @@ export class CommunityJavaTemplates {
       "    ],\n" +
       "    \"educations\": [\n" +
       "{\n" +
-      "    \"id\": \"3\",\n" +
+      "    \"id\": \"61445159784bca6ef764c6df\",\n" +
       "    \"school\": \"Universidad de Las Palmas de Gran Canaria\",\n" +
       "    \"degree\": \"Ingeniería informática\",\n" +
       "    \"fieldOfStudy\": \"Ingeniería de software\",\n" +
@@ -1031,7 +1031,7 @@ export class CommunityJavaTemplates {
       "\"direction\": \"Aclarar la reparticion de horarios\",\n" +
       "\"participants\": [\n" +
       "    {\n" +
-      "\"id\": \"3\",\n" +
+      "\"id\": \"61445159784bca6ef764c6df\",\n" +
       "\"state\": \"ACCEPTED\",\n" +
       "\"name\": \"Jeremy\",\n" +
       "\"lastname\": \"Trujillo\",\n" +
@@ -1056,7 +1056,7 @@ export class CommunityJavaTemplates {
       "],\n" +
       "\"experiences\": [\n" +
       "    {\n" +
-      "\"id\": \"3\",\n" +
+      "\"id\": \"61445159784bca6ef764c6df\",\n" +
       "\"title\": \"Prácticas universitarias en Moonshot Innovation\",\n" +
       "\"type\": \"APPRENTICESHIP\",\n" +
       "\"company\": \"Moonshot Innovation\",\n" +
@@ -1072,7 +1072,7 @@ export class CommunityJavaTemplates {
       "],\n" +
       "\"educations\": [\n" +
       "    {\n" +
-      "\"id\": \"3\",\n" +
+      "\"id\": \"61445159784bca6ef764c6df\",\n" +
       "\"school\": \"Universidad de Las Palmas de Gran Canaria\",\n" +
       "\"degree\": \"Ingeniería informática\",\n" +
       "\"fieldOfStudy\": \"Ingeniería de software\",\n" +
@@ -1195,7 +1195,7 @@ export class CommunityJavaTemplates {
       "Member member2 = communityApi.members().member(app, \"60accfeb97acf93f5f69e05d\").getResponse();\n" +
       "members.add(member1);\n" +
       "members.add(member2);\n" +
-      "faceToFaceEventSubscriptionEvent.setId(\"1\");\n" +
+      "faceToFaceEventSubscriptionEvent.setId(\"60acae8e2f799d228a4d4a85\");\n" +
       "faceToFaceEventSubscriptionEvent.setParticipants(members);\n" +
       "communityApi.faceToFaceEvents().subscription(app, faceToFaceEventSubscriptionEvent);",
     response: null
@@ -1216,7 +1216,7 @@ export class CommunityJavaTemplates {
       "Member member2 = communityApi.members().member(app, \"60accfeb97acf93f5f69e05d\").getResponse();\n" +
       "members.add(member1);\n" +
       "members.add(member2);\n" +
-      "faceToFaceEventUnsubscriptionEvent.setId(\"1\");\n" +
+      "faceToFaceEventUnsubscriptionEvent.setId(\"60acae8e2f799d228a4d4a85\");\n" +
       "faceToFaceEventUnsubscriptionEvent.setParticipants(members);\n" +
       "communityApi.faceToFaceEvents().unsubscription(app, faceToFaceEventUnsubscriptionEvent);",
     response: null
@@ -1249,9 +1249,9 @@ export class CommunityJavaTemplates {
       "System.out.println(jsonObject);",
     response: "\n[\n" +
       "   {\n" +
-      "      \"id\":\"3\",\n" +
+      "      \"id\":\"61445159784bca6ef764c6df\",\n" +
       "      \"ownerMember\":{\n" +
-      " \"id\":\"7\",\n" +
+      " \"id\":\"61445159784bca6ef764c6df\",\n" +
       " \"state\":\"ACCEPTED\",\n" +
       " \"name\":\"Jorge\",\n" +
       " \"lastname\":\"Perez\",\n" +
@@ -1281,7 +1281,7 @@ export class CommunityJavaTemplates {
       " ],\n" +
       " \"experiences\":[\n" +
       "    {\n" +
-      "       \"id\":\"5\",\n" +
+      "       \"id\":\"61445159784bca6ef764c6df\",\n" +
       "       \"title\":\"Reponedor en Mercadona\",\n" +
       "       \"type\":\"PART_TIME\",\n" +
       "       \"company\":\"Mercadona\",\n" +
@@ -1297,7 +1297,7 @@ export class CommunityJavaTemplates {
       " ],\n" +
       " \"educations\":[\n" +
       "    {\n" +
-      "       \"id\":\"6\",\n" +
+      "       \"id\":\"61445159784bca6ef764c6df\",\n" +
       "       \"school\":\"Universidad de Venezuela\",\n" +
       "       \"degree\":\"Derecho\",\n" +
       "       \"fieldOfStudy\":\"Derecho mercantil\",\n" +
@@ -1312,7 +1312,7 @@ export class CommunityJavaTemplates {
       "       \"description\":null\n" +
       "    },\n" +
       "    {\n" +
-      "       \"id\":\"14\",\n" +
+      "       \"id\":\"61445159784bca6ef764c6df\",\n" +
       "       \"school\":\"Universidad de Venezuela\",\n" +
       "       \"degree\":\"Master en Derecho\",\n" +
       "       \"fieldOfStudy\":\"Derecho en el Ejercicio de la Abogacía\",\n" +
@@ -1330,20 +1330,20 @@ export class CommunityJavaTemplates {
       "      },\n" +
       "      \"participants\":[\n" +
       " {\n" +
-      "    \"memberId\":\"9\",\n" +
+      "    \"memberId\":\"61445159784bca6ef764c6df\",\n" +
       "    \"state\":\"ACTIVE\"\n" +
       " },\n" +
       " {\n" +
-      "    \"memberId\":\"8\",\n" +
+      "    \"memberId\":\"61445159784bca6ef764c6df\",\n" +
       "    \"state\":\"ACTIVE\"\n" +
       " }\n" +
       "      ],\n" +
       "      \"createdAt\":1621419330000\n" +
       "   },\n" +
       "   {\n" +
-      "      \"id\":\"4\",\n" +
+      "      \"id\":\"61445159784bca6ef764c6df\",\n" +
       "      \"ownerMember\":{\n" +
-      " \"id\":\"3\",\n" +
+      " \"id\":\"61445159784bca6ef764c6df\",\n" +
       " \"state\":\"ACCEPTED\",\n" +
       " \"name\":\"Jeremy\",\n" +
       " \"lastname\":\"Trujillo\",\n" +
@@ -1368,7 +1368,7 @@ export class CommunityJavaTemplates {
       " ],\n" +
       " \"experiences\":[\n" +
       "    {\n" +
-      "       \"id\":\"3\",\n" +
+      "       \"id\":\"61445159784bca6ef764c6df\",\n" +
       "       \"title\":\"Prácticas universitarias en Moonshot Innovation\",\n" +
       "       \"type\":\"APPRENTICESHIP\",\n" +
       "       \"company\":\"Moonshot Innovation\",\n" +
@@ -1384,7 +1384,7 @@ export class CommunityJavaTemplates {
       " ],\n" +
       " \"educations\":[\n" +
       "    {\n" +
-      "       \"id\":\"3\",\n" +
+      "       \"id\":\"61445159784bca6ef764c6df\",\n" +
       "       \"school\":\"Universidad de Las Palmas de Gran Canaria\",\n" +
       "       \"degree\":\"Ingeniería informática\",\n" +
       "       \"fieldOfStudy\":\"Ingeniería de software\",\n" +
@@ -1402,11 +1402,11 @@ export class CommunityJavaTemplates {
       "      },\n" +
       "      \"participants\":[\n" +
       " {\n" +
-      "    \"memberId\":\"7\",\n" +
+      "    \"memberId\":\"60acae8e2f799d228a4d4a85\",\n" +
       "    \"state\":\"ACTIVE\"\n" +
       " },\n" +
       " {\n" +
-      "    \"memberId\":\"1\",\n" +
+      "    \"memberId\":\"60acae8e2f799d228a4d4a85\",\n" +
       "    \"state\":\"ACTIVE\"\n" +
       " }\n" +
       "      ],\n" +
@@ -1429,9 +1429,9 @@ export class CommunityJavaTemplates {
       "System.out.println(jsonObject);",
     response: "\n[\n" +
       "   {\n" +
-      "      \"id\":\"3\",\n" +
+      "      \"id\":\"61445159784bca6ef764c6df\",\n" +
       "      \"ownerMember\":{\n" +
-      " \"id\":\"7\",\n" +
+      " \"id\":\"61445159784bca6ef764c6df\",\n" +
       " \"state\":\"ACCEPTED\",\n" +
       " \"name\":\"Jorge\",\n" +
       " \"lastname\":\"Perez\",\n" +
@@ -1461,7 +1461,7 @@ export class CommunityJavaTemplates {
       " ],\n" +
       " \"experiences\":[\n" +
       "    {\n" +
-      "       \"id\":\"5\",\n" +
+      "       \"id\":\"61445159784bca6ef764c6df\",\n" +
       "       \"title\":\"Reponedor en Mercadona\",\n" +
       "       \"type\":\"PART_TIME\",\n" +
       "       \"company\":\"Mercadona\",\n" +
@@ -1477,7 +1477,7 @@ export class CommunityJavaTemplates {
       " ],\n" +
       " \"educations\":[\n" +
       "    {\n" +
-      "       \"id\":\"6\",\n" +
+      "       \"id\":\"61445159784bca6ef764c6df\",\n" +
       "       \"school\":\"Universidad de Venezuela\",\n" +
       "       \"degree\":\"Derecho\",\n" +
       "       \"fieldOfStudy\":\"Derecho mercantil\",\n" +
@@ -1492,7 +1492,7 @@ export class CommunityJavaTemplates {
       "       \"description\":null\n" +
       "    },\n" +
       "    {\n" +
-      "       \"id\":\"14\",\n" +
+      "       \"id\":\"61445159784bca6ef764c6df\",\n" +
       "       \"school\":\"Universidad de Venezuela\",\n" +
       "       \"degree\":\"Master en Derecho\",\n" +
       "       \"fieldOfStudy\":\"Derecho en el Ejercicio de la Abogacía\",\n" +
@@ -1510,20 +1510,20 @@ export class CommunityJavaTemplates {
       "      },\n" +
       "      \"participants\":[\n" +
       " {\n" +
-      "    \"memberId\":\"9\",\n" +
+      "    \"memberId\":\"61445159784bca6ef764c6df\",\n" +
       "    \"state\":\"ACTIVE\"\n" +
       " },\n" +
       " {\n" +
-      "    \"memberId\":\"8\",\n" +
+      "    \"memberId\":\"61445159784bca6ef764c6df\",\n" +
       "    \"state\":\"ACTIVE\"\n" +
       " }\n" +
       "      ],\n" +
       "      \"createdAt\":1621419330000\n" +
       "   },\n" +
       "   {\n" +
-      "      \"id\":\"4\",\n" +
+      "      \"id\":\"61445159784bca6ef764c6df\",\n" +
       "      \"ownerMember\":{\n" +
-      " \"id\":\"3\",\n" +
+      " \"id\":\"61445159784bca6ef764c6df\",\n" +
       " \"state\":\"ACCEPTED\",\n" +
       " \"name\":\"Jeremy\",\n" +
       " \"lastname\":\"Trujillo\",\n" +
@@ -1548,7 +1548,7 @@ export class CommunityJavaTemplates {
       " ],\n" +
       " \"experiences\":[\n" +
       "    {\n" +
-      "       \"id\":\"3\",\n" +
+      "       \"id\":\"61445159784bca6ef764c6df\",\n" +
       "       \"title\":\"Prácticas universitarias en Moonshot Innovation\",\n" +
       "       \"type\":\"APPRENTICESHIP\",\n" +
       "       \"company\":\"Moonshot Innovation\",\n" +
@@ -1564,7 +1564,7 @@ export class CommunityJavaTemplates {
       " ],\n" +
       " \"educations\":[\n" +
       "    {\n" +
-      "       \"id\":\"3\",\n" +
+      "       \"id\":\"61445159784bca6ef764c6df\",\n" +
       "       \"school\":\"Universidad de Las Palmas de Gran Canaria\",\n" +
       "       \"degree\":\"Ingeniería informática\",\n" +
       "       \"fieldOfStudy\":\"Ingeniería de software\",\n" +
@@ -1582,11 +1582,11 @@ export class CommunityJavaTemplates {
       "      },\n" +
       "      \"participants\":[\n" +
       " {\n" +
-      "    \"memberId\":\"7\",\n" +
+      "    \"memberId\":\"60acae8e2f799d228a4d4a85\",\n" +
       "    \"state\":\"ACTIVE\"\n" +
       " },\n" +
       " {\n" +
-      "    \"memberId\":\"1\",\n" +
+      "    \"memberId\":\"60acae8e2f799d228a4d4a85\",\n" +
       "    \"state\":\"ACTIVE\"\n" +
       " }\n" +
       "      ],\n" +
@@ -1608,16 +1608,16 @@ export class CommunityJavaTemplates {
       "JSONObject jsonObject = new JSONObject(directChats);\n" +
       "System.out.println(jsonObject);",
     response: "\n{\n" +
-      "\"id\": \"1\",\n" +
+      "\"id\": \"60acae8e2f799d228a4d4a85\",\n" +
       "\"ownerMember\": {\n" +
-      "    \"id\": \"1\",\n" +
+      "    \"id\": \"60acae8e2f799d228a4d4a85\",\n" +
       "    \"state\": \"ACCEPTED\",\n" +
       "    \"name\": \"Iñigo\",\n" +
       "    \"lastname\": \"Aramburu\",\n" +
       "    \"address\": {\n" +
-      "\"lat\": 43.3038929,\n" +
-      "\"lng\": -1.9604012,\n" +
-      "\"formatted\": \"Wroclaw, 1, 20014 San Sebastián, Gipuzkoa, España\"\n" +
+      "    \"lat\": 43.3038929,\n" +
+      "    \"lng\": -1.9604012,\n" +
+      "    \"formatted\": \"Wroclaw, 1, 20014 San Sebastián, Gipuzkoa, España\"\n" +
       "    },\n" +
       "    \"email\": \"iaramburu@moonshot.ceo\",\n" +
       "    \"about\": \"Experto en Ingeniería del Software.\",\n" +
@@ -1635,7 +1635,7 @@ export class CommunityJavaTemplates {
       "    ],\n" +
       "    \"experiences\": [\n" +
       "{\n" +
-      "    \"id\": \"1\",\n" +
+      "    \"id\": \"60acae8e2f799d228a4d4a85\",\n" +
       "    \"title\": \"Back-end developer en Moonshot Innovation\",\n" +
       "    \"type\": \"FULL_TIME\",\n" +
       "    \"company\": \"Moonshot Innovation\",\n" +
@@ -1651,7 +1651,7 @@ export class CommunityJavaTemplates {
       "    ],\n" +
       "    \"educations\": [\n" +
       "{\n" +
-      "    \"id\": \"1\",\n" +
+      "    \"id\": \"60acae8e2f799d228a4d4a85\",\n" +
       "    \"school\": \"Universidad del País Vasco\",\n" +
       "    \"degree\": \"Ingeniería informática\",\n" +
       "    \"fieldOfStudy\": \"Ingeniería de software\",\n" +
@@ -1666,7 +1666,7 @@ export class CommunityJavaTemplates {
       "    \"description\": \"Estudios universitarios realizados en la Universidad del País Vasco\"\n" +
       "},\n" +
       "{\n" +
-      "    \"id\": \"15\",\n" +
+      "    \"id\": \"61445159784bca6ef764c6df\",\n" +
       "    \"school\": \"Universidad del País Vasco\",\n" +
       "    \"degree\": \"Master en desarrollo web\",\n" +
       "    \"fieldOfStudy\": \"Desarrollo web\",\n" +
@@ -1684,11 +1684,11 @@ export class CommunityJavaTemplates {
       "},\n" +
       "\"participants\": [\n" +
       "    {\n" +
-      "\"memberId\": \"8\",\n" +
+      "\"memberId\": \"61445159784bca6ef764c6df\",\n" +
       "\"state\": \"ACTIVE\"\n" +
       "    },\n" +
       "    {\n" +
-      "\"memberId\": \"2\",\n" +
+      "\"memberId\": \"61445159784bca6ef764c6df\",\n" +
       "\"state\": \"INACTIVE\"\n" +
       "    }\n" +
       "],\n" +
@@ -1743,7 +1743,7 @@ export class CommunityJavaTemplates {
       "String clientSecret = \"YOUR_CLIENT_SECRET\";\n" +
       "App app = new App(clientId, clientSecret);\n" +
       "CommunityApi communityApi = new CommunityApi();\n" +
-      "communityApi.directChats().delete(app, \"1\");",
+      "communityApi.directChats().delete(app, \"60acae8e2f799d228a4d4a85\");",
     response: null
   }
 
@@ -1760,7 +1760,7 @@ export class CommunityJavaTemplates {
       "messageAddEvent.setModule(\"community\");\n" +
       "messageAddEvent.setContent(\"New message\");\n" +
       "messageAddEvent.setDocuments(null);\n" +
-      "communityApi.directChats().messageAdd(app, \"1\", messageAddEvent);",
+      "communityApi.directChats().messageAdd(app, \"60acae8e2f799d228a4d4a85\", messageAddEvent);",
     response: null
   }
 
@@ -1773,14 +1773,14 @@ export class CommunityJavaTemplates {
       "String clientSecret = \"YOUR_CLIENT_SECRET\";\n" +
       "App app = new App(clientId, clientSecret);\n" +
       "CommunityApi communityApi = new CommunityApi();\n" +
-      "List<Message> messages = communityApi.directChats().messagesByRoomId(app, \"1\").getResponse();\n" +
+      "List<Message> messages = communityApi.directChats().messagesByRoomId(app, \"60acae8e2f799d228a4d4a85\").getResponse();\n" +
       "JSONArray jsonObject = new JSONArray(messages);\n" +
       "System.out.println(jsonObject);",
     response: "\n[\n" +
       "   {\n" +
-      "      \"id\":\"1\",\n" +
-      "      \"roomId\":\"1\",\n" +
-      "      \"authorMemberId\":\"1\",\n" +
+      "      \"id\":\"61445159784bca6ef764c6df\",\n" +
+      "      \"roomId\":\"61445159784bca6ef764c6df\",\n" +
+      "      \"authorMemberId\":\"61445159784bca6ef764c6df\",\n" +
       "      \"content\":\"Hola, ¿Me podrías pasar el archivo?\",\n" +
       "      \"documents\":[\n" +
       " \n" +
@@ -1788,17 +1788,17 @@ export class CommunityJavaTemplates {
       "      \"createdAt\":1621412130000\n" +
       "   },\n" +
       "   {\n" +
-      "      \"id\":\"2\",\n" +
-      "      \"roomId\":\"1\",\n" +
-      "      \"authorMemberId\":\"2\",\n" +
+      "      \"id\":\"61445159784bca6ef764c6df\",\n" +
+      "      \"roomId\":\"61445159784bca6ef764c6df\",\n" +
+      "      \"authorMemberId\":\"61445159784bca6ef764c6df\",\n" +
       "      \"content\":\"Sí, claro.\",\n" +
       "      \"documents\":[\n" +
       " {\n" +
-      "    \"id\":\"1\",\n" +
+      "    \"id\":\"61445159784bca6ef764c6df\",\n" +
       "    \"link\":\"https://moonshot.ceo/archivoTrabajo.pdf\",\n" +
       "    \"category\":\"PDF\",\n" +
-      "    \"roomId\":\"1\",\n" +
-      "    \"memberId\":\"2\",\n" +
+      "    \"roomId\":\"61445159784bca6ef764c6df\",\n" +
+      "    \"memberId\":\"61445159784bca6ef764c6df\",\n" +
       "    \"filename\":\"archivoTrabajo\",\n" +
       "    \"createdAt\":1621412130000\n" +
       " }\n" +
@@ -1806,9 +1806,9 @@ export class CommunityJavaTemplates {
       "      \"createdAt\":1621415730000\n" +
       "   },\n" +
       "   {\n" +
-      "      \"id\":\"3\",\n" +
-      "      \"roomId\":\"1\",\n" +
-      "      \"authorMemberId\":\"3\",\n" +
+      "      \"id\":\"61445159784bca6ef764c6df\",\n" +
+      "      \"roomId\":\"61445159784bca6ef764c6df\",\n" +
+      "      \"authorMemberId\":\"61445159784bca6ef764c6df\",\n" +
       "      \"content\":\"Yo salgo en breve de trabajar por si te quieres tomar un cafe\",\n" +
       "      \"documents\":[],\n" +
       "      \"createdAt\":1621419330000\n" +
@@ -1825,7 +1825,7 @@ export class CommunityJavaTemplates {
       "String clientSecret = \"YOUR_CLIENT_SECRET\";\n" +
       "App app = new App(clientId, clientSecret);\n" +
       "CommunityApi communityApi = new CommunityApi();\n" +
-      "communityApi.directChats().messageDelete(app, \"1\", \"1\");",
+      "communityApi.directChats().messageDelete(app, \"61445159784bca6ef764c6df\", \"61445159784bca6ef764c6df\");",
     response: null
   }
 
@@ -1838,34 +1838,34 @@ export class CommunityJavaTemplates {
       "String clientSecret = \"YOUR_CLIENT_SECRET\";\n" +
       "App app = new App(clientId, clientSecret);\n" +
       "CommunityApi communityApi = new CommunityApi();\n" +
-      "List<Document> documents = communityApi.directChats().documents(app, \"1\").getResponse();\n" +
+      "List<Document> documents = communityApi.directChats().documents(app, \"61445159784bca6ef764c6df\").getResponse();\n" +
       "JSONArray jsonObject = new JSONArray(documents);\n" +
       "System.out.println(jsonObject);",
     response: "\n[\n" +
       "   {\n" +
-      "      \"id\":\"1\",\n" +
+      "      \"id\":\"61445159784bca6ef764c6df\",\n" +
       "      \"link\":\"https://moonshot.ceo/archivoTrabajo.pdf\",\n" +
       "      \"category\":\"PDF\",\n" +
-      "      \"roomId\":\"1\",\n" +
-      "      \"memberId\":\"2\",\n" +
+      "      \"roomId\":\"61445159784bca6ef764c6df\",\n" +
+      "      \"memberId\":\"61445159784bca6ef764c6df\",\n" +
       "      \"filename\":\"archivoTrabajo\",\n" +
       "      \"createdAt\":1621412130000\n" +
       "   },\n" +
       "   {\n" +
-      "      \"id\":\"2\",\n" +
+      "      \"id\":\"61445159784bca6ef764c6df\",\n" +
       "      \"link\":\"https://moonshot.ceo/planosPrimeraPlanta.pdf\",\n" +
       "      \"category\":\"PDF\",\n" +
-      "      \"roomId\":\"3\",\n" +
-      "      \"memberId\":\"5\",\n" +
+      "      \"roomId\":\"61445159784bca6ef764c6df\",\n" +
+      "      \"memberId\":\"61445159784bca6ef764c6df\",\n" +
       "      \"filename\":\"planosPrimeraPlanta\",\n" +
       "      \"createdAt\":1621415730000\n" +
       "   },\n" +
       "   {\n" +
-      "      \"id\":\"3\",\n" +
+      "      \"id\":\"61445159784bca6ef764c6df\",\n" +
       "      \"link\":\"https://moonshot.ceo/planosSegundaPlanta.image\",\n" +
       "      \"category\":\"IMAGE\",\n" +
-      "      \"roomId\":\"3\",\n" +
-      "      \"memberId\":\"6\",\n" +
+      "      \"roomId\":\"61445159784bca6ef764c6df\",\n" +
+      "      \"memberId\":\"61445159784bca6ef764c6df\",\n" +
       "      \"filename\":\"planosSegundaPlanta\",\n" +
       "      \"createdAt\":1621419330000\n" +
       "   }\n" +
@@ -1881,20 +1881,20 @@ export class CommunityJavaTemplates {
       "String clientSecret = \"YOUR_CLIENT_SECRET\";\n" +
       "App app = new App(clientId, clientSecret);\n" +
       "CommunityApi communityApi = new CommunityApi();\n" +
-      "List<Link> documents = communityApi.directChats().links(app, \"1\").getResponse();\n" +
+      "List<Link> documents = communityApi.directChats().links(app, \"61445159784bca6ef764c6df\").getResponse();\n" +
       "JSONArray jsonObject = new JSONArray(documents);\n" +
       "System.out.println(jsonObject);",
     response: "\n[\n" +
       "   {\n" +
-      "      \"id\":\"1\",\n" +
+      "      \"id\":\"61445159784bca6ef764c6df\",\n" +
       "      \"url\":\"https://dev.moonshot.ceo/documento1.pdf\",\n" +
-      "      \"roomId\":\"2\",\n" +
+      "      \"roomId\":\"61445159784bca6ef764c6df\",\n" +
       "      \"createdAt\":1637417185\n" +
       "   },\n" +
       "   {\n" +
-      "      \"id\":\"2\",\n" +
+      "      \"id\":\"61445159784bca6ef764c6df\",\n" +
       "      \"url\":\"https://dev.moonshot.ceo/documento2.pdf\",\n" +
-      "      \"roomId\":\"7\",\n" +
+      "      \"roomId\":\"61445159784bca6ef764c6df\",\n" +
       "      \"createdAt\":1637417190\n" +
       "   }\n" +
       "]"
@@ -1910,7 +1910,7 @@ export class CommunityJavaTemplates {
       "App app = new App(clientId, clientSecret);\n" +
       "CommunityApi communityApi = new CommunityApi();\n" +
       "File file = new File(\"C:\\Users\\saulo\\OneDrive\\Imágenes\\evento.jpg\");\n" +
-      "communityApi.directChats().upload(app, \"1\", file);",
+      "communityApi.directChats().upload(app, \"61445159784bca6ef764c6df\", file);",
     response: "\nhttps://localhost/drive/direct-chats/files/1/61eaffcdad2bd12319fd4eba.png"
   }
 
@@ -1928,9 +1928,9 @@ export class CommunityJavaTemplates {
       "System.out.println(jsonObject);",
     response: "\n[\n" +
       "   {\n" +
-      "      \"id\":\"1\",\n" +
+      "      \"id\":\"61445159784bca6ef764c6df\",\n" +
       "      \"ownerMember\":{\n" +
-      " \"id\":\"5\",\n" +
+      " \"id\":\"61445159784bca6ef764c6df\",\n" +
       " \"state\":\"ACCEPTED\",\n" +
       " \"name\":\"Victor\",\n" +
       " \"lastname\":\"Ceballos\",\n" +
@@ -1962,7 +1962,7 @@ export class CommunityJavaTemplates {
       " \"experiences\":null,\n" +
       " \"educations\":[\n" +
       "    {\n" +
-      "       \"id\":\"4\",\n" +
+      "       \"id\":\"61445159784bca6ef764c6df\",\n" +
       "       \"school\":\"Universidad de Las Palmas de Gran Canaria\",\n" +
       "       \"degree\":\"Ingeniería industrial\",\n" +
       "       \"fieldOfStudy\":\"Diseño de instalaciones\",\n" +
@@ -1982,15 +1982,15 @@ export class CommunityJavaTemplates {
       "      \"description\":\"Reunion para hablar de los objetivos a futuro\",\n" +
       "      \"participants\":[\n" +
       " {\n" +
-      "    \"memberId\":\"5\",\n" +
+      "    \"memberId\":\"61445159784bca6ef764c6df\",\n" +
       "    \"state\":\"ACTIVE\"\n" +
       " },\n" +
       " {\n" +
-      "    \"memberId\":\"9\",\n" +
+      "    \"memberId\":\"61445159784bca6ef764c6df\",\n" +
       "    \"state\":\"ACTIVE\"\n" +
       " },\n" +
       " {\n" +
-      "    \"memberId\":\"2\",\n" +
+      "    \"memberId\":\"61445159784bca6ef764c6df\",\n" +
       "    \"state\":\"INACTIVE\"\n" +
       " }\n" +
       "      ],\n" +
@@ -2008,9 +2008,9 @@ export class CommunityJavaTemplates {
       "      ]\n" +
       "   },\n" +
       "   {\n" +
-      "      \"id\":\"2\",\n" +
+      "      \"id\":\"61445159784bca6ef764c6df\",\n" +
       "      \"ownerMember\":{\n" +
-      " \"id\":\"3\",\n" +
+      " \"id\":\"61445159784bca6ef764c6df\",\n" +
       " \"state\":\"ACCEPTED\",\n" +
       " \"name\":\"Jeremy\",\n" +
       " \"lastname\":\"Trujillo\",\n" +
@@ -2035,7 +2035,7 @@ export class CommunityJavaTemplates {
       " ],\n" +
       " \"experiences\":[\n" +
       "    {\n" +
-      "       \"id\":\"3\",\n" +
+      "       \"id\":\"61445159784bca6ef764c6df\",\n" +
       "       \"title\":\"Prácticas universitarias en Moonshot Innovation\",\n" +
       "       \"type\":\"APPRENTICESHIP\",\n" +
       "       \"company\":\"Moonshot Innovation\",\n" +
@@ -2051,7 +2051,7 @@ export class CommunityJavaTemplates {
       " ],\n" +
       " \"educations\":[\n" +
       "    {\n" +
-      "       \"id\":\"3\",\n" +
+      "       \"id\":\"61445159784bca6ef764c6df\",\n" +
       "       \"school\":\"Universidad de Las Palmas de Gran Canaria\",\n" +
       "       \"degree\":\"Ingeniería informática\",\n" +
       "       \"fieldOfStudy\":\"Ingeniería de software\",\n" +
@@ -2071,19 +2071,19 @@ export class CommunityJavaTemplates {
       "      \"description\":\"Frente al problema sucedido esta mañana debemos tomar decisiones\",\n" +
       "      \"participants\":[\n" +
       " {\n" +
-      "    \"memberId\":\"3\",\n" +
+      "    \"memberId\":\"61445159784bca6ef764c6df\",\n" +
       "    \"state\":\"INACTIVE\"\n" +
       " },\n" +
       " {\n" +
-      "    \"memberId\":\"6\",\n" +
+      "    \"memberId\":\"61445159784bca6ef764c6df\",\n" +
       "    \"state\":\"ACTIVE\"\n" +
       " },\n" +
       " {\n" +
-      "    \"memberId\":\"7\",\n" +
+      "    \"memberId\":\"61445159784bca6ef764c6df\",\n" +
       "    \"state\":\"ACTIVE\"\n" +
       " },\n" +
       " {\n" +
-      "    \"memberId\":\"5\",\n" +
+      "    \"memberId\":\"61445159784bca6ef764c6df\",\n" +
       "    \"state\":\"ACTIVE\"\n" +
       " }\n" +
       "      ],\n" +
@@ -2107,9 +2107,9 @@ export class CommunityJavaTemplates {
       "System.out.println(jsonObject);",
     response: "\n[\n" +
       "   {\n" +
-      "      \"id\":\"1\",\n" +
+      "      \"id\":\"61445159784bca6ef764c6df\",\n" +
       "      \"ownerMember\":{\n" +
-      " \"id\":\"5\",\n" +
+      " \"id\":\"61445159784bca6ef764c6df\",\n" +
       " \"state\":\"ACCEPTED\",\n" +
       " \"name\":\"Victor\",\n" +
       " \"lastname\":\"Ceballos\",\n" +
@@ -2141,7 +2141,7 @@ export class CommunityJavaTemplates {
       " \"experiences\":null,\n" +
       " \"educations\":[\n" +
       "    {\n" +
-      "       \"id\":\"4\",\n" +
+      "       \"id\":\"61445159784bca6ef764c6df\",\n" +
       "       \"school\":\"Universidad de Las Palmas de Gran Canaria\",\n" +
       "       \"degree\":\"Ingeniería industrial\",\n" +
       "       \"fieldOfStudy\":\"Diseño de instalaciones\",\n" +
@@ -2161,15 +2161,15 @@ export class CommunityJavaTemplates {
       "      \"description\":\"Reunion para hablar de los objetivos a futuro\",\n" +
       "      \"participants\":[\n" +
       " {\n" +
-      "    \"memberId\":\"5\",\n" +
+      "    \"memberId\":\"61445159784bca6ef764c6df\",\n" +
       "    \"state\":\"ACTIVE\"\n" +
       " },\n" +
       " {\n" +
-      "    \"memberId\":\"9\",\n" +
+      "    \"memberId\":\"61445159784bca6ef764c6df\",\n" +
       "    \"state\":\"ACTIVE\"\n" +
       " },\n" +
       " {\n" +
-      "    \"memberId\":\"2\",\n" +
+      "    \"memberId\":\"61445159784bca6ef764c6df\",\n" +
       "    \"state\":\"INACTIVE\"\n" +
       " }\n" +
       "      ],\n" +
@@ -2187,9 +2187,9 @@ export class CommunityJavaTemplates {
       "      ]\n" +
       "   },\n" +
       "   {\n" +
-      "      \"id\":\"2\",\n" +
+      "      \"id\":\"61445159784bca6ef764c6df\",\n" +
       "      \"ownerMember\":{\n" +
-      " \"id\":\"3\",\n" +
+      " \"id\":\"61445159784bca6ef764c6df\",\n" +
       " \"state\":\"ACCEPTED\",\n" +
       " \"name\":\"Jeremy\",\n" +
       " \"lastname\":\"Trujillo\",\n" +
@@ -2214,7 +2214,7 @@ export class CommunityJavaTemplates {
       " ],\n" +
       " \"experiences\":[\n" +
       "    {\n" +
-      "       \"id\":\"3\",\n" +
+      "       \"id\":\"61445159784bca6ef764c6df\",\n" +
       "       \"title\":\"Prácticas universitarias en Moonshot Innovation\",\n" +
       "       \"type\":\"APPRENTICESHIP\",\n" +
       "       \"company\":\"Moonshot Innovation\",\n" +
@@ -2230,7 +2230,7 @@ export class CommunityJavaTemplates {
       " ],\n" +
       " \"educations\":[\n" +
       "    {\n" +
-      "       \"id\":\"3\",\n" +
+      "       \"id\":\"61445159784bca6ef764c6df\",\n" +
       "       \"school\":\"Universidad de Las Palmas de Gran Canaria\",\n" +
       "       \"degree\":\"Ingeniería informática\",\n" +
       "       \"fieldOfStudy\":\"Ingeniería de software\",\n" +
@@ -2250,19 +2250,19 @@ export class CommunityJavaTemplates {
       "      \"description\":\"Frente al problema sucedido esta mañana debemos tomar decisiones\",\n" +
       "      \"participants\":[\n" +
       " {\n" +
-      "    \"memberId\":\"3\",\n" +
+      "    \"memberId\":\"61445159784bca6ef764c6df\",\n" +
       "    \"state\":\"INACTIVE\"\n" +
       " },\n" +
       " {\n" +
-      "    \"memberId\":\"6\",\n" +
+      "    \"memberId\":\"61445159784bca6ef764c6df\",\n" +
       "    \"state\":\"ACTIVE\"\n" +
       " },\n" +
       " {\n" +
-      "    \"memberId\":\"7\",\n" +
+      "    \"memberId\":\"61445159784bca6ef764c6df\",\n" +
       "    \"state\":\"ACTIVE\"\n" +
       " },\n" +
       " {\n" +
-      "    \"memberId\":\"5\",\n" +
+      "    \"memberId\":\"61445159784bca6ef764c6df\",\n" +
       "    \"state\":\"ACTIVE\"\n" +
       " }\n" +
       "      ],\n" +
@@ -2281,13 +2281,13 @@ export class CommunityJavaTemplates {
       "String clientSecret = \"YOUR_CLIENT_SECRET\";\n" +
       "App app = new App(clientId, clientSecret);\n" +
       "CommunityApi communityApi = new CommunityApi();\n" +
-      "FollowUpRoom followUpRoom = communityApi.followUpRooms().get(app, \"1\").getResponse();\n" +
+      "FollowUpRoom followUpRoom = communityApi.followUpRooms().get(app, \"61445159784bca6ef764c6df\").getResponse();\n" +
       "JSONObject jsonObject = new JSONObject(followUpRoom);\n" +
       "System.out.println(jsonObject);",
     response: "\n{\n" +
-      "      \"id\":\"1\",\n" +
+      "      \"id\":\"61445159784bca6ef764c6df\",\n" +
       "      \"ownerMember\":{\n" +
-      " \"id\":\"5\",\n" +
+      " \"id\":\"61445159784bca6ef764c6df\",\n" +
       " \"state\":\"ACCEPTED\",\n" +
       " \"name\":\"Victor\",\n" +
       " \"lastname\":\"Ceballos\",\n" +
@@ -2319,7 +2319,7 @@ export class CommunityJavaTemplates {
       " \"experiences\":null,\n" +
       " \"educations\":[\n" +
       "    {\n" +
-      "       \"id\":\"4\",\n" +
+      "       \"id\":\"61445159784bca6ef764c6df\",\n" +
       "       \"school\":\"Universidad de Las Palmas de Gran Canaria\",\n" +
       "       \"degree\":\"Ingeniería industrial\",\n" +
       "       \"fieldOfStudy\":\"Diseño de instalaciones\",\n" +
@@ -2339,15 +2339,15 @@ export class CommunityJavaTemplates {
       "      \"description\":\"Reunion para hablar de los objetivos a futuro\",\n" +
       "      \"participants\":[\n" +
       " {\n" +
-      "    \"memberId\":\"5\",\n" +
+      "    \"memberId\":\"61445159784bca6ef764c6df\",\n" +
       "    \"state\":\"ACTIVE\"\n" +
       " },\n" +
       " {\n" +
-      "    \"memberId\":\"9\",\n" +
+      "    \"memberId\":\"61445159784bca6ef764c6df\",\n" +
       "    \"state\":\"ACTIVE\"\n" +
       " },\n" +
       " {\n" +
-      "    \"memberId\":\"2\",\n" +
+      "    \"memberId\":\"61445159784bca6ef764c6df\",\n" +
       "    \"state\":\"INACTIVE\"\n" +
       " }\n" +
       "      ],\n" +
@@ -2405,7 +2405,7 @@ export class CommunityJavaTemplates {
       "String clientSecret = \"YOUR_CLIENT_SECRET\";\n" +
       "App app = new App(clientId, clientSecret);\n" +
       "CommunityApi communityApi = new CommunityApi();\n" +
-      "FollowUpRoom followUpRoom = communityApi.followUpRooms().get(app, \"1\").getResponse();\n" +
+      "FollowUpRoom followUpRoom = communityApi.followUpRooms().get(app, \"61445159784bca6ef764c6df\").getResponse();\n" +
       "List<ParticipantAnyEvent> participants = followUpRoom.getParticipants().stream().map(participant -> {\n" +
       "    ParticipantAnyEvent participantAnyEvent = new ParticipantAnyEvent();\n" +
       "    participantAnyEvent.setMemberId(participant.getMemberId());\n" +
@@ -2418,7 +2418,7 @@ export class CommunityJavaTemplates {
       "followUpRoomUpdateEvent.setParticipants(participants);\n" +
       "followUpRoomUpdateEvent.setActions(followUpRoom.getActions());\n" +
       "followUpRoomUpdateEvent.setMeetStarted(followUpRoom.isMeetStarted());\n" +
-      "communityApi.followUpRooms().update(app, \"1\", followUpRoomUpdateEvent);",
+      "communityApi.followUpRooms().update(app, \"61445159784bca6ef764c6df\", followUpRoomUpdateEvent);",
     response: null
   }
 
@@ -2435,9 +2435,9 @@ export class CommunityJavaTemplates {
       "List<String> ids = new ArrayList<>();\n" +
       "ids.add(\"60acae8e2f799d228a4d4a85\");\n" +
       "ids.add(\"60accfeb97acf93f5f69e05d\");\n" +
-      "followUpRoomAddMemberEvent.setId(\"1\");\n" +
+      "followUpRoomAddMemberEvent.setId(\"61445159784bca6ef764c6df\");\n" +
       "followUpRoomAddMemberEvent.setMemberIds(ids);\n" +
-      "communityApi.followUpRooms().addMember(app, \"1\", followUpRoomAddMemberEvent);",
+      "communityApi.followUpRooms().addMember(app, \"61445159784bca6ef764c6df\", followUpRoomAddMemberEvent);",
     response: null
   }
 
@@ -2454,10 +2454,10 @@ export class CommunityJavaTemplates {
       "List<String> ids = new ArrayList<>();\n" +
       "ids.add(\"60acae8e2f799d228a4d4a85\");\n" +
       "ids.add(\"60accfeb97acf93f5f69e05d\");\n" +
-      "followUpRoomLeaveMemberEvent.setId(\"1\");\n" +
+      "followUpRoomLeaveMemberEvent.setId(\"61445159784bca6ef764c6df\");\n" +
       "followUpRoomLeaveMemberEvent.setLeaveMemberIds(ids);\n" +
       "followUpRoomLeaveMemberEvent.setNewOwnerMemberId(\"61ubyopc97acf93c5c69e05d\");\n" +
-      "communityApi.followUpRooms().leaveMember(app, \"1\", followUpRoomLeaveMemberEvent);",
+      "communityApi.followUpRooms().leaveMember(app, \"61445159784bca6ef764c6df\", followUpRoomLeaveMemberEvent);",
     response: null
   }
 
@@ -2470,7 +2470,7 @@ export class CommunityJavaTemplates {
       "String clientSecret = \"YOUR_CLIENT_SECRET\";\n" +
       "App app = new App(clientId, clientSecret);\n" +
       "CommunityApi communityApi = new CommunityApi();\n" +
-      "communityApi.followUpRooms().open(app, \"1\", new FollowUpRoomOpenEvent());",
+      "communityApi.followUpRooms().open(app, \"61445159784bca6ef764c6df\", new FollowUpRoomOpenEvent());",
     response: null
   }
 
@@ -2483,7 +2483,7 @@ export class CommunityJavaTemplates {
       "String clientSecret = \"YOUR_CLIENT_SECRET\";\n" +
       "App app = new App(clientId, clientSecret);\n" +
       "CommunityApi communityApi = new CommunityApi();\n" +
-      "communityApi.followUpRooms().close(app, \"1\", new FollowUpRoomCloseEvent());",
+      "communityApi.followUpRooms().close(app, \"61445159784bca6ef764c6df\", new FollowUpRoomCloseEvent());",
     response: null
   }
 
@@ -2496,7 +2496,7 @@ export class CommunityJavaTemplates {
       "String clientSecret = \"YOUR_CLIENT_SECRET\";\n" +
       "App app = new App(clientId, clientSecret);\n" +
       "CommunityApi communityApi = new CommunityApi();\n" +
-      "communityApi.followUpRooms().delete(app, \"1\");",
+      "communityApi.followUpRooms().delete(app, \"61445159784bca6ef764c6df\");",
     response: null
   }
 
@@ -2513,7 +2513,7 @@ export class CommunityJavaTemplates {
       "messageAddEvent.setModule(\"community\");\n" +
       "messageAddEvent.setContent(\"New message\");\n" +
       "messageAddEvent.setDocuments(null);\n" +
-      "communityApi.followUpRooms().messageAdd(app, \"1\", messageAddEvent);",
+      "communityApi.followUpRooms().messageAdd(app, \"61445159784bca6ef764c6df\", messageAddEvent);",
     response: null
   }
 
@@ -2526,7 +2526,7 @@ export class CommunityJavaTemplates {
       "String clientSecret = \"YOUR_CLIENT_SECRET\";\n" +
       "App app = new App(clientId, clientSecret);\n" +
       "CommunityApi communityApi = new CommunityApi();\n" +
-      "communityApi.followUpRooms().messageDelete(app, \"1\", \"1\", false);",
+      "communityApi.followUpRooms().messageDelete(app, \"61445159784bca6ef764c6df\", \"61445159784bca6ef764c6df\", false);",
     response: null
   }
 
@@ -2539,7 +2539,7 @@ export class CommunityJavaTemplates {
       "String clientSecret = \"YOUR_CLIENT_SECRET\";\n" +
       "App app = new App(clientId, clientSecret);\n" +
       "CommunityApi communityApi = new CommunityApi();\n" +
-      "communityApi.followUpRooms().messageDelete(app, \"1\", \"1\", true);",
+      "communityApi.followUpRooms().messageDelete(app, \"61445159784bca6ef764c6df\", \"61445159784bca6ef764c6df\", true);",
     response: null
   }
 
@@ -2552,14 +2552,14 @@ export class CommunityJavaTemplates {
       "String clientSecret = \"YOUR_CLIENT_SECRET\";\n" +
       "App app = new App(clientId, clientSecret);\n" +
       "CommunityApi communityApi = new CommunityApi();\n" +
-      "List<Message> messages = communityApi.followUpRooms().messagesByRoomId(app, \"1\").getResponse();\n" +
+      "List<Message> messages = communityApi.followUpRooms().messagesByRoomId(app, \"61445159784bca6ef764c6df\").getResponse();\n" +
       "JSONArray jsonObject = new JSONArray(messages);\n" +
       "System.out.println(jsonObject);",
     response: "\n[\n" +
       "   {\n" +
-      "      \"id\":\"1\",\n" +
-      "      \"roomId\":\"1\",\n" +
-      "      \"authorMemberId\":\"1\",\n" +
+      "      \"id\":\"61445159784bca6ef764c6df\",\n" +
+      "      \"roomId\":\"61445159784bca6ef764c6df\",\n" +
+      "      \"authorMemberId\":\"61445159784bca6ef764c6df\",\n" +
       "      \"content\":\"Hola, ¿Me podrías pasar el archivo?\",\n" +
       "      \"documents\":[\n" +
       " \n" +
@@ -2567,17 +2567,17 @@ export class CommunityJavaTemplates {
       "      \"createdAt\":1621412130000\n" +
       "   },\n" +
       "   {\n" +
-      "      \"id\":\"2\",\n" +
-      "      \"roomId\":\"1\",\n" +
-      "      \"authorMemberId\":\"2\",\n" +
+      "      \"id\":\"61445159784bca6ef764c6df\",\n" +
+      "      \"roomId\":\"61445159784bca6ef764c6df\",\n" +
+      "      \"authorMemberId\":\"61445159784bca6ef764c6df\",\n" +
       "      \"content\":\"Sí, claro.\",\n" +
       "      \"documents\":[\n" +
       " {\n" +
-      "    \"id\":\"1\",\n" +
+      "    \"id\":\"61445159784bca6ef764c6df\",\n" +
       "    \"link\":\"https://moonshot.ceo/archivoTrabajo.pdf\",\n" +
       "    \"category\":\"PDF\",\n" +
-      "    \"roomId\":\"1\",\n" +
-      "    \"memberId\":\"2\",\n" +
+      "    \"roomId\":\"61445159784bca6ef764c6df\",\n" +
+      "    \"memberId\":\"61445159784bca6ef764c6df\",\n" +
       "    \"filename\":\"archivoTrabajo\",\n" +
       "    \"createdAt\":1621412130000\n" +
       " }\n" +
@@ -2585,9 +2585,9 @@ export class CommunityJavaTemplates {
       "      \"createdAt\":1621415730000\n" +
       "   },\n" +
       "   {\n" +
-      "      \"id\":\"3\",\n" +
-      "      \"roomId\":\"2\",\n" +
-      "      \"authorMemberId\":\"3\",\n" +
+      "      \"id\":\"61445159784bca6ef764c6df\",\n" +
+      "      \"roomId\":\"61445159784bca6ef764c6df\",\n" +
+      "      \"authorMemberId\":\"61445159784bca6ef764c6df\",\n" +
       "      \"content\":\"Yo salgo en breve de trabajar por si te quieres tomar un cafe\",\n" +
       "      \"documents\":[\n" +
       " \n" +
@@ -2606,34 +2606,34 @@ export class CommunityJavaTemplates {
       "String clientSecret = \"YOUR_CLIENT_SECRET\";\n" +
       "App app = new App(clientId, clientSecret);\n" +
       "CommunityApi communityApi = new CommunityApi();\n" +
-      "List<Document> documents = communityApi.followUpRooms().documents(app, \"1\").getResponse();\n" +
+      "List<Document> documents = communityApi.followUpRooms().documents(app, \"61445159784bca6ef764c6df\").getResponse();\n" +
       "JSONArray jsonObject = new JSONArray(documents);\n" +
       "System.out.println(jsonObject);",
     response: "\n[\n" +
       "   {\n" +
-      "      \"id\":\"1\",\n" +
+      "      \"id\":\"61445159784bca6ef764c6df\",\n" +
       "      \"link\":\"https://moonshot.ceo/archivoTrabajo.pdf\",\n" +
       "      \"category\":\"PDF\",\n" +
-      "      \"roomId\":\"1\",\n" +
-      "      \"memberId\":\"2\",\n" +
+      "      \"roomId\":\"61445159784bca6ef764c6df\",\n" +
+      "      \"memberId\":\"61445159784bca6ef764c6df\",\n" +
       "      \"filename\":\"archivoTrabajo\",\n" +
       "      \"createdAt\":1621412130000\n" +
       "   },\n" +
       "   {\n" +
-      "      \"id\":\"2\",\n" +
+      "      \"id\":\"61445159784bca6ef764c6df\",\n" +
       "      \"link\":\"https://moonshot.ceo/planosPrimeraPlanta.pdf\",\n" +
       "      \"category\":\"PDF\",\n" +
-      "      \"roomId\":\"3\",\n" +
-      "      \"memberId\":\"5\",\n" +
+      "      \"roomId\":\"61445159784bca6ef764c6df\",\n" +
+      "      \"memberId\":\"61445159784bca6ef764c6df\",\n" +
       "      \"filename\":\"planosPrimeraPlanta\",\n" +
       "      \"createdAt\":1621415730000\n" +
       "   },\n" +
       "   {\n" +
-      "      \"id\":\"3\",\n" +
+      "      \"id\":\"61445159784bca6ef764c6df\",\n" +
       "      \"link\":\"https://moonshot.ceo/planosSegundaPlanta.image\",\n" +
       "      \"category\":\"IMAGE\",\n" +
-      "      \"roomId\":\"3\",\n" +
-      "      \"memberId\":\"6\",\n" +
+      "      \"roomId\":\"61445159784bca6ef764c6df\",\n" +
+      "      \"memberId\":\"61445159784bca6ef764c6df\",\n" +
       "      \"filename\":\"planosSegundaPlanta\",\n" +
       "      \"createdAt\":1621419330000\n" +
       "   }\n" +
@@ -2649,20 +2649,20 @@ export class CommunityJavaTemplates {
       "String clientSecret = \"YOUR_CLIENT_SECRET\";\n" +
       "App app = new App(clientId, clientSecret);\n" +
       "CommunityApi communityApi = new CommunityApi();\n" +
-      "List<Link> links = communityApi.followUpRooms().links(app, \"1\").getResponse();\n" +
+      "List<Link> links = communityApi.followUpRooms().links(app, \"61445159784bca6ef764c6df\").getResponse();\n" +
       "JSONArray jsonObject = new JSONArray(links);\n" +
       "System.out.println(jsonObject);",
     response: "\n[\n" +
       "   {\n" +
-      "      \"id\":\"1\",\n" +
+      "      \"id\":\"61445159784bca6ef764c6df\",\n" +
       "      \"url\":\"https://dev.moonshot.ceo/documento1.pdf\",\n" +
-      "      \"roomId\":\"2\",\n" +
+      "      \"roomId\":\"61445159784bca6ef764c6df\",\n" +
       "      \"createdAt\":1637417185\n" +
       "   },\n" +
       "   {\n" +
-      "      \"id\":\"2\",\n" +
+      "      \"id\":\"61445159784bca6ef764c6df\",\n" +
       "      \"url\":\"https://dev.moonshot.ceo/documento2.pdf\",\n" +
-      "      \"roomId\":\"7\",\n" +
+      "      \"roomId\":\"61445159784bca6ef764c6df\",\n" +
       "      \"createdAt\":1637417190\n" +
       "   }\n" +
       "]"
@@ -2678,7 +2678,7 @@ export class CommunityJavaTemplates {
       "App app = new App(clientId, clientSecret);\n" +
       "CommunityApi communityApi = new CommunityApi();\n" +
       "File file = new File(\"C:\\Users\\saulo\\OneDrive\\Imágenes\\evento.jpg\");\n" +
-      "communityApi.followUpRooms().upload(app, \"1\", file);",
+      "communityApi.followUpRooms().upload(app, \"61445159784bca6ef764c6df\", file);",
     response: "\nhttps://localhost/drive/follow-up-rooms/files/1/61eaffcdad2bd12319fd4eba.png"
   }
 
@@ -2696,9 +2696,9 @@ export class CommunityJavaTemplates {
       "System.out.println(jsonObject);",
     response: "\n[\n" +
       "   {\n" +
-      "      \"id\":\"1\",\n" +
+      "      \"id\":\"61445159784bca6ef764c6df\",\n" +
       "      \"ownerMember\":{\n" +
-      " \"id\":\"8\",\n" +
+      " \"id\":\"61445159784bca6ef764c6df\",\n" +
       " \"state\":\"ACCEPTED\",\n" +
       " \"name\":\"Marcos\",\n" +
       " \"lastname\":\"Fernandez\",\n" +
@@ -2730,7 +2730,7 @@ export class CommunityJavaTemplates {
       " ],\n" +
       " \"experiences\":[\n" +
       "    {\n" +
-      "       \"id\":\"6\",\n" +
+      "       \"id\":\"61445159784bca6ef764c6df\",\n" +
       "       \"title\":\"Colaboración para crear la vacuna Pfizer\",\n" +
       "       \"type\":\"FULL_TIME\",\n" +
       "       \"company\":\"Novartis\",\n" +
@@ -2744,7 +2744,7 @@ export class CommunityJavaTemplates {
       "       \"description\":\"Colaborador de la vacuna Pfizer contra el COVID-19\"\n" +
       "    },\n" +
       "    {\n" +
-      "       \"id\":\"7\",\n" +
+      "       \"id\":\"61445159784bca6ef764c6df\",\n" +
       "       \"title\":\"Colaboración para crear la vacuna de la gripe A\",\n" +
       "       \"type\":\"INTERIM\",\n" +
       "       \"company\":\"Novartis\",\n" +
@@ -2760,7 +2760,7 @@ export class CommunityJavaTemplates {
       " ],\n" +
       " \"educations\":[\n" +
       "    {\n" +
-      "       \"id\":\"7\",\n" +
+      "       \"id\":\"61445159784bca6ef764c6df\",\n" +
       "       \"school\":\"Universidad de Tokio\",\n" +
       "       \"degree\":\"Farmaceutica\",\n" +
       "       \"fieldOfStudy\":\"Pandemias\",\n" +
@@ -2780,15 +2780,15 @@ export class CommunityJavaTemplates {
       "      \"description\":\"Canal para compartir conocimientos de diversos temas\",\n" +
       "      \"participants\":[\n" +
       " {\n" +
-      "    \"memberId\":\"3\",\n" +
+      "    \"memberId\":\"61445159784bca6ef764c6df\",\n" +
       "    \"state\":\"INACTIVE\"\n" +
       " },\n" +
       " {\n" +
-      "    \"memberId\":\"6\",\n" +
+      "    \"memberId\":\"61445159784bca6ef764c6df\",\n" +
       "    \"state\":\"ACTIVE\"\n" +
       " },\n" +
       " {\n" +
-      "    \"memberId\":\"8\",\n" +
+      "    \"memberId\":\"61445159784bca6ef764c6df\",\n" +
       "    \"state\":\"ACTIVE\"\n" +
       " }\n" +
       "      ],\n" +
@@ -2805,9 +2805,9 @@ export class CommunityJavaTemplates {
       "      ]\n" +
       "   },\n" +
       "   {\n" +
-      "      \"id\":\"2\",\n" +
+      "      \"id\":\"61445159784bca6ef764c6df\",\n" +
       "      \"ownerMember\":{\n" +
-      " \"id\":\"9\",\n" +
+      " \"id\":\"61445159784bca6ef764c6df\",\n" +
       " \"state\":\"ACCEPTED\",\n" +
       " \"name\":\"Raúl\",\n" +
       " \"lastname\":\"López\",\n" +
@@ -2847,7 +2847,7 @@ export class CommunityJavaTemplates {
       " ],\n" +
       " \"experiences\":[\n" +
       "    {\n" +
-      "       \"id\":\"8\",\n" +
+      "       \"id\":\"61445159784bca6ef764c6df\",\n" +
       "       \"title\":\"Distribuidor de la vacuna Pfizer\",\n" +
       "       \"type\":\"FREELANCE\",\n" +
       "       \"company\":\"Distribuciones Raul S.L\",\n" +
@@ -2867,15 +2867,15 @@ export class CommunityJavaTemplates {
       "      \"description\":\"Aqui todos los participantes estaran muteados y sirve para sentirse acompañado en el trabajo online\",\n" +
       "      \"participants\":[\n" +
       " {\n" +
-      "    \"memberId\":\"9\",\n" +
+      "    \"memberId\":\"61445159784bca6ef764c6df\",\n" +
       "    \"state\":\"ACTIVE\"\n" +
       " },\n" +
       " {\n" +
-      "    \"memberId\":\"1\",\n" +
+      "    \"memberId\":\"61445159784bca6ef764c6df\",\n" +
       "    \"state\":\"ACTIVE\"\n" +
       " },\n" +
       " {\n" +
-      "    \"memberId\":\"2\",\n" +
+      "    \"memberId\":\"61445159784bca6ef764c6df\",\n" +
       "    \"state\":\"INACTIVE\"\n" +
       " }\n" +
       "      ],\n" +
@@ -2893,13 +2893,13 @@ export class CommunityJavaTemplates {
       "String clientSecret = \"YOUR_CLIENT_SECRET\";\n" +
       "App app = new App(clientId, clientSecret);\n" +
       "CommunityApi communityApi = new CommunityApi();\n" +
-      "PublicChannel publicChannel = communityApi.publicChannels().get(app, \"1\").getResponse();\n" +
+      "PublicChannel publicChannel = communityApi.publicChannels().get(app, \"61445159784bca6ef764c6df\").getResponse();\n" +
       "JSONObject jsonObject = new JSONObject(publicChannel);\n" +
       "System.out.println(jsonObject);",
     response: "\n{\n" +
-      "   \"id\":\"1\",\n" +
+      "   \"id\":\"61445159784bca6ef764c6df\",\n" +
       "   \"ownerMember\":{\n" +
-      "      \"id\":\"8\",\n" +
+      "      \"id\":\"61445159784bca6ef764c6df\",\n" +
       "      \"state\":\"ACCEPTED\",\n" +
       "      \"name\":\"Marcos\",\n" +
       "      \"lastname\":\"Fernandez\",\n" +
@@ -2931,7 +2931,7 @@ export class CommunityJavaTemplates {
       "      ],\n" +
       "      \"experiences\":[\n" +
       " {\n" +
-      "    \"id\":\"6\",\n" +
+      "    \"id\":\"61445159784bca6ef764c6df\",\n" +
       "    \"title\":\"Colaboración para crear la vacuna Pfizer\",\n" +
       "    \"type\":\"FULL_TIME\",\n" +
       "    \"company\":\"Novartis\",\n" +
@@ -2945,7 +2945,7 @@ export class CommunityJavaTemplates {
       "    \"description\":\"Colaborador de la vacuna Pfizer contra el COVID-19\"\n" +
       " },\n" +
       " {\n" +
-      "    \"id\":\"7\",\n" +
+      "    \"id\":\"61445159784bca6ef764c6df\",\n" +
       "    \"title\":\"Colaboración para crear la vacuna de la gripe A\",\n" +
       "    \"type\":\"INTERIM\",\n" +
       "    \"company\":\"Novartis\",\n" +
@@ -2961,7 +2961,7 @@ export class CommunityJavaTemplates {
       "      ],\n" +
       "      \"educations\":[\n" +
       " {\n" +
-      "    \"id\":\"7\",\n" +
+      "    \"id\":\"61445159784bca6ef764c6df\",\n" +
       "    \"school\":\"Universidad de Tokio\",\n" +
       "    \"degree\":\"Farmaceutica\",\n" +
       "    \"fieldOfStudy\":\"Pandemias\",\n" +
@@ -2981,15 +2981,15 @@ export class CommunityJavaTemplates {
       "   \"description\":\"Canal para compartir conocimientos de diversos temas\",\n" +
       "   \"participants\":[\n" +
       "      {\n" +
-      " \"memberId\":\"3\",\n" +
+      " \"memberId\":\"61445159784bca6ef764c6df\",\n" +
       " \"state\":\"INACTIVE\"\n" +
       "      },\n" +
       "      {\n" +
-      " \"memberId\":\"6\",\n" +
+      " \"memberId\":\"61445159784bca6ef764c6df\",\n" +
       " \"state\":\"ACTIVE\"\n" +
       "      },\n" +
       "      {\n" +
-      " \"memberId\":\"8\",\n" +
+      " \"memberId\":\"61445159784bca6ef764c6df\",\n" +
       " \"state\":\"ACTIVE\"\n" +
       "      }\n" +
       "   ],\n" +
@@ -3045,7 +3045,7 @@ export class CommunityJavaTemplates {
       "String clientSecret = \"YOUR_CLIENT_SECRET\";\n" +
       "App app = new App(clientId, clientSecret);\n" +
       "CommunityApi communityApi = new CommunityApi();\n" +
-      "PublicChannel publicChannel = communityApi.publicChannels().get(app, \"1\").getResponse();\n" +
+      "PublicChannel publicChannel = communityApi.publicChannels().get(app, \"61445159784bca6ef764c6df\").getResponse();\n" +
       "List<ParticipantAnyEvent> participants = publicChannel.getParticipants().stream().map(participant -> {\n" +
       "    ParticipantAnyEvent participantAnyEvent = new ParticipantAnyEvent();\n" +
       "    participantAnyEvent.setMemberId(participant.getMemberId());\n" +
@@ -3059,7 +3059,7 @@ export class CommunityJavaTemplates {
       "publicChannelUpdateEvent.setParticipants(participants);\n" +
       "publicChannelUpdateEvent.setActions(publicChannel.getActions());\n" +
       "publicChannelUpdateEvent.setMeetStarted(publicChannel.isMeetStarted());\n" +
-      "communityApi.publicChannels().update(app, \"1\", publicChannelUpdateEvent, false);",
+      "communityApi.publicChannels().update(app, \"61445159784bca6ef764c6df\", publicChannelUpdateEvent, false);",
     response: null
   }
 
@@ -3072,7 +3072,7 @@ export class CommunityJavaTemplates {
       "String clientSecret = \"YOUR_CLIENT_SECRET\";\n" +
       "App app = new App(clientId, clientSecret);\n" +
       "CommunityApi communityApi = new CommunityApi();\n" +
-      "communityApi.publicChannels().delete(app, \"1\", false);",
+      "communityApi.publicChannels().delete(app, \"61445159784bca6ef764c6df\", false);",
     response: null
   }
 
@@ -3085,7 +3085,7 @@ export class CommunityJavaTemplates {
       "String clientSecret = \"YOUR_CLIENT_SECRET\";\n" +
       "App app = new App(clientId, clientSecret);\n" +
       "CommunityApi communityApi = new CommunityApi();\n" +
-      "PublicChannel publicChannel = communityApi.publicChannels().get(app, \"1\").getResponse();\n" +
+      "PublicChannel publicChannel = communityApi.publicChannels().get(app, \"61445159784bca6ef764c6df\").getResponse();\n" +
       "List<ParticipantAnyEvent> participants = publicChannel.getParticipants().stream().map(participant -> {\n" +
       "    ParticipantAnyEvent participantAnyEvent = new ParticipantAnyEvent();\n" +
       "    participantAnyEvent.setMemberId(participant.getMemberId());\n" +
@@ -3099,7 +3099,7 @@ export class CommunityJavaTemplates {
       "publicChannelUpdateEvent.setParticipants(participants);\n" +
       "publicChannelUpdateEvent.setActions(publicChannel.getActions());\n" +
       "publicChannelUpdateEvent.setMeetStarted(publicChannel.isMeetStarted());\n" +
-      "communityApi.publicChannels().update(app, \"1\", publicChannelUpdateEvent, true);",
+      "communityApi.publicChannels().update(app, \"61445159784bca6ef764c6df\", publicChannelUpdateEvent, true);",
     response: null
   }
 
@@ -3112,7 +3112,7 @@ export class CommunityJavaTemplates {
       "String clientSecret = \"YOUR_CLIENT_SECRET\";\n" +
       "App app = new App(clientId, clientSecret);\n" +
       "CommunityApi communityApi = new CommunityApi();\n" +
-      "communityApi.publicChannels().delete(app, \"1\", false);",
+      "communityApi.publicChannels().delete(app, \"61445159784bca6ef764c6df\", false);",
     response: null
   }
 
@@ -3126,8 +3126,8 @@ export class CommunityJavaTemplates {
       "App app = new App(clientId, clientSecret);\n" +
       "CommunityApi communityApi = new CommunityApi();\n" +
       "PublicChannelSubscribeEvent publicChannelSubscribeEvent = new PublicChannelSubscribeEvent();\n" +
-      "publicChannelSubscribeEvent.setMemberId(\"1\");\n" +
-      "communityApi.publicChannels().subscribe(app, \"1\", publicChannelSubscribeEvent);",
+      "publicChannelSubscribeEvent.setMemberId(\"61445159784bca6ef764c6df\");\n" +
+      "communityApi.publicChannels().subscribe(app, \"61445159784bca6ef764c6df\", publicChannelSubscribeEvent);",
     response: null
   }
 
@@ -3141,8 +3141,8 @@ export class CommunityJavaTemplates {
       "App app = new App(clientId, clientSecret);\n" +
       "CommunityApi communityApi = new CommunityApi();\n" +
       "PublicChannelUnsubscribeEvent publicChannelUnsubscribeEvent = new PublicChannelUnsubscribeEvent();\n" +
-      "publicChannelUnsubscribeEvent.setMemberId(\"1\");\n" +
-      "communityApi.publicChannels().unsubscribe(app, \"1\", publicChannelUnsubscribeEvent);",
+      "publicChannelUnsubscribeEvent.setMemberId(\"61445159784bca6ef764c6df\");\n" +
+      "communityApi.publicChannels().unsubscribe(app, \"61445159784bca6ef764c6df\", publicChannelUnsubscribeEvent);",
     response: null
   }
 
@@ -3159,7 +3159,7 @@ export class CommunityJavaTemplates {
       "messageAddEvent.setModule(\"community\");\n" +
       "messageAddEvent.setContent(\"New message\");\n" +
       "messageAddEvent.setDocuments(null);\n" +
-      "communityApi.publicChannels().messageAdd(app, \"1\", messageAddEvent);",
+      "communityApi.publicChannels().messageAdd(app, \"61445159784bca6ef764c6df\", messageAddEvent);",
     response: null
   }
 
@@ -3172,7 +3172,7 @@ export class CommunityJavaTemplates {
       "String clientSecret = \"YOUR_CLIENT_SECRET\";\n" +
       "App app = new App(clientId, clientSecret);\n" +
       "CommunityApi communityApi = new CommunityApi();\n" +
-      "communityApi.publicChannels().messageDelete(app, \"1\", \"1\", false);",
+      "communityApi.publicChannels().messageDelete(app, \"61445159784bca6ef764c6df\", \"61445159784bca6ef764c6df\", false);",
     response: null
   }
 
@@ -3185,7 +3185,7 @@ export class CommunityJavaTemplates {
       "String clientSecret = \"YOUR_CLIENT_SECRET\";\n" +
       "App app = new App(clientId, clientSecret);\n" +
       "CommunityApi communityApi = new CommunityApi();\n" +
-      "communityApi.publicChannels().messageDelete(app, \"1\", \"1\", true);",
+      "communityApi.publicChannels().messageDelete(app, \"61445159784bca6ef764c6df\", \"61445159784bca6ef764c6df\", true);",
     response: null
   }
 
@@ -3198,22 +3198,22 @@ export class CommunityJavaTemplates {
       "String clientSecret = \"YOUR_CLIENT_SECRET\";\n" +
       "App app = new App(clientId, clientSecret);\n" +
       "CommunityApi communityApi = new CommunityApi();\n" +
-      "List<Message> messages = communityApi.publicChannels().messagesByRoomId(app, \"1\").getResponse();\n" +
+      "List<Message> messages = communityApi.publicChannels().messagesByRoomId(app, \"61445159784bca6ef764c6df\").getResponse();\n" +
       "JSONArray jsonObject = new JSONArray(messages);\n" +
       "System.out.println(jsonObject);",
     response: "\n[\n" +
       "  {\n" +
-      "    \"id\": \"5\",\n" +
-      "    \"roomId\": \"3\",\n" +
-      "    \"authorMemberId\": \"5\",\n" +
+      "    \"id\": \"61445159784bca6ef764c6df\",\n" +
+      "    \"roomId\": \"61445159784bca6ef764c6df\",\n" +
+      "    \"authorMemberId\": \"61445159784bca6ef764c6df\",\n" +
       "    \"content\": \"Yo te envio estos planos de la primera planta, tu enviame los de la segunda planta\",\n" +
       "    \"documents\": [\n" +
       "      {\n" +
-      "\"id\": \"2\",\n" +
+      "\"id\": \"61445159784bca6ef764c6df\",\n" +
       "\"link\": \"https://moonshot.ceo/planosPrimeraPlanta.pdf\",\n" +
       "\"category\": \"PDF\",\n" +
-      "\"roomId\": \"3\",\n" +
-      "\"memberId\": \"5\",\n" +
+      "\"roomId\": \"61445159784bca6ef764c6df\",\n" +
+      "\"memberId\": \"61445159784bca6ef764c6df\",\n" +
       "\"filename\": \"planosPrimeraPlanta\",\n" +
       "\"createdAt\": 1621415730000\n" +
       "      }\n" +
@@ -3221,17 +3221,17 @@ export class CommunityJavaTemplates {
       "    \"createdAt\": 1621426530000\n" +
       "  },\n" +
       "  {\n" +
-      "    \"id\": \"6\",\n" +
-      "    \"roomId\": \"3\",\n" +
-      "    \"authorMemberId\": \"6\",\n" +
+      "    \"id\": \"61445159784bca6ef764c6df\",\n" +
+      "    \"roomId\": \"61445159784bca6ef764c6df\",\n" +
+      "    \"authorMemberId\": \"61445159784bca6ef764c6df\",\n" +
       "    \"content\": \"Okey, ahí te van.\",\n" +
       "    \"documents\": [\n" +
       "      {\n" +
-      "\"id\": \"3\",\n" +
+      "\"id\": \"61445159784bca6ef764c6df\",\n" +
       "\"link\": \"https://moonshot.ceo/planosSegundaPlanta.image\",\n" +
       "\"category\": \"IMAGE\",\n" +
-      "\"roomId\": \"3\",\n" +
-      "\"memberId\": \"6\",\n" +
+      "\"roomId\": \"61445159784bca6ef764c6df\",\n" +
+      "\"memberId\": \"61445159784bca6ef764c6df\",\n" +
       "\"filename\": \"planosSegundaPlanta\",\n" +
       "\"createdAt\": 1621419330000\n" +
       "      }\n" +
@@ -3239,26 +3239,26 @@ export class CommunityJavaTemplates {
       "    \"createdAt\": 1621430130000\n" +
       "  },\n" +
       "  {\n" +
-      "    \"id\": \"7\",\n" +
-      "    \"roomId\": \"3\",\n" +
-      "    \"authorMemberId\": \"1\",\n" +
+      "    \"id\": \"61445159784bca6ef764c6df\",\n" +
+      "    \"roomId\": \"61445159784bca6ef764c6df\",\n" +
+      "    \"authorMemberId\": \"61445159784bca6ef764c6df\",\n" +
       "    \"content\": \"Aqui acaba la reunion de hoy\",\n" +
       "    \"documents\": [\n" +
       "    ],\n" +
       "    \"createdAt\": 1621433730000\n" +
       "  },\n" +
       "  {\n" +
-      "    \"id\": \"8\",\n" +
-      "    \"roomId\": \"3\",\n" +
-      "    \"authorMemberId\": \"2\",\n" +
+      "    \"id\": \"61445159784bca6ef764c6df\",\n" +
+      "    \"roomId\": \"61445159784bca6ef764c6df\",\n" +
+      "    \"authorMemberId\": \"61445159784bca6ef764c6df\",\n" +
       "    \"content\": \"Gracias por convocarla, inserto un esquema que he realizado del contenido.\",\n" +
       "    \"documents\": [\n" +
       "      {\n" +
-      "\"id\": \"4\",\n" +
+      "\"id\": \"61445159784bca6ef764c6df\",\n" +
       "\"link\": \"https://moonshot.ceo/esquema.jpg\",\n" +
       "\"category\": \"IMAGE\",\n" +
-      "\"roomId\": \"3\",\n" +
-      "\"memberId\": \"2\",\n" +
+      "\"roomId\": \"61445159784bca6ef764c6df\",\n" +
+      "\"memberId\": \"61445159784bca6ef764c6df\",\n" +
       "\"filename\": \"esquema\",\n" +
       "\"createdAt\": 1621422930000\n" +
       "      }\n" +
@@ -3277,34 +3277,34 @@ export class CommunityJavaTemplates {
       "String clientSecret = \"YOUR_CLIENT_SECRET\";\n" +
       "App app = new App(clientId, clientSecret);\n" +
       "CommunityApi communityApi = new CommunityApi();\n" +
-      "List<Document> documents = communityApi.publicChannels().documents(app, \"1\").getResponse();\n" +
+      "List<Document> documents = communityApi.publicChannels().documents(app, \"61445159784bca6ef764c6df\").getResponse();\n" +
       "JSONArray jsonObject = new JSONArray(documents);\n" +
       "System.out.println(jsonObject);",
     response: "\n[\n" +
       "   {\n" +
-      "      \"id\":\"1\",\n" +
+      "      \"id\":\"61445159784bca6ef764c6df\",\n" +
       "      \"link\":\"https://moonshot.ceo/archivoTrabajo.pdf\",\n" +
       "      \"category\":\"PDF\",\n" +
-      "      \"roomId\":\"1\",\n" +
-      "      \"memberId\":\"2\",\n" +
+      "      \"roomId\":\"61445159784bca6ef764c6df\",\n" +
+      "      \"memberId\":\"61445159784bca6ef764c6df\",\n" +
       "      \"filename\":\"archivoTrabajo\",\n" +
       "      \"createdAt\":1621412130000\n" +
       "   },\n" +
       "   {\n" +
-      "      \"id\":\"2\",\n" +
+      "      \"id\":\"61445159784bca6ef764c6df\",\n" +
       "      \"link\":\"https://moonshot.ceo/planosPrimeraPlanta.pdf\",\n" +
       "      \"category\":\"PDF\",\n" +
-      "      \"roomId\":\"3\",\n" +
-      "      \"memberId\":\"5\",\n" +
+      "      \"roomId\":\"61445159784bca6ef764c6df\",\n" +
+      "      \"memberId\":\"61445159784bca6ef764c6df\",\n" +
       "      \"filename\":\"planosPrimeraPlanta\",\n" +
       "      \"createdAt\":1621415730000\n" +
       "   },\n" +
       "   {\n" +
-      "      \"id\":\"3\",\n" +
+      "      \"id\":\"61445159784bca6ef764c6df\",\n" +
       "      \"link\":\"https://moonshot.ceo/planosSegundaPlanta.image\",\n" +
       "      \"category\":\"IMAGE\",\n" +
-      "      \"roomId\":\"3\",\n" +
-      "      \"memberId\":\"6\",\n" +
+      "      \"roomId\":\"61445159784bca6ef764c6df\",\n" +
+      "      \"memberId\":\"61445159784bca6ef764c6df\",\n" +
       "      \"filename\":\"planosSegundaPlanta\",\n" +
       "      \"createdAt\":1621419330000\n" +
       "   }\n" +
@@ -3320,20 +3320,20 @@ export class CommunityJavaTemplates {
       "String clientSecret = \"YOUR_CLIENT_SECRET\";\n" +
       "App app = new App(clientId, clientSecret);\n" +
       "CommunityApi communityApi = new CommunityApi();\n" +
-      "List<Link> links = communityApi.publicChannels().links(app, \"1\").getResponse();\n" +
+      "List<Link> links = communityApi.publicChannels().links(app, \"61445159784bca6ef764c6df\").getResponse();\n" +
       "JSONArray jsonObject = new JSONArray(links);\n" +
       "System.out.println(jsonObject);",
     response: "\n[\n" +
       "   {\n" +
-      "      \"id\":\"1\",\n" +
+      "      \"id\":\"61445159784bca6ef764c6df\",\n" +
       "      \"url\":\"https://dev.moonshot.ceo/documento1.pdf\",\n" +
-      "      \"roomId\":\"2\",\n" +
+      "      \"roomId\":\"61445159784bca6ef764c6df\",\n" +
       "      \"createdAt\":1637417185\n" +
       "   },\n" +
       "   {\n" +
-      "      \"id\":\"2\",\n" +
+      "      \"id\":\"61445159784bca6ef764c6df\",\n" +
       "      \"url\":\"https://dev.moonshot.ceo/documento2.pdf\",\n" +
-      "      \"roomId\":\"7\",\n" +
+      "      \"roomId\":\"61445159784bca6ef764c6df\",\n" +
       "      \"createdAt\":1637417190\n" +
       "   }\n" +
       "]"
@@ -3349,7 +3349,7 @@ export class CommunityJavaTemplates {
       "App app = new App(clientId, clientSecret);\n" +
       "CommunityApi communityApi = new CommunityApi();\n" +
       "File file = new File(\"C:\\Users\\saulo\\OneDrive\\Imágenes\\evento.jpg\");\n" +
-      "communityApi.publicChannels().upload(app, \"1\", file);",
+      "communityApi.publicChannels().upload(app, \"61445159784bca6ef764c6df\", file);",
     response: "\nhttps://localhost/drive/public-channels/files/1/61eaffcdad2bd12319fd4eba.png"
   }
 
@@ -3381,11 +3381,11 @@ export class CommunityJavaTemplates {
       "String clientSecret = \"YOUR_CLIENT_SECRET\";\n" +
       "App app = new App(clientId, clientSecret);\n" +
       "CommunityApi communityApi = new CommunityApi();\n" +
-      "WallPost wallPost = communityApi.wallPosts().get(app, \"1\").getResponse();\n" +
+      "WallPost wallPost = communityApi.wallPosts().get(app, \"61445159784bca6ef764c6df\").getResponse();\n" +
       "WallPostUpdateEvent wallPostUpdateEvent = new WallPostUpdateEvent();\n" +
       "wallPostUpdateEvent.setContent(\"New wall post content\");\n" +
       "wallPostUpdateEvent.setAttachments(wallPost.getAttachments());\n" +
-      "communityApi.wallPosts().update(app, \"1\", wallPostUpdateEvent, false);",
+      "communityApi.wallPosts().update(app, \"61445159784bca6ef764c6df\", wallPostUpdateEvent, false);",
     response: null
   }
 
@@ -3398,7 +3398,7 @@ export class CommunityJavaTemplates {
       "String clientSecret = \"YOUR_CLIENT_SECRET\";\n" +
       "App app = new App(clientId, clientSecret);\n" +
       "CommunityApi communityApi = new CommunityApi();\n" +
-      "communityApi.wallPosts().delete(app, \"1\", false);",
+      "communityApi.wallPosts().delete(app, \"61445159784bca6ef764c6df\", false);",
     response: null
   }
 
@@ -3411,11 +3411,11 @@ export class CommunityJavaTemplates {
       "String clientSecret = \"YOUR_CLIENT_SECRET\";\n" +
       "App app = new App(clientId, clientSecret);\n" +
       "CommunityApi communityApi = new CommunityApi();\n" +
-      "WallPost wallPost = communityApi.wallPosts().get(app, \"1\").getResponse();\n" +
+      "WallPost wallPost = communityApi.wallPosts().get(app, \"61445159784bca6ef764c6df\").getResponse();\n" +
       "WallPostUpdateEvent wallPostUpdateEvent = new WallPostUpdateEvent();\n" +
       "wallPostUpdateEvent.setContent(\"New wall post content\");\n" +
       "wallPostUpdateEvent.setAttachments(wallPost.getAttachments());\n" +
-      "communityApi.wallPosts().update(app, \"1\", wallPostUpdateEvent, true);",
+      "communityApi.wallPosts().update(app, \"61445159784bca6ef764c6df\", wallPostUpdateEvent, true);",
     response: null
   }
 
@@ -3428,7 +3428,7 @@ export class CommunityJavaTemplates {
       "String clientSecret = \"YOUR_CLIENT_SECRET\";\n" +
       "App app = new App(clientId, clientSecret);\n" +
       "CommunityApi communityApi = new CommunityApi();\n" +
-      "communityApi.wallPosts().delete(app, \"1\", true);",
+      "communityApi.wallPosts().delete(app, \"61445159784bca6ef764c6df\", true);",
     response: null
   }
 
@@ -3441,7 +3441,7 @@ export class CommunityJavaTemplates {
       "String clientSecret = \"YOUR_CLIENT_SECRET\";\n" +
       "App app = new App(clientId, clientSecret);\n" +
       "CommunityApi communityApi = new CommunityApi();\n" +
-      "communityApi.wallPosts().like(app, \"1\", new WallPostLikeEvent());",
+      "communityApi.wallPosts().like(app, \"61445159784bca6ef764c6df\", new WallPostLikeEvent());",
     response: null
   }
 
@@ -3454,7 +3454,7 @@ export class CommunityJavaTemplates {
       "String clientSecret = \"YOUR_CLIENT_SECRET\";\n" +
       "App app = new App(clientId, clientSecret);\n" +
       "CommunityApi communityApi = new CommunityApi();\n" +
-      "communityApi.wallPosts().unlike(app, \"1\", new WallPostUnlikeEvent());",
+      "communityApi.wallPosts().unlike(app, \"61445159784bca6ef764c6df\", new WallPostUnlikeEvent());",
     response: null
   }
 
@@ -3474,7 +3474,7 @@ export class CommunityJavaTemplates {
       "comment.setCreatedAt(ZonedDateTime.now());\n" +
       "WallPostCommentAddEvent wallPostCommentAddEvent = new WallPostCommentAddEvent();\n" +
       "wallPostCommentAddEvent.setComment(comment);\n" +
-      "communityApi.wallPosts().commentAdd(app, \"1\", wallPostCommentAddEvent);",
+      "communityApi.wallPosts().commentAdd(app, \"61445159784bca6ef764c6df\", wallPostCommentAddEvent);",
     response: null
   }
 
@@ -3487,7 +3487,7 @@ export class CommunityJavaTemplates {
       "String clientSecret = \"YOUR_CLIENT_SECRET\";\n" +
       "App app = new App(clientId, clientSecret);\n" +
       "CommunityApi communityApi = new CommunityApi();\n" +
-      "communityApi.wallPosts().commentLike(app, \"1\", \"1\", new WallPostCommentLikeEvent());",
+      "communityApi.wallPosts().commentLike(app, \"61445159784bca6ef764c6df\", \"61445159784bca6ef764c6df\", new WallPostCommentLikeEvent());",
     response: null
   }
 
@@ -3500,7 +3500,7 @@ export class CommunityJavaTemplates {
       "String clientSecret = \"YOUR_CLIENT_SECRET\";\n" +
       "App app = new App(clientId, clientSecret);\n" +
       "CommunityApi communityApi = new CommunityApi();\n" +
-      "communityApi.wallPosts().commentUnlike(app, \"1\", \"1\", new WallPostCommentUnlikeEvent());",
+      "communityApi.wallPosts().commentUnlike(app, \"61445159784bca6ef764c6df\", \"61445159784bca6ef764c6df\", new WallPostCommentUnlikeEvent());",
     response: null
   }
 
@@ -3513,11 +3513,11 @@ export class CommunityJavaTemplates {
       "String clientSecret = \"YOUR_CLIENT_SECRET\";\n" +
       "App app = new App(clientId, clientSecret);\n" +
       "CommunityApi communityApi = new CommunityApi();\n" +
-      "WallPost wallPost = communityApi.wallPosts().get(app, \"1\").getResponse();\n" +
+      "WallPost wallPost = communityApi.wallPosts().get(app, \"61445159784bca6ef764c6df\").getResponse();\n" +
       "JSONObject jsonObject = new JSONObject(wallPost);\n" +
       "System.out.println(jsonObject);",
     response: "\n{\n" +
-      "\"id\": \"1\",\n" +
+      "\"id\": \"61445159784bca6ef764c6df\",\n" +
       "\"content\": \"Publicación de la subida de impuestos en Canarias\",\n" +
       "\"hashtags\": [\n" +
       "    \"#subidaImpuestos\",\n" +
@@ -3531,10 +3531,10 @@ export class CommunityJavaTemplates {
       "],\n" +
       "\"comments\": [\n" +
       "    {\n" +
-      "\"id\": \"1\",\n" +
+      "\"id\": \"61445159784bca6ef764c6df\",\n" +
       "\"content\": \"Pues a mi me parece muy mal, los subieron el otro día\",\n" +
       "\"authorMember\": {\n" +
-      "    \"id\": \"7\",\n" +
+      "    \"id\": \"61445159784bca6ef764c6df\",\n" +
       "    \"state\": \"ACCEPTED\",\n" +
       "    \"name\": \"Jorge\",\n" +
       "    \"lastname\": \"Perez\",\n" +
@@ -3564,7 +3564,7 @@ export class CommunityJavaTemplates {
       "    ],\n" +
       "    \"experiences\": [\n" +
       "{\n" +
-      "    \"id\": \"5\",\n" +
+      "    \"id\": \"61445159784bca6ef764c6df\",\n" +
       "    \"title\": \"Reponedor en Mercadona\",\n" +
       "    \"type\": \"PART_TIME\",\n" +
       "    \"company\": \"Mercadona\",\n" +
@@ -3580,7 +3580,7 @@ export class CommunityJavaTemplates {
       "    ],\n" +
       "    \"educations\": [\n" +
       "{\n" +
-      "    \"id\": \"6\",\n" +
+      "    \"id\": \"61445159784bca6ef764c6df\",\n" +
       "    \"school\": \"Universidad de Venezuela\",\n" +
       "    \"degree\": \"Derecho\",\n" +
       "    \"fieldOfStudy\": \"Derecho mercantil\",\n" +
@@ -3595,7 +3595,7 @@ export class CommunityJavaTemplates {
       "    \"description\": null\n" +
       "},\n" +
       "{\n" +
-      "    \"id\": \"14\",\n" +
+      "    \"id\": \"61445159784bca6ef764c6df\",\n" +
       "    \"school\": \"Universidad de Venezuela\",\n" +
       "    \"degree\": \"Master en Derecho\",\n" +
       "    \"fieldOfStudy\": \"Derecho en el Ejercicio de la Abogacía\",\n" +
@@ -3612,20 +3612,20 @@ export class CommunityJavaTemplates {
       "    ]\n" +
       "},\n" +
       "\"likes\": [\n" +
-      "    \"9\",\n" +
-      "    \"10\",\n" +
-      "    \"3\"\n" +
+      "    \"61445159784bca6ef764c6df\",\n" +
+      "    \"61445159784bca6ef764c6df\",\n" +
+      "    \"61445159784bca6ef764c6df\"\n" +
       "],\n" +
       "\"createdAt\": 1620259200000\n" +
       "    }\n" +
       "],\n" +
       "\"likes\": [\n" +
-      "    \"9\",\n" +
-      "    \"3\",\n" +
-      "    \"10\"\n" +
+      "    \"61445159784bca6ef764c6df\",\n" +
+      "    \"61445159784bca6ef764c6df\",\n" +
+      "    \"61445159784bca6ef764c6df\"\n" +
       "],\n" +
       "\"ownerMember\": {\n" +
-      "    \"id\": \"16\",\n" +
+      "    \"id\": \"61445159784bca6ef764c6df\",\n" +
       "    \"state\": \"REJECTED\",\n" +
       "    \"name\": \"Nestor\",\n" +
       "    \"lastname\": \"Rodriguez\",\n" +
@@ -3652,7 +3652,7 @@ export class CommunityJavaTemplates {
       "    ],\n" +
       "    \"experiences\": [\n" +
       "{\n" +
-      "    \"id\": \"14\",\n" +
+      "    \"id\": \"61445159784bca6ef764c6df\",\n" +
       "    \"title\": \"Ingenierio informático realizando trabajos de ciberseguridad\",\n" +
       "    \"type\": \"FULL_TIME\",\n" +
       "    \"company\": \"Movistar\",\n" +
@@ -3668,7 +3668,7 @@ export class CommunityJavaTemplates {
       "    ],\n" +
       "    \"educations\": [\n" +
       "{\n" +
-      "    \"id\": \"12\",\n" +
+      "    \"id\": \"61445159784bca6ef764c6df\",\n" +
       "    \"school\": \"Universidad de la Laguna\",\n" +
       "    \"degree\": \"Ingeniería informática\",\n" +
       "    \"fieldOfStudy\": \"Ciberseguridad\",\n" +
@@ -3702,7 +3702,7 @@ export class CommunityJavaTemplates {
       "System.out.println(jsonObject);",
     response: "\n[\n" +
       "   {\n" +
-      "      \"id\":\"1\",\n" +
+      "      \"id\":\"61445159784bca6ef764c6df\",\n" +
       "      \"content\":\"Publicación de la subida de impuestos en Canarias\",\n" +
       "      \"hashtags\":[\n" +
       " \"#subidaImpuestos\",\n" +
@@ -3716,10 +3716,10 @@ export class CommunityJavaTemplates {
       "      ],\n" +
       "      \"comments\":[\n" +
       " {\n" +
-      "    \"id\":\"1\",\n" +
+      "    \"id\":\"61445159784bca6ef764c6df\",\n" +
       "    \"content\":\"Pues a mi me parece muy mal, los subieron el otro día\",\n" +
       "    \"authorMember\":{\n" +
-      "       \"id\":\"7\",\n" +
+      "       \"id\":\"61445159784bca6ef764c6df\",\n" +
       "       \"state\":\"ACCEPTED\",\n" +
       "       \"name\":\"Jorge\",\n" +
       "       \"lastname\":\"Perez\",\n" +
@@ -3749,7 +3749,7 @@ export class CommunityJavaTemplates {
       "       ],\n" +
       "       \"experiences\":[\n" +
       "  {\n" +
-      "     \"id\":\"5\",\n" +
+      "     \"id\":\"61445159784bca6ef764c6df\",\n" +
       "     \"title\":\"Reponedor en Mercadona\",\n" +
       "     \"type\":\"PART_TIME\",\n" +
       "     \"company\":\"Mercadona\",\n" +
@@ -3765,7 +3765,7 @@ export class CommunityJavaTemplates {
       "       ],\n" +
       "       \"educations\":[\n" +
       "  {\n" +
-      "     \"id\":\"6\",\n" +
+      "     \"id\":\"61445159784bca6ef764c6df\",\n" +
       "     \"school\":\"Universidad de Venezuela\",\n" +
       "     \"degree\":\"Derecho\",\n" +
       "     \"fieldOfStudy\":\"Derecho mercantil\",\n" +
@@ -3780,7 +3780,7 @@ export class CommunityJavaTemplates {
       "     \"description\":null\n" +
       "  },\n" +
       "  {\n" +
-      "     \"id\":\"14\",\n" +
+      "     \"id\":\"61445159784bca6ef764c6df\",\n" +
       "     \"school\":\"Universidad de Venezuela\",\n" +
       "     \"degree\":\"Master en Derecho\",\n" +
       "     \"fieldOfStudy\":\"Derecho en el Ejercicio de la Abogacía\",\n" +
@@ -3797,20 +3797,20 @@ export class CommunityJavaTemplates {
       "       ]\n" +
       "    },\n" +
       "    \"likes\":[\n" +
-      "       \"9\",\n" +
-      "       \"10\",\n" +
-      "       \"3\"\n" +
+      "       \"61445159784bca6ef764c6df\",\n" +
+      "       \"61445159784bca6ef764c6df\",\n" +
+      "       \"61445159784bca6ef764c6df\"\n" +
       "    ],\n" +
       "    \"createdAt\":1620259200000\n" +
       " }\n" +
       "      ],\n" +
       "      \"likes\":[\n" +
-      " \"9\",\n" +
-      " \"3\",\n" +
-      " \"10\"\n" +
+      " \"61445159784bca6ef764c6df\",\n" +
+      " \"61445159784bca6ef764c6df\",\n" +
+      " \"61445159784bca6ef764c6df\"\n" +
       "      ],\n" +
       "      \"ownerMember\":{\n" +
-      " \"id\":\"16\",\n" +
+      " \"id\":\"61445159784bca6ef764c6df\",\n" +
       " \"state\":\"REJECTED\",\n" +
       " \"name\":\"Nestor\",\n" +
       " \"lastname\":\"Rodriguez\",\n" +
@@ -3837,7 +3837,7 @@ export class CommunityJavaTemplates {
       " ],\n" +
       " \"experiences\":[\n" +
       "    {\n" +
-      "       \"id\":\"14\",\n" +
+      "       \"id\":\"61445159784bca6ef764c6df\",\n" +
       "       \"title\":\"Ingenierio informático realizando trabajos de ciberseguridad\",\n" +
       "       \"type\":\"FULL_TIME\",\n" +
       "       \"company\":\"Movistar\",\n" +
@@ -3853,7 +3853,7 @@ export class CommunityJavaTemplates {
       " ],\n" +
       " \"educations\":[\n" +
       "    {\n" +
-      "       \"id\":\"12\",\n" +
+      "       \"id\":\"61445159784bca6ef764c6df\",\n" +
       "       \"school\":\"Universidad de la Laguna\",\n" +
       "       \"degree\":\"Ingeniería informática\",\n" +
       "       \"fieldOfStudy\":\"Ciberseguridad\",\n" +
@@ -3872,7 +3872,7 @@ export class CommunityJavaTemplates {
       "      \"createdAt\":1620172800000\n" +
       "   },\n" +
       "   {\n" +
-      "      \"id\":\"2\",\n" +
+      "      \"id\":\"61445159784bca6ef764c6df\",\n" +
       "      \"content\":\"Las elecciones en Madrid se han celebrado el 4/5/2020. ¿Estáis contentos con los resultados?\",\n" +
       "      \"hashtags\":[\n" +
       " \n" +
@@ -3885,10 +3885,10 @@ export class CommunityJavaTemplates {
       "      ],\n" +
       "      \"comments\":[\n" +
       " {\n" +
-      "    \"id\":\"2\",\n" +
+      "    \"id\":\"61445159784bca6ef764c6df\",\n" +
       "    \"content\":\"Pues yo estoy muy contento.\",\n" +
       "    \"authorMember\":{\n" +
-      "       \"id\":\"8\",\n" +
+      "       \"id\":\"61445159784bca6ef764c6df\",\n" +
       "       \"state\":\"ACCEPTED\",\n" +
       "       \"name\":\"Marcos\",\n" +
       "       \"lastname\":\"Fernandez\",\n" +
@@ -3920,7 +3920,7 @@ export class CommunityJavaTemplates {
       "       ],\n" +
       "       \"experiences\":[\n" +
       "  {\n" +
-      "     \"id\":\"6\",\n" +
+      "     \"id\":\"61445159784bca6ef764c6df\",\n" +
       "     \"title\":\"Colaboración para crear la vacuna Pfizer\",\n" +
       "     \"type\":\"FULL_TIME\",\n" +
       "     \"company\":\"Novartis\",\n" +
@@ -3934,7 +3934,7 @@ export class CommunityJavaTemplates {
       "     \"description\":\"Colaborador de la vacuna Pfizer contra el COVID-19\"\n" +
       "  },\n" +
       "  {\n" +
-      "     \"id\":\"7\",\n" +
+      "     \"id\":\"61445159784bca6ef764c6df\",\n" +
       "     \"title\":\"Colaboración para crear la vacuna de la gripe A\",\n" +
       "     \"type\":\"INTERIM\",\n" +
       "     \"company\":\"Novartis\",\n" +
@@ -3950,7 +3950,7 @@ export class CommunityJavaTemplates {
       "       ],\n" +
       "       \"educations\":[\n" +
       "  {\n" +
-      "     \"id\":\"7\",\n" +
+      "     \"id\":\"61445159784bca6ef764c6df\",\n" +
       "     \"school\":\"Universidad de Tokio\",\n" +
       "     \"degree\":\"Farmaceutica\",\n" +
       "     \"fieldOfStudy\":\"Pandemias\",\n" +
@@ -3967,16 +3967,16 @@ export class CommunityJavaTemplates {
       "       ]\n" +
       "    },\n" +
       "    \"likes\":[\n" +
-      "       \"1\",\n" +
-      "       \"7\"\n" +
+      "       \"61445159784bca6ef764c6df\",\n" +
+      "       \"61445159784bca6ef764c6df\"\n" +
       "    ],\n" +
       "    \"createdAt\":1620345600000\n" +
       " },\n" +
       " {\n" +
-      "    \"id\":\"3\",\n" +
+      "    \"id\":\"61445159784bca6ef764c6df\",\n" +
       "    \"content\":\"Pues yo pense que no ganarían estos. No me quedo conforme.\",\n" +
       "    \"authorMember\":{\n" +
-      "       \"id\":\"12\",\n" +
+      "       \"id\":\"61445159784bca6ef764c6df\",\n" +
       "       \"state\":\"ACCEPTED\",\n" +
       "       \"name\":\"Cristina\",\n" +
       "       \"lastname\":\"Valdemoro\",\n" +
@@ -4011,7 +4011,7 @@ export class CommunityJavaTemplates {
       "       ],\n" +
       "       \"experiences\":[\n" +
       "  {\n" +
-      "     \"id\":\"12\",\n" +
+      "     \"id\":\"61445159784bca6ef764c6df\",\n" +
       "     \"title\":\"Voluntariado de Unicef en Colombia\",\n" +
       "     \"type\":\"WORK_AND_SERVICE_CONTRACT\",\n" +
       "     \"company\":\"Unicef\",\n" +
@@ -4027,7 +4027,7 @@ export class CommunityJavaTemplates {
       "       ],\n" +
       "       \"educations\":[\n" +
       "  {\n" +
-      "     \"id\":\"9\",\n" +
+      "     \"id\":\"61445159784bca6ef764c6df\",\n" +
       "     \"school\":\"Universidad de Barcelona\",\n" +
       "     \"degree\":\"Recursos Humanos y Relaciones Laborales\",\n" +
       "     \"fieldOfStudy\":\"Coaching a empresas\",\n" +
@@ -4044,18 +4044,18 @@ export class CommunityJavaTemplates {
       "       ]\n" +
       "    },\n" +
       "    \"likes\":[\n" +
-      "       \"13\",\n" +
-      "       \"9\"\n" +
+      "       \"61445159784bca6ef764c6df\",\n" +
+      "       \"61445159784bca6ef764c6df\"\n" +
       "    ],\n" +
       "    \"createdAt\":1620345600000\n" +
       " }\n" +
       "      ],\n" +
       "      \"likes\":[\n" +
-      " \"9\",\n" +
-      " \"7\"\n" +
+      " \"61445159784bca6ef764c6df\",\n" +
+      " \"61445159784bca6ef764c6df\"\n" +
       "      ],\n" +
       "      \"ownerMember\":{\n" +
-      " \"id\":\"15\",\n" +
+      " \"id\":\"61445159784bca6ef764c6df\",\n" +
       " \"state\":\"PENDING\",\n" +
       " \"name\":\"Roberto\",\n" +
       " \"lastname\":\"Torres\",\n" +
@@ -4082,7 +4082,7 @@ export class CommunityJavaTemplates {
       " ],\n" +
       " \"experiences\":[\n" +
       "    {\n" +
-      "       \"id\":\"14\",\n" +
+      "       \"id\":\"61445159784bca6ef764c6df\",\n" +
       "       \"title\":\"Ingenierio informático realizando trabajos de ciberseguridad\",\n" +
       "       \"type\":\"FULL_TIME\",\n" +
       "       \"company\":\"Movistar\",\n" +
@@ -4098,7 +4098,7 @@ export class CommunityJavaTemplates {
       " ],\n" +
       " \"educations\":[\n" +
       "    {\n" +
-      "       \"id\":\"12\",\n" +
+      "       \"id\":\"61445159784bca6ef764c6df\",\n" +
       "       \"school\":\"Universidad de la Laguna\",\n" +
       "       \"degree\":\"Ingeniería informática\",\n" +
       "       \"fieldOfStudy\":\"Ciberseguridad\",\n" +
@@ -4113,7 +4113,7 @@ export class CommunityJavaTemplates {
       "       \"description\":\"Estudiante de la Universidad de La Laguna, en la facultad de ingeniería informática\"\n" +
       "    },\n" +
       "    {\n" +
-      "       \"id\":\"13\",\n" +
+      "       \"id\":\"61445159784bca6ef764c6df\",\n" +
       "       \"school\":\"Universidad de Cataluña\",\n" +
       "       \"degree\":\"Master en Ciberseguridad\",\n" +
       "       \"fieldOfStudy\":\"Encriptado\",\n" +
@@ -4162,11 +4162,11 @@ export class CommunityJavaTemplates {
       "System.out.println(jsonObject);",
     response: "\n[\n" +
       "   {\n" +
-      "      \"id\":\"1\",\n" +
+      "      \"id\":\"61445159784bca6ef764c6df\",\n" +
       "      \"type\":\"EXPERT\",\n" +
       "      \"state\":\"ACCEPTED\",\n" +
       "      \"ownerMember\":{\n" +
-      " \"id\":\"1\",\n" +
+      " \"id\":\"61445159784bca6ef764c6df\",\n" +
       " \"state\":\"ACCEPTED\",\n" +
       " \"name\":\"Iñigo\",\n" +
       " \"lastname\":\"Aramburu\",\n" +
@@ -4191,7 +4191,7 @@ export class CommunityJavaTemplates {
       " ],\n" +
       " \"experiences\":[\n" +
       "    {\n" +
-      "       \"id\":\"1\",\n" +
+      "       \"id\":\"61445159784bca6ef764c6df\",\n" +
       "       \"title\":\"Back-end developer en Moonshot Innovation\",\n" +
       "       \"type\":\"FULL_TIME\",\n" +
       "       \"company\":\"Moonshot Innovation\",\n" +
@@ -4207,7 +4207,7 @@ export class CommunityJavaTemplates {
       " ],\n" +
       " \"educations\":[\n" +
       "    {\n" +
-      "       \"id\":\"1\",\n" +
+      "       \"id\":\"61445159784bca6ef764c6df\",\n" +
       "       \"school\":\"Universidad del País Vasco\",\n" +
       "       \"degree\":\"Ingeniería informática\",\n" +
       "       \"fieldOfStudy\":\"Ingeniería de software\",\n" +
@@ -4222,7 +4222,7 @@ export class CommunityJavaTemplates {
       "       \"description\":\"Estudios universitarios realizados en la Universidad del País Vasco\"\n" +
       "    },\n" +
       "    {\n" +
-      "       \"id\":\"15\",\n" +
+      "       \"id\":\"61445159784bca6ef764c6df\",\n" +
       "       \"school\":\"Universidad del País Vasco\",\n" +
       "       \"degree\":\"Master en desarrollo web\",\n" +
       "       \"fieldOfStudy\":\"Desarrollo web\",\n" +
@@ -4286,11 +4286,11 @@ export class CommunityJavaTemplates {
       "      }\n" +
       "   },\n" +
       "   {\n" +
-      "      \"id\":\"2\",\n" +
+      "      \"id\":\"61445159784bca6ef764c6df\",\n" +
       "      \"type\":\"MENTOR\",\n" +
       "      \"state\":\"ACCEPTED\",\n" +
       "      \"ownerMember\":{\n" +
-      " \"id\":\"2\",\n" +
+      " \"id\":\"61445159784bca6ef764c6df\",\n" +
       " \"state\":\"ACCEPTED\",\n" +
       " \"name\":\"Jose Juan\",\n" +
       " \"lastname\":\"Hernández\",\n" +
@@ -4315,7 +4315,7 @@ export class CommunityJavaTemplates {
       " ],\n" +
       " \"experiences\":[\n" +
       "    {\n" +
-      "       \"id\":\"1\",\n" +
+      "       \"id\":\"61445159784bca6ef764c6df\",\n" +
       "       \"title\":\"Back-end developer en Moonshot Innovation\",\n" +
       "       \"type\":\"FULL_TIME\",\n" +
       "       \"company\":\"Moonshot Innovation\",\n" +
@@ -4329,7 +4329,7 @@ export class CommunityJavaTemplates {
       "       \"description\":\"Scrum manager en Moonshot Innovation, trabajando en el equipo de back-end\"\n" +
       "    },\n" +
       "    {\n" +
-      "       \"id\":\"2\",\n" +
+      "       \"id\":\"61445159784bca6ef764c6df\",\n" +
       "       \"title\":\"Profesor en la facultad de Ingenería informatica\",\n" +
       "       \"type\":\"OFFICIAL\",\n" +
       "       \"company\":\"Universidad de Las Palmas de Gran Canaria\",\n" +
@@ -4345,7 +4345,7 @@ export class CommunityJavaTemplates {
       " ],\n" +
       " \"educations\":[\n" +
       "    {\n" +
-      "       \"id\":\"2\",\n" +
+      "       \"id\":\"61445159784bca6ef764c6df\",\n" +
       "       \"school\":\"Universidad de Las Palmas de Gran Canaria\",\n" +
       "       \"degree\":\"Ingeniería en telecomunicaciones\",\n" +
       "       \"fieldOfStudy\":\"Big data\",\n" +
@@ -4869,11 +4869,11 @@ export class CommunityJavaTemplates {
       "System.out.println(jsonObject);",
     response: "\n[\n" +
       "   {\n" +
-      "      \"id\":\"13\",\n" +
+      "      \"id\":\"61445159784bca6ef764c6df\",\n" +
       "      \"type\":\"HUB\",\n" +
       "      \"state\":\"REJECTED\",\n" +
       "      \"ownerMember\":{\n" +
-      " \"id\":\"16\",\n" +
+      " \"id\":\"61445159784bca6ef764c6df\",\n" +
       " \"state\":\"REJECTED\",\n" +
       " \"name\":\"Nestor\",\n" +
       " \"lastname\":\"Rodriguez\",\n" +
@@ -4898,7 +4898,7 @@ export class CommunityJavaTemplates {
       " ],\n" +
       " \"experiences\":[\n" +
       "    {\n" +
-      "       \"id\":\"14\",\n" +
+      "       \"id\":\"61445159784bca6ef764c6df\",\n" +
       "       \"title\":\"Ingenierio informático realizando trabajos de ciberseguridad\",\n" +
       "       \"type\":\"FULL_TIME\",\n" +
       "       \"company\":\"Movistar\",\n" +
@@ -4914,7 +4914,7 @@ export class CommunityJavaTemplates {
       " ],\n" +
       " \"educations\":[\n" +
       "    {\n" +
-      "       \"id\":\"12\",\n" +
+      "       \"id\":\"61445159784bca6ef764c6df\",\n" +
       "       \"school\":\"Universidad de la Laguna\",\n" +
       "       \"degree\":\"Ingeniería informática\",\n" +
       "       \"fieldOfStudy\":\"Ciberseguridad\",\n" +
@@ -4945,7 +4945,7 @@ export class CommunityJavaTemplates {
       "      ],\n" +
       "      \"members\":[\n" +
       " {\n" +
-      "    \"id\":\"14\",\n" +
+      "    \"id\":\"61445159784bca6ef764c6df\",\n" +
       "    \"state\":\"ACCEPTED\",\n" +
       "    \"name\":\"Fernando\",\n" +
       "    \"lastname\":\"Oliveiro\",\n" +
@@ -4971,7 +4971,7 @@ export class CommunityJavaTemplates {
       "    ],\n" +
       "    \"experiences\":[\n" +
       "       {\n" +
-      "  \"id\":\"13\",\n" +
+      "  \"id\":\"61445159784bca6ef764c6df\",\n" +
       "  \"title\":\"Profesor en la Universidad de Hardvard\",\n" +
       "  \"type\":\"OFFICIAL\",\n" +
       "  \"company\":\"Universidad de Hardvard\",\n" +
@@ -4985,7 +4985,7 @@ export class CommunityJavaTemplates {
       "  \"description\":\"Profesor de Ingenieria Informática en la universidad de Hardvard\"\n" +
       "       },\n" +
       "       {\n" +
-      "  \"id\":\"15\",\n" +
+      "  \"id\":\"61445159784bca6ef764c6df\",\n" +
       "  \"title\":\"Investigador a tiempo parcial para la universidad de Hardvard\",\n" +
       "  \"type\":\"PART_TIME\",\n" +
       "  \"company\":\"Universidad de Hardvard\",\n" +
@@ -5001,7 +5001,7 @@ export class CommunityJavaTemplates {
       "    ],\n" +
       "    \"educations\":[\n" +
       "       {\n" +
-      "  \"id\":\"11\",\n" +
+      "  \"id\":\"61445159784bca6ef764c6df\",\n" +
       "  \"school\":\"Universidad de Brasil\",\n" +
       "  \"degree\":\"Matemáticas\",\n" +
       "  \"fieldOfStudy\":\"Matemáticas computacionales\",\n" +
@@ -5018,7 +5018,7 @@ export class CommunityJavaTemplates {
       "    ]\n" +
       " },\n" +
       " {\n" +
-      "    \"id\":\"15\",\n" +
+      "    \"id\":\"61445159784bca6ef764c6df\",\n" +
       "    \"state\":\"PENDING\",\n" +
       "    \"name\":\"Roberto\",\n" +
       "    \"lastname\":\"Torres\",\n" +
@@ -5043,7 +5043,7 @@ export class CommunityJavaTemplates {
       "    ],\n" +
       "    \"experiences\":[\n" +
       "       {\n" +
-      "  \"id\":\"14\",\n" +
+      "  \"id\":\"61445159784bca6ef764c6df\",\n" +
       "  \"title\":\"Ingenierio informático realizando trabajos de ciberseguridad\",\n" +
       "  \"type\":\"FULL_TIME\",\n" +
       "  \"company\":\"Movistar\",\n" +
@@ -5059,7 +5059,7 @@ export class CommunityJavaTemplates {
       "    ],\n" +
       "    \"educations\":[\n" +
       "       {\n" +
-      "  \"id\":\"12\",\n" +
+      "  \"id\":\"61445159784bca6ef764c6df\",\n" +
       "  \"school\":\"Universidad de la Laguna\",\n" +
       "  \"degree\":\"Ingeniería informática\",\n" +
       "  \"fieldOfStudy\":\"Ciberseguridad\",\n" +
@@ -5074,7 +5074,7 @@ export class CommunityJavaTemplates {
       "  \"description\":\"Estudiante de la Universidad de La Laguna, en la facultad de ingeniería informática\"\n" +
       "       },\n" +
       "       {\n" +
-      "  \"id\":\"13\",\n" +
+      "  \"id\":\"61445159784bca6ef764c6df\",\n" +
       "  \"school\":\"Universidad de Cataluña\",\n" +
       "  \"degree\":\"Master en Ciberseguridad\",\n" +
       "  \"fieldOfStudy\":\"Encriptado\",\n" +
@@ -5161,7 +5161,7 @@ export class CommunityJavaTemplates {
       "String clientSecret = \"YOUR_CLIENT_SECRET\";\n" +
       "App app = new App(clientId, clientSecret);\n" +
       "CommunityApi communityApi = new CommunityApi();\n" +
-      "List<Actor> actors = communityApi.actors().listByMember(app, \"1\").getResponse();\n" +
+      "List<Actor> actors = communityApi.actors().listByMember(app, \"61445159784bca6ef764c6df\").getResponse();\n" +
       "JSONArray jsonObject = new JSONArray(actors);\n" +
       "System.out.println(jsonObject);",
     response: "\n[\n" +
@@ -5488,7 +5488,7 @@ export class CommunityJavaTemplates {
       "String clientSecret = \"YOUR_CLIENT_SECRET\";\n" +
       "App app = new App(clientId, clientSecret);\n" +
       "CommunityApi communityApi = new CommunityApi();\n" +
-      "Actor actor = communityApi.actors().get(app, \"1\").getResponse();\n" +
+      "Actor actor = communityApi.actors().get(app, \"61445159784bca6ef764c6df\").getResponse();\n" +
       "JSONObject jsonObject = new JSONObject(actor);\n" +
       "System.out.println(jsonObject);",
     response: "\n{\n" +
@@ -5654,7 +5654,7 @@ export class CommunityJavaTemplates {
       "String clientSecret = \"YOUR_CLIENT_SECRET\";\n" +
       "App app = new App(clientId, clientSecret);\n" +
       "CommunityApi communityApi = new CommunityApi();\n" +
-      "Actor actor = communityApi.actors().get(app, \"1\").getResponse();\n" +
+      "Actor actor = communityApi.actors().get(app, \"61445159784bca6ef764c6df\").getResponse();\n" +
       "TalentUpdateEvent actorUpdateEvent = new TalentUpdateEvent();\n" +
       "actorUpdateEvent.setName(\"Rodolfo\");\n" +
       "actorUpdateEvent.setCity(\"Madrid\");\n" +
@@ -5674,7 +5674,7 @@ export class CommunityJavaTemplates {
       "actorUpdateEvent.setMedia(new ArrayList<String>());\n" +
       "actorUpdateEvent.setLastname(\"Martinez\");\n" +
       "actorUpdateEvent.setEmail(\"rodolfo_martinez@gmail.com\");\n" +
-      "communityApi.actors().update(app, \"1\", actorUpdateEvent);",
+      "communityApi.actors().update(app, \"61445159784bca6ef764c6df\", actorUpdateEvent);",
     response: null
   }
 
@@ -5687,7 +5687,7 @@ export class CommunityJavaTemplates {
       "String clientSecret = \"YOUR_CLIENT_SECRET\";\n" +
       "App app = new App(clientId, clientSecret);\n" +
       "CommunityApi communityApi = new CommunityApi();\n" +
-      "communityApi.actors().accept(app, \"1\", new ActorAcceptEvent());",
+      "communityApi.actors().accept(app, \"61445159784bca6ef764c6df\", new ActorAcceptEvent());",
     response: null
   }
 
@@ -5700,7 +5700,7 @@ export class CommunityJavaTemplates {
       "String clientSecret = \"YOUR_CLIENT_SECRET\";\n" +
       "App app = new App(clientId, clientSecret);\n" +
       "CommunityApi communityApi = new CommunityApi();\n" +
-      "communityApi.actors().reject(app, \"1\", new ActorRejectEvent());",
+      "communityApi.actors().reject(app, \"61445159784bca6ef764c6df\", new ActorRejectEvent());",
     response: null
   }
 
@@ -5713,7 +5713,7 @@ export class CommunityJavaTemplates {
       "String clientSecret = \"YOUR_CLIENT_SECRET\";\n" +
       "App app = new App(clientId, clientSecret);\n" +
       "CommunityApi communityApi = new CommunityApi();\n" +
-      "communityApi.actors().delete(app, \"1\");",
+      "communityApi.actors().delete(app, \"61445159784bca6ef764c6df\");",
     response: null
   }
 
@@ -5755,7 +5755,7 @@ export class CommunityJavaTemplates {
       "App app = new App(clientId, clientSecret);\n" +
       "CommunityApi communityApi = new CommunityApi();\n" +
       "File file = new File(\"C:\\Users\\saulo\\OneDrive\\Imágenes\\evento.jpg\");\n" +
-      "communityApi.actors().uploadMedia(app, \"1\", file);",
+      "communityApi.actors().uploadMedia(app, \"61445159784bca6ef764c6df\", file);",
     response: "\nhttps://localhost/drive/actors/media/1/61eaffcdad2bd12319fd4eba.png"
   }
 
@@ -5787,7 +5787,7 @@ export class CommunityJavaTemplates {
       "String clientSecret = \"YOUR_CLIENT_SECRET\";\n" +
       "App app = new App(clientId, clientSecret);\n" +
       "CommunityApi communityApi = new CommunityApi();\n" +
-      "communityApi.members().loggedIn(app, \"1\");",
+      "communityApi.members().loggedIn(app, \"61445159784bca6ef764c6df\");",
     response: "\n{\n" +
       "    \"id\": \"60acae8e2f799d228a4d4a85\",\n" +
       "    \"state\": \"ACCEPTED\",\n" +
@@ -6031,7 +6031,7 @@ export class CommunityJavaTemplates {
       "System.out.println(jsonObject);",
     response: "\n[\n" +
       "   {\n" +
-      "      \"id\":\"1\",\n" +
+      "      \"id\":\"61445159784bca6ef764c6df\",\n" +
       "      \"state\":\"ACCEPTED\",\n" +
       "      \"name\":\"Iñigo\",\n" +
       "      \"lastname\":\"Aramburu\",\n" +
@@ -6056,7 +6056,7 @@ export class CommunityJavaTemplates {
       "      ],\n" +
       "      \"experiences\":[\n" +
       " {\n" +
-      "    \"id\":\"1\",\n" +
+      "    \"id\":\"61445159784bca6ef764c6df\",\n" +
       "    \"title\":\"Back-end developer en Moonshot Innovation\",\n" +
       "    \"type\":\"FULL_TIME\",\n" +
       "    \"company\":\"Moonshot Innovation\",\n" +
@@ -6072,7 +6072,7 @@ export class CommunityJavaTemplates {
       "      ],\n" +
       "      \"educations\":[\n" +
       " {\n" +
-      "    \"id\":\"1\",\n" +
+      "    \"id\":\"61445159784bca6ef764c6df\",\n" +
       "    \"school\":\"Universidad del País Vasco\",\n" +
       "    \"degree\":\"Ingeniería informática\",\n" +
       "    \"fieldOfStudy\":\"Ingeniería de software\",\n" +
@@ -6087,7 +6087,7 @@ export class CommunityJavaTemplates {
       "    \"description\":\"Estudios universitarios realizados en la Universidad del País Vasco\"\n" +
       " },\n" +
       " {\n" +
-      "    \"id\":\"15\",\n" +
+      "    \"id\":\"61445159784bca6ef764c6df\",\n" +
       "    \"school\":\"Universidad del País Vasco\",\n" +
       "    \"degree\":\"Master en desarrollo web\",\n" +
       "    \"fieldOfStudy\":\"Desarrollo web\",\n" +
@@ -6104,7 +6104,7 @@ export class CommunityJavaTemplates {
       "      ]\n" +
       "   },\n" +
       "   {\n" +
-      "      \"id\":\"2\",\n" +
+      "      \"id\":\"61445159784bca6ef764c6df\",\n" +
       "      \"state\":\"ACCEPTED\",\n" +
       "      \"name\":\"Jose Juan\",\n" +
       "      \"lastname\":\"Hernández\",\n" +
@@ -6131,7 +6131,7 @@ export class CommunityJavaTemplates {
       "      ],\n" +
       "      \"experiences\":[\n" +
       " {\n" +
-      "    \"id\":\"1\",\n" +
+      "    \"id\":\"61445159784bca6ef764c6df\",\n" +
       "    \"title\":\"Back-end developer en Moonshot Innovation\",\n" +
       "    \"type\":\"FULL_TIME\",\n" +
       "    \"company\":\"Moonshot Innovation\",\n" +
@@ -6145,7 +6145,7 @@ export class CommunityJavaTemplates {
       "    \"description\":\"Scrum manager en Moonshot Innovation, trabajando en el equipo de back-end\"\n" +
       " },\n" +
       " {\n" +
-      "    \"id\":\"2\",\n" +
+      "    \"id\":\"61445159784bca6ef764c6df\",\n" +
       "    \"title\":\"Profesor en la facultad de Ingenería informatica\",\n" +
       "    \"type\":\"OFFICIAL\",\n" +
       "    \"company\":\"Universidad de Las Palmas de Gran Canaria\",\n" +
@@ -6161,7 +6161,7 @@ export class CommunityJavaTemplates {
       "      ],\n" +
       "      \"educations\":[\n" +
       " {\n" +
-      "    \"id\":\"2\",\n" +
+      "    \"id\":\"61445159784bca6ef764c6df\",\n" +
       "    \"school\":\"Universidad de Las Palmas de Gran Canaria\",\n" +
       "    \"degree\":\"Ingeniería en telecomunicaciones\",\n" +
       "    \"fieldOfStudy\":\"Big data\",\n" +
@@ -6189,11 +6189,11 @@ export class CommunityJavaTemplates {
       "String clientSecret = \"YOUR_CLIENT_SECRET\";\n" +
       "App app = new App(clientId, clientSecret);\n" +
       "CommunityApi communityApi = new CommunityApi();\n" +
-      "Member member = communityApi.members().member(app, \"2\").getResponse();\n" +
+      "Member member = communityApi.members().member(app, \"61445159784bca6ef764c6df\").getResponse();\n" +
       "JSONObject jsonObject = new JSONObject(member);\n" +
       "System.out.println(jsonObject);",
     response: "\n{\n" +
-      "\"id\": \"2\",\n" +
+      "\"id\": \"61445159784bca6ef764c6df\",\n" +
       "\"state\": \"ACCEPTED\",\n" +
       "\"name\": \"Jose Juan\",\n" +
       "\"lastname\": \"Hernández\",\n" +
@@ -6220,7 +6220,7 @@ export class CommunityJavaTemplates {
       "],\n" +
       "\"experiences\": [\n" +
       "    {\n" +
-      "\"id\": \"1\",\n" +
+      "\"id\": \"61445159784bca6ef764c6df\",\n" +
       "\"title\": \"Back-end developer en Moonshot Innovation\",\n" +
       "\"type\": \"FULL_TIME\",\n" +
       "\"company\": \"Moonshot Innovation\",\n" +
@@ -6234,7 +6234,7 @@ export class CommunityJavaTemplates {
       "\"description\": \"Scrum manager en Moonshot Innovation, trabajando en el equipo de back-end\"\n" +
       "    },\n" +
       "    {\n" +
-      "\"id\": \"2\",\n" +
+      "\"id\": \"61445159784bca6ef764c6df\",\n" +
       "\"title\": \"Profesor en la facultad de Ingenería informatica\",\n" +
       "\"type\": \"OFFICIAL\",\n" +
       "\"company\": \"Universidad de Las Palmas de Gran Canaria\",\n" +
@@ -6250,7 +6250,7 @@ export class CommunityJavaTemplates {
       "],\n" +
       "\"educations\": [\n" +
       "    {\n" +
-      "\"id\": \"2\",\n" +
+      "\"id\": \"61445159784bca6ef764c6df\",\n" +
       "\"school\": \"Universidad de Las Palmas de Gran Canaria\",\n" +
       "\"degree\": \"Ingeniería en telecomunicaciones\",\n" +
       "\"fieldOfStudy\": \"Big data\",\n" +
@@ -6277,7 +6277,7 @@ export class CommunityJavaTemplates {
       "String clientSecret = \"YOUR_CLIENT_SECRET\";\n" +
       "App app = new App(clientId, clientSecret);\n" +
       "CommunityApi communityApi = new CommunityApi();\n" +
-      "byte[] marker = communityApi.members().marker(app, \"1\").getResponse();",
+      "byte[] marker = communityApi.members().marker(app, \"61445159784bca6ef764c6df\").getResponse();",
     response: "This endpoint download a svg file"
   }
 
@@ -6318,14 +6318,14 @@ export class CommunityJavaTemplates {
       "String clientSecret = \"YOUR_CLIENT_SECRET\";\n" +
       "App app = new App(clientId, clientSecret);\n" +
       "CommunityApi communityApi = new CommunityApi();\n" +
-      "Member member = communityApi.members().member(app, \"1\").getResponse();\n" +
+      "Member member = communityApi.members().member(app, \"61445159784bca6ef764c6df\").getResponse();\n" +
       "MemberUpdateEvent memberUpdateEvent = new MemberUpdateEvent();\n" +
       "memberUpdateEvent.setName(member.getName());\n" +
       "memberUpdateEvent.setLastname(member.getLastname());\n" +
       "memberUpdateEvent.setAddress(new Address());\n" +
       "memberUpdateEvent.setEmail(\"new_email@gmail.com\");\n" +
       "memberUpdateEvent.setSocialNetworks(new ArrayList<String>());\n" +
-      "communityApi.members().update(app, \"1\", memberUpdateEvent);",
+      "communityApi.members().update(app, \"61445159784bca6ef764c6df\", memberUpdateEvent);",
     response: null
   }
 
@@ -6338,7 +6338,7 @@ export class CommunityJavaTemplates {
       "String clientSecret = \"YOUR_CLIENT_SECRET\";\n" +
       "App app = new App(clientId, clientSecret);\n" +
       "CommunityApi communityApi = new CommunityApi();\n" +
-      "communityApi.members().delete(app, \"1\");",
+      "communityApi.members().delete(app, \"61445159784bca6ef764c6df\");",
     response: null
   }
 
@@ -6373,10 +6373,10 @@ export class CommunityJavaTemplates {
       "String clientSecret = \"YOUR_CLIENT_SECRET\";\n" +
       "App app = new App(clientId, clientSecret);\n" +
       "CommunityApi communityApi = new CommunityApi();\n" +
-      "Member member = communityApi.members().member(app, \"1\").getResponse();\n" +
+      "Member member = communityApi.members().member(app, \"61445159784bca6ef764c6df\").getResponse();\n" +
       "Education educationBase = member.getEducations()\n" +
       "    .stream()\n" +
-      "    .filter(education -> education.getId().equals(\"1\"))\n" +
+      "    .filter(education -> education.getId().equals(\"61445159784bca6ef764c6df\"))\n" +
       "    .collect(Collectors.toList()).get(0);\n" +
       "MemberEducationUpdateEvent memberEducationUpdateEvent = new MemberEducationUpdateEvent();\n" +
       "memberEducationUpdateEvent.setSchool(educationBase.getSchool());\n" +
@@ -6387,7 +6387,7 @@ export class CommunityJavaTemplates {
       "memberEducationUpdateEvent.setEndDate(educationBase.getEndDate());\n" +
       "memberEducationUpdateEvent.setGrade(10.0);\n" +
       "memberEducationUpdateEvent.setDescription(\"New description\");\n" +
-      "communityApi.members().educationUpdate(app, \"1\", memberEducationUpdateEvent);",
+      "communityApi.members().educationUpdate(app, \"61445159784bca6ef764c6df\", memberEducationUpdateEvent);",
     response: null
   }
 
@@ -6400,7 +6400,7 @@ export class CommunityJavaTemplates {
       "String clientSecret = \"YOUR_CLIENT_SECRET\";\n" +
       "App app = new App(clientId, clientSecret);\n" +
       "CommunityApi communityApi = new CommunityApi();\n" +
-      "communityApi.members().educationDelete(app, \"1\");",
+      "communityApi.members().educationDelete(app, \"61445159784bca6ef764c6df\");",
     response: null
   }
 
@@ -6434,10 +6434,10 @@ export class CommunityJavaTemplates {
       "String clientSecret = \"YOUR_CLIENT_SECRET\";\n" +
       "App app = new App(clientId, clientSecret);\n" +
       "CommunityApi communityApi = new CommunityApi();\n" +
-      "Member member = communityApi.members().member(app, \"1\").getResponse();\n" +
+      "Member member = communityApi.members().member(app, \"61445159784bca6ef764c6df\").getResponse();\n" +
       "Experience experienceBase = member.getExperiences()\n" +
       "    .stream()\n" +
-      "    .filter(experience -> experience.getId().equals(\"1\"))\n" +
+      "    .filter(experience -> experience.getId().equals(\"61445159784bca6ef764c6df\"))\n" +
       "    .collect(Collectors.toList()).get(0);\n" +
       "MemberExperienceUpdateEvent memberExperienceUpdateEvent = new MemberExperienceUpdateEvent();\n" +
       "memberExperienceUpdateEvent.setTitle(experienceBase.getTitle());\n" +
@@ -6447,7 +6447,7 @@ export class CommunityJavaTemplates {
       "memberExperienceUpdateEvent.setStartDate(experienceBase.getStartDate());\n" +
       "memberExperienceUpdateEvent.setEndDate(experienceBase.getEndDate());\n" +
       "memberExperienceUpdateEvent.setDescription(\"New description\");\n" +
-      "communityApi.members().experienceUpdate(app, \"1\", memberExperienceUpdateEvent);",
+      "communityApi.members().experienceUpdate(app, \"61445159784bca6ef764c6df\", memberExperienceUpdateEvent);",
     response: null
   }
 
@@ -6460,7 +6460,7 @@ export class CommunityJavaTemplates {
       "String clientSecret = \"YOUR_CLIENT_SECRET\";\n" +
       "App app = new App(clientId, clientSecret);\n" +
       "CommunityApi communityApi = new CommunityApi();\n" +
-      "communityApi.members().experienceDelete(app, \"1\");",
+      "communityApi.members().experienceDelete(app, \"61445159784bca6ef764c6df\");",
     response: null
   }
 
@@ -6473,13 +6473,13 @@ export class CommunityJavaTemplates {
       "String clientSecret = \"YOUR_CLIENT_SECRET\";\n" +
       "App app = new App(clientId, clientSecret);\n" +
       "CommunityApi communityApi = new CommunityApi();\n" +
-      "List<Project> projects = communityApi.projects().listByActor(app, \"1\").getResponse();\n" +
+      "List<Project> projects = communityApi.projects().listByActor(app, \"61445159784bca6ef764c6df\").getResponse();\n" +
       "JSONArray jsonObject = new JSONArray(projects);\n" +
       "System.out.println(jsonObject);",
     response: "\n[\n" +
       "   {\n" +
-      "      \"id\":\"1\",\n" +
-      "      \"actorId\":\"1\",\n" +
+      "      \"id\":\"61445159784bca6ef764c6df\",\n" +
+      "      \"actorId\":\"61445159784bca6ef764c6df\",\n" +
       "      \"name\":\"Patents\",\n" +
       "      \"description\":\"Patents\",\n" +
       "      \"trlStage\":\"BASIC_PRINCIPLES_OBSERVED\",\n" +
@@ -6489,7 +6489,7 @@ export class CommunityJavaTemplates {
       "      ],\n" +
       "      \"protectionMethod\":\"PATENTS\",\n" +
       "      \"projectManager\":{\n" +
-      " \"id\":\"1\",\n" +
+      " \"id\":\"61445159784bca6ef764c6df\",\n" +
       " \"state\":\"ACCEPTED\",\n" +
       " \"name\":\"Iñigo\",\n" +
       " \"lastname\":\"Aramburu\",\n" +
@@ -6514,7 +6514,7 @@ export class CommunityJavaTemplates {
       " ],\n" +
       " \"experiences\":[\n" +
       "    {\n" +
-      "       \"id\":\"1\",\n" +
+      "       \"id\":\"61445159784bca6ef764c6df\",\n" +
       "       \"title\":\"Back-end developer en Moonshot Innovation\",\n" +
       "       \"type\":\"FULL_TIME\",\n" +
       "       \"company\":\"Moonshot Innovation\",\n" +
@@ -6530,7 +6530,7 @@ export class CommunityJavaTemplates {
       " ],\n" +
       " \"educations\":[\n" +
       "    {\n" +
-      "       \"id\":\"1\",\n" +
+      "       \"id\":\"61445159784bca6ef764c6df\",\n" +
       "       \"school\":\"Universidad del País Vasco\",\n" +
       "       \"degree\":\"Ingeniería informática\",\n" +
       "       \"fieldOfStudy\":\"Ingeniería de software\",\n" +
@@ -6545,7 +6545,7 @@ export class CommunityJavaTemplates {
       "       \"description\":\"Estudios universitarios realizados en la Universidad del País Vasco\"\n" +
       "    },\n" +
       "    {\n" +
-      "       \"id\":\"15\",\n" +
+      "       \"id\":\"61445159784bca6ef764c6df\",\n" +
       "       \"school\":\"Universidad del País Vasco\",\n" +
       "       \"degree\":\"Master en desarrollo web\",\n" +
       "       \"fieldOfStudy\":\"Desarrollo web\",\n" +
@@ -6563,7 +6563,7 @@ export class CommunityJavaTemplates {
       "      },\n" +
       "      \"teamMembers\":[\n" +
       " {\n" +
-      "    \"id\":\"2\",\n" +
+      "    \"id\":\"61445159784bca6ef764c6df\",\n" +
       "    \"state\":\"ACCEPTED\",\n" +
       "    \"name\":\"Jose Juan\",\n" +
       "    \"lastname\":\"Hernández\",\n" +
@@ -6590,7 +6590,7 @@ export class CommunityJavaTemplates {
       "    ],\n" +
       "    \"experiences\":[\n" +
       "       {\n" +
-      "  \"id\":\"1\",\n" +
+      "  \"id\":\"61445159784bca6ef764c6df\",\n" +
       "  \"title\":\"Back-end developer en Moonshot Innovation\",\n" +
       "  \"type\":\"FULL_TIME\",\n" +
       "  \"company\":\"Moonshot Innovation\",\n" +
@@ -6604,7 +6604,7 @@ export class CommunityJavaTemplates {
       "  \"description\":\"Scrum manager en Moonshot Innovation, trabajando en el equipo de back-end\"\n" +
       "       },\n" +
       "       {\n" +
-      "  \"id\":\"2\",\n" +
+      "  \"id\":\"61445159784bca6ef764c6df\",\n" +
       "  \"title\":\"Profesor en la facultad de Ingenería informatica\",\n" +
       "  \"type\":\"OFFICIAL\",\n" +
       "  \"company\":\"Universidad de Las Palmas de Gran Canaria\",\n" +
@@ -6620,7 +6620,7 @@ export class CommunityJavaTemplates {
       "    ],\n" +
       "    \"educations\":[\n" +
       "       {\n" +
-      "  \"id\":\"2\",\n" +
+      "  \"id\":\"61445159784bca6ef764c6df\",\n" +
       "  \"school\":\"Universidad de Las Palmas de Gran Canaria\",\n" +
       "  \"degree\":\"Ingeniería en telecomunicaciones\",\n" +
       "  \"fieldOfStudy\":\"Big data\",\n" +
@@ -6637,7 +6637,7 @@ export class CommunityJavaTemplates {
       "    ]\n" +
       " },\n" +
       " {\n" +
-      "    \"id\":\"3\",\n" +
+      "    \"id\":\"61445159784bca6ef764c6df\",\n" +
       "    \"state\":\"ACCEPTED\",\n" +
       "    \"name\":\"Jeremy\",\n" +
       "    \"lastname\":\"Trujillo\",\n" +
@@ -6662,7 +6662,7 @@ export class CommunityJavaTemplates {
       "    ],\n" +
       "    \"experiences\":[\n" +
       "       {\n" +
-      "  \"id\":\"3\",\n" +
+      "  \"id\":\"61445159784bca6ef764c6df\",\n" +
       "  \"title\":\"Prácticas universitarias en Moonshot Innovation\",\n" +
       "  \"type\":\"APPRENTICESHIP\",\n" +
       "  \"company\":\"Moonshot Innovation\",\n" +
@@ -6678,7 +6678,7 @@ export class CommunityJavaTemplates {
       "    ],\n" +
       "    \"educations\":[\n" +
       "       {\n" +
-      "  \"id\":\"3\",\n" +
+      "  \"id\":\"61445159784bca6ef764c6df\",\n" +
       "  \"school\":\"Universidad de Las Palmas de Gran Canaria\",\n" +
       "  \"degree\":\"Ingeniería informática\",\n" +
       "  \"fieldOfStudy\":\"Ingeniería de software\",\n" +
@@ -6715,8 +6715,8 @@ export class CommunityJavaTemplates {
       "      ]\n" +
       "   },\n" +
       "   {\n" +
-      "      \"id\":\"2\",\n" +
-      "      \"actorId\":\"1\",\n" +
+      "      \"id\":\"61445159784bca6ef764c6df\",\n" +
+      "      \"actorId\":\"61445159784bca6ef764c6df\",\n" +
       "      \"name\":\"Trade secret\",\n" +
       "      \"description\":\"Trade secret\",\n" +
       "      \"trlStage\":\"TECHNOLOGY_CONCEPT_FORMULATED\",\n" +
@@ -6725,7 +6725,7 @@ export class CommunityJavaTemplates {
       "      ],\n" +
       "      \"protectionMethod\":\"TRADE_SECRETS\",\n" +
       "      \"projectManager\":{\n" +
-      " \"id\":\"4\",\n" +
+      " \"id\":\"61445159784bca6ef764c6df\",\n" +
       " \"state\":\"ACCEPTED\",\n" +
       " \"name\":\"Saulo\",\n" +
       " \"lastname\":\"Santana\",\n" +
@@ -6751,7 +6751,7 @@ export class CommunityJavaTemplates {
       " ],\n" +
       " \"experiences\":[\n" +
       "    {\n" +
-      "       \"id\":\"3\",\n" +
+      "       \"id\":\"61445159784bca6ef764c6df\",\n" +
       "       \"title\":\"Prácticas universitarias en Moonshot Innovation\",\n" +
       "       \"type\":\"APPRENTICESHIP\",\n" +
       "       \"company\":\"Moonshot Innovation\",\n" +
@@ -6767,7 +6767,7 @@ export class CommunityJavaTemplates {
       " ],\n" +
       " \"educations\":[\n" +
       "    {\n" +
-      "       \"id\":\"3\",\n" +
+      "       \"id\":\"61445159784bca6ef764c6df\",\n" +
       "       \"school\":\"Universidad de Las Palmas de Gran Canaria\",\n" +
       "       \"degree\":\"Ingeniería informática\",\n" +
       "       \"fieldOfStudy\":\"Ingeniería de software\",\n" +
@@ -6785,7 +6785,7 @@ export class CommunityJavaTemplates {
       "      },\n" +
       "      \"teamMembers\":[\n" +
       " {\n" +
-      "    \"id\":\"8\",\n" +
+      "    \"id\":\"61445159784bca6ef764c6df\",\n" +
       "    \"state\":\"ACCEPTED\",\n" +
       "    \"name\":\"Marcos\",\n" +
       "    \"lastname\":\"Fernandez\",\n" +
@@ -6817,7 +6817,7 @@ export class CommunityJavaTemplates {
       "    ],\n" +
       "    \"experiences\":[\n" +
       "       {\n" +
-      "  \"id\":\"6\",\n" +
+      "  \"id\":\"61445159784bca6ef764c6df\",\n" +
       "  \"title\":\"Colaboración para crear la vacuna Pfizer\",\n" +
       "  \"type\":\"FULL_TIME\",\n" +
       "  \"company\":\"Novartis\",\n" +
@@ -6831,7 +6831,7 @@ export class CommunityJavaTemplates {
       "  \"description\":\"Colaborador de la vacuna Pfizer contra el COVID-19\"\n" +
       "       },\n" +
       "       {\n" +
-      "  \"id\":\"7\",\n" +
+      "  \"id\":\"61445159784bca6ef764c6df\",\n" +
       "  \"title\":\"Colaboración para crear la vacuna de la gripe A\",\n" +
       "  \"type\":\"INTERIM\",\n" +
       "  \"company\":\"Novartis\",\n" +
@@ -6847,7 +6847,7 @@ export class CommunityJavaTemplates {
       "    ],\n" +
       "    \"educations\":[\n" +
       "       {\n" +
-      "  \"id\":\"7\",\n" +
+      "  \"id\":\"61445159784bca6ef764c6df\",\n" +
       "  \"school\":\"Universidad de Tokio\",\n" +
       "  \"degree\":\"Farmaceutica\",\n" +
       "  \"fieldOfStudy\":\"Pandemias\",\n" +
@@ -6897,12 +6897,12 @@ export class CommunityJavaTemplates {
       "String clientSecret = \"YOUR_CLIENT_SECRET\";\n" +
       "App app = new App(clientId, clientSecret);\n" +
       "CommunityApi communityApi = new CommunityApi();\n" +
-      "Project project = communityApi.projects().get(app, \"1\").getResponse();\n" +
+      "Project project = communityApi.projects().get(app, \"61445159784bca6ef764c6df\").getResponse();\n" +
       "JSONArray jsonObject = new JSONArray(project);\n" +
       "System.out.println(jsonObject);",
     response: "\n{\n" +
-      "   \"id\":\"1\",\n" +
-      "   \"actorId\":\"1\",\n" +
+      "   \"id\":\"61445159784bca6ef764c6df\",\n" +
+      "   \"actorId\":\"61445159784bca6ef764c6df\",\n" +
       "   \"name\":\"Patents\",\n" +
       "   \"description\":\"Patents\",\n" +
       "   \"trlStage\":\"BASIC_PRINCIPLES_OBSERVED\",\n" +
@@ -6912,7 +6912,7 @@ export class CommunityJavaTemplates {
       "   ],\n" +
       "   \"protectionMethod\":\"PATENTS\",\n" +
       "   \"projectManager\":{\n" +
-      "      \"id\":\"1\",\n" +
+      "      \"id\":\"61445159784bca6ef764c6df\",\n" +
       "      \"state\":\"ACCEPTED\",\n" +
       "      \"name\":\"Iñigo\",\n" +
       "      \"lastname\":\"Aramburu\",\n" +
@@ -6937,7 +6937,7 @@ export class CommunityJavaTemplates {
       "      ],\n" +
       "      \"experiences\":[\n" +
       " {\n" +
-      "    \"id\":\"1\",\n" +
+      "    \"id\":\"61445159784bca6ef764c6df\",\n" +
       "    \"title\":\"Back-end developer en Moonshot Innovation\",\n" +
       "    \"type\":\"FULL_TIME\",\n" +
       "    \"company\":\"Moonshot Innovation\",\n" +
@@ -6953,7 +6953,7 @@ export class CommunityJavaTemplates {
       "      ],\n" +
       "      \"educations\":[\n" +
       " {\n" +
-      "    \"id\":\"1\",\n" +
+      "    \"id\":\"61445159784bca6ef764c6df\",\n" +
       "    \"school\":\"Universidad del País Vasco\",\n" +
       "    \"degree\":\"Ingeniería informática\",\n" +
       "    \"fieldOfStudy\":\"Ingeniería de software\",\n" +
@@ -6968,7 +6968,7 @@ export class CommunityJavaTemplates {
       "    \"description\":\"Estudios universitarios realizados en la Universidad del País Vasco\"\n" +
       " },\n" +
       " {\n" +
-      "    \"id\":\"15\",\n" +
+      "    \"id\":\"61445159784bca6ef764c6df\",\n" +
       "    \"school\":\"Universidad del País Vasco\",\n" +
       "    \"degree\":\"Master en desarrollo web\",\n" +
       "    \"fieldOfStudy\":\"Desarrollo web\",\n" +
@@ -6986,7 +6986,7 @@ export class CommunityJavaTemplates {
       "   },\n" +
       "   \"teamMembers\":[\n" +
       "      {\n" +
-      " \"id\":\"2\",\n" +
+      " \"id\":\"61445159784bca6ef764c6df\",\n" +
       " \"state\":\"ACCEPTED\",\n" +
       " \"name\":\"Jose Juan\",\n" +
       " \"lastname\":\"Hernández\",\n" +
@@ -7013,7 +7013,7 @@ export class CommunityJavaTemplates {
       " ],\n" +
       " \"experiences\":[\n" +
       "    {\n" +
-      "       \"id\":\"1\",\n" +
+      "       \"id\":\"61445159784bca6ef764c6df\",\n" +
       "       \"title\":\"Back-end developer en Moonshot Innovation\",\n" +
       "       \"type\":\"FULL_TIME\",\n" +
       "       \"company\":\"Moonshot Innovation\",\n" +
@@ -7027,7 +7027,7 @@ export class CommunityJavaTemplates {
       "       \"description\":\"Scrum manager en Moonshot Innovation, trabajando en el equipo de back-end\"\n" +
       "    },\n" +
       "    {\n" +
-      "       \"id\":\"2\",\n" +
+      "       \"id\":\"61445159784bca6ef764c6df\",\n" +
       "       \"title\":\"Profesor en la facultad de Ingenería informatica\",\n" +
       "       \"type\":\"OFFICIAL\",\n" +
       "       \"company\":\"Universidad de Las Palmas de Gran Canaria\",\n" +
@@ -7043,7 +7043,7 @@ export class CommunityJavaTemplates {
       " ],\n" +
       " \"educations\":[\n" +
       "    {\n" +
-      "       \"id\":\"2\",\n" +
+      "       \"id\":\"61445159784bca6ef764c6df\",\n" +
       "       \"school\":\"Universidad de Las Palmas de Gran Canaria\",\n" +
       "       \"degree\":\"Ingeniería en telecomunicaciones\",\n" +
       "       \"fieldOfStudy\":\"Big data\",\n" +
@@ -7060,7 +7060,7 @@ export class CommunityJavaTemplates {
       " ]\n" +
       "      },\n" +
       "      {\n" +
-      " \"id\":\"3\",\n" +
+      " \"id\":\"61445159784bca6ef764c6df\",\n" +
       " \"state\":\"ACCEPTED\",\n" +
       " \"name\":\"Jeremy\",\n" +
       " \"lastname\":\"Trujillo\",\n" +
@@ -7085,7 +7085,7 @@ export class CommunityJavaTemplates {
       " ],\n" +
       " \"experiences\":[\n" +
       "    {\n" +
-      "       \"id\":\"3\",\n" +
+      "       \"id\":\"61445159784bca6ef764c6df\",\n" +
       "       \"title\":\"Prácticas universitarias en Moonshot Innovation\",\n" +
       "       \"type\":\"APPRENTICESHIP\",\n" +
       "       \"company\":\"Moonshot Innovation\",\n" +
@@ -7101,7 +7101,7 @@ export class CommunityJavaTemplates {
       " ],\n" +
       " \"educations\":[\n" +
       "    {\n" +
-      "       \"id\":\"3\",\n" +
+      "       \"id\":\"61445159784bca6ef764c6df\",\n" +
       "       \"school\":\"Universidad de Las Palmas de Gran Canaria\",\n" +
       "       \"degree\":\"Ingeniería informática\",\n" +
       "       \"fieldOfStudy\":\"Ingeniería de software\",\n" +
@@ -7149,7 +7149,7 @@ export class CommunityJavaTemplates {
       "App app = new App(clientId, clientSecret);\n" +
       "CommunityApi communityApi = new CommunityApi();\n" +
       "ProjectCreateEvent projectCreateEvent = new ProjectCreateEvent();\n" +
-      "projectCreateEvent.setActorId(\"1\");\n" +
+      "projectCreateEvent.setActorId(\"61445159784bca6ef764c6df\");\n" +
       "projectCreateEvent.setName(\"New project\");\n" +
       "projectCreateEvent.setDescription(\"New project description\");\n" +
       "projectCreateEvent.setTrlStage(TrlStage.BASIC_PRINCIPLES_OBSERVED);\n" +
@@ -7174,7 +7174,7 @@ export class CommunityJavaTemplates {
       "String clientSecret = \"YOUR_CLIENT_SECRET\";\n" +
       "App app = new App(clientId, clientSecret);\n" +
       "CommunityApi communityApi = new CommunityApi();\n" +
-      "Project project = communityApi.projects().get(app, \"1\").getResponse();\n" +
+      "Project project = communityApi.projects().get(app, \"61445159784bca6ef764c6df\").getResponse();\n" +
       "List<String> memberIds = project.getTeamMembers().stream().map(member -> member.getId()).collect(Collectors.toList());\n" +
       "ProjectUpdateEvent projectUpdateEvent = new ProjectUpdateEvent();\n" +
       "projectUpdateEvent.setActorId(project.getActorId());\n" +
@@ -7190,7 +7190,7 @@ export class CommunityJavaTemplates {
       "projectUpdateEvent.setBusinessModels(project.getBusinessModels());\n" +
       "projectUpdateEvent.setBusinessModels(project.getBusinessModels());\n" +
       "projectUpdateEvent.setSocialInnovations(project.getSocialInnovations());\n" +
-      "communityApi.projects().update(app, \"1\", projectUpdateEvent);",
+      "communityApi.projects().update(app, \"61445159784bca6ef764c6df\", projectUpdateEvent);",
     response: null
   }
 
@@ -7203,7 +7203,7 @@ export class CommunityJavaTemplates {
       "String clientSecret = \"YOUR_CLIENT_SECRET\";\n" +
       "App app = new App(clientId, clientSecret);\n" +
       "CommunityApi communityApi = new CommunityApi();\n" +
-      "communityApi.projects().delete(app, \"1\");",
+      "communityApi.projects().delete(app, \"61445159784bca6ef764c6df\");",
     response: null
   }
 
@@ -7217,7 +7217,7 @@ export class CommunityJavaTemplates {
       "App app = new App(clientId, clientSecret);\n" +
       "CommunityApi communityApi = new CommunityApi();\n" +
       "File file = new File(\"C:\\\\Users\\\\saulo\\\\OneDrive\\\\Imágenes\\\\evento.jpg\");\n" +
-      "communityApi.projects().uploadMedia(app, \"1\", file);",
+      "communityApi.projects().uploadMedia(app, \"61445159784bca6ef764c6df\", file);",
     response: null
   }
 }

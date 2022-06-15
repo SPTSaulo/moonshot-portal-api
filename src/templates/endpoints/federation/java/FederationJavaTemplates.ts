@@ -104,13 +104,13 @@ export class FederationJavaTemplates {
       "String clientId = \"YOUR_CLIENT_SECRET\";\n" +
       "App app = new App(clientId, clientSecret);\n" +
       "FederationApi federationApi = new FederationApi();\n" +
-      "User user = federationApi.users().user(app, \"1\").getResponse();\n" +
+      "User user = federationApi.users().user(app, \"60acae8e2f799d228a4d4a85\").getResponse();\n" +
       "JSONObject jsonObject = new JSONObject(user);\n" +
       "System.out.println(jsonObject);",
     response: "\n{\n" +
-      "    \"id\": \"1\",\n" +
+      "    \"id\": \"60acae8e2f799d228a4d4a85\",\n" +
       "    \"email\": \"usuario1@gmail.com\",\n" +
-      "    \"memberId\": \"2\",\n" +
+      "    \"memberId\": \"61445159784bca6ef764c6df\",\n" +
       "    \"roles\": [\n" +
       "\"USER\",\n" +
       "\"DEV:ECOSYSTEM_MANAGER\"\n" +
@@ -151,9 +151,9 @@ export class FederationJavaTemplates {
       "JSONObject jsonObject = new JSONObject(user);\n" +
       "System.out.println(jsonObject);",
     response: "\n{\n" +
-      "    \"id\": \"1\",\n" +
+      "    \"id\": \"60acae8e2f799d228a4d4a85\",\n" +
       "    \"email\": \"usuario1@gmail.com\",\n" +
-      "    \"memberId\": \"2\",\n" +
+      "    \"memberId\": \"61445159784bca6ef764c6df\",\n" +
       "    \"roles\": [\n" +
       "\"USER\",\n" +
       "\"DEV:ECOSYSTEM_MANAGER\"\n" +
@@ -195,9 +195,9 @@ export class FederationJavaTemplates {
       "System.out.println(jsonObject);",
     response: "\n[\n" +
       "    {\n" +
-      "\"id\": \"1\",\n" +
+      "\"id\": \"60acae8e2f799d228a4d4a85\",\n" +
       "\"email\": \"usuario1@gmail.com\",\n" +
-      "\"memberId\": \"1\",\n" +
+      "\"memberId\": \"60acae8e2f799d228a4d4a85\",\n" +
       "\"roles\": [\n" +
       "    \"DEV:ECOSYSTEM_USER\",\n" +
       "    \"DEV:ECOSYSTEM_MANAGER\"\n" +
@@ -224,9 +224,9 @@ export class FederationJavaTemplates {
       "]\n" +
       "    },\n" +
       "    {\n" +
-      "\"id\": \"2\",\n" +
+      "\"id\": \"61445159784bca6ef764c6df\",\n" +
       "\"email\": \"usuario2@gmail.com\",\n" +
-      "\"memberId\": \"2\",\n" +
+      "\"memberId\": \"61445159784bca6ef764c6df\",\n" +
       "\"roles\": [\n" +
       "    \"DEV:ECOSYSTEM_USER\"\n" +
       "],\n" +
@@ -264,9 +264,9 @@ export class FederationJavaTemplates {
       "System.out.println(jsonObject);",
     response: "\n[\n" +
       "    {\n" +
-      "\"id\": \"1\",\n" +
+      "\"id\": \"60acae8e2f799d228a4d4a85\",\n" +
       "\"email\": \"usuario1@gmail.com\",\n" +
-      "\"memberId\": \"1\",\n" +
+      "\"memberId\": \"60acae8e2f799d228a4d4a85\",\n" +
       "\"roles\": [\n" +
       "    \"DEV:ECOSYSTEM_USER\",\n" +
       "    \"DEV:ECOSYSTEM_MANAGER\"\n" +
@@ -293,9 +293,9 @@ export class FederationJavaTemplates {
       "]\n" +
       "    },\n" +
       "    {\n" +
-      "\"id\": \"2\",\n" +
+      "\"id\": \"61445159784bca6ef764c6df\",\n" +
       "\"email\": \"usuario2@gmail.com\",\n" +
-      "\"memberId\": \"2\",\n" +
+      "\"memberId\": \"61445159784bca6ef764c6df\",\n" +
       "\"roles\": [\n" +
       "    \"DEV:ECOSYSTEM_USER\"\n" +
       "],\n" +
@@ -333,9 +333,9 @@ export class FederationJavaTemplates {
       "System.out.println(jsonObject);",
     response: "\n[\n" +
       "    {\n" +
-      "\"id\": \"1\",\n" +
+      "\"id\": \"60acae8e2f799d228a4d4a85\",\n" +
       "\"email\": \"usuario1@gmail.com\",\n" +
-      "\"memberId\": \"1\",\n" +
+      "\"memberId\": \"60acae8e2f799d228a4d4a85\",\n" +
       "\"roles\": [\n" +
       "    \"DEV:ECOSYSTEM_USER\",\n" +
       "    \"DEV:ECOSYSTEM_MANAGER\"\n" +
@@ -362,9 +362,9 @@ export class FederationJavaTemplates {
       "]\n" +
       "    },\n" +
       "    {\n" +
-      "\"id\": \"2\",\n" +
+      "\"id\": \"61445159784bca6ef764c6df\",\n" +
       "\"email\": \"usuario2@gmail.com\",\n" +
-      "\"memberId\": \"2\",\n" +
+      "\"memberId\": \"61445159784bca6ef764c6df\",\n" +
       "\"roles\": [\n" +
       "    \"DEV:ECOSYSTEM_USER\"\n" +
       "],\n" +
@@ -431,7 +431,7 @@ export class FederationJavaTemplates {
       "String clientId = \"YOUR_CLIENT_SECRET\";\n" +
       "App app = new App(clientId, clientSecret);\n" +
       "FederationApi federationApi = new FederationApi();\n" +
-      "User user = federationApi.users().user(app, \"1\").getResponse();\n" +
+      "User user = federationApi.users().user(app, \"60acae8e2f799d228a4d4a85\").getResponse();\n" +
       "UserPermsUpdateEvent userPermsUpdateEvent = new UserPermsUpdateEvent();\n" +
       "userPermsUpdateEvent.setId(user.getId());\n" +
       "userPermsUpdateEvent.setPerms(new ArrayList<String>());\n" +
@@ -495,7 +495,7 @@ export class FederationJavaTemplates {
       "String clientId = \"YOUR_CLIENT_SECRET\";\n" +
       "App app = new App(clientId, clientSecret);\n" +
       "FederationApi federationApi = new FederationApi();\n" +
-      "User user = federationApi.users().user(app, \"1\").getResponse();\n" +
+      "User user = federationApi.users().user(app, \"60acae8e2f799d228a4d4a85\").getResponse();\n" +
       "PasswordRequestEvent passwordRequestEvent = new PasswordRequestEvent();\n" +
       "passwordRequestEvent.setId(user.getId());\n" +
       "passwordRequestEvent.setEmail(\"YOUR_EMAIL\");\n" +
@@ -512,7 +512,7 @@ export class FederationJavaTemplates {
       "String clientId = \"YOUR_CLIENT_SECRET\";\n" +
       "App app = new App(clientId, clientSecret);\n" +
       "FederationApi federationApi = new FederationApi();\n" +
-      "User user = federationApi.users().user(app, \"1\").getResponse();\n" +
+      "User user = federationApi.users().user(app, \"60acae8e2f799d228a4d4a85\").getResponse();\n" +
       "PasswordRecoverEvent passwordRecoverEvent = new PasswordRecoverEvent();\n" +
       "passwordRecoverEvent.setToken(\"EMAIL_TOKEN\");\n" +
       "passwordRecoverEvent.setPassword(\"YOUR_PASSWORD\");\n" +
@@ -530,7 +530,7 @@ export class FederationJavaTemplates {
       "String clientId = \"YOUR_CLIENT_SECRET\";\n" +
       "App app = new App(clientId, clientSecret);\n" +
       "FederationApi federationApi = new FederationApi();\n" +
-      "User user = federationApi.users().user(app, \"1\").getResponse();\n" +
+      "User user = federationApi.users().user(app, \"60acae8e2f799d228a4d4a85\").getResponse();\n" +
       "PasswordChange passwordChange = new PasswordChange();\n" +
       "passwordChange.setPassword(\"YOUR_OLD_PASSWORD\");\n" +
       "passwordChange.setNewPassword(\"YOUR_NEW_PASSWORD\");\n" +

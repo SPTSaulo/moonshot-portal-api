@@ -91,9 +91,9 @@ export class FederationPythonTemplates {
       "response = reqs.get(URL)\n" +
       "print(response.text)",
     response: "\n{\n" +
-      "    \"id\": \"1\",\n" +
+      "    \"id\": \"60acae8e2f799d228a4d4a85\",\n" +
       "    \"email\": \"usuario1@gmail.com\",\n" +
-      "    \"memberId\": \"1\",\n" +
+      "    \"memberId\": \"60acae8e2f799d228a4d4a85\",\n" +
       "    \"roles\": [\n" +
       "        \"USER\",\n" +
       "        \"DEV:ECOSYSTEM_MANAGER\"\n" +
@@ -130,9 +130,9 @@ export class FederationPythonTemplates {
       "response = reqs.get(URL)\n" +
       "print(response.text)",
     response: "\n{\n" +
-      "    \"id\": \"1\",\n" +
+      "    \"id\": \"60acae8e2f799d228a4d4a85\",\n" +
       "    \"email\": \"usuario1@gmail.com\",\n" +
-      "    \"memberId\": \"2\",\n" +
+      "    \"memberId\": \"61445159784bca6ef764c6df\",\n" +
       "    \"roles\": [\n" +
       "        \"USER\",\n" +
       "        \"DEV:ECOSYSTEM_MANAGER\"\n" +
@@ -170,9 +170,9 @@ export class FederationPythonTemplates {
       "print(response.text)",
     response: "\n[\n" +
       "    {\n" +
-      "        \"id\": \"1\",\n" +
+      "        \"id\": \"60acae8e2f799d228a4d4a85\",\n" +
       "        \"email\": \"usuario1@gmail.com\",\n" +
-      "        \"memberId\": \"1\",\n" +
+      "        \"memberId\": \"60acae8e2f799d228a4d4a85\",\n" +
       "        \"roles\": [\n" +
       "            \"DEV:ECOSYSTEM_USER\",\n" +
       "            \"DEV:ECOSYSTEM_MANAGER\"\n" +
@@ -199,9 +199,9 @@ export class FederationPythonTemplates {
       "        ]\n" +
       "    },\n" +
       "    {\n" +
-      "        \"id\": \"2\",\n" +
+      "        \"id\": \"61445159784bca6ef764c6df\",\n" +
       "        \"email\": \"usuario2@gmail.com\",\n" +
-      "        \"memberId\": \"2\",\n" +
+      "        \"memberId\": \"61445159784bca6ef764c6df\",\n" +
       "        \"roles\": [\n" +
       "            \"DEV:ECOSYSTEM_USER\"\n" +
       "        ],\n" +
@@ -235,9 +235,9 @@ export class FederationPythonTemplates {
       "print(response.text)",
     response: "\n[\n" +
       "    {\n" +
-      "        \"id\": \"1\",\n" +
+      "        \"id\": \"60acae8e2f799d228a4d4a85\",\n" +
       "        \"email\": \"usuario1@gmail.com\",\n" +
-      "        \"memberId\": \"1\",\n" +
+      "        \"memberId\": \"60acae8e2f799d228a4d4a85\",\n" +
       "        \"roles\": [\n" +
       "            \"USER\",\n" +
       "            \"DEV:ECOSYSTEM_MANAGER\"\n" +
@@ -264,9 +264,9 @@ export class FederationPythonTemplates {
       "        ]\n" +
       "    },\n" +
       "    {\n" +
-      "        \"id\": \"2\",\n" +
+      "        \"id\": \"61445159784bca6ef764c6df\",\n" +
       "        \"email\": \"usuario2@gmail.com\",\n" +
-      "        \"memberId\": \"2\",\n" +
+      "        \"memberId\": \"61445159784bca6ef764c6df\",\n" +
       "        \"roles\": [\n" +
       "            \"DEV:ECOSYSTEM_USER\"\n" +
       "        ],\n" +
@@ -300,9 +300,9 @@ export class FederationPythonTemplates {
       "print(response.text)",
     response: "\n[\n" +
       "    {\n" +
-      "        \"id\": \"1\",\n" +
+      "        \"id\": \"60acae8e2f799d228a4d4a85\",\n" +
       "        \"email\": \"usuario1@gmail.com\",\n" +
-      "        \"memberId\": \"1\",\n" +
+      "        \"memberId\": \"60acae8e2f799d228a4d4a85\",\n" +
       "        \"roles\": [\n" +
       "            \"USER\",\n" +
       "            \"DEV:ECOSYSTEM_MANAGER\"\n" +
@@ -329,9 +329,9 @@ export class FederationPythonTemplates {
       "        ]\n" +
       "    },\n" +
       "    {\n" +
-      "        \"id\": \"2\",\n" +
+      "        \"id\": \"61445159784bca6ef764c6df\",\n" +
       "        \"email\": \"usuario2@gmail.com\",\n" +
-      "        \"memberId\": \"2\",\n" +
+      "        \"memberId\": \"61445159784bca6ef764c6df\",\n" +
       "        \"roles\": [\n" +
       "            \"DEV:ECOSYSTEM_USER\"\n" +
       "        ],\n" +
@@ -453,7 +453,7 @@ export class FederationPythonTemplates {
       "URL = \"https://dev.moonshot.ceo/api/federation/password/request\"\n" +
       "\n" +
       "BODY = {\n" +
-      "  \"id\": \"1\",\n" +
+      "  \"id\": \"60acae8e2f799d228a4d4a85\",\n" +
       "  \"token\": \"50946306-47f9-11ec-81d3-0242ac130003\",\n" +
       "  \"email\": \"usuario1@gmail.com\"\n" +
       "}\n" +

@@ -243,7 +243,7 @@ export class CorePythonTemplates {
       "response = reqs.get(URL)\n" +
       "print(response.text)",
     response: "\n{\n" +
-      "   \"id\":\"1\",\n" +
+      "   \"id\":\"60acae8e2f799d228a4d4a85\",\n" +
       "   \"type\":\"TECHNOLOGY\"\n" +
       "}"
   }
@@ -305,7 +305,7 @@ export class CorePythonTemplates {
       "response = reqs.get(URL)\n" +
       "print(response.text)",
     response: "\n{\n" +
-      "   \"id\":\"1\",\n" +
+      "   \"id\":\"60acae8e2f799d228a4d4a85\",\n" +
       "   \"type\":\"NO_POVERTY\"\n" +
       "}"
   }
@@ -1133,7 +1133,7 @@ export class CorePythonTemplates {
       "    \"REDUCED_INEQUALITIES\"\n" +
       "  ],\n" +
       "  \"manager\": {\n" +
-      "    \"_id\": \"1\",\n" +
+      "    \"_id\": \"60acae8e2f799d228a4d4a85\",\n" +
       "    \"name\": \"Iñigo\",\n" +
       "    \"lastname\": \"Aramburu\",\n" +
       "    \"address\": {\n" +
@@ -1323,7 +1323,7 @@ export class CorePythonTemplates {
       "  \"reason\":\"En nombre del ecosistema DEV  Moonshot, me complace invitarlo a participar en nuestro Ecosistema de Innovación, un entorno digital para compartir ideas y proyectos disruptivos, así como para colaborar en desafíos y talleres. Espero que se una a nuestro ecosistema, con otros socios exclusivos, para observar de cerca nuestros objetivos disruptivos comunes.\",\n" +
       "  \"notification\":True,\n" +
       "  \"createdAt\":1639042457835,\n" +
-      "  \"senderId\":\"1\",\n" +
+      "  \"senderId\":\"60acae8e2f799d228a4d4a85\",\n" +
       "  \"sentOn\":1639590502463,\n" +
       "}\n" +
       "\n" +
@@ -1339,7 +1339,7 @@ export class CorePythonTemplates {
       "URL = \"https://dev.moonshot.ceo/api/core/invitations/1\"\n" +
       "\n" +
       "BODY = {\n" +
-      "  \"senderId\":\"1\",\n" +
+      "  \"senderId\":\"60acae8e2f799d228a4d4a85\",\n" +
       "  \"sentOn\":1639590502463,\n" +
       "}\n" +
       "\n" +
@@ -1849,7 +1849,7 @@ export class CorePythonTemplates {
       "      \"name\": \"user1\"\n" +
       "    }\n" +
       "  ],\n" +
-      "  \"followUpRoomId\": \"1\",\n" +
+      "  \"followUpRoomId\": \"60acae8e2f799d228a4d4a85\",\n" +
       "  \"directChatRoomId\": \"\",\n" +
       "  \"wallPostName\": \"\",\n" +
       "  \"followUpRoomName\": \"Follow up room 1\"\n" +

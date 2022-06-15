@@ -23,13 +23,13 @@ export class CommunityPythonTemplates {
       "print(response.text)",
     response: "\n[\n" +
       "   {\n" +
-      "      \"id\":\"4\",\n" +
+      "      \"id\":\"61445159784bca6ef764c6df\",\n" +
       "      \"title\":\"Evento para conocernos\",\n" +
       "      \"timestamp\":1414281600,\n" +
       "      \"description\":\"Evento para mejorar el ambiente laboral y las relaciones con el resto de personas del ecosistema\",\n" +
       "      \"imageUrl\":None,\n" +
       "      \"ownerMember\":{\n" +
-      "         \"id\":\"3\",\n" +
+      "         \"id\":\"61445159784bca6ef764c6df\",\n" +
       "         \"state\":\"ACCEPTED\",\n" +
       "         \"name\":\"Jeremy\",\n" +
       "         \"lastname\":\"Trujillo\",\n" +
@@ -54,7 +54,7 @@ export class CommunityPythonTemplates {
       "         ],\n" +
       "         \"experiences\":[\n" +
       "            {\n" +
-      "               \"id\":\"3\",\n" +
+      "               \"id\":\"61445159784bca6ef764c6df\",\n" +
       "               \"title\":\"Prácticas universitarias en Moonshot Innovation\",\n" +
       "               \"type\":\"APPRENTICESHIP\",\n" +
       "               \"company\":\"Moonshot Innovation\",\n" +
@@ -70,7 +70,7 @@ export class CommunityPythonTemplates {
       "         ],\n" +
       "         \"educations\":[\n" +
       "            {\n" +
-      "               \"id\":\"3\",\n" +
+      "               \"id\":\"61445159784bca6ef764c6df\",\n" +
       "               \"school\":\"Universidad de Las Palmas de Gran Canaria\",\n" +
       "               \"degree\":\"Ingeniería informática\",\n" +
       "               \"fieldOfStudy\":\"Ingeniería de software\",\n" +
@@ -89,7 +89,7 @@ export class CommunityPythonTemplates {
       "      \"url\":\"https://moonshot.ceo/conocernos\",\n" +
       "      \"participants\":[\n" +
       "         {\n" +
-      "            \"id\":\"1\",\n" +
+      "            \"id\":\"60acae8e2f799d228a4d4a85\",\n" +
       "            \"state\":\"ACCEPTED\",\n" +
       "            \"name\":\"Iñigo\",\n" +
       "            \"lastname\":\"Aramburu\",\n" +
@@ -114,7 +114,7 @@ export class CommunityPythonTemplates {
       "            ],\n" +
       "            \"experiences\":[\n" +
       "               {\n" +
-      "                  \"id\":\"1\",\n" +
+      "                  \"id\":\"60acae8e2f799d228a4d4a85\",\n" +
       "                  \"title\":\"Back-end developer en Moonshot Innovation\",\n" +
       "                  \"type\":\"FULL_TIME\",\n" +
       "                  \"company\":\"Moonshot Innovation\",\n" +
@@ -130,7 +130,7 @@ export class CommunityPythonTemplates {
       "            ],\n" +
       "            \"educations\":[\n" +
       "               {\n" +
-      "                  \"id\":\"1\",\n" +
+      "                  \"id\":\"60acae8e2f799d228a4d4a85\",\n" +
       "                  \"school\":\"Universidad del País Vasco\",\n" +
       "                  \"degree\":\"Ingeniería informática\",\n" +
       "                  \"fieldOfStudy\":\"Ingeniería de software\",\n" +
@@ -145,7 +145,7 @@ export class CommunityPythonTemplates {
       "                  \"description\":\"Estudios universitarios realizados en la Universidad del País Vasco\"\n" +
       "               },\n" +
       "               {\n" +
-      "                  \"id\":\"15\",\n" +
+      "                  \"id\":\"61445159784bca6ef764c6df\",\n" +
       "                  \"school\":\"Universidad del País Vasco\",\n" +
       "                  \"degree\":\"Master en desarrollo web\",\n" +
       "                  \"fieldOfStudy\":\"Desarrollo web\",\n" +
@@ -162,7 +162,7 @@ export class CommunityPythonTemplates {
       "            ]\n" +
       "         },\n" +
       "         {\n" +
-      "            \"id\":\"6\",\n" +
+      "            \"id\":\"61445159784bca6ef764c6df\",\n" +
       "            \"state\":\"ACCEPTED\",\n" +
       "            \"name\":\"David\",\n" +
       "            \"lastname\":\"Suriol\",\n" +
@@ -198,7 +198,7 @@ export class CommunityPythonTemplates {
       "            ],\n" +
       "            \"experiences\":[\n" +
       "               {\n" +
-      "                  \"id\":\"4\",\n" +
+      "                  \"id\":\"61445159784bca6ef764c6df\",\n" +
       "                  \"title\":\"Fundador y CEO de Moonshot Innovation\",\n" +
       "                  \"type\":\"SELF_EMPLOYED\",\n" +
       "                  \"company\":\"Moonshot Innovation\",\n" +
@@ -214,7 +214,7 @@ export class CommunityPythonTemplates {
       "            ],\n" +
       "            \"educations\":[\n" +
       "               {\n" +
-      "                  \"id\":\"5\",\n" +
+      "                  \"id\":\"61445159784bca6ef764c6df\",\n" +
       "                  \"school\":\"Universidad Complutense de Madrid\",\n" +
       "                  \"degree\":\"Administración y dirección de empresas\",\n" +
       "                  \"fieldOfStudy\":\"Innovación\",\n" +
@@ -244,13 +244,13 @@ export class CommunityPythonTemplates {
       "response = reqs.get(URL)\n" +
       "print(response.text)",
     response: "\n{\n" +
-      "        \"id\": \"4\",\n" +
+      "        \"id\": \"61445159784bca6ef764c6df\",\n" +
       "        \"title\": \"Evento para conocernos\",\n" +
       "        \"timestamp\": 1414281600,\n" +
       "        \"description\": \"Evento para mejorar el ambiente laboral y las relaciones con el resto de personas del ecosistema\",\n" +
       "        \"imageUrl\": None,\n" +
       "        \"ownerMember\": {\n" +
-      "            \"id\": \"3\",\n" +
+      "            \"id\": \"61445159784bca6ef764c6df\",\n" +
       "            \"state\": \"ACCEPTED\",\n" +
       "            \"name\": \"Jeremy\",\n" +
       "            \"lastname\": \"Trujillo\",\n" +
@@ -275,7 +275,7 @@ export class CommunityPythonTemplates {
       "            ],\n" +
       "            \"experiences\": [\n" +
       "                {\n" +
-      "                    \"id\": \"3\",\n" +
+      "                    \"id\": \"61445159784bca6ef764c6df\",\n" +
       "                    \"title\": \"Prácticas universitarias en Moonshot Innovation\",\n" +
       "                    \"type\": \"APPRENTICESHIP\",\n" +
       "                    \"company\": \"Moonshot Innovation\",\n" +
@@ -291,7 +291,7 @@ export class CommunityPythonTemplates {
       "            ],\n" +
       "            \"educations\": [\n" +
       "                {\n" +
-      "                    \"id\": \"3\",\n" +
+      "                    \"id\": \"61445159784bca6ef764c6df\",\n" +
       "                    \"school\": \"Universidad de Las Palmas de Gran Canaria\",\n" +
       "                    \"degree\": \"Ingeniería informática\",\n" +
       "                    \"fieldOfStudy\": \"Ingeniería de software\",\n" +
@@ -310,7 +310,7 @@ export class CommunityPythonTemplates {
       "        \"url\": \"https://moonshot.ceo/conocernos\",\n" +
       "        \"participants\": [\n" +
       "            {\n" +
-      "                \"id\": \"1\",\n" +
+      "                \"id\": \"60acae8e2f799d228a4d4a85\",\n" +
       "                \"state\": \"ACCEPTED\",\n" +
       "                \"name\": \"Iñigo\",\n" +
       "                \"lastname\": \"Aramburu\",\n" +
@@ -335,7 +335,7 @@ export class CommunityPythonTemplates {
       "                ],\n" +
       "                \"experiences\": [\n" +
       "                    {\n" +
-      "                        \"id\": \"1\",\n" +
+      "                        \"id\": \"60acae8e2f799d228a4d4a85\",\n" +
       "                        \"title\": \"Back-end developer en Moonshot Innovation\",\n" +
       "                        \"type\": \"FULL_TIME\",\n" +
       "                        \"company\": \"Moonshot Innovation\",\n" +
@@ -351,7 +351,7 @@ export class CommunityPythonTemplates {
       "                ],\n" +
       "                \"educations\": [\n" +
       "                    {\n" +
-      "                        \"id\": \"1\",\n" +
+      "                        \"id\": \"60acae8e2f799d228a4d4a85\",\n" +
       "                        \"school\": \"Universidad del País Vasco\",\n" +
       "                        \"degree\": \"Ingeniería informática\",\n" +
       "                        \"fieldOfStudy\": \"Ingeniería de software\",\n" +
@@ -366,7 +366,7 @@ export class CommunityPythonTemplates {
       "                        \"description\": \"Estudios universitarios realizados en la Universidad del País Vasco\"\n" +
       "                    },\n" +
       "                    {\n" +
-      "                        \"id\": \"15\",\n" +
+      "                        \"id\": \"61445159784bca6ef764c6df\",\n" +
       "                        \"school\": \"Universidad del País Vasco\",\n" +
       "                        \"degree\": \"Master en desarrollo web\",\n" +
       "                        \"fieldOfStudy\": \"Desarrollo web\",\n" +
@@ -383,7 +383,7 @@ export class CommunityPythonTemplates {
       "                ]\n" +
       "            },\n" +
       "            {\n" +
-      "                \"id\": \"6\",\n" +
+      "                \"id\": \"61445159784bca6ef764c6df\",\n" +
       "                \"state\": \"ACCEPTED\",\n" +
       "                \"name\": \"David\",\n" +
       "                \"lastname\": \"Suriol\",\n" +
@@ -419,7 +419,7 @@ export class CommunityPythonTemplates {
       "                ],\n" +
       "                \"experiences\": [\n" +
       "                    {\n" +
-      "                        \"id\": \"4\",\n" +
+      "                        \"id\": \"61445159784bca6ef764c6df\",\n" +
       "                        \"title\": \"Fundador y CEO de Moonshot Innovation\",\n" +
       "                        \"type\": \"SELF_EMPLOYED\",\n" +
       "                        \"company\": \"Moonshot Innovation\",\n" +
@@ -435,7 +435,7 @@ export class CommunityPythonTemplates {
       "                ],\n" +
       "                \"educations\": [\n" +
       "                    {\n" +
-      "                        \"id\": \"5\",\n" +
+      "                        \"id\": \"61445159784bca6ef764c6df\",\n" +
       "                        \"school\": \"Universidad Complutense de Madrid\",\n" +
       "                        \"degree\": \"Administración y dirección de empresas\",\n" +
       "                        \"fieldOfStudy\": \"Innovación\",\n" +
@@ -462,12 +462,12 @@ export class CommunityPythonTemplates {
       "URL = \"https://dev.moonshot.ceo/api/community/online-events\"\n" +
       "\n" +
       "BODY = {\n" +
-      "  \"id\": \"4\",\n" +
+      "  \"id\": \"61445159784bca6ef764c6df\",\n" +
       "  \"title\": \"Evento para conocernos\",\n" +
       "  \"timestamp\": 1414281600,\n" +
       "  \"description\": \"Evento para mejorar el ambiente laboral y las relaciones con el resto de personas del ecosistema\",\n" +
       "  \"imageUrl\": \"https://moonshot.ceo/image1.jpg\",\n" +
-      "  \"memberId\": \"3\",\n" +
+      "  \"memberId\": \"61445159784bca6ef764c6df\",\n" +
       "  \"url\": \"https://moonshot.ceo/conocernos\",\n" +
       "}\n" +
       "\n" +
@@ -498,7 +498,7 @@ export class CommunityPythonTemplates {
       "  \"timestamp\": 1414281600,\n" +
       "  \"description\": \"Evento para mejorar el ambiente laboral y las relaciones con el resto de personas del ecosistema\",\n" +
       "  \"imageUrl\": \"https://moonshot.ceo/image1.jpg\",\n" +
-      "  \"modifierId\": \"3\",\n" +
+      "  \"modifierId\": \"61445159784bca6ef764c6df\",\n" +
       "  \"url\": \"https://moonshot.ceo/conocernos\",\n" +
       "}\n" +
       "\n" +
@@ -528,7 +528,7 @@ export class CommunityPythonTemplates {
       "  \"timestamp\": 1414281600,\n" +
       "  \"description\": \"Evento para mejorar el ambiente laboral y las relaciones con el resto de personas del ecosistema\",\n" +
       "  \"imageUrl\": \"https://moonshot.ceo/image1.jpg\",\n" +
-      "  \"modifierId\": \"3\",\n" +
+      "  \"modifierId\": \"61445159784bca6ef764c6df\",\n" +
       "  \"url\": \"https://moonshot.ceo/conocernos\",\n" +
       "}\n" +
       "\n" +
@@ -546,7 +546,7 @@ export class CommunityPythonTemplates {
       "BODY = {\n" +
       "   \"participants\":[\n" +
       "      {\n" +
-      "         \"id\":\"1\",\n" +
+      "         \"id\":\"60acae8e2f799d228a4d4a85\",\n" +
       "         \"state\":\"ACCEPTED\",\n" +
       "         \"name\":\"Jeremy\",\n" +
       "         \"lastname\":\"Trujillo Sánchez\",\n" +
@@ -587,7 +587,7 @@ export class CommunityPythonTemplates {
       "BODY = {\n" +
       "   \"participants\":[\n" +
       "      {\n" +
-      "         \"id\":\"1\",\n" +
+      "         \"id\":\"60acae8e2f799d228a4d4a85\",\n" +
       "         \"state\":\"ACCEPTED\",\n" +
       "         \"name\":\"Jeremy\",\n" +
       "         \"lastname\":\"Trujillo Sánchez\",\n" +
@@ -640,13 +640,13 @@ export class CommunityPythonTemplates {
       "print(response.text)",
     response: "\n[\n" +
       "   {\n" +
-      "      \"id\":\"1\",\n" +
+      "      \"id\":\"60acae8e2f799d228a4d4a85\",\n" +
       "      \"title\":\"Reunion horarios Enero\",\n" +
       "      \"timestamp\":1546387200,\n" +
       "      \"description\":\"Reunion para definir los horarios de la empresa en el mes de Enero\",\n" +
       "      \"imageUrl\":None,\n" +
       "      \"ownerMember\":{\n" +
-      "         \"id\":\"4\",\n" +
+      "         \"id\":\"61445159784bca6ef764c6df\",\n" +
       "         \"state\":\"ACCEPTED\",\n" +
       "         \"name\":\"Saulo\",\n" +
       "         \"lastname\":\"Santana\",\n" +
@@ -672,7 +672,7 @@ export class CommunityPythonTemplates {
       "         ],\n" +
       "         \"experiences\":[\n" +
       "            {\n" +
-      "               \"id\":\"3\",\n" +
+      "               \"id\":\"61445159784bca6ef764c6df\",\n" +
       "               \"title\":\"Prácticas universitarias en Moonshot Innovation\",\n" +
       "               \"type\":\"APPRENTICESHIP\",\n" +
       "               \"company\":\"Moonshot Innovation\",\n" +
@@ -688,7 +688,7 @@ export class CommunityPythonTemplates {
       "         ],\n" +
       "         \"educations\":[\n" +
       "            {\n" +
-      "               \"id\":\"3\",\n" +
+      "               \"id\":\"61445159784bca6ef764c6df\",\n" +
       "               \"school\":\"Universidad de Las Palmas de Gran Canaria\",\n" +
       "               \"degree\":\"Ingeniería informática\",\n" +
       "               \"fieldOfStudy\":\"Ingeniería de software\",\n" +
@@ -707,7 +707,7 @@ export class CommunityPythonTemplates {
       "      \"direction\":\"Aclarar la reparticion de horarios\",\n" +
       "      \"participants\":[\n" +
       "         {\n" +
-      "            \"id\":\"3\",\n" +
+      "            \"id\":\"61445159784bca6ef764c6df\",\n" +
       "            \"state\":\"ACCEPTED\",\n" +
       "            \"name\":\"Jeremy\",\n" +
       "            \"lastname\":\"Trujillo\",\n" +
@@ -732,7 +732,7 @@ export class CommunityPythonTemplates {
       "            ],\n" +
       "            \"experiences\":[\n" +
       "               {\n" +
-      "                  \"id\":\"3\",\n" +
+      "                  \"id\":\"61445159784bca6ef764c6df\",\n" +
       "                  \"title\":\"Prácticas universitarias en Moonshot Innovation\",\n" +
       "                  \"type\":\"APPRENTICESHIP\",\n" +
       "                  \"company\":\"Moonshot Innovation\",\n" +
@@ -748,7 +748,7 @@ export class CommunityPythonTemplates {
       "            ],\n" +
       "            \"educations\":[\n" +
       "               {\n" +
-      "                  \"id\":\"3\",\n" +
+      "                  \"id\":\"61445159784bca6ef764c6df\",\n" +
       "                  \"school\":\"Universidad de Las Palmas de Gran Canaria\",\n" +
       "                  \"degree\":\"Ingeniería informática\",\n" +
       "                  \"fieldOfStudy\":\"Ingeniería de software\",\n" +
@@ -767,13 +767,13 @@ export class CommunityPythonTemplates {
       "      ]\n" +
       "   },\n" +
       "   {\n" +
-      "      \"id\":\"2\",\n" +
+      "      \"id\":\"61445159784bca6ef764c6df\",\n" +
       "      \"title\":\"Reunion despliegue back-end\",\n" +
       "      \"timestamp\":1542844800,\n" +
       "      \"description\":\"Reunion para desplegar la nueva version de nuestro producto\",\n" +
       "      \"imageUrl\":None,\n" +
       "      \"ownerMember\":{\n" +
-      "         \"id\":\"1\",\n" +
+      "         \"id\":\"60acae8e2f799d228a4d4a85\",\n" +
       "         \"state\":\"ACCEPTED\",\n" +
       "         \"name\":\"Iñigo\",\n" +
       "         \"lastname\":\"Aramburu\",\n" +
@@ -798,7 +798,7 @@ export class CommunityPythonTemplates {
       "         ],\n" +
       "         \"experiences\":[\n" +
       "            {\n" +
-      "               \"id\":\"1\",\n" +
+      "               \"id\":\"60acae8e2f799d228a4d4a85\",\n" +
       "               \"title\":\"Back-end developer en Moonshot Innovation\",\n" +
       "               \"type\":\"FULL_TIME\",\n" +
       "               \"company\":\"Moonshot Innovation\",\n" +
@@ -814,7 +814,7 @@ export class CommunityPythonTemplates {
       "         ],\n" +
       "         \"educations\":[\n" +
       "            {\n" +
-      "               \"id\":\"1\",\n" +
+      "               \"id\":\"60acae8e2f799d228a4d4a85\",\n" +
       "               \"school\":\"Universidad del País Vasco\",\n" +
       "               \"degree\":\"Ingeniería informática\",\n" +
       "               \"fieldOfStudy\":\"Ingeniería de software\",\n" +
@@ -829,7 +829,7 @@ export class CommunityPythonTemplates {
       "               \"description\":\"Estudios universitarios realizados en la Universidad del País Vasco\"\n" +
       "            },\n" +
       "            {\n" +
-      "               \"id\":\"15\",\n" +
+      "               \"id\":\"61445159784bca6ef764c6df\",\n" +
       "               \"school\":\"Universidad del País Vasco\",\n" +
       "               \"degree\":\"Master en desarrollo web\",\n" +
       "               \"fieldOfStudy\":\"Desarrollo web\",\n" +
@@ -848,7 +848,7 @@ export class CommunityPythonTemplates {
       "      \"direction\":\"Terminar la version y ponerla a la vista de los clientes\",\n" +
       "      \"participants\":[\n" +
       "         {\n" +
-      "            \"id\":\"3\",\n" +
+      "            \"id\":\"61445159784bca6ef764c6df\",\n" +
       "            \"state\":\"ACCEPTED\",\n" +
       "            \"name\":\"Jeremy\",\n" +
       "            \"lastname\":\"Trujillo\",\n" +
@@ -873,7 +873,7 @@ export class CommunityPythonTemplates {
       "            ],\n" +
       "            \"experiences\":[\n" +
       "               {\n" +
-      "                  \"id\":\"3\",\n" +
+      "                  \"id\":\"61445159784bca6ef764c6df\",\n" +
       "                  \"title\":\"Prácticas universitarias en Moonshot Innovation\",\n" +
       "                  \"type\":\"APPRENTICESHIP\",\n" +
       "                  \"company\":\"Moonshot Innovation\",\n" +
@@ -889,7 +889,7 @@ export class CommunityPythonTemplates {
       "            ],\n" +
       "            \"educations\":[\n" +
       "               {\n" +
-      "                  \"id\":\"3\",\n" +
+      "                  \"id\":\"61445159784bca6ef764c6df\",\n" +
       "                  \"school\":\"Universidad de Las Palmas de Gran Canaria\",\n" +
       "                  \"degree\":\"Ingeniería informática\",\n" +
       "                  \"fieldOfStudy\":\"Ingeniería de software\",\n" +
@@ -906,7 +906,7 @@ export class CommunityPythonTemplates {
       "            ]\n" +
       "         },\n" +
       "         {\n" +
-      "            \"id\":\"4\",\n" +
+      "            \"id\":\"61445159784bca6ef764c6df\",\n" +
       "            \"state\":\"ACCEPTED\",\n" +
       "            \"name\":\"Saulo\",\n" +
       "            \"lastname\":\"Santana\",\n" +
@@ -932,7 +932,7 @@ export class CommunityPythonTemplates {
       "            ],\n" +
       "            \"experiences\":[\n" +
       "               {\n" +
-      "                  \"id\":\"3\",\n" +
+      "                  \"id\":\"61445159784bca6ef764c6df\",\n" +
       "                  \"title\":\"Prácticas universitarias en Moonshot Innovation\",\n" +
       "                  \"type\":\"APPRENTICESHIP\",\n" +
       "                  \"company\":\"Moonshot Innovation\",\n" +
@@ -948,7 +948,7 @@ export class CommunityPythonTemplates {
       "            ],\n" +
       "            \"educations\":[\n" +
       "               {\n" +
-      "                  \"id\":\"3\",\n" +
+      "                  \"id\":\"61445159784bca6ef764c6df\",\n" +
       "                  \"school\":\"Universidad de Las Palmas de Gran Canaria\",\n" +
       "                  \"degree\":\"Ingeniería informática\",\n" +
       "                  \"fieldOfStudy\":\"Ingeniería de software\",\n" +
@@ -978,13 +978,13 @@ export class CommunityPythonTemplates {
       "response = reqs.get(URL)\n" +
       "print(response.text)",
     response: "\n{\n" +
-      "        \"id\": \"1\",\n" +
+      "        \"id\": \"60acae8e2f799d228a4d4a85\",\n" +
       "        \"title\": \"Reunion horarios Enero\",\n" +
       "        \"timestamp\": 1546387200,\n" +
       "        \"description\": \"Reunion para definir los horarios de la empresa en el mes de Enero\",\n" +
       "        \"imageUrl\": None,\n" +
       "        \"ownerMember\": {\n" +
-      "            \"id\": \"4\",\n" +
+      "            \"id\": \"61445159784bca6ef764c6df\",\n" +
       "            \"state\": \"ACCEPTED\",\n" +
       "            \"name\": \"Saulo\",\n" +
       "            \"lastname\": \"Santana\",\n" +
@@ -1010,7 +1010,7 @@ export class CommunityPythonTemplates {
       "            ],\n" +
       "            \"experiences\": [\n" +
       "                {\n" +
-      "                    \"id\": \"3\",\n" +
+      "                    \"id\": \"61445159784bca6ef764c6df\",\n" +
       "                    \"title\": \"Prácticas universitarias en Moonshot Innovation\",\n" +
       "                    \"type\": \"APPRENTICESHIP\",\n" +
       "                    \"company\": \"Moonshot Innovation\",\n" +
@@ -1026,7 +1026,7 @@ export class CommunityPythonTemplates {
       "            ],\n" +
       "            \"educations\": [\n" +
       "                {\n" +
-      "                    \"id\": \"3\",\n" +
+      "                    \"id\": \"61445159784bca6ef764c6df\",\n" +
       "                    \"school\": \"Universidad de Las Palmas de Gran Canaria\",\n" +
       "                    \"degree\": \"Ingeniería informática\",\n" +
       "                    \"fieldOfStudy\": \"Ingeniería de software\",\n" +
@@ -1045,7 +1045,7 @@ export class CommunityPythonTemplates {
       "        \"direction\": \"Aclarar la reparticion de horarios\",\n" +
       "        \"participants\": [\n" +
       "            {\n" +
-      "                \"id\": \"3\",\n" +
+      "                \"id\": \"61445159784bca6ef764c6df\",\n" +
       "                \"state\": \"ACCEPTED\",\n" +
       "                \"name\": \"Jeremy\",\n" +
       "                \"lastname\": \"Trujillo\",\n" +
@@ -1070,7 +1070,7 @@ export class CommunityPythonTemplates {
       "                ],\n" +
       "                \"experiences\": [\n" +
       "                    {\n" +
-      "                        \"id\": \"3\",\n" +
+      "                        \"id\": \"61445159784bca6ef764c6df\",\n" +
       "                        \"title\": \"Prácticas universitarias en Moonshot Innovation\",\n" +
       "                        \"type\": \"APPRENTICESHIP\",\n" +
       "                        \"company\": \"Moonshot Innovation\",\n" +
@@ -1086,7 +1086,7 @@ export class CommunityPythonTemplates {
       "                ],\n" +
       "                \"educations\": [\n" +
       "                    {\n" +
-      "                        \"id\": \"3\",\n" +
+      "                        \"id\": \"61445159784bca6ef764c6df\",\n" +
       "                        \"school\": \"Universidad de Las Palmas de Gran Canaria\",\n" +
       "                        \"degree\": \"Ingeniería informática\",\n" +
       "                        \"fieldOfStudy\": \"Ingeniería de software\",\n" +
@@ -1113,12 +1113,12 @@ export class CommunityPythonTemplates {
       "URL = \"https://dev.moonshot.ceo/api/community/face-to-face-events\"\n" +
       "\n" +
       "BODY =  {\n" +
-      " \"id\":\"1\",\n" +
+      " \"id\":\"60acae8e2f799d228a4d4a85\",\n" +
       " \"title\":\"Reunion horarios Enero\",\n" +
       " \"timestamp\":1546387200,\n" +
       " \"description\":\"Reunion para definir los horarios de la empresa en el mes de Enero\",\n" +
       " \"imageUrl\":None,\n" +
-      " \"memberId\":\"4\",\n" +
+      " \"memberId\":\"61445159784bca6ef764c6df\",\n" +
       " \"direction\":\"Aclarar la reparticion de horarios\"\n" +
       "}\n" +
       "\n" +
@@ -1138,7 +1138,7 @@ export class CommunityPythonTemplates {
       " \"timestamp\":1546387200,\n" +
       " \"description\":\"Reunion para definir los horarios de la empresa en el mes de Enero\",\n" +
       " \"imageUrl\":None,\n" +
-      " \"modifierId\":\"4\",\n" +
+      " \"modifierId\":\"61445159784bca6ef764c6df\",\n" +
       " \"direction\":\"Aclarar la reparticion de horarios\"\n" +
       "}\n" +
       "\n" +
@@ -1180,7 +1180,7 @@ export class CommunityPythonTemplates {
       " \"timestamp\":1546387200,\n" +
       " \"description\":\"Reunion para definir los horarios de la empresa en el mes de Enero\",\n" +
       " \"imageUrl\":None,\n" +
-      " \"modifierId\":\"4\",\n" +
+      " \"modifierId\":\"61445159784bca6ef764c6df\",\n" +
       " \"direction\":\"Aclarar la reparticion de horarios\"\n" +
       "}\n" +
       "\n" +
@@ -1198,7 +1198,7 @@ export class CommunityPythonTemplates {
       "BODY =  {\n" +
       "   \"participants\":[\n" +
       "      {\n" +
-      "         \"id\":\"1\",\n" +
+      "         \"id\":\"60acae8e2f799d228a4d4a85\",\n" +
       "         \"state\":\"ACCEPTED\",\n" +
       "         \"name\":\"Jeremy\",\n" +
       "         \"lastname\":\"Trujillo Sánchez\",\n" +
@@ -1239,7 +1239,7 @@ export class CommunityPythonTemplates {
       "BODY =  {\n" +
       "   \"participants\":[\n" +
       "      {\n" +
-      "         \"id\":\"1\",\n" +
+      "         \"id\":\"60acae8e2f799d228a4d4a85\",\n" +
       "         \"state\":\"ACCEPTED\",\n" +
       "         \"name\":\"Jeremy\",\n" +
       "         \"lastname\":\"Trujillo Sánchez\",\n" +
@@ -1292,29 +1292,29 @@ export class CommunityPythonTemplates {
       "print(response.text)",
     response: "\n[\n" +
       "   {\n" +
-      "      \"id\":\"1\",\n" +
+      "      \"id\":\"60acae8e2f799d228a4d4a85\",\n" +
       "      \"link\":\"https://moonshot.ceo/archivoTrabajo.pdf\",\n" +
       "      \"category\":\"PDF\",\n" +
-      "      \"roomId\":\"1\",\n" +
-      "      \"memberId\":\"2\",\n" +
+      "      \"roomId\":\"60acae8e2f799d228a4d4a85\",\n" +
+      "      \"memberId\":\"61445159784bca6ef764c6df\",\n" +
       "      \"filename\":\"archivoTrabajo\",\n" +
       "      \"createdAt\":1621412130000\n" +
       "   },\n" +
       "   {\n" +
-      "      \"id\":\"2\",\n" +
+      "      \"id\":\"61445159784bca6ef764c6df\",\n" +
       "      \"link\":\"https://moonshot.ceo/planosPrimeraPlanta.pdf\",\n" +
       "      \"category\":\"PDF\",\n" +
-      "      \"roomId\":\"3\",\n" +
-      "      \"memberId\":\"5\",\n" +
+      "      \"roomId\":\"61445159784bca6ef764c6df\",\n" +
+      "      \"memberId\":\"61445159784bca6ef764c6df\",\n" +
       "      \"filename\":\"planosPrimeraPlanta\",\n" +
       "      \"createdAt\":1621415730000\n" +
       "   },\n" +
       "   {\n" +
-      "      \"id\":\"3\",\n" +
+      "      \"id\":\"61445159784bca6ef764c6df\",\n" +
       "      \"link\":\"https://moonshot.ceo/planosSegundaPlanta.image\",\n" +
       "      \"category\":\"IMAGE\",\n" +
-      "      \"roomId\":\"3\",\n" +
-      "      \"memberId\":\"6\",\n" +
+      "      \"roomId\":\"61445159784bca6ef764c6df\",\n" +
+      "      \"memberId\":\"61445159784bca6ef764c6df\",\n" +
       "      \"filename\":\"planosSegundaPlanta\",\n" +
       "      \"createdAt\":1621419330000\n" +
       "   }\n" +
@@ -1331,15 +1331,15 @@ export class CommunityPythonTemplates {
       "print(response.text)",
     response: "\n[\n" +
       "   {\n" +
-      "      \"id\":\"1\",\n" +
+      "      \"id\":\"60acae8e2f799d228a4d4a85\",\n" +
       "      \"url\":\"https://dev.moonshot.ceo/documento1.pdf\",\n" +
-      "      \"roomId\":\"2\",\n" +
+      "      \"roomId\":\"61445159784bca6ef764c6df\",\n" +
       "      \"createdAt\":1637417185\n" +
       "   },\n" +
       "   {\n" +
-      "      \"id\":\"2\",\n" +
+      "      \"id\":\"61445159784bca6ef764c6df\",\n" +
       "      \"url\":\"https://dev.moonshot.ceo/documento2.pdf\",\n" +
-      "      \"roomId\":\"7\",\n" +
+      "      \"roomId\":\"61445159784bca6ef764c6df\",\n" +
       "      \"createdAt\":1637417190\n" +
       "   }\n" +
       "]"
@@ -1355,9 +1355,9 @@ export class CommunityPythonTemplates {
       "print(response.text)",
     response: "\n[\n" +
       "   {\n" +
-      "      \"id\":\"3\",\n" +
+      "      \"id\":\"61445159784bca6ef764c6df\",\n" +
       "      \"ownerMember\":{\n" +
-      "         \"id\":\"7\",\n" +
+      "         \"id\":\"61445159784bca6ef764c6df\",\n" +
       "         \"state\":\"ACCEPTED\",\n" +
       "         \"name\":\"Jorge\",\n" +
       "         \"lastname\":\"Perez\",\n" +
@@ -1387,7 +1387,7 @@ export class CommunityPythonTemplates {
       "         ],\n" +
       "         \"experiences\":[\n" +
       "            {\n" +
-      "               \"id\":\"5\",\n" +
+      "               \"id\":\"61445159784bca6ef764c6df\",\n" +
       "               \"title\":\"Reponedor en Mercadona\",\n" +
       "               \"type\":\"PART_TIME\",\n" +
       "               \"company\":\"Mercadona\",\n" +
@@ -1403,7 +1403,7 @@ export class CommunityPythonTemplates {
       "         ],\n" +
       "         \"educations\":[\n" +
       "            {\n" +
-      "               \"id\":\"6\",\n" +
+      "               \"id\":\"61445159784bca6ef764c6df\",\n" +
       "               \"school\":\"Universidad de Venezuela\",\n" +
       "               \"degree\":\"Derecho\",\n" +
       "               \"fieldOfStudy\":\"Derecho mercantil\",\n" +
@@ -1418,7 +1418,7 @@ export class CommunityPythonTemplates {
       "               \"description\":None\n" +
       "            },\n" +
       "            {\n" +
-      "               \"id\":\"14\",\n" +
+      "               \"id\":\"61445159784bca6ef764c6df\",\n" +
       "               \"school\":\"Universidad de Venezuela\",\n" +
       "               \"degree\":\"Master en Derecho\",\n" +
       "               \"fieldOfStudy\":\"Derecho en el Ejercicio de la Abogacía\",\n" +
@@ -1436,20 +1436,20 @@ export class CommunityPythonTemplates {
       "      },\n" +
       "      \"participants\":[\n" +
       "         {\n" +
-      "            \"memberId\":\"9\",\n" +
+      "            \"memberId\":\"61445159784bca6ef764c6df\",\n" +
       "            \"state\":\"ACTIVE\"\n" +
       "         },\n" +
       "         {\n" +
-      "            \"memberId\":\"8\",\n" +
+      "            \"memberId\":\"61445159784bca6ef764c6df\",\n" +
       "            \"state\":\"ACTIVE\"\n" +
       "         }\n" +
       "      ],\n" +
       "      \"createdAt\":1621419330000\n" +
       "   },\n" +
       "   {\n" +
-      "      \"id\":\"4\",\n" +
+      "      \"id\":\"61445159784bca6ef764c6df\",\n" +
       "      \"ownerMember\":{\n" +
-      "         \"id\":\"3\",\n" +
+      "         \"id\":\"61445159784bca6ef764c6df\",\n" +
       "         \"state\":\"ACCEPTED\",\n" +
       "         \"name\":\"Jeremy\",\n" +
       "         \"lastname\":\"Trujillo\",\n" +
@@ -1474,7 +1474,7 @@ export class CommunityPythonTemplates {
       "         ],\n" +
       "         \"experiences\":[\n" +
       "            {\n" +
-      "               \"id\":\"3\",\n" +
+      "               \"id\":\"61445159784bca6ef764c6df\",\n" +
       "               \"title\":\"Prácticas universitarias en Moonshot Innovation\",\n" +
       "               \"type\":\"APPRENTICESHIP\",\n" +
       "               \"company\":\"Moonshot Innovation\",\n" +
@@ -1490,7 +1490,7 @@ export class CommunityPythonTemplates {
       "         ],\n" +
       "         \"educations\":[\n" +
       "            {\n" +
-      "               \"id\":\"3\",\n" +
+      "               \"id\":\"61445159784bca6ef764c6df\",\n" +
       "               \"school\":\"Universidad de Las Palmas de Gran Canaria\",\n" +
       "               \"degree\":\"Ingeniería informática\",\n" +
       "               \"fieldOfStudy\":\"Ingeniería de software\",\n" +
@@ -1508,11 +1508,11 @@ export class CommunityPythonTemplates {
       "      },\n" +
       "      \"participants\":[\n" +
       "         {\n" +
-      "            \"memberId\":\"7\",\n" +
+      "            \"memberId\":\"60acae8e2f799d228a4d4a85\",\n" +
       "            \"state\":\"ACTIVE\"\n" +
       "         },\n" +
       "         {\n" +
-      "            \"memberId\":\"1\",\n" +
+      "            \"memberId\":\"60acae8e2f799d228a4d4a85\",\n" +
       "            \"state\":\"ACTIVE\"\n" +
       "         }\n" +
       "      ],\n" +
@@ -1531,9 +1531,9 @@ export class CommunityPythonTemplates {
       "print(response.text)",
     response: "\n[\n" +
       "   {\n" +
-      "      \"id\":\"3\",\n" +
+      "      \"id\":\"61445159784bca6ef764c6df\",\n" +
       "      \"ownerMember\":{\n" +
-      "         \"id\":\"7\",\n" +
+      "         \"id\":\"61445159784bca6ef764c6df\",\n" +
       "         \"state\":\"ACCEPTED\",\n" +
       "         \"name\":\"Jorge\",\n" +
       "         \"lastname\":\"Perez\",\n" +
@@ -1563,7 +1563,7 @@ export class CommunityPythonTemplates {
       "         ],\n" +
       "         \"experiences\":[\n" +
       "            {\n" +
-      "               \"id\":\"5\",\n" +
+      "               \"id\":\"61445159784bca6ef764c6df\",\n" +
       "               \"title\":\"Reponedor en Mercadona\",\n" +
       "               \"type\":\"PART_TIME\",\n" +
       "               \"company\":\"Mercadona\",\n" +
@@ -1579,7 +1579,7 @@ export class CommunityPythonTemplates {
       "         ],\n" +
       "         \"educations\":[\n" +
       "            {\n" +
-      "               \"id\":\"6\",\n" +
+      "               \"id\":\"61445159784bca6ef764c6df\",\n" +
       "               \"school\":\"Universidad de Venezuela\",\n" +
       "               \"degree\":\"Derecho\",\n" +
       "               \"fieldOfStudy\":\"Derecho mercantil\",\n" +
@@ -1594,7 +1594,7 @@ export class CommunityPythonTemplates {
       "               \"description\":None\n" +
       "            },\n" +
       "            {\n" +
-      "               \"id\":\"14\",\n" +
+      "               \"id\":\"61445159784bca6ef764c6df\",\n" +
       "               \"school\":\"Universidad de Venezuela\",\n" +
       "               \"degree\":\"Master en Derecho\",\n" +
       "               \"fieldOfStudy\":\"Derecho en el Ejercicio de la Abogacía\",\n" +
@@ -1612,20 +1612,20 @@ export class CommunityPythonTemplates {
       "      },\n" +
       "      \"participants\":[\n" +
       "         {\n" +
-      "            \"memberId\":\"9\",\n" +
+      "            \"memberId\":\"61445159784bca6ef764c6df\",\n" +
       "            \"state\":\"ACTIVE\"\n" +
       "         },\n" +
       "         {\n" +
-      "            \"memberId\":\"8\",\n" +
+      "            \"memberId\":\"61445159784bca6ef764c6df\",\n" +
       "            \"state\":\"ACTIVE\"\n" +
       "         }\n" +
       "      ],\n" +
       "      \"createdAt\":1621419330000\n" +
       "   },\n" +
       "   {\n" +
-      "      \"id\":\"4\",\n" +
+      "      \"id\":\"61445159784bca6ef764c6df\",\n" +
       "      \"ownerMember\":{\n" +
-      "         \"id\":\"3\",\n" +
+      "         \"id\":\"61445159784bca6ef764c6df\",\n" +
       "         \"state\":\"ACCEPTED\",\n" +
       "         \"name\":\"Jeremy\",\n" +
       "         \"lastname\":\"Trujillo\",\n" +
@@ -1650,7 +1650,7 @@ export class CommunityPythonTemplates {
       "         ],\n" +
       "         \"experiences\":[\n" +
       "            {\n" +
-      "               \"id\":\"3\",\n" +
+      "               \"id\":\"61445159784bca6ef764c6df\",\n" +
       "               \"title\":\"Prácticas universitarias en Moonshot Innovation\",\n" +
       "               \"type\":\"APPRENTICESHIP\",\n" +
       "               \"company\":\"Moonshot Innovation\",\n" +
@@ -1666,7 +1666,7 @@ export class CommunityPythonTemplates {
       "         ],\n" +
       "         \"educations\":[\n" +
       "            {\n" +
-      "               \"id\":\"3\",\n" +
+      "               \"id\":\"61445159784bca6ef764c6df\",\n" +
       "               \"school\":\"Universidad de Las Palmas de Gran Canaria\",\n" +
       "               \"degree\":\"Ingeniería informática\",\n" +
       "               \"fieldOfStudy\":\"Ingeniería de software\",\n" +
@@ -1684,11 +1684,11 @@ export class CommunityPythonTemplates {
       "      },\n" +
       "      \"participants\":[\n" +
       "         {\n" +
-      "            \"memberId\":\"7\",\n" +
+      "            \"memberId\":\"60acae8e2f799d228a4d4a85\",\n" +
       "            \"state\":\"ACTIVE\"\n" +
       "         },\n" +
       "         {\n" +
-      "            \"memberId\":\"1\",\n" +
+      "            \"memberId\":\"60acae8e2f799d228a4d4a85\",\n" +
       "            \"state\":\"ACTIVE\"\n" +
       "         }\n" +
       "      ],\n" +
@@ -1706,9 +1706,9 @@ export class CommunityPythonTemplates {
       "response = reqs.get(URL)\n" +
       "print(response.text)",
     response: "\n{\n" +
-      "        \"id\": \"1\",\n" +
+      "        \"id\": \"60acae8e2f799d228a4d4a85\",\n" +
       "        \"ownerMember\": {\n" +
-      "            \"id\": \"1\",\n" +
+      "            \"id\": \"60acae8e2f799d228a4d4a85\",\n" +
       "            \"state\": \"ACCEPTED\",\n" +
       "            \"name\": \"Iñigo\",\n" +
       "            \"lastname\": \"Aramburu\",\n" +
@@ -1733,7 +1733,7 @@ export class CommunityPythonTemplates {
       "            ],\n" +
       "            \"experiences\": [\n" +
       "                {\n" +
-      "                    \"id\": \"1\",\n" +
+      "                    \"id\": \"60acae8e2f799d228a4d4a85\",\n" +
       "                    \"title\": \"Back-end developer en Moonshot Innovation\",\n" +
       "                    \"type\": \"FULL_TIME\",\n" +
       "                    \"company\": \"Moonshot Innovation\",\n" +
@@ -1749,7 +1749,7 @@ export class CommunityPythonTemplates {
       "            ],\n" +
       "            \"educations\": [\n" +
       "                {\n" +
-      "                    \"id\": \"1\",\n" +
+      "                    \"id\": \"60acae8e2f799d228a4d4a85\",\n" +
       "                    \"school\": \"Universidad del País Vasco\",\n" +
       "                    \"degree\": \"Ingeniería informática\",\n" +
       "                    \"fieldOfStudy\": \"Ingeniería de software\",\n" +
@@ -1764,7 +1764,7 @@ export class CommunityPythonTemplates {
       "                    \"description\": \"Estudios universitarios realizados en la Universidad del País Vasco\"\n" +
       "                },\n" +
       "                {\n" +
-      "                    \"id\": \"15\",\n" +
+      "                    \"id\": \"61445159784bca6ef764c6df\",\n" +
       "                    \"school\": \"Universidad del País Vasco\",\n" +
       "                    \"degree\": \"Master en desarrollo web\",\n" +
       "                    \"fieldOfStudy\": \"Desarrollo web\",\n" +
@@ -1782,11 +1782,11 @@ export class CommunityPythonTemplates {
       "        },\n" +
       "        \"participants\": [\n" +
       "            {\n" +
-      "                \"memberId\": \"8\",\n" +
+      "                \"memberId\": \"61445159784bca6ef764c6df\",\n" +
       "                \"state\": \"ACTIVE\"\n" +
       "            },\n" +
       "            {\n" +
-      "                \"memberId\": \"2\",\n" +
+      "                \"memberId\": \"61445159784bca6ef764c6df\",\n" +
       "                \"state\": \"INACTIVE\"\n" +
       "            }\n" +
       "        ],\n" +
@@ -1811,15 +1811,15 @@ export class CommunityPythonTemplates {
       "URL = \"https://dev.moonshot.ceo/api/community/direct-chats\"\n" +
       "\n" +
       "BODY =  {\n" +
-      "  \"id\": \"1\",\n" +
-      "  \"ownerMemberId\": \"1\",\n" +
+      "  \"id\": \"60acae8e2f799d228a4d4a85\",\n" +
+      "  \"ownerMemberId\": \"60acae8e2f799d228a4d4a85\",\n" +
       "  \"participants\": [\n" +
       "      {\n" +
-      "          \"memberId\": \"8\",\n" +
+      "          \"memberId\": \"60acae8e2f799d228a4d4a85\",\n" +
       "          \"state\": \"ACTIVE\"\n" +
       "      },\n" +
       "      {\n" +
-      "          \"memberId\": \"2\",\n" +
+      "          \"memberId\": \"60acae8e2f799d228a4d4a85\",\n" +
       "          \"state\": \"INACTIVE\"\n" +
       "      }\n" +
       "  ],\n" +
@@ -1859,32 +1859,32 @@ export class CommunityPythonTemplates {
       "URL = \"https://dev.moonshot.ceo/api/community/direct-chats/1/message\"\n" +
       "\n" +
       "BODY =  {\n" +
-      "   \"id\":\"2\",\n" +
-      "   \"roomId\":\"1\",\n" +
-      "   \"authorMemberId\":\"2\",\n" +
+      "   \"id\":\"60acae8e2f799d228a4d4a85\",\n" +
+      "   \"roomId\":\"60acae8e2f799d228a4d4a85\",\n" +
+      "   \"authorMemberId\":\"60acae8e2f799d228a4d4a85\",\n" +
       "   \"content\":\"Sí, claro.\",\n" +
       "   \"documents\":[\n" +
       "      {\n" +
-      "         \"id\":\"1\",\n" +
+      "         \"id\":\"60acae8e2f799d228a4d4a85\",\n" +
       "         \"link\":\"https://moonshot.ceo/archivoTrabajo.pdf\",\n" +
       "         \"category\":\"PDF\",\n" +
-      "         \"roomId\":\"1\",\n" +
-      "         \"memberId\":\"2\",\n" +
+      "         \"roomId\":\"60acae8e2f799d228a4d4a85\",\n" +
+      "         \"memberId\":\"60acae8e2f799d228a4d4a85\",\n" +
       "         \"filename\":\"archivoTrabajo\",\n" +
       "         \"createdAt\":1621412130000\n" +
       "      }\n" +
       "   ],\n" +
       "   \"links\":[\n" +
       "      {\n" +
-      "         \"id\":\"1\",\n" +
+      "         \"id\":\"60acae8e2f799d228a4d4a85\",\n" +
       "         \"url\":\"https://dev.moonshot.ceo/documento1.pdf\",\n" +
-      "         \"roomId\":\"2\",\n" +
+      "         \"roomId\":\"60acae8e2f799d228a4d4a85\",\n" +
       "         \"createdAt\":1637417185\n" +
       "      },\n" +
       "      {\n" +
-      "         \"id\":\"2\",\n" +
+      "         \"id\":\"61445159784bca6ef764c6df\",\n" +
       "         \"url\":\"https://dev.moonshot.ceo/documento2.pdf\",\n" +
-      "         \"roomId\":\"7\",\n" +
+      "         \"roomId\":\"61445159784bca6ef764c6df\",\n" +
       "         \"createdAt\":1637417190\n" +
       "      }\n" +
       "   ],\n" +
@@ -1907,9 +1907,9 @@ export class CommunityPythonTemplates {
       "print(response.text)",
     response: "\n[\n" +
       "   {\n" +
-      "      \"id\":\"1\",\n" +
-      "      \"roomId\":\"1\",\n" +
-      "      \"authorMemberId\":\"1\",\n" +
+      "      \"id\":\"60acae8e2f799d228a4d4a85\",\n" +
+      "      \"roomId\":\"60acae8e2f799d228a4d4a85\",\n" +
+      "      \"authorMemberId\":\"60acae8e2f799d228a4d4a85\",\n" +
       "      \"content\":\"Hola, ¿Me podrías pasar el archivo?\",\n" +
       "      \"documents\":[\n" +
       "         \n" +
@@ -1917,17 +1917,17 @@ export class CommunityPythonTemplates {
       "      \"createdAt\":1621412130000\n" +
       "   },\n" +
       "   {\n" +
-      "      \"id\":\"2\",\n" +
-      "      \"roomId\":\"1\",\n" +
-      "      \"authorMemberId\":\"2\",\n" +
+      "      \"id\":\"60acae8e2f799d228a4d4a85\",\n" +
+      "      \"roomId\":\"60acae8e2f799d228a4d4a85\",\n" +
+      "      \"authorMemberId\":\"60acae8e2f799d228a4d4a85\",\n" +
       "      \"content\":\"Sí, claro.\",\n" +
       "      \"documents\":[\n" +
       "         {\n" +
-      "            \"id\":\"1\",\n" +
+      "            \"id\":\"60acae8e2f799d228a4d4a85\",\n" +
       "            \"link\":\"https://moonshot.ceo/archivoTrabajo.pdf\",\n" +
       "            \"category\":\"PDF\",\n" +
-      "            \"roomId\":\"1\",\n" +
-      "            \"memberId\":\"2\",\n" +
+      "            \"roomId\":\"60acae8e2f799d228a4d4a85\",\n" +
+      "            \"memberId\":\"60acae8e2f799d228a4d4a85\",\n" +
       "            \"filename\":\"archivoTrabajo\",\n" +
       "            \"createdAt\":1621412130000\n" +
       "         }\n" +
@@ -1935,9 +1935,9 @@ export class CommunityPythonTemplates {
       "      \"createdAt\":1621415730000\n" +
       "   },\n" +
       "   {\n" +
-      "      \"id\":\"3\",\n" +
-      "      \"roomId\":\"1\",\n" +
-      "      \"authorMemberId\":\"3\",\n" +
+      "      \"id\":\"60acae8e2f799d228a4d4a85\",\n" +
+      "      \"roomId\":\"60acae8e2f799d228a4d4a85\",\n" +
+      "      \"authorMemberId\":\"60acae8e2f799d228a4d4a85\",\n" +
       "      \"content\":\"Yo salgo en breve de trabajar por si te quieres tomar un cafe\",\n" +
       "      \"documents\":[],\n" +
       "      \"createdAt\":1621419330000\n" +
@@ -1966,29 +1966,29 @@ export class CommunityPythonTemplates {
       "print(response.text)",
     response: "\n[\n" +
       "   {\n" +
-      "      \"id\":\"1\",\n" +
+      "      \"id\":\"60acae8e2f799d228a4d4a85\",\n" +
       "      \"link\":\"https://moonshot.ceo/archivoTrabajo.pdf\",\n" +
       "      \"category\":\"PDF\",\n" +
-      "      \"roomId\":\"1\",\n" +
-      "      \"memberId\":\"2\",\n" +
+      "      \"roomId\":\"60acae8e2f799d228a4d4a85\",\n" +
+      "      \"memberId\":\"60acae8e2f799d228a4d4a85\",\n" +
       "      \"filename\":\"archivoTrabajo\",\n" +
       "      \"createdAt\":1621412130000\n" +
       "   },\n" +
       "   {\n" +
-      "      \"id\":\"2\",\n" +
+      "      \"id\":\"60acae8e2f799d228a4d4a85\",\n" +
       "      \"link\":\"https://moonshot.ceo/planosPrimeraPlanta.pdf\",\n" +
       "      \"category\":\"PDF\",\n" +
-      "      \"roomId\":\"3\",\n" +
-      "      \"memberId\":\"5\",\n" +
+      "      \"roomId\":\"60acae8e2f799d228a4d4a85\",\n" +
+      "      \"memberId\":\"60acae8e2f799d228a4d4a85\",\n" +
       "      \"filename\":\"planosPrimeraPlanta\",\n" +
       "      \"createdAt\":1621415730000\n" +
       "   },\n" +
       "   {\n" +
-      "      \"id\":\"3\",\n" +
+      "      \"id\":\"60acae8e2f799d228a4d4a85\",\n" +
       "      \"link\":\"https://moonshot.ceo/planosSegundaPlanta.image\",\n" +
       "      \"category\":\"IMAGE\",\n" +
-      "      \"roomId\":\"3\",\n" +
-      "      \"memberId\":\"6\",\n" +
+      "      \"roomId\":\"60acae8e2f799d228a4d4a85\",\n" +
+      "      \"memberId\":\"60acae8e2f799d228a4d4a85\",\n" +
       "      \"filename\":\"planosSegundaPlanta\",\n" +
       "      \"createdAt\":1621419330000\n" +
       "   }\n" +
@@ -2005,15 +2005,15 @@ export class CommunityPythonTemplates {
       "print(response.text)",
     response: "\n[\n" +
       "   {\n" +
-      "      \"id\":\"1\",\n" +
+      "      \"id\":\"60acae8e2f799d228a4d4a85\",\n" +
       "      \"url\":\"https://dev.moonshot.ceo/documento1.pdf\",\n" +
-      "      \"roomId\":\"2\",\n" +
+      "      \"roomId\":\"60acae8e2f799d228a4d4a85\",\n" +
       "      \"createdAt\":1637417185\n" +
       "   },\n" +
       "   {\n" +
-      "      \"id\":\"2\",\n" +
+      "      \"id\":\"60acae8e2f799d228a4d4a85\",\n" +
       "      \"url\":\"https://dev.moonshot.ceo/documento2.pdf\",\n" +
-      "      \"roomId\":\"7\",\n" +
+      "      \"roomId\":\"60acae8e2f799d228a4d4a85\",\n" +
       "      \"createdAt\":1637417190\n" +
       "   }\n" +
       "]"
@@ -2040,9 +2040,9 @@ export class CommunityPythonTemplates {
       "print(response.text)",
     response: "\n[\n" +
       "   {\n" +
-      "      \"id\":\"1\",\n" +
+      "      \"id\":\"60acae8e2f799d228a4d4a85\",\n" +
       "      \"ownerMember\":{\n" +
-      "         \"id\":\"5\",\n" +
+      "         \"id\":\"60acae8e2f799d228a4d4a85\",\n" +
       "         \"state\":\"ACCEPTED\",\n" +
       "         \"name\":\"Victor\",\n" +
       "         \"lastname\":\"Ceballos\",\n" +
@@ -2074,7 +2074,7 @@ export class CommunityPythonTemplates {
       "         \"experiences\":None,\n" +
       "         \"educations\":[\n" +
       "            {\n" +
-      "               \"id\":\"4\",\n" +
+      "               \"id\":\"61445159784bca6ef764c6df\",\n" +
       "               \"school\":\"Universidad de Las Palmas de Gran Canaria\",\n" +
       "               \"degree\":\"Ingeniería industrial\",\n" +
       "               \"fieldOfStudy\":\"Diseño de instalaciones\",\n" +
@@ -2094,15 +2094,15 @@ export class CommunityPythonTemplates {
       "      \"description\":\"Reunion para hablar de los objetivos a futuro\",\n" +
       "      \"participants\":[\n" +
       "         {\n" +
-      "            \"memberId\":\"5\",\n" +
+      "            \"memberId\":\"61445159784bca6ef764c6df\",\n" +
       "            \"state\":\"ACTIVE\"\n" +
       "         },\n" +
       "         {\n" +
-      "            \"memberId\":\"9\",\n" +
+      "            \"memberId\":\"61445159784bca6ef764c6df\",\n" +
       "            \"state\":\"ACTIVE\"\n" +
       "         },\n" +
       "         {\n" +
-      "            \"memberId\":\"2\",\n" +
+      "            \"memberId\":\"61445159784bca6ef764c6df\",\n" +
       "            \"state\":\"INACTIVE\"\n" +
       "         }\n" +
       "      ],\n" +
@@ -2120,9 +2120,9 @@ export class CommunityPythonTemplates {
       "      ]\n" +
       "   },\n" +
       "   {\n" +
-      "      \"id\":\"2\",\n" +
+      "      \"id\":\"61445159784bca6ef764c6df\",\n" +
       "      \"ownerMember\":{\n" +
-      "         \"id\":\"3\",\n" +
+      "         \"id\":\"61445159784bca6ef764c6df\",\n" +
       "         \"state\":\"ACCEPTED\",\n" +
       "         \"name\":\"Jeremy\",\n" +
       "         \"lastname\":\"Trujillo\",\n" +
@@ -2147,7 +2147,7 @@ export class CommunityPythonTemplates {
       "         ],\n" +
       "         \"experiences\":[\n" +
       "            {\n" +
-      "               \"id\":\"3\",\n" +
+      "               \"id\":\"61445159784bca6ef764c6df\",\n" +
       "               \"title\":\"Prácticas universitarias en Moonshot Innovation\",\n" +
       "               \"type\":\"APPRENTICESHIP\",\n" +
       "               \"company\":\"Moonshot Innovation\",\n" +
@@ -2163,7 +2163,7 @@ export class CommunityPythonTemplates {
       "         ],\n" +
       "         \"educations\":[\n" +
       "            {\n" +
-      "               \"id\":\"3\",\n" +
+      "               \"id\":\"61445159784bca6ef764c6df\",\n" +
       "               \"school\":\"Universidad de Las Palmas de Gran Canaria\",\n" +
       "               \"degree\":\"Ingeniería informática\",\n" +
       "               \"fieldOfStudy\":\"Ingeniería de software\",\n" +
@@ -2183,19 +2183,19 @@ export class CommunityPythonTemplates {
       "      \"description\":\"Frente al problema sucedido esta mañana debemos tomar decisiones\",\n" +
       "      \"participants\":[\n" +
       "         {\n" +
-      "            \"memberId\":\"3\",\n" +
+      "            \"memberId\":\"61445159784bca6ef764c6df\",\n" +
       "            \"state\":\"INACTIVE\"\n" +
       "         },\n" +
       "         {\n" +
-      "            \"memberId\":\"6\",\n" +
+      "            \"memberId\":\"61445159784bca6ef764c6df\",\n" +
       "            \"state\":\"ACTIVE\"\n" +
       "         },\n" +
       "         {\n" +
-      "            \"memberId\":\"7\",\n" +
+      "            \"memberId\":\"61445159784bca6ef764c6df\",\n" +
       "            \"state\":\"ACTIVE\"\n" +
       "         },\n" +
       "         {\n" +
-      "            \"memberId\":\"5\",\n" +
+      "            \"memberId\":\"61445159784bca6ef764c6df\",\n" +
       "            \"state\":\"ACTIVE\"\n" +
       "         }\n" +
       "      ],\n" +
@@ -2215,9 +2215,9 @@ export class CommunityPythonTemplates {
       "print(response.text)",
     response: "\n[\n" +
       "   {\n" +
-      "      \"id\":\"1\",\n" +
+      "      \"id\":\"60acae8e2f799d228a4d4a85\",\n" +
       "      \"ownerMember\":{\n" +
-      "         \"id\":\"5\",\n" +
+      "         \"id\":\"60acae8e2f799d228a4d4a85\",\n" +
       "         \"state\":\"ACCEPTED\",\n" +
       "         \"name\":\"Victor\",\n" +
       "         \"lastname\":\"Ceballos\",\n" +
@@ -2249,7 +2249,7 @@ export class CommunityPythonTemplates {
       "         \"experiences\":None,\n" +
       "         \"educations\":[\n" +
       "            {\n" +
-      "               \"id\":\"4\",\n" +
+      "               \"id\":\"61445159784bca6ef764c6df\",\n" +
       "               \"school\":\"Universidad de Las Palmas de Gran Canaria\",\n" +
       "               \"degree\":\"Ingeniería industrial\",\n" +
       "               \"fieldOfStudy\":\"Diseño de instalaciones\",\n" +
@@ -2269,15 +2269,15 @@ export class CommunityPythonTemplates {
       "      \"description\":\"Reunion para hablar de los objetivos a futuro\",\n" +
       "      \"participants\":[\n" +
       "         {\n" +
-      "            \"memberId\":\"5\",\n" +
+      "            \"memberId\":\"61445159784bca6ef764c6df\",\n" +
       "            \"state\":\"ACTIVE\"\n" +
       "         },\n" +
       "         {\n" +
-      "            \"memberId\":\"9\",\n" +
+      "            \"memberId\":\"61445159784bca6ef764c6df\",\n" +
       "            \"state\":\"ACTIVE\"\n" +
       "         },\n" +
       "         {\n" +
-      "            \"memberId\":\"2\",\n" +
+      "            \"memberId\":\"61445159784bca6ef764c6df\",\n" +
       "            \"state\":\"INACTIVE\"\n" +
       "         }\n" +
       "      ],\n" +
@@ -2295,9 +2295,9 @@ export class CommunityPythonTemplates {
       "      ]\n" +
       "   },\n" +
       "   {\n" +
-      "      \"id\":\"2\",\n" +
+      "      \"id\":\"61445159784bca6ef764c6df\",\n" +
       "      \"ownerMember\":{\n" +
-      "         \"id\":\"3\",\n" +
+      "         \"id\":\"61445159784bca6ef764c6df\",\n" +
       "         \"state\":\"ACCEPTED\",\n" +
       "         \"name\":\"Jeremy\",\n" +
       "         \"lastname\":\"Trujillo\",\n" +
@@ -2322,7 +2322,7 @@ export class CommunityPythonTemplates {
       "         ],\n" +
       "         \"experiences\":[\n" +
       "            {\n" +
-      "               \"id\":\"3\",\n" +
+      "               \"id\":\"61445159784bca6ef764c6df\",\n" +
       "               \"title\":\"Prácticas universitarias en Moonshot Innovation\",\n" +
       "               \"type\":\"APPRENTICESHIP\",\n" +
       "               \"company\":\"Moonshot Innovation\",\n" +
@@ -2338,7 +2338,7 @@ export class CommunityPythonTemplates {
       "         ],\n" +
       "         \"educations\":[\n" +
       "            {\n" +
-      "               \"id\":\"3\",\n" +
+      "               \"id\":\"61445159784bca6ef764c6df\",\n" +
       "               \"school\":\"Universidad de Las Palmas de Gran Canaria\",\n" +
       "               \"degree\":\"Ingeniería informática\",\n" +
       "               \"fieldOfStudy\":\"Ingeniería de software\",\n" +
@@ -2358,19 +2358,19 @@ export class CommunityPythonTemplates {
       "      \"description\":\"Frente al problema sucedido esta mañana debemos tomar decisiones\",\n" +
       "      \"participants\":[\n" +
       "         {\n" +
-      "            \"memberId\":\"3\",\n" +
+      "            \"memberId\":\"61445159784bca6ef764c6df\",\n" +
       "            \"state\":\"INACTIVE\"\n" +
       "         },\n" +
       "         {\n" +
-      "            \"memberId\":\"6\",\n" +
+      "            \"memberId\":\"61445159784bca6ef764c6df\",\n" +
       "            \"state\":\"ACTIVE\"\n" +
       "         },\n" +
       "         {\n" +
-      "            \"memberId\":\"7\",\n" +
+      "            \"memberId\":\"61445159784bca6ef764c6df\",\n" +
       "            \"state\":\"ACTIVE\"\n" +
       "         },\n" +
       "         {\n" +
-      "            \"memberId\":\"5\",\n" +
+      "            \"memberId\":\"61445159784bca6ef764c6df\",\n" +
       "            \"state\":\"ACTIVE\"\n" +
       "         }\n" +
       "      ],\n" +
@@ -2389,9 +2389,9 @@ export class CommunityPythonTemplates {
       "response = reqs.get(URL)\n" +
       "print(response.text)",
     response: "\n{\n" +
-      "      \"id\":\"1\",\n" +
+      "      \"id\":\"61445159784bca6ef764c6df\",\n" +
       "      \"ownerMember\":{\n" +
-      "         \"id\":\"5\",\n" +
+      "         \"id\":\"61445159784bca6ef764c6df\",\n" +
       "         \"state\":\"ACCEPTED\",\n" +
       "         \"name\":\"Victor\",\n" +
       "         \"lastname\":\"Ceballos\",\n" +
@@ -2423,7 +2423,7 @@ export class CommunityPythonTemplates {
       "         \"experiences\":None,\n" +
       "         \"educations\":[\n" +
       "            {\n" +
-      "               \"id\":\"4\",\n" +
+      "               \"id\":\"61445159784bca6ef764c6df\",\n" +
       "               \"school\":\"Universidad de Las Palmas de Gran Canaria\",\n" +
       "               \"degree\":\"Ingeniería industrial\",\n" +
       "               \"fieldOfStudy\":\"Diseño de instalaciones\",\n" +
@@ -2443,15 +2443,15 @@ export class CommunityPythonTemplates {
       "      \"description\":\"Reunion para hablar de los objetivos a futuro\",\n" +
       "      \"participants\":[\n" +
       "         {\n" +
-      "            \"memberId\":\"5\",\n" +
+      "            \"memberId\":\"61445159784bca6ef764c6df\",\n" +
       "            \"state\":\"ACTIVE\"\n" +
       "         },\n" +
       "         {\n" +
-      "            \"memberId\":\"9\",\n" +
+      "            \"memberId\":\"61445159784bca6ef764c6df\",\n" +
       "            \"state\":\"ACTIVE\"\n" +
       "         },\n" +
       "         {\n" +
-      "            \"memberId\":\"2\",\n" +
+      "            \"memberId\":\"61445159784bca6ef764c6df\",\n" +
       "            \"state\":\"INACTIVE\"\n" +
       "         }\n" +
       "      ],\n" +
@@ -2477,21 +2477,21 @@ export class CommunityPythonTemplates {
       "URL = \"https://dev.moonshot.ceo/api/community/follow-up-rooms\"\n" +
       "\n" +
       "BODY = {\n" +
-      "  \"id\": \"1\",\n" +
-      "  \"ownerMemberId\": \"5\",\n" +
+      "  \"id\": \"61445159784bca6ef764c6df\",\n" +
+      "  \"ownerMemberId\": \"61445159784bca6ef764c6df\",\n" +
       "  \"title\": \"Reunion general\",\n" +
       "  \"description\": \"Reunion para hablar de los objetivos a futuro\",\n" +
       "  \"participants\": [\n" +
       "      {\n" +
-      "          \"memberId\": \"5\",\n" +
+      "          \"memberId\": \"61445159784bca6ef764c6df\",\n" +
       "          \"state\": \"ACTIVE\"\n" +
       "      },\n" +
       "      {\n" +
-      "          \"memberId\": \"9\",\n" +
+      "          \"memberId\": \"61445159784bca6ef764c6df\",\n" +
       "          \"state\": \"ACTIVE\"\n" +
       "      },\n" +
       "      {\n" +
-      "          \"memberId\": \"2\",\n" +
+      "          \"memberId\": \"61445159784bca6ef764c6df\",\n" +
       "          \"state\": \"INACTIVE\"\n" +
       "      }\n" +
       "  ],\n" +
@@ -2525,15 +2525,15 @@ export class CommunityPythonTemplates {
       "  \"description\": \"Reunion para hablar de los objetivos a futuro\",\n" +
       "  \"participants\": [\n" +
       "      {\n" +
-      "          \"memberId\": \"5\",\n" +
+      "          \"memberId\": \"61445159784bca6ef764c6df\",\n" +
       "          \"state\": \"ACTIVE\"\n" +
       "      },\n" +
       "      {\n" +
-      "          \"memberId\": \"9\",\n" +
+      "          \"memberId\": \"61445159784bca6ef764c6df\",\n" +
       "          \"state\": \"ACTIVE\"\n" +
       "      },\n" +
       "      {\n" +
-      "          \"memberId\": \"2\",\n" +
+      "          \"memberId\": \"61445159784bca6ef764c6df\",\n" +
       "          \"state\": \"INACTIVE\"\n" +
       "      }\n" +
       "  ],\n" +
@@ -2562,7 +2562,7 @@ export class CommunityPythonTemplates {
       "\n" +
       "BODY = {\n" +
       "  \"memberIds\": [\n" +
-      "    \"1\", \"2\", \"3\"\n" +
+      "    \"61445159784bca6ef764c6df\", \"61445159784bca6ef764c6df\", \"61445159784bca6ef764c6df\"\n" +
       "  ]\n" +
       "}\n" +
       "\n" +
@@ -2579,10 +2579,10 @@ export class CommunityPythonTemplates {
       "\n" +
       "BODY = {\n" +
       "   \"leaveMemberId\":[\n" +
-      "      \"1\",\n" +
-      "      \"2\"\n" +
+      "      \"61445159784bca6ef764c6df\",\n" +
+      "      \"61445159784bca6ef764c6df\"\n" +
       "   ],\n" +
-      "   \"newOwnerMemberId\":\"4\"\n" +
+      "   \"newOwnerMemberId\":\"61445159784bca6ef764c6df\"\n" +
       "}\n" +
       "\n" +
       "response = reqs.put(URL, data=BODY)\n" +
@@ -2633,26 +2633,26 @@ export class CommunityPythonTemplates {
       "   \"content\":\"Sí, claro.\",\n" +
       "   \"documents\":[\n" +
       "      {\n" +
-      "         \"id\":\"1\",\n" +
+      "         \"id\":\"61445159784bca6ef764c6df\",\n" +
       "         \"link\":\"https://moonshot.ceo/archivoTrabajo.pdf\",\n" +
       "         \"category\":\"PDF\",\n" +
-      "         \"roomId\":\"1\",\n" +
-      "         \"memberId\":\"2\",\n" +
+      "         \"roomId\":\"61445159784bca6ef764c6df\",\n" +
+      "         \"memberId\":\"61445159784bca6ef764c6df\",\n" +
       "         \"filename\":\"archivoTrabajo\",\n" +
       "         \"createdAt\":1621412130000\n" +
       "      }\n" +
       "   ],\n" +
       "   \"links\":[\n" +
       "      {\n" +
-      "         \"id\":\"1\",\n" +
+      "         \"id\":\"61445159784bca6ef764c6df\",\n" +
       "         \"url\":\"https://dev.moonshot.ceo/documento1.pdf\",\n" +
-      "         \"roomId\":\"2\",\n" +
+      "         \"roomId\":\"61445159784bca6ef764c6df\",\n" +
       "         \"createdAt\":1637417185\n" +
       "      },\n" +
       "      {\n" +
-      "         \"id\":\"2\",\n" +
+      "         \"id\":\"61445159784bca6ef764c6df\",\n" +
       "         \"url\":\"https://dev.moonshot.ceo/documento2.pdf\",\n" +
-      "         \"roomId\":\"7\",\n" +
+      "         \"roomId\":\"61445159784bca6ef764c6df\",\n" +
       "         \"createdAt\":1637417190\n" +
       "      }\n" +
       "   ],\n" +
@@ -2696,9 +2696,9 @@ export class CommunityPythonTemplates {
       "print(response.text)",
     response: "\n[\n" +
       "   {\n" +
-      "      \"id\":\"1\",\n" +
-      "      \"roomId\":\"1\",\n" +
-      "      \"authorMemberId\":\"1\",\n" +
+      "      \"id\":\"61445159784bca6ef764c6df\",\n" +
+      "      \"roomId\":\"61445159784bca6ef764c6df\",\n" +
+      "      \"authorMemberId\":\"61445159784bca6ef764c6df\",\n" +
       "      \"content\":\"Hola, ¿Me podrías pasar el archivo?\",\n" +
       "      \"documents\":[\n" +
       "         \n" +
@@ -2706,17 +2706,17 @@ export class CommunityPythonTemplates {
       "      \"createdAt\":1621412130000\n" +
       "   },\n" +
       "   {\n" +
-      "      \"id\":\"2\",\n" +
-      "      \"roomId\":\"1\",\n" +
-      "      \"authorMemberId\":\"2\",\n" +
+      "      \"id\":\"61445159784bca6ef764c6df\",\n" +
+      "      \"roomId\":\"61445159784bca6ef764c6df\",\n" +
+      "      \"authorMemberId\":\"61445159784bca6ef764c6df\",\n" +
       "      \"content\":\"Sí, claro.\",\n" +
       "      \"documents\":[\n" +
       "         {\n" +
-      "            \"id\":\"1\",\n" +
+      "            \"id\":\"61445159784bca6ef764c6df\",\n" +
       "            \"link\":\"https://moonshot.ceo/archivoTrabajo.pdf\",\n" +
       "            \"category\":\"PDF\",\n" +
-      "            \"roomId\":\"1\",\n" +
-      "            \"memberId\":\"2\",\n" +
+      "            \"roomId\":\"61445159784bca6ef764c6df\",\n" +
+      "            \"memberId\":\"61445159784bca6ef764c6df\",\n" +
       "            \"filename\":\"archivoTrabajo\",\n" +
       "            \"createdAt\":1621412130000\n" +
       "         }\n" +
@@ -2724,9 +2724,9 @@ export class CommunityPythonTemplates {
       "      \"createdAt\":1621415730000\n" +
       "   },\n" +
       "   {\n" +
-      "      \"id\":\"3\",\n" +
-      "      \"roomId\":\"2\",\n" +
-      "      \"authorMemberId\":\"3\",\n" +
+      "      \"id\":\"61445159784bca6ef764c6df\",\n" +
+      "      \"roomId\":\"61445159784bca6ef764c6df\",\n" +
+      "      \"authorMemberId\":\"61445159784bca6ef764c6df\",\n" +
       "      \"content\":\"Yo salgo en breve de trabajar por si te quieres tomar un cafe\",\n" +
       "      \"documents\":[\n" +
       "         \n" +
@@ -2746,29 +2746,29 @@ export class CommunityPythonTemplates {
       "print(response.text)",
     response: "\n[\n" +
       "   {\n" +
-      "      \"id\":\"1\",\n" +
+      "      \"id\":\"61445159784bca6ef764c6df\",\n" +
       "      \"link\":\"https://moonshot.ceo/archivoTrabajo.pdf\",\n" +
       "      \"category\":\"PDF\",\n" +
-      "      \"roomId\":\"1\",\n" +
-      "      \"memberId\":\"2\",\n" +
+      "      \"roomId\":\"61445159784bca6ef764c6df\",\n" +
+      "      \"memberId\":\"61445159784bca6ef764c6df\",\n" +
       "      \"filename\":\"archivoTrabajo\",\n" +
       "      \"createdAt\":1621412130000\n" +
       "   },\n" +
       "   {\n" +
-      "      \"id\":\"2\",\n" +
+      "      \"id\":\"61445159784bca6ef764c6df\",\n" +
       "      \"link\":\"https://moonshot.ceo/planosPrimeraPlanta.pdf\",\n" +
       "      \"category\":\"PDF\",\n" +
-      "      \"roomId\":\"3\",\n" +
-      "      \"memberId\":\"5\",\n" +
+      "      \"roomId\":\"61445159784bca6ef764c6df\",\n" +
+      "      \"memberId\":\"61445159784bca6ef764c6df\",\n" +
       "      \"filename\":\"planosPrimeraPlanta\",\n" +
       "      \"createdAt\":1621415730000\n" +
       "   },\n" +
       "   {\n" +
-      "      \"id\":\"3\",\n" +
+      "      \"id\":\"61445159784bca6ef764c6df\",\n" +
       "      \"link\":\"https://moonshot.ceo/planosSegundaPlanta.image\",\n" +
       "      \"category\":\"IMAGE\",\n" +
-      "      \"roomId\":\"3\",\n" +
-      "      \"memberId\":\"6\",\n" +
+      "      \"roomId\":\"61445159784bca6ef764c6df\",\n" +
+      "      \"memberId\":\"61445159784bca6ef764c6df\",\n" +
       "      \"filename\":\"planosSegundaPlanta\",\n" +
       "      \"createdAt\":1621419330000\n" +
       "   }\n" +
@@ -2785,15 +2785,15 @@ export class CommunityPythonTemplates {
       "print(response.text)",
     response: "\n[\n" +
       "   {\n" +
-      "      \"id\":\"1\",\n" +
+      "      \"id\":\"61445159784bca6ef764c6df\",\n" +
       "      \"url\":\"https://dev.moonshot.ceo/documento1.pdf\",\n" +
-      "      \"roomId\":\"2\",\n" +
+      "      \"roomId\":\"61445159784bca6ef764c6df\",\n" +
       "      \"createdAt\":1637417185\n" +
       "   },\n" +
       "   {\n" +
-      "      \"id\":\"2\",\n" +
+      "      \"id\":\"61445159784bca6ef764c6df\",\n" +
       "      \"url\":\"https://dev.moonshot.ceo/documento2.pdf\",\n" +
-      "      \"roomId\":\"7\",\n" +
+      "      \"roomId\":\"61445159784bca6ef764c6df\",\n" +
       "      \"createdAt\":1637417190\n" +
       "   }\n" +
       "]"
@@ -2820,9 +2820,9 @@ export class CommunityPythonTemplates {
       "print(response.text)",
     response: "\n[\n" +
       "   {\n" +
-      "      \"id\":\"1\",\n" +
+      "      \"id\":\"61445159784bca6ef764c6df\",\n" +
       "      \"ownerMember\":{\n" +
-      "         \"id\":\"8\",\n" +
+      "         \"id\":\"61445159784bca6ef764c6df\",\n" +
       "         \"state\":\"ACCEPTED\",\n" +
       "         \"name\":\"Marcos\",\n" +
       "         \"lastname\":\"Fernandez\",\n" +
@@ -2854,7 +2854,7 @@ export class CommunityPythonTemplates {
       "         ],\n" +
       "         \"experiences\":[\n" +
       "            {\n" +
-      "               \"id\":\"6\",\n" +
+      "               \"id\":\"61445159784bca6ef764c6df\",\n" +
       "               \"title\":\"Colaboración para crear la vacuna Pfizer\",\n" +
       "               \"type\":\"FULL_TIME\",\n" +
       "               \"company\":\"Novartis\",\n" +
@@ -2868,7 +2868,7 @@ export class CommunityPythonTemplates {
       "               \"description\":\"Colaborador de la vacuna Pfizer contra el COVID-19\"\n" +
       "            },\n" +
       "            {\n" +
-      "               \"id\":\"7\",\n" +
+      "               \"id\":\"61445159784bca6ef764c6df\",\n" +
       "               \"title\":\"Colaboración para crear la vacuna de la gripe A\",\n" +
       "               \"type\":\"INTERIM\",\n" +
       "               \"company\":\"Novartis\",\n" +
@@ -2884,7 +2884,7 @@ export class CommunityPythonTemplates {
       "         ],\n" +
       "         \"educations\":[\n" +
       "            {\n" +
-      "               \"id\":\"7\",\n" +
+      "               \"id\":\"61445159784bca6ef764c6df\",\n" +
       "               \"school\":\"Universidad de Tokio\",\n" +
       "               \"degree\":\"Farmaceutica\",\n" +
       "               \"fieldOfStudy\":\"Pandemias\",\n" +
@@ -2904,15 +2904,15 @@ export class CommunityPythonTemplates {
       "      \"description\":\"Canal para compartir conocimientos de diversos temas\",\n" +
       "      \"participants\":[\n" +
       "         {\n" +
-      "            \"memberId\":\"3\",\n" +
+      "            \"memberId\":\"61445159784bca6ef764c6df\",\n" +
       "            \"state\":\"INACTIVE\"\n" +
       "         },\n" +
       "         {\n" +
-      "            \"memberId\":\"6\",\n" +
+      "            \"memberId\":\"61445159784bca6ef764c6df\",\n" +
       "            \"state\":\"ACTIVE\"\n" +
       "         },\n" +
       "         {\n" +
-      "            \"memberId\":\"8\",\n" +
+      "            \"memberId\":\"61445159784bca6ef764c6df\",\n" +
       "            \"state\":\"ACTIVE\"\n" +
       "         }\n" +
       "      ],\n" +
@@ -2929,9 +2929,9 @@ export class CommunityPythonTemplates {
       "      ]\n" +
       "   },\n" +
       "   {\n" +
-      "      \"id\":\"2\",\n" +
+      "      \"id\":\"61445159784bca6ef764c6df\",\n" +
       "      \"ownerMember\":{\n" +
-      "         \"id\":\"9\",\n" +
+      "         \"id\":\"61445159784bca6ef764c6df\",\n" +
       "         \"state\":\"ACCEPTED\",\n" +
       "         \"name\":\"Raúl\",\n" +
       "         \"lastname\":\"López\",\n" +
@@ -2971,7 +2971,7 @@ export class CommunityPythonTemplates {
       "         ],\n" +
       "         \"experiences\":[\n" +
       "            {\n" +
-      "               \"id\":\"8\",\n" +
+      "               \"id\":\"61445159784bca6ef764c6df\",\n" +
       "               \"title\":\"Distribuidor de la vacuna Pfizer\",\n" +
       "               \"type\":\"FREELANCE\",\n" +
       "               \"company\":\"Distribuciones Raul S.L\",\n" +
@@ -2991,15 +2991,15 @@ export class CommunityPythonTemplates {
       "      \"description\":\"Aqui todos los participantes estaran muteados y sirve para sentirse acompañado en el trabajo online\",\n" +
       "      \"participants\":[\n" +
       "         {\n" +
-      "            \"memberId\":\"9\",\n" +
+      "            \"memberId\":\"61445159784bca6ef764c6df\",\n" +
       "            \"state\":\"ACTIVE\"\n" +
       "         },\n" +
       "         {\n" +
-      "            \"memberId\":\"1\",\n" +
+      "            \"memberId\":\"61445159784bca6ef764c6df\",\n" +
       "            \"state\":\"ACTIVE\"\n" +
       "         },\n" +
       "         {\n" +
-      "            \"memberId\":\"2\",\n" +
+      "            \"memberId\":\"61445159784bca6ef764c6df\",\n" +
       "            \"state\":\"INACTIVE\"\n" +
       "         }\n" +
       "      ],\n" +
@@ -3017,9 +3017,9 @@ export class CommunityPythonTemplates {
       "response = reqs.get(URL)\n" +
       "print(response.text)",
     response: "\n{\n" +
-      "   \"id\":\"1\",\n" +
+      "   \"id\":\"61445159784bca6ef764c6df\",\n" +
       "   \"ownerMember\":{\n" +
-      "      \"id\":\"8\",\n" +
+      "      \"id\":\"61445159784bca6ef764c6df\",\n" +
       "      \"state\":\"ACCEPTED\",\n" +
       "      \"name\":\"Marcos\",\n" +
       "      \"lastname\":\"Fernandez\",\n" +
@@ -3051,7 +3051,7 @@ export class CommunityPythonTemplates {
       "      ],\n" +
       "      \"experiences\":[\n" +
       "         {\n" +
-      "            \"id\":\"6\",\n" +
+      "            \"id\":\"61445159784bca6ef764c6df\",\n" +
       "            \"title\":\"Colaboración para crear la vacuna Pfizer\",\n" +
       "            \"type\":\"FULL_TIME\",\n" +
       "            \"company\":\"Novartis\",\n" +
@@ -3065,7 +3065,7 @@ export class CommunityPythonTemplates {
       "            \"description\":\"Colaborador de la vacuna Pfizer contra el COVID-19\"\n" +
       "         },\n" +
       "         {\n" +
-      "            \"id\":\"7\",\n" +
+      "            \"id\":\"61445159784bca6ef764c6df\",\n" +
       "            \"title\":\"Colaboración para crear la vacuna de la gripe A\",\n" +
       "            \"type\":\"INTERIM\",\n" +
       "            \"company\":\"Novartis\",\n" +
@@ -3081,7 +3081,7 @@ export class CommunityPythonTemplates {
       "      ],\n" +
       "      \"educations\":[\n" +
       "         {\n" +
-      "            \"id\":\"7\",\n" +
+      "            \"id\":\"61445159784bca6ef764c6df\",\n" +
       "            \"school\":\"Universidad de Tokio\",\n" +
       "            \"degree\":\"Farmaceutica\",\n" +
       "            \"fieldOfStudy\":\"Pandemias\",\n" +
@@ -3101,15 +3101,15 @@ export class CommunityPythonTemplates {
       "   \"description\":\"Canal para compartir conocimientos de diversos temas\",\n" +
       "   \"participants\":[\n" +
       "      {\n" +
-      "         \"memberId\":\"3\",\n" +
+      "         \"memberId\":\"61445159784bca6ef764c6df\",\n" +
       "         \"state\":\"INACTIVE\"\n" +
       "      },\n" +
       "      {\n" +
-      "         \"memberId\":\"6\",\n" +
+      "         \"memberId\":\"61445159784bca6ef764c6df\",\n" +
       "         \"state\":\"ACTIVE\"\n" +
       "      },\n" +
       "      {\n" +
-      "         \"memberId\":\"8\",\n" +
+      "         \"memberId\":\"61445159784bca6ef764c6df\",\n" +
       "         \"state\":\"ACTIVE\"\n" +
       "      }\n" +
       "   ],\n" +
@@ -3134,21 +3134,21 @@ export class CommunityPythonTemplates {
       "URL = \"https://dev.moonshot.ceo/api/community/public-channels\"\n" +
       "\n" +
       "BODY = {\n" +
-      "   \"id\":\"1\",\n" +
-      "   \"ownerMemberId\":\"8\",\n" +
+      "   \"id\":\"61445159784bca6ef764c6df\",\n" +
+      "   \"ownerMemberId\":\"61445159784bca6ef764c6df\",\n" +
       "   \"title\":\"Canal compartir conocimientos\",\n" +
       "   \"description\":\"Canal para compartir conocimientos de diversos temas\",\n" +
       "   \"participants\":[\n" +
       "      {\n" +
-      "         \"memberId\":\"3\",\n" +
+      "         \"memberId\":\"61445159784bca6ef764c6df\",\n" +
       "         \"state\":\"INACTIVE\"\n" +
       "      },\n" +
       "      {\n" +
-      "         \"memberId\":\"6\",\n" +
+      "         \"memberId\":\"61445159784bca6ef764c6df\",\n" +
       "         \"state\":\"ACTIVE\"\n" +
       "      },\n" +
       "      {\n" +
-      "         \"memberId\":\"8\",\n" +
+      "         \"memberId\":\"61445159784bca6ef764c6df\",\n" +
       "         \"state\":\"ACTIVE\"\n" +
       "      }\n" +
       "   ],\n" +
@@ -3177,20 +3177,20 @@ export class CommunityPythonTemplates {
       "URL = \"https://dev.moonshot.ceo/api/community/public-channels/1\"\n" +
       "\n" +
       "BODY = {\n" +
-      "   \"ownerMemberId\":\"8\",\n" +
+      "   \"ownerMemberId\":\"61445159784bca6ef764c6df\",\n" +
       "   \"title\":\"Canal compartir conocimientos\",\n" +
       "   \"description\":\"Canal para compartir conocimientos de diversos temas\",\n" +
       "   \"participants\":[\n" +
       "      {\n" +
-      "         \"memberId\":\"3\",\n" +
+      "         \"memberId\":\"61445159784bca6ef764c6df\",\n" +
       "         \"state\":\"INACTIVE\"\n" +
       "      },\n" +
       "      {\n" +
-      "         \"memberId\":\"6\",\n" +
+      "         \"memberId\":\"61445159784bca6ef764c6df\",\n" +
       "         \"state\":\"ACTIVE\"\n" +
       "      },\n" +
       "      {\n" +
-      "         \"memberId\":\"8\",\n" +
+      "         \"memberId\":\"61445159784bca6ef764c6df\",\n" +
       "         \"state\":\"ACTIVE\"\n" +
       "      }\n" +
       "   ],\n" +
@@ -3229,20 +3229,20 @@ export class CommunityPythonTemplates {
       "URL = \"https://dev.moonshot.ceo/api/community/public-channels/1/admin\"\n" +
       "\n" +
       "BODY = {\n" +
-      "   \"ownerMemberId\":\"8\",\n" +
+      "   \"ownerMemberId\":\"61445159784bca6ef764c6df\",\n" +
       "   \"title\":\"Canal compartir conocimientos\",\n" +
       "   \"description\":\"Canal para compartir conocimientos de diversos temas\",\n" +
       "   \"participants\":[\n" +
       "      {\n" +
-      "         \"memberId\":\"3\",\n" +
+      "         \"memberId\":\"61445159784bca6ef764c6df\",\n" +
       "         \"state\":\"INACTIVE\"\n" +
       "      },\n" +
       "      {\n" +
-      "         \"memberId\":\"6\",\n" +
+      "         \"memberId\":\"61445159784bca6ef764c6df\",\n" +
       "         \"state\":\"ACTIVE\"\n" +
       "      },\n" +
       "      {\n" +
-      "         \"memberId\":\"8\",\n" +
+      "         \"memberId\":\"61445159784bca6ef764c6df\",\n" +
       "         \"state\":\"ACTIVE\"\n" +
       "      }\n" +
       "   ],\n" +
@@ -3281,7 +3281,7 @@ export class CommunityPythonTemplates {
       "URL = \"https://dev.moonshot.ceo/api/community/public-channels/1/subscribe\"\n" +
       "\n" +
       "BODY = {\n" +
-      "  \"memberId\":\"2\"\n" +
+      "  \"memberId\":\"61445159784bca6ef764c6df\"\n" +
       "}\n" +
       "\n" +
       "response = reqs.put(URL, data=BODY)\n" +
@@ -3296,8 +3296,8 @@ export class CommunityPythonTemplates {
       "URL = \"https://dev.moonshot.ceo/api/community/public-channels/1/unsubscribe\"\n" +
       "\n" +
       "BODY = {\n" +
-      "  \"memberId\":\"2\"\n" +
-      "  \"newOwnerMemberId\": \"5\"\n" +
+      "  \"memberId\":\"61445159784bca6ef764c6df\"\n" +
+      "  \"newOwnerMemberId\": \"61445159784bca6ef764c6df\"\n" +
       "}\n" +
       "\n" +
       "response = reqs.put(URL, data=BODY)\n" +
@@ -3315,26 +3315,26 @@ export class CommunityPythonTemplates {
       "   \"content\":\"Sí, claro.\",\n" +
       "   \"documents\":[\n" +
       "      {\n" +
-      "         \"id\":\"1\",\n" +
+      "         \"id\":\"61445159784bca6ef764c6df\",\n" +
       "         \"link\":\"https://moonshot.ceo/archivoTrabajo.pdf\",\n" +
       "         \"category\":\"PDF\",\n" +
-      "         \"roomId\":\"1\",\n" +
-      "         \"memberId\":\"2\",\n" +
+      "         \"roomId\":\"61445159784bca6ef764c6df\",\n" +
+      "         \"memberId\":\"61445159784bca6ef764c6df\",\n" +
       "         \"filename\":\"archivoTrabajo\",\n" +
       "         \"createdAt\":1621412130000\n" +
       "      }\n" +
       "   ],\n" +
       "   \"links\":[\n" +
       "      {\n" +
-      "         \"id\":\"1\",\n" +
+      "         \"id\":\"61445159784bca6ef764c6df\",\n" +
       "         \"url\":\"https://dev.moonshot.ceo/documento1.pdf\",\n" +
-      "         \"roomId\":\"2\",\n" +
+      "         \"roomId\":\"61445159784bca6ef764c6df\",\n" +
       "         \"createdAt\":1637417185\n" +
       "      },\n" +
       "      {\n" +
-      "         \"id\":\"2\",\n" +
+      "         \"id\":\"61445159784bca6ef764c6df\",\n" +
       "         \"url\":\"https://dev.moonshot.ceo/documento2.pdf\",\n" +
-      "         \"roomId\":\"7\",\n" +
+      "         \"roomId\":\"61445159784bca6ef764c6df\",\n" +
       "         \"createdAt\":1637417190\n" +
       "      }\n" +
       "   ],\n" +
@@ -3378,17 +3378,17 @@ export class CommunityPythonTemplates {
       "print(response.text)",
     response: "\n[\n" +
       "  {\n" +
-      "    \"id\": \"5\",\n" +
-      "    \"roomId\": \"3\",\n" +
-      "    \"authorMemberId\": \"5\",\n" +
+      "    \"id\": \"61445159784bca6ef764c6df\",\n" +
+      "    \"roomId\": \"61445159784bca6ef764c6df\",\n" +
+      "    \"authorMemberId\": \"61445159784bca6ef764c6df\",\n" +
       "    \"content\": \"Yo te envio estos planos de la primera planta, tu enviame los de la segunda planta\",\n" +
       "    \"documents\": [\n" +
       "      {\n" +
-      "        \"id\": \"2\",\n" +
+      "        \"id\": \"61445159784bca6ef764c6df\",\n" +
       "        \"link\": \"https://moonshot.ceo/planosPrimeraPlanta.pdf\",\n" +
       "        \"category\": \"PDF\",\n" +
-      "        \"roomId\": \"3\",\n" +
-      "        \"memberId\": \"5\",\n" +
+      "        \"roomId\": \"61445159784bca6ef764c6df\",\n" +
+      "        \"memberId\": \"61445159784bca6ef764c6df\",\n" +
       "        \"filename\": \"planosPrimeraPlanta\",\n" +
       "        \"createdAt\": 1621415730000\n" +
       "      }\n" +
@@ -3396,17 +3396,17 @@ export class CommunityPythonTemplates {
       "    \"createdAt\": 1621426530000\n" +
       "  },\n" +
       "  {\n" +
-      "    \"id\": \"6\",\n" +
-      "    \"roomId\": \"3\",\n" +
-      "    \"authorMemberId\": \"6\",\n" +
+      "    \"id\": \"61445159784bca6ef764c6df\",\n" +
+      "    \"roomId\": \"61445159784bca6ef764c6df\",\n" +
+      "    \"authorMemberId\": \"61445159784bca6ef764c6df\",\n" +
       "    \"content\": \"Okey, ahí te van.\",\n" +
       "    \"documents\": [\n" +
       "      {\n" +
-      "        \"id\": \"3\",\n" +
+      "        \"id\": \"61445159784bca6ef764c6df\",\n" +
       "        \"link\": \"https://moonshot.ceo/planosSegundaPlanta.image\",\n" +
       "        \"category\": \"IMAGE\",\n" +
-      "        \"roomId\": \"3\",\n" +
-      "        \"memberId\": \"6\",\n" +
+      "        \"roomId\": \"61445159784bca6ef764c6df\",\n" +
+      "        \"memberId\": \"61445159784bca6ef764c6df\",\n" +
       "        \"filename\": \"planosSegundaPlanta\",\n" +
       "        \"createdAt\": 1621419330000\n" +
       "      }\n" +
@@ -3414,26 +3414,26 @@ export class CommunityPythonTemplates {
       "    \"createdAt\": 1621430130000\n" +
       "  },\n" +
       "  {\n" +
-      "    \"id\": \"7\",\n" +
-      "    \"roomId\": \"3\",\n" +
-      "    \"authorMemberId\": \"1\",\n" +
+      "    \"id\": \"61445159784bca6ef764c6df\",\n" +
+      "    \"roomId\": \"61445159784bca6ef764c6df\",\n" +
+      "    \"authorMemberId\": \"61445159784bca6ef764c6df\",\n" +
       "    \"content\": \"Aqui acaba la reunion de hoy\",\n" +
       "    \"documents\": [\n" +
       "    ],\n" +
       "    \"createdAt\": 1621433730000\n" +
       "  },\n" +
       "  {\n" +
-      "    \"id\": \"8\",\n" +
-      "    \"roomId\": \"3\",\n" +
-      "    \"authorMemberId\": \"2\",\n" +
+      "    \"id\": \"61445159784bca6ef764c6df\",\n" +
+      "    \"roomId\": \"61445159784bca6ef764c6df\",\n" +
+      "    \"authorMemberId\": \"61445159784bca6ef764c6df\",\n" +
       "    \"content\": \"Gracias por convocarla, inserto un esquema que he realizado del contenido.\",\n" +
       "    \"documents\": [\n" +
       "      {\n" +
-      "        \"id\": \"4\",\n" +
+      "        \"id\": \"61445159784bca6ef764c6df\",\n" +
       "        \"link\": \"https://moonshot.ceo/esquema.jpg\",\n" +
       "        \"category\": \"IMAGE\",\n" +
-      "        \"roomId\": \"3\",\n" +
-      "        \"memberId\": \"2\",\n" +
+      "        \"roomId\": \"61445159784bca6ef764c6df\",\n" +
+      "        \"memberId\": \"61445159784bca6ef764c6df\",\n" +
       "        \"filename\": \"esquema\",\n" +
       "        \"createdAt\": 1621422930000\n" +
       "      }\n" +
@@ -3453,29 +3453,29 @@ export class CommunityPythonTemplates {
       "print(response.text)",
     response: "\n[\n" +
       "   {\n" +
-      "      \"id\":\"1\",\n" +
+      "      \"id\":\"61445159784bca6ef764c6df\",\n" +
       "      \"link\":\"https://moonshot.ceo/archivoTrabajo.pdf\",\n" +
       "      \"category\":\"PDF\",\n" +
-      "      \"roomId\":\"1\",\n" +
-      "      \"memberId\":\"2\",\n" +
+      "      \"roomId\":\"61445159784bca6ef764c6df\",\n" +
+      "      \"memberId\":\"61445159784bca6ef764c6df\",\n" +
       "      \"filename\":\"archivoTrabajo\",\n" +
       "      \"createdAt\":1621412130000\n" +
       "   },\n" +
       "   {\n" +
-      "      \"id\":\"2\",\n" +
+      "      \"id\":\"61445159784bca6ef764c6df\",\n" +
       "      \"link\":\"https://moonshot.ceo/planosPrimeraPlanta.pdf\",\n" +
       "      \"category\":\"PDF\",\n" +
-      "      \"roomId\":\"3\",\n" +
-      "      \"memberId\":\"5\",\n" +
+      "      \"roomId\":\"61445159784bca6ef764c6df\",\n" +
+      "      \"memberId\":\"61445159784bca6ef764c6df\",\n" +
       "      \"filename\":\"planosPrimeraPlanta\",\n" +
       "      \"createdAt\":1621415730000\n" +
       "   },\n" +
       "   {\n" +
-      "      \"id\":\"3\",\n" +
+      "      \"id\":\"61445159784bca6ef764c6df\",\n" +
       "      \"link\":\"https://moonshot.ceo/planosSegundaPlanta.image\",\n" +
       "      \"category\":\"IMAGE\",\n" +
-      "      \"roomId\":\"3\",\n" +
-      "      \"memberId\":\"6\",\n" +
+      "      \"roomId\":\"61445159784bca6ef764c6df\",\n" +
+      "      \"memberId\":\"61445159784bca6ef764c6df\",\n" +
       "      \"filename\":\"planosSegundaPlanta\",\n" +
       "      \"createdAt\":1621419330000\n" +
       "   }\n" +
@@ -3492,15 +3492,15 @@ export class CommunityPythonTemplates {
       "print(response.text)",
     response: "\n[\n" +
       "   {\n" +
-      "      \"id\":\"1\",\n" +
+      "      \"id\":\"61445159784bca6ef764c6df\",\n" +
       "      \"url\":\"https://dev.moonshot.ceo/documento1.pdf\",\n" +
-      "      \"roomId\":\"2\",\n" +
+      "      \"roomId\":\"61445159784bca6ef764c6df\",\n" +
       "      \"createdAt\":1637417185\n" +
       "   },\n" +
       "   {\n" +
-      "      \"id\":\"2\",\n" +
+      "      \"id\":\"61445159784bca6ef764c6df\",\n" +
       "      \"url\":\"https://dev.moonshot.ceo/documento2.pdf\",\n" +
-      "      \"roomId\":\"7\",\n" +
+      "      \"roomId\":\"61445159784bca6ef764c6df\",\n" +
       "      \"createdAt\":1637417190\n" +
       "   }\n" +
       "]"
@@ -3524,7 +3524,7 @@ export class CommunityPythonTemplates {
       "URL = \"https://dev.moonshot.ceo/api/community/wall-posts\"\n" +
       "\n" +
       "BODY = {\n" +
-      " \"id\":\"1\",\n" +
+      " \"id\":\"61445159784bca6ef764c6df\",\n" +
       " \"content\":\"Publicación de la subida de impuestos en Canarias\",\n" +
       " \"attachments\":[\n" +
       "  {\n" +
@@ -3534,10 +3534,10 @@ export class CommunityPythonTemplates {
       " ],\n" +
       " \"comments\":[\n" +
       "  {\n" +
-      "   \"id\":\"1\",\n" +
+      "   \"id\":\"61445159784bca6ef764c6df\",\n" +
       "   \"content\":\"Pues a mi me parece muy mal, los subieron el otro día\",\n" +
       "   \"authorMember\":{\n" +
-      "      \"id\":\"7\",\n" +
+      "      \"id\":\"61445159784bca6ef764c6df\",\n" +
       "      \"state\":\"ACCEPTED\",\n" +
       "      \"name\":\"Jorge\",\n" +
       "      \"lastname\":\"Perez\",\n" +
@@ -3567,7 +3567,7 @@ export class CommunityPythonTemplates {
       "      ],\n" +
       "      \"experiences\":[\n" +
       "       {\n" +
-      "        \"id\":\"5\",\n" +
+      "        \"id\":\"61445159784bca6ef764c6df\",\n" +
       "        \"title\":\"Reponedor en Mercadona\",\n" +
       "        \"type\":\"PART_TIME\",\n" +
       "        \"company\":\"Mercadona\",\n" +
@@ -3583,7 +3583,7 @@ export class CommunityPythonTemplates {
       "      ],\n" +
       "      \"educations\":[\n" +
       "       {\n" +
-      "          \"id\":\"6\",\n" +
+      "          \"id\":\"61445159784bca6ef764c6df\",\n" +
       "          \"school\":\"Universidad de Venezuela\",\n" +
       "          \"degree\":\"Derecho\",\n" +
       "          \"fieldOfStudy\":\"Derecho mercantil\",\n" +
@@ -3598,7 +3598,7 @@ export class CommunityPythonTemplates {
       "          \"description\":None\n" +
       "       },\n" +
       "       {\n" +
-      "        \"id\":\"14\",\n" +
+      "        \"id\":\"61445159784bca6ef764c6df\",\n" +
       "        \"school\":\"Universidad de Venezuela\",\n" +
       "        \"degree\":\"Master en Derecho\",\n" +
       "        \"fieldOfStudy\":\"Derecho en el Ejercicio de la Abogacía\",\n" +
@@ -3615,19 +3615,19 @@ export class CommunityPythonTemplates {
       "    ]\n" +
       "   },\n" +
       "   \"likes\":[\n" +
-      "      \"9\",\n" +
-      "      \"10\",\n" +
-      "      \"3\"\n" +
+      "      \"61445159784bca6ef764c6df\",\n" +
+      "      \"61445159784bca6ef764c6df\",\n" +
+      "      \"61445159784bca6ef764c6df\"\n" +
       "   ],\n" +
       "   \"createdAt\":1620259200000\n" +
       "  }\n" +
       " ],\n" +
       " \"likes\":[\n" +
-      "    \"9\",\n" +
-      "    \"3\",\n" +
-      "    \"10\"\n" +
+      "    \"61445159784bca6ef764c6df\",\n" +
+      "    \"61445159784bca6ef764c6df\",\n" +
+      "    \"61445159784bca6ef764c6df\"\n" +
       " ],\n" +
-      " \"ownerMemberId\":\"16\",\n" +
+      " \"ownerMemberId\":\"61445159784bca6ef764c6df\",\n" +
       " \"createdAt\":1620172800000\n" +
       "}\n" +
       "\n" +
@@ -3729,10 +3729,10 @@ export class CommunityPythonTemplates {
       "\n" +
       "BODY = {\n" +
       "   \"comment\":{\n" +
-      "      \"id\":\"4\",\n" +
+      "      \"id\":\"61445159784bca6ef764c6df\",\n" +
       "      \"content\":\"test\",\n" +
       "      \"authorMember\":{\n" +
-      "         \"id\":\"1\",\n" +
+      "         \"id\":\"61445159784bca6ef764c6df\",\n" +
       "         \"state\":\"ACCEPTED\",\n" +
       "         \"name\":\"Iñigo\",\n" +
       "         \"lastname\":\"Aramburu\",\n" +
@@ -3798,7 +3798,7 @@ export class CommunityPythonTemplates {
       "response = reqs.get(URL)\n" +
       "print(response.text)",
     response: "\n{\n" +
-      "        \"id\": \"1\",\n" +
+      "        \"id\": \"61445159784bca6ef764c6df\",\n" +
       "        \"content\": \"Publicación de la subida de impuestos en Canarias\",\n" +
       "        \"hashtags\": [\n" +
       "            \"#subidaImpuestos\",\n" +
@@ -3812,10 +3812,10 @@ export class CommunityPythonTemplates {
       "        ],\n" +
       "        \"comments\": [\n" +
       "            {\n" +
-      "                \"id\": \"1\",\n" +
+      "                \"id\": \"61445159784bca6ef764c6df\",\n" +
       "                \"content\": \"Pues a mi me parece muy mal, los subieron el otro día\",\n" +
       "                \"authorMember\": {\n" +
-      "                    \"id\": \"7\",\n" +
+      "                    \"id\": \"61445159784bca6ef764c6df\",\n" +
       "                    \"state\": \"ACCEPTED\",\n" +
       "                    \"name\": \"Jorge\",\n" +
       "                    \"lastname\": \"Perez\",\n" +
@@ -3845,7 +3845,7 @@ export class CommunityPythonTemplates {
       "                    ],\n" +
       "                    \"experiences\": [\n" +
       "                        {\n" +
-      "                            \"id\": \"5\",\n" +
+      "                            \"id\": \"61445159784bca6ef764c6df\",\n" +
       "                            \"title\": \"Reponedor en Mercadona\",\n" +
       "                            \"type\": \"PART_TIME\",\n" +
       "                            \"company\": \"Mercadona\",\n" +
@@ -3861,7 +3861,7 @@ export class CommunityPythonTemplates {
       "                    ],\n" +
       "                    \"educations\": [\n" +
       "                        {\n" +
-      "                            \"id\": \"6\",\n" +
+      "                            \"id\": \"61445159784bca6ef764c6df\",\n" +
       "                            \"school\": \"Universidad de Venezuela\",\n" +
       "                            \"degree\": \"Derecho\",\n" +
       "                            \"fieldOfStudy\": \"Derecho mercantil\",\n" +
@@ -3876,7 +3876,7 @@ export class CommunityPythonTemplates {
       "                            \"description\": None\n" +
       "                        },\n" +
       "                        {\n" +
-      "                            \"id\": \"14\",\n" +
+      "                            \"id\": \"61445159784bca6ef764c6df\",\n" +
       "                            \"school\": \"Universidad de Venezuela\",\n" +
       "                            \"degree\": \"Master en Derecho\",\n" +
       "                            \"fieldOfStudy\": \"Derecho en el Ejercicio de la Abogacía\",\n" +
@@ -3893,20 +3893,20 @@ export class CommunityPythonTemplates {
       "                    ]\n" +
       "                },\n" +
       "                \"likes\": [\n" +
-      "                    \"9\",\n" +
-      "                    \"10\",\n" +
-      "                    \"3\"\n" +
+      "                    \"61445159784bca6ef764c6df\",\n" +
+      "                    \"61445159784bca6ef764c6df\",\n" +
+      "                    \"61445159784bca6ef764c6df\"\n" +
       "                ],\n" +
       "                \"createdAt\": 1620259200000\n" +
       "            }\n" +
       "        ],\n" +
       "        \"likes\": [\n" +
-      "            \"9\",\n" +
-      "            \"3\",\n" +
-      "            \"10\"\n" +
+      "            \"61445159784bca6ef764c6df\",\n" +
+      "            \"61445159784bca6ef764c6df\",\n" +
+      "            \"61445159784bca6ef764c6df\"\n" +
       "        ],\n" +
       "        \"ownerMember\": {\n" +
-      "            \"id\": \"16\",\n" +
+      "            \"id\": \"61445159784bca6ef764c6df\",\n" +
       "            \"state\": \"REJECTED\",\n" +
       "            \"name\": \"Nestor\",\n" +
       "            \"lastname\": \"Rodriguez\",\n" +
@@ -3933,7 +3933,7 @@ export class CommunityPythonTemplates {
       "            ],\n" +
       "            \"experiences\": [\n" +
       "                {\n" +
-      "                    \"id\": \"14\",\n" +
+      "                    \"id\": \"61445159784bca6ef764c6df\",\n" +
       "                    \"title\": \"Ingenierio informático realizando trabajos de ciberseguridad\",\n" +
       "                    \"type\": \"FULL_TIME\",\n" +
       "                    \"company\": \"Movistar\",\n" +
@@ -3949,7 +3949,7 @@ export class CommunityPythonTemplates {
       "            ],\n" +
       "            \"educations\": [\n" +
       "                {\n" +
-      "                    \"id\": \"12\",\n" +
+      "                    \"id\": \"61445159784bca6ef764c6df\",\n" +
       "                    \"school\": \"Universidad de la Laguna\",\n" +
       "                    \"degree\": \"Ingeniería informática\",\n" +
       "                    \"fieldOfStudy\": \"Ciberseguridad\",\n" +
@@ -3979,7 +3979,7 @@ export class CommunityPythonTemplates {
       "print(response.text)",
     response: "\n[\n" +
       "   {\n" +
-      "      \"id\":\"1\",\n" +
+      "      \"id\":\"61445159784bca6ef764c6df\",\n" +
       "      \"content\":\"Publicación de la subida de impuestos en Canarias\",\n" +
       "      \"hashtags\":[\n" +
       "         \"#subidaImpuestos\",\n" +
@@ -3993,10 +3993,10 @@ export class CommunityPythonTemplates {
       "      ],\n" +
       "      \"comments\":[\n" +
       "         {\n" +
-      "            \"id\":\"1\",\n" +
+      "            \"id\":\"61445159784bca6ef764c6df\",\n" +
       "            \"content\":\"Pues a mi me parece muy mal, los subieron el otro día\",\n" +
       "            \"authorMember\":{\n" +
-      "               \"id\":\"7\",\n" +
+      "               \"id\":\"61445159784bca6ef764c6df\",\n" +
       "               \"state\":\"ACCEPTED\",\n" +
       "               \"name\":\"Jorge\",\n" +
       "               \"lastname\":\"Perez\",\n" +
@@ -4026,7 +4026,7 @@ export class CommunityPythonTemplates {
       "               ],\n" +
       "               \"experiences\":[\n" +
       "                  {\n" +
-      "                     \"id\":\"5\",\n" +
+      "                     \"id\":\"61445159784bca6ef764c6df\",\n" +
       "                     \"title\":\"Reponedor en Mercadona\",\n" +
       "                     \"type\":\"PART_TIME\",\n" +
       "                     \"company\":\"Mercadona\",\n" +
@@ -4042,7 +4042,7 @@ export class CommunityPythonTemplates {
       "               ],\n" +
       "               \"educations\":[\n" +
       "                  {\n" +
-      "                     \"id\":\"6\",\n" +
+      "                     \"id\":\"61445159784bca6ef764c6df\",\n" +
       "                     \"school\":\"Universidad de Venezuela\",\n" +
       "                     \"degree\":\"Derecho\",\n" +
       "                     \"fieldOfStudy\":\"Derecho mercantil\",\n" +
@@ -4057,7 +4057,7 @@ export class CommunityPythonTemplates {
       "                     \"description\":None\n" +
       "                  },\n" +
       "                  {\n" +
-      "                     \"id\":\"14\",\n" +
+      "                     \"id\":\"61445159784bca6ef764c6df\",\n" +
       "                     \"school\":\"Universidad de Venezuela\",\n" +
       "                     \"degree\":\"Master en Derecho\",\n" +
       "                     \"fieldOfStudy\":\"Derecho en el Ejercicio de la Abogacía\",\n" +
@@ -4074,20 +4074,20 @@ export class CommunityPythonTemplates {
       "               ]\n" +
       "            },\n" +
       "            \"likes\":[\n" +
-      "               \"9\",\n" +
-      "               \"10\",\n" +
-      "               \"3\"\n" +
+      "               \"61445159784bca6ef764c6df\",\n" +
+      "               \"61445159784bca6ef764c6df\",\n" +
+      "               \"61445159784bca6ef764c6df\"\n" +
       "            ],\n" +
       "            \"createdAt\":1620259200000\n" +
       "         }\n" +
       "      ],\n" +
       "      \"likes\":[\n" +
-      "         \"9\",\n" +
-      "         \"3\",\n" +
-      "         \"10\"\n" +
+      "         \"61445159784bca6ef764c6df\",\n" +
+      "         \"61445159784bca6ef764c6df\",\n" +
+      "         \"61445159784bca6ef764c6df\"\n" +
       "      ],\n" +
       "      \"ownerMember\":{\n" +
-      "         \"id\":\"16\",\n" +
+      "         \"id\":\"61445159784bca6ef764c6df\",\n" +
       "         \"state\":\"REJECTED\",\n" +
       "         \"name\":\"Nestor\",\n" +
       "         \"lastname\":\"Rodriguez\",\n" +
@@ -4114,7 +4114,7 @@ export class CommunityPythonTemplates {
       "         ],\n" +
       "         \"experiences\":[\n" +
       "            {\n" +
-      "               \"id\":\"14\",\n" +
+      "               \"id\":\"61445159784bca6ef764c6df\",\n" +
       "               \"title\":\"Ingenierio informático realizando trabajos de ciberseguridad\",\n" +
       "               \"type\":\"FULL_TIME\",\n" +
       "               \"company\":\"Movistar\",\n" +
@@ -4130,7 +4130,7 @@ export class CommunityPythonTemplates {
       "         ],\n" +
       "         \"educations\":[\n" +
       "            {\n" +
-      "               \"id\":\"12\",\n" +
+      "               \"id\":\"61445159784bca6ef764c6df\",\n" +
       "               \"school\":\"Universidad de la Laguna\",\n" +
       "               \"degree\":\"Ingeniería informática\",\n" +
       "               \"fieldOfStudy\":\"Ciberseguridad\",\n" +
@@ -4149,7 +4149,7 @@ export class CommunityPythonTemplates {
       "      \"createdAt\":1620172800000\n" +
       "   },\n" +
       "   {\n" +
-      "      \"id\":\"2\",\n" +
+      "      \"id\":\"61445159784bca6ef764c6df\",\n" +
       "      \"content\":\"Las elecciones en Madrid se han celebrado el 4/5/2020. ¿Estáis contentos con los resultados?\",\n" +
       "      \"hashtags\":[\n" +
       "         \n" +
@@ -4162,10 +4162,10 @@ export class CommunityPythonTemplates {
       "      ],\n" +
       "      \"comments\":[\n" +
       "         {\n" +
-      "            \"id\":\"2\",\n" +
+      "            \"id\":\"61445159784bca6ef764c6df\",\n" +
       "            \"content\":\"Pues yo estoy muy contento.\",\n" +
       "            \"authorMember\":{\n" +
-      "               \"id\":\"8\",\n" +
+      "               \"id\":\"61445159784bca6ef764c6df\",\n" +
       "               \"state\":\"ACCEPTED\",\n" +
       "               \"name\":\"Marcos\",\n" +
       "               \"lastname\":\"Fernandez\",\n" +
@@ -4197,7 +4197,7 @@ export class CommunityPythonTemplates {
       "               ],\n" +
       "               \"experiences\":[\n" +
       "                  {\n" +
-      "                     \"id\":\"6\",\n" +
+      "                     \"id\":\"61445159784bca6ef764c6df\",\n" +
       "                     \"title\":\"Colaboración para crear la vacuna Pfizer\",\n" +
       "                     \"type\":\"FULL_TIME\",\n" +
       "                     \"company\":\"Novartis\",\n" +
@@ -4211,7 +4211,7 @@ export class CommunityPythonTemplates {
       "                     \"description\":\"Colaborador de la vacuna Pfizer contra el COVID-19\"\n" +
       "                  },\n" +
       "                  {\n" +
-      "                     \"id\":\"7\",\n" +
+      "                     \"id\":\"61445159784bca6ef764c6df\",\n" +
       "                     \"title\":\"Colaboración para crear la vacuna de la gripe A\",\n" +
       "                     \"type\":\"INTERIM\",\n" +
       "                     \"company\":\"Novartis\",\n" +
@@ -4227,7 +4227,7 @@ export class CommunityPythonTemplates {
       "               ],\n" +
       "               \"educations\":[\n" +
       "                  {\n" +
-      "                     \"id\":\"7\",\n" +
+      "                     \"id\":\"61445159784bca6ef764c6df\",\n" +
       "                     \"school\":\"Universidad de Tokio\",\n" +
       "                     \"degree\":\"Farmaceutica\",\n" +
       "                     \"fieldOfStudy\":\"Pandemias\",\n" +
@@ -4244,16 +4244,16 @@ export class CommunityPythonTemplates {
       "               ]\n" +
       "            },\n" +
       "            \"likes\":[\n" +
-      "               \"1\",\n" +
-      "               \"7\"\n" +
+      "               \"61445159784bca6ef764c6df\",\n" +
+      "               \"61445159784bca6ef764c6df\"\n" +
       "            ],\n" +
       "            \"createdAt\":1620345600000\n" +
       "         },\n" +
       "         {\n" +
-      "            \"id\":\"3\",\n" +
+      "            \"id\":\"61445159784bca6ef764c6df\",\n" +
       "            \"content\":\"Pues yo pense que no ganarían estos. No me quedo conforme.\",\n" +
       "            \"authorMember\":{\n" +
-      "               \"id\":\"12\",\n" +
+      "               \"id\":\"61445159784bca6ef764c6df\",\n" +
       "               \"state\":\"ACCEPTED\",\n" +
       "               \"name\":\"Cristina\",\n" +
       "               \"lastname\":\"Valdemoro\",\n" +
@@ -4288,7 +4288,7 @@ export class CommunityPythonTemplates {
       "               ],\n" +
       "               \"experiences\":[\n" +
       "                  {\n" +
-      "                     \"id\":\"12\",\n" +
+      "                     \"id\":\"61445159784bca6ef764c6df\",\n" +
       "                     \"title\":\"Voluntariado de Unicef en Colombia\",\n" +
       "                     \"type\":\"WORK_AND_SERVICE_CONTRACT\",\n" +
       "                     \"company\":\"Unicef\",\n" +
@@ -4304,7 +4304,7 @@ export class CommunityPythonTemplates {
       "               ],\n" +
       "               \"educations\":[\n" +
       "                  {\n" +
-      "                     \"id\":\"9\",\n" +
+      "                     \"id\":\"61445159784bca6ef764c6df\",\n" +
       "                     \"school\":\"Universidad de Barcelona\",\n" +
       "                     \"degree\":\"Recursos Humanos y Relaciones Laborales\",\n" +
       "                     \"fieldOfStudy\":\"Coaching a empresas\",\n" +
@@ -4321,18 +4321,18 @@ export class CommunityPythonTemplates {
       "               ]\n" +
       "            },\n" +
       "            \"likes\":[\n" +
-      "               \"13\",\n" +
-      "               \"9\"\n" +
+      "               \"61445159784bca6ef764c6df\",\n" +
+      "               \"61445159784bca6ef764c6df\"\n" +
       "            ],\n" +
       "            \"createdAt\":1620345600000\n" +
       "         }\n" +
       "      ],\n" +
       "      \"likes\":[\n" +
-      "         \"9\",\n" +
-      "         \"7\"\n" +
+      "         \"61445159784bca6ef764c6df\",\n" +
+      "         \"61445159784bca6ef764c6df\"\n" +
       "      ],\n" +
       "      \"ownerMember\":{\n" +
-      "         \"id\":\"15\",\n" +
+      "         \"id\":\"61445159784bca6ef764c6df\",\n" +
       "         \"state\":\"PENDING\",\n" +
       "         \"name\":\"Roberto\",\n" +
       "         \"lastname\":\"Torres\",\n" +
@@ -4359,7 +4359,7 @@ export class CommunityPythonTemplates {
       "         ],\n" +
       "         \"experiences\":[\n" +
       "            {\n" +
-      "               \"id\":\"14\",\n" +
+      "               \"id\":\"61445159784bca6ef764c6df\",\n" +
       "               \"title\":\"Ingenierio informático realizando trabajos de ciberseguridad\",\n" +
       "               \"type\":\"FULL_TIME\",\n" +
       "               \"company\":\"Movistar\",\n" +
@@ -4375,7 +4375,7 @@ export class CommunityPythonTemplates {
       "         ],\n" +
       "         \"educations\":[\n" +
       "            {\n" +
-      "               \"id\":\"12\",\n" +
+      "               \"id\":\"61445159784bca6ef764c6df\",\n" +
       "               \"school\":\"Universidad de la Laguna\",\n" +
       "               \"degree\":\"Ingeniería informática\",\n" +
       "               \"fieldOfStudy\":\"Ciberseguridad\",\n" +
@@ -4390,7 +4390,7 @@ export class CommunityPythonTemplates {
       "               \"description\":\"Estudiante de la Universidad de La Laguna, en la facultad de ingeniería informática\"\n" +
       "            },\n" +
       "            {\n" +
-      "               \"id\":\"13\",\n" +
+      "               \"id\":\"61445159784bca6ef764c6df\",\n" +
       "               \"school\":\"Universidad de Cataluña\",\n" +
       "               \"degree\":\"Master en Ciberseguridad\",\n" +
       "               \"fieldOfStudy\":\"Encriptado\",\n" +
@@ -4432,11 +4432,11 @@ export class CommunityPythonTemplates {
       "print(response.text)",
     response: "\n[\n" +
       "   {\n" +
-      "      \"id\":\"1\",\n" +
+      "      \"id\":\"61445159784bca6ef764c6df\",\n" +
       "      \"type\":\"EXPERT\",\n" +
       "      \"state\":\"ACCEPTED\",\n" +
       "      \"ownerMember\":{\n" +
-      "         \"id\":\"1\",\n" +
+      "         \"id\":\"61445159784bca6ef764c6df\",\n" +
       "         \"state\":\"ACCEPTED\",\n" +
       "         \"name\":\"Iñigo\",\n" +
       "         \"lastname\":\"Aramburu\",\n" +
@@ -4461,7 +4461,7 @@ export class CommunityPythonTemplates {
       "         ],\n" +
       "         \"experiences\":[\n" +
       "            {\n" +
-      "               \"id\":\"1\",\n" +
+      "               \"id\":\"61445159784bca6ef764c6df\",\n" +
       "               \"title\":\"Back-end developer en Moonshot Innovation\",\n" +
       "               \"type\":\"FULL_TIME\",\n" +
       "               \"company\":\"Moonshot Innovation\",\n" +
@@ -4477,7 +4477,7 @@ export class CommunityPythonTemplates {
       "         ],\n" +
       "         \"educations\":[\n" +
       "            {\n" +
-      "               \"id\":\"1\",\n" +
+      "               \"id\":\"61445159784bca6ef764c6df\",\n" +
       "               \"school\":\"Universidad del País Vasco\",\n" +
       "               \"degree\":\"Ingeniería informática\",\n" +
       "               \"fieldOfStudy\":\"Ingeniería de software\",\n" +
@@ -4492,7 +4492,7 @@ export class CommunityPythonTemplates {
       "               \"description\":\"Estudios universitarios realizados en la Universidad del País Vasco\"\n" +
       "            },\n" +
       "            {\n" +
-      "               \"id\":\"15\",\n" +
+      "               \"id\":\"61445159784bca6ef764c6df\",\n" +
       "               \"school\":\"Universidad del País Vasco\",\n" +
       "               \"degree\":\"Master en desarrollo web\",\n" +
       "               \"fieldOfStudy\":\"Desarrollo web\",\n" +
@@ -4556,11 +4556,11 @@ export class CommunityPythonTemplates {
       "      }\n" +
       "   },\n" +
       "   {\n" +
-      "      \"id\":\"2\",\n" +
+      "      \"id\":\"61445159784bca6ef764c6df\",\n" +
       "      \"type\":\"MENTOR\",\n" +
       "      \"state\":\"ACCEPTED\",\n" +
       "      \"ownerMember\":{\n" +
-      "         \"id\":\"2\",\n" +
+      "         \"id\":\"61445159784bca6ef764c6df\",\n" +
       "         \"state\":\"ACCEPTED\",\n" +
       "         \"name\":\"Jose Juan\",\n" +
       "         \"lastname\":\"Hernández\",\n" +
@@ -4585,7 +4585,7 @@ export class CommunityPythonTemplates {
       "         ],\n" +
       "         \"experiences\":[\n" +
       "            {\n" +
-      "               \"id\":\"1\",\n" +
+      "               \"id\":\"61445159784bca6ef764c6df\",\n" +
       "               \"title\":\"Back-end developer en Moonshot Innovation\",\n" +
       "               \"type\":\"FULL_TIME\",\n" +
       "               \"company\":\"Moonshot Innovation\",\n" +
@@ -4599,7 +4599,7 @@ export class CommunityPythonTemplates {
       "               \"description\":\"Scrum manager en Moonshot Innovation, trabajando en el equipo de back-end\"\n" +
       "            },\n" +
       "            {\n" +
-      "               \"id\":\"2\",\n" +
+      "               \"id\":\"61445159784bca6ef764c6df\",\n" +
       "               \"title\":\"Profesor en la facultad de Ingenería informatica\",\n" +
       "               \"type\":\"OFFICIAL\",\n" +
       "               \"company\":\"Universidad de Las Palmas de Gran Canaria\",\n" +
@@ -4615,7 +4615,7 @@ export class CommunityPythonTemplates {
       "         ],\n" +
       "         \"educations\":[\n" +
       "            {\n" +
-      "               \"id\":\"2\",\n" +
+      "               \"id\":\"61445159784bca6ef764c6df\",\n" +
       "               \"school\":\"Universidad de Las Palmas de Gran Canaria\",\n" +
       "               \"degree\":\"Ingeniería en telecomunicaciones\",\n" +
       "               \"fieldOfStudy\":\"Big data\",\n" +
@@ -5120,11 +5120,11 @@ export class CommunityPythonTemplates {
       "print(response.text)",
     response: "\n[\n" +
       "   {\n" +
-      "      \"id\":\"13\",\n" +
+      "      \"id\":\"61445159784bca6ef764c6df\",\n" +
       "      \"type\":\"HUB\",\n" +
       "      \"state\":\"REJECTED\",\n" +
       "      \"ownerMember\":{\n" +
-      "         \"id\":\"16\",\n" +
+      "         \"id\":\"61445159784bca6ef764c6df\",\n" +
       "         \"state\":\"REJECTED\",\n" +
       "         \"name\":\"Nestor\",\n" +
       "         \"lastname\":\"Rodriguez\",\n" +
@@ -5149,7 +5149,7 @@ export class CommunityPythonTemplates {
       "         ],\n" +
       "         \"experiences\":[\n" +
       "            {\n" +
-      "               \"id\":\"14\",\n" +
+      "               \"id\":\"61445159784bca6ef764c6df\",\n" +
       "               \"title\":\"Ingenierio informático realizando trabajos de ciberseguridad\",\n" +
       "               \"type\":\"FULL_TIME\",\n" +
       "               \"company\":\"Movistar\",\n" +
@@ -5165,7 +5165,7 @@ export class CommunityPythonTemplates {
       "         ],\n" +
       "         \"educations\":[\n" +
       "            {\n" +
-      "               \"id\":\"12\",\n" +
+      "               \"id\":\"61445159784bca6ef764c6df\",\n" +
       "               \"school\":\"Universidad de la Laguna\",\n" +
       "               \"degree\":\"Ingeniería informática\",\n" +
       "               \"fieldOfStudy\":\"Ciberseguridad\",\n" +
@@ -5196,7 +5196,7 @@ export class CommunityPythonTemplates {
       "      ],\n" +
       "      \"members\":[\n" +
       "         {\n" +
-      "            \"id\":\"14\",\n" +
+      "            \"id\":\"61445159784bca6ef764c6df\",\n" +
       "            \"state\":\"ACCEPTED\",\n" +
       "            \"name\":\"Fernando\",\n" +
       "            \"lastname\":\"Oliveiro\",\n" +
@@ -5222,7 +5222,7 @@ export class CommunityPythonTemplates {
       "            ],\n" +
       "            \"experiences\":[\n" +
       "               {\n" +
-      "                  \"id\":\"13\",\n" +
+      "                  \"id\":\"61445159784bca6ef764c6df\",\n" +
       "                  \"title\":\"Profesor en la Universidad de Hardvard\",\n" +
       "                  \"type\":\"OFFICIAL\",\n" +
       "                  \"company\":\"Universidad de Hardvard\",\n" +
@@ -5236,7 +5236,7 @@ export class CommunityPythonTemplates {
       "                  \"description\":\"Profesor de Ingenieria Informática en la universidad de Hardvard\"\n" +
       "               },\n" +
       "               {\n" +
-      "                  \"id\":\"15\",\n" +
+      "                  \"id\":\"61445159784bca6ef764c6df\",\n" +
       "                  \"title\":\"Investigador a tiempo parcial para la universidad de Hardvard\",\n" +
       "                  \"type\":\"PART_TIME\",\n" +
       "                  \"company\":\"Universidad de Hardvard\",\n" +
@@ -5252,7 +5252,7 @@ export class CommunityPythonTemplates {
       "            ],\n" +
       "            \"educations\":[\n" +
       "               {\n" +
-      "                  \"id\":\"11\",\n" +
+      "                  \"id\":\"61445159784bca6ef764c6df\",\n" +
       "                  \"school\":\"Universidad de Brasil\",\n" +
       "                  \"degree\":\"Matemáticas\",\n" +
       "                  \"fieldOfStudy\":\"Matemáticas computacionales\",\n" +
@@ -5269,7 +5269,7 @@ export class CommunityPythonTemplates {
       "            ]\n" +
       "         },\n" +
       "         {\n" +
-      "            \"id\":\"15\",\n" +
+      "            \"id\":\"61445159784bca6ef764c6df\",\n" +
       "            \"state\":\"PENDING\",\n" +
       "            \"name\":\"Roberto\",\n" +
       "            \"lastname\":\"Torres\",\n" +
@@ -5294,7 +5294,7 @@ export class CommunityPythonTemplates {
       "            ],\n" +
       "            \"experiences\":[\n" +
       "               {\n" +
-      "                  \"id\":\"14\",\n" +
+      "                  \"id\":\"61445159784bca6ef764c6df\",\n" +
       "                  \"title\":\"Ingenierio informático realizando trabajos de ciberseguridad\",\n" +
       "                  \"type\":\"FULL_TIME\",\n" +
       "                  \"company\":\"Movistar\",\n" +
@@ -5310,7 +5310,7 @@ export class CommunityPythonTemplates {
       "            ],\n" +
       "            \"educations\":[\n" +
       "               {\n" +
-      "                  \"id\":\"12\",\n" +
+      "                  \"id\":\"61445159784bca6ef764c6df\",\n" +
       "                  \"school\":\"Universidad de la Laguna\",\n" +
       "                  \"degree\":\"Ingeniería informática\",\n" +
       "                  \"fieldOfStudy\":\"Ciberseguridad\",\n" +
@@ -5325,7 +5325,7 @@ export class CommunityPythonTemplates {
       "                  \"description\":\"Estudiante de la Universidad de La Laguna, en la facultad de ingeniería informática\"\n" +
       "               },\n" +
       "               {\n" +
-      "                  \"id\":\"13\",\n" +
+      "                  \"id\":\"61445159784bca6ef764c6df\",\n" +
       "                  \"school\":\"Universidad de Cataluña\",\n" +
       "                  \"degree\":\"Master en Ciberseguridad\",\n" +
       "                  \"fieldOfStudy\":\"Encriptado\",\n" +
@@ -5863,11 +5863,11 @@ export class CommunityPythonTemplates {
       "URL = \"https://dev.moonshot.ceo/api/community/actor\"\n" +
       "\n" +
       "BODY = {\n" +
-      "        \"id\": \"1\",\n" +
+      "        \"id\": \"61445159784bca6ef764c6df\",\n" +
       "        \"type\": \"EXPERT\",\n" +
       "        \"state\": \"ACCEPTED\",\n" +
       "        \"ownerMember\": {\n" +
-      "            \"id\": \"1\",\n" +
+      "            \"id\": \"61445159784bca6ef764c6df\",\n" +
       "            \"state\": \"ACCEPTED\",\n" +
       "            \"name\": \"Iñigo\",\n" +
       "            \"lastname\": \"Aramburu\",\n" +
@@ -5892,7 +5892,7 @@ export class CommunityPythonTemplates {
       "            ],\n" +
       "            \"experiences\": [\n" +
       "                {\n" +
-      "                    \"id\": \"1\",\n" +
+      "                    \"id\": \"61445159784bca6ef764c6df\",\n" +
       "                    \"title\": \"Back-end developer en Moonshot Innovation\",\n" +
       "                    \"type\": \"FULL_TIME\",\n" +
       "                    \"company\": \"Moonshot Innovation\",\n" +
@@ -5908,7 +5908,7 @@ export class CommunityPythonTemplates {
       "            ],\n" +
       "            \"educations\": [\n" +
       "                {\n" +
-      "                    \"id\": \"1\",\n" +
+      "                    \"id\": \"61445159784bca6ef764c6df\",\n" +
       "                    \"school\": \"Universidad del País Vasco\",\n" +
       "                    \"degree\": \"Ingeniería informática\",\n" +
       "                    \"fieldOfStudy\": \"Ingeniería de software\",\n" +
@@ -5923,7 +5923,7 @@ export class CommunityPythonTemplates {
       "                    \"description\": \"Estudios universitarios realizados en la Universidad del País Vasco\"\n" +
       "                },\n" +
       "                {\n" +
-      "                    \"id\": \"15\",\n" +
+      "                    \"id\": \"61445159784bca6ef764c6df\",\n" +
       "                    \"school\": \"Universidad del País Vasco\",\n" +
       "                    \"degree\": \"Master en desarrollo web\",\n" +
       "                    \"fieldOfStudy\": \"Desarrollo web\",\n" +
@@ -5980,7 +5980,7 @@ export class CommunityPythonTemplates {
       "            \"deepTechs\": [\n" +
       "            ]\n" +
       "        },\n" +
-      "        \"verificationToken\": \"1\"\n" +
+      "        \"verificationToken\": \"61445159784bca6ef764c6df\"\n" +
       "    }\n" +
       "\n" +
       "response = reqs.post(URL, data=BODY)\n" +
@@ -6420,7 +6420,7 @@ export class CommunityPythonTemplates {
       "print(response.text)",
     response: "\n[\n" +
       "   {\n" +
-      "      \"id\":\"1\",\n" +
+      "      \"id\":\"61445159784bca6ef764c6df\",\n" +
       "      \"state\":\"ACCEPTED\",\n" +
       "      \"name\":\"Iñigo\",\n" +
       "      \"lastname\":\"Aramburu\",\n" +
@@ -6445,7 +6445,7 @@ export class CommunityPythonTemplates {
       "      ],\n" +
       "      \"experiences\":[\n" +
       "         {\n" +
-      "            \"id\":\"1\",\n" +
+      "            \"id\":\"61445159784bca6ef764c6df\",\n" +
       "            \"title\":\"Back-end developer en Moonshot Innovation\",\n" +
       "            \"type\":\"FULL_TIME\",\n" +
       "            \"company\":\"Moonshot Innovation\",\n" +
@@ -6461,7 +6461,7 @@ export class CommunityPythonTemplates {
       "      ],\n" +
       "      \"educations\":[\n" +
       "         {\n" +
-      "            \"id\":\"1\",\n" +
+      "            \"id\":\"61445159784bca6ef764c6df\",\n" +
       "            \"school\":\"Universidad del País Vasco\",\n" +
       "            \"degree\":\"Ingeniería informática\",\n" +
       "            \"fieldOfStudy\":\"Ingeniería de software\",\n" +
@@ -6476,7 +6476,7 @@ export class CommunityPythonTemplates {
       "            \"description\":\"Estudios universitarios realizados en la Universidad del País Vasco\"\n" +
       "         },\n" +
       "         {\n" +
-      "            \"id\":\"15\",\n" +
+      "            \"id\":\"61445159784bca6ef764c6df\",\n" +
       "            \"school\":\"Universidad del País Vasco\",\n" +
       "            \"degree\":\"Master en desarrollo web\",\n" +
       "            \"fieldOfStudy\":\"Desarrollo web\",\n" +
@@ -6493,7 +6493,7 @@ export class CommunityPythonTemplates {
       "      ]\n" +
       "   },\n" +
       "   {\n" +
-      "      \"id\":\"2\",\n" +
+      "      \"id\":\"61445159784bca6ef764c6df\",\n" +
       "      \"state\":\"ACCEPTED\",\n" +
       "      \"name\":\"Jose Juan\",\n" +
       "      \"lastname\":\"Hernández\",\n" +
@@ -6520,7 +6520,7 @@ export class CommunityPythonTemplates {
       "      ],\n" +
       "      \"experiences\":[\n" +
       "         {\n" +
-      "            \"id\":\"1\",\n" +
+      "            \"id\":\"61445159784bca6ef764c6df\",\n" +
       "            \"title\":\"Back-end developer en Moonshot Innovation\",\n" +
       "            \"type\":\"FULL_TIME\",\n" +
       "            \"company\":\"Moonshot Innovation\",\n" +
@@ -6534,7 +6534,7 @@ export class CommunityPythonTemplates {
       "            \"description\":\"Scrum manager en Moonshot Innovation, trabajando en el equipo de back-end\"\n" +
       "         },\n" +
       "         {\n" +
-      "            \"id\":\"2\",\n" +
+      "            \"id\":\"61445159784bca6ef764c6df\",\n" +
       "            \"title\":\"Profesor en la facultad de Ingenería informatica\",\n" +
       "            \"type\":\"OFFICIAL\",\n" +
       "            \"company\":\"Universidad de Las Palmas de Gran Canaria\",\n" +
@@ -6550,7 +6550,7 @@ export class CommunityPythonTemplates {
       "      ],\n" +
       "      \"educations\":[\n" +
       "         {\n" +
-      "            \"id\":\"2\",\n" +
+      "            \"id\":\"61445159784bca6ef764c6df\",\n" +
       "            \"school\":\"Universidad de Las Palmas de Gran Canaria\",\n" +
       "            \"degree\":\"Ingeniería en telecomunicaciones\",\n" +
       "            \"fieldOfStudy\":\"Big data\",\n" +
@@ -6578,7 +6578,7 @@ export class CommunityPythonTemplates {
       "response = reqs.get(URL)\n" +
       "print(response.text)",
     response: "\n{\n" +
-      "        \"id\": \"2\",\n" +
+      "        \"id\": \"61445159784bca6ef764c6df\",\n" +
       "        \"state\": \"ACCEPTED\",\n" +
       "        \"name\": \"Jose Juan\",\n" +
       "        \"lastname\": \"Hernández\",\n" +
@@ -6605,7 +6605,7 @@ export class CommunityPythonTemplates {
       "        ],\n" +
       "        \"experiences\": [\n" +
       "            {\n" +
-      "                \"id\": \"1\",\n" +
+      "                \"id\": \"61445159784bca6ef764c6df\",\n" +
       "                \"title\": \"Back-end developer en Moonshot Innovation\",\n" +
       "                \"type\": \"FULL_TIME\",\n" +
       "                \"company\": \"Moonshot Innovation\",\n" +
@@ -6619,7 +6619,7 @@ export class CommunityPythonTemplates {
       "                \"description\": \"Scrum manager en Moonshot Innovation, trabajando en el equipo de back-end\"\n" +
       "            },\n" +
       "            {\n" +
-      "                \"id\": \"2\",\n" +
+      "                \"id\": \"61445159784bca6ef764c6df\",\n" +
       "                \"title\": \"Profesor en la facultad de Ingenería informatica\",\n" +
       "                \"type\": \"OFFICIAL\",\n" +
       "                \"company\": \"Universidad de Las Palmas de Gran Canaria\",\n" +
@@ -6635,7 +6635,7 @@ export class CommunityPythonTemplates {
       "        ],\n" +
       "        \"educations\": [\n" +
       "            {\n" +
-      "                \"id\": \"2\",\n" +
+      "                \"id\": \"61445159784bca6ef764c6df\",\n" +
       "                \"school\": \"Universidad de Las Palmas de Gran Canaria\",\n" +
       "                \"degree\": \"Ingeniería en telecomunicaciones\",\n" +
       "                \"fieldOfStudy\": \"Big data\",\n" +
@@ -6908,8 +6908,8 @@ export class CommunityPythonTemplates {
       "print(response.text)",
     response: "\n[\n" +
       "   {\n" +
-      "      \"id\":\"1\",\n" +
-      "      \"actorId\":\"1\",\n" +
+      "      \"id\":\"61445159784bca6ef764c6df\",\n" +
+      "      \"actorId\":\"61445159784bca6ef764c6df\",\n" +
       "      \"name\":\"Patents\",\n" +
       "      \"description\":\"Patents\",\n" +
       "      \"trlStage\":\"BASIC_PRINCIPLES_OBSERVED\",\n" +
@@ -6919,7 +6919,7 @@ export class CommunityPythonTemplates {
       "      ],\n" +
       "      \"protectionMethod\":\"PATENTS\",\n" +
       "      \"projectManager\":{\n" +
-      "         \"id\":\"1\",\n" +
+      "         \"id\":\"61445159784bca6ef764c6df\",\n" +
       "         \"state\":\"ACCEPTED\",\n" +
       "         \"name\":\"Iñigo\",\n" +
       "         \"lastname\":\"Aramburu\",\n" +
@@ -6944,7 +6944,7 @@ export class CommunityPythonTemplates {
       "         ],\n" +
       "         \"experiences\":[\n" +
       "            {\n" +
-      "               \"id\":\"1\",\n" +
+      "               \"id\":\"61445159784bca6ef764c6df\",\n" +
       "               \"title\":\"Back-end developer en Moonshot Innovation\",\n" +
       "               \"type\":\"FULL_TIME\",\n" +
       "               \"company\":\"Moonshot Innovation\",\n" +
@@ -6960,7 +6960,7 @@ export class CommunityPythonTemplates {
       "         ],\n" +
       "         \"educations\":[\n" +
       "            {\n" +
-      "               \"id\":\"1\",\n" +
+      "               \"id\":\"61445159784bca6ef764c6df\",\n" +
       "               \"school\":\"Universidad del País Vasco\",\n" +
       "               \"degree\":\"Ingeniería informática\",\n" +
       "               \"fieldOfStudy\":\"Ingeniería de software\",\n" +
@@ -6975,7 +6975,7 @@ export class CommunityPythonTemplates {
       "               \"description\":\"Estudios universitarios realizados en la Universidad del País Vasco\"\n" +
       "            },\n" +
       "            {\n" +
-      "               \"id\":\"15\",\n" +
+      "               \"id\":\"61445159784bca6ef764c6df\",\n" +
       "               \"school\":\"Universidad del País Vasco\",\n" +
       "               \"degree\":\"Master en desarrollo web\",\n" +
       "               \"fieldOfStudy\":\"Desarrollo web\",\n" +
@@ -6993,7 +6993,7 @@ export class CommunityPythonTemplates {
       "      },\n" +
       "      \"teamMembers\":[\n" +
       "         {\n" +
-      "            \"id\":\"2\",\n" +
+      "            \"id\":\"61445159784bca6ef764c6df\",\n" +
       "            \"state\":\"ACCEPTED\",\n" +
       "            \"name\":\"Jose Juan\",\n" +
       "            \"lastname\":\"Hernández\",\n" +
@@ -7020,7 +7020,7 @@ export class CommunityPythonTemplates {
       "            ],\n" +
       "            \"experiences\":[\n" +
       "               {\n" +
-      "                  \"id\":\"1\",\n" +
+      "                  \"id\":\"61445159784bca6ef764c6df\",\n" +
       "                  \"title\":\"Back-end developer en Moonshot Innovation\",\n" +
       "                  \"type\":\"FULL_TIME\",\n" +
       "                  \"company\":\"Moonshot Innovation\",\n" +
@@ -7034,7 +7034,7 @@ export class CommunityPythonTemplates {
       "                  \"description\":\"Scrum manager en Moonshot Innovation, trabajando en el equipo de back-end\"\n" +
       "               },\n" +
       "               {\n" +
-      "                  \"id\":\"2\",\n" +
+      "                  \"id\":\"61445159784bca6ef764c6df\",\n" +
       "                  \"title\":\"Profesor en la facultad de Ingenería informatica\",\n" +
       "                  \"type\":\"OFFICIAL\",\n" +
       "                  \"company\":\"Universidad de Las Palmas de Gran Canaria\",\n" +
@@ -7050,7 +7050,7 @@ export class CommunityPythonTemplates {
       "            ],\n" +
       "            \"educations\":[\n" +
       "               {\n" +
-      "                  \"id\":\"2\",\n" +
+      "                  \"id\":\"61445159784bca6ef764c6df\",\n" +
       "                  \"school\":\"Universidad de Las Palmas de Gran Canaria\",\n" +
       "                  \"degree\":\"Ingeniería en telecomunicaciones\",\n" +
       "                  \"fieldOfStudy\":\"Big data\",\n" +
@@ -7067,7 +7067,7 @@ export class CommunityPythonTemplates {
       "            ]\n" +
       "         },\n" +
       "         {\n" +
-      "            \"id\":\"3\",\n" +
+      "            \"id\":\"61445159784bca6ef764c6df\",\n" +
       "            \"state\":\"ACCEPTED\",\n" +
       "            \"name\":\"Jeremy\",\n" +
       "            \"lastname\":\"Trujillo\",\n" +
@@ -7092,7 +7092,7 @@ export class CommunityPythonTemplates {
       "            ],\n" +
       "            \"experiences\":[\n" +
       "               {\n" +
-      "                  \"id\":\"3\",\n" +
+      "                  \"id\":\"61445159784bca6ef764c6df\",\n" +
       "                  \"title\":\"Prácticas universitarias en Moonshot Innovation\",\n" +
       "                  \"type\":\"APPRENTICESHIP\",\n" +
       "                  \"company\":\"Moonshot Innovation\",\n" +
@@ -7108,7 +7108,7 @@ export class CommunityPythonTemplates {
       "            ],\n" +
       "            \"educations\":[\n" +
       "               {\n" +
-      "                  \"id\":\"3\",\n" +
+      "                  \"id\":\"61445159784bca6ef764c6df\",\n" +
       "                  \"school\":\"Universidad de Las Palmas de Gran Canaria\",\n" +
       "                  \"degree\":\"Ingeniería informática\",\n" +
       "                  \"fieldOfStudy\":\"Ingeniería de software\",\n" +
@@ -7145,8 +7145,8 @@ export class CommunityPythonTemplates {
       "      ]\n" +
       "   },\n" +
       "   {\n" +
-      "      \"id\":\"2\",\n" +
-      "      \"actorId\":\"1\",\n" +
+      "      \"id\":\"61445159784bca6ef764c6df\",\n" +
+      "      \"actorId\":\"61445159784bca6ef764c6df\",\n" +
       "      \"name\":\"Trade secret\",\n" +
       "      \"description\":\"Trade secret\",\n" +
       "      \"trlStage\":\"TECHNOLOGY_CONCEPT_FORMULATED\",\n" +
@@ -7155,7 +7155,7 @@ export class CommunityPythonTemplates {
       "      ],\n" +
       "      \"protectionMethod\":\"TRADE_SECRETS\",\n" +
       "      \"projectManager\":{\n" +
-      "         \"id\":\"4\",\n" +
+      "         \"id\":\"61445159784bca6ef764c6df\",\n" +
       "         \"state\":\"ACCEPTED\",\n" +
       "         \"name\":\"Saulo\",\n" +
       "         \"lastname\":\"Santana\",\n" +
@@ -7181,7 +7181,7 @@ export class CommunityPythonTemplates {
       "         ],\n" +
       "         \"experiences\":[\n" +
       "            {\n" +
-      "               \"id\":\"3\",\n" +
+      "               \"id\":\"61445159784bca6ef764c6df\",\n" +
       "               \"title\":\"Prácticas universitarias en Moonshot Innovation\",\n" +
       "               \"type\":\"APPRENTICESHIP\",\n" +
       "               \"company\":\"Moonshot Innovation\",\n" +
@@ -7197,7 +7197,7 @@ export class CommunityPythonTemplates {
       "         ],\n" +
       "         \"educations\":[\n" +
       "            {\n" +
-      "               \"id\":\"3\",\n" +
+      "               \"id\":\"61445159784bca6ef764c6df\",\n" +
       "               \"school\":\"Universidad de Las Palmas de Gran Canaria\",\n" +
       "               \"degree\":\"Ingeniería informática\",\n" +
       "               \"fieldOfStudy\":\"Ingeniería de software\",\n" +
@@ -7215,7 +7215,7 @@ export class CommunityPythonTemplates {
       "      },\n" +
       "      \"teamMembers\":[\n" +
       "         {\n" +
-      "            \"id\":\"8\",\n" +
+      "            \"id\":\"61445159784bca6ef764c6df\",\n" +
       "            \"state\":\"ACCEPTED\",\n" +
       "            \"name\":\"Marcos\",\n" +
       "            \"lastname\":\"Fernandez\",\n" +
@@ -7247,7 +7247,7 @@ export class CommunityPythonTemplates {
       "            ],\n" +
       "            \"experiences\":[\n" +
       "               {\n" +
-      "                  \"id\":\"6\",\n" +
+      "                  \"id\":\"61445159784bca6ef764c6df\",\n" +
       "                  \"title\":\"Colaboración para crear la vacuna Pfizer\",\n" +
       "                  \"type\":\"FULL_TIME\",\n" +
       "                  \"company\":\"Novartis\",\n" +
@@ -7261,7 +7261,7 @@ export class CommunityPythonTemplates {
       "                  \"description\":\"Colaborador de la vacuna Pfizer contra el COVID-19\"\n" +
       "               },\n" +
       "               {\n" +
-      "                  \"id\":\"7\",\n" +
+      "                  \"id\":\"61445159784bca6ef764c6df\",\n" +
       "                  \"title\":\"Colaboración para crear la vacuna de la gripe A\",\n" +
       "                  \"type\":\"INTERIM\",\n" +
       "                  \"company\":\"Novartis\",\n" +
@@ -7277,7 +7277,7 @@ export class CommunityPythonTemplates {
       "            ],\n" +
       "            \"educations\":[\n" +
       "               {\n" +
-      "                  \"id\":\"7\",\n" +
+      "                  \"id\":\"61445159784bca6ef764c6df\",\n" +
       "                  \"school\":\"Universidad de Tokio\",\n" +
       "                  \"degree\":\"Farmaceutica\",\n" +
       "                  \"fieldOfStudy\":\"Pandemias\",\n" +
@@ -7327,8 +7327,8 @@ export class CommunityPythonTemplates {
       "response = reqs.get(URL)\n" +
       "print(response.text)",
     response: "\n{\n" +
-      "   \"id\":\"1\",\n" +
-      "   \"actorId\":\"1\",\n" +
+      "   \"id\":\"61445159784bca6ef764c6df\",\n" +
+      "   \"actorId\":\"61445159784bca6ef764c6df\",\n" +
       "   \"name\":\"Patents\",\n" +
       "   \"description\":\"Patents\",\n" +
       "   \"trlStage\":\"BASIC_PRINCIPLES_OBSERVED\",\n" +
@@ -7338,7 +7338,7 @@ export class CommunityPythonTemplates {
       "   ],\n" +
       "   \"protectionMethod\":\"PATENTS\",\n" +
       "   \"projectManager\":{\n" +
-      "      \"id\":\"1\",\n" +
+      "      \"id\":\"61445159784bca6ef764c6df\",\n" +
       "      \"state\":\"ACCEPTED\",\n" +
       "      \"name\":\"Iñigo\",\n" +
       "      \"lastname\":\"Aramburu\",\n" +
@@ -7363,7 +7363,7 @@ export class CommunityPythonTemplates {
       "      ],\n" +
       "      \"experiences\":[\n" +
       "         {\n" +
-      "            \"id\":\"1\",\n" +
+      "            \"id\":\"61445159784bca6ef764c6df\",\n" +
       "            \"title\":\"Back-end developer en Moonshot Innovation\",\n" +
       "            \"type\":\"FULL_TIME\",\n" +
       "            \"company\":\"Moonshot Innovation\",\n" +
@@ -7379,7 +7379,7 @@ export class CommunityPythonTemplates {
       "      ],\n" +
       "      \"educations\":[\n" +
       "         {\n" +
-      "            \"id\":\"1\",\n" +
+      "            \"id\":\"61445159784bca6ef764c6df\",\n" +
       "            \"school\":\"Universidad del País Vasco\",\n" +
       "            \"degree\":\"Ingeniería informática\",\n" +
       "            \"fieldOfStudy\":\"Ingeniería de software\",\n" +
@@ -7394,7 +7394,7 @@ export class CommunityPythonTemplates {
       "            \"description\":\"Estudios universitarios realizados en la Universidad del País Vasco\"\n" +
       "         },\n" +
       "         {\n" +
-      "            \"id\":\"15\",\n" +
+      "            \"id\":\"61445159784bca6ef764c6df\",\n" +
       "            \"school\":\"Universidad del País Vasco\",\n" +
       "            \"degree\":\"Master en desarrollo web\",\n" +
       "            \"fieldOfStudy\":\"Desarrollo web\",\n" +
@@ -7412,7 +7412,7 @@ export class CommunityPythonTemplates {
       "   },\n" +
       "   \"teamMembers\":[\n" +
       "      {\n" +
-      "         \"id\":\"2\",\n" +
+      "         \"id\":\"61445159784bca6ef764c6df\",\n" +
       "         \"state\":\"ACCEPTED\",\n" +
       "         \"name\":\"Jose Juan\",\n" +
       "         \"lastname\":\"Hernández\",\n" +
@@ -7439,7 +7439,7 @@ export class CommunityPythonTemplates {
       "         ],\n" +
       "         \"experiences\":[\n" +
       "            {\n" +
-      "               \"id\":\"1\",\n" +
+      "               \"id\":\"61445159784bca6ef764c6df\",\n" +
       "               \"title\":\"Back-end developer en Moonshot Innovation\",\n" +
       "               \"type\":\"FULL_TIME\",\n" +
       "               \"company\":\"Moonshot Innovation\",\n" +
@@ -7453,7 +7453,7 @@ export class CommunityPythonTemplates {
       "               \"description\":\"Scrum manager en Moonshot Innovation, trabajando en el equipo de back-end\"\n" +
       "            },\n" +
       "            {\n" +
-      "               \"id\":\"2\",\n" +
+      "               \"id\":\"61445159784bca6ef764c6df\",\n" +
       "               \"title\":\"Profesor en la facultad de Ingenería informatica\",\n" +
       "               \"type\":\"OFFICIAL\",\n" +
       "               \"company\":\"Universidad de Las Palmas de Gran Canaria\",\n" +
@@ -7469,7 +7469,7 @@ export class CommunityPythonTemplates {
       "         ],\n" +
       "         \"educations\":[\n" +
       "            {\n" +
-      "               \"id\":\"2\",\n" +
+      "               \"id\":\"61445159784bca6ef764c6df\",\n" +
       "               \"school\":\"Universidad de Las Palmas de Gran Canaria\",\n" +
       "               \"degree\":\"Ingeniería en telecomunicaciones\",\n" +
       "               \"fieldOfStudy\":\"Big data\",\n" +
@@ -7486,7 +7486,7 @@ export class CommunityPythonTemplates {
       "         ]\n" +
       "      },\n" +
       "      {\n" +
-      "         \"id\":\"3\",\n" +
+      "         \"id\":\"61445159784bca6ef764c6df\",\n" +
       "         \"state\":\"ACCEPTED\",\n" +
       "         \"name\":\"Jeremy\",\n" +
       "         \"lastname\":\"Trujillo\",\n" +
@@ -7511,7 +7511,7 @@ export class CommunityPythonTemplates {
       "         ],\n" +
       "         \"experiences\":[\n" +
       "            {\n" +
-      "               \"id\":\"3\",\n" +
+      "               \"id\":\"61445159784bca6ef764c6df\",\n" +
       "               \"title\":\"Prácticas universitarias en Moonshot Innovation\",\n" +
       "               \"type\":\"APPRENTICESHIP\",\n" +
       "               \"company\":\"Moonshot Innovation\",\n" +
@@ -7527,7 +7527,7 @@ export class CommunityPythonTemplates {
       "         ],\n" +
       "         \"educations\":[\n" +
       "            {\n" +
-      "               \"id\":\"3\",\n" +
+      "               \"id\":\"61445159784bca6ef764c6df\",\n" +
       "               \"school\":\"Universidad de Las Palmas de Gran Canaria\",\n" +
       "               \"degree\":\"Ingeniería informática\",\n" +
       "               \"fieldOfStudy\":\"Ingeniería de software\",\n" +
@@ -7572,8 +7572,8 @@ export class CommunityPythonTemplates {
       "URL = \"https://dev.moonshot.ceo/api/community/projects\"\n" +
       "\n" +
       "BODY = {\n" +
-      "   \"id\":\"1\",\n" +
-      "   \"actorId\":\"1\",\n" +
+      "   \"id\":\"61445159784bca6ef764c6df\",\n" +
+      "   \"actorId\":\"61445159784bca6ef764c6df\",\n" +
       "   \"name\":\"Patents\",\n" +
       "   \"description\":\"Patents\",\n" +
       "   \"trlStage\":\"BASIC_PRINCIPLES_OBSERVED\",\n" +
@@ -7582,10 +7582,10 @@ export class CommunityPythonTemplates {
       "      \"www.youtube.com/gwqm92ms\"\n" +
       "   ],\n" +
       "   \"protectionMethod\":\"PATENTS\",\n" +
-      "   \"projectManagerId\":\"1\",\n" +
+      "   \"projectManagerId\":\"61445159784bca6ef764c6df\",\n" +
       "   \"teamMembersId\":[\n" +
-      "      \"2\",\n" +
-      "      \"3\"\n" +
+      "      \"61445159784bca6ef764c6df\",\n" +
+      "      \"61445159784bca6ef764c6df\"\n" +
       "   ],\n" +
       "   \"socialNetworks\":[\n" +
       "      \"www.twitter.com/Patents\",\n" +
@@ -7619,7 +7619,7 @@ export class CommunityPythonTemplates {
       "URL = \"https://dev.moonshot.ceo/api/community/projects/1\"\n" +
       "\n" +
       "BODY = {\n" +
-      "   \"actorId\":\"1\",\n" +
+      "   \"actorId\":\"61445159784bca6ef764c6df\",\n" +
       "   \"name\":\"Patents\",\n" +
       "   \"description\":\"Patents\",\n" +
       "   \"trlStage\":\"BASIC_PRINCIPLES_OBSERVED\",\n" +
@@ -7628,10 +7628,10 @@ export class CommunityPythonTemplates {
       "      \"www.youtube.com/gwqm92ms\"\n" +
       "   ],\n" +
       "   \"protectionMethod\":\"PATENTS\",\n" +
-      "   \"projectManagerId\":\"1\",\n" +
+      "   \"projectManagerId\":\"61445159784bca6ef764c6df\",\n" +
       "   \"teamMembersId\":[\n" +
-      "      \"2\",\n" +
-      "      \"3\"\n" +
+      "      \"61445159784bca6ef764c6df\",\n" +
+      "      \"61445159784bca6ef764c6df\"\n" +
       "   ],\n" +
       "   \"socialNetworks\":[\n" +
       "      \"www.twitter.com/Patents\",\n" +

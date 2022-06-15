@@ -1182,7 +1182,7 @@ export class CoreJavaTemplates {
       "App app = new App(clientId, clientSecret);\n" +
       "CoreApi coreApi = new CoreApi();\n" +
       "File file = new File(\"C:\\\\Users\\\\saulo\\\\Downloads\\\\descarga.jpg\");\n" +
-      "coreApi.ecosystems().uploadMedia(app, \"1\", file);",
+      "coreApi.ecosystems().uploadMedia(app, \"60acae8e2f799d228a4d4a85\", file);",
     response: null
   }
 
@@ -1287,7 +1287,7 @@ export class CoreJavaTemplates {
       "invitation.setReason(\"You must to be an ecosystem member\");\n" +
       "invitation.setNotification(false);\n" +
       "invitation.setCreatedAt(ZonedDateTime.now());\n" +
-      "invitation.setSenderId(\"1\");\n" +
+      "invitation.setSenderId(\"60acae8e2f799d228a4d4a85\");\n" +
       "invitation.setSentOn(ZonedDateTime.now());\n" +
       "coreApi.invitations().create(app, invitation);",
     response: null
@@ -1306,7 +1306,7 @@ export class CoreJavaTemplates {
       "InvitationUpdateEvent invitationUpdateEvent = new InvitationUpdateEvent();\n" +
       "invitationUpdateEvent.setId(invitation.getId());\n" +
       "invitationUpdateEvent.setSentOn(invitation.getSentOn());\n" +
-      "invitationUpdateEvent.setSenderId(\"1\");\n" +
+      "invitationUpdateEvent.setSenderId(\"60acae8e2f799d228a4d4a85\");\n" +
       "coreApi.invitations().update(app, invitationUpdateEvent);",
     response: null
   }
@@ -1320,7 +1320,7 @@ export class CoreJavaTemplates {
       "String clientId = \"YOUR_CLIENT_SECRET\";\n" +
       "App app = new App(clientId, clientSecret);\n" +
       "CoreApi coreApi = new CoreApi();\n" +
-      "coreApi.invitations().delete(app, \"1\");",
+      "coreApi.invitations().delete(app, \"60acae8e2f799d228a4d4a85\");",
     response: null
   }
 
@@ -2004,7 +2004,7 @@ export class CoreJavaTemplates {
       "notification.setOwner(new NotificationMember());\n" +
       "notification.setRecipients(new ArrayList<NotificationMember>());\n" +
       "notification.setFollowUpRoomId(null);\n" +
-      "notification.setDirectChatRoomId(\"1\");\n" +
+      "notification.setDirectChatRoomId(\"60acae8e2f799d228a4d4a85\");\n" +
       "notification.setFollowUpRoomName(null);\n" +
       "notification.setWallPostName(null);\n" +
       "coreApi.notifications().create(app, notification);",

@@ -1113,7 +1113,7 @@ export class CoreJavascriptTemplates {
       "    \"REDUCED_INEQUALITIES\"\n" +
       "  ],\n" +
       "  \"manager\": {\n" +
-      "    \"_id\": \"1\",\n" +
+      "    \"_id\": \"60acae8e2f799d228a4d4a85\",\n" +
       "    \"name\": \"Iñigo\",\n" +
       "    \"lastname\": \"Aramburu\",\n" +
       "    \"address\": {\n" +
@@ -1315,7 +1315,7 @@ export class CoreJavascriptTemplates {
       "  \"reason\":\"En nombre del ecosistema DEV  Moonshot, me complace invitarlo a participar en nuestro Ecosistema de Innovación, un entorno digital para compartir ideas y proyectos disruptivos, así como para colaborar en desafíos y talleres. Espero que se una a nuestro ecosistema, con otros socios exclusivos, para observar de cerca nuestros objetivos disruptivos comunes.\",\n" +
       "  \"notification\":true,\n" +
       "  \"createdAt\":1639042457835,\n" +
-      "  \"senderId\":\"1\",\n" +
+      "  \"senderId\":\"60acae8e2f799d228a4d4a85\",\n" +
       "  \"sentOn\":1639590502463,\n" +
       " }\n" +
       "\n" +
@@ -1333,7 +1333,7 @@ export class CoreJavascriptTemplates {
     code: "\nconst url = 'https://dev.moonshot.ceo/api/core/invitations/1';\n" +
       "\n" +
       "const body = {\n" +
-      "  \"senderId\":\"1\",\n" +
+      "  \"senderId\":\"60acae8e2f799d228a4d4a85\",\n" +
       "  \"sentOn\":1639590502463,\n" +
       " }\n" +
       "\n" +
@@ -1882,7 +1882,7 @@ export class CoreJavascriptTemplates {
     code: "\nconst url = 'https://dev.moonshot.ceo/api/core/settings';\n" +
       "\n" +
       "const body = {\n" +
-      "  id: \"1\",\n" +
+      "  id: \"60acae8e2f799d228a4d4a85\",\n" +
       "  banner:{\n" +
       "    \"original\":\"https://moonshot-innovation.s3.eu-central-1.amazonaws.com/60d6031b0d5a16054411a570/image/a920a411-31f2-4d13-8ebb-81c347607705.jpeg\",\n" +
       "    \"thumbnail\":\"https://moonshot-innovation.s3.eu-central-1.amazonaws.com/60d6031b0d5a16054411a570/image/44159982-303f-44ee-b903-94ca6147bbb9.jpeg\",\n" +
